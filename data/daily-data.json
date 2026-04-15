@@ -1,0 +1,113 @@
+{
+  "date": "2026-04-15",
+  "lastUpdated": "2026-04-15T22:10:00Z",
+  "timeSessions": [
+    {
+      "id": 1713216000001,
+      "projectId": "tough-cookie",
+      "mood": 4,
+      "startTime": "2026-04-15T10:00:00Z",
+      "endTime": "2026-04-15T16:00:00Z",
+      "duration": 360,
+      "notes": "Kono Post-Production - Video 1 fertig geschnitten"
+    }
+  ],
+  "income": [],
+  "todos": [
+    {
+      "id": 1713216000002,
+      "projectId": "tough-cookie",
+      "text": "Kono Post-Production Video 2",
+      "priority": "🔴 Urgent",
+      "completed": false,
+      "createdAt": "2026-04-15T08:00:00Z"
+    },
+    {
+      "id": 1713216000003,
+      "projectId": "tough-cookie",
+      "text": "B-Rolls exportieren & graden",
+      "priority": "🟡 High",
+      "completed": false,
+      "createdAt": "2026-04-15T08:00:00Z"
+    },
+    {
+      "id": 1713216000004,
+      "projectId": "nomu",
+      "text": "Little Hiro Erlangen anschreiben",
+      "priority": "🟢 Normal",
+      "completed": true,
+      "createdAt": "2026-04-15T08:00:00Z",
+      "completedAt": "2026-04-15T11:00:00Z"
+    },
+    {
+      "id": 1713216000005,
+      "projectId": "freelance",
+      "text": "MyHao Klärung - monatlich oder einmalig?",
+      "priority": "🟡 High",
+      "completed": false,
+      "createdAt": "2026-04-15T08:00:00Z"
+    },
+    {
+      "id": 1713216000006,
+      "projectId": "freelance",
+      "text": "Lu-Bu Finanzierungsgespräch führen",
+      "priority": "🔴 Urgent",
+      "completed": false,
+      "createdAt": "2026-04-15T08:00:00Z"
+    },
+    {
+      "id": 1713216000007,
+      "projectId": "tough-cookie",
+      "text": "~9k€ offene Rechnungen - Follow-up klären",
+      "priority": "🔴 Urgent",
+      "completed": false,
+      "createdAt": "2026-04-15T08:00:00Z"
+    },
+    {
+      "id": 1713216000008,
+      "projectId": "tough-cookie",
+      "text": "Wittmann Pre-Production planen",
+      "priority": "🟡 High",
+      "completed": false,
+      "createdAt": "2026-04-15T08:00:00Z"
+    },
+    {
+      "id": 1713216000009,
+      "projectId": "tough-cookie",
+      "text": "Monkey Post vorbereiten (fällig 17.4.)",
+      "priority": "🟡 High",
+      "completed": false,
+      "createdAt": "2026-04-15T08:00:00Z"
+    }
+  ],
+  "pipeline": [
+    {
+      "id": 1713216000010,
+      "projectId": "kyberg",
+      "name": "Heras - Nahrungsergänzungsmittel",
+      "value": 5000,
+      "stage": "Negotiation",
+      "createdAt": "2026-04-01T00:00:00Z",
+      "notes": "Warte auf Samples vom Hersteller"
+    },
+    {
+      "id": 1713216000011,
+      "projectId": "kyberg",
+      "name": "Renieres - Olivenöl",
+      "value": 8000,
+      "stage": "Negotiation",
+      "createdAt": "2026-04-01T00:00:00Z",
+      "notes": "Preisverhandlung läuft"
+    },
+    {
+      "id": 1713216000012,
+      "projectId": "kyberg",
+      "name": "Kyberg Vital",
+      "value": 12000,
+      "stage": "Pitch",
+      "createdAt": "2026-04-01T00:00:00Z",
+      "notes": "Onkel wartet auf Herstellerantwort"
+    }
+  ],
+  "activeSession": null
+}

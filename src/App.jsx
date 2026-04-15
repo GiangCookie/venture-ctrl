@@ -30,16 +30,37 @@ export default function VentureDashboard() {
   const [showAddDeal, setShowAddDeal] = useState(false);
   const [selectedProject, setSelectedProject] = useState(PROJECTS[0].id);
   
-  // Load data from localStorage on mount
+  // Load data from GitHub first, then fallback to localStorage
   useEffect(() => {
-    const saved = localStorage.getItem('venture-dashboard-data');
-    if (saved) {
+    const loadData = async () => {
       try {
-        setData(JSON.parse(saved));
+        // Try loading from GitHub (auto-sync)
+        const response = await fetch('https://raw.githubusercontent.com/GiangCookie/venture-ctrl/main/data/daily-data.json');
+        if (response.ok) {
+          const remoteData = await response.json();
+          if (remoteData && remoteData.timeSessions) {
+            setData(remoteData);
+            localStorage.setItem('venture-dashboard-data', JSON.stringify(remoteData));
+            console.log('✅ Loaded from GitHub');
+            return;
+          }
+        }
       } catch (e) {
-        console.error('Failed to load data:', e);
+        console.log('GitHub load failed, using localStorage');
       }
-    }
+      
+      // Fallback to localStorage
+      const saved = localStorage.getItem('venture-dashboard-data');
+      if (saved) {
+        try {
+          setData(JSON.parse(saved));
+        } catch (e) {
+          console.error('Failed to load data:', e);
+        }
+      }
+    };
+    
+    loadData();
   }, []);
   
   // Save data to localStorage on change
