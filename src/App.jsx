@@ -491,10 +491,25 @@ export default function VentureDashboard() {
                           <span style={{ color: '#666', fontSize: '0.8rem', marginLeft: '10px' }}>
                             {new Date(session.startTime).toLocaleDateString('de-DE')}
                           </span>
+                          {session.notes && <span style={{ color: '#888', fontSize: '0.75rem', marginLeft: '8px' }}>📝</span>}
                         </div>
                         <div style={{ display: 'flex', gap: '15px', alignItems: 'center' }}>
                           <span>{MOOD_EMOJIS[session.mood - 1]}</span>
                           <span style={{ color: '#4ECDC4', fontWeight: 600 }}>{(session.duration / 60).toFixed(1)}h</span>
+                          <button
+                            onClick={() => setData(prev => ({ ...prev, timeSessions: prev.timeSessions.filter(s => s.id !== session.id) }))}
+                            style={{
+                              background: 'none',
+                              border: 'none',
+                              color: '#666',
+                              cursor: 'pointer',
+                              fontSize: '1rem',
+                              padding: '4px',
+                            }}
+                            title="Löschen"
+                          >
+                            🗑️
+                          </button>
                         </div>
                       </div>
                     );
@@ -562,13 +577,18 @@ export default function VentureDashboard() {
             
             {/* Income History */}
             <div style={cardStyle}>
-              <h3 style={{ margin: '0 0 15px', color: '#fff', fontSize: '1rem' }}>📜 Einnahmen-Historie</h3>
+              <h3 style={{ margin: '0 0 15px', color: '#fff', fontSize: '1rem' }}>📜 Finanz-Historie</h3>
               {data.income.length === 0 ? (
-                <p style={{ color: '#666', textAlign: 'center', padding: '20px' }}>Noch keine Einnahmen</p>
+                <p style={{ color: '#666', textAlign: 'center', padding: '20px' }}>Noch keine Einträge</p>
               ) : (
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
                   {[...data.income].reverse().map(inc => {
                     const project = PROJECTS.find(p => p.id === inc.projectId);
+                    const isExpense = inc.amount < 0 || inc.type === 'expense';
+                    const isInvestment = inc.type === 'investment';
+                    const color = isExpense ? '#f66' : isInvestment ? '#A855F7' : '#95E881';
+                    const prefix = isExpense ? '' : '+';
+                    const sign = isExpense ? '−' : '+';
                     return (
                       <div key={inc.id} style={{
                         display: 'flex',
@@ -577,20 +597,41 @@ export default function VentureDashboard() {
                         padding: '12px',
                         background: 'rgba(255,255,255,0.03)',
                         borderRadius: '8px',
-                        borderLeft: `3px solid ${project?.color}`,
+                        borderLeft: `3px solid ${isExpense ? '#f66' : isInvestment ? '#A855F7' : project?.color}`,
                         flexWrap: 'wrap',
                         gap: '8px',
                       }}>
-                        <div>
-                          <span style={{ marginRight: '8px' }}>{project?.emoji}</span>
-                          <span style={{ fontWeight: 600 }}>{inc.description}</span>
-                          <span style={{ color: '#666', fontSize: '0.8rem', marginLeft: '10px' }}>
+                        <div style={{ flex: 1 }}>
+                          <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                            <span>{project?.emoji}</span>
+                            <span style={{ fontSize: '0.75rem', color: isExpense ? '#f66' : isInvestment ? '#A855F7' : '#95E881' }}>
+                              {isExpense ? '💸' : isInvestment ? '📈' : '💰'}
+                            </span>
+                            <span style={{ fontWeight: 600 }}>{inc.description}</span>
+                          </div>
+                          <span style={{ color: '#666', fontSize: '0.8rem' }}>
                             {new Date(inc.date).toLocaleDateString('de-DE')}
                           </span>
                         </div>
-                        <span style={{ color: '#95E881', fontWeight: 700, fontSize: '1.1rem' }}>
-                          +{inc.amount.toLocaleString('de-DE')}€
-                        </span>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                          <span style={{ color, fontWeight: 700, fontSize: '1.1rem' }}>
+                            {sign}{Math.abs(inc.amount).toLocaleString('de-DE')}€
+                          </span>
+                          <button
+                            onClick={() => setData(prev => ({ ...prev, income: prev.income.filter(i => i.id !== inc.id) }))}
+                            style={{
+                              background: 'none',
+                              border: 'none',
+                              color: '#666',
+                              cursor: 'pointer',
+                              fontSize: '1rem',
+                              padding: '4px',
+                            }}
+                            title="Löschen"
+                          >
+                            🗑️
+                          </button>
+                        </div>
                       </div>
                     );
                   })}
@@ -929,14 +970,40 @@ function IncomeForm({ onAdd, onCancel }) {
   const [projectId, setProjectId] = useState(PROJECTS[0].id);
   const [amount, setAmount] = useState('');
   const [description, setDescription] = useState('');
+  const [type, setType] = useState('income'); // 'income' | 'expense' | 'investment'
   
   const handleSubmit = () => {
     if (!amount || !description) return;
-    onAdd({ projectId, amount: parseFloat(amount), description });
+    const finalAmount = type === 'expense' ? -Math.abs(parseFloat(amount)) : parseFloat(amount);
+    onAdd({ projectId, amount: finalAmount, description, type });
   };
   
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+      <div style={{ display: 'flex', gap: '8px' }}>
+        {[
+          { id: 'income', label: '💰 Einnahme', color: '#95E881' },
+          { id: 'expense', label: '💸 Ausgabe', color: '#f66' },
+          { id: 'investment', label: '📈 Investment', color: '#A855F7' },
+        ].map(t => (
+          <button
+            key={t.id}
+            onClick={() => setType(t.id)}
+            style={{
+              flex: 1,
+              padding: '10px',
+              background: type === t.id ? t.color + '40' : 'rgba(255,255,255,0.05)',
+              border: type === t.id ? `2px solid ${t.color}` : '1px solid rgba(255,255,255,0.1)',
+              borderRadius: '8px',
+              color: type === t.id ? t.color : '#888',
+              cursor: 'pointer',
+              fontSize: '0.8rem',
+            }}
+          >
+            {t.label}
+          </button>
+        ))}
+      </div>
       <select value={projectId} onChange={e => setProjectId(e.target.value)} style={inputStyle}>
         {PROJECTS.map(p => (
           <option key={p.id} value={p.id}>{p.emoji} {p.name}</option>
@@ -945,7 +1012,7 @@ function IncomeForm({ onAdd, onCancel }) {
       <input type="number" placeholder="Betrag (€)" value={amount} onChange={e => setAmount(e.target.value)} style={inputStyle} />
       <input type="text" placeholder="Beschreibung" value={description} onChange={e => setDescription(e.target.value)} style={inputStyle} />
       <div style={{ display: 'flex', gap: '10px' }}>
-        <button onClick={handleSubmit} style={{ ...buttonStyle, background: '#95E881', color: '#000', flex: 1 }}>Speichern</button>
+        <button onClick={handleSubmit} style={{ ...buttonStyle, background: type === 'expense' ? '#f66' : type === 'investment' ? '#A855F7' : '#95E881', color: '#000', flex: 1 }}>Speichern</button>
         <button onClick={onCancel} style={{ ...buttonStyle, flex: 1 }}>Abbrechen</button>
       </div>
     </div>
