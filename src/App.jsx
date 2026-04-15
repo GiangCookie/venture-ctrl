@@ -30,37 +30,16 @@ export default function VentureDashboard() {
   const [showAddDeal, setShowAddDeal] = useState(false);
   const [selectedProject, setSelectedProject] = useState(PROJECTS[0].id);
   
-  // Load data from GitHub first, then fallback to localStorage
+  // Load data from localStorage on mount
   useEffect(() => {
-    const loadData = async () => {
+    const saved = localStorage.getItem('venture-dashboard-data');
+    if (saved) {
       try {
-        // Try loading from GitHub (auto-sync)
-        const response = await fetch('https://raw.githubusercontent.com/GiangCookie/venture-ctrl/main/data/daily-data.json');
-        if (response.ok) {
-          const remoteData = await response.json();
-          if (remoteData && remoteData.timeSessions) {
-            setData(remoteData);
-            localStorage.setItem('venture-dashboard-data', JSON.stringify(remoteData));
-            console.log('✅ Loaded from GitHub');
-            return;
-          }
-        }
+        setData(JSON.parse(saved));
       } catch (e) {
-        console.log('GitHub load failed, using localStorage');
+        console.error('Failed to load data:', e);
       }
-      
-      // Fallback to localStorage
-      const saved = localStorage.getItem('venture-dashboard-data');
-      if (saved) {
-        try {
-          setData(JSON.parse(saved));
-        } catch (e) {
-          console.error('Failed to load data:', e);
-        }
-      }
-    };
-    
-    loadData();
+    }
   }, []);
   
   // Save data to localStorage on change
@@ -104,6 +83,13 @@ export default function VentureDashboard() {
     setData(prev => ({
       ...prev,
       income: [...prev.income, { ...income, id: Date.now(), date: new Date().toISOString() }],
+    }));
+  };
+  
+  const deleteIncome = (id) => {
+    setData(prev => ({
+      ...prev,
+      income: prev.income.filter(i => i.id !== id),
     }));
   };
   
@@ -182,15 +168,20 @@ export default function VentureDashboard() {
     return PROJECTS.map(project => {
       const sessions = data.timeSessions.filter(s => s.projectId === project.id);
       const totalMinutes = sessions.reduce((acc, s) => acc + s.duration, 0);
-      const totalIncome = data.income.filter(i => i.projectId === project.id).reduce((acc, i) => acc + i.amount, 0);
+      const projectEntries = data.income.filter(i => i.projectId === project.id);
+      const totalIncome = projectEntries.filter(i => i.type !== 'investment').reduce((acc, i) => acc + i.amount, 0);
+      const totalInvestment = projectEntries.filter(i => i.type === 'investment').reduce((acc, i) => acc + i.amount, 0);
+      const netIncome = totalIncome - totalInvestment;
       const avgMood = sessions.length > 0 ? sessions.reduce((acc, s) => acc + s.mood, 0) / sessions.length : 0;
-      const hourlyRate = totalMinutes > 0 ? (totalIncome / (totalMinutes / 60)).toFixed(2) : 0;
+      const hourlyRate = totalMinutes > 0 ? (netIncome / (totalMinutes / 60)).toFixed(2) : 0;
       
       return {
         ...project,
         totalHours: (totalMinutes / 60).toFixed(1),
         totalMinutes,
         totalIncome,
+        totalInvestment,
+        netIncome,
         avgMood: avgMood.toFixed(1),
         hourlyRate,
         sessions: sessions.length,
@@ -201,6 +192,8 @@ export default function VentureDashboard() {
   const metrics = getProjectMetrics();
   const totalHours = metrics.reduce((acc, m) => acc + parseFloat(m.totalHours), 0).toFixed(1);
   const totalIncome = metrics.reduce((acc, m) => acc + m.totalIncome, 0);
+  const totalInvestment = metrics.reduce((acc, m) => acc + m.totalInvestment, 0);
+  const netIncome = totalIncome - totalInvestment;
   const pipelineValue = data.pipeline.filter(d => !['Closed Won', 'Closed Lost'].includes(d.stage)).reduce((acc, d) => acc + d.value, 0);
   
   // Get weekly data for chart
@@ -345,8 +338,8 @@ export default function VentureDashboard() {
             {/* Quick Stats */}
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '12px' }}>
               <StatCard label="Gesamt Stunden" value={totalHours} suffix="h" color="#4ECDC4" />
-              <StatCard label="Gesamt Einnahmen" value={totalIncome.toLocaleString('de-DE')} suffix="€" color="#95E881" />
-              <StatCard label="Ø Stundenlohn" value={totalHours > 0 ? (totalIncome / totalHours).toFixed(0) : 0} suffix="€/h" color="#FF6B35" />
+              <StatCard label="Netto Einnahmen" value={netIncome.toLocaleString('de-DE')} suffix="€" color={netIncome >= 0 ? '#95E881' : '#FF6B6B'} />
+              <StatCard label="Ø Stundenlohn" value={totalHours > 0 ? (netIncome / totalHours).toFixed(0) : 0} suffix="€/h" color="#FF6B35" />
               <StatCard label="Pipeline Wert" value={pipelineValue.toLocaleString('de-DE')} suffix="€" color="#A855F7" />
             </div>
             
@@ -509,15 +502,22 @@ export default function VentureDashboard() {
         {activeTab === 'money' && (
           <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
             <button onClick={() => setShowAddIncome(true)} style={{ ...buttonStyle, alignSelf: 'flex-start' }}>
-              ➕ Einnahme hinzufügen
+              ➕ Eintrag hinzufügen
             </button>
             
             {showAddIncome && (
               <div style={cardStyle}>
-                <h3 style={{ margin: '0 0 15px', color: '#fff', fontSize: '1rem' }}>💰 Neue Einnahme</h3>
+                <h3 style={{ margin: '0 0 15px', color: '#fff', fontSize: '1rem' }}>💰 Neuer Eintrag</h3>
                 <IncomeForm onAdd={(income) => { addIncome(income); setShowAddIncome(false); }} onCancel={() => setShowAddIncome(false)} />
               </div>
             )}
+            
+            {/* Quick Stats */}
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: '12px' }}>
+              <StatCard label="Einnahmen" value={totalIncome.toLocaleString('de-DE')} suffix="€" color="#95E881" />
+              <StatCard label="Investments" value={totalInvestment.toLocaleString('de-DE')} suffix="€" color="#FF6B6B" />
+              <StatCard label="Netto" value={netIncome.toLocaleString('de-DE')} suffix="€" color={netIncome >= 0 ? '#4ECDC4' : '#FF6B6B'} />
+            </div>
             
             {/* Income by Project Chart */}
             <div style={cardStyle}>
@@ -562,35 +562,63 @@ export default function VentureDashboard() {
             
             {/* Income History */}
             <div style={cardStyle}>
-              <h3 style={{ margin: '0 0 15px', color: '#fff', fontSize: '1rem' }}>📜 Einnahmen-Historie</h3>
+              <h3 style={{ margin: '0 0 15px', color: '#fff', fontSize: '1rem' }}>📜 Einträge-Historie</h3>
               {data.income.length === 0 ? (
-                <p style={{ color: '#666', textAlign: 'center', padding: '20px' }}>Noch keine Einnahmen</p>
+                <p style={{ color: '#666', textAlign: 'center', padding: '20px' }}>Noch keine Einträge</p>
               ) : (
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
                   {[...data.income].reverse().map(inc => {
                     const project = PROJECTS.find(p => p.id === inc.projectId);
+                    const isInvestment = inc.type === 'investment';
                     return (
                       <div key={inc.id} style={{
                         display: 'flex',
                         justifyContent: 'space-between',
                         alignItems: 'center',
                         padding: '12px',
-                        background: 'rgba(255,255,255,0.03)',
+                        background: isInvestment ? 'rgba(255,107,107,0.1)' : 'rgba(255,255,255,0.03)',
                         borderRadius: '8px',
-                        borderLeft: `3px solid ${project?.color}`,
+                        borderLeft: `3px solid ${isInvestment ? '#FF6B6B' : project?.color}`,
                         flexWrap: 'wrap',
                         gap: '8px',
                       }}>
                         <div>
-                          <span style={{ marginRight: '8px' }}>{project?.emoji}</span>
+                          <span style={{ marginRight: '8px' }}>{isInvestment ? '📤' : project?.emoji}</span>
                           <span style={{ fontWeight: 600 }}>{inc.description}</span>
                           <span style={{ color: '#666', fontSize: '0.8rem', marginLeft: '10px' }}>
                             {new Date(inc.date).toLocaleDateString('de-DE')}
                           </span>
+                          {isInvestment && (
+                            <span style={{ 
+                              marginLeft: '8px', 
+                              background: 'rgba(255,107,107,0.2)', 
+                              color: '#FF6B6B', 
+                              padding: '2px 6px', 
+                              borderRadius: '4px', 
+                              fontSize: '0.7rem' 
+                            }}>
+                              Investment
+                            </span>
+                          )}
                         </div>
-                        <span style={{ color: '#95E881', fontWeight: 700, fontSize: '1.1rem' }}>
-                          +{inc.amount.toLocaleString('de-DE')}€
-                        </span>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                          <span style={{ color: isInvestment ? '#FF6B6B' : '#95E881', fontWeight: 700, fontSize: '1.1rem' }}>
+                            {isInvestment ? '-' : '+'}{inc.amount.toLocaleString('de-DE')}€
+                          </span>
+                          <button 
+                            onClick={() => deleteIncome(inc.id)} 
+                            style={{ 
+                              background: 'none', 
+                              border: 'none', 
+                              color: '#666', 
+                              cursor: 'pointer', 
+                              fontSize: '1rem',
+                              padding: '4px',
+                            }}
+                          >
+                            🗑️
+                          </button>
+                        </div>
                       </div>
                     );
                   })}
@@ -929,14 +957,49 @@ function IncomeForm({ onAdd, onCancel }) {
   const [projectId, setProjectId] = useState(PROJECTS[0].id);
   const [amount, setAmount] = useState('');
   const [description, setDescription] = useState('');
+  const [type, setType] = useState('income');
   
   const handleSubmit = () => {
     if (!amount || !description) return;
-    onAdd({ projectId, amount: parseFloat(amount), description });
+    onAdd({ projectId, amount: parseFloat(amount), description, type });
   };
   
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+      <div style={{ display: 'flex', gap: '8px' }}>
+        <button
+          onClick={() => setType('income')}
+          style={{
+            flex: 1,
+            padding: '12px',
+            background: type === 'income' ? 'rgba(149,232,129,0.3)' : 'rgba(255,255,255,0.05)',
+            border: type === 'income' ? '2px solid #95E881' : '1px solid rgba(255,255,255,0.1)',
+            borderRadius: '8px',
+            color: type === 'income' ? '#95E881' : '#888',
+            cursor: 'pointer',
+            fontFamily: 'inherit',
+            fontWeight: 600,
+          }}
+        >
+          💰 Einnahme
+        </button>
+        <button
+          onClick={() => setType('investment')}
+          style={{
+            flex: 1,
+            padding: '12px',
+            background: type === 'investment' ? 'rgba(255,107,107,0.3)' : 'rgba(255,255,255,0.05)',
+            border: type === 'investment' ? '2px solid #FF6B6B' : '1px solid rgba(255,255,255,0.1)',
+            borderRadius: '8px',
+            color: type === 'investment' ? '#FF6B6B' : '#888',
+            cursor: 'pointer',
+            fontFamily: 'inherit',
+            fontWeight: 600,
+          }}
+        >
+          📤 Investment
+        </button>
+      </div>
       <select value={projectId} onChange={e => setProjectId(e.target.value)} style={inputStyle}>
         {PROJECTS.map(p => (
           <option key={p.id} value={p.id}>{p.emoji} {p.name}</option>
@@ -945,7 +1008,7 @@ function IncomeForm({ onAdd, onCancel }) {
       <input type="number" placeholder="Betrag (€)" value={amount} onChange={e => setAmount(e.target.value)} style={inputStyle} />
       <input type="text" placeholder="Beschreibung" value={description} onChange={e => setDescription(e.target.value)} style={inputStyle} />
       <div style={{ display: 'flex', gap: '10px' }}>
-        <button onClick={handleSubmit} style={{ ...buttonStyle, background: '#95E881', color: '#000', flex: 1 }}>Speichern</button>
+        <button onClick={handleSubmit} style={{ ...buttonStyle, background: type === 'income' ? '#95E881' : '#FF6B6B', color: '#000', flex: 1 }}>Speichern</button>
         <button onClick={onCancel} style={{ ...buttonStyle, flex: 1 }}>Abbrechen</button>
       </div>
     </div>
