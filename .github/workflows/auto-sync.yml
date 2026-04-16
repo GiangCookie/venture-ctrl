@@ -4,6 +4,8 @@ on:
   schedule:
     # Run every hour
     - cron: '0 * * * *'
+    # Run daily todo generation at 20:00 (8 PM)
+    - cron: '0 20 * * *'
   # Allow manual trigger
   workflow_dispatch:
 
@@ -16,7 +18,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-      
+          
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
@@ -45,4 +47,46 @@ jobs:
           git add data/daily-data.json
           git add data/journal-entries.json
           git commit -m "📊 Auto-sync: Update daily data $(date -u '+%Y-%m-%d %H:%M UTC')"
+          git push
+
+  generate-todos:
+    runs-on: ubuntu-latest
+    # Only run on the 20:00 schedule
+    if: github.event.schedule == '0 20 * * *' || github.event_name == 'workflow_dispatch'
+    
+    steps:
+      - name: Checkout workspace repository
+        uses: actions/checkout@v4
+        with:
+          repository: GiangCookie/workspace
+          token: ${{ secrets.GITHUB_TOKEN }}
+          path: workspace
+      
+      - name: Checkout venture-ctrl repository
+        uses: actions/checkout@v4
+        with:
+          repository: GiangCookie/venture-ctrl
+          token: ${{ secrets.GITHUB_TOKEN }}
+          path: venture-ctrl
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      
+      - name: Generate daily todos
+        run: |
+          cd venture-ctrl
+          node scripts/generate-daily-todos.js
+        env:
+          MEMORY_DIR: ${{ github.workspace }}/workspace/memory
+          DATA_FILE: ${{ github.workspace }}/venture-ctrl/data/daily-data.json
+      
+      - name: Commit and push changes
+        run: |
+          cd venture-ctrl
+          git config user.name 'GitHub Actions'
+          git config user.email 'actions@github.com'
+          git add data/daily-data.json
+          git diff --quiet data/daily-data.json || git commit -m "📋 Auto-generate daily todos for tomorrow $(date -u '+%Y-%m-%d')"
           git push

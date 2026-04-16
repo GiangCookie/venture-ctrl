@@ -1,110 +1,98 @@
 {
-  "date": "2026-04-16",
-  "lastUpdated": "2026-04-17T00:31:00Z",
-  "timeSessions": [
-    {
-      "id": 1713252000001,
-      "projectId": "kyberg-export",
-      "mood": 4,
-      "startTime": "2026-04-16T07:00:00Z",
-      "endTime": "2026-04-16T09:00:00Z",
-      "duration": 120,
-      "notes": "Export Olivenöl – Samples bestellt bei spanischem & griechischem Produzenten. Onkel-Update verschickt."
-    },
-    {
-      "id": 1713252000010,
-      "projectId": "freelance",
-      "mood": 3,
-      "startTime": "2026-04-16T09:00:00Z",
-      "endTime": "2026-04-16T09:15:00Z",
-      "duration": 15,
-      "notes": "MyHao Nachricht – Klärung Zusammenarbeit (wahrscheinlich einmalig, nicht Retainer)"
-    },
-    {
-      "id": 1713252000020,
-      "projectId": "personal",
-      "mood": 4,
-      "startTime": "2026-04-16T11:00:00Z",
-      "endTime": "2026-04-16T13:00:00Z",
-      "duration": 120,
-      "notes": "Pause: Küchenschränke sauber gemacht & repariert"
-    },
-    {
-      "id": 1713252000030,
-      "projectId": "tough-cookie",
-      "mood": 4,
-      "startTime": "2026-04-16T13:00:00Z",
-      "endTime": "2026-04-16T17:00:00Z",
-      "duration": 240,
-      "notes": "Kono Post-Production + Asset Library erstellen (morgen fertigstellen)"
-    },
-    {
-      "id": 1713252000040,
-      "projectId": "personal",
-      "mood": 5,
-      "startTime": "2026-04-16T17:00:00Z",
-      "endTime": "2026-04-16T19:00:00Z",
-      "duration": 120,
-      "notes": "Golf – Kopf frei bekommen, Session nicht optimal aber mental wichtig"
-    }
-  ],
+  "date": "2026-04-17",
+  "lastUpdated": "2026-04-16T22:45:56.817Z",
+  "timeSessions": [],
   "income": [],
   "todos": [
     {
-      "id": 1713252000002,
+      "id": 1776379556816.7383,
+      "projectId": "tough-cookie",
+      "text": "Monkey Post vorbereiten",
+      "priority": "🔴 Urgent",
+      "completed": false,
+      "createdAt": "2026-04-16T22:45:56.817Z",
+      "deadline": "2026-04-17"
+    },
+    {
+      "id": 1776379556817.5388,
       "projectId": "tough-cookie",
       "text": "Kono Post-Production Video 2",
       "priority": "🔴 Urgent",
       "completed": false,
-      "createdAt": "2026-04-16T06:00:00Z"
+      "createdAt": "2026-04-16T22:45:56.817Z",
+      "deadline": "2026-04-17"
     },
     {
-      "id": 1713252000003,
+      "id": 1776379556817.8699,
+      "projectId": "freelance",
+      "text": "Lu-Bu Finanzierungsgespräch",
+      "priority": "🔴 Urgent",
+      "completed": false,
+      "createdAt": "2026-04-16T22:45:56.817Z",
+      "deadline": "2026-04-17"
+    },
+    {
+      "id": 1776379556817.8015,
       "projectId": "tough-cookie",
+      "text": "~9k€ Offene Rechnungen – Follow-up klären",
+      "priority": "🔴 Urgent",
+      "completed": false,
+      "createdAt": "2026-04-16T22:45:56.817Z",
+      "deadline": "2026-04-17"
+    },
+    {
+      "id": 1776379556817.1096,
+      "projectId": "kyberg",
       "text": "B-Rolls exportieren & graden",
       "priority": "🟡 High",
       "completed": false,
-      "createdAt": "2026-04-16T06:00:00Z"
+      "createdAt": "2026-04-16T22:45:56.817Z",
+      "deadline": "2026-04-17"
     },
     {
-      "id": 1713252000004,
-      "projectId": "freelance",
-      "text": "Lu-Bu Finanzierungsgespräch führen",
-      "priority": "🔴 Urgent",
-      "completed": false,
-      "createdAt": "2026-04-16T06:00:00Z"
-    },
-    {
-      "id": 1713252000005,
+      "id": 1776379556817.9126,
       "projectId": "tough-cookie",
-      "text": "~9k€ offene Rechnungen - Follow-up klären",
-      "priority": "🔴 Urgent",
-      "completed": false,
-      "createdAt": "2026-04-16T06:00:00Z"
-    },
-    {
-      "id": 1713252000006,
-      "projectId": "tough-cookie",
-      "text": "Monkey Post vorbereiten (fällig 17.4.)",
+      "text": "MyHao Klärung – Monatlich oder einmalig?",
       "priority": "🟡 High",
       "completed": false,
-      "createdAt": "2026-04-16T06:00:00Z"
+      "createdAt": "2026-04-16T22:45:56.817Z",
+      "deadline": "2026-04-17"
     },
     {
-      "id": 1713252000007,
+      "id": 1776379556817.244,
       "projectId": "tough-cookie",
       "text": "Wittmann Pre-Production planen",
       "priority": "🟡 High",
       "completed": false,
-      "createdAt": "2026-04-16T06:00:00Z"
+      "createdAt": "2026-04-16T22:45:56.817Z",
+      "deadline": "2026-04-17"
     },
     {
-      "id": 1713252000008,
-      "projectId": "freelance",
-      "text": "MyHao Klärung - monatlich oder einmalig?",
-      "priority": "🟡 High",
+      "id": 1776379556817.3633,
+      "projectId": "personal",
+      "text": "Morning Dashboard Check",
+      "priority": "🟢 Normal",
       "completed": false,
-      "createdAt": "2026-04-16T06:00:00Z"
+      "createdAt": "2026-04-16T22:45:56.817Z",
+      "deadline": "2026-04-17"
+    },
+    {
+      "id": 1776379556817.0935,
+      "projectId": "personal",
+      "text": "Review open todos from yesterday",
+      "priority": "🟢 Normal",
+      "completed": false,
+      "createdAt": "2026-04-16T22:45:56.817Z",
+      "deadline": "2026-04-17"
+    },
+    {
+      "id": 1776379556817.2234,
+      "projectId": "freelance",
+      "text": "Email & Communication check",
+      "priority": "🟢 Normal",
+      "completed": false,
+      "createdAt": "2026-04-16T22:45:56.817Z",
+      "deadline": "2026-04-17"
     }
   ],
   "pipeline": [

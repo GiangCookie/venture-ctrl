@@ -306,31 +306,34 @@ export default function VentureDashboard() {
         }
       }
 
-      // Load journal entries from remote data
-      if (remoteData && remoteData.journalEntry) {
-        const journalEntry = remoteData.journalEntry;
-        const entry = {
-          id: `journal-${journalEntry.date}`,
-          date: journalEntry.date,
-          content: journalEntry.notes,
-          summary: {
-            text: `Mood: ${journalEntry.mood}/5, Energy: ${journalEntry.energyLevel}/10`,
-            mood: journalEntry.mood,
-          },
-          highlights: [
-            ...journalEntry.wins.map(w => ({ type: 'win', text: w })),
-            ...journalEntry.challenges.map(c => ({ type: 'challenge', text: c })),
-            ...journalEntry.gratitude.map(g => ({ type: 'gratitude', text: g })),
-          ],
-          tags: ['daily-reflection'],
-        };
-        setJournalEntries([entry]);
-        localStorage.setItem('venture-journal-entries', JSON.stringify({ entries: [entry] }));
-      }
     };
     
     loadData();
   }, []);
+
+  // Load journal entries when data changes
+  useEffect(() => {
+    if (data && data.journalEntry) {
+      const journalEntry = data.journalEntry;
+      const entry = {
+        id: `journal-${journalEntry.date}`,
+        date: journalEntry.date,
+        content: journalEntry.notes,
+        summary: {
+          text: `Mood: ${journalEntry.mood}/5, Energy: ${journalEntry.energyLevel}/10`,
+          mood: journalEntry.mood,
+        },
+        highlights: [
+          ...journalEntry.wins.map(w => ({ type: 'win', text: w })),
+          ...journalEntry.challenges.map(c => ({ type: 'challenge', text: c })),
+          ...journalEntry.gratitude.map(g => ({ type: 'gratitude', text: g })),
+        ],
+        tags: ['daily-reflection'],
+      };
+      setJournalEntries([entry]);
+      localStorage.setItem('venture-journal-entries', JSON.stringify({ entries: [entry] }));
+    }
+  }, [data.journalEntry]);
   
   // Save data to localStorage on change
   useEffect(() => {
