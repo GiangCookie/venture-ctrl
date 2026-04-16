@@ -7,6 +7,13 @@ import { JournalParser } from './utils/journal-parser';
 import ErrorBoundary from './components/ErrorBoundary';
 import LoadingSpinner from './components/LoadingSpinner';
 
+// Task 4: Time Tracking & Todo Sync Components
+import TimeTrackerWidget from './components/TimeTrackerWidget';
+import TodoSyncWidget from './components/TodoSyncWidget';
+import ManualTimeModal from './components/ManualTimeModal';
+import EditSessionModal from './components/EditSessionModal';
+import EditTodoModal from './components/EditTodoModal';
+
 // Lazy loaded tab components
 const JournalTab = lazy(() => import('./components/JournalTab'));
 const GlobalSearch = lazy(() => import('./components/GlobalSearch'));
@@ -262,6 +269,13 @@ export default function VentureDashboard() {
   const [selectedProject, setSelectedProject] = useState(PROJECTS[0].id);
   const [lastSync, setLastSync] = useState(null);
   const [exportFormat, setExportFormat] = useState('json');
+  
+  // Task 4: Modal state
+  const [showManualTime, setShowManualTime] = useState(false);
+  const [showEditSession, setShowEditSession] = useState(false);
+  const [showEditTodo, setShowEditTodo] = useState(false);
+  const [editingSession, setEditingSession] = useState(null);
+  const [editingTodo, setEditingTodo] = useState(null);
   
   // Load data on mount
   useEffect(() => {
@@ -594,6 +608,32 @@ export default function VentureDashboard() {
   // Tab content renderers
   const renderDashboardTab = () => (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+      
+      {/* Task 4: Time Tracker Widget */}
+      <TimeTrackerWidget 
+        activeSession={data.activeSession}
+        projects={PROJECTS}
+        onStartSession={startSession}
+        onEndSession={endSession}
+        timeSessions={data.timeSessions}
+        onManualTime={() => setShowManualTime(true)}
+        onEditSession={(session) => {
+          setEditingSession(session);
+          setShowEditSession(true);
+        }}
+      />
+      
+      {/* Task 4: Todo Sync Widget */}
+      <TodoSyncWidget 
+        todos={data.todos}
+        timeSessions={data.timeSessions}
+        onToggleTodo={toggleTodo}
+        onDeleteTodo={deleteTodo}
+        onEditTodo={(todo) => {
+          setEditingTodo(todo);
+          setShowEditTodo(true);
+        }}
+      />
       
       <DeadlinesWidget todos={data.todos} />
       
@@ -1323,6 +1363,74 @@ export default function VentureDashboard() {
         )}
         
       </main>
+      
+      {/* Task 4: Modals */}
+      {showManualTime && (
+        <ManualTimeModal
+          projects={PROJECTS}
+          onClose={() => setShowManualTime(false)}
+          onSave={(session) => {
+            setData(prev => ({
+              ...prev,
+              timeSessions: [...prev.timeSessions, { ...session, id: Date.now() }],
+            }));
+            setShowManualTime(false);
+          }}
+        />
+      )}
+      
+      {showEditSession && editingSession && (
+        <EditSessionModal
+          session={editingSession}
+          projects={PROJECTS}
+          onClose={() => {
+            setShowEditSession(false);
+            setEditingSession(null);
+          }}
+          onSave={(updated) => {
+            setData(prev => ({
+              ...prev,
+              timeSessions: prev.timeSessions.map(s => s.id === updated.id ? updated : s),
+            }));
+            setShowEditSession(false);
+            setEditingSession(null);
+          }}
+          onDelete={(id) => {
+            setData(prev => ({
+              ...prev,
+              timeSessions: prev.timeSessions.filter(s => s.id !== id),
+            }));
+            setShowEditSession(false);
+            setEditingSession(null);
+          }}
+        />
+      )}
+      
+      {showEditTodo && editingTodo && (
+        <EditTodoModal
+          todo={editingTodo}
+          onClose={() => {
+            setShowEditTodo(false);
+            setEditingTodo(null);
+          }}
+          onSave={(updated) => {
+            setData(prev => ({
+              ...prev,
+              todos: prev.todos.map(t => t.id === updated.id ? updated : t),
+            }));
+            setShowEditTodo(false);
+            setEditingTodo(null);
+          }}
+          onDelete={(id) => {
+            setData(prev => ({
+              ...prev,
+              todos: prev.todos.filter(t => t.id !== id),
+            }));
+            setShowEditTodo(false);
+            setEditingTodo(null);
+          }}
+        />
+      )}
       
       {/* Footer */}
       <footer style={{ textAlign: 'center', padding: '40px 20px', color: '#444', fontSize: '0.8rem' }}>

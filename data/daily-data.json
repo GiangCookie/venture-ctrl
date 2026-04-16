@@ -1,83 +1,92 @@
 {
-  "date": "2026-04-15",
-  "lastUpdated": "2026-04-15T22:10:00Z",
+  "date": "2026-04-16",
+  "lastUpdated": "2026-04-16T09:36:00Z",
   "timeSessions": [
     {
-      "id": 1713216000001,
+      "id": 1713252000001,
+      "projectId": "kyberg-export",
+      "mood": 4,
+      "startTime": "2026-04-16T07:00:00Z",
+      "endTime": "2026-04-16T09:00:00Z",
+      "duration": 120,
+      "notes": "Export Arbeit: Olivenöl-Deals finalisieren, Kommunikation abschließen. Renieres erledigt, Kyberg wartet auf Hersteller."
+    },
+    {
+      "id": 1713252000010,
+      "projectId": "kyberg-export",
+      "mood": 4,
+      "startTime": "2026-04-16T09:30:00Z",
+      "endTime": "2026-04-16T09:45:00Z",
+      "duration": 15,
+      "notes": "E-Mail-Verkehr zu Olivenöl-Deals (Renieres, Kyberg, Heras)"
+    },
+    {
+      "id": 1713252000020,
       "projectId": "tough-cookie",
       "mood": 4,
-      "startTime": "2026-04-15T10:00:00Z",
-      "endTime": "2026-04-15T16:00:00Z",
-      "duration": 360,
-      "notes": "Kono Post-Production - Video 1 fertig geschnitten"
+      "startTime": "2026-04-16T11:05:00Z",
+      "endTime": "2026-04-16T12:35:00Z",
+      "duration": 90,
+      "notes": "Kono Asset Library + Post-Production"
     }
   ],
   "income": [],
   "todos": [
     {
-      "id": 1713216000002,
+      "id": 1713252000002,
       "projectId": "tough-cookie",
       "text": "Kono Post-Production Video 2",
       "priority": "🔴 Urgent",
       "completed": false,
-      "createdAt": "2026-04-15T08:00:00Z"
+      "createdAt": "2026-04-16T06:00:00Z"
     },
     {
-      "id": 1713216000003,
+      "id": 1713252000003,
       "projectId": "tough-cookie",
       "text": "B-Rolls exportieren & graden",
       "priority": "🟡 High",
       "completed": false,
-      "createdAt": "2026-04-15T08:00:00Z"
+      "createdAt": "2026-04-16T06:00:00Z"
     },
     {
-      "id": 1713216000004,
-      "projectId": "nomu",
-      "text": "Little Hiro Erlangen anschreiben",
-      "priority": "🟢 Normal",
-      "completed": true,
-      "createdAt": "2026-04-15T08:00:00Z",
-      "completedAt": "2026-04-15T11:00:00Z"
-    },
-    {
-      "id": 1713216000005,
-      "projectId": "freelance",
-      "text": "MyHao Klärung - monatlich oder einmalig?",
-      "priority": "🟡 High",
-      "completed": false,
-      "createdAt": "2026-04-15T08:00:00Z"
-    },
-    {
-      "id": 1713216000006,
+      "id": 1713252000004,
       "projectId": "freelance",
       "text": "Lu-Bu Finanzierungsgespräch führen",
       "priority": "🔴 Urgent",
       "completed": false,
-      "createdAt": "2026-04-15T08:00:00Z"
+      "createdAt": "2026-04-16T06:00:00Z"
     },
     {
-      "id": 1713216000007,
+      "id": 1713252000005,
       "projectId": "tough-cookie",
       "text": "~9k€ offene Rechnungen - Follow-up klären",
       "priority": "🔴 Urgent",
       "completed": false,
-      "createdAt": "2026-04-15T08:00:00Z"
+      "createdAt": "2026-04-16T06:00:00Z"
     },
     {
-      "id": 1713216000008,
-      "projectId": "tough-cookie",
-      "text": "Wittmann Pre-Production planen",
-      "priority": "🟡 High",
-      "completed": false,
-      "createdAt": "2026-04-15T08:00:00Z"
-    },
-    {
-      "id": 1713216000009,
+      "id": 1713252000006,
       "projectId": "tough-cookie",
       "text": "Monkey Post vorbereiten (fällig 17.4.)",
       "priority": "🟡 High",
       "completed": false,
-      "createdAt": "2026-04-15T08:00:00Z"
+      "createdAt": "2026-04-16T06:00:00Z"
+    },
+    {
+      "id": 1713252000007,
+      "projectId": "tough-cookie",
+      "text": "Wittmann Pre-Production planen",
+      "priority": "🟡 High",
+      "completed": false,
+      "createdAt": "2026-04-16T06:00:00Z"
+    },
+    {
+      "id": 1713252000008,
+      "projectId": "freelance",
+      "text": "MyHao Klärung - monatlich oder einmalig?",
+      "priority": "🟡 High",
+      "completed": false,
+      "createdAt": "2026-04-16T06:00:00Z"
     }
   ],
   "pipeline": [
@@ -95,9 +104,9 @@
       "projectId": "kyberg",
       "name": "Renieres - Olivenöl",
       "value": 8000,
-      "stage": "Negotiation",
+      "stage": "Closed Won",
       "createdAt": "2026-04-01T00:00:00Z",
-      "notes": "Preisverhandlung läuft"
+      "notes": "✅ ERLEDIGT am 16.04. - Deal finalisiert"
     },
     {
       "id": 1713216000012,
