@@ -1,0 +1,48 @@
+name: Auto-Sync Daily Data
+
+on:
+  schedule:
+    # Run every hour
+    - cron: '0 * * * *'
+  # Allow manual trigger
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Sync and update data
+        run: |
+          # Create sync script if it doesn't exist
+          mkdir -p scripts
+          
+      - name: Commit and push changes
+        run: |
+          git config user.name 'GitHub Actions'
+          git config user.email 'actions@github.com'
+          
+          # Check if there are changes
+          if git diff --quiet data/daily-data.json; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          
+          # Commit and push
+          git add data/daily-data.json
+          git add data/journal-entries.json
+          git commit -m "📊 Auto-sync: Update daily data $(date -u '+%Y-%m-%d %H:%M UTC')"
+          git push
