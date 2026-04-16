@@ -306,15 +306,26 @@ export default function VentureDashboard() {
         }
       }
 
-      // Load journal entries
-      const savedJournal = localStorage.getItem('venture-journal-entries');
-      if (savedJournal) {
-        try {
-          const parsed = JSON.parse(savedJournal);
-          setJournalEntries(parsed.entries || []);
-        } catch (e) {
-          console.error('Failed to load journal:', e);
-        }
+      // Load journal entries from remote data
+      if (remoteData && remoteData.journalEntry) {
+        const journalEntry = remoteData.journalEntry;
+        const entry = {
+          id: `journal-${journalEntry.date}`,
+          date: journalEntry.date,
+          content: journalEntry.notes,
+          summary: {
+            text: `Mood: ${journalEntry.mood}/5, Energy: ${journalEntry.energyLevel}/10`,
+            mood: journalEntry.mood,
+          },
+          highlights: [
+            ...journalEntry.wins.map(w => ({ type: 'win', text: w })),
+            ...journalEntry.challenges.map(c => ({ type: 'challenge', text: c })),
+            ...journalEntry.gratitude.map(g => ({ type: 'gratitude', text: g })),
+          ],
+          tags: ['daily-reflection'],
+        };
+        setJournalEntries([entry]);
+        localStorage.setItem('venture-journal-entries', JSON.stringify({ entries: [entry] }));
       }
     };
     
