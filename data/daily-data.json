@@ -1,6 +1,6 @@
 {
   "date": "2026-04-16",
-  "lastUpdated": "2026-04-16T09:36:00Z",
+  "lastUpdated": "2026-04-17T00:31:00Z",
   "timeSessions": [
     {
       "id": 1713252000001,
@@ -9,25 +9,43 @@
       "startTime": "2026-04-16T07:00:00Z",
       "endTime": "2026-04-16T09:00:00Z",
       "duration": 120,
-      "notes": "Export Arbeit: Olivenöl-Deals finalisieren, Kommunikation abschließen. Renieres erledigt, Kyberg wartet auf Hersteller."
+      "notes": "Export Olivenöl – Samples bestellt bei spanischem & griechischem Produzenten. Onkel-Update verschickt."
     },
     {
       "id": 1713252000010,
-      "projectId": "kyberg-export",
-      "mood": 4,
-      "startTime": "2026-04-16T09:30:00Z",
-      "endTime": "2026-04-16T09:45:00Z",
+      "projectId": "freelance",
+      "mood": 3,
+      "startTime": "2026-04-16T09:00:00Z",
+      "endTime": "2026-04-16T09:15:00Z",
       "duration": 15,
-      "notes": "E-Mail-Verkehr zu Olivenöl-Deals (Renieres, Kyberg, Heras)"
+      "notes": "MyHao Nachricht – Klärung Zusammenarbeit (wahrscheinlich einmalig, nicht Retainer)"
     },
     {
       "id": 1713252000020,
+      "projectId": "personal",
+      "mood": 4,
+      "startTime": "2026-04-16T11:00:00Z",
+      "endTime": "2026-04-16T13:00:00Z",
+      "duration": 120,
+      "notes": "Pause: Küchenschränke sauber gemacht & repariert"
+    },
+    {
+      "id": 1713252000030,
       "projectId": "tough-cookie",
       "mood": 4,
-      "startTime": "2026-04-16T11:05:00Z",
-      "endTime": "2026-04-16T12:35:00Z",
-      "duration": 90,
-      "notes": "Kono Asset Library + Post-Production"
+      "startTime": "2026-04-16T13:00:00Z",
+      "endTime": "2026-04-16T17:00:00Z",
+      "duration": 240,
+      "notes": "Kono Post-Production + Asset Library erstellen (morgen fertigstellen)"
+    },
+    {
+      "id": 1713252000040,
+      "projectId": "personal",
+      "mood": 5,
+      "startTime": "2026-04-16T17:00:00Z",
+      "endTime": "2026-04-16T19:00:00Z",
+      "duration": 120,
+      "notes": "Golf – Kopf frei bekommen, Session nicht optimal aber mental wichtig"
     }
   ],
   "income": [],
@@ -118,5 +136,29 @@
       "notes": "Onkel wartet auf Herstellerantwort"
     }
   ],
-  "activeSession": null
+  "activeSession": null,
+  "journalEntry": {
+    "date": "2026-04-16",
+    "mood": 4,
+    "energyLevel": 4,
+    "responsibilityFeeling": 4,
+    "sleepQuality": 4,
+    "gratitude": [
+      "Golf-Session für mentalen Raum",
+      "Telefonat mit Vater – Zuspruch beim Export-Geschäft",
+      "Fortschritt bei Kono trotz Müdigkeit"
+    ],
+    "challenges": [
+      "Partnerin mental schlecht – anstrengend, aber Distanz geschaffen",
+      "MyHao wahrscheinlich kein Retainer – finanzielle Stabilität verzögert",
+      "Schlechter Schlaf – müder Tag"
+    ],
+    "wins": [
+      "6h produktive Arbeit trotz 4/10 Fitnesslevel",
+      "Olivenöl Samples bestellt (Spanien + Griechenland)",
+      "Kono Asset Library fast fertig",
+      "Coping: Nur 4/10 Verantwortungsgefühl statt 10/10"
+    ],
+    "notes": "Schwerer Tag mental, aber ich habe mich nicht komplett von der Stimmung meiner Partnerin mitziehen lassen. Der Golf und das Gespräch mit meinem Vater haben echt geholfen. MyHao als Retainer zu verlieren tut weh, aber der Export macht Hoffnung."
+  }
 }
