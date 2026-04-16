@@ -1,6 +1,6 @@
 {
   "date": "2026-04-17",
-  "lastUpdated": "2026-04-16T22:45:56.817Z",
+  "lastUpdated": "2026-04-17T01:00:00Z",
   "timeSessions": [],
   "income": [],
   "todos": [
@@ -16,7 +16,7 @@
     {
       "id": 1776379556817.5388,
       "projectId": "tough-cookie",
-      "text": "Kono Post-Production Video 2",
+      "text": "Kono Post-Production fertigstellen (Asset Library abschließen vor Fotoshoot)",
       "priority": "🔴 Urgent",
       "completed": false,
       "createdAt": "2026-04-16T22:45:56.817Z",
@@ -61,7 +61,34 @@
     {
       "id": 1776379556817.244,
       "projectId": "tough-cookie",
-      "text": "Wittmann Pre-Production planen",
+      "text": "Wittmann Pre-Production planen (Wochenende 18.-19.4.)",
+      "priority": "🟡 High",
+      "completed": false,
+      "createdAt": "2026-04-16T22:45:56.817Z",
+      "deadline": "2026-04-17"
+    },
+    {
+      "id": 1776379556818.5000,
+      "projectId": "freelance",
+      "text": "Lu-Bu Fotoshoot (13:00 Uhr, ca. 4h eingeplant)",
+      "priority": "🔴 Urgent",
+      "completed": false,
+      "createdAt": "2026-04-16T22:45:56.817Z",
+      "deadline": "2026-04-17"
+    },
+    {
+      "id": 1776379556818.6000,
+      "projectId": "freelance",
+      "text": "Kommunikation mit Grafikerin An Vo (Lu-Bu Speisekarte)",
+      "priority": "🟡 High",
+      "completed": false,
+      "createdAt": "2026-04-16T22:45:56.817Z",
+      "deadline": "2026-04-17"
+    },
+    {
+      "id": 1776379556818.7000,
+      "projectId": "personal",
+      "text": "Pre-Production Golf Video planen (Cinematic Nike-Style)",
       "priority": "🟡 High",
       "completed": false,
       "createdAt": "2026-04-16T22:45:56.817Z",
