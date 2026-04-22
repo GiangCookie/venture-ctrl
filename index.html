@@ -33,6 +33,12 @@
             text-shadow: 0 0 30px rgba(233, 69, 96, 0.3);
         }
         
+        .last-updated {
+            color: #8892b0;
+            font-size: 0.85rem;
+            margin-top: 8px;
+        }
+        
         .dashboard-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -76,7 +82,7 @@
             text-align: center;
         }
         
-        .stat-box.label {
+        .stat-box .label {
             font-size: 0.75rem;
             color: #8892b0;
             text-transform: uppercase;
@@ -84,21 +90,26 @@
             margin-bottom: 8px;
         }
         
-        .stat-box.value {
+        .stat-box .value {
             font-size: 1.8rem;
             font-weight: bold;
         }
         
-        .stat-box.value.income {
+        .stat-box .value.income {
             color: #4ade80;
         }
         
-        .stat-box.value.expense {
+        .stat-box .value.expense {
             color: #f87171;
         }
         
-        .stat-box.value.profit {
+        .stat-box .value.profit {
             color: #60a5fa;
+        }
+        
+        .stat-box .subtext {
+            font-size: 0.75rem;
+            margin-top: 4px;
         }
         
         /* Project Overview */
@@ -120,8 +131,7 @@
         
         .project-item.toughcookie { border-left-color: #f59e0b; }
         .project-item.nomu { border-left-color: #3b82f6; }
-        .project-item.kyberg { border-left-color: #10b981; }
-        .project-item.lubu { border-left-color: #8b5cf6; }
+        .project-item.export { border-left-color: #10b981; }
         .project-item.freelance { border-left-color: #ec4899; }
         
         .project-info {
@@ -138,16 +148,26 @@
             font-weight: 600;
         }
         
-        .project-stats {
-            display: flex;
-            gap: 20px;
-            font-size: 0.9rem;
-            color: #8892b0;
+        .project-status {
+            font-size: 0.85rem;
+            padding: 4px 10px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.1);
         }
         
-        .project-stats span {
-            color: #fff;
-            font-weight: 600;
+        .project-status.done {
+            background: rgba(74, 222, 128, 0.2);
+            color: #4ade80;
+        }
+        
+        .project-status.active {
+            background: rgba(59, 130, 246, 0.2);
+            color: #60a5fa;
+        }
+        
+        .project-status.waiting {
+            background: rgba(245, 158, 11, 0.2);
+            color: #f59e0b;
         }
         
         /* To-Do Section */
@@ -165,27 +185,6 @@
             border-radius: 20px;
             font-size: 0.85rem;
             font-weight: 600;
-        }
-        
-        .todo-tabs {
-            display: flex;
-            gap: 8px;
-            margin-bottom: 16px;
-        }
-        
-        .tab {
-            padding: 8px 16px;
-            border-radius: 8px;
-            background: rgba(255, 255, 255, 0.05);
-            font-size: 0.85rem;
-            cursor: pointer;
-            border: none;
-            color: #8892b0;
-        }
-        
-        .tab.active {
-            background: rgba(233, 69, 96, 0.2);
-            color: #e94560;
         }
         
         .todo-list {
@@ -243,6 +242,11 @@
         
         .todo-due {
             color: #f87171;
+        }
+        
+        .todo-due.today {
+            color: #ef4444;
+            font-weight: 600;
         }
         
         /* Pipeline Section */
@@ -334,22 +338,22 @@
             font-weight: 600;
         }
         
-        /* Time Section */
-        .time-stats {
+        /* Quick Stats */
+        .quick-stats {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 15px;
             margin-top: 10px;
         }
         
-        .time-box {
+        .quick-box {
             background: rgba(255, 255, 255, 0.05);
             border-radius: 12px;
             padding: 20px;
             text-align: center;
         }
         
-        .time-box .label {
+        .quick-box .label {
             font-size: 0.75rem;
             color: #8892b0;
             text-transform: uppercase;
@@ -357,15 +361,17 @@
             margin-bottom: 8px;
         }
         
-        .time-box .value {
-            font-size: 2rem;
+        .quick-box .value {
+            font-size: 1.8rem;
             font-weight: bold;
-            color: #60a5fa;
         }
         
-        .time-box .unit {
-            font-size: 1rem;
-            color: #8892b0;
+        .quick-box .value.warning {
+            color: #f87171;
+        }
+        
+        .quick-box .value.success {
+            color: #4ade80;
         }
 
         /* Responsive */
@@ -376,7 +382,7 @@
             .money-stats {
                 grid-template-columns: 1fr;
             }
-            .time-stats {
+            .quick-stats {
                 grid-template-columns: 1fr;
             }
         }
@@ -386,6 +392,7 @@
     <div class="header">
         <h1>🚀 VENTURE CTRL</h1>
         <p style="color: #8892b0; margin-top: 8px;">Dein persönliches Business Dashboard</p>
+        <p class="last-updated">Letzte Aktualisierung: 22. April 2026, 16:04 Uhr</p>
     </div>
 
     <div class="dashboard-grid">
@@ -394,99 +401,77 @@
             <h2><span>💰</span> Finanzen Übersicht</h2>
             <div class="money-stats">
                 <div class="stat-box">
-                    <div class="label">Einnahmen</div>
+                    <div class="label">Offene Rechnungen</div>
+                    <div class="value income">~9.000 €</div>
+                    <div class="subtext" style="color: #f87171;">⏳ Nachgehakt</div>
+                </div>
+                <div class="stat-box">
+                    <div class="label">LuBu Rechnung</div>
                     <div class="value income">1.400 €</div>
-                    <div style="font-size: 0.75rem; color: #4ade80; margin-top: 4px;">+100% vs. letzter Monat</div>
+                    <div class="subtext" style="color: #4ade80;">✅ Versendet</div>
                 </div>
                 <div class="stat-box">
-                    <div class="label">Ausgaben</div>
-                    <div class="value expense">700 €</div>
-                    <div style="font-size: 0.75rem; color: #f87171; margin-top: 4px;">200€ + 500€</div>
-                </div>
-                <div class="stat-box">
-                    <div class="label">Gewinn</div>
-                    <div class="value profit">700 €</div>
-                    <div style="font-size: 0.75rem; color: #60a5fa; margin-top: 4px;">50% Marge</div>
+                    <div class="label">Einkommensziel</div>
+                    <div class="value profit">2.500 €</div>
+                    <div class="subtext" style="color: #60a5fa;">1K TC + 1,5K Freelance</div>
                 </div>
             </div>
         </div>
 
-        <!-- Time Card -->
+        <!-- Quick Stats Card -->
         <div class="card">
-            <h2><span>⏱️</span> Zeit Tracking</h2>
-            <div class="time-stats">
-                <div class="time-box">
-                    <div class="label">Heute</div>
-                    <div class="value">4.5 <span class="unit">h</span></div>
+            <h2><span>📊</span> Status Overview</h2>
+            <div class="quick-stats">
+                <div class="quick-box">
+                    <div class="label">Aktive Projekte</div>
+                    <div class="value success">4</div>
                 </div>
-                <div class="time-box">
-                    <div class="label">Diese Woche</div>
-                    <div class="value">28 <span class="unit">h</span></div>
+                <div class="quick-box">
+                    <div class="label">Offene To-Dos</div>
+                    <div class="value warning">8</div>
                 </div>
-                <div class="time-box">
-                    <div class="label">Ø Stundenlohn</div>
-                    <div class="value">50 <span class="unit">€/h</span></div>
+                <div class="quick-box">
+                    <div class="label">Pipeline Value</div>
+                    <div class="value success">~15K €</div>
                 </div>
-                <div class="time-box">
-                    <div class="label">Gesamt Stunden</div>
-                    <div class="value">156 <span class="unit">h</span></div>
+                <div class="quick-box">
+                    <div class="label">Nächster Dreh</div>
+                    <div class="value">24.04.</div>
                 </div>
             </div>
         </div>
 
         <!-- Project Card -->
         <div class="card">
-            <h2><span>📊</span> Projekt-Übersicht</h2>
+            <h2><span>🎯</span> Projekt-Status</h2>
             <div class="project-list">
                 <div class="project-item toughcookie">
                     <div class="project-info">
                         <span class="project-icon">🍪</span>
                         <span class="project-name">Tough Cookie</span>
                     </div>
-                    <div class="project-stats">
-                        <div><span>12</span> h</div>
-                        <div><span>600</span> €</div>
-                    </div>
+                    <span class="project-status active">Aktiv</span>
                 </div>
                 <div class="project-item nomu">
                     <div class="project-info">
                         <span class="project-icon">📱</span>
                         <span class="project-name">NOMU</span>
                     </div>
-                    <div class="project-stats">
-                        <div><span>8</span> h</div>
-                        <div><span>400</span> €</div>
-                    </div>
+                    <span class="project-status active">Preproduction</span>
                 </div>
-                <div class="project-item kyberg">
+                <div class="project-item export">
                     <div class="project-info">
-                        <span class="project-icon">💊</span>
-                        <span class="project-name">Kyberg Export</span>
+                        <span class="project-icon">🫒</span>
+                        <span class="project-name">Export (Olivenöl)</span>
                     </div>
-                    <div class="project-stats">
-                        <div><span>5</span> h</div>
-                        <div><span>250</span> €</div>
-                    </div>
-                </div>
-                <div class="project-item lubu">
-                    <div class="project-info">
-                        <span class="project-icon">🍜</span>
-                        <span class="project-name">LuBu</span>
-                    </div>
-                    <div class="project-stats">
-                        <div><span>3</span> h</div>
-                        <div><span>150</span> €</div>
-                    </div>
+                    <span class="project-status waiting">Wartet</span>
                 </div>
                 <div class="project-item freelance">
                     <div class="project-info">
                         <span class="project-icon">🎬</span>
                         <span class="project-name">Freelance</span>
                     </div>
-                    <div class="project-stats">
-                        <div><span>0</span> h</div>
-                        <div><span>0</span> €</div>
-                    </div>
+                    <span class="project-status done">LuBu ✅</span>
                 </div>
             </div>
         </div>
@@ -494,132 +479,87 @@
         <!-- To-Do Card -->
         <div class="card">
             <div class="todo-header">
-                <h2><span>✅</span> To-Do Sync</h2>
-                <span class="todo-count">12 Offen</span>
-            </div>
-            <div class="todo-tabs">
-                <button class="tab active">Heute</button>
-                <button class="tab">Diese Woche</button>
-                <button class="tab">Überfällig</button>
+                <h2><span>✅</span> Aktive To-Dos</h2>
+                <span class="todo-count">8 Offen</span>
             </div>
             <div class="todo-list">
                 <div class="todo-item high">
                     <div class="todo-checkbox"></div>
                     <div class="todo-content">
-                        <div class="todo-text">LuBu Rechnung erstellen und an Kunden senden</div>
+                        <div class="todo-text">Meeting bei Sentai (Tough Cookie)</div>
                         <div class="todo-meta">
-                            <span class="todo-project">LuBu</span>
-                            <span class="todo-due">🔴 Deadline: Heute</span>
+                            <span class="todo-project">Tough Cookie</span>
+                            <span class="todo-due today">🔴 Heute 13:00</span>
                         </div>
                     </div>
                 </div>
                 <div class="todo-item high">
                     <div class="todo-checkbox"></div>
                     <div class="todo-content">
-                        <div class="todo-text">NOMU App Bugfixes für iOS Release</div>
+                        <div class="todo-text">Pitchdeck für Weinbar (Dario)</div>
                         <div class="todo-meta">
-                            <span class="todo-project">NOMU</span>
-                            <span class="todo-due">🔴 Deadline: Heute</span>
+                            <span class="todo-project">Tough Cookie</span>
+                            <span class="todo-due">🔴 Priorität hoch</span>
                         </div>
                     </div>
                 </div>
                 <div class="todo-item high">
                     <div class="todo-checkbox"></div>
                     <div class="todo-content">
-                        <div class="todo-text">Tough Cookie Social Media Content planen</div>
+                        <div class="todo-text">Anju CI Briefing für Grafikerin</div>
                         <div class="todo-meta">
                             <span class="todo-project">Tough Cookie</span>
-                            <span class="todo-due">🔴 Deadline: Morgen</span>
+                            <span class="todo-due">🔴 Offen</span>
                         </div>
                     </div>
                 </div>
                 <div class="todo-item medium">
                     <div class="todo-checkbox"></div>
                     <div class="todo-content">
-                        <div class="todo-text">Kyberg Export Verpackungsdesign finalisieren</div>
+                        <div class="todo-text">Hotel Wittmann Preproduction</div>
                         <div class="todo-meta">
-                            <span class="todo-project">Kyberg</span>
-                            <span class="todo-due">🟡 Deadline: 25.04</span>
+                            <span class="todo-project">Tough Cookie</span>
+                            <span class="todo-due">🟡 Demnächst</span>
                         </div>
                     </div>
                 </div>
                 <div class="todo-item medium">
                     <div class="todo-checkbox"></div>
                     <div class="todo-content">
-                        <div class="todo-text">Freelance Portfolio Website updaten</div>
+                        <div class="todo-text">Golf Ad Preproduction + Location Scout</div>
                         <div class="todo-meta">
-                            <span class="todo-project">Freelance</span>
-                            <span class="todo-due">🟡 Deadline: 26.04</span>
+                            <span class="todo-project">Tough Cookie</span>
+                            <span class="todo-due">🟡 Freitag</span>
                         </div>
                     </div>
                 </div>
                 <div class="todo-item medium">
                     <div class="todo-checkbox"></div>
                     <div class="todo-content">
-                        <div class="todo-text">NOMU Analytics Dashboard implementieren</div>
+                        <div class="todo-text">NOMU Dreh Vorbereitung (24.04.)</div>
                         <div class="todo-meta">
                             <span class="todo-project">NOMU</span>
-                            <span class="todo-due">🟡 Deadline: 27.04</span>
+                            <span class="todo-due">🟡 Donnerstag</span>
                         </div>
                     </div>
                 </div>
                 <div class="todo-item low">
                     <div class="todo-checkbox"></div>
                     <div class="todo-content">
-                        <div class="todo-text">Tough Cookie Newsletter Q2 planen</div>
+                        <div class="todo-text">Finanzamt anrufen (Ratenzahlung)</div>
                         <div class="todo-meta">
-                            <span class="todo-project">Tough Cookie</span>
-                            <span class="todo-due">🟢 Deadline: 28.04</span>
+                            <span class="todo-project">Privat</span>
+                            <span class="todo-due">🟢 Deadline: 20.05.</span>
                         </div>
                     </div>
                 </div>
                 <div class="todo-item low">
                     <div class="todo-checkbox"></div>
                     <div class="todo-content">
-                        <div class="todo-text">LuBu Lieferantenvertrag durchlesen</div>
+                        <div class="todo-text">Krankenkasse E-Mail</div>
                         <div class="todo-meta">
-                            <span class="todo-project">LuBu</span>
-                            <span class="todo-due">🟢 Deadline: 29.04</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="todo-item low">
-                    <div class="todo-checkbox"></div>
-                    <div class="todo-content">
-                        <div class="todo-text">Kyberg Export Zollunterlagen prüfen</div>
-                        <div class="todo-meta">
-                            <span class="todo-project">Kyberg</span>
-                            <span class="todo-due">🟢 Deadline: 30.04</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="todo-item low">
-                    <div class="todo-checkbox"></div>
-                    <div class="todo-content">
-                        <div class="todo-text">NOMU User Testing Sessions auswerten</div>
-                        <div class="todo-meta">
-                            <span class="todo-project">NOMU</span>
-                            <span class="todo-due">🟢 Deadline: 01.05</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="todo-item low">
-                    <div class="todo-checkbox"></div>
-                    <div class="todo-content">
-                        <div class="todo-text">Tough Cookie Q1 Bilanz review</div>
-                        <div class="todo-meta">
-                            <span class="todo-project">Tough Cookie</span>
-                            <span class="todo-due">🟢 Deadline: 02.05</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="todo-item low">
-                    <div class="todo-checkbox"></div>
-                    <div class="todo-content">
-                        <div class="todo-text">Freelance Steuerberater Termin vereinbaren</div>
-                        <div class="todo-meta">
-                            <span class="todo-project">Freelance</span>
-                            <span class="todo-due">🟢 Deadline: 03.05</span>
+                            <span class="todo-project">Privat</span>
+                            <span class="todo-due">🟢 Offen</span>
                         </div>
                     </div>
                 </div>
@@ -630,7 +570,7 @@
         <div class="card">
             <div class="pipeline-header">
                 <h2><span>🎯</span> Sales Pipeline</h2>
-                <div class="pipeline-value">17.000 €</div>
+                <div class="pipeline-value">~15.000 €</div>
             </div>
             <div class="pipeline-stages">
                 <div class="pipeline-stage">
@@ -638,19 +578,19 @@
                         <div class="stage-name">
                             <span>💡</span> Lead
                         </div>
-                        <div class="stage-amount" style="color: #3b82f6;">5.000 €</div>
+                        <div class="stage-amount" style="color: #3b82f6;">~3.000 €</div>
                     </div>
                     <div class="stage-bar">
-                        <div class="stage-fill lead" style="width: 29%;"></div>
+                        <div class="stage-fill lead" style="width: 20%;"></div>
                     </div>
                     <div class="deal-list">
                         <div class="deal-item">
-                            <span class="deal-name">Neuer Kunde Anfrage Website</span>
-                            <span class="deal-value">2.000 €</span>
+                            <span class="deal-name">Asian Restaurant Golf Club</span>
+                            <span class="deal-value">Angebot raus</span>
                         </div>
                         <div class="deal-item">
-                            <span class="deal-name">Tough Cookie Kooperation</span>
-                            <span class="deal-value">3.000 €</span>
+                            <span class="deal-name">Japanese Pancake Cafe</span>
+                            <span class="deal-value">Angebot raus</span>
                         </div>
                     </div>
                 </div>
@@ -659,19 +599,19 @@
                         <div class="stage-name">
                             <span>📄</span> Angebot
                         </div>
-                        <div class="stage-amount" style="color: #f59e0b;">7.000 €</div>
+                        <div class="stage-amount" style="color: #f59e0b;">~8.000 €</div>
                     </div>
                     <div class="stage-bar">
-                        <div class="stage-fill proposal" style="width: 41%;"></div>
+                        <div class="stage-fill proposal" style="width: 53%;"></div>
                     </div>
                     <div class="deal-list">
                         <div class="deal-item">
-                            <span class="deal-name">Kyberg Export Erweiterung</span>
-                            <span class="deal-value">4.000 €</span>
+                            <span class="deal-name">Sentai (Meeting heute)</span>
+                            <span class="deal-value">~5.000 €</span>
                         </div>
                         <div class="deal-item">
-                            <span class="deal-name">NOMU Feature Upgrade</span>
-                            <span class="deal-value">3.000 €</span>
+                            <span class="deal-name">Weinbar Pitch (Dario)</span>
+                            <span class="deal-value">~3.000 €</span>
                         </div>
                     </div>
                 </div>
@@ -680,47 +620,67 @@
                         <div class="stage-name">
                             <span>🤝</span> Verhandlung
                         </div>
-                        <div class="stage-amount" style="color: #8b5cf6;">3.000 €</div>
+                        <div class="stage-amount" style="color: #8b5cf6;">~4.000 €</div>
                     </div>
                     <div class="stage-bar">
-                        <div class="stage-fill negotiation" style="width: 18%;"></div>
+                        <div class="stage-fill negotiation" style="width: 27%;"></div>
                     </div>
                     <div class="deal-list">
                         <div class="deal-item">
-                            <span class="deal-name">LuBu Catering Vertrag</span>
-                            <span class="deal-value">3.000 €</span>
+                            <span class="deal-name">Little Hiro Erlangen (NOMU)</span>
+                            <span class="deal-value">~1.500 €</span>
+                        </div>
+                        <div class="deal-item">
+                            <span class="deal-name">Hotel Wittmann</span>
+                            <span class="deal-value">~2.500 €</span>
                         </div>
                     </div>
                 </div>
-                <div class="pipeline-stage">
-                    <div class="stage-header">
-                        <div class="stage-name">
-                            <span>✅</span> Gewonnen
+            </div>
+        </div>
+
+        <!-- Recent Wins Card -->
+        <div class="card">
+            <h2><span>🏆</span> Recent Wins</h2>
+            <div class="todo-list">
+                <div class="todo-item" style="border-left-color: #4ade80;">
+                    <div class="todo-content">
+                        <div class="todo-text" style="color: #4ade80;">✅ Kono Postproduction fertig</div>
+                        <div class="todo-meta">
+                            <span class="todo-project">Tough Cookie</span>
+                            <span>22.04.</span>
                         </div>
-                        <div class="stage-amount" style="color: #10b981;">2.000 €</div>
                     </div>
-                    <div class="stage-bar">
-                        <div class="stage-fill won" style="width: 12%;"></div>
+                </div>
+                <div class="todo-item" style="border-left-color: #4ade80;">
+                    <div class="todo-content">
+                        <div class="todo-text" style="color: #4ade80;">✅ Angebot an Sentai versendet</div>
+                        <div class="todo-meta">
+                            <span class="todo-project">Tough Cookie</span>
+                            <span>22.04.</span>
+                        </div>
                     </div>
-                    <div class="deal-list">
-                        <div class="deal-item">
-                            <span class="deal-name">Freelance Projekt XYZ</span>
-                            <span class="deal-value">2.000 €</span>
+                </div>
+                <div class="todo-item" style="border-left-color: #4ade80;">
+                    <div class="todo-content">
+                        <div class="todo-text" style="color: #4ade80;">✅ LuBu Rechnung 1.400€ versendet</div>
+                        <div class="todo-meta">
+                            <span class="todo-project">LuBu</span>
+                            <span>22.04.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="todo-item" style="border-left-color: #4ade80;">
+                    <div class="todo-content">
+                        <div class="todo-text" style="color: #4ade80;">✅ Export-Kommunikation María abgeschlossen</div>
+                        <div class="todo-meta">
+                            <span class="todo-project">Export</span>
+                            <span>22.04.</span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <script>
-        // Simple tab switching for To-Dos
-        document.querySelectorAll('.tab').forEach(tab => {
-            tab.addEventListener('click', function() {
-                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-                this.classList.add('active');
-            });
-        });
-    </script>
 </body>
 </html>
