@@ -1,0 +1,101 @@
+{
+  "date": "2026-04-18",
+  "lastUpdated": "2026-04-17T01:01:00Z",
+  "timeSessions": [],
+  "income": [],
+  "todos": [
+    {
+      "id": 1776379556900.1000,
+      "projectId": "tough-cookie",
+      "text": "Wittmann Pre-Production (Wochenende – Location Scout, Shot List)",
+      "priority": "🔴 Urgent",
+      "completed": false,
+      "createdAt": "2026-04-17T01:01:00Z",
+      "deadline": "2026-04-18"
+    },
+    {
+      "id": 1776379556900.2000,
+      "projectId": "personal",
+      "text": "Golf Video Pre-Production (Cinematic Nike-Style – Storyboard, Equipment)",
+      "priority": "🟡 High",
+      "completed": false,
+      "createdAt": "2026-04-17T01:01:00Z",
+      "deadline": "2026-04-18"
+    },
+    {
+      "id": 1776379556900.3000,
+      "projectId": "tough-cookie",
+      "text": "Kono Video 2 (falls Freitag nicht fertig)",
+      "priority": "🟡 High",
+      "completed": false,
+      "createdAt": "2026-04-17T01:01:00Z",
+      "deadline": "2026-04-18"
+    },
+    {
+      "id": 1776379556900.4000,
+      "projectId": "kyberg",
+      "text": "B-Rolls exportieren & graden (falls Freitag nicht fertig)",
+      "priority": "🟡 High",
+      "completed": false,
+      "createdAt": "2026-04-17T01:01:00Z",
+      "deadline": "2026-04-18"
+    },
+    {
+      "id": 1776379556900.5000,
+      "projectId": "tough-cookie",
+      "text": "Content-Planung nächste Woche (Monkey, Ginza, Niku)",
+      "priority": "🟢 Normal",
+      "completed": false,
+      "createdAt": "2026-04-17T01:01:00Z",
+      "deadline": "2026-04-18"
+    },
+    {
+      "id": 1776379556900.6000,
+      "projectId": "personal",
+      "text": "HYROX Training (Weekend Session)",
+      "priority": "🟢 Normal",
+      "completed": false,
+      "createdAt": "2026-04-17T01:01:00Z",
+      "deadline": "2026-04-18"
+    },
+    {
+      "id": 1776379556900.7000,
+      "projectId": "personal",
+      "text": "Wochen-Review: Was lief diese Woche?",
+      "priority": "🟢 Normal",
+      "completed": false,
+      "createdAt": "2026-04-17T01:01:00Z",
+      "deadline": "2026-04-18"
+    }
+  ],
+  "pipeline": [
+    {
+      "id": 1713216000010,
+      "projectId": "kyberg",
+      "name": "Heras - Nahrungsergänzungsmittel",
+      "value": 5000,
+      "stage": "Negotiation",
+      "createdAt": "2026-04-01T00:00:00Z",
+      "notes": "Warte auf Samples vom Hersteller"
+    },
+    {
+      "id": 1713216000011,
+      "projectId": "kyberg",
+      "name": "Renieres - Olivenöl",
+      "value": 8000,
+      "stage": "Closed Won",
+      "createdAt": "2026-04-01T00:00:00Z",
+      "notes": "✅ ERLEDIGT am 16.04. - Deal finalisiert"
+    },
+    {
+      "id": 1713216000012,
+      "projectId": "kyberg",
+      "name": "Kyberg Vital",
+      "value": 12000,
+      "stage": "Pitch",
+      "createdAt": "2026-04-01T00:00:00Z",
+      "notes": "Onkel wartet auf Herstellerantwort"
+    }
+  ],
+  "activeSession": null
+}

@@ -26,6 +26,7 @@ const PROJECTS = [
   { id: 'tough-cookie', name: 'Tough Cookie', color: '#FF6B35', emoji: '🍪' },
   { id: 'nomu', name: 'NOMU', color: '#4ECDC4', emoji: '📱' },
   { id: 'kyberg', name: 'Kyberg Export', color: '#95E881', emoji: '💊' },
+  { id: 'lubu', name: 'LuBu', color: '#E74C3C', emoji: '🍜' },
   { id: 'freelance', name: 'Freelance', color: '#A855F7', emoji: '🎬' },
 ];
 
@@ -34,14 +35,22 @@ const MOOD_EMOJIS = ['😴', '😐', '🙂', '😊', '🔥'];
 const DEAL_STAGES = ['Lead', 'Pitch', 'Negotiation', 'Closed Won', 'Closed Lost'];
 
 // Initial state
-const getInitialData = () => ({
-  timeSessions: [],
-  income: [],
-  todos: [],
-  pipeline: [],
-  activeSession: null,
-  tags: [],
-});
+const getInitialData = () => {
+  try {
+    const saved = localStorage.getItem('ventureData');
+    if (saved) return JSON.parse(saved);
+  } catch (e) {
+    console.warn('Failed to load from localStorage:', e);
+  }
+  return {
+    timeSessions: [],
+    income: [],
+    todos: [],
+    pipeline: [],
+    activeSession: null,
+    tags: [],
+  };
+};
 
 // Memoized child components to prevent unnecessary re-renders
 const StatCard = memo(function StatCard({ label, value, suffix, color }) {
@@ -280,6 +289,22 @@ export default function VentureDashboard() {
   // Load data on mount
   useEffect(() => {
     const loadData = async () => {
+      try {
+        // Try loading from local data.json first
+        const localResponse = await fetch('./data.json');
+        if (localResponse.ok) {
+          const localData = await localResponse.json();
+          if (localData && localData.todos) {
+            setData(prev => ({ ...getInitialData(), ...localData }));
+            localStorage.setItem('venture-dashboard-data', JSON.stringify(localData));
+            console.log('✅ Loaded from local data.json');
+            return;
+          }
+        }
+      } catch (e) {
+        console.log('Local data.json load failed');
+      }
+      
       try {
         // Try loading from GitHub
         const response = await fetch('https://raw.githubusercontent.com/GiangCookie/venture-ctrl/main/data/daily-data.json');

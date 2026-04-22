@@ -21,6 +21,7 @@ const PROJECTS = [
   { id: 'tough-cookie', name: 'Tough Cookie', color: '#FF6B35', emoji: '🍪' },
   { id: 'nomu', name: 'NOMU', color: '#4ECDC4', emoji: '📱' },
   { id: 'kyberg', name: 'Kyberg Export', color: '#95E881', emoji: '💊' },
+  { id: 'lubu', name: 'LuBu', color: '#E74C3C', emoji: '🍜' },
   { id: 'freelance', name: 'Freelance', color: '#A855F7', emoji: '🎬' },
   { id: 'export', name: 'Export', color: '#FFD93D', emoji: '📦' },
 ];
