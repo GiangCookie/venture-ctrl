@@ -83,12 +83,39 @@
         }
         .badge-new { background: #FF6B35; color: white; }
         .badge-done { background: #95E881; color: #0a0a0f; }
+        .badge-today { background: #f66; color: white; }
+        .weekly-review { 
+            background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%); 
+            border-radius: 16px; 
+            padding: 20px; 
+            margin-bottom: 30px; 
+            border: 1px solid rgba(99, 102, 241, 0.3); 
+        }
+        .weekly-title { font-size: 1.1rem; font-weight: 700; margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
+        .weekly-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; }
+        .weekly-stat { text-align: center; padding: 15px; background: rgba(0,0,0,0.3); border-radius: 12px; }
+        .weekly-value { font-size: 1.5rem; font-weight: 800; color: #22c55e; }
+        .weekly-value.down { color: #ef4444; }
+        .weekly-label { font-size: 0.75rem; color: #a0a0a0; margin-top: 5px; }
+        @media (max-width: 768px) { 
+            .weekly-grid { grid-template-columns: repeat(2, 1fr); }
+        }
     </style>
 </head>
 <body>
     <div class="header">
         <h1>🚀 VENTURE CTRL v2</h1>
-        <p>Dashboard - 23. April 2026</p>
+        <p>Dashboard - 23. April 2026, 20:04 Uhr</p>
+    </div>
+
+    <div class="weekly-review">
+        <div class="weekly-title">📊 KW 17 Übersicht</div>
+        <div class="weekly-grid">
+            <div class="weekly-stat"><div class="weekly-value">✅</div><div class="weekly-label">Sentai Deal</div></div>
+            <div class="weekly-stat"><div class="weekly-value">1</div><div class="weekly-label">Training</div></div>
+            <div class="weekly-stat"><div class="weekly-value">1.4k€</div><div class="weekly-label">LuBu Umsatz</div></div>
+            <div class="weekly-stat"><div class="weekly-value down">~9k€</div><div class="weekly-label">Offene Rechnungen</div></div>
+        </div>
     </div>
 
     <div class="stats">
@@ -98,7 +125,7 @@
         </div>
         <div class="stat-card">
             <h3>📊 OFFENE TO-DOS</h3>
-            <div class="value" style="color: #FFD93D;">8</div>
+            <div class="value" style="color: #FFD93D;">7</div>
         </div>
         <div class="stat-card">
             <h3>🎯 PIPELINE DEALS</h3>
@@ -106,14 +133,14 @@
         </div>
         <div class="stat-card">
             <h3>⚡ AKTIVE PROJEKTE</h3>
-            <div class="value" style="color: #FF6B35;">4</div>
+            <div class="value" style="color: #FF6B35;">5</div>
         </div>
     </div>
 
     <div class="todos">
-        <h2 style="margin-bottom: 20px;">🔴 URGENT (Heute)</h2>
+        <h2 style="margin-bottom: 20px;">🔴 URGENT (Diese Woche)</h2>
         <div class="todo-item priority-urgent">
-            <span>🎬 NOMU Dreh – HEUTE <span class="badge badge-new">LIVE</span></span>
+            <span>🎥 Sentai Pre-Production planen <span class="badge badge-today">NÄCHSTE WOCHE</span></span>
         </div>
         <div class="todo-item priority-urgent">
             <span>⛳ Golf Ad Shots für Freitag vorbereiten</span>
@@ -127,10 +154,10 @@
             <span>🎥 Tough Cookie Video schneiden</span>
         </div>
         <div class="todo-item priority-high">
-            <span>🗓️ Sentai Pre-Production planen (Dreh Anfang Mai)</span>
+            <span>🍷 Weinbar Dario – Pitch fertig machen & schicken</span>
         </div>
         <div class="todo-item priority-high">
-            <span>🍷 Weinbar Dario – Pitch fertig machen & schicken</span>
+            <span>📱 Tough Cookie Reel produzieren (1h Aufwand)</span>
         </div>
         
         <h2 style="margin: 30px 0 20px;">🟢 NORMAL</h2>
@@ -140,11 +167,11 @@
         <div class="todo-item priority-normal">
             <span>🎨 Anju CI Briefing für Grafikerin</span>
         </div>
-        
-        <h2 style="margin: 30px 0 20px;">⚪ LOW</h2>
-        <div class="todo-item priority-low">
+        <div class="todo-item priority-normal">
             <span>💰 Finanzamt anrufen wegen Ratenzahlung (Deadline: 20.05.)</span>
         </div>
+        
+        <h2 style="margin: 30px 0 20px;">⚪ LOW</h2>
         <div class="todo-item priority-low">
             <span>🏥 Krankenkasse E-Mail</span>
         </div>
@@ -160,6 +187,10 @@
             <span class="stage stage-closed">Closed Won</span>
         </div>
         <div class="deal">
+            <span>🍜 LuBu Projekt</span>
+            <span class="stage stage-closed">Closed Won - 1.400€</span>
+        </div>
+        <div class="deal">
             <span>🍪 Weinbar Dario</span>
             <span class="stage stage-lead">Lead</span>
         </div>
@@ -168,42 +199,42 @@
             <span class="stage stage-lead">Lead</span>
         </div>
         <div class="deal">
-            <span>🍜 LuBu Projekt</span>
-            <span class="stage stage-closed">Closed Won - 1.400€</span>
-        </div>
-        <div class="deal">
             <span>⛳ Golf Ad</span>
             <span class="stage stage-progress">In Progress</span>
         </div>
     </div>
 
     <div class="projects">
-        <h2 style="margin-bottom: 20px;">📊 PROJEKTE</h2>
+        <h2 style="margin-bottom: 20px;">📊 PROJEKTE STATUS</h2>
         <div class="project" style="border-color: #FF6B35;">
             <strong>🍪 Tough Cookie</strong><br>
-            Offene Rechnungen: ~9.000€ | Sentai: Auftrag bestätigt! | Video: In Bearbeitung
+            Offene Rechnungen: ~9.000€ | Sentai: ✅ Auftrag bestätigt! | Pre-Production: Nächste Woche
         </div>
-        <div class="project" style="border-color: #f66;">
+        <div class="project" style="border-color: #4ade80;">
             <strong>📱 NOMU</strong><br>
-            🔴 DREH HEUTE (24.04.) – Live Produktion
+            ✅ Dreh heute durchgeführt (23.04.) | Post-Production folgt
         </div>
         <div class="project" style="border-color: #4ECDC4;">
             <strong>⛳ Golf Ad</strong><br>
-            Pre-Production läuft | Shots: Freitag
+            Pre-Production läuft | Shots: Freitag 25.04.
         </div>
         <div class="project" style="border-color: #FFD93D;">
             <strong>🏨 Hotel Wittmann</strong><br>
-            Pre-Production Phase
+            Pre-Production Phase | Warte auf Termin
         </div>
         <div class="project" style="border-color: #95E881;">
             <strong>🍜 LuBu</strong><br>
-            Rechnung 1.400€ ✅ Versendet & Bestätigt
+            Rechnung 1.400€ ✅ Bestätigt & versendet
+        </div>
+        <div class="project" style="border-color: #60a5fa;">
+            <strong>🌍 Export (Kyberg)</strong><br>
+            Warte auf GF-Antwort | Onkel wartet auf Update
         </div>
     </div>
 
     <div style="text-align: center; color: #888; margin-top: 40px; font-size: 0.8rem;">
-        <p>Venture CTRL v2 | Letztes Update: 23. April 2026, 16:05 Uhr</p>
-        <p>🔥 NOMU Dreh heute! Sentai Pre-Production nächste Woche.</p>
+        <p>Venture CTRL v2 | Letztes Update: 23. April 2026, 20:04 Uhr</p>
+        <p>🔥 NOMU Dreh heute erledigt! Sentai Pre-Production nächste Woche.</p>
     </div>
 
     <script>
