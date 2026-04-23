@@ -8,7 +8,7 @@
     { "id": "exp-002", "projectId": "kyberg", "amount": 500, "date": "2026-04-22", "description": "Export Business Investition" }
   ],
   "todos": [
-    { "id": "todo-001", "projectId": "nomu", "text": "NOMU Dreh — heute früh! (24.04.)", "priority": "🔴 Urgent", "done": false, "deadline": "2026-04-24" },
+    { "id": "todo-001", "projectId": "nomu", "text": "NOMU Dreh — Heute früh! (24.04.)", "priority": "🔴 Urgent", "done": false, "deadline": "2026-04-24" },
     { "id": "todo-002", "projectId": "tough-cookie", "text": "Sentai Pre-Production planen (Dreh Anfang Mai)", "priority": "🔴 Urgent", "done": false, "deadline": "2026-04-28" },
     { "id": "todo-003", "projectId": "freelance", "text": "Golf Ad Pre-Production + Shots planen (Test Freitag)", "priority": "🟡 High", "done": false, "deadline": "2026-04-25" },
     { "id": "todo-004", "projectId": "tough-cookie", "text": "Tough Cookie Reel produzieren (1h Aufwand)", "priority": "🟡 High", "done": false },
@@ -31,5 +31,9 @@
   ],
   "activeSession": null,
   "tags": ["Meeting", "Preproduction", "Dreh", "Pitch", "Rechnung", "Follow-up"],
-  "lastUpdated": "2026-04-23T08:04:00+02:00"
+  "contentReminders": {
+    "ginza": { "nextPlanDate": "2026-04-23", "status": "Neuer Plan fällig" },
+    "monkey": { "nextPost": "2026-04-24", "week": "3/4", "status": "Post #3 Donnerstag" }
+  },
+  "lastUpdated": "2026-04-23T12:04:00+02:00"
 }

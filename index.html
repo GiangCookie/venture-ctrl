@@ -82,12 +82,25 @@
             font-size: 0.7rem;
             font-weight: bold;
         }
+        .content-reminder {
+            background: rgba(251, 191, 36, 0.1);
+            border: 1px solid rgba(251, 191, 36, 0.3);
+            padding: 10px 15px;
+            border-radius: 8px;
+            margin-bottom: 8px;
+        }
+        .timestamp {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            color: #888;
+            margin-top: 5px;
+        }
     </style>
 </head>
 <body>
     <div class="header">
         <h1>🚀 VENTURE CTRL</h1>
-        <p>Dashboard — Stand: 23. April 2026, 08:04 Uhr</p>
+        <p>Dashboard — Stand: 23. April 2026, 12:04 Uhr</p>
     </div>
 
     <div class="grid">
@@ -133,7 +146,7 @@
         <div class="card" style="border: 2px solid #f87171;">
             <h2>🔴 URGENT (Heute/Morgen)</h2>
             <div class="highlight">
-                <span class="today-badge">HEUTE</span>
+                <span class="today-badge">DREH</span>
             </div>
             <div class="todo urgent">
                 <strong>📱 NOMU Dreh</strong> — Heute früh! (24.04.)
@@ -207,10 +220,39 @@
                 <span class="stage pitch">Pitch</span>
             </div>
         </div>
+
+        <div class="card">
+            <h2>📝 Content-Reminders</h2>
+            <div class="content-reminder">
+                <strong>🍣 Ginza</strong><br>
+                Neuer Content-Plan fällig — Ab 23. April 2026
+            </div>
+            <div class="content-reminder">
+                <strong>🐒 Monkey (Woche 3/4)</strong><br>
+                Post #3 am Donnerstag, 24. April 2026
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>📊 System-Status</h2>
+            <div class="stat-row">
+                <span class="stat-label">Dashboard</span>
+                <span class="stat-value positive">✅ Aktiv</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">Auto-Update</span>
+                <span class="stat-value positive">✅ 4h-Cron</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">Sam Agent</span>
+                <span class="stat-value negative">❌ Deaktiviert</span>
+            </div>
+            <div class="timestamp">Letzter Cron-Run: 23. April 2026, 12:04 Uhr</div>
+        </div>
     </div>
 
     <div class="meta">
-        <p>Venture CTRL v3 | Letztes Update: 23. April 2026, 08:04 Uhr</p>
+        <p>Venture CTRL v3 | Letztes Update: 23. April 2026, 12:04 Uhr</p>
         <p>🎉 SENTAI DEAL GEWONNEN! Pre-Production diese Woche.</p>
         <p>📱 NOMU Dreh: Heute früh | ⛳ Golf Ad Test: Freitag</p>
     </div>
@@ -220,6 +262,9 @@
         setInterval(() => {
             location.reload();
         }, 30 * 60 * 1000);
+        
+        // Zeitstempel aktualisieren
+        console.log('Venture CTRL v3 loaded at', new Date().toLocaleString('de-DE'));
     </script>
 </body>
 </html>
