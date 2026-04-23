@@ -95,12 +95,27 @@
             color: #888;
             margin-top: 5px;
         }
+        .win-badge {
+            background: linear-gradient(135deg, #4ade80 0%, #22c55e 100%);
+            color: white;
+            padding: 3px 12px;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+        .new-item {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
     </style>
 </head>
 <body>
     <div class="header">
         <h1>🚀 VENTURE CTRL</h1>
-        <p>Dashboard — Stand: 23. April 2026, 12:04 Uhr</p>
+        <p>Dashboard — Stand: 24. April 2026, 00:04 Uhr</p>
     </div>
 
     <div class="grid">
@@ -125,47 +140,47 @@
         </div>
 
         <div class="card">
-            <h2>🏆 Recent Wins</h2>
+            <h2>🏆 Recent Wins (Gestern)</h2>
             <div class="todo done">
-                <strong>🎉 Sentai Deal</strong> — GEWONNEN! 🚀
+                <strong>🎉 NOMU Dreh</strong> — Abgeschlossen! 🎬
             </div>
             <div class="todo done">
-                <strong>✅ Kono Postproduction</strong> — Fertig gestellt
+                <strong>✅ Pitch-Deck</strong> — Erstellt, bereit zum Verschicken
             </div>
             <div class="todo done">
-                <strong>✅ LuBu Rechnung</strong> — 1.400€ versendet
+                <strong>✅ Niku Content</strong> — Freitag + Samstag geplant
             </div>
             <div class="todo done">
-                <strong>✅ Export María</strong> — Kommunikation abgeschlossen
-            </div>
-            <div class="todo done">
-                <strong>✅ Erstes Training</strong> — HYROX gestartet (Joggen)
+                <strong>✅ Dashboard v2.0</strong> — Netlify-Deployment live
             </div>
         </div>
 
         <div class="card" style="border: 2px solid #f87171;">
-            <h2>🔴 URGENT (Heute/Morgen)</h2>
+            <h2>🔴 URGENT (Heute)</h2>
             <div class="highlight">
-                <span class="today-badge">DREH</span>
+                <span class="today-badge">FREITAG 24.04.</span>
             </div>
             <div class="todo urgent">
-                <strong>📱 NOMU Dreh</strong> — Heute früh! (24.04.)
+                <strong>🎬 NOMU Post-Production</strong> — Edit starten
             </div>
             <div class="todo urgent">
-                <strong>🎬 Sentai Pre-Production</strong> — Planen für Dreh Anfang Mai
+                <strong>📧 Pitch-Deck</strong> — Verschicken (Weinbar Dario?)
             </div>
             <div class="todo high">
-                <strong>🎬 Tough Cookie Reel</strong> — Produzieren (1h Aufwand)
+                <strong>🐒 Monkey Post</strong> — Woche 3/4 war gestern (Donnerstag)
             </div>
         </div>
 
         <div class="card">
             <h2>🟡 HIGH (Diese Woche)</h2>
             <div class="todo high">
-                <strong>⛳ Golf Ad</strong> — Pre-Production + Shots planen (Test Freitag)
+                <strong>⛳ Golf Ad</strong> — Test-Shots (Freitag?)
             </div>
             <div class="todo high">
-                <strong>🍷 Weinbar Dario</strong> — Pitch fertig machen & schicken
+                <strong>🍣 Ginza Content</strong> — Neuer Plan fällig (seit 23.04.)
+            </div>
+            <div class="todo high">
+                <strong>🍷 Weinbar Dario</strong> — Pitch fertig, nur noch senden
             </div>
             <div class="todo high">
                 <strong>💊 Kyberg</strong> — Call terminieren (Videoproduktionen)
@@ -200,6 +215,10 @@
         <div class="card">
             <h2>🎯 Pipeline</h2>
             <div class="deal">
+                <span>🎬 NOMU</span>
+                <span class="stage won">✅ Gedreht</span>
+            </div>
+            <div class="deal">
                 <span>🍪 Sentai</span>
                 <span class="stage won">✅ Gewonnen</span>
             </div>
@@ -209,7 +228,7 @@
             </div>
             <div class="deal">
                 <span>🍷 Weinbar Dario</span>
-                <span class="stage lead">Lead</span>
+                <span class="stage pitch">Pitch bereit</span>
             </div>
             <div class="deal">
                 <span>💊 Kyberg Video</span>
@@ -222,14 +241,18 @@
         </div>
 
         <div class="card">
-            <h2>📝 Content-Reminders</h2>
+            <h2>📝 Content-Status</h2>
             <div class="content-reminder">
                 <strong>🍣 Ginza</strong><br>
-                Neuer Content-Plan fällig — Ab 23. April 2026
+                Neuer Content-Plan fällig — Überfällig seit 23. April
             </div>
             <div class="content-reminder">
-                <strong>🐒 Monkey (Woche 3/4)</strong><br>
-                Post #3 am Donnerstag, 24. April 2026
+                <strong>🐒 Monkey (Woche 4/4)</strong><br>
+                Post #3 war gestern (Do, 24. April) — Letzter Post: 1. Mai
+            </div>
+            <div class="content-reminder">
+                <strong>🥩 Niku</strong><br>
+                Freitag + Samstag geplant — Vorbereiten!
             </div>
         </div>
 
@@ -240,21 +263,25 @@
                 <span class="stat-value positive">✅ Aktiv</span>
             </div>
             <div class="stat-row">
+                <span class="stat-label">Hosting</span>
+                <span class="stat-value positive">✅ Netlify</span>
+            </div>
+            <div class="stat-row">
                 <span class="stat-label">Auto-Update</span>
                 <span class="stat-value positive">✅ 4h-Cron</span>
             </div>
             <div class="stat-row">
-                <span class="stat-label">Sam Agent</span>
+                <span class="stat-label">Sam Hub-Agent</span>
                 <span class="stat-value negative">❌ Deaktiviert</span>
             </div>
-            <div class="timestamp">Letzter Cron-Run: 23. April 2026, 12:04 Uhr</div>
+            <div class="timestamp">Letzter Cron-Run: 24. April 2026, 00:04 Uhr</div>
         </div>
     </div>
 
     <div class="meta">
-        <p>Venture CTRL v3 | Letztes Update: 23. April 2026, 12:04 Uhr</p>
-        <p>🎉 SENTAI DEAL GEWONNEN! Pre-Production diese Woche.</p>
-        <p>📱 NOMU Dreh: Heute früh | ⛳ Golf Ad Test: Freitag</p>
+        <p>Venture CTRL v3.1 | Letztes Update: 24. April 2026, 00:04 Uhr</p>
+        <p>🎬 NOMU: Gedreht → Post-Production heute | ⛳ Golf Ad: Test-Shots?</p>
+        <p>📧 Pitch-Deck: Bereit zum Verschicken | 🍣 Ginza: Neuer Plan überfällig</p>
     </div>
 
     <script>
@@ -264,7 +291,7 @@
         }, 30 * 60 * 1000);
         
         // Zeitstempel aktualisieren
-        console.log('Venture CTRL v3 loaded at', new Date().toLocaleString('de-DE'));
+        console.log('Venture CTRL v3.1 loaded at', new Date().toLocaleString('de-DE'));
     </script>
 </body>
 </html>
