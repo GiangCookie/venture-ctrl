@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VENTURE CTRL</title>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { 
@@ -22,7 +25,10 @@
         }
         .header h1 { font-size: 2.2rem; margin-bottom: 5px; color: white; }
         .header p { color: rgba(255,255,255,0.8); }
-        .grid { display: grid; gap: 20px; }
+        .grid { display: grid; gap: 20px; grid-template-columns: 1fr; }
+        @media (min-width: 768px) {
+            .grid { grid-template-columns: repeat(2, 1fr); }
+        }
         .card { 
             background: rgba(255,255,255,0.05); 
             border: 1px solid rgba(255,255,255,0.1);
@@ -53,6 +59,7 @@
         .high { border-left-color: #fbbf24; }
         .normal { border-left-color: #60a5fa; }
         .low { border-left-color: #9ca3af; }
+        .done { border-left-color: #22c55e; opacity: 0.7; }
         .deal { 
             display: flex; 
             justify-content: space-between; 
@@ -66,12 +73,21 @@
         .pitch { background: rgba(251,191,36,0.2); color: #fbbf24; }
         .lead { background: rgba(96,165,250,0.2); color: #60a5fa; }
         .meta { color: #666; font-size: 0.8rem; margin-top: 20px; text-align: center; }
+        .highlight { background: rgba(102, 126, 234, 0.1); padding: 8px 12px; border-radius: 6px; margin-bottom: 10px; }
+        .today-badge { 
+            background: linear-gradient(135deg, #f87171 0%, #fbbf24 100%);
+            color: white;
+            padding: 2px 10px;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
     <div class="header">
         <h1>🚀 VENTURE CTRL</h1>
-        <p>Dashboard — Stand: 23. April 2026, 04:04 Uhr</p>
+        <p>Dashboard — Stand: 23. April 2026, 08:04 Uhr</p>
     </div>
 
     <div class="grid">
@@ -96,20 +112,29 @@
         </div>
 
         <div class="card">
-            <h2>✅ To-Dos — Erledigt</h2>
-            <div class="todo urgent" style="border-left-color: #22c55e; opacity: 0.8;">
-                <strong>✅ Sentai Meeting</strong> — Auftrag BESTÄTIGT! 🎉 +200 XP
+            <h2>🏆 Recent Wins</h2>
+            <div class="todo done">
+                <strong>🎉 Sentai Deal</strong> — GEWONNEN! 🚀
             </div>
-            <div class="todo high" style="border-left-color: #22c55e; opacity: 0.8;">
+            <div class="todo done">
                 <strong>✅ Kono Postproduction</strong> — Fertig gestellt
             </div>
-            <div class="todo normal" style="border-left-color: #22c55e; opacity: 0.8;">
+            <div class="todo done">
                 <strong>✅ LuBu Rechnung</strong> — 1.400€ versendet
+            </div>
+            <div class="todo done">
+                <strong>✅ Export María</strong> — Kommunikation abgeschlossen
+            </div>
+            <div class="todo done">
+                <strong>✅ Erstes Training</strong> — HYROX gestartet (Joggen)
             </div>
         </div>
 
-        <div class="card">
-            <h2>🔴 URGENT (Heute)</h2>
+        <div class="card" style="border: 2px solid #f87171;">
+            <h2>🔴 URGENT (Heute/Morgen)</h2>
+            <div class="highlight">
+                <span class="today-badge">HEUTE</span>
+            </div>
             <div class="todo urgent">
                 <strong>📱 NOMU Dreh</strong> — Heute früh! (24.04.)
             </div>
@@ -182,36 +207,19 @@
                 <span class="stage pitch">Pitch</span>
             </div>
         </div>
-
-        <div class="card">
-            <h2>🏆 Recent Wins</h2>
-            <div class="stat-row">
-                <span class="stat-label">🎉 Sentai Deal</span>
-                <span class="stat-value positive">GEWONNEN! 🚀</span>
-            </div>
-            <div class="stat-row">
-                <span class="stat-label">✅ Kono Postproduction</span>
-                <span class="stat-value positive">Fertig</span>
-            </div>
-            <div class="stat-row">
-                <span class="stat-label">✅ LuBu Rechnung</span>
-                <span class="stat-value positive">1.400 € versendet</span>
-            </div>
-            <div class="stat-row">
-                <span class="stat-label">✅ Export María</span>
-                <span class="stat-value positive">Kommunikation abgeschlossen</span>
-            </div>
-            <div class="stat-row">
-                <span class="stat-label">✅ Erstes Training</span>
-                <span class="stat-value positive">HYROX gestartet (Joggen)</span>
-            </div>
-        </div>
     </div>
 
     <div class="meta">
-        <p>Venture CTRL v3 | Letztes Update: 23. April 2026, 04:04 Uhr</p>
+        <p>Venture CTRL v3 | Letztes Update: 23. April 2026, 08:04 Uhr</p>
         <p>🎉 SENTAI DEAL GEWONNEN! Pre-Production diese Woche.</p>
         <p>📱 NOMU Dreh: Heute früh | ⛳ Golf Ad Test: Freitag</p>
     </div>
+
+    <script>
+        // Auto-refresh alle 30 Minuten
+        setInterval(() => {
+            location.reload();
+        }, 30 * 60 * 1000);
+    </script>
 </body>
 </html>

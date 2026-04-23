@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VENTURE CTRL - Dashboard</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'JetBrains Mono', monospace; 
+            background: #0a0a0f; 
+            color: #fff; 
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .header { 
+            background: linear-gradient(135deg, #FF6B35, #4ECDC4); 
+            padding: 30px; 
+            border-radius: 16px; 
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        .stats { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+            gap: 20px; 
+            margin-bottom: 30px;
+        }
+        .stat-card { 
+            background: rgba(255,255,255,0.05); 
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 20px; 
+            border-radius: 12px;
+        }
+        .stat-card h3 { color: #888; font-size: 0.8rem; margin-bottom: 10px; }
+        .stat-card .value { font-size: 2rem; font-weight: bold; }
+        .projects { margin-bottom: 30px; }
+        .project { 
+            background: rgba(255,255,255,0.03); 
+            border-left: 4px solid;
+            padding: 15px 20px; 
+            margin-bottom: 10px;
+            border-radius: 0 8px 8px 0;
+        }
+        .todos { margin-bottom: 30px; }
+        .todo-item { 
+            display: flex; 
+            align-items: center; 
+            padding: 12px 15px;
+            background: rgba(255,255,255,0.03);
+            margin-bottom: 8px;
+            border-radius: 8px;
+            border-left: 3px solid;
+        }
+        .priority-urgent { border-color: #f66; }
+        .priority-high { border-color: #FFD93D; }
+        .priority-normal { border-color: #95E881; }
+        .priority-low { border-color: #888; }
+        .done { opacity: 0.5; text-decoration: line-through; }
+        .pipeline { margin-bottom: 30px; }
+        .deal { 
+            display: flex; 
+            justify-content: space-between;
+            padding: 12px 15px;
+            background: rgba(255,255,255,0.03);
+            margin-bottom: 8px;
+            border-radius: 8px;
+        }
+        .stage { padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; }
+        .stage-lead { background: rgba(255,107,53,0.2); color: #FF6B35; }
+        .stage-pitch { background: rgba(255,217,61,0.2); color: #FFD93D; }
+        .stage-closed { background: rgba(149,232,129,0.2); color: #95E881; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🚀 VENTURE CTRL</h1>
+        <p>Dashboard - 22. April 2026</p>
+    </div>
+
+    <div class="stats">
+        <div class="stat-card">
+            <h3>💰 GESAMT-EINNAHMEN</h3>
+            <div class="value" style="color: #95E881;">1.400€</div>
+        </div>
+        <div class="stat-card">
+            <h3>📊 OFFENE TO-DOS</h3>
+            <div class="value" style="color: #FFD93D;">12</div>
+        </div>
+        <div class="stat-card">
+            <h3>🎯 PIPELINE DEALS</h3>
+            <div class="value" style="color: #4ECDC4;">5</div>
+        </div>
+        <div class="stat-card">
+            <h3>⏱️ AKTIVE SESSION</h3>
+            <div class="value" style="color: #FF6B35;">Keine</div>
+        </div>
+    </div>
+
+    <div class="todos">
+        <h2 style="margin-bottom: 20px;">🔴 URGENT (Heute)</h2>
+        <div class="todo-item priority-urgent">
+            <span>13:00 Uhr - Sentai Meeting (Beratungsgespräch München)</span>
+        </div>
+        <div class="todo-item priority-urgent">
+            <span>NOMU Pre-Production fertig machen (Dreh morgen früh!)</span>
+        </div>
+        <div class="todo-item priority-urgent">
+            <span>Golf Ad Pre-Production + Shots planen (Test Freitag)</span>
+        </div>
+        
+        <h2 style="margin: 30px 0 20px;">🟡 HIGH</h2>
+        <div class="todo-item priority-high">
+            <span>Weinbar Dario - Pitch fertig machen & schicken</span>
+        </div>
+        <div class="todo-item priority-high">
+            <span>Kyberg Videoproduktionen - Call terminieren</span>
+        </div>
+        <div class="todo-item priority-high">
+            <span>Persönlicher Retainer - Paket überlegen & antworten</span>
+        </div>
+        
+        <h2 style="margin: 30px 0 20px;">🟢 NORMAL</h2>
+        <div class="todo-item priority-normal">
+            <span>Anju CI Briefing für Grafikerin</span>
+        </div>
+        <div class="todo-item priority-normal">
+            <span>Hotel Wittmann Preproduction</span>
+        </div>
+        <div class="todo-item priority-normal">
+            <span>Finanzamt anrufen wegen Ratenzahlung (Deadline: 20.05.)</span>
+        </div>
+        
+        <h2 style="margin: 30px 0 20px;">⚪ LOW</h2>
+        <div class="todo-item priority-low">
+            <span>Krankenkasse E-Mail</span>
+        </div>
+        <div class="todo-item priority-low">
+            <span>Gerichtsvollzieher wegen Löschung</span>
+        </div>
+        <div class="todo-item priority-low">
+            <span>Export: Alexis Rechnung warten, dann Samples bestellen</span>
+        </div>
+    </div>
+
+    <div class="pipeline">
+        <h2 style="margin-bottom: 20px;">🎯 PIPELINE</h2>
+        <div class="deal">
+            <span>🍪 Sentai</span>
+            <span class="stage stage-pitch">Pitch</span>
+        </div>
+        <div class="deal">
+            <span>🍪 Weinbar Dario</span>
+            <span class="stage stage-lead">Lead</span>
+        </div>
+        <div class="deal">
+            <span>🍪 Kyberg Videoproduktionen</span>
+            <span class="stage stage-lead">Lead</span>
+        </div>
+        <div class="deal">
+            <span>🍜 LuBu Projekt</span>
+            <span class="stage stage-closed">Closed Won - 1.400€</span>
+        </div>
+        <div class="deal">
+            <span>🎬 Persönlicher Retainer</span>
+            <span class="stage stage-pitch">Pitch</span>
+        </div>
+    </div>
+
+    <div style="text-align: center; color: #888; margin-top: 40px; font-size: 0.8rem;">
+        <p>Venture CTRL | Letztes Update: 22. April 2026, 12:30 Uhr</p>
+    </div>
+
+    <script>
+        // Auto-refresh alle 4 Stunden
+        setInterval(() => {
+            location.reload();
+        }, 4 * 60 * 60 * 1000);
+    </script>
+</body>
+</html>
