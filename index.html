@@ -89,6 +89,10 @@
             border-radius: 8px;
             margin-bottom: 8px;
         }
+        .content-reminder.overdue {
+            background: rgba(248, 113, 113, 0.1);
+            border: 1px solid rgba(248, 113, 113, 0.3);
+        }
         .timestamp {
             font-family: 'JetBrains Mono', monospace;
             font-size: 0.7rem;
@@ -110,12 +114,24 @@
             0%, 100% { opacity: 1; }
             50% { opacity: 0.7; }
         }
+        .progress-bar {
+            height: 4px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 2px;
+            margin-top: 5px;
+            overflow: hidden;
+        }
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            border-radius: 2px;
+        }
     </style>
 </head>
 <body>
     <div class="header">
         <h1>🚀 VENTURE CTRL</h1>
-        <p>Dashboard — Stand: 24. April 2026, 00:04 Uhr</p>
+        <p>Dashboard — Stand: 24. April 2026, 08:04 Uhr</p>
     </div>
 
     <div class="grid">
@@ -142,7 +158,7 @@
         <div class="card">
             <h2>🏆 Recent Wins (Gestern)</h2>
             <div class="todo done">
-                <strong>🎉 NOMU Dreh</strong> — Abgeschlossen! 🎬
+                <strong>🎉 NOMU Dreh</strong> — Abgeschlossen! 🎬 (Ganzer Tag)
             </div>
             <div class="todo done">
                 <strong>✅ Pitch-Deck</strong> — Erstellt, bereit zum Verschicken
@@ -151,36 +167,39 @@
                 <strong>✅ Niku Content</strong> — Freitag + Samstag geplant
             </div>
             <div class="todo done">
-                <strong>✅ Dashboard v2.0</strong> — Netlify-Deployment live
+                <strong>✅ Golf Ad Konzepte</strong> — Test-Dreh vorbereitet
             </div>
         </div>
 
         <div class="card" style="border: 2px solid #f87171;">
-            <h2>🔴 URGENT (Heute)</h2>
+            <h2>🔴 URGENT (Heute — Freitag 24.04.)</h2>
             <div class="highlight">
-                <span class="today-badge">FREITAG 24.04.</span>
+                <span class="today-badge">JETZT: 08:04 UHR</span>
             </div>
-            <div class="todo urgent">
-                <strong>🎬 NOMU Post-Production</strong> — Edit starten
+            <div class="todo urgent new-item">
+                <strong>🎬 NOMU Post-Production</strong> — Edit starten (2-3h)
             </div>
-            <div class="todo urgent">
+            <div class="todo urgent new-item">
                 <strong>📧 Pitch-Deck</strong> — Verschicken (Weinbar Dario?)
             </div>
             <div class="todo high">
-                <strong>🐒 Monkey Post</strong> — Woche 3/4 war gestern (Donnerstag)
+                <strong>📱 Niku Content Freitag</strong> — Posten um 18:00 Uhr
+            </div>
+            <div class="todo high">
+                <strong>⛳ Golf Ad Testaufnahmen</strong> — Shots testen
             </div>
         </div>
 
         <div class="card">
             <h2>🟡 HIGH (Diese Woche)</h2>
             <div class="todo high">
-                <strong>⛳ Golf Ad</strong> — Test-Shots (Freitag?)
+                <strong>📱 Niku Content Samstag</strong> — Vorbereiten & posten
             </div>
             <div class="todo high">
-                <strong>🍣 Ginza Content</strong> — Neuer Plan fällig (seit 23.04.)
+                <strong>🍣 Ginza Content</strong> — Neuer Plan fällig (überfällig!)
             </div>
             <div class="todo high">
-                <strong>🍷 Weinbar Dario</strong> — Pitch fertig, nur noch senden
+                <strong>🎬 Personal Brand Reel</strong> — Mit Golf-Testaufnahmen
             </div>
             <div class="todo high">
                 <strong>💊 Kyberg</strong> — Call terminieren (Videoproduktionen)
@@ -228,7 +247,7 @@
             </div>
             <div class="deal">
                 <span>🍷 Weinbar Dario</span>
-                <span class="stage pitch">Pitch bereit</span>
+                <span class="stage pitch">Pitch bereit ⏰</span>
             </div>
             <div class="deal">
                 <span>💊 Kyberg Video</span>
@@ -242,17 +261,17 @@
 
         <div class="card">
             <h2>📝 Content-Status</h2>
-            <div class="content-reminder">
+            <div class="content-reminder overdue">
                 <strong>🍣 Ginza</strong><br>
                 Neuer Content-Plan fällig — Überfällig seit 23. April
             </div>
             <div class="content-reminder">
-                <strong>🐒 Monkey (Woche 4/4)</strong><br>
-                Post #3 war gestern (Do, 24. April) — Letzter Post: 1. Mai
+                <strong>🥩 Niku (Woche 3/4)</strong><br>
+                Freitag 18:00 Uhr + Samstag 14:00 Uhr geplant
             </div>
             <div class="content-reminder">
-                <strong>🥩 Niku</strong><br>
-                Freitag + Samstag geplant — Vorbereiten!
+                <strong>🐒 Monkey (Woche 4/4)</strong><br>
+                Post #3 war gestern — Letzter Post: 1. Mai
             </div>
         </div>
 
@@ -271,16 +290,17 @@
                 <span class="stat-value positive">✅ 4h-Cron</span>
             </div>
             <div class="stat-row">
-                <span class="stat-label">Sam Hub-Agent</span>
-                <span class="stat-value negative">❌ Deaktiviert</span>
+                <span class="stat-label">GitHub Token</span>
+                <span class="stat-value positive">✅ Gültig</span>
             </div>
-            <div class="timestamp">Letzter Cron-Run: 24. April 2026, 00:04 Uhr</div>
+            <div class="timestamp">Letzter Cron-Run: 24. April 2026, 08:04 Uhr</div>
+            <div class="timestamp">Letztes Memory-Update: 24. April 2026, 00:05 Uhr</div>
         </div>
     </div>
 
     <div class="meta">
-        <p>Venture CTRL v3.1 | Letztes Update: 24. April 2026, 00:04 Uhr</p>
-        <p>🎬 NOMU: Gedreht → Post-Production heute | ⛳ Golf Ad: Test-Shots?</p>
+        <p>Venture CTRL v3.2 | Letztes Update: 24. April 2026, 08:04 Uhr</p>
+        <p>🎬 NOMU: Post-Production heute | ⛳ Golf Ad: Test-Shots heute</p>
         <p>📧 Pitch-Deck: Bereit zum Verschicken | 🍣 Ginza: Neuer Plan überfällig</p>
     </div>
 
@@ -291,7 +311,7 @@
         }, 30 * 60 * 1000);
         
         // Zeitstempel aktualisieren
-        console.log('Venture CTRL v3.1 loaded at', new Date().toLocaleString('de-DE'));
+        console.log('Venture CTRL v3.2 loaded at', new Date().toLocaleString('de-DE'));
     </script>
 </body>
 </html>
