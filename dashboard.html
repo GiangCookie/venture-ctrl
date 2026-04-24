@@ -84,6 +84,7 @@
         .badge-new { background: #FF6B35; color: white; }
         .badge-done { background: #95E881; color: #0a0a0f; }
         .badge-today { background: #f66; color: white; }
+        .badge-pending { background: #FFD93D; color: #0a0a0f; }
         .weekly-review { 
             background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%); 
             border-radius: 16px; 
@@ -100,12 +101,21 @@
         @media (max-width: 768px) { 
             .weekly-grid { grid-template-columns: repeat(2, 1fr); }
         }
+        .daily-focus { 
+            background: linear-gradient(135deg, #7c3aed 0%, #4f46e5 100%);
+            border-radius: 12px;
+            padding: 15px 20px;
+            margin-bottom: 20px;
+            border-left: 4px solid #a78bfa;
+        }
+        .daily-focus h3 { font-size: 0.9rem; color: #c4b5fd; margin-bottom: 8px; }
+        .daily-focus p { font-size: 1.1rem; font-weight: 600; }
     </style>
 </head>
 <body>
     <div class="header">
         <h1>🚀 VENTURE CTRL v2</h1>
-        <p>Dashboard - 23. April 2026, 20:04 Uhr</p>
+        <p>Dashboard - Freitag, 24. April 2026, 16:04 Uhr</p>
     </div>
 
     <div class="weekly-review">
@@ -118,6 +128,11 @@
         </div>
     </div>
 
+    <div class="daily-focus">
+        <h3>🎯 TAGES-ESSENZ</h3>
+        <p>🔴 NOMU Post-Production (2-3h) → Pitch-Deck verschicken → Golf Ad Testaufnahmen</p>
+    </div>
+
     <div class="stats">
         <div class="stat-card">
             <h3>💰 GESAMT-EINNAHMEN</h3>
@@ -125,7 +140,7 @@
         </div>
         <div class="stat-card">
             <h3>📊 OFFENE TO-DOS</h3>
-            <div class="value" style="color: #FFD93D;">7</div>
+            <div class="value" style="color: #FFD93D;">9</div>
         </div>
         <div class="stat-card">
             <h3>🎯 PIPELINE DEALS</h3>
@@ -133,42 +148,42 @@
         </div>
         <div class="stat-card">
             <h3>⚡ AKTIVE PROJEKTE</h3>
-            <div class="value" style="color: #FF6B35;">5</div>
+            <div class="value" style="color: #FF6B35;">6</div>
         </div>
     </div>
 
     <div class="todos">
-        <h2 style="margin-bottom: 20px;">🔴 URGENT (Diese Woche)</h2>
+        <h2 style="margin-bottom: 20px;">🔴 URGENT (Heute!)</h2>
         <div class="todo-item priority-urgent">
-            <span>🎥 Sentai Pre-Production planen <span class="badge badge-today">NÄCHSTE WOCHE</span></span>
+            <span>🎬 NOMU Post-Production <span class="badge badge-today">2-3h</span></span>
         </div>
         <div class="todo-item priority-urgent">
-            <span>⛳ Golf Ad Shots für Freitag vorbereiten</span>
+            <span>📊 Pitch-Deck verschicken <span class="badge badge-today">15 min</span></span>
+        </div>
+        <div class="todo-item priority-urgent">
+            <span>📱 Niku Content Freitag posten (18:00) <span class="badge badge-today">Behind the Grill</span></span>
         </div>
         
         <h2 style="margin: 30px 0 20px;">🟡 HIGH</h2>
         <div class="todo-item priority-high">
-            <span>🏨 Hotel Wittmann Preproduction</span>
+            <span>⛳ Golf Ad Testaufnahmen</span>
         </div>
         <div class="todo-item priority-high">
-            <span>🎥 Tough Cookie Video schneiden</span>
+            <span>🎬 Personal Brand Reel drehen</span>
         </div>
         <div class="todo-item priority-high">
-            <span>🍷 Weinbar Dario – Pitch fertig machen & schicken</span>
-        </div>
-        <div class="todo-item priority-high">
-            <span>📱 Tough Cookie Reel produzieren (1h Aufwand)</span>
+            <span>📱 Niku Content Samstag vorbereiten (Steak Tutorial)</span>
         </div>
         
         <h2 style="margin: 30px 0 20px;">🟢 NORMAL</h2>
         <div class="todo-item priority-normal">
-            <span>💊 Kyberg Videoproduktionen – Call terminieren</span>
+            <span>🏨 Hotel Wittmann Preproduction</span>
         </div>
         <div class="todo-item priority-normal">
-            <span>🎨 Anju CI Briefing für Grafikerin</span>
+            <span>🎬 Tough Cookie Video schneiden</span>
         </div>
         <div class="todo-item priority-normal">
-            <span>💰 Finanzamt anrufen wegen Ratenzahlung (Deadline: 20.05.)</span>
+            <span>💊 Kyberg Call terminieren</span>
         </div>
         
         <h2 style="margin: 30px 0 20px;">⚪ LOW</h2>
@@ -192,7 +207,7 @@
         </div>
         <div class="deal">
             <span>🍪 Weinbar Dario</span>
-            <span class="stage stage-lead">Lead</span>
+            <span class="stage stage-pitch">Pitch ausstehend</span>
         </div>
         <div class="deal">
             <span>🍪 Kyberg Videoproduktionen</span>
@@ -208,15 +223,15 @@
         <h2 style="margin-bottom: 20px;">📊 PROJEKTE STATUS</h2>
         <div class="project" style="border-color: #FF6B35;">
             <strong>🍪 Tough Cookie</strong><br>
-            Offene Rechnungen: ~9.000€ | Sentai: ✅ Auftrag bestätigt! | Pre-Production: Nächste Woche
+            Offene Rechnungen: ~9.000€ | Sentai: ✅ Gewonnen! | Pre-Production: Nächste Woche
         </div>
-        <div class="project" style="border-color: #4ade80;">
-            <strong>📱 NOMU</strong><br>
-            ✅ Dreh heute durchgeführt (23.04.) | Post-Production folgt
+        <div class="project" style="border-color: #f66;">
+            <strong>🎬 NOMU</strong><br>
+            ✅ Dreh 23.04. erledigt | 🔴 Post-Production heute (24.04.)
         </div>
         <div class="project" style="border-color: #4ECDC4;">
             <strong>⛳ Golf Ad</strong><br>
-            Pre-Production läuft | Shots: Freitag 25.04.
+            Testaufnahmen: Heute (24.04.) | Personal Brand Reel kombiniert
         </div>
         <div class="project" style="border-color: #FFD93D;">
             <strong>🏨 Hotel Wittmann</strong><br>
@@ -230,11 +245,15 @@
             <strong>🌍 Export (Kyberg)</strong><br>
             Warte auf GF-Antwort | Onkel wartet auf Update
         </div>
+        <div class="project" style="border-color: #ec4899;">
+            <strong>📱 Niku Social Media</strong><br>
+            Freitag: Behind the Grill 🔥 | Samstag: Steak Tutorial 🥩
+        </div>
     </div>
 
     <div style="text-align: center; color: #888; margin-top: 40px; font-size: 0.8rem;">
-        <p>Venture CTRL v2 | Letztes Update: 23. April 2026, 20:04 Uhr</p>
-        <p>🔥 NOMU Dreh heute erledigt! Sentai Pre-Production nächste Woche.</p>
+        <p>Venture CTRL v2 | Letztes Update: 24. April 2026, 16:04 Uhr</p>
+        <p>🔥 Heute: NOMU Post-Production + Pitch-Deck + Golf Testaufnahmen</p>
     </div>
 
     <script>
