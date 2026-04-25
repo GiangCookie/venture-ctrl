@@ -3,264 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🎮 Giang's Life Dashboard</title>
+    <title>🎮 Giang's Life Dashboard - Korrigiert</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            font-family: 'Segoe UI', -apple-system, sans-serif; 
-            background: #0f0f23; 
-            color: #eaeaea;
-            padding: 15px;
-            min-height: 100vh;
-            line-height: 1.6;
-        }
+        body { font-family: 'Segoe UI', -apple-system, sans-serif; background: #0f0f23; color: #eaeaea; padding: 15px; min-height: 100vh; line-height: 1.6; }
         
-        /* ALERT BAR - Neue Critical Metriken */
-        .alert-bar {
-            background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
-            border-radius: 12px;
-            padding: 15px 20px;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            border: 2px solid #fca5a5;
-            animation: pulse-alert 2s infinite;
-        }
-        @keyframes pulse-alert {
-            0%, 100% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.7); }
-            50% { box-shadow: 0 0 20px 5px rgba(220, 38, 38, 0.3); }
-        }
+        /* WEEKLY REVIEW */
+        .weekly-review { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border-radius: 16px; padding: 20px; margin-bottom: 20px; border: 1px solid rgba(99, 102, 241, 0.3); }
+        .weekly-title { font-size: 1.1rem; font-weight: 700; margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
+        .weekly-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; }
+        .weekly-stat { text-align: center; padding: 15px; background: rgba(0,0,0,0.3); border-radius: 12px; }
+        .weekly-value { font-size: 1.5rem; font-weight: 800; color: #22c55e; }
+        .weekly-value.down { color: #ef4444; }
+        .weekly-label { font-size: 0.75rem; color: #a0a0a0; margin-top: 5px; }
+        
+        /* ALERT BAR */
+        .alert-bar { background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%); border-radius: 12px; padding: 15px 20px; margin-bottom: 20px; display: flex; align-items: center; justify-content: space-between; border: 2px solid #fca5a5; animation: pulse-alert 2s infinite; }
+        @keyframes pulse-alert { 0%, 100% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.7); } 50% { box-shadow: 0 0 20px 5px rgba(220, 38, 38, 0.3); } }
         .alert-content { display: flex; align-items: center; gap: 15px; }
         .alert-icon { font-size: 1.5rem; }
         .alert-text { font-weight: 600; }
-        .alert-action {
-            background: #fff;
-            color: #dc2626;
-            padding: 8px 16px;
-            border-radius: 8px;
-            font-weight: 700;
-            text-decoration: none;
-            font-size: 0.85rem;
-        }
+        .alert-action { background: #fff; color: #dc2626; padding: 8px 16px; border-radius: 8px; font-weight: 700; cursor: pointer; border: none; font-size: 0.9rem; }
         
-        /* QUEST PANEL - Neue Quests Anzeige */
-        .quest-panel {
-            background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);
-            border-radius: 16px;
-            padding: 20px;
-            margin-bottom: 20px;
-            border: 1px solid rgba(99, 102, 241, 0.3);
-        }
-        .quest-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 15px;
-        }
+        /* QUEST PANEL */
+        .quest-panel { background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%); border-radius: 16px; padding: 20px; margin-bottom: 20px; border: 1px solid rgba(99, 102, 241, 0.3); }
+        .quest-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
         .quest-title { font-size: 1.1rem; font-weight: 700; }
         .quest-xp { color: #fbbf24; font-weight: 700; }
         .quest-list { display: flex; flex-direction: column; gap: 10px; }
-        .quest-item {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            padding: 12px;
-            background: rgba(0,0,0,0.3);
-            border-radius: 10px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
+        .quest-item { display: flex; align-items: center; gap: 12px; padding: 12px; background: rgba(0,0,0,0.3); border-radius: 10px; cursor: pointer; transition: all 0.3s ease; }
         .quest-item:hover { background: rgba(0,0,0,0.5); transform: translateX(5px); }
-        .quest-checkbox {
-            width: 24px;
-            height: 24px;
-            border: 2px solid #6366f1;
-            border-radius: 6px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+        .quest-checkbox { width: 24px; height: 24px; border: 2px solid #6366f1; border-radius: 6px; display: flex; align-items: center; justify-content: center; }
         .quest-checkbox.completed { background: #22c55e; border-color: #22c55e; }
         .quest-checkbox.completed::after { content: '✓'; color: white; font-weight: bold; }
         .quest-text { flex: 1; }
+        .due-date { font-size: 0.75rem; padding: 3px 8px; border-radius: 4px; margin: 0 10px; }
+        .due-date.urgent { background: rgba(239, 68, 68, 0.2); color: #ef4444; }
+        .due-date.soon { background: rgba(251, 191, 36, 0.2); color: #fbbf24; }
         .quest-reward { color: #fbbf24; font-size: 0.85rem; font-weight: 600; }
         
         /* HEADER */
-        .header { 
-            text-align: center; 
-            padding: 30px 20px; 
-            background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%);
-            border-radius: 20px;
-            margin-bottom: 20px;
-            border: 1px solid rgba(233, 69, 96, 0.3);
-        }
-        h1 { 
-            font-size: 1.8rem; 
-            margin-bottom: 8px;
-            background: linear-gradient(90deg, #fff, #e94560);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: 700;
-        }
+        .header { text-align: center; padding: 30px 20px; background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%); border-radius: 20px; margin-bottom: 20px; }
+        h1 { font-size: 1.8rem; background: linear-gradient(90deg, #fff, #e94560); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .subtitle { color: #a0a0a0; font-size: 0.95rem; }
-        
-        /* DAILY ACTION */
-        .daily-action {
-            background: linear-gradient(135deg, #065f46 0%, #047857 100%);
-            border-radius: 16px;
-            padding: 20px;
-            margin-bottom: 20px;
-            border: 2px solid #34d399;
-        }
-        .daily-title {
-            font-size: 1.1rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .daily-priority {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-        .priority-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            padding: 10px;
-            background: rgba(0,0,0,0.2);
-            border-radius: 8px;
-        }
-        .priority-dot { width: 10px; height: 10px; border-radius: 50%; }
-        .priority-dot.high { background: #ef4444; }
-        .priority-dot.medium { background: #fbbf24; }
-        .priority-dot.low { background: #22c55e; }
-        
-        /* STATS GRID */
-        .overall { 
-            display: flex; 
-            justify-content: center; 
-            gap: 20px; 
-            flex-wrap: wrap; 
-            margin-top: 15px; 
-        }
-        .overall-stat { 
-            text-align: center; 
-            background: rgba(0,0,0,0.2);
-            padding: 15px 25px;
-            border-radius: 12px;
-        }
-        .overall-stat .value { 
-            font-size: 1.8rem; 
-            font-weight: 800; 
-            color: #e94560; 
-        }
-        .overall-stat .label { 
-            font-size: 0.75rem; 
-            color: #a0a0a0; 
-            text-transform: uppercase; 
-            letter-spacing: 1px; 
-        }
+        .overall { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 15px; }
+        .overall-stat { text-align: center; background: rgba(0,0,0,0.2); padding: 15px 25px; border-radius: 12px; }
+        .overall-stat .value { font-size: 1.8rem; font-weight: 800; color: #e94560; }
+        .overall-stat .label { font-size: 0.75rem; color: #a0a0a0; text-transform: uppercase; }
         
         /* CATEGORY CARDS */
-        .grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-            gap: 15px;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-        .card { 
-            background: linear-gradient(180deg, #16213e 0%, #1a1a2e 100%);
-            border-radius: 16px; 
-            padding: 20px;
-            border: 1px solid rgba(255,255,255,0.05);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .card:hover { 
-            transform: translateY(-3px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
-        }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px; max-width: 1400px; margin: 0 auto; }
+        .card { background: linear-gradient(180deg, #16213e 0%, #1a1a2e 100%); border-radius: 16px; padding: 20px; border: 1px solid rgba(255,255,255,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .card:hover { transform: translateY(-3px); box-shadow: 0 15px 30px rgba(0,0,0,0.3); }
         .card-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
         .card-icon { font-size: 1.8rem; }
         .card-title h2 { font-size: 1.1rem; margin-bottom: 3px; }
         .card-title span { color: #a0a0a0; font-size: 0.8rem; }
         .level { font-size: 1.5rem; font-weight: 800; }
         
-        /* XP BAR with Animation */
+        /* LEVEL UP REQUIREMENTS */
+        .level-up-req { margin-top: 12px; padding: 12px; background: rgba(251, 191, 36, 0.1); border: 1px solid rgba(251, 191, 36, 0.3); border-radius: 10px; }
+        .level-up-title { font-size: 0.8rem; color: #fbbf24; font-weight: 600; margin-bottom: 5px; }
+        .level-up-text { font-size: 0.85rem; color: #a0a0a0; }
+        
+        /* XP BAR */
         .xp-section { margin: 12px 0; }
         .xp-info { display: flex; justify-content: space-between; font-size: 0.8rem; color: #a0a0a0; margin-bottom: 6px; }
-        .xp-bar { 
-            height: 10px; 
-            background: #2d2d44; 
-            border-radius: 8px;
-            overflow: hidden;
-            position: relative;
-        }
-        .xp-fill { 
-            height: 100%; 
-            border-radius: 8px;
-            transition: width 1.5s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        .xp-fill::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
-            animation: shimmer 2s infinite;
-        }
-        @keyframes shimmer {
-            100% { left: 100%; }
-        }
+        .xp-bar { height: 10px; background: #2d2d44; border-radius: 8px; overflow: hidden; }
+        .xp-fill { height: 100%; border-radius: 8px; transition: width 1.5s ease; background: linear-gradient(90deg, var(--accent), rgba(255,255,255,0.3)); }
         
-        /* TREND SPARKLINE */
-        .trend {
-            margin-top: 10px;
-            padding: 10px;
-            background: rgba(0,0,0,0.2);
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .trend-label { font-size: 0.75rem; color: #a0a0a0; }
-        .trend-sparkline {
-            flex: 1;
-            height: 30px;
-            display: flex;
-            align-items: end;
-            gap: 3px;
-        }
-        .spark-bar {
-            flex: 1;
-            background: var(--accent);
-            border-radius: 2px 2px 0 0;
-            opacity: 0.6;
-        }
-        .spark-bar:last-child { opacity: 1; }
-        .trend-value {
-            font-size: 0.85rem;
-            font-weight: 600;
-            color: #4ade80;
-        }
-        .trend-value.down { color: #ef4444; }
+        /* STREAK BADGE */
+        .streak-badge { display: inline-flex; align-items: center; gap: 5px; padding: 5px 10px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; margin-top: 8px; }
+        .streak-badge.fire { background: rgba(251, 191, 36, 0.2); color: #fbbf24; border: 1px solid rgba(251, 191, 36, 0.3); }
+        .streak-badge.cold { background: rgba(148, 163, 184, 0.2); color: #94a3b8; }
+        .streak-badge.warning { background: rgba(239, 68, 68, 0.2); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.3); }
         
-        /* CATEGORY STATS */
+        /* BLOCKER ALERT */
+        .blocker-alert { background: linear-gradient(135deg, #7c2d12 0%, #9a3412 100%); border: 2px solid #fbbf24; border-radius: 12px; padding: 15px; margin-top: 10px; display: flex; align-items: center; gap: 10px; }
+        .blocker-icon { font-size: 1.2rem; }
+        .blocker-text { flex: 1; font-size: 0.85rem; }
+        .blocker-action { background: #fbbf24; color: #7c2d12; padding: 5px 12px; border-radius: 6px; font-weight: 600; font-size: 0.8rem; cursor: pointer; border: none; }
+        
+        /* STATS */
         .stats { margin-top: 12px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 10px; }
         .stat-row { display: flex; justify-content: space-between; margin-bottom: 6px; font-size: 0.85rem; }
-        .stat-row:last-child { margin-bottom: 0; }
         .stat-alert { color: #ef4444; font-weight: 600; }
         .stat-good { color: #4ade80; font-weight: 600; }
         
-        /* COLOR VARIABLES */
+        /* TREND */
+        .trend { margin-top: 10px; padding: 10px; background: rgba(0,0,0,0.2); border-radius: 8px; display: flex; align-items: center; gap: 10px; }
+        .trend-label { font-size: 0.75rem; color: #a0a0a0; }
+        .trend-sparkline { flex: 1; height: 30px; display: flex; align-items: end; gap: 3px; }
+        .spark-bar { flex: 1; background: var(--accent); border-radius: 2px 2px 0 0; opacity: 0.6; }
+        .spark-bar:last-child { opacity: 1; }
+        .trend-value { font-size: 0.85rem; font-weight: 600; }
+        
+        /* COLORS */
         .tough { --accent: #ff6b6b; }
         .nomu { --accent: #4ade80; }
         .export { --accent: #60a5fa; }
@@ -268,80 +106,91 @@
         .finance { --accent: #a78bfa; }
         .personal { --accent: #f472b6; }
         .card-title h2, .level { color: var(--accent); }
-        .xp-fill { background: linear-gradient(90deg, var(--accent), rgba(255,255,255,0.3)); }
+        
+        /* LEVEL UP MODAL */
+        .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); display: none; align-items: center; justify-content: center; z-index: 1000; }
+        .modal-overlay.active { display: flex; }
+        .modal-content { background: linear-gradient(135deg, #1e1b4b 0%, #4338ca 100%); border-radius: 20px; padding: 40px; text-align: center; border: 3px solid #fbbf24; max-width: 400px; animation: modalPop 0.5s ease; }
+        @keyframes modalPop { 0% { transform: scale(0.5); opacity: 0; } 100% { transform: scale(1); opacity: 1; } }
+        .modal-title { font-size: 2rem; font-weight: 800; margin-bottom: 10px; color: #fbbf24; }
+        .modal-text { font-size: 1.2rem; margin-bottom: 20px; }
+        .modal-xp { font-size: 3rem; margin: 20px 0; }
+        .modal-button { background: #fbbf24; color: #1e1b4b; padding: 15px 30px; border-radius: 10px; font-weight: 700; border: none; cursor: pointer; font-size: 1rem; }
         
         /* FOOTER */
-        .footer { 
-            text-align: center; 
-            color: #a0a0a0; 
-            margin-top: 30px; 
-            padding: 20px; 
-            font-size: 0.8rem; 
-        }
+        .footer { text-align: center; color: #a0a0a0; margin-top: 30px; padding: 20px; font-size: 0.8rem; }
         
-        /* MOBILE OPTIMIZATIONS */
-        @media (max-width: 768px) {
-            body { padding: 10px; }
-            h1 { font-size: 1.5rem; }
-            .alert-bar { flex-direction: column; gap: 10px; text-align: center; }
-            .quest-header { flex-direction: column; gap: 5px; }
-            .grid { grid-template-columns: 1fr; }
-            .card { padding: 15px; }
-        }
+        @media (max-width: 768px) { body { padding: 10px; } h1 { font-size: 1.5rem; } .weekly-grid { grid-template-columns: repeat(2, 1fr); } .grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
-    <!-- ALERT BAR - Kritische Metriken -->
+    <!-- LEVEL UP MODAL -->
+    <div class="modal-overlay" id="levelUpModal">
+        <div class="modal-content">
+            <div class="modal-title">🎉 LEVEL UP!</div>
+            <div class="modal-text">Du hast Level <span id="newLevel">9</span> erreicht!</div>
+            <div class="modal-xp">✨ +200 XP ✨</div>
+            <div style="font-size: 0.9rem; color: #a0a0a0; margin-bottom: 20px;">Neu freigeschaltet: Nächste Quest-Stufe</div>
+            <button class="modal-button" onclick="closeLevelUp()">Weiter rocken! 🚀</button>
+        </div>
+    </div>
+
+    <!-- WEEKLY REVIEW -->
+    <div class="weekly-review">
+        <div class="weekly-title">📊 Diese Woche (KW 17) — Stand: 25. April, 16:04 Uhr</div>
+        <div class="weekly-grid">
+            <div class="weekly-stat"><div class="weekly-value">5</div><div class="weekly-label">Aktive Quests</div></div>
+            <div class="weekly-stat"><div class="weekly-value">✅</div><div class="weekly-label">Sentai Deal</div></div>
+            <div class="weekly-stat"><div class="weekly-value">1</div><div class="weekly-label">Trainingseinheiten</div></div>
+            <div class="weekly-stat"><div class="weekly-value down">11</div><div class="weekly-label">Offene To-Dos</div></div>
+        </div>
+    </div>
+
+    <!-- ALERT BAR -->
     <div class="alert-bar">
         <div class="alert-content">
             <span class="alert-icon">🚨</span>
-            <div class="alert-text">
-                <strong>Kritisch:</strong> 9.000 € offene Rechnungen seit 30+ Tagen
-            </div>
+            <div class="alert-text"><strong>Kritisch:</strong> 9.000 € offene Rechnungen seit 30+ Tagen</div>
         </div>
-        <a href="#" class="alert-action" onclick="markAsActioned()">JETZT HANDELN</a>
+        <button class="alert-action" onclick="markAsActioned()">JETZT HANDELN</button>
     </div>
-    
-    <!-- QUEST PANEL - Aktive Quests -->
+
+    <!-- QUEST PANEL -->
     <div class="quest-panel">
         <div class="quest-header">
-            <span class="quest-title">🎯 Aktive Quests (3)</span>
-            <span class="quest-xp">+150 XP möglich</span>
+            <span class="quest-title">🎯 Aktive Quests</span>
+            <span class="quest-xp">+400 XP möglich</span>
         </div>
         <div class="quest-list">
-            <div class="quest-item" onclick="toggleQuest(this)">
+            <div class="quest-item" onclick="completeQuest(this, 200)">
+                <div class="quest-checkbox completed"></div>
+                <span class="quest-text" style="text-decoration: line-through; opacity: 0.7;">🤝 Sentai Meeting — Auftrag BESTÄTIGT!</span>
+                <span class="due-date" style="background: rgba(34,197,94,0.2); color: #22c55e;">✅ Erledigt</span>
+                <span class="quest-reward">+200 XP</span>
+            </div>
+            <div class="quest-item" onclick="completeQuest(this, 150)">
                 <div class="quest-checkbox"></div>
-                <span class="quest-text">Kyberg Follow-up senden</span>
+                <span class="quest-text">🎬 Tough Cookie Reel produzieren (1h Aufwand)</span>
+                <span class="due-date soon">📅 Fällig: Diese Woche</span>
+                <span class="quest-reward">+150 XP</span>
+            </div>
+            <div class="quest-item" onclick="completeQuest(this, 100)">
+                <div class="quest-checkbox"></div>
+                <span class="quest-text">🎥 Sentai Pre-Production planen (Dreh Anfang Mai)</span>
+                <span class="due-date soon">📅 Fällig: Nächste Woche</span>
+                <span class="quest-reward">+100 XP</span>
+            </div>
+            <div class="quest-item" onclick="completeQuest(this, 50)">
+                <div class="quest-checkbox"></div>
+                <span class="quest-text">📱 NOMU Post-Production finalisieren</span>
+                <span class="due-date urgent">📅 Fällig: Wochenende</span>
                 <span class="quest-reward">+50 XP</span>
             </div>
-            <div class="quest-item" onclick="toggleQuest(this)">
+            <div class="quest-item" onclick="completeQuest(this, 100)">
                 <div class="quest-checkbox"></div>
-                <span class="quest-text">Zahlungserinnerung an Kunden X</span>
-                <span class="quest-reward">+50 XP</span>
-            </div>
-            <div class="quest-item" onclick="toggleQuest(this)">
-                <div class="quest-checkbox"></div>
-                <span class="quest-text">NOMU Demo mit Restaurant Y</span>
-                <span class="quest-reward">+50 XP</span>
-            </div>
-        </div>
-    </div>
-    
-    <!-- DAILY ACTION -->
-    <div class="daily-action">
-        <div class="daily-title">📋 Heutige Prioritäten</div>
-        <div class="daily-priority">
-            <div class="priority-item">
-                <span class="priority-dot high"></span>
-                <span><strong>SOFORT:</strong> 3 Rechnungen einfordern (Risiko: Cashflow)</span>
-            </div>
-            <div class="priority-item">
-                <span class="priority-dot medium"></span>
-                <span><strong>HEUTE:</strong> Kono Pre-Production finalisieren</span>
-            </div>
-            <div class="priority-item">
-                <span class="priority-dot low"></span>
-                <span><strong>Diese Woche:</strong> NOMU Pitch-Deck überarbeiten</span>
+                <span class="quest-text">⛳ Golf Ad Preproduction (Dreh Ende April)</span>
+                <span class="due-date soon">📅 Fällig: Ende April</span>
+                <span class="quest-reward">+100 XP</span>
             </div>
         </div>
     </div>
@@ -351,18 +200,9 @@
         <h1>🎮 Giang's Life Dashboard</h1>
         <p class="subtitle">Level up your life, one day at a time</p>
         <div class="overall">
-            <div class="overall-stat">
-                <div class="value">12</div>
-                <div class="label">Overall Level</div>
-            </div>
-            <div class="overall-stat">
-                <div class="value">2,450</div>
-                <div class="label">Total XP</div>
-            </div>
-            <div class="overall-stat">
-                <div class="value">3</div>
-                <div class="label">Active Quests</div>
-            </div>
+            <div class="overall-stat"><div class="value" id="overallLevel">4</div><div class="label">Overall Level</div></div>
+            <div class="overall-stat"><div class="value" id="totalXP">1,200</div><div class="label">Total XP</div></div>
+            <div class="overall-stat"><div class="value">4</div><div class="label">Active Quests</div></div>
         </div>
     </div>
 
@@ -373,48 +213,24 @@
             <div class="card-header">
                 <div style="display: flex; align-items: center; gap: 12px;">
                     <span class="card-icon">💼</span>
-                    <div class="card-title">
-                        <h2>Tough Cookie</h2>
-                        <span>Video-Agentur</span>
-                    </div>
+                    <div class="card-title"><h2>Tough Cookie</h2><span>Video-Agentur</span></div>
                 </div>
-                <span class="level">Lvl 15</span>
+                <span class="level">Lvl 8</span>
             </div>
             <div class="xp-section">
-                <div class="xp-info">
-                    <span>XP: 1,250 / 2,000</span>
-                    <span>62%</span>
-                </div>
-                <div class="xp-bar">
-                    <div class="xp-fill" style="width: 62%"></div>
-                </div>
+                <div class="xp-info"><span>Level 8/20</span><span>65%</span></div>
+                <div class="xp-bar"><div class="xp-fill" style="width: 65%"></div></div>
             </div>
-            <!-- TREND -->
-            <div class="trend">
-                <span class="trend-label">Umsatz-Trend</span>
-                <div class="trend-sparkline">
-                    <div class="spark-bar" style="height: 60%"></div>
-                    <div class="spark-bar" style="height: 75%"></div>
-                    <div class="spark-bar" style="height: 70%"></div>
-                    <div class="spark-bar" style="height: 85%"></div>
-                    <div class="spark-bar" style="height: 90%"></div>
-                    <div class="spark-bar" style="height: 95%"></div>
-                </div>
-                <span class="trend-value">+12%</span>
+            <span class="streak-badge fire">🔥 8 Tage Produktions-Streak</span>
+            <div class="level-up-req">
+                <div class="level-up-title">🎯 Für Level 9:</div>
+                <div class="level-up-text">Offene Rechnungen unter 5.000€ bringen</div>
             </div>
             <div class="stats">
-                <div class="stat-row">
-                    <span>💰 Offene Rechnungen:</span>
-                    <span class="stat-alert">~9.000 €</span>
-                </div>
-                <div class="stat-row">
-                    <span>📊 Monatlicher Umsatz:</span>
-                    <span class="stat-good">~8.000 €</span>
-                </div>
-                <div class="stat-row">
-                    <span>🎯 Aktive Projekte:</span>
-                    <span style="color: #60a5fa; font-weight: 600;">6</span>
-                </div>
+                <div class="stat-row"><span>💰 Offene Rechnungen:</span><span class="stat-alert">~9.000 €</span></div>
+                <div class="stat-row"><span>📊 Monatlicher Umsatz:</span><span class="stat-good">~8.000 €</span></div>
+                <div class="stat-row"><span>🎯 Aktive Projekte:</span><span style="color: #60a5fa; font-weight: 600;">7 (inkl. Sentai)</span></div>
+                <div class="stat-row"><span>✅ Erledigt heute:</span><span class="stat-good">Sentai Deal gewonnen!</span></div>
             </div>
         </div>
 
@@ -423,43 +239,22 @@
             <div class="card-header">
                 <div style="display: flex; align-items: center; gap: 12px;">
                     <span class="card-icon">📱</span>
-                    <div class="card-title">
-                        <h2>NOMU</h2>
-                        <span>Digitale Speisekarte</span>
-                    </div>
+                    <div class="card-title"><h2>NOMU</h2><span>Digitale Speisekarte</span></div>
                 </div>
-                <span class="level">Lvl 8</span>
+                <span class="level">Lvl 3</span>
             </div>
             <div class="xp-section">
-                <div class="xp-info">
-                    <span>XP: 480 / 1,000</span>
-                    <span>48%</span>
-                </div>
-                <div class="xp-bar">
-                    <div class="xp-fill" style="width: 48%"></div>
-                </div>
+                <div class="xp-info"><span>Level 3/20</span><span>48%</span></div>
+                <div class="xp-bar"><div class="xp-fill" style="width: 48%"></div></div>
             </div>
-            <div class="trend">
-                <span class="trend-label">Nutzer-Trend</span>
-                <div class="trend-sparkline">
-                    <div class="spark-bar" style="height: 20%"></div>
-                    <div class="spark-bar" style="height: 25%"></div>
-                    <div class="spark-bar" style="height: 30%"></div>
-                    <div class="spark-bar" style="height: 35%"></div>
-                    <div class="spark-bar" style="height: 40%"></div>
-                    <div class="spark-bar" style="height: 48%"></div>
-                </div>
-                <span class="trend-value">+8%</span>
+            <span class="streak-badge cold">❄️ Keine aktive Streak</span>
+            <div class="level-up-req">
+                <div class="level-up-title">🎯 Für Level 4:</div>
+                <div class="level-up-text">5 zahlende Kunden akquirieren</div>
             </div>
             <div class="stats">
-                <div class="stat-row">
-                    <span>👥 Aktive Nutzer:</span>
-                    <span class="stat-good">2</span>
-                </div>
-                <div class="stat-row">
-                    <span>💳 Preis:</span>
-                    <span style="color: #4ade80; font-weight: 600;">15-25€/mo</span>
-                </div>
+                <div class="stat-row"><span>👥 Aktive Nutzer:</span><span class="stat-good">2 (Beta)</span></div>
+                <div class="stat-row"><span>💳 Preis:</span><span style="color: #4ade80; font-weight: 600;">15-25€/mo</span></div>
             </div>
         </div>
 
@@ -468,43 +263,27 @@
             <div class="card-header">
                 <div style="display: flex; align-items: center; gap: 12px;">
                     <span class="card-icon">🌍</span>
-                    <div class="card-title">
-                        <h2>Export</h2>
-                        <span>Deutschland → Vietnam</span>
-                    </div>
+                    <div class="card-title"><h2>Export</h2><span>Deutschland → Vietnam</span></div>
                 </div>
-                <span class="level">Lvl 6</span>
+                <span class="level">Lvl 2</span>
             </div>
             <div class="xp-section">
-                <div class="xp-info">
-                    <span>XP: 320 / 800</span>
-                    <span>40%</span>
-                </div>
-                <div class="xp-bar">
-                    <div class="xp-fill" style="width: 40%"></div>
-                </div>
+                <div class="xp-info"><span>Level 2/20</span><span>40%</span></div>
+                <div class="xp-bar"><div class="xp-fill" style="width: 40%"></div></div>
             </div>
-            <div class="trend">
-                <span class="trend-label">Pipeline-Trend</span>
-                <div class="trend-sparkline">
-                    <div class="spark-bar" style="height: 30%"></div>
-                    <div class="spark-bar" style="height: 25%"></div>
-                    <div class="spark-bar" style="height: 20%"></div>
-                    <div class="spark-bar" style="height: 35%"></div>
-                    <div class="spark-bar" style="height: 40%"></div>
-                    <div class="spark-bar" style="height: 40%"></div>
-                </div>
-                <span class="trend-value">→</span>
+            <span class="streak-badge cold">❄️ Keine aktive Streak</span>
+            <div class="blocker-alert">
+                <span class="blocker-icon">⏳</span>
+                <span class="blocker-text">DU wartest auf Kyberg GF seit 14 Tagen</span>
+                <button class="blocker-action" onclick="unblockExport()">ERINNERN</button>
+            </div>
+            <div class="level-up-req">
+                <div class="level-up-title">🎯 Für Level 3:</div>
+                <div class="level-up-text">Kyberg Deal abschließen (GF meldet sich)</div>
             </div>
             <div class="stats">
-                <div class="stat-row">
-                    <span>📦 Aktive Deals:</span>
-                    <span style="color: #60a5fa; font-weight: 600;">1 (Kyberg)</span>
-                </div>
-                <div class="stat-row">
-                    <span>🌐 Kontakt:</span>
-                    <span class="stat-alert">Onkel wartet</span>
-                </div>
+                <div class="stat-row"><span>📦 Status:</span><span style="color: #60a5fa; font-weight: 600;">Warte auf Antwort</span></div>
+                <div class="stat-row"><span>🌐 Kontakt:</span><span class="stat-alert">Onkel wartet auf Update</span></div>
             </div>
         </div>
 
@@ -513,43 +292,22 @@
             <div class="card-header">
                 <div style="display: flex; align-items: center; gap: 12px;">
                     <span class="card-icon">🏃</span>
-                    <div class="card-title">
-                        <h2>HYROX</h2>
-                        <span>Personal Training</span>
-                    </div>
+                    <div class="card-title"><h2>HYROX</h2><span>Personal Training</span></div>
                 </div>
-                <span class="level">Lvl 18</span>
+                <span class="level">Lvl 1</span>
             </div>
             <div class="xp-section">
-                <div class="xp-info">
-                    <span>XP: 1,800 / 2,500</span>
-                    <span>72%</span>
-                </div>
-                <div class="xp-bar">
-                    <div class="xp-fill" style="width: 72%"></div>
-                </div>
+                <div class="xp-info"><span>Level 1/20</span><span>20%</span></div>
+                <div class="xp-bar"><div class="xp-fill" style="width: 20%"></div></div>
             </div>
-            <div class="trend">
-                <span class="trend-label">Training-Trend</span>
-                <div class="trend-sparkline">
-                    <div class="spark-bar" style="height: 70%"></div>
-                    <div class="spark-bar" style="height: 75%"></div>
-                    <div class="spark-bar" style="height: 80%"></div>
-                    <div class="spark-bar" style="height: 85%"></div>
-                    <div class="spark-bar" style="height: 90%"></div>
-                    <div class="spark-bar" style="height: 95%"></div>
-                </div>
-                <span class="trend-value">🔥 12 Tage</span>
+            <span class="streak-badge warning">⚠️ ERST GESTERN begonnen!</span>
+            <div class="level-up-req">
+                <div class="level-up-title">🎯 Für Level 2:</div>
+                <div class="level-up-text">2 weitere Trainingseinheiten diese Woche</div>
             </div>
             <div class="stats">
-                <div class="stat-row">
-                    <span>🔥 Training-Streak:</span>
-                    <span class="stat-good">12 Tage</span>
-                </div>
-                <div class="stat-row">
-                    <span>🎯 Zielzeit:</span>
-                    <span style="color: #fbbf24; font-weight: 600;">1:20</span>
-                </div>
+                <div class="stat-row"><span>🏃 Letztes Training:</span><span class="stat-good">Gestern (Joggen)</span></div>
+                <div class="stat-row"><span>🎯 Zielzeit:</span><span style="color: #fbbf24; font-weight: 600;">1:20 (Ende 2026)</span></div>
             </div>
         </div>
 
@@ -558,47 +316,23 @@
             <div class="card-header">
                 <div style="display: flex; align-items: center; gap: 12px;">
                     <span class="card-icon">💰</span>
-                    <div class="card-title">
-                        <h2>Finanzen</h2>
-                        <span>Einkommen & Cashflow</span>
-                    </div>
+                    <div class="card-title"><h2>Finanzen</h2><span>Einkommen & Cashflow</span></div>
                 </div>
-                <span class="level">Lvl 10</span>
+                <span class="level">Lvl 5</span>
             </div>
             <div class="xp-section">
-                <div class="xp-info">
-                    <span>XP: 850 / 1,500</span>
-                    <span>56%</span>
-                </div>
-                <div class="xp-bar">
-                    <div class="xp-fill" style="width: 56%"></div>
-                </div>
+                <div class="xp-info"><span>Level 5/20</span><span>56%</span></div>
+                <div class="xp-bar"><div class="xp-fill" style="width: 56%"></div></div>
             </div>
-            <div class="trend">
-                <span class="trend-label">Einkommens-Trend</span>
-                <div class="trend-sparkline">
-                    <div class="spark-bar" style="height: 50%"></div>
-                    <div class="spark-bar" style="height: 52%"></div>
-                    <div class="spark-bar" style="height: 55%"></div>
-                    <div class="spark-bar" style="height: 58%"></div>
-                    <div class="spark-bar" style="height: 60%"></div>
-                    <div class="spark-bar" style="height: 60%"></div>
-                </div>
-                <span class="trend-value">→</span>
+            <span class="streak-badge fire">🔥 5 Wochen Budget-Tracking</span>
+            <div class="level-up-req">
+                <div class="level-up-title">🎯 Für Level 6:</div>
+                <div class="level-up-text">1.500 € netto erreichen (+300€)</div>
             </div>
             <div class="stats">
-                <div class="stat-row">
-                    <span>💶 Netto-Einkommen:</span>
-                    <span class="stat-alert">1.200 €</span>
-                </div>
-                <div class="stat-row">
-                    <span>📈 Ziel:</span>
-                    <span style="color: #a78bfa; font-weight: 600;">2.000 €</span>
-                </div>
-                <div class="stat-row">
-                    <span>🏁 Meilenstein:</span>
-                    <span class="stat-good">Juli 2026: Schuld-frei</span>
-                </div>
+                <div class="stat-row"><span>💶 Netto:</span><span class="stat-alert">1.200 €</span></div>
+                <div class="stat-row"><span>📈 Ziel:</span><span style="color: #a78bfa; font-weight: 600;">2.000 €</span></div>
+                <div class="stat-row"><span>🏁 Meilenstein:</span><span class="stat-good">Juli 2026: Schuld-frei</span></div>
             </div>
         </div>
 
@@ -607,77 +341,67 @@
             <div class="card-header">
                 <div style="display: flex; align-items: center; gap: 12px;">
                     <span class="card-icon">🎯</span>
-                    <div class="card-title">
-                        <h2>Personal Brand</h2>
-                        <span>Content & Skills</span>
-                    </div>
+                    <div class="card-title"><h2>Personal Brand</h2><span>Content & Skills</span></div>
                 </div>
-                <span class="level">Lvl 5</span>
+                <span class="level">Lvl 2</span>
             </div>
             <div class="xp-section">
-                <div class="xp-info">
-                    <span>XP: 250 / 700</span>
-                    <span>35%</span>
-                </div>
-                <div class="xp-bar">
-                    <div class="xp-fill" style="width: 35%"></div>
-                </div>
+                <div class="xp-info"><span>Level 2/20</span><span>35%</span></div>
+                <div class="xp-bar"><div class="xp-fill" style="width: 35%"></div></div>
             </div>
-            <div class="trend">
-                <span class="trend-label">Content-Trend</span>
-                <div class="trend-sparkline">
-                    <div class="spark-bar" style="height: 10%"></div>
-                    <div class="spark-bar" style="height: 15%"></div>
-                    <div class="spark-bar" style="height: 10%"></div>
-                    <div class="spark-bar" style="height: 20%"></div>
-                    <div class="spark-bar" style="height: 25%"></div>
-                    <div class="spark-bar" style="height: 35%"></div>
-                </div>
-                <span class="trend-value">+40%</span>
+            <span class="streak-badge warning">⚠️ 2 MONATE STAGNATION!</span>
+            <div class="blocker-alert">
+                <span class="blocker-icon">🚨</span>
+                <span class="blocker-text">2 Monate kein neuer Content!</span>
+                <button class="blocker-action" onclick="suggestContent()">VORSCHLAG</button>
+            </div>
+            <div class="level-up-req">
+                <div class="level-up-title">🎯 Für Level 3:</div>
+                <div class="level-up-text">Golf Spec Video veröffentlichen</div>
             </div>
             <div class="stats">
-                <div class="stat-row">
-                    <span>🎬 Golf Spec:</span>
-                    <span style="color: #f472b6; font-weight: 600;">In Entwicklung</span>
-                </div>
-                <div class="stat-row">
-                    <span>📱 LinkedIn:</span>
-                    <span style="color: #a0a0a0;">Noch nicht aktiv</span>
-                </div>
+                <div class="stat-row"><span>🎬 Golf Spec:</span><span style="color: #f472b6; font-weight: 600;">In Entwicklung</span></div>
+                <div class="stat-row"><span>📱 LinkedIn:</span><span style="color: #a0a0a0;">Noch nicht aktiv</span></div>
             </div>
         </div>
     </div>
 
     <div class="footer">
-        <p>🔄 Letzte Aktualisierung: 9. April 2026</p>
-        <p>🤖 Auto-Update: Täglich nach Abend-Review</p>
+        <p>🔄 Aktualisiert: 25. April 2026, 16:04 Uhr (Cron-Job)</p>
+        <p>🎉 Dashboard aktualisiert mit Daten aus Memory-Logs</p>
+        <p>💡 Tipp: NOMU Post-Production priorisieren + Sentai Pre-Production planen</p>
     </div>
     
     <script>
-        // Toggle quest completion
-        function toggleQuest(element) {
+        // XP and Level System
+        let currentXP = 1200;
+        let currentLevel = 4;
+        
+        function completeQuest(element, xp) {
             const checkbox = element.querySelector('.quest-checkbox');
-            checkbox.classList.toggle('completed');
-            if (checkbox.classList.contains('completed')) {
-                // Could trigger XP gain animation here
-                console.log('Quest completed! +XP');
-            }
+            if (checkbox.classList.contains('completed')) return;
+            checkbox.classList.add('completed');
+            element.style.opacity = '0.6';
+            currentXP += xp;
+            document.getElementById('totalXP').textContent = currentXP.toLocaleString();
+            localStorage.setItem('giang_dashboard_xp', currentXP);
         }
         
-        // Mark alert as actioned
-        function markAsActioned() {
-            alert('Action tracked! Remember to actually follow up on those invoices.');
-        }
+        function closeLevelUp() { document.getElementById('levelUpModal').classList.remove('active'); }
+        function markAsActioned() { alert('✅ Action tracked! Rechnungen einfordern!'); }
+        function unblockExport() { alert('💡 Vorschlag: Freundliche Erinnerungsmail an Kyberg GF mit Deadline.'); }
+        function suggestContent() { alert('💡 Vorschlag: Golf Spec Behind-the-Scenes Video (60 Sekunden) für LinkedIn.'); }
         
-        // Animate XP bars on load
         window.addEventListener('load', function() {
-            const xpBars = document.querySelectorAll('.xp-fill');
-            xpBars.forEach(bar => {
+            const savedXP = localStorage.getItem('giang_dashboard_xp');
+            if (savedXP) {
+                currentXP = parseInt(savedXP);
+                document.getElementById('totalXP').textContent = currentXP.toLocaleString();
+            }
+            document.querySelectorAll('.xp-fill').forEach(bar => {
                 const width = bar.style.width;
                 bar.style.width = '0%';
-                setTimeout(() => {
-                    bar.style.width = width;
-                }, 300);
+                setTimeout(() => { bar.style.width = width; }, 300);
             });
         });
     </script>
