@@ -8,15 +8,15 @@
     { "id": "exp-002", "projectId": "kyberg", "amount": 500, "date": "2026-04-22", "description": "Export Business Investition" }
   ],
   "todos": [
-    { "id": "todo-001", "projectId": "nomu", "text": "NOMU Dreh — Heute früh! (24.04.)", "priority": "🔴 Urgent", "done": false, "deadline": "2026-04-24" },
+    { "id": "todo-001", "projectId": "nomu", "text": "NOMU Post-Production — Montag!", "priority": "🔴 Urgent", "done": false, "deadline": "2026-04-27" },
     { "id": "todo-002", "projectId": "tough-cookie", "text": "Sentai Pre-Production planen (Dreh Anfang Mai)", "priority": "🔴 Urgent", "done": false, "deadline": "2026-04-28" },
-    { "id": "todo-003", "projectId": "freelance", "text": "Golf Ad Pre-Production + Shots planen (Test Freitag)", "priority": "🟡 High", "done": false, "deadline": "2026-04-25" },
-    { "id": "todo-004", "projectId": "tough-cookie", "text": "Tough Cookie Reel produzieren (1h Aufwand)", "priority": "🟡 High", "done": false },
-    { "id": "todo-005", "projectId": "tough-cookie", "text": "Weinbar Dario - Pitch fertig machen & schicken", "priority": "🟡 High", "done": false },
-    { "id": "todo-006", "projectId": "tough-cookie", "text": "Kyberg Videoproduktionen - Call terminieren", "priority": "🟡 High", "done": false },
-    { "id": "todo-007", "projectId": "tough-cookie", "text": "Hotel Wittmann Preproduction", "priority": "🟢 Normal", "done": false },
-    { "id": "todo-008", "projectId": "tough-cookie", "text": "Anju CI Briefing für Grafikerin", "priority": "🟢 Normal", "done": false },
-    { "id": "todo-009", "projectId": "freelance", "text": "Persönlicher Retainer - Paket überlegen & antworten", "priority": "🟢 Normal", "done": false },
+    { "id": "todo-003", "projectId": "tough-cookie", "text": "Tough Cookie Reel produzieren (1h Aufwand)", "priority": "🟡 High", "done": false },
+    { "id": "todo-004", "projectId": "tough-cookie", "text": "💊 Kyberg Videoproduktionen - Call terminieren", "priority": "🟡 High", "done": false },
+    { "id": "todo-005", "projectId": "tough-cookie", "text": "📊 Pitch-Deck verschicken", "priority": "🟡 High", "done": true, "completedAt": "2026-04-25" },
+    { "id": "todo-006", "projectId": "tough-cookie", "text": "🍷 Weinbar Dario - Pitch fertig & schicken", "priority": "🟡 High", "done": true, "completedAt": "2026-04-25" },
+    { "id": "todo-007", "projectId": "freelance", "text": "📱 Niku Content Samstag posten (14:00 Uhr)", "priority": "🟡 High", "done": true, "completedAt": "2026-04-25" },
+    { "id": "todo-008", "projectId": "tough-cookie", "text": "Hotel Wittmann Preproduction", "priority": "🟢 Normal", "done": false },
+    { "id": "todo-009", "projectId": "tough-cookie", "text": "Anju CI Briefing für Grafikerin", "priority": "🟢 Normal", "done": false },
     { "id": "todo-010", "projectId": "freelance", "text": "Finanzamt anrufen wegen Ratenzahlung (Deadline: 20.05.)", "priority": "🟢 Normal", "done": false, "deadline": "2026-05-20" },
     { "id": "todo-011", "projectId": "freelance", "text": "Krankenkasse E-Mail", "priority": "⚪ Low", "done": false },
     { "id": "todo-012", "projectId": "freelance", "text": "Gerichtsvollzieher wegen Löschung", "priority": "⚪ Low", "done": false },
@@ -24,7 +24,7 @@
   ],
   "pipeline": [
     { "id": "deal-001", "projectId": "tough-cookie", "name": "Sentai", "stage": "Closed Won", "value": 5000, "probability": 1.0 },
-    { "id": "deal-002", "projectId": "tough-cookie", "name": "Weinbar Dario", "stage": "Lead", "value": 0, "probability": 0.3 },
+    { "id": "deal-002", "projectId": "tough-cookie", "name": "Weinbar Dario", "stage": "Pitch", "value": 0, "probability": 0.5 },
     { "id": "deal-003", "projectId": "tough-cookie", "name": "Kyberg Videoproduktionen", "stage": "Lead", "value": 0, "probability": 0.4 },
     { "id": "deal-004", "projectId": "lubu", "name": "LuBu Projekt", "stage": "Closed Won", "value": 1400, "probability": 1.0 },
     { "id": "deal-005", "projectId": "freelance", "name": "Persönlicher Retainer", "stage": "Pitch", "value": 0, "probability": 0.6 }
@@ -33,7 +33,13 @@
   "tags": ["Meeting", "Preproduction", "Dreh", "Pitch", "Rechnung", "Follow-up"],
   "contentReminders": {
     "ginza": { "nextPlanDate": "2026-04-23", "status": "Neuer Plan fällig" },
-    "monkey": { "nextPost": "2026-04-24", "week": "3/4", "status": "Post #3 Donnerstag" }
+    "monkey": { "nextPost": "2026-04-26", "week": "4/4", "status": "Post #4 Sonntag" }
   },
-  "lastUpdated": "2026-04-25T04:04:00+02:00"
+  "weeklySummary": {
+    "week": "KW17",
+    "wins": ["Sentai Deal gewonnen", "1.4k€ LuBu Umsatz", "NOMU Dreh erfolgreich"],
+    "openInvoices": 9000,
+    "activeProjects": 5
+  },
+  "lastUpdated": "2026-04-25T20:04:00+02:00"
 }
