@@ -1,278 +1,435 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>VENTURE CTRL v4.2 | 25. April 2026</title>
-<style>
-* { margin:0; padding:0; box-sizing:border-box; }
-:root {
-  --bg:#0a0a0f; --card:#1a1a2e; --surface:#16213e;
-  --border:#2a2a4a; --text:#e0e0e0; --muted:#888;
-  --urgent:#ff4757; --high:#ffa502; --normal:#2ed573;
-  --low:#70a1ff; --accent:#667eea;
-  --income:#2ed573; --expense:#ff4757;
-  --mood-super:#ffd700; --mood-gut:#2ed573; --mood-okay:#ffa502;
-  --mood-muede:#70a1ff; --mood-stressig:#ff4757;
-}
-body {
-  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
-  background:var(--bg); color:var(--text); min-height:100vh;
-  padding-bottom:20px;
-}
-.header {
-  background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);
-  padding:20px; text-align:center;
-}
-.header h1 { font-size:1.5rem; margin-bottom:4px; }
-.header p { font-size:.8rem; opacity:.8; }
-.card {
-  background:var(--card); border:1px solid var(--border); border-radius:12px;
-  padding:16px; margin:16px; max-width:800px; margin-left:auto; margin-right:auto;
-}
-.card h3 { font-size:1rem; margin-bottom:12px; color:var(--accent); }
-.today-hero {
-  background:linear-gradient(135deg,#667eea,#764ba2);
-  border-radius:16px; padding:20px; margin:16px;
-  text-align:center; max-width:800px; margin-left:auto; margin-right:auto;
-}
-.today-hero h2 { font-size:1.2rem; margin-bottom:8px; }
-.stats-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin:16px; max-width:800px; margin-left:auto; margin-right:auto; }
-.stat-box {
-  background:var(--card); border:1px solid var(--border); border-radius:10px; padding:14px; text-align:center;
-}
-.stat-box .num { font-size:1.5rem; font-weight:700; color:var(--accent); }
-.stat-box .label { font-size:.7rem; color:var(--muted); margin-top:4px; }
-.task {
-  display:flex; align-items:center; padding:12px; background:var(--surface);
-  border-radius:10px; margin-bottom:8px;
-}
-.task .priority {
-  width:4px; height:40px; border-radius:2px; margin-right:12px; flex-shrink:0;
-}
-.task .priority.urgent { background:var(--urgent); }
-.task .priority.high { background:var(--high); }
-.task .priority.normal { background:var(--normal); }
-.task .priority.low { background:var(--low); }
-.task .text { flex:1; font-size:.9rem; }
-.task .text.done { text-decoration:line-through; opacity:.5; }
-.task .badge {
-  font-size:.65rem; padding:2px 8px; border-radius:20px; margin-left:8px;
-}
-.badge-done { background:var(--normal); color:#0a0a0f; }
-.badge-today { background:var(--urgent); color:#fff; }
-.badge-pending { background:var(--high); color:#0a0a0f; }
-.deal {
-  display:flex; justify-content:space-between; align-items:center;
-  padding:12px; background:var(--surface); border-radius:10px; margin-bottom:8px;
-}
-.stage {
-  padding:4px 12px; border-radius:20px; font-size:.75rem;
-}
-.stage-won { background:rgba(46,213,115,.2); color:var(--normal); }
-.stage-pitch { background:rgba(255,165,2,.2); color:var(--high); }
-.stage-lead { background:rgba(255,71,87,.2); color:var(--urgent); }
-.project {
-  background:var(--surface); border-left:4px solid var(--accent);
-  padding:12px 16px; margin-bottom:8px; border-radius:0 10px 10px 0;
-}
-.footer {
-  text-align:center; color:var(--muted); margin-top:30px; font-size:.8rem; padding:20px;
-}
-.week-summary {
-  background:linear-gradient(135deg,rgba(102,126,234,.2),rgba(118,75,162,.2));
-  border-radius:12px; padding:16px; margin:16px;
-  border:1px solid var(--border); max-width:800px; margin-left:auto; margin-right:auto;
-}
-.week-summary h4 { margin-bottom:12px; color:var(--accent); }
-.week-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; }
-.week-stat { text-align:center; padding:12px; background:rgba(0,0,0,.2); border-radius:8px; }
-.week-stat .val { font-size:1.3rem; font-weight:700; }
-.week-stat .lbl { font-size:.7rem; color:var(--muted); }
-.daily-focus {
-  background:linear-gradient(135deg,#7c3aed,#4f46e5);
-  border-radius:12px; padding:15px 20px; margin:16px;
-  border-left:4px solid #a78bfa; max-width:800px; margin-left:auto; margin-right:auto;
-}
-.daily-focus h3 { font-size:.9rem; color:#c4b5fd; margin-bottom:8px; }
-.daily-focus p { font-size:1rem; font-weight:600; }
-@media (max-width:600px) {
-  .stats-grid { grid-template-columns:repeat(2,1fr); }
-  .week-grid { grid-template-columns:repeat(2,1fr); }
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VENTURE CTRL</title>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; 
+            background: #0f0f23; 
+            color: #e0e0e0; 
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .header { 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
+            padding: 25px; 
+            border-radius: 12px; 
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        .header h1 { font-size: 2.2rem; margin-bottom: 5px; color: white; }
+        .header p { color: rgba(255,255,255,0.8); }
+        .grid { display: grid; gap: 20px; grid-template-columns: 1fr; }
+        @media (min-width: 768px) {
+            .grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        .card { 
+            background: rgba(255,255,255,0.05); 
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 20px; 
+            border-radius: 10px;
+        }
+        .card h2 { color: #667eea; margin-bottom: 15px; font-size: 1.1rem; }
+        .stat-row { 
+            display: flex; 
+            justify-content: space-between; 
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        .stat-row:last-child { border-bottom: none; }
+        .stat-label { color: #888; }
+        .stat-value { font-weight: bold; }
+        .positive { color: #4ade80; }
+        .negative { color: #f87171; }
+        .warning { color: #fbbf24; }
+        .todo { 
+            padding: 12px; 
+            margin-bottom: 8px; 
+            border-radius: 8px;
+            border-left: 3px solid;
+            background: rgba(255,255,255,0.03);
+        }
+        .urgent { border-left-color: #f87171; }
+        .high { border-left-color: #fbbf24; }
+        .normal { border-left-color: #60a5fa; }
+        .low { border-left-color: #9ca3af; }
+        .done { border-left-color: #22c55e; opacity: 0.7; }
+        .deal { 
+            display: flex; 
+            justify-content: space-between; 
+            padding: 10px;
+            margin-bottom: 6px;
+            border-radius: 6px;
+            background: rgba(255,255,255,0.03);
+        }
+        .stage { padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; }
+        .won { background: rgba(74,222,128,0.2); color: #4ade80; }
+        .pitch { background: rgba(251,191,36,0.2); color: #fbbf24; }
+        .lead { background: rgba(96,165,250,0.2); color: #60a5fa; }
+        .negotiation { background: rgba(167,139,250,0.2); color: #a78bfa; }
+        .meta { color: #666; font-size: 0.8rem; margin-top: 20px; text-align: center; }
+        .highlight { background: rgba(102, 126, 234, 0.1); padding: 8px 12px; border-radius: 6px; margin-bottom: 10px; }
+        .today-badge { 
+            background: linear-gradient(135deg, #f87171 0%, #fbbf24 100%);
+            color: white;
+            padding: 2px 10px;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: bold;
+        }
+        .content-reminder {
+            background: rgba(251, 191, 36, 0.1);
+            border: 1px solid rgba(251, 191, 36, 0.3);
+            padding: 10px 15px;
+            border-radius: 8px;
+            margin-bottom: 8px;
+        }
+        .content-reminder.overdue {
+            background: rgba(248, 113, 113, 0.1);
+            border: 1px solid rgba(248, 113, 113, 0.3);
+        }
+        .timestamp {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            color: #888;
+            margin-top: 5px;
+        }
+        .win-badge {
+            background: linear-gradient(135deg, #4ade80 0%, #22c55e 100%);
+            color: white;
+            padding: 3px 12px;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+        .new-item {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+        .progress-bar {
+            height: 4px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 2px;
+            margin-top: 5px;
+            overflow: hidden;
+        }
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            border-radius: 2px;
+        }
+        .focus-box {
+            background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);
+            border: 2px solid rgba(99, 102, 241, 0.5);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 25px;
+            grid-column: 1 / -1;
+        }
+        .focus-box h2 {
+            color: #c4b5fd;
+            margin-bottom: 10px;
+        }
+        .focus-text {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: white;
+        }
+        .focus-sub {
+            color: #a5b4fc;
+            margin-top: 8px;
+            font-size: 0.9rem;
+        }
+        .week-banner {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            border: 1px solid rgba(59, 130, 246, 0.5);
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        .week-banner h3 {
+            color: #dbeafe;
+            margin-bottom: 5px;
+        }
+        .week-banner p {
+            color: #93c5fd;
+            font-size: 0.9rem;
+        }
+        .shooting-card {
+            background: linear-gradient(135deg, #4c1d95 0%, #7c3aed 100%);
+            border: 1px solid rgba(139, 92, 246, 0.5);
+            border-radius: 8px;
+            padding: 12px;
+            margin-bottom: 10px;
+        }
+        .shooting-card strong {
+            color: #e9d5ff;
+        }
+        .shooting-card .details {
+            color: #c4b5fd;
+            font-size: 0.85rem;
+            margin-top: 4px;
+        }
+        .new-badge {
+            background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%);
+            color: #1f2937;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 0.65rem;
+            font-weight: bold;
+            margin-left: 8px;
+        }
+    </style>
 </head>
 <body>
-  <div class="header">
-    <h1>🚀 VENTURE CTRL v4.2</h1>
-    <p>Sonntag, 26. April 2026 — 04:30 Uhr</p>
-  </div>
+    <div class="header">
+        <h1>🚀 VENTURE CTRL</h1>
+        <p>Dashboard — Stand: Montag, 27. April 2026, 00:04 Uhr</p>
+    </div>
 
-  <div class="daily-focus">
-    <h3>🎯 TAGES-STATUS (Sonntag Morgen)</h3>
-    <p>🎬 NOMU Post-Production | 🍪 Sentai Pre-Planning | 🍹 Lu-Bu Getränkekarte</p>
-  </div>
+    <div class="week-banner">
+        <h3>📅 MONTAG — KW 18 BEGINNT</h3>
+        <p>Fokus: NOMU Post-Production & Sentai Pre-Production + 3 Shootings diese Woche!</p>
+    </div>
 
-  <div class="week-summary">
-    <h4>📊 KW 17 ZUSAMMENFASSUNG</h4>
-    <div class="week-grid">
-      <div class="week-stat"><div class="val">✅</div><div class="lbl">Sentai Deal</div></div>
-      <div class="week-stat"><div class="val">1.4k€</div><div class="lbl">LuBu Umsatz</div></div>
-      <div class="week-stat"><div class="val">6</div><div class="lbl">Aktive Projekte</div></div>
-      <div class="week-stat"><div class="val" style="color:var(--urgent)">~9k€</div><div class="lbl">Offene Rechn.</div></div>
+    <div class="focus-box">
+        <h2>🎯 TAGES-ESSENZ (Montag 27.04.)</h2>
+        <div class="focus-text">🎬 NOMU Post-Production abschließen</div>
+        <div class="focus-sub">→ 🍪 Sentai Pre-Production planen → 🎬 Luma Labs Inspo finden → 🥞 Japanese Pancake Pitch vorbereiten</div>
     </div>
-  </div>
 
-  <div class="stats-grid">
-    <div class="stat-box">
-      <div class="num" style="color:var(--normal)">1.400€</div>
-      <div class="label">Gesamt-Einnahmen</div>
-    </div>
-    <div class="stat-box">
-      <div class="num" style="color:var(--high)">11</div>
-      <div class="label">Offene To-Dos</div>
-    </div>
-    <div class="stat-box">
-      <div class="num" style="color:var(--accent)">5</div>
-      <div class="label">Pipeline Deals</div>
-    </div>
-    <div class="stat-box">
-      <div class="num" style="color:var(--urgent)">6</div>
-      <div class="label">Aktive Projekte</div>
-    </div>
-  </div>
+    <div class="grid">
+        <div class="card" style="border: 2px solid #f87171;">
+            <h2>🔴 URGENT — HEUTE (Montag 27.04.)</h2>
+            <div class="highlight">
+                <span class="today-badge">MONTAG 27.04.</span>
+            </div>
+            <div class="todo urgent">
+                <strong>🎬 NOMU Post-Production</strong> — Edit finalisieren <span class="stat-value" style="color:#f87171;">🔴 MONTAG</span>
+            </div>
+            <div class="todo urgent">
+                <strong>🍪 Sentai Pre-Production</strong> — Dreh Anfang Mai planen
+            </div>
+            <div class="todo urgent">
+                <strong>🎬 Luma Labs Inspo</strong> — 30s Trailer Referenz finden <span class="new-badge">NEU</span>
+            </div>
+        </div>
 
-  <div class="card">
-    <h3>🔴 URGENT</h3>
-    <div class="task">
-      <div class="priority urgent"></div>
-      <div class="text">🎬 NOMU Post-Production <span class="badge badge-today">Montag</span></div>
-    </div>
-    <div class="task">
-      <div class="priority urgent"></div>
-      <div class="text">🍪 Sentai Pre-Production planen <span class="badge badge-today">Anfang Mai</span></div>
-    </div>
-  </div>
+        <div class="card">
+            <h2>📸 KOMMENDE SHOOTINGS <span class="new-badge">NEU</span></h2>
+            <div class="shooting-card">
+                <strong>🎬 Niku Shooting</strong> <span class="new-badge">NEU</span>
+                <div class="details">📅 Mittwoch, 30. April 2026 | ⏰ 11:30 - 17:00 Uhr<br>🏢 Tough Cookie HQ | Inkl. Pre-Production (Dienstag!)</div>
+            </div>
+            <div class="shooting-card">
+                <strong>🎬 Luma Labs Freelance</strong> <span class="new-badge">NEU</span>
+                <div class="details">💰 Budget: 250€ | 🎥 Output: 30s Trailer<br>📅 TBD nächste Woche | Make-up Artist + Shooting</div>
+            </div>
+            <div class="shooting-card">
+                <strong>🥞 Japanese Pancake Pitch</strong> <span class="new-badge">NEU</span>
+                <div class="details">📅 TBD nächste Woche | ⏰ 11:30 Uhr<br>📍 München | Erster Pitch + Geschäftspartner Meeting</div>
+            </div>
+        </div>
 
-  <div class="card">
-    <h3>🟡 HIGH</h3>
-    <div class="task">
-      <div class="priority high"></div>
-      <div class="text">🎬 Tough Cookie Reel produzieren</div>
-    </div>
-    <div class="task">
-      <div class="priority high"></div>
-      <div class="text">💊 Kyberg Videoproduktionen - Call terminieren</div>
-    </div>
-    <div class="task">
-      <div class="priority high"></div>
-      <div class="text done">📊 Pitch-Deck verschicken <span class="badge badge-done">✅ ERLEDIGT</span></div>
-    </div>
-    <div class="task">
-      <div class="priority high"></div>
-      <div class="text done">🍷 Weinbar Dario Pitch <span class="badge badge-done">✅ ERLEDIGT</span></div>
-    </div>
-    <div class="task">
-      <div class="priority high"></div>
-      <div class="text done">📱 Niku Content Samstag posten <span class="badge badge-done">✅ ERLEDIGT</span></div>
-    </div>
-  </div>
+        <div class="card">
+            <h2>💰 Finanzen (KW18)</h2>
+            <div class="stat-row">
+                <span class="stat-label">LuBu Rechnung</span>
+                <span class="stat-value positive">+1.400 € ✅</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">Luma Labs (anstehend)</span>
+                <span class="stat-value positive">+250 € ⏳</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">Investitionen</span>
+                <span class="stat-value negative">-700 €</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">Netto</span>
+                <span class="stat-value positive">+950 €</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">Tough Cookie offen</span>
+                <span class="stat-value warning">~9.000 €</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">Sentai Deal</span>
+                <span class="stat-value positive">🎉 Gewonnen!</span>
+            </div>
+        </div>
 
-  <div class="card">
-    <h3>🟢 NORMAL</h3>
-    <div class="task">
-      <div class="priority normal"></div>
-      <div class="text">🏨 Hotel Wittmann Preproduction</div>
-    </div>
-    <div class="task">
-      <div class="priority normal"></div>
-      <div class="text">🎨 Anju CI Briefing für Grafikerin</div>
-    </div>
-    <div class="task">
-      <div class="priority normal"></div>
-      <div class="text">🏦 Finanzamt Ratenzahlung (Deadline: 20.05.)</div>
-    </div>
-  </div>
+        <div class="card">
+            <h2>🏆 KW 17 REVIEW</h2>
+            <div class="todo done">
+                <strong>🎉 Sentai Deal</strong> — Gewonnen! ✅ <span class="win-badge">WIN</span>
+            </div>
+            <div class="todo done">
+                <strong>🎬 NOMU Dreh</strong> — Abgeschlossen (Do 23.04.)
+            </div>
+            <div class="todo done">
+                <strong>💰 LuBu Projekt</strong> — 1.400 € Rechnung versendet
+            </div>
+            <div class="todo done">
+                <strong>✅ Pitch-Deck</strong> — Verschickt!
+            </div>
+            <div class="todo done">
+                <strong>🍷 Weinbar Dario</strong> — Pitch gesendet
+            </div>
+            <div class="todo done">
+                <strong>📱 Niku Content</strong> — Freitag & Samstag gepostet
+            </div>
+            <div class="todo done">
+                <strong>⛳ Golf Ad</strong> — Testaufnahmen erledigt (24.04.)
+            </div>
+            <div class="highlight" style="margin-top: 10px;">
+                <strong>6/6 Erledigt</strong> — Exzellente Woche! 🚀
+            </div>
+        </div>
 
-  <div class="card">
-    <h3>⚪ LOW</h3>
-    <div class="task">
-      <div class="priority low"></div>
-      <div class="text">🏥 Krankenkasse E-Mail</div>
-    </div>
-    <div class="task">
-      <div class="priority low"></div>
-      <div class="text">⚖️ Gerichtsvollzieher wegen Löschung</div>
-    </div>
-    <div class="task">
-      <div class="priority low"></div>
-      <div class="text">📦 Export: Alexis Rechnung warten, dann Samples</div>
-    </div>
-  </div>
+        <div class="card">
+            <h2>🟡 HIGH — KW18</h2>
+            <div class="todo high">
+                <strong>💊 Kyberg Call</strong> — Videoproduktionen besprechen
+            </div>
+            <div class="todo high">
+                <strong>🍜 LuBu Getränkekarte</strong> — Briefing mit Dario
+            </div>
+            <div class="todo high">
+                <strong>🎨 Anju CI Briefing</strong> — Grafikerin einweisen
+            </div>
+            <div class="todo high">
+                <strong>🎬 Tough Cookie Reel</strong> — Produzieren (1h Aufwand)
+            </div>
+            <div class="todo high">
+                <strong>🎬 Niku Pre-Production</strong> — Dienstag vorbereiten! <span class="new-badge">MI 30.04.</span>
+            </div>
+        </div>
 
-  <div class="card">
-    <h3>🎯 PIPELINE</h3>
-    <div class="deal">
-      <span>🍪 Sentai ✅</span>
-      <span class="stage stage-won">GEWONNEN — 5.000€</span>
-    </div>
-    <div class="deal">
-      <span>🍜 LuBu Projekt</span>
-      <span class="stage stage-won">Closed Won — 1.400€</span>
-    </div>
-    <div class="deal">
-      <span>🍪 Weinbar Dario</span>
-      <span class="stage stage-pitch">Pitch gesendet</span>
-    </div>
-    <div class="deal">
-      <span>🍪 Kyberg Videoproduktionen</span>
-      <span class="stage stage-lead">Lead</span>
-    </div>
-    <div class="deal">
-      <span>⛳ Persönlicher Retainer</span>
-      <span class="stage stage-pitch">Pitch läuft</span>
-    </div>
-  </div>
+        <div class="card">
+            <h2>🟢 NORMAL / BACKLOG</h2>
+            <div class="todo normal">
+                <strong>⛳ Golf Ad Test-Cut</strong> — Testaufnahmen editieren
+            </div>
+            <div class="todo normal">
+                <strong>🏨 Hotel Wittmann</strong> — Preproduction
+            </div>
+            <div class="todo normal">
+                <strong>💰 Finanzamt</strong> — Ratenzahlung (Deadline: 20.05.)
+            </div>
+            <div class="todo low">
+                <strong>🏥 Krankenkasse</strong> — E-Mail schreiben
+            </div>
+            <div class="todo low">
+                <strong>⚖️ Gerichtsvollzieher</strong> — Löschung klären
+            </div>
+            <div class="todo low">
+                <strong>🫒 Export Alexis</strong> — Rechnung warten, dann Samples
+            </div>
+        </div>
 
-  <div class="card">
-    <h3>📊 PROJEKTE STATUS</h3>
-    <div class="project" style="border-color:#FF6B35;">
-      <strong>🍪 Tough Cookie</strong><br>
-      Offene Rechnungen: ~9.000€ | Sentai: ✅ Gewonnen! | Pre-Production: Anfang Mai
-    </div>
-    <div class="project" style="border-color:#f66;">
-      <strong>🎬 NOMU</strong><br>
-      ✅ Dreh 23.04. erledigt | 🔴 Post-Production: Montag
-    </div>
-    <div class="project" style="border-color:#4ECDC4;">
-      <strong>⛳ Golf Ad</strong><br>
-      ✅ Testaufnahmen erledigt (24.04.) | Personal Brand Reel kombiniert
-    </div>
-    <div class="project" style="border-color:#FFD93D;">
-      <strong>🏨 Hotel Wittmann</strong><br>
-      Pre-Production Phase | Warte auf Termin
-    </div>
-    <div class="project" style="border-color:#95E881;">
-      <strong>🍜 LuBu</strong><br>
-      Rechnung 1.400€ ✅ Bestätigt & versendet
-    </div>
-    <div class="project" style="border-color:#60a5fa;">
-      <strong>🌍 Export (Kyberg)</strong><br>
-      Warte auf GF-Antwort | Onkel wartet auf Update
-    </div>
-  </div>
+        <div class="card">
+            <h2>🎯 Pipeline Aktuell</h2>
+            <div class="deal">
+                <span>🍪 Sentai</span>
+                <span class="stage won">✅ Gewonnen</span>
+            </div>
+            <div class="deal">
+                <span>🍜 LuBu</span>
+                <span class="stage won">✅ 1.400 €</span>
+            </div>
+            <div class="deal">
+                <span>🎬 NOMU</span>
+                <span class="stage won">✅ Gedreht</span>
+            </div>
+            <div class="deal">
+                <span>🍷 Weinbar Dario</span>
+                <span class="stage pitch">Pitch bereit ⏰</span>
+            </div>
+            <div class="deal">
+                <span>💊 Kyberg Video</span>
+                <span class="stage lead">Lead</span>
+            </div>
+            <div class="deal">
+                <span>🏨 Hotel Wittmann</span>
+                <span class="stage lead">Lead</span>
+            </div>
+            <div class="deal">
+                <span>🎬 Persönlicher Retainer</span>
+                <span class="stage pitch">Pitch</span>
+            </div>
+            <div class="deal">
+                <span>🎬 Luma Labs</span>
+                <span class="stage pitch">250€ ⏳ <span class="new-badge">NEU</span></span>
+            </div>
+        </div>
 
-  <div class="footer">
-    <p><strong>Venture CTRL v4.2</strong> | Letztes Update: 26. April 2026, 04:30 Uhr</p>
-    <p>🔥 Status: KW17 Review | Heute: NOMU Post-Production, Sentai Prep, Lu-Bu Briefing</p>
-    <p>📱 Nächste Woche: Sentai Pre-Production, Kyberg Call, Anju CI</p>
-    <p style="margin-top:8px; opacity:.6;">https://venture-ctrl-live.netlify.app</p>
-  </div>
+        <div class="card">
+            <h2>📝 Content-Plan</h2>
+            <div class="content-reminder">
+                <strong>🐵 Monkey Mornings</strong><br>
+                KW17: ✅ Alle 4 Posts erledigt (letzter: Samstag 25.04.)
+            </div>
+            <div class="content-reminder">
+                <strong>🍣 Ginza Content</strong><br>
+                Neuer Plan fällig — Deadline prüfen
+            </div>
+            <div class="content-reminder">
+                <strong>📱 Niku</strong><br>
+                KW17 abgeschlossen — Shooting Mittwoch 30.04.
+            </div>
+        </div>
 
-  <script>
-    if (!location.search.includes('v=')) {
-      location.href = location.href + '?v=' + Date.now();
-    }
-  </script>
+        <div class="card">
+            <h2>📊 System-Status</h2>
+            <div class="stat-row">
+                <span class="stat-label">Dashboard Version</span>
+                <span class="stat-value positive">v4.8</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">Hosting</span>
+                <span class="stat-value positive">✅ Netlify</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">Auto-Update</span>
+                <span class="stat-value positive">✅ 4h-Cron</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">GitHub Token</span>
+                <span class="stat-value positive">✅ Gültig</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">Letzter Memory-Scan</span>
+                <span class="stat-value">27.04. 00:04</span>
+            </div>
+            <div class="timestamp">Update alle 4h: 04:04 | 08:04 | 12:04 | 16:04 | 20:04 | 00:04</div>
+        </div>
+    </div>
+
+    <div class="meta">
+        <p>Venture CTRL v4.8 | Letztes Update: Montag, 27. April 2026, 00:04 Uhr</p>
+        <p>🎬 NOMU: Post-Production Deadline Montag | 🎬 Luma Labs: 250€ Budget | 🥞 Japanese Pancake: Pitch München</p>
+        <p>🏆 KW17: 6/6 Tasks erledigt | KW18: 3 Urgent, 5 High Priority | 📸 3 Shootings geplant</p>
+    </div>
+
+    <script>
+        // Auto-refresh alle 30 Minuten
+        setInterval(() => {
+            location.reload();
+        }, 30 * 60 * 1000);
+        
+        // Zeitstempel aktualisieren
+        console.log('Venture CTRL v4.8 loaded at', new Date().toLocaleString('de-DE'));
+    </script>
 </body>
 </html>
