@@ -72,6 +72,7 @@
         .won { background: rgba(74,222,128,0.2); color: #4ade80; }
         .pitch { background: rgba(251,191,36,0.2); color: #fbbf24; }
         .lead { background: rgba(96,165,250,0.2); color: #60a5fa; }
+        .negotiation { background: rgba(167,139,250,0.2); color: #a78bfa; }
         .meta { color: #666; font-size: 0.8rem; margin-top: 20px; text-align: center; }
         .highlight { background: rgba(102, 126, 234, 0.1); padding: 8px 12px; border-radius: 6px; margin-bottom: 10px; }
         .today-badge { 
@@ -148,23 +149,44 @@
             margin-top: 8px;
             font-size: 0.9rem;
         }
+        .weekend-banner {
+            background: linear-gradient(135deg, #4c1d95 0%, #7c3aed 100%);
+            border: 1px solid rgba(139, 92, 246, 0.5);
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        .weekend-banner h3 {
+            color: #e9d5ff;
+            margin-bottom: 5px;
+        }
+        .weekend-banner p {
+            color: #c4b5fd;
+            font-size: 0.9rem;
+        }
     </style>
 </head>
 <body>
     <div class="header">
         <h1>🚀 VENTURE CTRL</h1>
-        <p>Dashboard — Stand: Sonntag, 26. April 2026, 04:30 Uhr</p>
+        <p>Dashboard — Stand: Sonntag, 26. April 2026, 08:04 Uhr</p>
+    </div>
+
+    <div class="weekend-banner">
+        <h3>🌅 SONNTAG — KW 18 VORBEREITUNG</h3>
+        <p>Letzter Ruhetag vor produktiver Woche. Fokus: NOMU Post-Production & Sentai Planung</p>
     </div>
 
     <div class="focus-box">
         <h2>🎯 TAGES-ESSENZ (Sonntag 26.04.)</h2>
         <div class="focus-text">🎬 NOMU Post-Production — Montag Deadline</div>
-        <div class="focus-sub">→ 🍪 Sentai Pre-Production planen (Dreh Anfang Mai) → 🍹 Lu-Bu Getränkekarte Briefing → 🎨 Anju CI Template vorbereiten</div>
+        <div class="focus-sub">→ 🍪 Sentai Pre-Production planen (Dreh Anfang Mai) → 🍹 Lu-Bu Getränkekarte Briefing → 🎨 Anju CI Template</div>
     </div>
 
     <div class="grid">
         <div class="card">
-            <h2>💰 Finanzen</h2>
+            <h2>💰 Finanzen (KW17)</h2>
             <div class="stat-row">
                 <span class="stat-label">LuBu Rechnung</span>
                 <span class="stat-value positive">+1.400 € ✅</span>
@@ -181,15 +203,22 @@
                 <span class="stat-label">Tough Cookie offen</span>
                 <span class="stat-value warning">~9.000 €</span>
             </div>
+            <div class="stat-row">
+                <span class="stat-label">Sentai Deal</span>
+                <span class="stat-value positive">🎉 Gewonnen!</span>
+            </div>
         </div>
 
         <div class="card">
-            <h2>🏆 KW 17 Highlights</h2>
+            <h2>🏆 KW 17 REVIEW — Sehr Produktiv!</h2>
             <div class="todo done">
-                <strong>🎉 Sentai Deal</strong> — Gewonnen! ✅
+                <strong>🎉 Sentai Deal</strong> — Gewonnen! ✅ <span class="win-badge">WIN</span>
             </div>
             <div class="todo done">
                 <strong>🎬 NOMU Dreh</strong> — Abgeschlossen (Do 23.04.)
+            </div>
+            <div class="todo done">
+                <strong>💰 LuBu Projekt</strong> — 1.400 € Rechnung versendet
             </div>
             <div class="todo done">
                 <strong>✅ Pitch-Deck</strong> — Verschickt!
@@ -201,12 +230,15 @@
                 <strong>📱 Niku Content</strong> — Freitag & Samstag gepostet
             </div>
             <div class="todo done">
-                <strong>⛳ Golf Ad</strong> — Testaufnahmen erledigt
+                <strong>⛳ Golf Ad</strong> — Testaufnahmen erledigt (24.04.)
+            </div>
+            <div class="highlight" style="margin-top: 10px;">
+                <strong>6/6 Erledigt</strong> — Exzellente Woche! 🚀
             </div>
         </div>
 
         <div class="card" style="border: 2px solid #f87171;">
-            <h2>🔴 URGENT (KW18)</h2>
+            <h2>🔴 URGENT — KW18 (Montag 27.04.)</h2>
             <div class="highlight">
                 <span class="today-badge">MONTAG 27.04.</span>
             </div>
@@ -219,7 +251,7 @@
         </div>
 
         <div class="card">
-            <h2>🟡 HIGH (KW18)</h2>
+            <h2>🟡 HIGH — KW18</h2>
             <div class="todo high">
                 <strong>💊 Kyberg Call</strong> — Videoproduktionen besprechen
             </div>
@@ -229,14 +261,14 @@
             <div class="todo high">
                 <strong>🎨 Anju CI Briefing</strong> — Grafikerin einweisen
             </div>
-        </div>
-
-        <div class="card">
-            <h2>🟢 NORMAL</h2>
             <div class="todo high">
                 <strong>🎬 Tough Cookie Reel</strong> — Produzieren (1h Aufwand)
             </div>
-            <div class="todo high">
+        </div>
+
+        <div class="card">
+            <h2>🟢 NORMAL / BACKLOG</h2>
+            <div class="todo normal">
                 <strong>⛳ Golf Ad Test-Cut</strong> — Testaufnahmen editieren
             </div>
             <div class="todo normal">
@@ -257,11 +289,7 @@
         </div>
 
         <div class="card">
-            <h2>🎯 Pipeline</h2>
-            <div class="deal">
-                <span>🎬 NOMU</span>
-                <span class="stage won">✅ Gedreht</span>
-            </div>
+            <h2>🎯 Pipeline Aktuell</h2>
             <div class="deal">
                 <span>🍪 Sentai</span>
                 <span class="stage won">✅ Gewonnen</span>
@@ -271,11 +299,19 @@
                 <span class="stage won">✅ 1.400 €</span>
             </div>
             <div class="deal">
+                <span>🎬 NOMU</span>
+                <span class="stage won">✅ Gedreht</span>
+            </div>
+            <div class="deal">
                 <span>🍷 Weinbar Dario</span>
                 <span class="stage pitch">Pitch bereit ⏰</span>
             </div>
             <div class="deal">
                 <span>💊 Kyberg Video</span>
+                <span class="stage lead">Lead</span>
+            </div>
+            <div class="deal">
+                <span>🏨 Hotel Wittmann</span>
                 <span class="stage lead">Lead</span>
             </div>
             <div class="deal">
@@ -288,18 +324,22 @@
             <h2>📝 Content-Plan</h2>
             <div class="content-reminder">
                 <strong>🐵 Monkey Mornings</strong><br>
-                Post #4 Sonntag 26.04. — 4/4 Woche
+                KW17: ✅ Alle 4 Posts erledigt (letzter: Samstag 25.04.)
+            </div>
+            <div class="content-reminder">
+                <strong>🍣 Ginza Content</strong><br>
+                Neuer Plan fällig — Deadline prüfen
             </div>
             <div class="todo high">
-                <strong>🍣 Ginza Content</strong> — Neuer Plan fällig
+                <strong>📱 Niku Sonntag</strong> — Heute 14:00 Uhr
             </div>
         </div>
 
         <div class="card">
             <h2>📊 System-Status</h2>
             <div class="stat-row">
-                <span class="stat-label">Dashboard</span>
-                <span class="stat-value positive">✅ Aktiv</span>
+                <span class="stat-label">Dashboard Version</span>
+                <span class="stat-value positive">v4.4</span>
             </div>
             <div class="stat-row">
                 <span class="stat-label">Hosting</span>
@@ -313,15 +353,18 @@
                 <span class="stat-label">GitHub Token</span>
                 <span class="stat-value positive">✅ Gültig</span>
             </div>
-            <div class="timestamp">Letzter Cron-Run: 26. April 2026, 04:30 Uhr</div>
-            <div class="timestamp">Letztes Memory-Update: 25. April 2026, 18:26 Uhr</div>
+            <div class="stat-row">
+                <span class="stat-label">Letzter Memory-Scan</span>
+                <span class="stat-value">26.04. 08:04</span>
+            </div>
+            <div class="timestamp">Update alle 4h: 04:04 | 08:04 | 12:04 | 16:04 | 20:04 | 00:04</div>
         </div>
     </div>
 
     <div class="meta">
-        <p>Venture CTRL v4.3 | Letztes Update: Sonntag, 26. April 2026, 04:30 Uhr</p>
-        <p>🎬 NOMU: Post-Production Deadline Montag | 🍪 Sentai: Pre-Production startet | 🍜 LuBu: 1.400 € ✅</p>
-        <p>🍷 Pitch-Deck: Verschickt | 🎨 Anju CI: Briefing pending | 💊 Kyberg: Call terminieren</p>
+        <p>Venture CTRL v4.4 | Letztes Update: Sonntag, 26. April 2026, 08:04 Uhr</p>
+        <p>🎬 NOMU Post-Production Deadline: Montag | 🍪 Sentai: Pre-Production startet | 💰 LuBu: 1.400 € ✅</p>
+        <p>🏆 KW17: 6/6 Tasks erledigt | KW18: 2 Urgent, 4 High Priority</p>
     </div>
 
     <script>
@@ -331,7 +374,7 @@
         }, 30 * 60 * 1000);
         
         // Zeitstempel aktualisieren
-        console.log('Venture CTRL v3.3 loaded at', new Date().toLocaleString('de-DE'));
+        console.log('Venture CTRL v4.4 loaded at', new Date().toLocaleString('de-DE'));
     </script>
 </body>
 </html>
