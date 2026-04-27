@@ -3,433 +3,311 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VENTURE CTRL</title>
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
+    <title>🎮 Giang's Life Dashboard</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { 
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; 
+            font-family: 'Segoe UI', -apple-system, sans-serif; 
             background: #0f0f23; 
-            color: #e0e0e0; 
+            color: #eaeaea;
             padding: 20px;
+            min-height: 100vh;
             line-height: 1.6;
         }
         .header { 
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
-            padding: 25px; 
-            border-radius: 12px; 
-            margin-bottom: 25px;
-            text-align: center;
+            text-align: center; 
+            padding: 40px 20px; 
+            background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%);
+            border-radius: 20px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(233, 69, 96, 0.3);
         }
-        .header h1 { font-size: 2.2rem; margin-bottom: 5px; color: white; }
-        .header p { color: rgba(255,255,255,0.8); }
-        .grid { display: grid; gap: 20px; grid-template-columns: 1fr; }
-        @media (min-width: 768px) {
-            .grid { grid-template-columns: repeat(2, 1fr); }
+        h1 { 
+            font-size: 2.2rem; 
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, #fff, #e94560);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 700;
+        }
+        .subtitle { color: #a0a0a0; font-size: 1rem; margin-top: 5px; }
+        .grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+            gap: 20px;
+            max-width: 1400px;
+            margin: 0 auto;
         }
         .card { 
-            background: rgba(255,255,255,0.05); 
-            border: 1px solid rgba(255,255,255,0.1);
-            padding: 20px; 
+            background: linear-gradient(180deg, #16213e 0%, #1a1a2e 100%);
+            border-radius: 20px; 
+            padding: 25px;
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover { 
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+        .card-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 15px; }
+        .card-icon { font-size: 2rem; }
+        .card-title h2 { font-size: 1.3rem; margin-bottom: 5px; }
+        .card-title span { color: #a0a0a0; font-size: 0.85rem; }
+        .level { font-size: 1.8rem; font-weight: 800; }
+        .xp-section { margin: 15px 0; }
+        .xp-info { display: flex; justify-content: space-between; font-size: 0.85rem; color: #a0a0a0; margin-bottom: 8px; }
+        .xp-bar { 
+            height: 12px; 
+            background: #2d2d44; 
             border-radius: 10px;
-        }
-        .card h2 { color: #667eea; margin-bottom: 15px; font-size: 1.1rem; }
-        .stat-row { 
-            display: flex; 
-            justify-content: space-between; 
-            padding: 10px 0;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
-        }
-        .stat-row:last-child { border-bottom: none; }
-        .stat-label { color: #888; }
-        .stat-value { font-weight: bold; }
-        .positive { color: #4ade80; }
-        .negative { color: #f87171; }
-        .warning { color: #fbbf24; }
-        .todo { 
-            padding: 12px; 
-            margin-bottom: 8px; 
-            border-radius: 8px;
-            border-left: 3px solid;
-            background: rgba(255,255,255,0.03);
-        }
-        .urgent { border-left-color: #f87171; }
-        .high { border-left-color: #fbbf24; }
-        .normal { border-left-color: #60a5fa; }
-        .low { border-left-color: #9ca3af; }
-        .done { border-left-color: #22c55e; opacity: 0.7; }
-        .deal { 
-            display: flex; 
-            justify-content: space-between; 
-            padding: 10px;
-            margin-bottom: 6px;
-            border-radius: 6px;
-            background: rgba(255,255,255,0.03);
-        }
-        .stage { padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; }
-        .won { background: rgba(74,222,128,0.2); color: #4ade80; }
-        .pitch { background: rgba(251,191,36,0.2); color: #fbbf24; }
-        .lead { background: rgba(96,165,250,0.2); color: #60a5fa; }
-        .negotiation { background: rgba(167,139,250,0.2); color: #a78bfa; }
-        .meta { color: #666; font-size: 0.8rem; margin-top: 20px; text-align: center; }
-        .highlight { background: rgba(102, 126, 234, 0.1); padding: 8px 12px; border-radius: 6px; margin-bottom: 10px; }
-        .today-badge { 
-            background: linear-gradient(135deg, #f87171 0%, #fbbf24 100%);
-            color: white;
-            padding: 2px 10px;
-            border-radius: 12px;
-            font-size: 0.7rem;
-            font-weight: bold;
-        }
-        .content-reminder {
-            background: rgba(251, 191, 36, 0.1);
-            border: 1px solid rgba(251, 191, 36, 0.3);
-            padding: 10px 15px;
-            border-radius: 8px;
-            margin-bottom: 8px;
-        }
-        .content-reminder.overdue {
-            background: rgba(248, 113, 113, 0.1);
-            border: 1px solid rgba(248, 113, 113, 0.3);
-        }
-        .timestamp {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.7rem;
-            color: #888;
-            margin-top: 5px;
-        }
-        .win-badge {
-            background: linear-gradient(135deg, #4ade80 0%, #22c55e 100%);
-            color: white;
-            padding: 3px 12px;
-            border-radius: 15px;
-            font-size: 0.75rem;
-            font-weight: bold;
-        }
-        .new-item {
-            animation: pulse 2s infinite;
-        }
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.7; }
-        }
-        .progress-bar {
-            height: 4px;
-            background: rgba(255,255,255,0.1);
-            border-radius: 2px;
-            margin-top: 5px;
             overflow: hidden;
         }
-        .progress-fill {
-            height: 100%;
-            background: linear-gradient(90deg, #667eea, #764ba2);
-            border-radius: 2px;
-        }
-        .focus-box {
-            background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);
-            border: 2px solid rgba(99, 102, 241, 0.5);
-            border-radius: 12px;
-            padding: 20px;
-            margin-bottom: 25px;
-            grid-column: 1 / -1;
-        }
-        .focus-box h2 {
-            color: #c4b5fd;
-            margin-bottom: 10px;
-        }
-        .focus-text {
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: white;
-        }
-        .focus-sub {
-            color: #a5b4fc;
-            margin-top: 8px;
-            font-size: 0.9rem;
-        }
-        .week-banner {
-            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
-            border: 1px solid rgba(59, 130, 246, 0.5);
-            border-radius: 8px;
-            padding: 15px;
-            margin-bottom: 15px;
-            text-align: center;
-        }
-        .week-banner h3 {
-            color: #dbeafe;
-            margin-bottom: 5px;
-        }
-        .week-banner p {
-            color: #93c5fd;
-            font-size: 0.9rem;
-        }
-        .shooting-card {
-            background: linear-gradient(135deg, #4c1d95 0%, #7c3aed 100%);
-            border: 1px solid rgba(139, 92, 246, 0.5);
-            border-radius: 8px;
-            padding: 12px;
-            margin-bottom: 10px;
-        }
-        .shooting-card strong {
-            color: #e9d5ff;
-        }
-        .shooting-card .details {
-            color: #c4b5fd;
-            font-size: 0.85rem;
-            margin-top: 4px;
-        }
-        .new-badge {
-            background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%);
-            color: #1f2937;
-            padding: 2px 8px;
+        .xp-fill { 
+            height: 100%; 
             border-radius: 10px;
-            font-size: 0.65rem;
-            font-weight: bold;
-            margin-left: 8px;
+            transition: width 1s ease;
         }
+        .stats { margin-top: 15px; padding: 15px; background: rgba(0,0,0,0.2); border-radius: 12px; }
+        .stat-row { display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 0.9rem; }
+        .stat-row:last-child { margin-bottom: 0; }
+        .footer { text-align: center; color: #a0a0a0; margin-top: 40px; padding: 20px; font-size: 0.85rem; }
+        .overall { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-top: 20px; }
+        .overall-stat { text-align: center; }
+        .overall-stat .value { font-size: 2rem; font-weight: 800; color: #e94560; }
+        .overall-stat .label { font-size: 0.8rem; color: #a0a0a0; text-transform: uppercase; letter-spacing: 1px; }
+        .tough { --accent: #ff6b6b; }
+        .nomu { --accent: #4ade80; }
+        .export { --accent: #60a5fa; }
+        .hyrox { --accent: #fbbf24; }
+        .finance { --accent: #a78bfa; }
+        .personal { --accent: #f472b6; }
+        .card-title h2, .level { color: var(--accent); }
+        .xp-fill { background: linear-gradient(90deg, var(--accent), #fff5); }
     </style>
 </head>
 <body>
     <div class="header">
-        <h1>🚀 VENTURE CTRL</h1>
-        <p>Dashboard — Stand: Montag, 27. April 2026, 00:04 Uhr</p>
-    </div>
-
-    <div class="week-banner">
-        <h3>📅 MONTAG — KW 18 BEGINNT</h3>
-        <p>Fokus: NOMU Post-Production & Sentai Pre-Production + 3 Shootings diese Woche!</p>
-    </div>
-
-    <div class="focus-box">
-        <h2>🎯 TAGES-ESSENZ (Montag 27.04.)</h2>
-        <div class="focus-text">🎬 NOMU Post-Production abschließen</div>
-        <div class="focus-sub">→ 🍪 Sentai Pre-Production planen → 🎬 Luma Labs Inspo finden → 🥞 Japanese Pancake Pitch vorbereiten</div>
+        <h1>🎮 Giang's Life Dashboard</h1>
+        <p class="subtitle">Level up your life, one day at a time</p>
+        <div class="overall">
+            <div class="overall-stat">
+                <div class="value">13</div>
+                <div class="label">Overall Level</div>
+            </div>
+            <div class="overall-stat">
+                <div class="value">2,850</div>
+                <div class="label">Total XP</div>
+            </div>
+            <div class="overall-stat">
+                <div class="value">6</div>
+                <div class="label">Active Quests</div>
+            </div>
+        </div>
     </div>
 
     <div class="grid">
-        <div class="card" style="border: 2px solid #f87171;">
-            <h2>🔴 URGENT — HEUTE (Montag 27.04.)</h2>
-            <div class="highlight">
-                <span class="today-badge">MONTAG 27.04.</span>
+        <div class="card tough">
+            <div class="card-header">
+                <span class="card-icon">💼</span>
+                <div class="card-title">
+                    <h2>Tough Cookie</h2>
+                    <span>Video-Agentur</span>
+                </div>
+                <span class="level">Lvl 15</span>
             </div>
-            <div class="todo urgent">
-                <strong>🎬 NOMU Post-Production</strong> — Edit finalisieren <span class="stat-value" style="color:#f87171;">🔴 MONTAG</span>
+            <div class="xp-section">
+                <div class="xp-info">
+                    <span>XP: 1,250 / 2,000</span>
+                    <span>62%</span>
+                </div>
+                <div class="xp-bar">
+                    <div class="xp-fill" style="width: 62%"></div>
+                </div>
             </div>
-            <div class="todo urgent">
-                <strong>🍪 Sentai Pre-Production</strong> — Dreh Anfang Mai planen
-            </div>
-            <div class="todo urgent">
-                <strong>🎬 Luma Labs Inspo</strong> — 30s Trailer Referenz finden <span class="new-badge">NEU</span>
-            </div>
-        </div>
-
-        <div class="card">
-            <h2>📸 KOMMENDE SHOOTINGS <span class="new-badge">NEU</span></h2>
-            <div class="shooting-card">
-                <strong>🎬 Niku Shooting</strong> <span class="new-badge">NEU</span>
-                <div class="details">📅 Mittwoch, 30. April 2026 | ⏰ 11:30 - 17:00 Uhr<br>🏢 Tough Cookie HQ | Inkl. Pre-Production (Dienstag!)</div>
-            </div>
-            <div class="shooting-card">
-                <strong>🎬 Luma Labs Freelance</strong> <span class="new-badge">NEU</span>
-                <div class="details">💰 Budget: 250€ | 🎥 Output: 30s Trailer<br>📅 TBD nächste Woche | Make-up Artist + Shooting</div>
-            </div>
-            <div class="shooting-card">
-                <strong>🥞 Japanese Pancake Pitch</strong> <span class="new-badge">NEU</span>
-                <div class="details">📅 TBD nächste Woche | ⏰ 11:30 Uhr<br>📍 München | Erster Pitch + Geschäftspartner Meeting</div>
-            </div>
-        </div>
-
-        <div class="card">
-            <h2>💰 Finanzen (KW18)</h2>
-            <div class="stat-row">
-                <span class="stat-label">LuBu Rechnung</span>
-                <span class="stat-value positive">+1.400 € ✅</span>
-            </div>
-            <div class="stat-row">
-                <span class="stat-label">Luma Labs (anstehend)</span>
-                <span class="stat-value positive">+250 € ⏳</span>
-            </div>
-            <div class="stat-row">
-                <span class="stat-label">Investitionen</span>
-                <span class="stat-value negative">-700 €</span>
-            </div>
-            <div class="stat-row">
-                <span class="stat-label">Netto</span>
-                <span class="stat-value positive">+950 €</span>
-            </div>
-            <div class="stat-row">
-                <span class="stat-label">Tough Cookie offen</span>
-                <span class="stat-value warning">~9.000 €</span>
-            </div>
-            <div class="stat-row">
-                <span class="stat-label">Sentai Deal</span>
-                <span class="stat-value positive">🎉 Gewonnen!</span>
+            <div class="stats">
+                <div class="stat-row">
+                    <span>💰 Offene Rechnungen:</span>
+                    <span style="color: #ff6b6b; font-weight: 600;">~9.000 €</span>
+                </div>
+                <div class="stat-row">
+                    <span>📊 Monatlicher Umsatz:</span>
+                    <span style="color: #4ade80; font-weight: 600;">~8.000 €</span>
+                </div>
+                <div class="stat-row">
+                    <span>🎯 Aktive Projekte:</span>
+                    <span style="color: #60a5fa; font-weight: 600;">9</span>
+                </div>
             </div>
         </div>
 
-        <div class="card">
-            <h2>🏆 KW 17 REVIEW</h2>
-            <div class="todo done">
-                <strong>🎉 Sentai Deal</strong> — Gewonnen! ✅ <span class="win-badge">WIN</span>
+        <div class="card nomu">
+            <div class="card-header">
+                <span class="card-icon">📱</span>
+                <div class="card-title">
+                    <h2>NOMU</h2>
+                    <span>Digitale Speisekarte</span>
+                </div>
+                <span class="level">Lvl 9</span>
             </div>
-            <div class="todo done">
-                <strong>🎬 NOMU Dreh</strong> — Abgeschlossen (Do 23.04.)
+            <div class="xp-section">
+                <div class="xp-info">
+                    <span>XP: 650 / 1,000</span>
+                    <span>65%</span>
+                </div>
+                <div class="xp-bar">
+                    <div class="xp-fill" style="width: 65%"></div>
+                </div>
             </div>
-            <div class="todo done">
-                <strong>💰 LuBu Projekt</strong> — 1.400 € Rechnung versendet
-            </div>
-            <div class="todo done">
-                <strong>✅ Pitch-Deck</strong> — Verschickt!
-            </div>
-            <div class="todo done">
-                <strong>🍷 Weinbar Dario</strong> — Pitch gesendet
-            </div>
-            <div class="todo done">
-                <strong>📱 Niku Content</strong> — Freitag & Samstag gepostet
-            </div>
-            <div class="todo done">
-                <strong>⛳ Golf Ad</strong> — Testaufnahmen erledigt (24.04.)
-            </div>
-            <div class="highlight" style="margin-top: 10px;">
-                <strong>6/6 Erledigt</strong> — Exzellente Woche! 🚀
-            </div>
-        </div>
-
-        <div class="card">
-            <h2>🟡 HIGH — KW18</h2>
-            <div class="todo high">
-                <strong>💊 Kyberg Call</strong> — Videoproduktionen besprechen
-            </div>
-            <div class="todo high">
-                <strong>🍜 LuBu Getränkekarte</strong> — Briefing mit Dario
-            </div>
-            <div class="todo high">
-                <strong>🎨 Anju CI Briefing</strong> — Grafikerin einweisen
-            </div>
-            <div class="todo high">
-                <strong>🎬 Tough Cookie Reel</strong> — Produzieren (1h Aufwand)
-            </div>
-            <div class="todo high">
-                <strong>🎬 Niku Pre-Production</strong> — Dienstag vorbereiten! <span class="new-badge">MI 30.04.</span>
+            <div class="stats">
+                <div class="stat-row">
+                    <span>🎬 Status:</span>
+                    <span style="color: #fbbf24; font-weight: 600;">Post-Production 🔥</span>
+                </div>
+                <div class="stat-row">
+                    <span>📅 Letzter Dreh:</span>
+                    <span style="color: #4ade80; font-weight: 600;">23. April ✅</span>
+                </div>
+                <div class="stat-row">
+                    <span>👥 Aktive Nutzer:</span>
+                    <span style="color: #4ade80; font-weight: 600;">2</span>
+                </div>
             </div>
         </div>
 
-        <div class="card">
-            <h2>🟢 NORMAL / BACKLOG</h2>
-            <div class="todo normal">
-                <strong>⛳ Golf Ad Test-Cut</strong> — Testaufnahmen editieren
+        <div class="card export">
+            <div class="card-header">
+                <span class="card-icon">🌍</span>
+                <div class="card-title">
+                    <h2>Export</h2>
+                    <span>Deutschland → Vietnam</span>
+                </div>
+                <span class="level">Lvl 6</span>
             </div>
-            <div class="todo normal">
-                <strong>🏨 Hotel Wittmann</strong> — Preproduction
+            <div class="xp-section">
+                <div class="xp-info">
+                    <span>XP: 320 / 800</span>
+                    <span>40%</span>
+                </div>
+                <div class="xp-bar">
+                    <div class="xp-fill" style="width: 40%"></div>
+                </div>
             </div>
-            <div class="todo normal">
-                <strong>💰 Finanzamt</strong> — Ratenzahlung (Deadline: 20.05.)
-            </div>
-            <div class="todo low">
-                <strong>🏥 Krankenkasse</strong> — E-Mail schreiben
-            </div>
-            <div class="todo low">
-                <strong>⚖️ Gerichtsvollzieher</strong> — Löschung klären
-            </div>
-            <div class="todo low">
-                <strong>🫒 Export Alexis</strong> — Rechnung warten, dann Samples
-            </div>
-        </div>
-
-        <div class="card">
-            <h2>🎯 Pipeline Aktuell</h2>
-            <div class="deal">
-                <span>🍪 Sentai</span>
-                <span class="stage won">✅ Gewonnen</span>
-            </div>
-            <div class="deal">
-                <span>🍜 LuBu</span>
-                <span class="stage won">✅ 1.400 €</span>
-            </div>
-            <div class="deal">
-                <span>🎬 NOMU</span>
-                <span class="stage won">✅ Gedreht</span>
-            </div>
-            <div class="deal">
-                <span>🍷 Weinbar Dario</span>
-                <span class="stage pitch">Pitch bereit ⏰</span>
-            </div>
-            <div class="deal">
-                <span>💊 Kyberg Video</span>
-                <span class="stage lead">Lead</span>
-            </div>
-            <div class="deal">
-                <span>🏨 Hotel Wittmann</span>
-                <span class="stage lead">Lead</span>
-            </div>
-            <div class="deal">
-                <span>🎬 Persönlicher Retainer</span>
-                <span class="stage pitch">Pitch</span>
-            </div>
-            <div class="deal">
-                <span>🎬 Luma Labs</span>
-                <span class="stage pitch">250€ ⏳ <span class="new-badge">NEU</span></span>
+            <div class="stats">
+                <div class="stat-row">
+                    <span>📦 Aktive Deals:</span>
+                    <span style="color: #60a5fa; font-weight: 600;">1 (Kyberg)</span>
+                </div>
+                <div class="stat-row">
+                    <span>🌐 Kontakt:</span>
+                    <span style="color: #60a5fa; font-weight: 600;">Onkel wartet</span>
+                </div>
             </div>
         </div>
 
-        <div class="card">
-            <h2>📝 Content-Plan</h2>
-            <div class="content-reminder">
-                <strong>🐵 Monkey Mornings</strong><br>
-                KW17: ✅ Alle 4 Posts erledigt (letzter: Samstag 25.04.)
+        <div class="card hyrox">
+            <div class="card-header">
+                <span class="card-icon">🏃</span>
+                <div class="card-title">
+                    <h2>HYROX</h2>
+                    <span>Personal Training</span>
+                </div>
+                <span class="level">Lvl 18</span>
             </div>
-            <div class="content-reminder">
-                <strong>🍣 Ginza Content</strong><br>
-                Neuer Plan fällig — Deadline prüfen
+            <div class="xp-section">
+                <div class="xp-info">
+                    <span>XP: 1,800 / 2,500</span>
+                    <span>72%</span>
+                </div>
+                <div class="xp-bar">
+                    <div class="xp-fill" style="width: 72%"></div>
+                </div>
             </div>
-            <div class="content-reminder">
-                <strong>📱 Niku</strong><br>
-                KW17 abgeschlossen — Shooting Mittwoch 30.04.
+            <div class="stats">
+                <div class="stat-row">
+                    <span>🔥 Training-Streak:</span>
+                    <span style="color: #fbbf24; font-weight: 600;">12 Tage</span>
+                </div>
+                <div class="stat-row">
+                    <span>🎯 Zielzeit:</span>
+                    <span style="color: #fbbf24; font-weight: 600;">1:20</span>
+                </div>
             </div>
         </div>
 
-        <div class="card">
-            <h2>📊 System-Status</h2>
-            <div class="stat-row">
-                <span class="stat-label">Dashboard Version</span>
-                <span class="stat-value positive">v4.8</span>
+        <div class="card finance">
+            <div class="card-header">
+                <span class="card-icon">💰</span>
+                <div class="card-title">
+                    <h2>Finanzen</h2>
+                    <span>Einkommen & Cashflow</span>
+                </div>
+                <span class="level">Lvl 10</span>
             </div>
-            <div class="stat-row">
-                <span class="stat-label">Hosting</span>
-                <span class="stat-value positive">✅ Netlify</span>
+            <div class="xp-section">
+                <div class="xp-info">
+                    <span>XP: 850 / 1,500</span>
+                    <span>56%</span>
+                </div>
+                <div class="xp-bar">
+                    <div class="xp-fill" style="width: 56%"></div>
+                </div>
             </div>
-            <div class="stat-row">
-                <span class="stat-label">Auto-Update</span>
-                <span class="stat-value positive">✅ 4h-Cron</span>
+            <div class="stats">
+                <div class="stat-row">
+                    <span>💶 Netto-Einkommen:</span>
+                    <span style="color: #a78bfa; font-weight: 600;">1.200 €</span>
+                </div>
+                <div class="stat-row">
+                    <span>📈 Ziel:</span>
+                    <span style="color: #a78bfa; font-weight: 600;">2.000 €</span>
+                </div>
+                <div class="stat-row">
+                    <span>🏁 Meilenstein:</span>
+                    <span style="color: #4ade80; font-weight: 600;">Juli 2026: Schuld-frei</span>
+                </div>
             </div>
-            <div class="stat-row">
-                <span class="stat-label">GitHub Token</span>
-                <span class="stat-value positive">✅ Gültig</span>
+        </div>
+
+        <div class="card personal">
+            <div class="card-header">
+                <span class="card-icon">🎯</span>
+                <div class="card-title">
+                    <h2>Personal Brand</h2>
+                    <span>Content & Skills</span>
+                </div>
+                <span class="level">Lvl 6</span>
             </div>
-            <div class="stat-row">
-                <span class="stat-label">Letzter Memory-Scan</span>
-                <span class="stat-value">27.04. 00:04</span>
+            <div class="xp-section">
+                <div class="xp-info">
+                    <span>XP: 380 / 700</span>
+                    <span>54%</span>
+                </div>
+                <div class="xp-bar">
+                    <div class="xp-fill" style="width: 54%"></div>
+                </div>
             </div>
-            <div class="timestamp">Update alle 4h: 04:04 | 08:04 | 12:04 | 16:04 | 20:04 | 00:04</div>
+            <div class="stats">
+                <div class="stat-row">
+                    <span>⛳ Golf Spec:</span>
+                    <span style="color: #4ade80; font-weight: 600;">Testaufnahmen heute!</span>
+                </div>
+                <div class="stat-row">
+                    <span>🎬 Reel-Plan:</span>
+                    <span style="color: #60a5fa; font-weight: 600;">Konzepte fertig</span>
+                </div>
+                <div class="stat-row">
+                    <span>📱 LinkedIn:</span>
+                    <span style="color: #f472b6; font-weight: 600;">Noch nicht aktiv</span>
+                </div>
+            </div>
         </div>
     </div>
 
-    <div class="meta">
-        <p>Venture CTRL v4.8 | Letztes Update: Montag, 27. April 2026, 00:04 Uhr</p>
-        <p>🎬 NOMU: Post-Production Deadline Montag | 🎬 Luma Labs: 250€ Budget | 🥞 Japanese Pancake: Pitch München</p>
-        <p>🏆 KW17: 6/6 Tasks erledigt | KW18: 3 Urgent, 5 High Priority | 📸 3 Shootings geplant</p>
+    <div class="footer">
+        <p>🔄 Letzte Aktualisierung: 27. April 2026, 04:04 Uhr</p>
+        <p>🤖 Auto-Update: Alle 4 Stunden via Cron</p>
+        <p>🔥 Heute: 3 neue Shootings geplant (Luma Labs, Niku, Japanese Pancake)</p>
+        <p>📅 Kommende Termine: Niku Shooting Mi 30.4. | Japanese Pancake Pitch nächste Woche</p>
     </div>
-
-    <script>
-        // Auto-refresh alle 30 Minuten
-        setInterval(() => {
-            location.reload();
-        }, 30 * 60 * 1000);
-        
-        // Zeitstempel aktualisieren
-        console.log('Venture CTRL v4.8 loaded at', new Date().toLocaleString('de-DE'));
-    </script>
 </body>
 </html>
