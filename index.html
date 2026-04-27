@@ -83,6 +83,15 @@
         .personal { --accent: #f472b6; }
         .card-title h2, .level { color: var(--accent); }
         .xp-fill { background: linear-gradient(90deg, var(--accent), #fff5); }
+        .win-badge { background: linear-gradient(135deg, #ffd700, #ffaa00); color: #000; padding: 2px 8px; border-radius: 8px; font-size: 0.75rem; font-weight: 700; }
+        .urgent { color: #ff6b6b !important; font-weight: 600; }
+        .high { color: #fbbf24 !important; font-weight: 600; }
+        .done { color: #4ade80 !important; font-weight: 600; }
+        .kw-review { background: rgba(74, 222, 128, 0.1); border-left: 3px solid #4ade80; padding: 15px; margin: 15px 0; border-radius: 0 8px 8px 0; }
+        .kw-review h4 { color: #4ade80; margin-bottom: 10px; }
+        .kw-review ul { list-style: none; }
+        .kw-review li { padding: 5px 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .kw-review li:last-child { border-bottom: none; }
     </style>
 </head>
 <body>
@@ -91,11 +100,11 @@
         <p class="subtitle">Level up your life, one day at a time</p>
         <div class="overall">
             <div class="overall-stat">
-                <div class="value">13</div>
+                <div class="value">14</div>
                 <div class="label">Overall Level</div>
             </div>
             <div class="overall-stat">
-                <div class="value">2,850</div>
+                <div class="value">2,920</div>
                 <div class="label">Total XP</div>
             </div>
             <div class="overall-stat">
@@ -113,29 +122,37 @@
                     <h2>Tough Cookie</h2>
                     <span>Video-Agentur</span>
                 </div>
-                <span class="level">Lvl 15</span>
+                <span class="level">Lvl 16</span>
             </div>
             <div class="xp-section">
                 <div class="xp-info">
-                    <span>XP: 1,250 / 2,000</span>
-                    <span>62%</span>
+                    <span>XP: 1,450 / 2,000</span>
+                    <span>72%</span>
                 </div>
                 <div class="xp-bar">
-                    <div class="xp-fill" style="width: 62%"></div>
+                    <div class="xp-fill" style="width: 72%"></div>
                 </div>
             </div>
             <div class="stats">
                 <div class="stat-row">
                     <span>💰 Offene Rechnungen:</span>
-                    <span style="color: #ff6b6b; font-weight: 600;">~9.000 €</span>
+                    <span class="urgent">~9.000 €</span>
                 </div>
                 <div class="stat-row">
                     <span>📊 Monatlicher Umsatz:</span>
-                    <span style="color: #4ade80; font-weight: 600;">~8.000 €</span>
+                    <span class="done">~8.000 €</span>
                 </div>
                 <div class="stat-row">
                     <span>🎯 Aktive Projekte:</span>
                     <span style="color: #60a5fa; font-weight: 600;">9</span>
+                </div>
+                <div class="stat-row">
+                    <span>🍪 Sentai Deal:</span>
+                    <span class="done">✅ GEWONNEN <span class="win-badge">WIN</span></span>
+                </div>
+                <div class="stat-row">
+                    <span>🎬 Neue Shootings:</span>
+                    <span class="high">Luma Labs, Niku, Pancake</span>
                 </div>
             </div>
         </div>
@@ -147,29 +164,33 @@
                     <h2>NOMU</h2>
                     <span>Digitale Speisekarte</span>
                 </div>
-                <span class="level">Lvl 9</span>
+                <span class="level">Lvl 10</span>
             </div>
             <div class="xp-section">
                 <div class="xp-info">
-                    <span>XP: 650 / 1,000</span>
-                    <span>65%</span>
+                    <span>XP: 750 / 1,000</span>
+                    <span>75%</span>
                 </div>
                 <div class="xp-bar">
-                    <div class="xp-fill" style="width: 65%"></div>
+                    <div class="xp-fill" style="width: 75%"></div>
                 </div>
             </div>
             <div class="stats">
                 <div class="stat-row">
                     <span>🎬 Status:</span>
-                    <span style="color: #fbbf24; font-weight: 600;">Post-Production 🔥</span>
+                    <span class="urgent">Post-Production 🔥</span>
                 </div>
                 <div class="stat-row">
                     <span>📅 Letzter Dreh:</span>
-                    <span style="color: #4ade80; font-weight: 600;">23. April ✅</span>
+                    <span class="done">23. April ✅</span>
                 </div>
                 <div class="stat-row">
                     <span>👥 Aktive Nutzer:</span>
-                    <span style="color: #4ade80; font-weight: 600;">2</span>
+                    <span class="done">2</span>
+                </div>
+                <div class="stat-row">
+                    <span>💰 LuBu Rechnung:</span>
+                    <span class="done">1.400 € ✅</span>
                 </div>
             </div>
         </div>
@@ -201,6 +222,10 @@
                     <span>🌐 Kontakt:</span>
                     <span style="color: #60a5fa; font-weight: 600;">Onkel wartet</span>
                 </div>
+                <div class="stat-row">
+                    <span>📞 Nächster Schritt:</span>
+                    <span class="high">Kyberg Call</span>
+                </div>
             </div>
         </div>
 
@@ -225,11 +250,15 @@
             <div class="stats">
                 <div class="stat-row">
                     <span>🔥 Training-Streak:</span>
-                    <span style="color: #fbbf24; font-weight: 600;">12 Tage</span>
+                    <span class="high">12 Tage</span>
                 </div>
                 <div class="stat-row">
                     <span>🎯 Zielzeit:</span>
-                    <span style="color: #fbbf24; font-weight: 600;">1:20</span>
+                    <span class="high">1:20</span>
+                </div>
+                <div class="stat-row">
+                    <span>🏁 Wettkampf:</span>
+                    <span style="color: #60a5fa; font-weight: 600;">Ende 2026</span>
                 </div>
             </div>
         </div>
@@ -241,15 +270,15 @@
                     <h2>Finanzen</h2>
                     <span>Einkommen & Cashflow</span>
                 </div>
-                <span class="level">Lvl 10</span>
+                <span class="level">Lvl 11</span>
             </div>
             <div class="xp-section">
                 <div class="xp-info">
-                    <span>XP: 850 / 1,500</span>
-                    <span>56%</span>
+                    <span>XP: 950 / 1,500</span>
+                    <span>63%</span>
                 </div>
                 <div class="xp-bar">
-                    <div class="xp-fill" style="width: 56%"></div>
+                    <div class="xp-fill" style="width: 63%"></div>
                 </div>
             </div>
             <div class="stats">
@@ -263,7 +292,11 @@
                 </div>
                 <div class="stat-row">
                     <span>🏁 Meilenstein:</span>
-                    <span style="color: #4ade80; font-weight: 600;">Juli 2026: Schuld-frei</span>
+                    <span class="done">Juli 2026: Schuld-frei</span>
+                </div>
+                <div class="stat-row">
+                    <span>💵 Neue Einnahmen:</span>
+                    <span class="done">+1.400 € (LuBu) ✅</span>
                 </div>
             </div>
         </div>
@@ -289,11 +322,11 @@
             <div class="stats">
                 <div class="stat-row">
                     <span>⛳ Golf Spec:</span>
-                    <span style="color: #4ade80; font-weight: 600;">Testaufnahmen heute!</span>
+                    <span class="done">Testaufnahmen ✅</span>
                 </div>
                 <div class="stat-row">
                     <span>🎬 Reel-Plan:</span>
-                    <span style="color: #60a5fa; font-weight: 600;">Konzepte fertig</span>
+                    <span class="high">Tough Cookie Reel</span>
                 </div>
                 <div class="stat-row">
                     <span>📱 LinkedIn:</span>
@@ -303,11 +336,24 @@
         </div>
     </div>
 
+    <div class="kw-review">
+        <h4>🏆 KW17 Review: 6/6 Tasks Erledigt!</h4>
+        <ul>
+            <li>✅ 🍪 Sentai Deal gewonnen <span class="win-badge">WIN</span></li>
+            <li>✅ 🎬 NOMU Dreh abgeschlossen (Do 23.04.)</li>
+            <li>✅ 💰 LuBu 1.400€ Rechnung versendet</li>
+            <li>✅ 🍷 Pitch-Deck Weinbar Dario gesendet</li>
+            <li>✅ 🥩 Niku Content Fr+Sa gepostet</li>
+            <li>✅ ⛳ Golf Ad Testaufnahmen erledigt (24.04.)</li>
+        </ul>
+    </div>
+
     <div class="footer">
-        <p>🔄 Letzte Aktualisierung: 27. April 2026, 04:04 Uhr</p>
+        <p>🔄 Letzte Aktualisierung: 27. April 2026, 12:04 Uhr | Dashboard v4.5</p>
         <p>🤖 Auto-Update: Alle 4 Stunden via Cron</p>
-        <p>🔥 Heute: 3 neue Shootings geplant (Luma Labs, Niku, Japanese Pancake)</p>
-        <p>📅 Kommende Termine: Niku Shooting Mi 30.4. | Japanese Pancake Pitch nächste Woche</p>
+        <p>🔥 Heute: NOMU Post-Production Deadline + Sentai Pre-Production</p>
+        <p>📅 Kommende Shootings: Luma Labs (250€) | Niku (Mi 30.4.) | Japanese Pancake (München)</p>
+        <p>📊 GitHub: venture-ctrl | Netlify: giang-dashboard.netlify.app</p>
     </div>
 </body>
 </html>
