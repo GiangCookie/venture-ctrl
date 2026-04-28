@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🎮 Giang's Life Dashboard - Korrigiert</title>
+    <title>🎮 Giang's Life Dashboard — KW 18</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Segoe UI', -apple-system, sans-serif; background: #0f0f23; color: #eaeaea; padding: 15px; min-height: 100vh; line-height: 1.6; }
@@ -90,14 +90,6 @@
         .stat-alert { color: #ef4444; font-weight: 600; }
         .stat-good { color: #4ade80; font-weight: 600; }
         
-        /* TREND */
-        .trend { margin-top: 10px; padding: 10px; background: rgba(0,0,0,0.2); border-radius: 8px; display: flex; align-items: center; gap: 10px; }
-        .trend-label { font-size: 0.75rem; color: #a0a0a0; }
-        .trend-sparkline { flex: 1; height: 30px; display: flex; align-items: end; gap: 3px; }
-        .spark-bar { flex: 1; background: var(--accent); border-radius: 2px 2px 0 0; opacity: 0.6; }
-        .spark-bar:last-child { opacity: 1; }
-        .trend-value { font-size: 0.85rem; font-weight: 600; }
-        
         /* COLORS */
         .tough { --accent: #ff6b6b; }
         .nomu { --accent: #4ade80; }
@@ -137,12 +129,12 @@
 
     <!-- WEEKLY REVIEW -->
     <div class="weekly-review">
-        <div class="weekly-title">📊 Diese Woche (KW 17) — Stand: 25. April, 16:04 Uhr</div>
+        <div class="weekly-title">📊 Diese Woche (KW 18) — Stand: 28. April, 20:04 Uhr</div>
         <div class="weekly-grid">
-            <div class="weekly-stat"><div class="weekly-value">5</div><div class="weekly-label">Aktive Quests</div></div>
-            <div class="weekly-stat"><div class="weekly-value">✅</div><div class="weekly-label">Sentai Deal</div></div>
-            <div class="weekly-stat"><div class="weekly-value">1</div><div class="weekly-label">Trainingseinheiten</div></div>
-            <div class="weekly-stat"><div class="weekly-value down">11</div><div class="weekly-label">Offene To-Dos</div></div>
+            <div class="weekly-stat"><div class="weekly-value">6</div><div class="weekly-label">Aktive Tasks KW18</div></div>
+            <div class="weekly-stat"><div class="weekly-value">🎬</div><div class="weekly-label">Niku Shooting Do</div></div>
+            <div class="weekly-stat"><div class="weekly-value down">0</div><div class="weekly-label">Trainingseinheiten</div></div>
+            <div class="weekly-stat"><div class="weekly-value down">9.000 €</div><div class="weekly-label">Offene Rechnungen</div></div>
         </div>
     </div>
 
@@ -158,8 +150,8 @@
     <!-- QUEST PANEL -->
     <div class="quest-panel">
         <div class="quest-header">
-            <span class="quest-title">🎯 Aktive Quests</span>
-            <span class="quest-xp">+400 XP möglich</span>
+            <span class="quest-title">🎯 Aktive Quests KW 18</span>
+            <span class="quest-xp">+550 XP möglich</span>
         </div>
         <div class="quest-list">
             <div class="quest-item" onclick="completeQuest(this, 200)">
@@ -168,29 +160,47 @@
                 <span class="due-date" style="background: rgba(34,197,94,0.2); color: #22c55e;">✅ Erledigt</span>
                 <span class="quest-reward">+200 XP</span>
             </div>
+            <div class="quest-item" onclick="completeQuest(this, 200)">
+                <div class="quest-checkbox"></div>
+                <span class="quest-text">🎥 Sentai Pre-Production planen (Dreh Anfang Mai)</span>
+                <span class="due-date soon">📅 Fällig: Nächste Woche</span>
+                <span class="quest-reward">+200 XP</span>
+            </div>
             <div class="quest-item" onclick="completeQuest(this, 150)">
                 <div class="quest-checkbox"></div>
-                <span class="quest-text">🎬 Tough Cookie Reel produzieren (1h Aufwand)</span>
-                <span class="due-date soon">📅 Fällig: Diese Woche</span>
+                <span class="quest-text">🎬 NOMU Post-Production finalisieren</span>
+                <span class="due-date urgent">📅 Fällig: JETZT!</span>
                 <span class="quest-reward">+150 XP</span>
             </div>
             <div class="quest-item" onclick="completeQuest(this, 100)">
                 <div class="quest-checkbox"></div>
-                <span class="quest-text">🎥 Sentai Pre-Production planen (Dreh Anfang Mai)</span>
-                <span class="due-date soon">📅 Fällig: Nächste Woche</span>
+                <span class="quest-text">🎬 Niku Shooting vorbereiten (Pre-Production)</span>
+                <span class="due-date soon">📅 Fällig: Heute (Di)</span>
+                <span class="quest-reward">+100 XP</span>
+            </div>
+            <div class="quest-item" onclick="completeQuest(this, 100)">
+                <div class="quest-checkbox"></div>
+                <span class="quest-text">🎬 Video für Nico zusammenschneiden</span>
+                <span class="due-date soon">📅 Fällig: Diese Woche</span>
+                <span class="quest-reward">+100 XP</span>
+            </div>
+            <div class="quest-item" onclick="completeQuest(this, 100)">
+                <div class="quest-checkbox"></div>
+                <span class="quest-text">🎨 Anju CI Briefing für Grafikerin</span>
+                <span class="due-date soon">📅 Fällig: Diese Woche</span>
+                <span class="quest-reward">+100 XP</span>
+            </div>
+            <div class="quest-item" onclick="completeQuest(this, 100)">
+                <div class="quest-checkbox"></div>
+                <span class="quest-text">🏨 Hotel Wittmann Pre-Production</span>
+                <span class="due-date soon">📅 Fällig: Diese Woche</span>
                 <span class="quest-reward">+100 XP</span>
             </div>
             <div class="quest-item" onclick="completeQuest(this, 50)">
                 <div class="quest-checkbox"></div>
-                <span class="quest-text">📱 NOMU Post-Production finalisieren</span>
-                <span class="due-date urgent">📅 Fällig: Wochenende</span>
+                <span class="quest-text">💊 Kyberg Call terminieren</span>
+                <span class="due-date soon">📅 Fällig: ASAP</span>
                 <span class="quest-reward">+50 XP</span>
-            </div>
-            <div class="quest-item" onclick="completeQuest(this, 100)">
-                <div class="quest-checkbox"></div>
-                <span class="quest-text">⛳ Golf Ad Preproduction (Dreh Ende April)</span>
-                <span class="due-date soon">📅 Fällig: Ende April</span>
-                <span class="quest-reward">+100 XP</span>
             </div>
         </div>
     </div>
@@ -202,7 +212,7 @@
         <div class="overall">
             <div class="overall-stat"><div class="value" id="overallLevel">4</div><div class="label">Overall Level</div></div>
             <div class="overall-stat"><div class="value" id="totalXP">1,200</div><div class="label">Total XP</div></div>
-            <div class="overall-stat"><div class="value">4</div><div class="label">Active Quests</div></div>
+            <div class="overall-stat"><div class="value">6</div><div class="label">Active Quests</div></div>
         </div>
     </div>
 
@@ -230,7 +240,7 @@
                 <div class="stat-row"><span>💰 Offene Rechnungen:</span><span class="stat-alert">~9.000 €</span></div>
                 <div class="stat-row"><span>📊 Monatlicher Umsatz:</span><span class="stat-good">~8.000 €</span></div>
                 <div class="stat-row"><span>🎯 Aktive Projekte:</span><span style="color: #60a5fa; font-weight: 600;">7 (inkl. Sentai)</span></div>
-                <div class="stat-row"><span>✅ Erledigt heute:</span><span class="stat-good">Sentai Deal gewonnen!</span></div>
+                <div class="stat-row"><span>✅ Erledigt heute:</span><span style="color: #a0a0a0;">Wartet auf Update...</span></div>
             </div>
         </div>
 
@@ -247,13 +257,15 @@
                 <div class="xp-info"><span>Level 3/20</span><span>48%</span></div>
                 <div class="xp-bar"><div class="xp-fill" style="width: 48%"></div></div>
             </div>
-            <span class="streak-badge cold">❄️ Keine aktive Streak</span>
+            <span class="streak-badge warning">⚠️ POST-PRODUCTION BLOCKIERT</span>
             <div class="level-up-req">
                 <div class="level-up-title">🎯 Für Level 4:</div>
-                <div class="level-up-text">5 zahlende Kunden akquirieren</div>
+                <div class="level-up-text">NOMU Video finalisieren und veröffentlichen</div>
             </div>
             <div class="stats">
-                <div class="stat-row"><span>👥 Aktive Nutzer:</span><span class="stat-good">2 (Beta)</span></div>
+                <div class="stat-row"><span>🎬 Dreh:</span><span class="stat-good">✅ Erledigt (KW17)</span></div>
+                <div class="stat-row"><span>✂️ Post-Production:</span><span class="stat-alert">🔴 BLOCKIERT</span></div>
+                <div class="stat-row"><span>👥 Beta-Tester:</span><span class="stat-good">2 aktiv</span></div>
                 <div class="stat-row"><span>💳 Preis:</span><span style="color: #4ade80; font-weight: 600;">15-25€/mo</span></div>
             </div>
         </div>
@@ -300,13 +312,14 @@
                 <div class="xp-info"><span>Level 1/20</span><span>20%</span></div>
                 <div class="xp-bar"><div class="xp-fill" style="width: 20%"></div></div>
             </div>
-            <span class="streak-badge warning">⚠️ ERST GESTERN begonnen!</span>
+            <span class="streak-badge warning">⚠️ Kein Training diese Woche!</span>
             <div class="level-up-req">
                 <div class="level-up-title">🎯 Für Level 2:</div>
-                <div class="level-up-text">2 weitere Trainingseinheiten diese Woche</div>
+                <div class="level-up-text">3 Trainingseinheiten diese Woche</div>
             </div>
             <div class="stats">
-                <div class="stat-row"><span>🏃 Letztes Training:</span><span class="stat-good">Gestern (Joggen)</span></div>
+                <div class="stat-row"><span>🏃 Letztes Training:</span><span style="color: #a0a0a0;">KW17 (Letzte Woche)</span></div>
+                <div class="stat-row"><span>📅 Diese Woche:</span><span class="stat-alert">0/3</span></div>
                 <div class="stat-row"><span>🎯 Zielzeit:</span><span style="color: #fbbf24; font-weight: 600;">1:20 (Ende 2026)</span></div>
             </div>
         </div>
@@ -333,6 +346,7 @@
                 <div class="stat-row"><span>💶 Netto:</span><span class="stat-alert">1.200 €</span></div>
                 <div class="stat-row"><span>📈 Ziel:</span><span style="color: #a78bfa; font-weight: 600;">2.000 €</span></div>
                 <div class="stat-row"><span>🏁 Meilenstein:</span><span class="stat-good">Juli 2026: Schuld-frei</span></div>
+                <div class="stat-row"><span>⚠️ Deadline:</span><span class="stat-alert">Finanzamt: 20.05.</span></div>
             </div>
         </div>
 
@@ -360,16 +374,17 @@
                 <div class="level-up-text">Golf Spec Video veröffentlichen</div>
             </div>
             <div class="stats">
-                <div class="stat-row"><span>🎬 Golf Spec:</span><span style="color: #f472b6; font-weight: 600;">In Entwicklung</span></div>
+                <div class="stat-row"><span>🎬 Golf Spec:</span><span style="color: #f472b6; font-weight: 600;">Testaufnahmen OK</span></div>
                 <div class="stat-row"><span>📱 LinkedIn:</span><span style="color: #a0a0a0;">Noch nicht aktiv</span></div>
+                <div class="stat-row"><span>💰 LuBu:</span><span class="stat-good">1.400€ abgerechnet</span></div>
             </div>
         </div>
     </div>
 
     <div class="footer">
-        <p>🔄 Aktualisiert: 25. April 2026, 16:04 Uhr (Cron-Job)</p>
-        <p>🎉 Dashboard aktualisiert mit Daten aus Memory-Logs</p>
-        <p>💡 Tipp: NOMU Post-Production priorisieren + Sentai Pre-Production planen</p>
+        <p>🔄 Aktualisiert: 28. April 2026, 20:04 Uhr (Cron: dashboard-update-4h-v2)</p>
+        <p>🎉 Dashboard aktualisiert mit Daten aus memory/2026-04-28.md</p>
+        <p>💡 Tipp: NOMU Post-Production JETZT! + Niku Pre-Production heute + Video für Nico</p>
     </div>
     
     <script>
