@@ -1,436 +1,391 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🎮 Giang's Life Dashboard</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            font-family: 'Segoe UI', -apple-system, sans-serif; 
-            background: #0f0f23; 
-            color: #eaeaea;
-            padding: 20px;
-            min-height: 100vh;
-            line-height: 1.6;
-        }
-        .header { 
-            text-align: center; 
-            padding: 40px 20px; 
-            background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%);
-            border-radius: 20px;
-            margin-bottom: 30px;
-            border: 1px solid rgba(233, 69, 96, 0.3);
-        }
-        h1 { 
-            font-size: 2.2rem; 
-            margin-bottom: 10px;
-            background: linear-gradient(90deg, #fff, #e94560);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: 700;
-        }
-        .subtitle { color: #a0a0a0; font-size: 1rem; margin-top: 5px; }
-        .grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
-            gap: 20px;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-        .card { 
-            background: linear-gradient(180deg, #16213e 0%, #1a1a2e 100%);
-            border-radius: 20px; 
-            padding: 25px;
-            border: 1px solid rgba(255,255,255,0.05);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .card:hover { 
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-        }
-        .card-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 15px; }
-        .card-icon { font-size: 2rem; }
-        .card-title h2 { font-size: 1.3rem; margin-bottom: 5px; }
-        .card-title span { color: #a0a0a0; font-size: 0.85rem; }
-        .level { font-size: 1.8rem; font-weight: 800; }
-        .xp-section { margin: 15px 0; }
-        .xp-info { display: flex; justify-content: space-between; font-size: 0.85rem; color: #a0a0a0; margin-bottom: 8px; }
-        .xp-bar { 
-            height: 12px; 
-            background: #2d2d44; 
-            border-radius: 10px;
-            overflow: hidden;
-        }
-        .xp-fill { 
-            height: 100%; 
-            border-radius: 10px;
-            transition: width 1s ease;
-        }
-        .stats { margin-top: 15px; padding: 15px; background: rgba(0,0,0,0.2); border-radius: 12px; }
-        .stat-row { display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 0.9rem; }
-        .stat-row:last-child { margin-bottom: 0; }
-        .footer { text-align: center; color: #a0a0a0; margin-top: 40px; padding: 20px; font-size: 0.85rem; }
-        .overall { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-top: 20px; }
-        .overall-stat { text-align: center; }
-        .overall-stat .value { font-size: 2rem; font-weight: 800; color: #e94560; }
-        .overall-stat .label { font-size: 0.8rem; color: #a0a0a0; text-transform: uppercase; letter-spacing: 1px; }
-        .tough { --accent: #ff6b6b; }
-        .nomu { --accent: #4ade80; }
-        .export { --accent: #60a5fa; }
-        .hyrox { --accent: #fbbf24; }
-        .finance { --accent: #a78bfa; }
-        .personal { --accent: #f472b6; }
-        .card-title h2, .level { color: var(--accent); }
-        .xp-fill { background: linear-gradient(90deg, var(--accent), #fff5); }
-        .win-badge { background: linear-gradient(135deg, #ffd700, #ffaa00); color: #000; padding: 2px 8px; border-radius: 8px; font-size: 0.75rem; font-weight: 700; }
-        .urgent { color: #ff6b6b !important; font-weight: 600; }
-        .high { color: #fbbf24 !important; font-weight: 600; }
-        .done { color: #4ade80 !important; font-weight: 600; }
-        .kw-review { background: rgba(74, 222, 128, 0.1); border-left: 3px solid #4ade80; padding: 15px; margin: 15px 0; border-radius: 0 8px 8px 0; }
-        .kw-review h4 { color: #4ade80; margin-bottom: 10px; }
-        .kw-review ul { list-style: none; }
-        .kw-review li { padding: 5px 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
-        .kw-review li:last-child { border-bottom: none; }
-        .shoot-alert { background: rgba(251, 191, 36, 0.1); border-left: 3px solid #fbbf24; padding: 15px; margin: 15px 0; border-radius: 0 8px 8px 0; }
-        .shoot-alert h4 { color: #fbbf24; margin-bottom: 10px; }
-        .shoot-alert ul { list-style: none; }
-        .shoot-alert li { padding: 5px 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
-        .shoot-alert li:last-child { border-bottom: none; }
-        .today-focus { background: rgba(233, 69, 96, 0.1); border-left: 3px solid #e94560; padding: 15px; margin: 15px 0; border-radius: 0 8px 8px 0; }
-        .today-focus h4 { color: #e94560; margin-bottom: 10px; }
-        .today-focus ul { list-style: none; }
-        .today-focus li { padding: 5px 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
-        .today-focus li:last-child { border-bottom: none; }
-        .pipeline-card { background: rgba(16, 185, 129, 0.1); border-left: 3px solid #10b981; padding: 15px; margin: 15px 0; border-radius: 0 8px 8px 0; }
-        .pipeline-card h4 { color: #10b981; margin-bottom: 10px; }
-        .pipeline-card ul { list-style: none; }
-        .pipeline-card li { padding: 5px 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
-        .pipeline-card li:last-child { border-bottom: none; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>VENTURE CTRL v5.3 | 29. April 2026</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+:root {
+  --bg:#0a0a0f; --card:#1a1a2e; --surface:#16213e;
+  --border:#2a2a4a; --text:#e0e0e0; --muted:#888;
+  --urgent:#ff4757; --high:#ffa502; --normal:#2ed573;
+  --low:#70a1ff; --accent:#667eea;
+  --income:#2ed573; --expense:#ff4757;
+  --mood-super:#ffd700; --mood-gut:#2ed573; --mood-okay:#ffa502;
+  --mood-muede:#70a1ff; --mood-stressig:#ff4757;
+}
+body {
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  background:var(--bg); color:var(--text); min-height:100vh;
+  padding-bottom:20px;
+}
+.header {
+  background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);
+  padding:20px; text-align:center;
+}
+.header h1 { font-size:1.5rem; margin-bottom:4px; }
+.header p { font-size:.8rem; opacity:.8; }
+.card {
+  background:var(--card); border:1px solid var(--border); border-radius:12px;
+  padding:16px; margin:16px; max-width:800px; margin-left:auto; margin-right:auto;
+}
+.card h3 { font-size:1rem; margin-bottom:12px; color:var(--accent); }
+.today-hero {
+  background:linear-gradient(135deg,#667eea,#764ba2);
+  border-radius:16px; padding:20px; margin:16px;
+  text-align:center; max-width:800px; margin-left:auto; margin-right:auto;
+}
+.today-hero h2 { font-size:1.2rem; margin-bottom:8px; }
+.stats-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin:16px; max-width:800px; margin-left:auto; margin-right:auto; }
+.stat-box {
+  background:var(--card); border:1px solid var(--border); border-radius:10px; padding:14px; text-align:center;
+}
+.stat-box .num { font-size:1.5rem; font-weight:700; color:var(--accent); }
+.stat-box .label { font-size:.7rem; color:var(--muted); margin-top:4px; }
+.task {
+  display:flex; align-items:center; padding:12px; background:var(--surface);
+  border-radius:10px; margin-bottom:8px;
+}
+.task .priority {
+  width:4px; height:40px; border-radius:2px; margin-right:12px; flex-shrink:0;
+}
+.task .priority.urgent { background:var(--urgent); }
+.task .priority.high { background:var(--high); }
+.task .priority.normal { background:var(--normal); }
+.task .priority.low { background:var(--low); }
+.task .text { flex:1; font-size:.9rem; }
+.task .text.done { text-decoration:line-through; opacity:.5; }
+.task .badge {
+  font-size:.65rem; padding:2px 8px; border-radius:20px; margin-left:8px;
+}
+.badge-done { background:var(--normal); color:#0a0a0f; }
+.badge-today { background:var(--urgent); color:#fff; }
+.badge-tomorrow { background:var(--high); color:#0a0a0f; }
+.badge-pending { background:var(--high); color:#0a0a0f; }
+.badge-won { background:var(--normal); color:#0a0a0f; }
+.deal {
+  display:flex; justify-content:space-between; align-items:center;
+  padding:12px; background:var(--surface); border-radius:10px; margin-bottom:8px;
+}
+.stage {
+  padding:4px 12px; border-radius:20px; font-size:.75rem;
+}
+.stage-won { background:rgba(46,213,115,.2); color:var(--normal); }
+.stage-pitch { background:rgba(255,165,2,.2); color:var(--high); }
+.stage-lead { background:rgba(255,71,87,.2); color:var(--urgent); }
+.stage-prod { background:rgba(112,161,255,.2); color:var(--low); }
+.project {
+  background:var(--surface); border-left:4px solid var(--accent);
+  padding:12px 16px; margin-bottom:8px; border-radius:0 10px 10px 0;
+}
+.footer {
+  text-align:center; color:var(--muted); margin-top:30px; font-size:.8rem; padding:20px;
+}
+.week-summary {
+  background:linear-gradient(135deg,rgba(102,126,234,.2),rgba(118,75,162,.2));
+  border-radius:12px; padding:16px; margin:16px;
+  border:1px solid var(--border); max-width:800px; margin-left:auto; margin-right:auto;
+}
+.week-summary h4 { margin-bottom:12px; color:var(--accent); }
+.week-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; }
+.week-stat { text-align:center; padding:12px; background:rgba(0,0,0,.2); border-radius:8px; }
+.week-stat .val { font-size:1.3rem; font-weight:700; }
+.week-stat .lbl { font-size:.7rem; color:var(--muted); }
+.daily-focus {
+  background:linear-gradient(135deg,#7c3aed,#4f46e5);
+  border-radius:12px; padding:15px 20px; margin:16px;
+  border-left:4px solid #a78bfa; max-width:800px; margin-left:auto; margin-right:auto;
+}
+.daily-focus h3 { font-size:.9rem; color:#c4b5fd; margin-bottom:8px; }
+.daily-focus p { font-size:1rem; font-weight:600; }
+.upcoming-shoot {
+  background:var(--surface); border-radius:10px; padding:12px; margin-bottom:8px;
+  border-left:4px solid var(--high);
+}
+.upcoming-shoot strong { color:var(--high); }
+.upcoming-shoot.today {
+  border-left-color:var(--urgent);
+  background:linear-gradient(135deg,rgba(255,71,87,.1),rgba(255,71,87,.05));
+}
+.upcoming-shoot.today strong { color:var(--urgent); }
+.win-badge {
+  display:inline-block; background:rgba(46,213,115,.2); color:var(--normal);
+  padding:2px 8px; border-radius:12px; font-size:.75rem; margin-right:6px;
+}
+.income-row {
+  display:flex; justify-content:space-between; align-items:center;
+  padding:10px 12px; background:var(--surface); border-radius:8px; margin-bottom:6px;
+}
+.income-row .amount { color:var(--normal); font-weight:600; }
+@media (max-width:600px) {
+  .stats-grid { grid-template-columns:repeat(2,1fr); }
+  .week-grid { grid-template-columns:repeat(2,1fr); }
+}
+</style>
 </head>
 <body>
-    <div class="header">
-        <h1>🎮 Giang's Life Dashboard</h1>
-        <p class="subtitle">Level up your life, one day at a time</p>
-        <div class="overall">
-            <div class="overall-stat">
-                <div class="value">14</div>
-                <div class="label">Overall Level</div>
-            </div>
-            <div class="overall-stat">
-                <div class="value">2,920</div>
-                <div class="label">Total XP</div>
-            </div>
-            <div class="overall-stat">
-                <div class="value">6</div>
-                <div class="label">Active Quests</div>
-            </div>
-        </div>
+  <div class="header">
+    <h1>🚀 VENTURE CTRL v5.3</h1>
+    <p>Mittwoch, 29. April 2026 — 16:04 Uhr</p>
+  </div>
+
+  <div class="daily-focus">
+    <h3>🎯 TAGES-STATUS (Mittwoch 29.04.)</h3>
+    <p>✅ NIKU BBQ SHOOTING — 11:30-17:00 Uhr ABGELOSEN!</p>
+    <p style="font-size:.8rem;opacity:.8;margin-top:6px;">💰 Mini-Shoot 200€ verdient | 1x Post von Niku erledigt</p>
+  </div>
+
+  <div class="week-summary">
+    <h4>📅 KW 18 — Wochenübersicht</h4>
+    <div class="week-grid">
+      <div class="week-stat"><div class="val" style="color:var(--urgent)">4</div><div class="lbl">Urgent Tasks</div></div>
+      <div class="week-stat"><div class="val" style="color:var(--high)">4</div><div class="lbl">Shoots KW19</div></div>
+      <div class="week-stat"><div class="val" style="color:var(--normal)">+200€</div><div class="lbl">Heute verdient</div></div>
+      <div class="week-stat"><div class="val" style="color:var(--low)">~1.2k€</div><div class="lbl">In Pipeline</div></div>
     </div>
+  </div>
 
-    <div class="grid">
-        <div class="card tough">
-            <div class="card-header">
-                <span class="card-icon">💼</span>
-                <div class="card-title">
-                    <h2>Tough Cookie</h2>
-                    <span>Video-Agentur</span>
-                </div>
-                <span class="level">Lvl 16</span>
-            </div>
-            <div class="xp-section">
-                <div class="xp-info">
-                    <span>XP: 1,450 / 2,000</span>
-                    <span>72%</span>
-                </div>
-                <div class="xp-bar">
-                    <div class="xp-fill" style="width: 72%"></div>
-                </div>
-            </div>
-            <div class="stats">
-                <div class="stat-row">
-                    <span>💰 Offene Rechnungen:</span>
-                    <span class="urgent">~9.000 €</span>
-                </div>
-                <div class="stat-row">
-                    <span>📊 Monatlicher Umsatz:</span>
-                    <span class="done">~8.200 €</span>
-                </div>
-                <div class="stat-row">
-                    <span>🎯 Aktive Projekte:</span>
-                    <span style="color: #60a5fa; font-weight: 600;">9</span>
-                </div>
-                <div class="stat-row">
-                    <span>🍪 Sentai Deal:</span>
-                    <span class="done">✅ GEWONNEN <span class="win-badge">WIN</span></span>
-                </div>
-                <div class="stat-row">
-                    <span>🍷 Weinbar Dario:</span>
-                    <span class="high">Pitch gesendet</span>
-                </div>
-                <div class="stat-row">
-                    <span>🎬 Anstehend:</span>
-                    <span class="high">Mini-Shoot heute 200€</span>
-                </div>
-                <div class="stat-row">
-                    <span>📅 Foto-Shoot:</span>
-                    <span class="done">~1.000€ (5.5.)</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="card nomu">
-            <div class="card-header">
-                <span class="card-icon">📱</span>
-                <div class="card-title">
-                    <h2>NOMU</h2>
-                    <span>Digitale Speisekarte</span>
-                </div>
-                <span class="level">Lvl 10</span>
-            </div>
-            <div class="xp-section">
-                <div class="xp-info">
-                    <span>XP: 750 / 1,000</span>
-                    <span>75%</span>
-                </div>
-                <div class="xp-bar">
-                    <div class="xp-fill" style="width: 75%"></div>
-                </div>
-            </div>
-            <div class="stats">
-                <div class="stat-row">
-                    <span>🎬 Status:</span>
-                    <span class="urgent">Post-Production 🔥</span>
-                </div>
-                <div class="stat-row">
-                    <span>📅 Letzter Dreh:</span>
-                    <span class="done">23. April ✅</span>
-                </div>
-                <div class="stat-row">
-                    <span>👥 Aktive Nutzer:</span>
-                    <span class="done">2</span>
-                </div>
-                <div class="stat-row">
-                    <span>💰 LuBu Rechnung:</span>
-                    <span class="done">1.400 € ✅</span>
-                </div>
-                <div class="stat-row">
-                    <span>🍱 Neue Leads:</span>
-                    <span class="high">Little Hiro (1.500€)</span>
-                </div>
-                <div class="stat-row">
-                    <span>🥞 Japanese Pancake:</span>
-                    <span class="high">München Meeting ✅</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="card export">
-            <div class="card-header">
-                <span class="card-icon">🌍</span>
-                <div class="card-title">
-                    <h2>Export</h2>
-                    <span>Deutschland → Vietnam</span>
-                </div>
-                <span class="level">Lvl 6</span>
-            </div>
-            <div class="xp-section">
-                <div class="xp-info">
-                    <span>XP: 320 / 800</span>
-                    <span>40%</span>
-                </div>
-                <div class="xp-bar">
-                    <div class="xp-fill" style="width: 40%"></div>
-                </div>
-            </div>
-            <div class="stats">
-                <div class="stat-row">
-                    <span>📦 Aktive Deals:</span>
-                    <span style="color: #60a5fa; font-weight: 600;">1 (Kyberg)</span>
-                </div>
-                <div class="stat-row">
-                    <span>🌐 Kontakt:</span>
-                    <span style="color: #60a5fa; font-weight: 600;">Onkel wartet</span>
-                </div>
-                <div class="stat-row">
-                    <span>📞 Nächster Schritt:</span>
-                    <span class="high">Kyberg Call terminieren</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="card hyrox">
-            <div class="card-header">
-                <span class="card-icon">🏃</span>
-                <div class="card-title">
-                    <h2>HYROX</h2>
-                    <span>Personal Training</span>
-                </div>
-                <span class="level">Lvl 18</span>
-            </div>
-            <div class="xp-section">
-                <div class="xp-info">
-                    <span>XP: 1,800 / 2,500</span>
-                    <span>72%</span>
-                </div>
-                <div class="xp-bar">
-                    <div class="xp-fill" style="width: 72%"></div>
-                </div>
-            </div>
-            <div class="stats">
-                <div class="stat-row">
-                    <span>🔥 Training-Streak:</span>
-                    <span class="high">12 Tage</span>
-                </div>
-                <div class="stat-row">
-                    <span>🎯 Zielzeit:</span>
-                    <span class="high">1:20</span>
-                </div>
-                <div class="stat-row">
-                    <span>🏁 Wettkampf:</span>
-                    <span style="color: #60a5fa; font-weight: 600;">Ende 2026</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="card finance">
-            <div class="card-header">
-                <span class="card-icon">💰</span>
-                <div class="card-title">
-                    <h2>Finanzen</h2>
-                    <span>Einkommen & Cashflow</span>
-                </div>
-                <span class="level">Lvl 11</span>
-            </div>
-            <div class="xp-section">
-                <div class="xp-info">
-                    <span>XP: 950 / 1,500</span>
-                    <span>63%</span>
-                </div>
-                <div class="xp-bar">
-                    <div class="xp-fill" style="width: 63%"></div>
-                </div>
-            </div>
-            <div class="stats">
-                <div class="stat-row">
-                    <span>💶 Netto-Einkommen:</span>
-                    <span style="color: #a78bfa; font-weight: 600;">1.200 €</span>
-                </div>
-                <div class="stat-row">
-                    <span>📈 Ziel:</span>
-                    <span style="color: #a78bfa; font-weight: 600;">2.000 €</span>
-                </div>
-                <div class="stat-row">
-                    <span>🏁 Meilenstein:</span>
-                    <span class="done">Juli 2026: Schuld-frei</span>
-                </div>
-                <div class="stat-row">
-                    <span>💵 Neue Einnahmen:</span>
-                    <span class="done">+1.400 € (LuBu) ✅</span>
-                </div>
-                <div class="stat-row">
-                    <span>🍪 Sentai:</span>
-                    <span class="done">+5.000 € ✅</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="card personal">
-            <div class="card-header">
-                <span class="card-icon">🎯</span>
-                <div class="card-title">
-                    <h2>Personal Brand</h2>
-                    <span>Content & Skills</span>
-                </div>
-                <span class="level">Lvl 6</span>
-            </div>
-            <div class="xp-section">
-                <div class="xp-info">
-                    <span>XP: 380 / 700</span>
-                    <span>54%</span>
-                </div>
-                <div class="xp-bar">
-                    <div class="xp-fill" style="width: 54%"></div>
-                </div>
-            </div>
-            <div class="stats">
-                <div class="stat-row">
-                    <span>⛳ Golf Spec:</span>
-                    <span class="done">Testaufnahmen ✅</span>
-                </div>
-                <div class="stat-row">
-                    <span>🎬 Video für Nico:</span>
-                    <span class="done">✅ FERTIG <span class="win-badge">DONE</span></span>
-                </div>
-                <div class="stat-row">
-                    <span>📱 LinkedIn:</span>
-                    <span style="color: #f472b6; font-weight: 600;">Noch nicht aktiv</span>
-                </div>
-            </div>
-        </div>
+  <div class="stats-grid">
+    <div class="stat-box">
+      <div class="num" style="color:var(--normal)">6.8k€</div>
+      <div class="label">Gesamt-Einnahmen</div>
     </div>
-
-    <div class="today-focus">
-        <h4>📋 Heute (Mi, 29.04.) — Offene Tasks KW18</h4>
-        <ul>
-            <li>🔴 🎬 <strong>NOMU Post-Production</strong> — Seit Tagen offen!</li>
-            <li>🔴 🎨 <strong>Beauty-Konzept Video</strong> — Deadline Donnerstag!</li>
-            <li>🔴 📋 <strong>Anju / Jidai / Zenti Pre-Prod</strong> — KW19 Shoots!</li>
-            <li>🟡 💰 <strong>Mini-Shoot 200€</strong> — Heute dazwischen</li>
-            <li>🟡 🥩 <strong>Niku Post-Production</strong> — Nach Dreh (gestern/heute)</li>
-            <li>🟡 🏨 <strong>Hotel Wittmann</strong> — Pre-Production</li>
-            <li>🟡 💊 <strong>Kyberg Call</strong> — Terminieren</li>
-            <li>🟡 📝 <strong>Rechnung Apollo.GG</strong> — Noch offen</li>
-        </ul>
+    <div class="stat-box">
+      <div class="num" style="color:var(--high)">4</div>
+      <div class="label">Urgent To-Dos</div>
     </div>
-
-    <div class="shoot-alert">
-        <h4>🎬 ANSTEHENDE SHOOTINGS (KW19 — Nächste Woche!)</h4>
-        <ul>
-            <li>🔥 <strong>Montag:</strong> Jidai — Pre-Production nötig!</li>
-            <li>🔥 <strong>Dienstag:</strong> Kono — Pre-Production nötig!</li>
-            <li>🔥 <strong>Mittwoch:</strong> Anju — Pre-Production nötig!</li>
-            <li>🔥 <strong>Donnerstag:</strong> Zenti — Pre-Production nötig!</li>
-            <li>🟡 <strong>Luma Labs:</strong> 250€ Budget, 30s Trailer (Flexibel)</li>
-        </ul>
+    <div class="stat-box">
+      <div class="num" style="color:var(--accent)">6</div>
+      <div class="label">Pipeline Deals</div>
     </div>
-
-    <div class="pipeline-card">
-        <h4>🎯 Sales Pipeline — Aktueller Status</h4>
-        <ul>
-            <li>✅ <strong>Sentai:</strong> 5.000€ — GEWONNEN <span class="win-badge">WIN</span></li>
-            <li>✅ <strong>LuBu:</strong> 1.400€ — Rechnung versendet</li>
-            <li>🟡 <strong>Niku:</strong> 🎬 Shooting läuft (29.04.)</li>
-            <li>🟡 <strong>Mini-Shoot:</strong> 200€ — Heute</li>
-            <li>🟡 <strong>Foto-Shoot:</strong> ~1.000€ — ~5.5.</li>
-            <li>🟡 <strong>Luma Labs:</strong> 250€ — Pitch / Trailer</li>
-            <li>🟡 <strong>Japanese Pancake:</strong> Meeting München ✅</li>
-            <li>🟡 <strong>Weinbar Dario:</strong> Pitch gesendet</li>
-            <li>🟡 <strong>Little Hiro:</strong> ~1.500€ — Lead</li>
-        </ul>
+    <div class="stat-box">
+      <div class="num" style="color:var(--urgent)">4</div>
+      <div class="label">Pre-Prods KW19</div>
     </div>
+  </div>
 
-    <div class="kw-review">
-        <h4>🏆 KW17 Review — Solide Woche!</h4>
-        <ul>
-            <li>✅ 🍪 Sentai Deal gewonnen <span class="win-badge">WIN</span></li>
-            <li>✅ 🎬 NOMU Dreh abgeschlossen (Do 23.04.)</li>
-            <li>✅ 💰 LuBu 1.400€ Rechnung versendet</li>
-            <li>✅ 🍷 Weinbar Dario Pitch gesendet</li>
-            <li>✅ 🥩 Niku Content Fr+Sa gepostet</li>
-            <li>✅ ⛳ Golf Ad Testaufnahmen erledigt (24.04.)</li>
-        </ul>
+  <div class="card">
+    <h3>🔥 HEUTE — MITTWOCH 29. APRIL (ABEND)</h3>
+    <div class="upcoming-shoot">
+      <strong>✅ NIKU BBQ SHOOTING</strong><br>
+      11:30 - 17:00 Uhr | Erfolgreich abgeschlossen<br>
+      <span style="font-size:.8rem;opacity:.8;">💰 Mini-Shoot 200€ verdient | 1x Post erledigt</span>
     </div>
+    <div class="task">
+      <div class="priority normal"></div>
+      <div class="text done">✅ Niku Shooting — Erledigt!</div>
+    </div>
+    <div class="task">
+      <div class="priority normal"></div>
+      <div class="text done">✅ Mini-Shoot 200€ — Erledigt!</div>
+    </div>
+    <div class="task">
+      <div class="priority normal"></div>
+      <div class="text done">✅ 1x Niku Post — Geposted!</div>
+    </div>
+  </div>
 
-    <div class="footer">
-        <p>🔄 Letzte Aktualisierung: 29. April 2026, 04:04 Uhr | Dashboard v5.1</p>
-        <p>🤖 Auto-Update: Alle 4 Stunden via Cron</p>
-        <p>🔥 <strong>Heute Fokus:</strong> Niku Shooting + Mini-Shoot 200€ + NOMU Post-Prod</p>
-        <p>📅 Nächste Woche: 4 Shoots (Jidai, Kono, Anju, Zenti) — Pre-Prod nötig!</p>
-        <p>💰 Cashflow: ~9.000€ offene Rechnungen + 200€ heute + 1.000€ am 5.5.</p>
-        <p>🎉 <strong>Erledigt:</strong> Nico Video fertig, Japanese Pancake Meeting</p>
-        <p>📊 GitHub: venture-ctrl | Netlify: giang-dashboard.netlify.app</p>
+  <div class="card">
+    <h3>💰 EINNAHMEN / PIPELINE</h3>
+    <div class="income-row">
+      <span>✅ Heute (29.04.) — Mini-Shoot</span>
+      <span class="amount">+200€ ✅</span>
     </div>
+    <div class="income-row">
+      <span>📅 Mo ~5.5. — Foto-Shoot</span>
+      <span class="amount">~1.000€</span>
+    </div>
+    <div class="income-row">
+      <span>✅ LuBu Projekt (bezahlt)</span>
+      <span class="amount">1.400€</span>
+    </div>
+    <div class="income-row">
+      <span>✅ Sentai (gewonnen)</span>
+      <span class="amount">5.000€</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>🔴 URGENT — OFFENE TASKS</h3>
+    <div class="task">
+      <div class="priority urgent"></div>
+      <div class="text">🎬 NOMU Post-Production <span class="badge badge-pending">🔥 KRITISCH</span></div>
+    </div>
+    <div class="task">
+      <div class="priority high"></div>
+      <div class="text">🎬 Beauty-Konzept Video <span class="badge badge-pending">DEADLINE DO!</span></div>
+    </div>
+    <div class="task">
+      <div class="priority high"></div>
+      <div class="text">🎬 Pre-Production Jidai (KW19) <span class="badge badge-pending">Diese Woche</span></div>
+    </div>
+    <div class="task">
+      <div class="priority high"></div>
+      <div class="text">🎬 Pre-Production Anju (KW19) <span class="badge badge-pending">Diese Woche</span></div>
+    </div>
+    <div class="task">
+      <div class="priority high"></div>
+      <div class="text">🎬 Pre-Production Kono (KW19) <span class="badge badge-pending">Diese Woche</span></div>
+    </div>
+    <div class="task">
+      <div class="priority high"></div>
+      <div class="text">🎬 Pre-Production Zenti (KW19) <span class="badge badge-pending">Diese Woche</span></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>🟡 HIGH — DIESE WOCHE</h3>
+    <div class="task">
+      <div class="priority high"></div>
+      <div class="text">🎨 Anju CI Briefing für Grafikerin <span class="badge badge-pending">Offen</span></div>
+    </div>
+    <div class="task">
+      <div class="priority high"></div>
+      <div class="text">🍪 Sentai Pre-Production (Dreh Mitte Mai) <span class="badge badge-pending">Anfang Mai</span></div>
+    </div>
+    <div class="task">
+      <div class="priority high"></div>
+      <div class="text">🍷 Weinbar Dario — Pitch folgen <span class="badge badge-pending">Offen</span></div>
+    </div>
+    <div class="task">
+      <div class="priority high"></div>
+      <div class="text">💊 Kyberg Videoproduktionen — Call <span class="badge badge-pending">Offen</span></div>
+    </div>
+    <div class="task">
+      <div class="priority high"></div>
+      <div class="text">🏨 Hotel Wittmann Pre-Production <span class="badge badge-pending">Flexibel</span></div>
+    </div>
+    <div class="task">
+      <div class="priority high"></div>
+      <div class="text">🎬 Beauty-Konzept Video (Deadline Do!) <span class="badge badge-pending">🔥 DRINGEND</span></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>📅 SHOOTS NÄCHSTE WOCHE (KW19)</h3>
+    <div class="upcoming-shoot">
+      <strong>Montag — Jidai</strong><br>
+      Pre-Production nötig! | Status: 🔴 Offen
+    </div>
+    <div class="upcoming-shoot">
+      <strong>Dienstag — Kono</strong><br>
+      Pre-Production nötig! | Status: 🔴 Offen
+    </div>
+    <div class="upcoming-shoot">
+      <strong>Mittwoch — Anju</strong><br>
+      Pre-Production nötig! | Status: 🔴 Offen
+    </div>
+    <div class="upcoming-shoot">
+      <strong>Donnerstag — Zenti</strong><br>
+      Pre-Production nötig! | Status: 🔴 Offen
+    </div>
+    <p style="font-size:.8rem;color:var(--urgent);margin-top:12px;">⚠️ ALLE Pre-Productions müssen diese Woche fertig werden!</p>
+  </div>
+
+  <div class="card">
+    <h3>🎯 PIPELINE</h3>
+    <div class="deal">
+      <span>🍪 Sentai</span>
+      <span class="stage stage-won">GEWONNEN — 5.000€</span>
+    </div>
+    <div class="deal">
+      <span>🍜 LuBu Projekt</span>
+      <span class="stage stage-won">Closed Won — 1.400€</span>
+    </div>
+    <div class="deal">
+      <span>💄 Luma Labs</span>
+      <span class="stage stage-pitch">250€ — TBD nächste Woche</span>
+    </div>
+    <div class="deal">
+      <span>🥞 Japanese Pancake München</span>
+      <span class="stage stage-pitch">Angebot offen</span>
+    </div>
+    <div class="deal">
+      <span>🍪 Weinbar Dario</span>
+      <span class="stage stage-pitch">Pitch gesendet</span>
+    </div>
+    <div class="deal">
+      <span>👤 Little Hiro</span>
+      <span class="stage stage-lead">~1.500€ Lead</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>📊 PROJEKTE STATUS</h3>
+    <div class="project" style="border-color:#FF6B35;">
+      <strong>🍪 Tough Cookie</strong><br>
+      Offene Rechnungen: ~9.000€ | Sentai: ✅ | Niku: 🔥 HEUTE Shooting!
+    </div>
+    <div class="project" style="border-color:#f66;">
+      <strong>🎬 NOMU</strong><br>
+      Dreh erledigt (23.04.) | 🟡 Post-Production: VERSCHOBEN — muss nachgeholt werden!
+    </div>
+    <div class="project" style="border-color:#FFD93D;">
+      <strong>🏨 Hotel Wittmann</strong><br>
+      Pre-Production Phase | Flexibel, aber nicht warten
+    </div>
+    <div class="project" style="border-color:#4ECDC4;">
+      <strong>⛳ Golf Ad</strong><br>
+      ✅ Testaufnahmen erledigt (24.04.) | Personal Brand Reel
+    </div>
+    <div class="project" style="border-color:#95E881;">
+      <strong>🍜 LuBu</strong><br>
+      Rechnung 1.400€ ✅ Bezahlt & abgeschlossen
+    </div>
+    <div class="project" style="border-color:#60a5fa;">
+      <strong>🌍 Export (Kyberg)</strong><br>
+      Warte auf GF-Antwort | Onkel wartet auf Update
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>🏆 WINS HEUTE (29.04.)</h3>
+    <div style="margin-bottom:12px;">
+      <span class="win-badge">🎬 Niku BBQ Shooting erfolgreich!</span>
+    </div>
+    <div style="margin-bottom:12px;">
+      <span class="win-badge">💰 Mini-Shoot +200€ verdient!</span>
+    </div>
+    <div style="margin-bottom:12px;">
+      <span class="win-badge">📱 Niku Social Post erledigt</span>
+    </div>
+    <div>
+      <span class="win-badge">🍪 Tough Cookie läuft stabil</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>🟢 NORMAL — BACKLOG</h3>
+    <div class="task">
+      <div class="priority normal"></div>
+      <div class="text">🏦 Finanzamt Ratenzahlung (Deadline: 20.05.)</div>
+    </div>
+    <div class="task">
+      <div class="priority normal"></div>
+      <div class="text">📄 Apollo.GG Rechnung stellen</div>
+    </div>
+    <div class="task">
+      <div class="priority normal"></div>
+      <div class="text">💼 Retainer-Rechnungen prüfen</div>
+    </div>
+    <div class="task">
+      <div class="priority normal"></div>
+      <div class="text">🧾 Belege einordnen (Buchhaltung)</div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p><strong>Venture CTRL v5.3</strong> | Letztes Update: 29. April 2026, 16:04 Uhr</p>
+    <p>🔥 KW18: Niku Shooting ✅ — Nächste Woche: 4 Shoots vorbereiten!</p>
+    <p>⚠️ Priorität: NOMU Post-Production + Beauty-Konzept Deadline Do. + 4 Pre-Productions KW19</p>
+    <p style="margin-top:8px; opacity:.6;">https://venture-ctrl-live.netlify.app</p>
+  </div>
+
+  <script>
+    if (!location.search.includes('v=')) {
+      location.href = location.href + '?v=' + Date.now();
+    }
+  </script>
 </body>
 </html>
