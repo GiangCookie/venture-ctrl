@@ -16,7 +16,7 @@
     { "id": "todo-004", "projectId": "tough-cookie", "text": "🎬 Pre-Production Anju (KW19)", "priority": "🔴 Urgent", "done": false, "deadline": "2026-05-07" },
     { "id": "todo-005", "projectId": "tough-cookie", "text": "🎬 Pre-Production Kono (KW19)", "priority": "🔴 Urgent", "done": false, "deadline": "2026-05-06" },
     { "id": "todo-006", "projectId": "tough-cookie", "text": "🎬 Pre-Production Zenti (KW19)", "priority": "🔴 Urgent", "done": false, "deadline": "2026-05-08" },
-    { "id": "todo-007", "projectId": "tough-cookie", "text": "🎨 Beauty-Konzept Video", "priority": "🟡 High", "done": false, "deadline": "2026-05-01" },
+    { "id": "todo-007", "projectId": "tough-cookie", "text": "🎨 Beauty-Konzept Video", "priority": "🔴 Urgent", "done": false, "deadline": "2026-04-30" },
     { "id": "todo-008", "projectId": "tough-cookie", "text": "🍪 Sentai Pre-Production (Dreh Mitte Mai)", "priority": "🟡 High", "done": false, "deadline": "2026-05-05" },
     { "id": "todo-009", "projectId": "tough-cookie", "text": "🏨 Hotel Wittmann Pre-Production", "priority": "🟡 High", "done": false },
     { "id": "todo-010", "projectId": "tough-cookie", "text": "🍷 Weinbar Dario — Pitch folgen", "priority": "🟡 High", "done": false },
@@ -48,5 +48,6 @@
     "openInvoices": 9000,
     "activeProjects": 7
   },
-  "lastUpdated": "2026-04-30T08:04:00+02:00"
+  "lastUpdated": "2026-04-30T12:04:00+02:00",
+  "version": "5.4"
 }
