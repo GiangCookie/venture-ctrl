@@ -10,20 +10,20 @@
     { "id": "exp-002", "projectId": "kyberg", "amount": 500, "date": "2026-04-22", "description": "Export Business Investition" }
   ],
   "todos": [
-    { "id": "todo-001", "projectId": "tough-cookie", "text": "🎬 Post-Production Niku (nach Dreh)", "priority": "🔴 Urgent", "done": false, "deadline": "2026-04-30" },
-    { "id": "todo-002", "projectId": "nomu", "text": "🎬 NOMU Post-Production", "priority": "🔴 Urgent", "done": false, "deadline": "2026-04-28" },
+    { "id": "todo-001", "projectId": "tough-cookie", "text": "🎬 Post-Production Niku", "priority": "🔴 Urgent", "done": false, "deadline": "2026-04-30", "overdue": true, "overdueDays": 1 },
+    { "id": "todo-002", "projectId": "nomu", "text": "🎬 NOMU Post-Production", "priority": "🔴 Urgent", "done": false, "deadline": "2026-04-28", "overdue": true, "overdueDays": 3 },
     { "id": "todo-003", "projectId": "tough-cookie", "text": "🎬 Pre-Production Jidai (KW19)", "priority": "🔴 Urgent", "done": false, "deadline": "2026-05-05" },
     { "id": "todo-004", "projectId": "tough-cookie", "text": "🎬 Pre-Production Anju (KW19)", "priority": "🔴 Urgent", "done": false, "deadline": "2026-05-07" },
     { "id": "todo-005", "projectId": "tough-cookie", "text": "🎬 Pre-Production Kono (KW19)", "priority": "🔴 Urgent", "done": false, "deadline": "2026-05-06" },
     { "id": "todo-006", "projectId": "tough-cookie", "text": "🎬 Pre-Production Zenti (KW19)", "priority": "🔴 Urgent", "done": false, "deadline": "2026-05-08" },
-    { "id": "todo-007", "projectId": "tough-cookie", "text": "🎨 Beauty-Konzept Video", "priority": "🔴 Urgent", "done": false, "deadline": "2026-04-30" },
+    { "id": "todo-007", "projectId": "tough-cookie", "text": "🎨 Beauty-Konzept Video", "priority": "🔴 Urgent", "done": true, "completedDate": "2026-04-30" },
     { "id": "todo-008", "projectId": "tough-cookie", "text": "🍪 Sentai Pre-Production (Dreh Mitte Mai)", "priority": "🟡 High", "done": false, "deadline": "2026-05-05" },
     { "id": "todo-009", "projectId": "tough-cookie", "text": "🏨 Hotel Wittmann Pre-Production", "priority": "🟡 High", "done": false },
     { "id": "todo-010", "projectId": "tough-cookie", "text": "🍷 Weinbar Dario — Pitch folgen", "priority": "🟡 High", "done": false },
     { "id": "todo-011", "projectId": "kyberg", "text": "💊 Kyberg Videoproduktionen — Call terminieren", "priority": "🟡 High", "done": false },
     { "id": "todo-012", "projectId": "tough-cookie", "text": "📄 Apollo.GG Rechnung stellen", "priority": "🟢 Normal", "done": false },
     { "id": "todo-013", "projectId": "tough-cookie", "text": "💼 Retainer-Rechnungen prüfen", "priority": "🟢 Normal", "done": false },
-    { "id": "todo-014", "projectId": "tough-cookie", "text": "🧾 Belege einordnen (Buchhaltung)", "priority": "🟢 Normal", "done": false },
+    { "id": "todo-014", "projectId": "tough-cookie", "text": "🧾 Belege einordnen (Buchhaltung)", "priority": "🟢 Normal", "done": true, "completedDate": "2026-04-30" },
     { "id": "todo-015", "projectId": "freelance", "text": "🏦 Finanzamt Ratenzahlung (Deadline: 20.05.)", "priority": "🟢 Normal", "done": false, "deadline": "2026-05-20" }
   ],
   "pipeline": [
@@ -43,11 +43,13 @@
     "monkey": { "nextPost": "2026-04-26", "week": "4/4", "status": "Post #4 Sonntag" }
   },
   "weeklySummary": {
-    "week": "KW18",
-    "wins": ["Niku BBQ Shooting erfolgreich", "+200€ Mini-Shoot", "Nico Video fertig", "Sentai gewonnen", "1.4k€ LuBu"],
+    "week": "KW19",
+    "period": "5.–11. Mai 2026",
+    "wins": ["Beauty-Video fertig", "Nico Video fertig", "Niku BBQ Shooting erfolgreich", "+200€ Mini-Shoot", "Sentai gewonnen", "1.4k€ LuBu"],
     "openInvoices": 9000,
-    "activeProjects": 7
+    "activeProjects": 7,
+    "criticalTasks": 6
   },
-  "lastUpdated": "2026-04-30T18:04:00+02:00",
-  "version": "5.4"
+  "lastUpdated": "2026-05-01T12:04:00+02:00",
+  "version": "5.4.4"
 }
