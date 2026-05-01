@@ -16,14 +16,14 @@
     { "id": "todo-004", "projectId": "tough-cookie", "text": "🎬 Pre-Production Anju (KW19)", "priority": "🔴 Urgent", "done": false, "deadline": "2026-05-07" },
     { "id": "todo-005", "projectId": "tough-cookie", "text": "🎬 Pre-Production Kono (KW19)", "priority": "🔴 Urgent", "done": false, "deadline": "2026-05-06" },
     { "id": "todo-006", "projectId": "tough-cookie", "text": "🎬 Pre-Production Zenti (KW19)", "priority": "🔴 Urgent", "done": false, "deadline": "2026-05-08" },
-    { "id": "todo-007", "projectId": "tough-cookie", "text": "🎨 Beauty-Konzept Video", "priority": "🔴 Urgent", "done": false, "deadline": "2026-04-30" },
+    { "id": "todo-007", "projectId": "tough-cookie", "text": "🎨 Beauty-Konzept Video", "priority": "🔴 Urgent", "done": true, "completedDate": "2026-04-30" },
     { "id": "todo-008", "projectId": "tough-cookie", "text": "🍪 Sentai Pre-Production (Dreh Mitte Mai)", "priority": "🟡 High", "done": false, "deadline": "2026-05-05" },
     { "id": "todo-009", "projectId": "tough-cookie", "text": "🏨 Hotel Wittmann Pre-Production", "priority": "🟡 High", "done": false },
     { "id": "todo-010", "projectId": "tough-cookie", "text": "🍷 Weinbar Dario — Pitch folgen", "priority": "🟡 High", "done": false },
     { "id": "todo-011", "projectId": "kyberg", "text": "💊 Kyberg Videoproduktionen — Call terminieren", "priority": "🟡 High", "done": false },
     { "id": "todo-012", "projectId": "tough-cookie", "text": "📄 Apollo.GG Rechnung stellen", "priority": "🟢 Normal", "done": false },
     { "id": "todo-013", "projectId": "tough-cookie", "text": "💼 Retainer-Rechnungen prüfen", "priority": "🟢 Normal", "done": false },
-    { "id": "todo-014", "projectId": "tough-cookie", "text": "🧾 Belege einordnen (Buchhaltung)", "priority": "🟢 Normal", "done": false },
+    { "id": "todo-014", "projectId": "tough-cookie", "text": "🧾 Belege einordnen (Buchhaltung)", "priority": "🟢 Normal", "done": true, "completedDate": "2026-04-30" },
     { "id": "todo-015", "projectId": "freelance", "text": "🏦 Finanzamt Ratenzahlung (Deadline: 20.05.)", "priority": "🟢 Normal", "done": false, "deadline": "2026-05-20" }
   ],
   "pipeline": [
@@ -44,10 +44,10 @@
   },
   "weeklySummary": {
     "week": "KW18",
-    "wins": ["Niku BBQ Shooting erfolgreich", "+200€ Mini-Shoot", "Nico Video fertig", "Sentai gewonnen", "1.4k€ LuBu"],
+    "wins": ["Beauty-Video fertig", "Nico Video fertig", "Niku BBQ Shooting erfolgreich", "+200€ Mini-Shoot", "Sentai gewonnen", "1.4k€ LuBu"],
     "openInvoices": 9000,
     "activeProjects": 7
   },
-  "lastUpdated": "2026-05-01T00:04:00+02:00",
-  "version": "5.4.1"
+  "lastUpdated": "2026-05-01T04:04:00+02:00",
+  "version": "5.4.2"
 }
