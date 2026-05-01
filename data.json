@@ -11,7 +11,7 @@
   ],
   "todos": [
     { "id": "todo-001", "projectId": "tough-cookie", "text": "🎬 Post-Production Niku", "priority": "🔴 Urgent", "done": false, "deadline": "2026-04-30", "overdue": true, "overdueDays": 1 },
-    { "id": "todo-002", "projectId": "nomu", "text": "🎬 NOMU Post-Production", "priority": "🔴 Urgent", "done": false, "deadline": "2026-04-28", "overdue": true, "overdueDays": 3 },
+    { "id": "todo-002", "projectId": "nomu", "text": "🎬 NOMU Post-Production", "priority": "🔴 Urgent", "done": false, "deadline": "2026-04-28", "overdue": true, "overdueDays": 4 },
     { "id": "todo-003", "projectId": "tough-cookie", "text": "🎬 Pre-Production Jidai (KW19)", "priority": "🔴 Urgent", "done": false, "deadline": "2026-05-05" },
     { "id": "todo-004", "projectId": "tough-cookie", "text": "🎬 Pre-Production Anju (KW19)", "priority": "🔴 Urgent", "done": false, "deadline": "2026-05-07" },
     { "id": "todo-005", "projectId": "tough-cookie", "text": "🎬 Pre-Production Kono (KW19)", "priority": "🔴 Urgent", "done": false, "deadline": "2026-05-06" },
@@ -50,6 +50,6 @@
     "activeProjects": 7,
     "criticalTasks": 6
   },
-  "lastUpdated": "2026-05-01T12:04:00+02:00",
-  "version": "5.4.4"
+  "lastUpdated": "2026-05-01T16:04:00+02:00",
+  "version": "5.4.5"
 }
