@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>VENTURE CTRL v5.4.2 | 1. Mai 2026 — 04:04 Uhr</title>
+<title>VENTURE CTRL v5.4.3 | 1. Mai 2026 — 08:04 Uhr</title>
 <style>
 * { margin:0; padding:0; box-sizing:border-box; }
 :root {
@@ -99,339 +99,140 @@ body {
   border-radius:12px; padding:15px 20px; margin:16px;
   border-left:4px solid #a78bfa; max-width:800px; margin-left:auto; margin-right:auto;
 }
-.daily-focus h3 { font-size:.9rem; color:#c4b5fd; margin-bottom:8px; }
-.daily-focus p { font-size:1rem; font-weight:600; }
-.upcoming-shoot {
-  background:var(--surface); border-radius:10px; padding:12px; margin-bottom:8px;
-  border-left:4px solid var(--high);
+.daily-focus h4 { margin-bottom:8px; font-size:1rem; }
+.daily-focus .task-list { list-style:none; }
+.daily-focus .task-list li { padding:4px 0; font-size:.9rem; }
+.shoot-calendar {
+  display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin:16px;
+  max-width:800px; margin-left:auto; margin-right:auto;
 }
-.upcoming-shoot strong { color:var(--high); }
-.upcoming-shoot.today {
-  border-left-color:var(--urgent);
-  background:linear-gradient(135deg,rgba(255,71,87,.1),rgba(255,71,87,.05));
+.shoot-day {
+  background:var(--card); border:1px solid var(--border); border-radius:10px;
+  padding:12px; text-align:center;
 }
-.upcoming-shoot.today strong { color:var(--urgent); }
-.win-badge {
-  display:inline-block; background:rgba(46,213,115,.2); color:var(--normal);
-  padding:2px 8px; border-radius:12px; font-size:.75rem; margin-right:6px;
+.shoot-day .day-name { font-size:.75rem; color:var(--muted); }
+.shoot-day .shoot-name { font-size:1rem; font-weight:600; margin:6px 0; }
+.shoot-day .status { font-size:.7rem; padding:4px 8px; border-radius:12px; }
+.shoot-day .status-prep { background:rgba(255,71,87,.2); color:var(--urgent); }
+.shoot-day .status-done { background:rgba(46,213,115,.2); color:var(--normal); }
+.finances { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin:16px; max-width:800px; margin-left:auto; margin-right:auto; }
+.fin-box {
+  background:var(--card); border:1px solid var(--border); border-radius:10px;
+  padding:16px; text-align:center;
 }
-.income-row {
-  display:flex; justify-content:space-between; align-items:center;
-  padding:10px 12px; background:var(--surface); border-radius:8px; margin-bottom:6px;
-}
-.income-row .amount { color:var(--normal); font-weight:600; }
-.memory-log {
-  background:var(--surface); border-radius:10px; padding:12px; margin-bottom:8px;
-  border-left:4px solid var(--normal);
-}
-.memory-log h4 { color:var(--normal); margin-bottom:4px; font-size:.85rem; }
-.memory-log p { font-size:.8rem; color:var(--muted); }
+.fin-box .amount { font-size:1.4rem; font-weight:700; }
+.fin-box .amount.income { color:var(--income); }
+.fin-box .amount.expense { color:var(--expense); }
+.fin-box .amount.profit { color:var(--accent); }
+.fin-box .label { font-size:.7rem; color:var(--muted); margin-top:4px; }
 @media (max-width:600px) {
-  .stats-grid { grid-template-columns:repeat(2,1fr); }
-  .week-grid { grid-template-columns:repeat(2,1fr); }
+  .stats-grid, .week-grid, .shoot-calendar, .finances { grid-template-columns:repeat(2,1fr); }
+  .header h1 { font-size:1.2rem; }
 }
 </style>
 </head>
 <body>
-  <div class="header">
-    <h1>🚀 VENTURE CTRL v5.4.2</h1>
-    <p>Freitag, 1. Mai 2026 — 04:04 Uhr</p>
-  </div>
+<div class="header">
+  <h1>🚀 VENTURE CTRL</h1>
+  <p>v5.4.3 — 1. Mai 2026, 08:04 Uhr</p>
+</div>
 
-  <div class="daily-focus">
-    <h3>🎯 TAGES-STATUS (Freitag 1.05.)</h3>
-    <p>🌙 FRÜHER MORGEN — KW19, Tag 1</p>
-    <p style="font-size:.8rem;opacity:.8;margin-top:6px;">🔥 Priorität: KW19 Shoots vorbereiten (Jidai, Kono, Anju, Zenti)</p>
-  </div>
+<div class="today-hero">
+  <h2>🎯 KW19: Shoot-Woche Vorbereitung</h2>
+  <p>4 Shoots: Jidai → Kono → Anju → Zenti</p>
+</div>
 
-  <div class="week-summary">
-    <h4>📊 FINANZ-ÜBERSICHT</h4>
-    <div class="week-grid">
-      <div class="week-stat"><div class="val" style="color:var(--normal)">7.6k€</div><div class="lbl">Einnahmen KW18</div></div>
-      <div class="week-stat"><div class="val" style="color:var(--urgent)">6</div><div class="lbl">Überfällige Tasks</div></div>
-      <div class="week-stat"><div class="val" style="color:var(--normal)">~11.7k€</div><div class="lbl">In Pipeline</div></div>
-      <div class="week-stat"><div class="val" style="color:var(--high)">4</div><div class="lbl">Shoots KW19</div></div>
-    </div>
-  </div>
+<div class="stats-grid">
+  <div class="stat-box"><div class="num">🔴 6</div><div class="label">Urgent Tasks</div></div>
+  <div class="stat-box"><div class="num">🟡 3</div><div class="label">High Priority</div></div>
+  <div class="stat-box"><div class="num">💰 6.6k€</div><div class="label">Einnahmen</div></div>
+  <div class="stat-box"><div class="num">📋 8</div><div class="label">Deals</div></div>
+</div>
 
-  <div class="stats-grid">
-    <div class="stat-box">
-      <div class="num" style="color:var(--normal)">7.6k€</div>
-      <div class="label">Gesamt-Einnahmen</div>
-    </div>
-    <div class="stat-box">
-      <div class="num" style="color:var(--urgent)">6</div>
-      <div class="label">Urgent To-Dos</div>
-    </div>
-    <div class="stat-box">
-      <div class="num" style="color:var(--accent)">8</div>
-      <div class="label">Pipeline Deals</div>
-    </div>
-    <div class="stat-box">
-      <div class="num" style="color:var(--urgent)">4</div>
-      <div class="label">Pre-Prods KW19</div>
-    </div>
-  </div>
+<div class="card">
+  <h3>🔴 Überfällige Tasks (CRITICAL)</h3>
+  <div class="task"><div class="priority urgent"></div><div class="text">🎬 NOMU Post-Production</div><span class="badge badge-overdue">8 Tage überfällig</span></div>
+  <div class="task"><div class="priority urgent"></div><div class="text">🎬 Niku Post-Production</div><span class="badge badge-overdue">2 Tage überfällig</span></div>
+</div>
 
-  <div class="card">
-    <h3>📝 MEMORY-LOG — 30. APRIL 2026</h3>
-    <div class="memory-log">
-      <h4>✅ Beauty-Brand Video FERTIG</h4>
-      <p>Den ganzen Tag gearbeitet bis 01:00 Uhr nachts</p>
-    </div>
-    <div class="memory-log">
-      <h4>✅ Nico Kino-Trailer FERTIG</h4>
-      <p>Post-Production erledigt, Deadline geschafft</p>
-    </div>
-    <div class="memory-log">
-      <h4>✅ Belege einordnen</h4>
-      <p>Buchhaltung aufgeräumt</p>
-    </div>
-    <div class="memory-log">
-      <h4>💰 Mini-Shoot +200€</h4>
-      <p>29.04. — Niku Shooting</p>
-    </div>
-    <div class="memory-log">
-      <h4>🍪 Sentai gewonnen</h4>
-      <p>5.000€ Deal — Dreh Mitte Mai</p>
-    </div>
-    <p style="font-size:.8rem;color:var(--muted);margin-top:12px;">
-      <strong>Energielevel:</strong> 4/10 — Extrem anstrengend, erschöpft | 
-      <strong>Schlaf:</strong> Nur wenige Stunden in den letzten Tagen
-    </p>
-  </div>
+<div class="card">
+  <h3>🔴 Urgent Tasks</h3>
+  <div class="task"><div class="priority urgent"></div><div class="text">🎬 Pre-Production Jidai (KW19)</div><span class="badge badge-today">Mo 5.5.</span></div>
+  <div class="task"><div class="priority urgent"></div><div class="text">🎬 Pre-Production Kono (KW19)</div><span class="badge badge-tomorrow">Di 6.5.</span></div>
+  <div class="task"><div class="priority urgent"></div><div class="text">🎬 Pre-Production Anju (KW19)</div><span class="badge badge-pending">Mi 7.5.</span></div>
+  <div class="task"><div class="priority urgent"></div><div class="text">🎬 Pre-Production Zenti (KW19)</div><span class="badge badge-pending">Do 8.5.</span></div>
+</div>
 
-  <div class="card">
-    <h3>🔥 URGENT — ÜBERFÄLLIG & KRITISCH</h3>
-    <div class="task">
-      <div class="priority urgent"></div>
-      <div class="text">🎨 Beauty-Konzept Video <span class="badge badge-overdue">OVERDUE!</span></div>
+<div class="card">
+  <h3>🎬 KW19 Shoot-Kalender</h3>
+  <div class="shoot-calendar">
+    <div class="shoot-day">
+      <div class="day-name">Montag 5.5.</div>
+      <div class="shoot-name">Jidai</div>
+      <span class="status status-prep">🔴 Pre-Prod nötig</span>
     </div>
-    <div class="task">
-      <div class="priority urgent"></div>
-      <div class="text">🎬 NOMU Post-Production <span class="badge badge-overdue">OVERDUE seit 8 Tagen!</span></div>
+    <div class="shoot-day">
+      <div class="day-name">Dienstag 6.5.</div>
+      <div class="shoot-name">Kono</div>
+      <span class="status status-prep">🔴 Pre-Prod nötig</span>
     </div>
-    <div class="task">
-      <div class="priority urgent"></div>
-      <div class="text">🎬 Post-Production Niku <span class="badge badge-overdue">OVERDUE seit 2 Tagen!</span></div>
+    <div class="shoot-day">
+      <div class="day-name">Mittwoch 7.5.</div>
+      <div class="shoot-name">Anju</div>
+      <span class="status status-prep">🔴 Pre-Prod nötig</span>
     </div>
-    <div class="task">
-      <div class="priority urgent"></div>
-      <div class="text">🎬 Pre-Production Jidai (KW19) <span class="badge badge-tomorrow">Mo 5.5.</span></div>
-    </div>
-    <div class="task">
-      <div class="priority urgent"></div>
-      <div class="text">🎬 Pre-Production Kono (KW19) <span class="badge badge-tomorrow">Di 6.5.</span></div>
-    </div>
-    <div class="task">
-      <div class="priority urgent"></div>
-      <div class="text">🎬 Pre-Production Anju (KW19) <span class="badge badge-tomorrow">Mi 7.5.</span></div>
-    </div>
-    <div class="task">
-      <div class="priority urgent"></div>
-      <div class="text">🎬 Pre-Production Zenti (KW19) <span class="badge badge-tomorrow">Do 8.5.</span></div>
+    <div class="shoot-day">
+      <div class="day-name">Donnerstag 8.5.</div>
+      <div class="shoot-name">Zenti</div>
+      <span class="status status-prep">🔴 Pre-Prod nötig</span>
     </div>
   </div>
+</div>
 
-  <div class="card">
-    <h3>🟡 HIGH — DIESE WOCHE (KW19)</h3>
-    <div class="task">
-      <div class="priority high"></div>
-      <div class="text">🍪 Sentai Pre-Production (Dreh Mitte Mai) <span class="badge badge-pending">Anfang Mai</span></div>
-    </div>
-    <div class="task">
-      <div class="priority high"></div>
-      <div class="text">🏨 Hotel Wittmann Pre-Production <span class="badge badge-pending">Flexibel</span></div>
-    </div>
-    <div class="task">
-      <div class="priority high"></div>
-      <div class="text">🍷 Weinbar Dario — Pitch folgen <span class="badge badge-pending">Offen</span></div>
-    </div>
-    <div class="task">
-      <div class="priority high"></div>
-      <div class="text">💊 Kyberg Videoproduktionen — Call <span class="badge badge-pending">Offen</span></div>
-    </div>
+<div class="card">
+  <h3>🟡 High Priority</h3>
+  <div class="task"><div class="priority high"></div><div class="text">🍪 Sentai Pre-Production (Dreh Mitte Mai)</div></div>
+  <div class="task"><div class="priority high"></div><div class="text">🏨 Hotel Wittmann Pre-Production</div></div>
+  <div class="task"><div class="priority high"></div><div class="text">🍷 Weinbar Dario — Pitch folgen</div></div>
+  <div class="task"><div class="priority high"></div><div class="text">💊 Kyberg Videoproduktionen — Call terminieren</div></div>
+</div>
+
+<div class="card">
+  <h3>💰 Finanzen</h3>
+  <div class="finances">
+    <div class="fin-box"><div class="amount income">6.600€</div><div class="label">Einnahmen</div></div>
+    <div class="fin-box"><div class="amount expense">700€</div><div class="label">Ausgaben</div></div>
+    <div class="fin-box"><div class="amount profit">5.900€</div><div class="label">Gewinn</div></div>
   </div>
+  <p style="text-align:center;margin-top:12px;font-size:.85rem;color:var(--muted);">Offene Rechnungen: ~9.000€</p>
+</div>
 
-  <div class="card">
-    <h3>💰 EINNAHMEN / PIPELINE</h3>
-    <div class="income-row">
-      <span>✅ Sentai (gewonnen)</span>
-      <span class="amount">5.000€</span>
-    </div>
-    <div class="income-row">
-      <span>✅ LuBu Projekt (bezahlt)</span>
-      <span class="amount">1.400€</span>
-    </div>
-    <div class="income-row">
-      <span>📅 Mi 29.04. — Mini-Shoot Niku</span>
-      <span class="amount">+200€ ✅</span>
-    </div>
-    <div class="income-row">
-      <span>📅 Mo ~5.5. — Foto-Shoot</span>
-      <span class="amount">+1.000€</span>
-    </div>
-    <div style="margin-top:12px;padding-top:12px;border-top:1px solid var(--border);">
-      <div class="income-row">
-        <span>🍷 Weinbar Dario (Pitch)</span>
-        <span style="color:var(--high);font-weight:600;">~3.000€</span>
-      </div>
-      <div class="income-row">
-        <span>🥞 Japanese Pancake (Angebot offen)</span>
-        <span style="color:var(--high);font-weight:600;">~1.500€</span>
-      </div>
-      <div class="income-row">
-        <span>👤 Little Hiro (Lead)</span>
-        <span style="color:var(--low);font-weight:600;">~1.500€</span>
-      </div>
-      <div class="income-row">
-        <span>💄 Luma Labs (Pitch)</span>
-        <span style="color:var(--low);font-weight:600;">250€</span>
-      </div>
-    </div>
+<div class="card">
+  <h3>📊 Pipeline</h3>
+  <div class="deal"><span>Sentai</span><span class="stage stage-won">✅ Closed Won (5.000€)</span></div>
+  <div class="deal"><span>LuBu Projekt</span><span class="stage stage-won">✅ Closed Won (1.400€)</span></div>
+  <div class="deal"><span>Foto-Shoot Mai</span><span class="stage stage-won">✅ Closed Won (1.000€)</span></div>
+  <div class="deal"><span>Weinbar Dario</span><span class="stage stage-pitch">🎯 Pitch (50%)</span></div>
+  <div class="deal"><span>Luma Labs</span><span class="stage stage-pitch">🎯 Pitch (60%)</span></div>
+  <div class="deal"><span>Japanese Pancake München</span><span class="stage stage-pitch">🎯 Pitch (40%)</span></div>
+  <div class="deal"><span>Kyberg Videoproduktionen</span><span class="stage stage-lead">👋 Lead (40%)</span></div>
+  <div class="deal"><span>Little Hiro</span><span class="stage stage-lead">👋 Lead (30%)</span></div>
+</div>
+
+<div class="week-summary">
+  <h4>🏆 KW18 Wins</h4>
+  <div class="week-grid">
+    <div class="week-stat"><div class="val">🎬</div><div class="lbl">Beauty-Video<br>fertig</div></div>
+    <div class="week-stat"><div class="val">🎬</div><div class="lbl">Nico Video<br>fertig</div></div>
+    <div class="week-stat"><div class="val">+200€</div><div class="lbl">Mini-Shoot</div></div>
+    <div class="week-stat"><div class="val">🍪</div><div class="lbl">Sentai<br>gewonnen</div></div>
   </div>
+</div>
 
-  <div class="card">
-    <h3>📅 SHOOTS NÄCHSTE WOCHE (KW19)</h3>
-    <div class="upcoming-shoot today">
-      <strong>Montag 5.5. — Jidai</strong><br>
-      Pre-Production nötig! | Status: 🔴 URGENT
-    </div>
-    <div class="upcoming-shoot today">
-      <strong>Dienstag 6.5. — Kono</strong><br>
-      Pre-Production nötig! | Status: 🔴 URGENT
-    </div>
-    <div class="upcoming-shoot today">
-      <strong>Mittwoch 7.5. — Anju</strong><br>
-      Pre-Production nötig! | Status: 🔴 URGENT
-    </div>
-    <div class="upcoming-shoot today">
-      <strong>Donnerstag 8.5. — Zenti</strong><br>
-      Pre-Production nötig! | Status: 🔴 URGENT
-    </div>
-    <p style="font-size:.8rem;color:var(--urgent);margin-top:12px;">⚠️ ALLE Pre-Productions müssen am Wochenende fertig werden!</p>
-  </div>
+<div class="footer">
+  <p>v5.4.3 — Letztes Update: 1. Mai 2026, 08:04 Uhr</p>
+  <p style="margin-top:8px;font-size:.7rem;">Automatisches Update via Cron: dashboard-update-4h-v2</p>
+</div>
 
-  <div class="card">
-    <h3>🎯 PIPELINE</h3>
-    <div class="deal">
-      <span>🍪 Sentai</span>
-      <span class="stage stage-won">GEWONNEN — 5.000€</span>
-    </div>
-    <div class="deal">
-      <span>🍜 LuBu Projekt</span>
-      <span class="stage stage-won">Closed Won — 1.400€</span>
-    </div>
-    <div class="deal">
-      <span>📷 Foto-Shoot Mai</span>
-      <span class="stage stage-won">Confirmed — 1.000€</span>
-    </div>
-    <div class="deal">
-      <span>🍷 Weinbar Dario</span>
-      <span class="stage stage-pitch">Pitch — 3.000€</span>
-    </div>
-    <div class="deal">
-      <span>🥞 Japanese Pancake</span>
-      <span class="stage stage-pitch">Angebot offen — 1.500€</span>
-    </div>
-    <div class="deal">
-      <span>👤 Little Hiro</span>
-      <span class="stage stage-lead">Lead — 1.500€</span>
-    </div>
-    <div class="deal">
-      <span>💄 Luma Labs</span>
-      <span class="stage stage-pitch">250€ — TBD</span>
-    </div>
-  </div>
-
-  <div class="card">
-    <h3>📊 PROJEKTE STATUS</h3>
-    <div class="project" style="border-color:#FF6B35;">
-      <strong>🍪 Tough Cookie</strong><br>
-      Offene Rechnungen: ~9.000€ | Sentai: ✅ | Niku: ✅ Shooting erledigt, Post-Production 🔴 OVERDUE
-    </div>
-    <div class="project" style="border-color:#dc143c;">
-      <strong>🎬 NOMU</strong><br>
-      Dreh erledigt (23.04.) | 🔴 Post-Production: OVERDUE seit 8 Tagen — KRITISCH!
-    </div>
-    <div class="project" style="border-color:#FFD93D;">
-      <strong>🏨 Hotel Wittmann</strong><br>
-      Pre-Production Phase | Flexibel, aber nicht warten
-    </div>
-    <div class="project" style="border-color:#4ECDC4;">
-      <strong>⛳ Golf Ad</strong><br>
-      ✅ Testaufnahmen erledigt (24.04.) | Personal Brand Reel
-    </div>
-    <div class="project" style="border-color:#95E881;">
-      <strong>🍜 LuBu</strong><br>
-      Rechnung 1.400€ ✅ Bezahlt & abgeschlossen
-    </div>
-    <div class="project" style="border-color:#60a5fa;">
-      <strong>🌍 Export (Kyberg)</strong><br>
-      Warte auf GF-Antwort | Onkel wartet auf Update
-    </div>
-    <div class="project" style="border-color:#A855F7;">
-      <strong>🎬 Freelance</strong><br>
-      Nico Video ✅ Fertig | +200€ am 29.04. | +1.000€ in Pipeline
-    </div>
-  </div>
-
-  <div class="card">
-    <h3>🏆 WINS KW18</h3>
-    <div style="margin-bottom:12px;">
-      <span class="win-badge">🎬 Beauty-Video fertig!</span>
-    </div>
-    <div style="margin-bottom:12px;">
-      <span class="win-badge">🎬 Nico Video fertig!</span>
-    </div>
-    <div style="margin-bottom:12px;">
-      <span class="win-badge">🎬 Niku BBQ Shooting erfolgreich!</span>
-    </div>
-    <div style="margin-bottom:12px;">
-      <span class="win-badge">💰 Mini-Shoot +200€ verdient!</span>
-    </div>
-    <div style="margin-bottom:12px;">
-      <span class="win-badge">🤝 Meeting japanischer Pancake</span>
-    </div>
-    <div style="margin-bottom:12px;">
-      <span class="win-badge">💬 Partner-Gespräch geführt</span>
-    </div>
-    <div>
-      <span class="win-badge">🍪 Sentai gewonnen (5.000€)</span>
-    </div>
-  </div>
-
-  <div class="card">
-    <h3>🟢 NORMAL — BACKLOG</h3>
-    <div class="task">
-      <div class="priority normal"></div>
-      <div class="text">📄 Apollo.GG Rechnung stellen</div>
-    </div>
-    <div class="task">
-      <div class="priority normal"></div>
-      <div class="text">💼 Retainer-Rechnungen prüfen</div>
-    </div>
-    <div class="task">
-      <div class="priority normal"></div>
-      <div class="text">🧾 Belege einordnen (Buchhaltung) <span class="badge badge-done">ERLEDIGT</span></div>
-    </div>
-    <div class="task">
-      <div class="priority normal"></div>
-      <div class="text">🏦 Finanzamt Ratenzahlung (Deadline: 20.05.)</div>
-    </div>
-  </div>
-
-  <div class="footer">
-    <p><strong>Venture CTRL v5.4.2</strong> | Letztes Update: 1. Mai 2026, 04:04 Uhr</p>
-    <p>🔥 KW19 START — 4 Shoots diese Woche (Jidai, Kono, Anju, Zenti) 🔥</p>
-    <p>⚠️ NOMU Post-Production ist 8 Tage OVERDUE — KRITISCH!</p>
-    <p style="margin-top:8px; opacity:.6;">https://giangcookie.github.io/venture-ctrl</p>
-  </div>
-
-  <script>
-    if (!location.search.includes('v=')) {
-      location.href = location.href + '?v=' + Date.now();
-    }
-  </script>
 </body>
 </html>
