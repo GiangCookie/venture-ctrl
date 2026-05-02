@@ -1,10 +1,10 @@
 {
-  "version": "5.4.10",
-  "lastUpdated": "2026-05-02T20:04:00+02:00",
-  "date": "2026-05-02",
-  "time": "20:04",
+  "version": "5.4.11",
+  "lastUpdated": "2026-05-03T00:04:00+02:00",
+  "date": "2026-05-03",
+  "time": "00:04",
   "weekend": true,
-  "dayContext": "Samstag - Wochenend-Modus",
+  "dayContext": "Sonntag - Wochenend-Modus",
   "stats": {
     "urgentTasks": 6,
     "highPriority": 3,
@@ -18,8 +18,8 @@
     "outstanding": 9000
   },
   "overdueTasks": [
-    {"name": "NOMU Post-Production", "deadline": "2026-04-28", "overdue": 5},
-    {"name": "Niku Post-Production", "deadline": "2026-04-30", "overdue": 3}
+    {"name": "NOMU Post-Production", "deadline": "2026-04-28", "overdue": 6},
+    {"name": "Niku Post-Production", "deadline": "2026-04-30", "overdue": 4}
   ],
   "urgentTasks": [
     {"name": "Pre-Production Jidai", "date": "2026-05-05", "day": "Mo"},
@@ -34,10 +34,10 @@
     "Kyberg Videoproduktionen - Call terminieren"
   ],
   "shootWeekKW19": [
-    {"day": "Montag 5.5.", "name": "Jidai", "status": "Pre-Prod nötig"},
-    {"day": "Dienstag 6.5.", "name": "Kono", "status": "Pre-Prod nötig"},
-    {"day": "Mittwoch 7.5.", "name": "Anju", "status": "Pre-Prod nötig"},
-    {"day": "Donnerstag 8.5.", "name": "Zenti", "status": "Pre-Prod nötig"}
+    {"day": "Montag 5.5.", "name": "Jidai", "status": "Pre-Prod nötig (2 Tage!)"},
+    {"day": "Dienstag 6.5.", "name": "Kono", "status": "Pre-Prod nötig (3 Tage!)"},
+    {"day": "Mittwoch 7.5.", "name": "Anju", "status": "Pre-Prod nötig (4 Tage!)"},
+    {"day": "Donnerstag 8.5.", "name": "Zenti", "status": "Pre-Prod nötig (5 Tage!)"}
   ],
   "pipeline": [
     {"name": "Sentai", "stage": "Closed Won", "value": 5000, "probability": 100},

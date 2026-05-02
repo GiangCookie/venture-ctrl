@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>VENTURE CTRL v5.4.10 | 2. Mai 2026 — 20:04 Uhr</title>
+<title>VENTURE CTRL v5.4.11 | 3. Mai 2026 — 00:04 Uhr</title>
 <style>
 * { margin:0; padding:0; box-sizing:border-box; }
 :root {
@@ -133,6 +133,13 @@ body {
 }
 .weekend-banner h4 { color:#70a1ff; margin-bottom:8px; }
 .weekend-banner p { font-size:.9rem; color:var(--muted); }
+.sunday-banner {
+  background:linear-gradient(135deg,rgba(255,165,2,.3),rgba(255,71,87,.2));
+  border-radius:12px; padding:16px; margin:16px;
+  border:1px solid var(--border); text-align:center; max-width:800px; margin-left:auto; margin-right:auto;
+}
+.sunday-banner h4 { color:#ffa502; margin-bottom:8px; }
+.sunday-banner p { font-size:.9rem; color:var(--muted); }
 @media (max-width:600px) {
   .stats-grid, .week-grid, .shoot-calendar, .finances { grid-template-columns:repeat(2,1fr); }
   .header h1 { font-size:1.2rem; }
@@ -142,17 +149,17 @@ body {
 <body>
 <div class="header">
   <h1>🚀 VENTURE CTRL</h1>
-  <p>v5.4.10 — 2. Mai 2026, 20:04 Uhr</p>
+  <p>v5.4.11 — 3. Mai 2026, 00:04 Uhr</p>
 </div>
 
 <div class="today-hero">
-  <h2>🎯 Samstag: Wochenend-Modus</h2>
-  <p>Nächste Woche: 4 Shoots (Jidai → Kono → Anju → Zenti)</p>
+  <h2>📅 Sonntag: Vorbereitungstag</h2>
+  <p>Nur noch 2 Tage bis zur Shoot-Woche KW19!</p>
 </div>
 
-<div class="weekend-banner">
-  <h4>🏖️ Erholungstag</h4>
-  <p>Letzte Chance vor der intensiven Shoot-Woche KW19</p>
+<div class="sunday-banner">
+  <h4>⚡ Letzte Vorbereitungsphase</h4>
+  <p>Morgen (Montag): Jidai Pre-Production | Dienstag-Donnerstag: 3 weitere Shoots</p>
 </div>
 
 <div class="stats-grid">
@@ -164,8 +171,8 @@ body {
 
 <div class="card">
   <h3>🔴 Überfällige Tasks (CRITICAL)</h3>
-  <div class="task"><div class="priority urgent"></div><div class="text">🎬 NOMU Post-Production</div><span class="badge badge-overdue">5 Tage überfällig</span></div>
-  <div class="task"><div class="priority urgent"></div><div class="text">🎬 Niku Post-Production</div><span class="badge badge-overdue">3 Tage überfällig</span></div>
+  <div class="task"><div class="priority urgent"></div><div class="text">🎬 NOMU Post-Production</div><span class="badge badge-overdue">6 Tage überfällig</span></div>
+  <div class="task"><div class="priority urgent"></div><div class="text">🎬 Niku Post-Production</div><span class="badge badge-overdue">4 Tage überfällig</span></div>
 </div>
 
 <div class="card">
@@ -177,27 +184,27 @@ body {
 </div>
 
 <div class="card">
-  <h3>🎬 KW19 Shoot-Kalender (Montag startet!)</h3>
+  <h3>🎬 KW19 Shoot-Kalender</h3>
   <div class="shoot-calendar">
     <div class="shoot-day">
       <div class="day-name">Montag 5.5.</div>
       <div class="shoot-name">Jidai</div>
-      <span class="status status-prep">🔴 Pre-Prod nötig</span>
+      <span class="status status-prep">🔴 2 Tage!</span>
     </div>
     <div class="shoot-day">
       <div class="day-name">Dienstag 6.5.</div>
       <div class="shoot-name">Kono</div>
-      <span class="status status-prep">🔴 Pre-Prod nötig</span>
+      <span class="status status-prep">🔴 3 Tage!</span>
     </div>
     <div class="shoot-day">
       <div class="day-name">Mittwoch 7.5.</div>
       <div class="shoot-name">Anju</div>
-      <span class="status status-prep">🔴 Pre-Prod nötig</span>
+      <span class="status status-prep">🔴 4 Tage!</span>
     </div>
     <div class="shoot-day">
       <div class="day-name">Donnerstag 8.5.</div>
       <div class="shoot-name">Zenti</div>
-      <span class="status status-prep">🔴 Pre-Prod nötig</span>
+      <span class="status status-prep">🔴 5 Tage!</span>
     </div>
   </div>
 </div>
@@ -243,7 +250,7 @@ body {
 </div>
 
 <div class="footer">
-  <p>v5.4.10 — Letztes Update: 2. Mai 2026, 20:04 Uhr</p>
+  <p>v5.4.11 — Letztes Update: 3. Mai 2026, 00:04 Uhr</p>
   <p style="margin-top:8px;font-size:.7rem;">Automatisches Update via Cron: dashboard-update-4h-v2</p>
 </div>
 
