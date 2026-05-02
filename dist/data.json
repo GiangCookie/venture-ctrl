@@ -1,55 +1,58 @@
 {
-  "timeSessions": [],
-  "income": [
-    { "id": "inc-001", "projectId": "lubu", "amount": 1400, "date": "2026-04-22", "description": "LuBu Projekt" },
-    { "id": "inc-002", "projectId": "sentai", "amount": 5000, "date": "2026-04-23", "description": "Sentai Auftrag gewonnen" },
-    { "id": "inc-003", "projectId": "freelance", "amount": 200, "date": "2026-04-29", "description": "Mini-Shoot Niku" }
+  "version": "5.4.8",
+  "lastUpdated": "2026-05-02T12:04:00+02:00",
+  "date": "2026-05-02",
+  "time": "12:04",
+  "weekend": true,
+  "dayContext": "Samstag - Wochenend-Modus",
+  "stats": {
+    "urgentTasks": 6,
+    "highPriority": 3,
+    "earnings": 6600,
+    "deals": 8
+  },
+  "finances": {
+    "income": 6600,
+    "expenses": 700,
+    "profit": 5900,
+    "outstanding": 9000
+  },
+  "overdueTasks": [
+    {"name": "NOMU Post-Production", "deadline": "2026-04-28", "overdue": 4},
+    {"name": "Niku Post-Production", "deadline": "2026-04-30", "overdue": 2}
   ],
-  "expenses": [
-    { "id": "exp-001", "projectId": "freelance", "amount": 200, "date": "2026-04-22", "description": "Investitionen" },
-    { "id": "exp-002", "projectId": "kyberg", "amount": 500, "date": "2026-04-22", "description": "Export Business Investition" }
+  "urgentTasks": [
+    {"name": "Pre-Production Jidai", "date": "2026-05-05", "day": "Mo"},
+    {"name": "Pre-Production Kono", "date": "2026-05-06", "day": "Di"},
+    {"name": "Pre-Production Anju", "date": "2026-05-07", "day": "Mi"},
+    {"name": "Pre-Production Zenti", "date": "2026-05-08", "day": "Do"}
   ],
-  "todos": [
-    { "id": "todo-001", "projectId": "tough-cookie", "text": "🎬 Post-Production Niku", "priority": "🔴 Urgent", "done": false, "deadline": "2026-04-30", "overdue": true, "overdueDays": 1 },
-    { "id": "todo-002", "projectId": "nomu", "text": "🎬 NOMU Post-Production", "priority": "🔴 Urgent", "done": false, "deadline": "2026-04-28", "overdue": true, "overdueDays": 4 },
-    { "id": "todo-003", "projectId": "tough-cookie", "text": "🎬 Pre-Production Jidai (KW19)", "priority": "🔴 Urgent", "done": false, "deadline": "2026-05-05" },
-    { "id": "todo-004", "projectId": "tough-cookie", "text": "🎬 Pre-Production Anju (KW19)", "priority": "🔴 Urgent", "done": false, "deadline": "2026-05-07" },
-    { "id": "todo-005", "projectId": "tough-cookie", "text": "🎬 Pre-Production Kono (KW19)", "priority": "🔴 Urgent", "done": false, "deadline": "2026-05-06" },
-    { "id": "todo-006", "projectId": "tough-cookie", "text": "🎬 Pre-Production Zenti (KW19)", "priority": "🔴 Urgent", "done": false, "deadline": "2026-05-08" },
-    { "id": "todo-007", "projectId": "tough-cookie", "text": "🎨 Beauty-Konzept Video", "priority": "🔴 Urgent", "done": true, "completedDate": "2026-04-30" },
-    { "id": "todo-008", "projectId": "tough-cookie", "text": "🍪 Sentai Pre-Production (Dreh Mitte Mai)", "priority": "🟡 High", "done": false, "deadline": "2026-05-05" },
-    { "id": "todo-009", "projectId": "tough-cookie", "text": "🏨 Hotel Wittmann Pre-Production", "priority": "🟡 High", "done": false },
-    { "id": "todo-010", "projectId": "tough-cookie", "text": "🍷 Weinbar Dario — Pitch folgen", "priority": "🟡 High", "done": false },
-    { "id": "todo-011", "projectId": "kyberg", "text": "💊 Kyberg Videoproduktionen — Call terminieren", "priority": "🟡 High", "done": false },
-    { "id": "todo-012", "projectId": "tough-cookie", "text": "📄 Apollo.GG Rechnung stellen", "priority": "🟢 Normal", "done": false },
-    { "id": "todo-013", "projectId": "tough-cookie", "text": "💼 Retainer-Rechnungen prüfen", "priority": "🟢 Normal", "done": false },
-    { "id": "todo-014", "projectId": "tough-cookie", "text": "🧾 Belege einordnen (Buchhaltung)", "priority": "🟢 Normal", "done": true, "completedDate": "2026-04-30" },
-    { "id": "todo-015", "projectId": "freelance", "text": "🏦 Finanzamt Ratenzahlung (Deadline: 20.05.)", "priority": "🟢 Normal", "done": false, "deadline": "2026-05-20" }
+  "highPriority": [
+    "Sentai Pre-Production (Dreh Mitte Mai)",
+    "Hotel Wittmann Pre-Production",
+    "Weinbar Dario - Pitch folgen",
+    "Kyberg Videoproduktionen - Call terminieren"
+  ],
+  "shootWeekKW19": [
+    {"day": "Montag 5.5.", "name": "Jidai", "status": "Pre-Prod nötig"},
+    {"day": "Dienstag 6.5.", "name": "Kono", "status": "Pre-Prod nötig"},
+    {"day": "Mittwoch 7.5.", "name": "Anju", "status": "Pre-Prod nötig"},
+    {"day": "Donnerstag 8.5.", "name": "Zenti", "status": "Pre-Prod nötig"}
   ],
   "pipeline": [
-    { "id": "deal-001", "projectId": "tough-cookie", "name": "Sentai", "stage": "Closed Won", "value": 5000, "probability": 1.0 },
-    { "id": "deal-002", "projectId": "tough-cookie", "name": "Weinbar Dario", "stage": "Pitch", "value": 3000, "probability": 0.5 },
-    { "id": "deal-003", "projectId": "tough-cookie", "name": "Kyberg Videoproduktionen", "stage": "Lead", "value": 0, "probability": 0.4 },
-    { "id": "deal-004", "projectId": "lubu", "name": "LuBu Projekt", "stage": "Closed Won", "value": 1400, "probability": 1.0 },
-    { "id": "deal-005", "projectId": "freelance", "name": "Luma Labs", "stage": "Pitch", "value": 250, "probability": 0.6 },
-    { "id": "deal-006", "projectId": "tough-cookie", "name": "Japanese Pancake München", "stage": "Pitch", "value": 1500, "probability": 0.4 },
-    { "id": "deal-007", "projectId": "tough-cookie", "name": "Little Hiro", "stage": "Lead", "value": 1500, "probability": 0.3 },
-    { "id": "deal-008", "projectId": "freelance", "name": "Foto-Shoot Mai", "stage": "Closed Won", "value": 1000, "probability": 1.0 }
+    {"name": "Sentai", "stage": "Closed Won", "value": 5000, "probability": 100},
+    {"name": "LuBu Projekt", "stage": "Closed Won", "value": 1400, "probability": 100},
+    {"name": "Foto-Shoot Mai", "stage": "Closed Won", "value": 1000, "probability": 100},
+    {"name": "Weinbar Dario", "stage": "Pitch", "value": 3000, "probability": 50},
+    {"name": "Luma Labs", "stage": "Pitch", "value": 250, "probability": 60},
+    {"name": "Japanese Pancake München", "stage": "Pitch", "value": 1500, "probability": 40},
+    {"name": "Kyberg Videoproduktionen", "stage": "Lead", "value": 0, "probability": 40},
+    {"name": "Little Hiro", "stage": "Lead", "value": 1500, "probability": 30}
   ],
-  "activeSession": null,
-  "tags": ["Meeting", "Preproduction", "Dreh", "Pitch", "Rechnung", "Follow-up"],
-  "contentReminders": {
-    "ginza": { "nextPlanDate": "2026-04-23", "status": "Neuer Plan fällig" },
-    "monkey": { "nextPost": "2026-04-26", "week": "4/4", "status": "Post #4 Sonntag" }
-  },
-  "weeklySummary": {
-    "week": "KW19",
-    "period": "5.–11. Mai 2026",
-    "wins": ["Beauty-Video fertig", "Nico Video fertig", "Niku BBQ Shooting erfolgreich", "+200€ Mini-Shoot", "Sentai gewonnen", "1.4k€ LuBu"],
-    "openInvoices": 9000,
-    "activeProjects": 7,
-    "criticalTasks": 6
-  },
-  "lastUpdated": "2026-05-02T04:04:00+02:00",
-  "version": "5.4.6"
+  "weekWins": [
+    "Beauty-Video fertig",
+    "Nico Video fertig",
+    "+200€ Mini-Shoot",
+    "Sentai gewonnen"
+  ]
 }
