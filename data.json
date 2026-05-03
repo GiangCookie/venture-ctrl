@@ -1,10 +1,10 @@
 {
-  "version": "5.4.12",
-  "lastUpdated": "2026-05-03T04:04:00+02:00",
+  "version": "5.4.13",
+  "lastUpdated": "2026-05-03T08:04:00+02:00",
   "date": "2026-05-03",
-  "time": "04:04",
+  "time": "08:04",
   "weekend": true,
-  "dayContext": "Sonntag 04:04 Uhr - Shoot-Woche startet",
+  "dayContext": "Sonntag 08:04 Uhr - Shoot-Woche startet",
   "stats": {
     "urgentTasks": 6,
     "highPriority": 3,
@@ -18,8 +18,8 @@
     "outstanding": 9000
   },
   "overdueTasks": [
-    {"name": "NOMU Post-Production", "deadline": "2026-04-28", "overdue": 7},
-    {"name": "Niku Post-Production", "deadline": "2026-04-30", "overdue": 5}
+    {"name": "NOMU Post-Production", "deadline": "2026-04-28", "overdue": 8},
+    {"name": "Niku Post-Production", "deadline": "2026-04-30", "overdue": 6}
   ],
   "urgentTasks": [
     {"name": "Pre-Production Jidai", "date": "2026-05-05", "day": "Mo"},
