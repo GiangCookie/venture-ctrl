@@ -1,10 +1,10 @@
 {
-  "version": "5.4.14",
-  "lastUpdated": "2026-05-03T12:04:00+02:00",
+  "version": "5.4.15",
+  "lastUpdated": "2026-05-03T16:04:00+02:00",
   "date": "2026-05-03",
-  "time": "12:04",
+  "time": "16:04",
   "weekend": true,
-  "dayContext": "Sonntag 12:04 Uhr - Shoot-Woche KW19 läuft",
+  "dayContext": "Sonntag 16:04 Uhr - Letzte Vorbereitung vor KW19",
   "stats": {
     "urgentTasks": 6,
     "highPriority": 3,
@@ -18,14 +18,14 @@
     "outstanding": 9000
   },
   "overdueTasks": [
-    {"name": "NOMU Post-Production", "deadline": "2026-04-28", "overdue": 9},
-    {"name": "Niku Post-Production", "deadline": "2026-04-30", "overdue": 7}
+    {"name": "NOMU Post-Production", "deadline": "2026-04-28", "overdue": 10},
+    {"name": "Niku Post-Production", "deadline": "2026-04-30", "overdue": 8}
   ],
   "urgentTasks": [
-    {"name": "Pre-Production Jidai", "date": "2026-05-05", "day": "Mo"},
-    {"name": "Pre-Production Kono", "date": "2026-05-06", "day": "Di"},
-    {"name": "Pre-Production Anju", "date": "2026-05-07", "day": "Mi"},
-    {"name": "Pre-Production Zenti", "date": "2026-05-08", "day": "Do"}
+    {"name": "Pre-Production Jidai", "date": "2026-05-05", "day": "Di"},
+    {"name": "Pre-Production Kono", "date": "2026-05-06", "day": "Mi"},
+    {"name": "Pre-Production Anju", "date": "2026-05-07", "day": "Do"},
+    {"name": "Pre-Production Zenti", "date": "2026-05-08", "day": "Fr"}
   ],
   "highPriority": [
     "Sentai Pre-Production (Dreh Mitte Mai)",
@@ -34,10 +34,10 @@
     "Kyberg Videoproduktionen - Call terminieren"
   ],
   "shootWeekKW19": [
-    {"day": "Montag 5.5.", "name": "Jidai", "status": "🔴 HEUTE!"},
-    {"day": "Dienstag 6.5.", "name": "Kono", "status": "🔴 Morgen!"},
-    {"day": "Mittwoch 7.5.", "name": "Anju", "status": "🔴 Mi"},
-    {"day": "Donnerstag 8.5.", "name": "Zenti", "status": "🔴 Do"}
+    {"day": "Dienstag 5.5.", "name": "Jidai", "status": "🔴 MORGEN!"},
+    {"day": "Mittwoch 6.5.", "name": "Kono", "status": "🔴 Mi"},
+    {"day": "Donnerstag 7.5.", "name": "Anju", "status": "🔴 Do"},
+    {"day": "Freitag 8.5.", "name": "Zenti", "status": "🔴 Fr"}
   ],
   "pipeline": [
     {"name": "Sentai", "stage": "Closed Won", "value": 5000, "probability": 100},

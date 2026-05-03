@@ -9,8 +9,8 @@
   ],
   "todos": [
     { "id": "todo-001", "projectId": "tough-cookie", "text": "Meeting bei Sentai - Beratungsgespräch München", "priority": "🔴 Urgent", "done": false, "deadline": "2026-04-22T13:00", "tags": ["Meeting", "München", "Sentai"] },
-    { "id": "todo-002", "projectId": "nomu", "text": "NOMU Pre-Production fertig machen (Dreh morgen früh!)", "priority": "🔴 Urgent", "done": false, "deadline": "2026-04-22", "tags": ["Preproduction", "Dreh", "NOMU"] },
-    { "id": "todo-003", "projectId": "freelance", "text": "Golf Ad Pre-Production + Shots planen (Test Freitag)", "priority": "🔴 Urgent", "done": false, "deadline": "2026-04-22", "tags": ["Preproduction", "Golf", "Freitag"] },
+    { "id": "todo-002", "projectId": "nomu", "text": "NOMU Post-Production (10 Tage überfällig)", "priority": "🔴 Urgent", "done": false, "deadline": "2026-04-23", "tags": ["Postproduction", "NOMU", "Overdue"] },
+    { "id": "todo-003", "projectId": "freelance", "text": "Niku Post-Production (8 Tage überfällig)", "priority": "🔴 Urgent", "done": false, "deadline": "2026-04-25", "tags": ["Postproduction", "Niku", "Overdue"] },
     { "id": "todo-004", "projectId": "tough-cookie", "text": "Weinbar Dario - Pitch fertig machen & schicken", "priority": "🟡 High", "done": false, "tags": ["Pitch", "Weinbar", "Dario"] },
     { "id": "todo-005", "projectId": "tough-cookie", "text": "Kyberg Videoproduktionen - Call terminieren (nach der Woche)", "priority": "🟡 High", "done": false, "tags": ["Call", "Kyberg", "Video"] },
     { "id": "todo-006", "projectId": "freelance", "text": "Persönlicher Retainer - Paket überlegen & antworten", "priority": "🟡 High", "done": false, "tags": ["Retainer", "Paket"] },
@@ -19,10 +19,7 @@
     { "id": "todo-009", "projectId": "freelance", "text": "Finanzamt anrufen wegen Ratenzahlung", "priority": "🟢 Normal", "done": false, "deadline": "2026-05-20", "tags": ["Finanzamt", "Deadline", "Wichtig"] },
     { "id": "todo-010", "projectId": "freelance", "text": "Krankenkasse E-Mail", "priority": "⚪ Low", "done": false, "tags": ["Krankenkasse", "Admin"] },
     { "id": "todo-011", "projectId": "freelance", "text": "Gerichtsvollzieher wegen Löschung", "priority": "⚪ Low", "done": false, "tags": ["Gerichtsvollzieher", "Admin"] },
-    { "id": "todo-012", "projectId": "kyberg", "text": "Export: Alexis Rechnung warten, dann Samples bestellen", "priority": "⚪ Low", "done": false, "tags": ["Export", "Samples", "Alexis"] },
-    { "id": "todo-013", "projectId": "tough-cookie", "text": "Tough Cookie offene Rechnungen nachhaken (~9k€)", "priority": "🟡 High", "done": true, "completedAt": "2026-04-22", "tags": ["Rechnung", "Follow-up", "9k"] },
-    { "id": "todo-014", "projectId": "tough-cookie", "text": "Kono Postproduction fertig stellen", "priority": "🟡 High", "done": true, "completedAt": "2026-04-21", "tags": ["Kono", "Postproduction", "Video"] },
-    { "id": "todo-015", "projectId": "tough-cookie", "text": "Angebot an Sentai rausschicken", "priority": "🔴 Urgent", "done": true, "completedAt": "2026-04-21", "tags": ["Sentai", "Angebot", "Pitch"] }
+    { "id": "todo-012", "projectId": "kyberg", "text": "Export: Alexis Rechnung warten, dann Samples bestellen", "priority": "⚪ Low", "done": false, "tags": ["Export", "Samples", "Alexis"] }
   ],
   "pipeline": [
     { "id": "deal-001", "projectId": "tough-cookie", "name": "Sentai Beratung", "stage": "Pitch", "value": 0, "probability": 0.5, "tags": ["Beratung", "München"] },
@@ -30,18 +27,46 @@
     { "id": "deal-003", "projectId": "tough-cookie", "name": "Kyberg Videoproduktionen", "stage": "Lead", "value": 0, "probability": 0.4, "tags": ["Kyberg", "Video"] },
     { "id": "deal-004", "projectId": "lubu", "name": "LuBu Projekt", "stage": "Closed Won", "value": 1400, "probability": 1.0, "tags": ["LuBu", "Rechnung"] },
     { "id": "deal-005", "projectId": "freelance", "name": "Persönlicher Retainer", "stage": "Pitch", "value": 0, "probability": 0.6, "tags": ["Retainer", "Freelance"] },
-    { "id": "deal-006", "projectId": "tough-cookie", "name": "Hotel Wittmann", "stage": "Lead", "value": 0, "probability": 0.4, "tags": ["Hotel", "Preproduction"] }
+    { "id": "deal-006", "projectId": "tough-cookie", "name": "Hotel Wittmann", "stage": "Lead", "value": 0, "probability": 0.4, "tags": ["Hotel", "Preproduction"] },
+    { "id": "deal-007", "projectId": "tough-cookie", "name": "Jidai Shooting KW19", "stage": "Confirmed", "value": 1500, "probability": 1.0, "tags": ["Jidai", "Shoot", "KW19"] },
+    { "id": "deal-008", "projectId": "tough-cookie", "name": "Kono Shooting KW19", "stage": "Confirmed", "value": 1200, "probability": 1.0, "tags": ["Kono", "Shoot", "KW19"] }
   ],
   "activeSession": null,
-  "tags": ["Meeting", "Preproduction", "Dreh", "Pitch", "Rechnung", "Follow-up", "München", "NOMU", "Golf", "Finanzamt", "Deadline"],
-  "lastUpdated": "2026-04-22T10:04:00Z",
+  "tags": ["Meeting", "Preproduction", "Dreh", "Pitch", "Rechnung", "Follow-up", "München", "NOMU", "Golf", "Finanzamt", "Deadline", "Postproduction", "Overdue"],
+  "lastUpdated": "2026-05-03T18:04:00Z",
+  "version": "v5.4.16",
+  "shootWeek": {
+    "week": "KW19",
+    "status": "Active",
+    "shoots": [
+      { "day": "Mo 5.5.", "client": "Jidai", "status": "🔴 Morgen!" },
+      { "day": "Di 6.5.", "client": "Kono", "status": "🔴 Di" },
+      { "day": "Mi 7.5.", "client": "Anju", "status": "🔴 Mi" },
+      { "day": "Do 8.5.", "client": "Zenti", "status": "🔴 Do" }
+    ]
+  },
+  "overdue": {
+    "nomu": 10,
+    "niku": 8
+  },
+  "finances": {
+    "income": 6600,
+    "expenses": 700,
+    "profit": 5900,
+    "openInvoices": 9000
+  },
+  "kw18Recap": {
+    "wins": 9,
+    "fails": 6,
+    "successRate": "50%"
+  },
   "journalEntry": {
-    "date": "2026-04-22",
+    "date": "2026-05-03",
     "mood": 4,
-    "energyLevel": 7,
-    "notes": "Produktiver Tag. Sentai Meeting um 13:00. NOMU Dreh morgen vorbereiten.",
-    "wins": ["LuBu Rechnung 1.400€ versendet", "Offene Rechnungen nachgehakt (~9k€)", "Kono Postproduction fertig"],
-    "challenges": ["NOMU Dreh steht an - viel Vorbereitung nötig"],
-    "gratitude": ["Sentai Meeting als neue Chance", "Golf Ad Projekt läuft an"]
+    "energyLevel": 5,
+    "notes": "KW18 Recap erstellt. Shoot-Woche KW19 startet morgen. NOMU (10 Tage) und Niku (8 Tage) Post-Production überfällig.",
+    "wins": ["KW18 Recap fertig", "Weekly Stats gesammelt", "Dashboard v5.4.16 aktualisiert"],
+    "challenges": ["NOMU Post-Production 10 Tage überfällig", "Niku Post-Production 8 Tage überfällig", "Shoot-Woche KW19 mit 4 Shoots"],
+    "gratitude": ["KW18 erfolgreich abgeschlossen", "Dashboard-System stabil"]
   }
 }

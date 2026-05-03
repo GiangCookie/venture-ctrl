@@ -1,58 +1,35 @@
 {
-  "version": "5.4.14",
-  "lastUpdated": "2026-05-03T12:04:00+02:00",
-  "date": "2026-05-03",
-  "time": "12:04",
-  "weekend": true,
-  "dayContext": "Sonntag 12:04 Uhr - Shoot-Woche KW19 läuft",
-  "stats": {
+  "version": "v5.4.16",
+  "lastUpdated": "2026-05-03T18:04:00Z",
+  "metrics": {
     "urgentTasks": 6,
     "highPriority": 3,
-    "earnings": 6600,
+    "income": "6.6k€",
     "deals": 8
   },
   "finances": {
     "income": 6600,
     "expenses": 700,
     "profit": 5900,
-    "outstanding": 9000
+    "openInvoices": 9000
   },
-  "overdueTasks": [
-    {"name": "NOMU Post-Production", "deadline": "2026-04-28", "overdue": 9},
-    {"name": "Niku Post-Production", "deadline": "2026-04-30", "overdue": 7}
-  ],
-  "urgentTasks": [
-    {"name": "Pre-Production Jidai", "date": "2026-05-05", "day": "Mo"},
-    {"name": "Pre-Production Kono", "date": "2026-05-06", "day": "Di"},
-    {"name": "Pre-Production Anju", "date": "2026-05-07", "day": "Mi"},
-    {"name": "Pre-Production Zenti", "date": "2026-05-08", "day": "Do"}
-  ],
-  "highPriority": [
-    "Sentai Pre-Production (Dreh Mitte Mai)",
-    "Hotel Wittmann Pre-Production",
-    "Weinbar Dario - Pitch folgen",
-    "Kyberg Videoproduktionen - Call terminieren"
-  ],
-  "shootWeekKW19": [
-    {"day": "Montag 5.5.", "name": "Jidai", "status": "🔴 HEUTE!"},
-    {"day": "Dienstag 6.5.", "name": "Kono", "status": "🔴 Morgen!"},
-    {"day": "Mittwoch 7.5.", "name": "Anju", "status": "🔴 Mi"},
-    {"day": "Donnerstag 8.5.", "name": "Zenti", "status": "🔴 Do"}
-  ],
-  "pipeline": [
-    {"name": "Sentai", "stage": "Closed Won", "value": 5000, "probability": 100},
-    {"name": "LuBu Projekt", "stage": "Closed Won", "value": 1400, "probability": 100},
-    {"name": "Foto-Shoot Mai", "stage": "Closed Won", "value": 1000, "probability": 100},
-    {"name": "Weinbar Dario", "stage": "Pitch", "value": 3000, "probability": 50},
-    {"name": "Luma Labs", "stage": "Pitch", "value": 250, "probability": 60},
-    {"name": "Japanese Pancake München", "stage": "Pitch", "value": 1500, "probability": 40},
-    {"name": "Kyberg Videoproduktionen", "stage": "Lead", "value": 0, "probability": 40},
-    {"name": "Little Hiro", "stage": "Lead", "value": 1500, "probability": 30}
-  ],
-  "weekWins": [
-    "Beauty-Video fertig",
-    "Nico Video fertig",
-    "+200€ Mini-Shoot",
-    "Sentai gewonnen"
-  ]
+  "overdue": {
+    "nomu": 10,
+    "niku": 8
+  },
+  "shootWeek": {
+    "week": "KW19",
+    "startDate": "2026-05-04",
+    "shoots": [
+      {"day": "Mo 5.5.", "client": "Jidai", "status": "Morgen!"},
+      {"day": "Di 6.5.", "client": "Kono", "status": "Di"},
+      {"day": "Mi 7.5.", "client": "Anju", "status": "Mi"},
+      {"day": "Do 8.5.", "client": "Zenti", "status": "Do"}
+    ]
+  },
+  "kw18Recap": {
+    "wins": 9,
+    "fails": 6,
+    "successRate": "50%"
+  }
 }
