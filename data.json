@@ -1,50 +1,18 @@
 {
-  "version": "v5.4.20",
-  "lastUpdated": "2026-05-04T12:04:00+02:00",
+  "version": "v5.4.21",
+  "lastUpdated": "2026-05-04T16:04:00+02:00",
+  "timestamp": 162041544,
+  "status": "active",
   "metrics": {
     "urgentTasks": 7,
     "highPriority": 5,
-    "income": "6.6k€",
-    "deals": 8
+    "deals": 8,
+    "projects": 12
   },
-  "finances": {
+  "financials": {
     "income": 6600,
     "expenses": 700,
     "profit": 5900,
     "openInvoices": 9000
-  },
-  "overdue": {
-    "nomu": 9,
-    "niku": 7,
-    "sentai": 2
-  },
-  "shootWeek": {
-    "week": "KW19",
-    "startDate": "2026-05-05",
-    "shoots": [
-      {"day": "Mo 5.5.", "client": "Jidai", "status": "🔴 HEUTE!", "urgent": true, "confirmed": false},
-      {"day": "Di 6.5.", "client": "Kono", "status": "✅ Bestätigt", "confirmed": true},
-      {"day": "Fr 9.5.", "client": "Beauty-Event", "status": "18€ Frankfurt", "confirmed": true}
-    ]
-  },
-  "kw18Recap": {
-    "wins": 11,
-    "fails": 6,
-    "successRate": "65%"
-  },
-  "mood": "überladen, gestresst, erschöpft",
-  "energy": "niedrig",
-  "reflection": "Fühlt sich nicht wie Unternehmen an, sondern Freelancer - aber bekommt weniger raus",
-  "completed": ["Nico Post-Production", "Beauty-Shoot"],
-  "movedToKW20": ["Anju Shoot", "Zenti Shoot", "Sentai Shoot"],
-  "privateTasks": ["Nebenkostenabrechnung", "Gerichtsvollzieher anrufen", "Gerichtshof (Fallback)"],
-  "criticalTasks": [
-    {"text": "🎬 NOMU Post-Production", "daysOverdue": 9, "priority": "critical"},
-    {"text": "🎬 Niku Post-Production", "daysOverdue": 7, "priority": "critical"},
-    {"text": "🎬 Jidai Shoot (NICHT bestätigt)", "daysLeft": 0, "priority": "urgent"},
-    {"text": "📞 Telefonate (Auto)", "priority": "high"},
-    {"text": "📄 Japanese Pancake Angebot", "priority": "medium"},
-    {"text": "📝 Posting Plan", "priority": "medium"},
-    {"text": "📱 Monkey Post", "priority": "low"}
-  ]
+  }
 }

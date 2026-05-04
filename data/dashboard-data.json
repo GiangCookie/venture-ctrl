@@ -1,8 +1,8 @@
 {
-  "version": "v5.4.20",
-  "lastUpdated": "2026-05-04T12:04:00+02:00",
+  "version": "v5.4.21",
+  "lastUpdated": "2026-05-04T16:04:00+02:00",
   "metrics": {
-    "urgentTasks": 6,
+    "urgentTasks": 7,
     "highPriority": 5,
     "income": "6.6k€",
     "deals": 8
@@ -22,7 +22,7 @@
     "week": "KW19",
     "startDate": "2026-05-05",
     "shoots": [
-      {"day": "Mo 5.5.", "client": "Jidai", "status": "🔴 HEUTE!", "urgent": true, "confirmed": false},
+      {"day": "Mo 5.5.", "client": "Jidai", "status": "🔴 MORGEN!", "urgent": true, "confirmed": false},
       {"day": "Di 6.5.", "client": "Kono", "status": "✅ Bestätigt", "confirmed": true},
       {"day": "Fr 9.5.", "client": "Beauty-Event", "status": "18€ Frankfurt", "confirmed": true}
     ]

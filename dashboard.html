@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>VENTURE CTRL v5.4.20 | 4. Mai 2026 — 12:04 Uhr</title>
+<title>VENTURE CTRL v5.4.21 | 4. Mai 2026 — 16:04 Uhr</title>
 <style>
 * { margin:0; padding:0; box-sizing:border-box; }
 :root {
@@ -12,8 +12,6 @@
   --urgent:#ff4757; --high:#ffa502; --normal:#2ed573;
   --low:#70a1ff; --accent:#667eea;
   --income:#2ed573; --expense:#ff4757;
-  --mood-super:#ffd700; --mood-gut:#2ed573; --mood-okay:#ffa502;
-  --mood-muede:#70a1ff; --mood-stressig:#ff4757;
 }
 body {
   font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
@@ -26,13 +24,8 @@ body {
 }
 .header h1 { font-size:1.5rem; margin-bottom:4px; }
 .header p { font-size:.8rem; opacity:.8; }
-.card {
-  background:var(--card); border:1px solid var(--border); border-radius:12px;
-  padding:16px; margin:16px; max-width:800px; margin-left:auto; margin-right:auto;
-}
-.card h3 { font-size:1rem; margin-bottom:12px; color:var(--accent); }
 .today-hero {
-  background:linear-gradient(135deg,#667eea,#764ba2);
+  background:linear-gradient(135deg,#ff4757,#ff6348);
   border-radius:16px; padding:20px; margin:16px;
   text-align:center; max-width:800px; margin-left:auto; margin-right:auto;
 }
@@ -43,6 +36,11 @@ body {
 }
 .stat-box .num { font-size:1.5rem; font-weight:700; color:var(--accent); }
 .stat-box .label { font-size:.7rem; color:var(--muted); margin-top:4px; }
+.card {
+  background:var(--card); border:1px solid var(--border); border-radius:12px;
+  padding:16px; margin:16px; max-width:800px; margin-left:auto; margin-right:auto;
+}
+.card h3 { font-size:1rem; margin-bottom:12px; color:var(--accent); }
 .task {
   display:flex; align-items:center; padding:12px; background:var(--surface);
   border-radius:10px; margin-bottom:8px;
@@ -79,31 +77,19 @@ body {
 .stage-pitch { background:rgba(255,165,2,.2); color:var(--high); }
 .stage-lead { background:rgba(255,71,87,.2); color:var(--urgent); }
 .stage-prod { background:rgba(112,161,255,.2); color:var(--low); }
-.project {
-  background:var(--surface); border-left:4px solid var(--accent);
-  padding:12px 16px; margin-bottom:8px; border-radius:0 10px 10px 0;
-}
-.footer {
-  text-align:center; color:var(--muted); margin-top:30px; font-size:.8rem; padding:20px;
-}
-.week-summary {
-  background:linear-gradient(135deg,rgba(102,126,234,.2),rgba(118,75,162,.2));
+.mood-box {
+  background:linear-gradient(135deg,rgba(255,71,87,.2),rgba(255,165,2,.1));
   border-radius:12px; padding:16px; margin:16px;
   border:1px solid var(--border); max-width:800px; margin-left:auto; margin-right:auto;
 }
-.week-summary h4 { margin-bottom:12px; color:var(--accent); }
-.week-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; }
-.week-stat { text-align:center; padding:12px; background:rgba(0,0,0,.2); border-radius:8px; }
-.week-stat .val { font-size:1.3rem; font-weight:700; }
-.week-stat .lbl { font-size:.7rem; color:var(--muted); }
-.daily-focus {
-  background:linear-gradient(135deg,#7c3aed,#4f46e5);
-  border-radius:12px; padding:15px 20px; margin:16px;
-  border-left:4px solid #a78bfa; max-width:800px; margin-left:auto; margin-right:auto;
+.mood-box h4 { margin-bottom:8px; color:var(--urgent); }
+.mood-box p { font-size:.9rem; color:var(--muted); line-height:1.5; }
+.private-box {
+  background:linear-gradient(135deg,rgba(102,126,234,.1),rgba(118,75,162,.1));
+  border:1px solid var(--border); border-radius:12px; padding:16px; margin:16px;
+  max-width:800px; margin-left:auto; margin-right:auto;
 }
-.daily-focus h4 { margin-bottom:8px; font-size:1rem; }
-.daily-focus .task-list { list-style:none; }
-.daily-focus .task-list li { padding:4px 0; font-size:.9rem; }
+.private-box h4 { margin-bottom:12px; color:#a78bfa; }
 .shoot-calendar {
   display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin:16px;
   max-width:800px; margin-left:auto; margin-right:auto;
@@ -127,25 +113,11 @@ body {
 .fin-box .amount.expense { color:var(--expense); }
 .fin-box .amount.profit { color:var(--accent); }
 .fin-box .label { font-size:.7rem; color:var(--muted); margin-top:4px; }
-.mood-box {
-  background:linear-gradient(135deg,rgba(255,71,87,.2),rgba(255,165,2,.1));
-  border-radius:12px; padding:16px; margin:16px;
-  border:1px solid var(--border); max-width:800px; margin-left:auto; margin-right:auto;
+.footer {
+  text-align:center; color:var(--muted); margin-top:30px; font-size:.8rem; padding:20px;
 }
-.mood-box h4 { margin-bottom:8px; color:var(--urgent); }
-.mood-box p { font-size:.9rem; color:var(--muted); line-height:1.5; }
-.moved-box {
-  background:var(--surface); border-left:4px solid #888;
-  padding:12px 16px; margin-bottom:8px; border-radius:0 10px 10px 0;
-}
-.private-box {
-  background:linear-gradient(135deg,rgba(102,126,234,.1),rgba(118,75,162,.1));
-  border:1px solid var(--border); border-radius:12px; padding:16px; margin:16px;
-  max-width:800px; margin-left:auto; margin-right:auto;
-}
-.private-box h4 { margin-bottom:12px; color:#a78bfa; }
 @media (max-width:600px) {
-  .stats-grid, .week-grid, .shoot-calendar, .finances { grid-template-columns:repeat(2,1fr); }
+  .stats-grid, .shoot-calendar, .finances { grid-template-columns:repeat(2,1fr); }
   .header h1 { font-size:1.2rem; }
 }
 </style>
@@ -153,12 +125,12 @@ body {
 <body>
 <div class="header">
   <h1>🚀 VENTURE CTRL</h1>
-  <p>v5.4.20 — 4. Mai 2026, 12:04 Uhr</p>
+  <p>v5.4.21 — 4. Mai 2026, 16:04 Uhr</p>
 </div>
 
 <div class="today-hero">
-  <h2>🔥 MONTAG 12:04 — JIDAI HEUTE!</h2>
-  <p>Shoot-Woche läuft! Jidai-Status noch unklar – JETZT KLÄREN!</p>
+  <h2>🔥 MONTAG 16:04 — JIDAI MORGEN!</h2>
+  <p>Shoot-Woche startet morgen! Jidai-Status noch unklar – JETZT KLÄREN!</p>
 </div>
 
 <div class="mood-box">
@@ -166,7 +138,6 @@ body {
   <p><strong>Stimmung:</strong> Überladen, gestresst, erschöpft</p>
   <p><strong>Energie:</strong> Niedrig</p>
   <p><em>„Fühlt sich nicht wie ein Unternehmen an, sondern wie Freelancer — aber bekomme weniger raus"</em></p>
-  <p style="margin-top:8px;color:var(--accent);">→ Wichtiges Thema: Struktur & Fairness</p>
 </div>
 
 <div class="stats-grid">
@@ -190,10 +161,10 @@ body {
 </div>
 
 <div class="card">
-  <h3>🔴 Urgent — Montag 5.5.</h3>
-  <div class="task"><div class="priority urgent"></div><div class="text">🎬 Jidai Shoot (noch NICHT bestätigt!)</div><span class="badge badge-today">KLÄREN!</span></div>
-  <div class="task"><div class="priority urgent"></div><div class="text">🎬 NOMU Post-Production</div><span class="badge badge-today">4-6h</span></div>
-  <div class="task"><div class="priority urgent"></div><div class="text">📞 Telefonate (Auto)</div><span class="badge badge-today">WICHTIG</span></div>
+  <h3>🔴 Urgent — Dienstag 5.5.</h3>
+  <div class="task"><div class="priority urgent"></div><div class="text">🎬 Jidai Shoot (noch NICHT bestätigt!)</div><span class="badge badge-tomorrow">MORGEN!</span></div>
+  <div class="task"><div class="priority urgent"></div><div class="text">🎬 NOMU Post-Production</div><span class="badge badge-pending">4-6h</span></div>
+  <div class="task"><div class="priority urgent"></div><div class="text">📞 Telefonate (Auto)</div><span class="badge badge-pending">WICHTIG</span></div>
 </div>
 
 <div class="card">
@@ -205,20 +176,20 @@ body {
 </div>
 
 <div class="card">
-  <h3>🎬 KW19 Shoot-Kalender (Korrigiert)</h3>
+  <h3>🎬 KW19 Shoot-Kalender</h3>
   <div class="shoot-calendar">
     <div class="shoot-day">
-      <div class="day-name">Montag 5.5.</div>
+      <div class="day-name">Dienstag 5.5.</div>
       <div class="shoot-name">Jidai</div>
-      <span class="status status-prep">🔴 HEUTE!</span>
+      <span class="status status-prep">🔴 MORGEN!</span>
     </div>
     <div class="shoot-day">
-      <div class="day-name">Dienstag 6.5.</div>
+      <div class="day-name">Mittwoch 6.5.</div>
       <div class="shoot-name">Kono</div>
-      <span class="status status-prep">✅ Bestätigt</span>
+      <span class="status status-done">✅ Bestätigt</span>
     </div>
     <div class="shoot-day">
-      <div class="day-name">Freitag 9.5.</div>
+      <div class="day-name">Samstag 9.5.</div>
       <div class="shoot-name">Beauty-Event</div>
       <span class="status status-done">Frankfurt 18€</span>
     </div>
@@ -227,7 +198,7 @@ body {
 </div>
 
 <div class="private-box">
-  <h4>🏠 Private Tasks (Montag)</h4>
+  <h4>🏠 Private Tasks</h4>
   <div class="task"><div class="priority high"></div><div class="text">🏠 Nebenkostenabrechnung beschaffen</div></div>
   <div class="task"><div class="priority urgent"></div><div class="text">⚖️ Gerichtsvollzieher — morgen anrufen</div></div>
   <div class="task"><div class="priority high"></div><div class="text">⚖️ Gerichtshof (Fallback)</div></div>
@@ -240,7 +211,7 @@ body {
     <div class="fin-box"><div class="amount expense">700€</div><div class="label">Ausgaben</div></div>
     <div class="fin-box"><div class="amount profit">5.900€</div><div class="label">Gewinn</div></div>
   </div>
-  <p style="text-align:center;margin-top:12px;font-size:.85rem;color:var(--muted);">Neue Einnahme: Beauty-Event Frankfurt +18€ (Fr 9.5.)</p>
+  <p style="text-align:center;margin-top:12px;font-size:.85rem;color:var(--muted);">Neue Einnahme: Beauty-Event Frankfurt +18€ (Sa 9.5.)</p>
 </div>
 
 <div class="card">
@@ -256,7 +227,7 @@ body {
 </div>
 
 <div class="footer">
-  <p>v5.4.19 — Letztes Update: 4. Mai 2026, 08:04 Uhr</p>
+  <p>v5.4.21 — Letztes Update: 4. Mai 2026, 16:04 Uhr</p>
   <p style="margin-top:8px;font-size:.7rem;">Automatisches Update via Cron: dashboard-update-4h-v2</p>
 </div>
 

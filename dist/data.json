@@ -1,6 +1,6 @@
 {
-  "version": "v5.4.20",
-  "lastUpdated": "2026-05-04T12:04:00+02:00",
+  "version": "v5.4.21",
+  "lastUpdated": "2026-05-04T16:04:00+02:00",
   "metrics": {
     "urgentTasks": 7,
     "highPriority": 5,
@@ -22,7 +22,7 @@
     "week": "KW19",
     "startDate": "2026-05-05",
     "shoots": [
-      {"day": "Mo 5.5.", "client": "Jidai", "status": "🔴 HEUTE!", "urgent": true, "confirmed": false},
+      {"day": "Mo 5.5.", "client": "Jidai", "status": "🔴 MORGEN!", "urgent": true, "confirmed": false},
       {"day": "Di 6.5.", "client": "Kono", "status": "✅ Bestätigt", "confirmed": true},
       {"day": "Fr 9.5.", "client": "Beauty-Event", "status": "18€ Frankfurt", "confirmed": true}
     ]
@@ -41,7 +41,7 @@
   "criticalTasks": [
     {"text": "🎬 NOMU Post-Production", "daysOverdue": 9, "priority": "critical"},
     {"text": "🎬 Niku Post-Production", "daysOverdue": 7, "priority": "critical"},
-    {"text": "🎬 Jidai Shoot (NICHT bestätigt)", "daysLeft": 0, "priority": "urgent"},
+    {"text": "🎬 Jidai Shoot — NICHT bestätigt", "daysLeft": 0, "priority": "urgent"},
     {"text": "📞 Telefonate (Auto)", "priority": "high"},
     {"text": "📄 Japanese Pancake Angebot", "priority": "medium"},
     {"text": "📝 Posting Plan", "priority": "medium"},
