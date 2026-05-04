@@ -1,53 +1,11 @@
 {
-  "timeSessions": [],
-  "income": [
-    { "id": "inc-001", "projectId": "lubu", "amount": 1400, "date": "2026-04-22", "description": "LuBu Projekt - Rechnung versendet", "tags": ["Rechnung", "Bezahlt"] }
-  ],
-  "expenses": [
-    { "id": "exp-001", "projectId": "freelance", "amount": 200, "date": "2026-04-22", "description": "Investitionen", "tags": ["Investition"] },
-    { "id": "exp-002", "projectId": "kyberg", "amount": 500, "date": "2026-04-22", "description": "Export Business Investition", "tags": ["Investition", "Export"] }
-  ],
-  "todos": [
-    { "id": "todo-001", "projectId": "tough-cookie", "text": "Meeting bei Sentai - Beratungsgespräch München", "priority": "🔴 Urgent", "done": false, "deadline": "2026-04-22T13:00", "tags": ["Meeting", "München", "Sentai"] },
-    { "id": "todo-002", "projectId": "nomu", "text": "NOMU Post-Production (10 Tage überfällig)", "priority": "🔴 Urgent", "done": false, "deadline": "2026-04-23", "tags": ["Postproduction", "NOMU", "Overdue"] },
-    { "id": "todo-003", "projectId": "freelance", "text": "Niku Post-Production (8 Tage überfällig)", "priority": "🔴 Urgent", "done": false, "deadline": "2026-04-25", "tags": ["Postproduction", "Niku", "Overdue"] },
-    { "id": "todo-004", "projectId": "tough-cookie", "text": "Weinbar Dario - Pitch fertig machen & schicken", "priority": "🟡 High", "done": false, "tags": ["Pitch", "Weinbar", "Dario"] },
-    { "id": "todo-005", "projectId": "tough-cookie", "text": "Kyberg Videoproduktionen - Call terminieren (nach der Woche)", "priority": "🟡 High", "done": false, "tags": ["Call", "Kyberg", "Video"] },
-    { "id": "todo-006", "projectId": "freelance", "text": "Persönlicher Retainer - Paket überlegen & antworten", "priority": "🟡 High", "done": false, "tags": ["Retainer", "Paket"] },
-    { "id": "todo-007", "projectId": "tough-cookie", "text": "Anju CI Briefing für Grafikerin", "priority": "🟢 Normal", "done": false, "tags": ["CI", "Briefing", "Design"] },
-    { "id": "todo-008", "projectId": "tough-cookie", "text": "Hotel Wittmann Preproduction", "priority": "🟢 Normal", "done": false, "tags": ["Preproduction", "Hotel"] },
-    { "id": "todo-009", "projectId": "freelance", "text": "Finanzamt anrufen wegen Ratenzahlung", "priority": "🟢 Normal", "done": false, "deadline": "2026-05-20", "tags": ["Finanzamt", "Deadline", "Wichtig"] },
-    { "id": "todo-010", "projectId": "freelance", "text": "Krankenkasse E-Mail", "priority": "⚪ Low", "done": false, "tags": ["Krankenkasse", "Admin"] },
-    { "id": "todo-011", "projectId": "freelance", "text": "Gerichtsvollzieher wegen Löschung", "priority": "⚪ Low", "done": false, "tags": ["Gerichtsvollzieher", "Admin"] },
-    { "id": "todo-012", "projectId": "kyberg", "text": "Export: Alexis Rechnung warten, dann Samples bestellen", "priority": "⚪ Low", "done": false, "tags": ["Export", "Samples", "Alexis"] }
-  ],
-  "pipeline": [
-    { "id": "deal-001", "projectId": "tough-cookie", "name": "Sentai Beratung", "stage": "Pitch", "value": 0, "probability": 0.5, "tags": ["Beratung", "München"] },
-    { "id": "deal-002", "projectId": "tough-cookie", "name": "Weinbar Dario", "stage": "Lead", "value": 0, "probability": 0.3, "tags": ["Weinbar", "Pitch"] },
-    { "id": "deal-003", "projectId": "tough-cookie", "name": "Kyberg Videoproduktionen", "stage": "Lead", "value": 0, "probability": 0.4, "tags": ["Kyberg", "Video"] },
-    { "id": "deal-004", "projectId": "lubu", "name": "LuBu Projekt", "stage": "Closed Won", "value": 1400, "probability": 1.0, "tags": ["LuBu", "Rechnung"] },
-    { "id": "deal-005", "projectId": "freelance", "name": "Persönlicher Retainer", "stage": "Pitch", "value": 0, "probability": 0.6, "tags": ["Retainer", "Freelance"] },
-    { "id": "deal-006", "projectId": "tough-cookie", "name": "Hotel Wittmann", "stage": "Lead", "value": 0, "probability": 0.4, "tags": ["Hotel", "Preproduction"] },
-    { "id": "deal-007", "projectId": "tough-cookie", "name": "Jidai Shooting KW19", "stage": "Confirmed", "value": 1500, "probability": 1.0, "tags": ["Jidai", "Shoot", "KW19"] },
-    { "id": "deal-008", "projectId": "tough-cookie", "name": "Kono Shooting KW19", "stage": "Confirmed", "value": 1200, "probability": 1.0, "tags": ["Kono", "Shoot", "KW19"] }
-  ],
-  "activeSession": null,
-  "tags": ["Meeting", "Preproduction", "Dreh", "Pitch", "Rechnung", "Follow-up", "München", "NOMU", "Golf", "Finanzamt", "Deadline", "Postproduction", "Overdue"],
-  "lastUpdated": "2026-05-03T18:04:00Z",
-  "version": "v5.4.16",
-  "shootWeek": {
-    "week": "KW19",
-    "status": "Active",
-    "shoots": [
-      { "day": "Mo 5.5.", "client": "Jidai", "status": "🔴 Morgen!" },
-      { "day": "Di 6.5.", "client": "Kono", "status": "🔴 Di" },
-      { "day": "Mi 7.5.", "client": "Anju", "status": "🔴 Mi" },
-      { "day": "Do 8.5.", "client": "Zenti", "status": "🔴 Do" }
-    ]
-  },
-  "overdue": {
-    "nomu": 10,
-    "niku": 8
+  "version": "v5.4.18",
+  "lastUpdated": "2026-05-04T04:04:00+02:00",
+  "metrics": {
+    "urgentTasks": 6,
+    "highPriority": 5,
+    "income": "6.6k€",
+    "deals": 8
   },
   "finances": {
     "income": 6600,
@@ -55,18 +13,38 @@
     "profit": 5900,
     "openInvoices": 9000
   },
-  "kw18Recap": {
-    "wins": 9,
-    "fails": 6,
-    "successRate": "50%"
+  "overdue": {
+    "nomu": 9,
+    "niku": 7,
+    "sentai": 2
   },
-  "journalEntry": {
-    "date": "2026-05-03",
-    "mood": 4,
-    "energyLevel": 5,
-    "notes": "KW18 Recap erstellt. Shoot-Woche KW19 startet morgen. NOMU (10 Tage) und Niku (8 Tage) Post-Production überfällig.",
-    "wins": ["KW18 Recap fertig", "Weekly Stats gesammelt", "Dashboard v5.4.16 aktualisiert"],
-    "challenges": ["NOMU Post-Production 10 Tage überfällig", "Niku Post-Production 8 Tage überfällig", "Shoot-Woche KW19 mit 4 Shoots"],
-    "gratitude": ["KW18 erfolgreich abgeschlossen", "Dashboard-System stabil"]
-  }
+  "shootWeek": {
+    "week": "KW19",
+    "startDate": "2026-05-05",
+    "shoots": [
+      {"day": "Mo 5.5.", "client": "Jidai", "status": "🔴 Heute!", "urgent": true, "confirmed": false},
+      {"day": "Di 6.5.", "client": "Kono", "status": "✅ Bestätigt", "confirmed": true},
+      {"day": "Fr 9.5.", "client": "Beauty-Event", "status": "18€ Frankfurt", "confirmed": true}
+    ]
+  },
+  "kw18Recap": {
+    "wins": 11,
+    "fails": 6,
+    "successRate": "65%"
+  },
+  "mood": "überladen, gestresst, erschöpft",
+  "energy": "niedrig",
+  "reflection": "Fühlt sich nicht wie Unternehmen an, sondern Freelancer - aber bekommt weniger raus",
+  "completed": ["Nico Post-Production", "Beauty-Shoot"],
+  "movedToKW20": ["Anju Shoot", "Zenti Shoot", "Sentai Shoot"],
+  "privateTasks": ["Nebenkostenabrechnung", "Gerichtsvollzieher anrufen", "Gerichtshof (Fallback)"],
+  "criticalTasks": [
+    {"text": "🎬 NOMU Post-Production", "daysOverdue": 9, "priority": "critical"},
+    {"text": "🎬 Niku Post-Production", "daysOverdue": 7, "priority": "critical"},
+    {"text": "🎬 Jidai Shoot (NICHT bestätigt)", "daysLeft": 0, "priority": "urgent"},
+    {"text": "📞 Telefonate (Auto)", "priority": "high"},
+    {"text": "📄 Japanese Pancake Angebot", "priority": "medium"},
+    {"text": "📝 Posting Plan", "priority": "medium"},
+    {"text": "📱 Monkey Post", "priority": "low"}
+  ]
 }
