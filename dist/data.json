@@ -1,18 +1,14 @@
 {
-  "version": "v5.4.24",
-  "lastUpdated": "2026-05-05T04:04:00+02:00",
-  "timestamp": 162044444,
+  "version": "v5.4.27",
+  "lastUpdated": "2026-05-05T20:04:00+02:00",
   "status": "active",
   "metrics": {
     "urgentTasks": 7,
     "highPriority": 5,
-    "deals": 8,
-    "projects": 12
+    "income": "5.6k€",
+    "deals": 8
   },
-  "financials": {
-    "income": 6600,
-    "expenses": 700,
-    "profit": 5900,
-    "openInvoices": 9000
-  }
+  "today": "2026-05-05",
+  "kw": 19,
+  "dayOfWeek": "DIENSTAG"
 }
