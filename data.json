@@ -1,18 +1,34 @@
 {
-  "version": "v5.4.25",
-  "lastUpdated": "2026-05-05T08:04:00+02:00",
-  "timestamp": 162044444,
+  "version": "v5.4.26",
+  "lastUpdated": "2026-05-05T12:04:00+02:00",
+  "timestamp": 162048444,
   "status": "active",
   "metrics": {
     "urgentTasks": 7,
-    "highPriority": 5,
+    "highPriority": 6,
     "deals": 8,
     "projects": 12
   },
   "financials": {
-    "income": 6600,
+    "income": 5600,
     "expenses": 700,
-    "profit": 5900,
+    "profit": 4900,
     "openInvoices": 9000
+  },
+  "todayTasks": [
+    {"task": "2 Videos schneiden (Jidai/Jedi)", "time": "3-4h", "priority": "urgent"},
+    {"task": "Fotos bearbeiten (Jidai/Jedi)", "time": "2h", "priority": "urgent"},
+    {"task": "Kyberg Mail", "time": "30min", "priority": "high"},
+    {"task": "Postplan", "time": "1h", "priority": "high"}
+  ],
+  "overdue": [
+    {"task": "NOMU Post-Production", "days": 11},
+    {"task": "Niku Post-Production", "days": 9},
+    {"task": "Sentai Post-Production", "days": 5}
+  ],
+  "notes": {
+    "beautyEvent": "ABGESAGT - 1.000€ Verlust",
+    "kyberg": "Antwort erhalten, Termin 22. Mai vorschlagen",
+    "mood": "Produktiv, strukturiert"
   }
 }
