@@ -1,14 +1,14 @@
 {
-  "version": "v5.4.27",
-  "lastUpdated": "2026-05-05T20:04:00+02:00",
+  "version": "v5.4.28",
+  "lastUpdated": "2026-05-06T00:04:00+02:00",
   "status": "active",
   "metrics": {
-    "urgentTasks": 7,
-    "highPriority": 5,
+    "urgentTasks": 6,
+    "highPriority": 4,
     "income": "5.6k€",
-    "deals": 8
+    "deals": 9
   },
-  "today": "2026-05-05",
+  "today": "2026-05-06",
   "kw": 19,
-  "dayOfWeek": "DIENSTAG"
+  "dayOfWeek": "MITTWOCH"
 }

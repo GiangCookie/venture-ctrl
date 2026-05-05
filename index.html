@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>VENTURE CTRL v5.4.27 | 5. Mai 2026 — 20:04 Uhr</title>
+<title>VENTURE CTRL v5.4.28 | 6. Mai 2026 — 00:04 Uhr</title>
 <style>
 * { margin:0; padding:0; box-sizing:border-box; }
 :root {
@@ -63,8 +63,7 @@ body {
 .badge-pending { background:var(--high); color:#0a0a0f; }
 .badge-won { background:var(--normal); color:#0a0a0f; }
 .badge-overdue { background:#dc143c; color:#fff; animation:pulse 2s infinite; }
-.badge-weekend { background:#70a1ff; color:#fff; }
-.badge-cancelled { background:#666; color:#fff; text-decoration:line-through; }
+.badge-new { background:#a78bfa; color:#fff; }
 @keyframes pulse { 0%,100% { opacity:1; } 50% { opacity:.7; } }
 .deal {
   display:flex; justify-content:space-between; align-items:center;
@@ -91,12 +90,13 @@ body {
 }
 .alert-box h4 { margin-bottom:8px; color:var(--urgent); }
 .alert-box p { font-size:.9rem; color:var(--text); line-height:1.5; }
-.private-box {
-  background:linear-gradient(135deg,rgba(102,126,234,.1),rgba(118,75,162,.1));
-  border:1px solid var(--border); border-radius:12px; padding:16px; margin:16px;
+.success-box {
+  background:linear-gradient(135deg,rgba(46,213,115,.2),rgba(46,213,115,.1));
+  border:1px solid var(--normal); border-radius:12px; padding:16px; margin:16px;
   max-width:800px; margin-left:auto; margin-right:auto;
 }
-.private-box h4 { margin-bottom:12px; color:#a78bfa; }
+.success-box h4 { margin-bottom:8px; color:var(--normal); }
+.success-box p { font-size:.9rem; color:var(--text); line-height:1.5; }
 .shoot-calendar {
   display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin:16px;
   max-width:800px; margin-left:auto; margin-right:auto;
@@ -105,11 +105,13 @@ body {
   background:var(--card); border:1px solid var(--border); border-radius:10px;
   padding:12px; text-align:center;
 }
+.shoot-day.active { border:2px solid var(--urgent); }
 .shoot-day .day-name { font-size:.75rem; color:var(--muted); }
 .shoot-day .shoot-name { font-size:1rem; font-weight:600; margin:6px 0; }
 .shoot-day .status { font-size:.7rem; padding:4px 8px; border-radius:12px; }
 .shoot-day .status-prep { background:rgba(255,71,87,.2); color:var(--urgent); }
 .shoot-day .status-done { background:rgba(46,213,115,.2); color:var(--normal); }
+.shoot-day .status-today { background:rgba(255,71,87,.3); color:var(--urgent); animation:pulse 2s infinite; }
 .finances { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin:16px; max-width:800px; margin-left:auto; margin-right:auto; }
 .fin-box {
   background:var(--card); border:1px solid var(--border); border-radius:10px;
@@ -132,64 +134,81 @@ body {
 <body>
 <div class="header">
   <h1>🚀 VENTURE CTRL</h1>
-  <p>v5.4.27 — 5. Mai 2026, 20:04 Uhr</p>
+  <p>v5.4.28 — 6. Mai 2026, 00:04 Uhr</p>
 </div>
 
 <div class="today-hero">
-  <h2>🔥 DIENSTAG 20:04 — KW19 TAG 2</h2>
-  <p>Jidai/Jedi Shoot: Videos schneiden + Fotos bearbeiten</p>
+  <h2>🔥 MITTWOCH 6.5. — KW19 TAG 3</h2>
+  <p>Kono Shoot + Meeting Amy (Restaurant)</p>
+</div>
+
+<div class="success-box">
+  <h4>🎉 WICHTIGER ERFOLG</h4>
+  <p><strong>Niku Post-Production FERTIG!</strong><br>
+  War 9 Tage überfällig — jetzt endlich erledigt! 🎉<br>
+  Pipeline entlastet.</p>
 </div>
 
 <div class="mood-box">
   <h4>🧠 Stimmung & Reflexion</h4>
-  <p><strong>Stimmung:</strong> Produktiv, strukturiert</p>
-  <p><strong>Energie:</strong> Gut (Sport geplant)</p>
-  <p><em>„Beauty-Event abgesagt, aber Kyberg meldet sich — 22. Mai als Termin vorschlagen."</em></p>
-</div>
-
-<div class="alert-box">
-  <h4>⚠️ Beauty-Event Frankfurt ABGESAGT</h4>
-  <p>Agentur hat Priorität gesetzt — <strong>1.000€ Verlust</strong><br>
-  Aber: Agentur-Priorität gerechtfertigt, Zenti/Zentai Freitag möglich</p>
+  <p><strong>Stimmung:</strong> Gut geschlafen, erholt</p>
+  <p><strong>Produktivität:</strong> Nur ~3h effektiv gearbeitet (trotz ganzen Tag Zeit)</p>
+  <p><em>„Ein bisschen doof — Prokrastination trotz guter Voraussetzungen"</em></p>
 </div>
 
 <div class="stats-grid">
-  <div class="stat-box"><div class="num">🔴 7</div><div class="label">Urgent Tasks</div></div>
-  <div class="stat-box"><div class="num">🟡 6</div><div class="label">High Priority</div></div>
+  <div class="stat-box"><div class="num">🔴 6</div><div class="label">Urgent Tasks</div></div>
+  <div class="stat-box"><div class="num">🟡 4</div><div class="label">High Priority</div></div>
   <div class="stat-box"><div class="num">💰 5.6k€</div><div class="label">Einnahmen</div></div>
-  <div class="stat-box"><div class="num">📋 8</div><div class="label">Deals</div></div>
+  <div class="stat-box"><div class="num">📋 9</div><div class="label">Deals</div></div>
 </div>
 
 <div class="card">
-  <h3>✅ Gestern Geschafft (4.5.)</h3>
-  <div class="task"><div class="priority normal"></div><div class="text done">🎬 Jidai/Jedi Shoot</div><span class="badge badge-done">ERLEDIGT!</span></div>
+  <h3>✅ Gestern Geschafft (5.5.)</h3>
+  <div class="task"><div class="priority normal"></div><div class="text done">🎬 Niku Post-Production</div><span class="badge badge-done">FERTIG! ✅</span></div>
+  <div class="task"><div class="priority normal"></div><div class="text done">🎬 Jidai Pre-Production (1 Video)</div><span class="badge badge-done">Teilweise</span></div>
+  <div class="task"><div class="priority normal"></div><div class="text done">🤝 Neue Kundenanfrage erhalten</div><span class="badge badge-done">Amy (Restaurant)</span></div>
+</div>
+
+<div class="card">
+  <h3>🆕 NEUER LEAD</h3>
+  <div class="task"><div class="priority normal"></div><div class="text"><strong>Amy (Restaurant)</strong> — Potenzial für Tough Cookie</div><span class="badge badge-new">NEU</span></div>
+  <p style="padding:8px 12px; background:var(--surface); border-radius:8px; margin-top:8px; font-size:.85rem;">
+    📅 <strong>Heute:</strong> Persönliches Kennenlerngespräch/Meeting
+  </p>
 </div>
 
 <div class="card">
   <h3>🔴 Überfällige Tasks (CRITICAL)</h3>
-  <div class="task"><div class="priority urgent"></div><div class="text">🎬 NOMU Post-Production</div><span class="badge badge-overdue">11 Tage überfällig</span></div>
-  <div class="task"><div class="priority urgent"></div><div class="text">🎬 Niku Post-Production</div><span class="badge badge-overdue">9 Tage überfällig</span></div>
-  <div class="task"><div class="priority urgent"></div><div class="text">🎬 Sentai Post-Production</div><span class="badge badge-overdue">5 Tage überfällig</span></div>
+  <div class="task"><div class="priority urgent"></div><div class="text">🎬 NOMU Post-Production</div><span class="badge badge-overdue">12 Tage überfällig</span></div>
+  <div class="task"><div class="priority urgent"></div><div class="text">🎬 Sentai Post-Production</div><span class="badge badge-overdue">6 Tage überfällig</span></div>
 </div>
 
 <div class="card">
-  <h3>🔴 Urgent — Dienstag 5.5.</h3>
-  <div class="task"><div class="priority urgent"></div><div class="text">🎬 2 Videos schneiden (Jidai/Jedi)</div><span class="badge badge-today">🔴 3-4h</span></div>
-  <div class="task"><div class="priority urgent"></div><div class="text">📸 Fotos bearbeiten (Jidai/Jedi)</div><span class="badge badge-today">🔴 2h</span></div>
-  <div class="task"><div class="priority urgent"></div><div class="text">🎬 NOMU Post-Production</div><span class="badge badge-overdue">11 Tage</span></div>
+  <h3>🔴 Urgent — Mittwoch 6.5.</h3>
+  <div class="task"><div class="priority urgent"></div><div class="text">🎬 Kono Shoot</div><span class="badge badge-today">🔴 HEUTE</span></div>
+  <div class="task"><div class="priority urgent"></div><div class="text">🤝 Meeting Amy (Restaurant)</div><span class="badge badge-today">🔴 HEUTE</span></div>
 </div>
 
 <div class="card">
   <h3>🟡 High Priority</h3>
-  <div class="task"><div class="priority high"></div><div class="text">📧 Kyberg Mail — Termin 22. Mai + Onkel fragen</div><span class="badge badge-pending">30min</span></div>
-  <div class="task"><div class="priority high"></div><div class="text">📝 Postplan Nico, Monki, Ginza</div><span class="badge badge-pending">1h</span></div>
-  <div class="task"><div class="priority high"></div><div class="text">🎬 Sentai Post-Production</div><span class="badge badge-pending">Di</span></div>
-  <div class="task"><div class="priority high"></div><div class="text">🎬 Niku Post-Production</div><span class="badge badge-overdue">9 Tage</span></div>
+  <div class="task"><div class="priority high"></div><div class="text">🎬 Jidai 2. Video fertig machen</div><span class="badge badge-pending">Rest</span></div>
+  <div class="task"><div class="priority high"></div><div class="text">📝 Niko Content-Plan</div><span class="badge badge-pending">🟡</span></div>
+  <div class="task"><div class="priority high"></div><div class="text">🎬 Zentai Pre-Production</div><span class="badge badge-pending">🟡</span></div>
+</div>
+
+<div class="card">
+  <h3>🟡 Medium — Kyberg</h3>
+  <div class="task"><div class="priority high"></div><div class="text">📧 Kyberg Mail</div><span class="badge badge-pending">Termin 22. Mai</span></div>
+  <p style="padding:8px 12px; background:var(--surface); border-radius:8px; margin-top:8px; font-size:.85rem; color:var(--muted);">
+    ✅ Antwort erhalten — Termin vorschlagen: 22. Mai<br>
+    → Onkel fragen für Infos
+  </p>
 </div>
 
 <div class="card">
   <h3>🟢 Normal — Private Tasks</h3>
-  <div class="task"><div class="priority normal"></div><div class="text">🏠 Haushalt — Staubsaugen, Wäsche, Küche</div><span class="badge badge-pending">1h</span></div>
+  <div class="task"><div class="priority normal"></div><div class="text">🏠 Haushalt</div><span class="badge badge-pending">1h</span></div>
   <div class="task"><div class="priority normal"></div><div class="text">🏃 Sport</div><span class="badge badge-pending">1h</span></div>
   <div class="task"><div class="priority normal"></div><div class="text">🛒 Gemüse einkaufen</div><span class="badge badge-pending">30min</span></div>
 </div>
@@ -198,22 +217,22 @@ body {
   <h3>🎬 KW19 Shoot-Kalender</h3>
   <div class="shoot-calendar">
     <div class="shoot-day">
-      <div class="day-name">Montag 5.5.</div>
+      <div class="day-name">Dienstag 5.5.</div>
       <div class="shoot-name">Jidai/Jedi</div>
       <span class="status status-done">✅ Erledigt</span>
     </div>
-    <div class="shoot-day">
-      <div class="day-name">Mittwoch 7.5.</div>
+    <div class="shoot-day active">
+      <div class="day-name">Mittwoch 6.5.</div>
       <div class="shoot-name">Kono</div>
-      <span class="status status-done">✅ Bestätigt</span>
+      <span class="status status-today">🔴 HEUTE</span>
     </div>
     <div class="shoot-day">
       <div class="day-name">Freitag 9.5.</div>
-      <div class="shoot-name">Zenti/Zentai</div>
+      <div class="shoot-name">Zentai</div>
       <span class="status status-prep">⏳ TBD</span>
     </div>
   </div>
-  <p style="text-align:center;margin-top:12px;font-size:.85rem;color:var(--muted);">→ Beauty-Event Frankfurt: <strong style="color:var(--urgent)">ABGESAGT</strong></p>
+  <p style="text-align:center;margin-top:12px;font-size:.85rem;color:var(--muted);">→ Beauty-Event Frankfurt: <strong style="color:var(--urgent)">ABGESAGT</strong> (-1.000€)</p>
 </div>
 
 <div class="card">
@@ -224,7 +243,7 @@ body {
     <div class="fin-box"><div class="amount profit">4.900€</div><div class="label">Gewinn</div></div>
   </div>
   <p style="text-align:center;margin-top:12px;font-size:.85rem;color:var(--muted);">
-    ❌ Beauty-Event abgesagt: <span style="color:var(--expense)">-1.000€</span> (Agentur-Priorität)<br>
+    ❌ Beauty-Event abgesagt: <span style="color:var(--expense)">-1.000€</span><br>
     ✅ Kyberg: Antwort erhalten, Termin 22. Mai vorschlagen
   </p>
 </div>
@@ -236,8 +255,9 @@ body {
   <div class="deal"><span>Weinbar Dario</span><span class="stage stage-pitch">🎯 Pitch (50%)</span></div>
   <div class="deal"><span>Luma Labs</span><span class="stage stage-pitch">🎯 Pitch (60%)</span></div>
   <div class="deal"><span>Japanese Pancake München</span><span class="stage stage-pitch">🎯 Pitch (40%)</span></div>
-  <div class="deal"><span>Kyberg Videoproduktionen</span><span class="stage stage-lead">👋 Lead (40%)</span></div>
+  <div class="deal"><span>Kyberg Videoproduktionen</span><span class="stage stage-lead">👋 Lead (40%) — 22. Mai?</span></div>
   <div class="deal"><span>Little Hiro</span><span class="stage stage-lead">👋 Lead (30%)</span></div>
+  <div class="deal"><span style="color:#a78bfa;">Amy (Restaurant) 🆕</span><span class="stage stage-lead">👋 Neuer Lead (TBD)</span></div>
 </div>
 
 <div class="card">
@@ -249,7 +269,7 @@ body {
 </div>
 
 <div class="footer">
-  <p>v5.4.27 — Letztes Update: 5. Mai 2026, 20:04 Uhr</p>
+  <p>v5.4.28 — Letztes Update: 6. Mai 2026, 00:04 Uhr</p>
   <p style="margin-top:8px;font-size:.7rem;">Automatisches Update via Cron: dashboard-update-4h-v2</p>
 </div>
 

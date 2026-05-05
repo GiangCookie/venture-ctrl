@@ -1,11 +1,11 @@
 {
-  "version": "v5.4.27",
-  "lastUpdated": "2026-05-05T20:04:00+02:00",
+  "version": "v5.4.28",
+  "lastUpdated": "2026-05-06T00:04:00+02:00",
   "metrics": {
-    "urgentTasks": 7,
-    "highPriority": 5,
+    "urgentTasks": 6,
+    "highPriority": 4,
     "income": "5.6k€",
-    "deals": 8
+    "deals": 9
   },
   "finances": {
     "income": 5600,
@@ -14,17 +14,16 @@
     "openInvoices": 9000
   },
   "overdue": {
-    "nomu": 11,
-    "niku": 9,
-    "sentai": 5
+    "nomu": 12,
+    "sentai": 6
   },
   "shootWeek": {
     "week": "KW19",
-    "startDate": "2026-05-05",
+    "startDate": "2026-05-04",
     "shoots": [
-      {"day": "Di 5.5.", "client": "Jidai/Jedi", "status": "✅ Erledigt (Shoot)", "urgent": true, "confirmed": true, "done": true},
-      {"day": "Mi 6.5.", "client": "Kono", "status": "✅ Bestätigt", "confirmed": true},
-      {"day": "Sa 9.5.", "client": "Beauty-Event", "status": "❌ ABGESAGT", "confirmed": false, "cancelled": true}
+      {"day": "Di 5.5.", "client": "Jidai/Jedi", "status": "✅ Erledigt", "urgent": true, "confirmed": true, "done": true},
+      {"day": "Mi 6.5.", "client": "Kono", "status": "🔴 Shoot Heute", "urgent": true, "confirmed": true},
+      {"day": "Fr 9.5.", "client": "Zentai", "status": "⏳ TBD", "confirmed": false}
     ]
   },
   "kw18Recap": {
@@ -32,19 +31,36 @@
     "fails": 6,
     "successRate": "65%"
   },
-  "mood": "Produktiv, strukturiert",
-  "energy": "Gut (Sport geplant)",
-  "reflection": "Beauty-Event abgesagt, aber Kyberg meldet sich",
-  "completed": ["Jidai/Jedi Shoot (4.5.)"],
-  "movedToKW20": ["Anju Shoot", "Zenti Shoot", "Sentai Shoot"],
-  "privateTasks": ["Haushalt (Staubsaugen, Wäsche, Küche)", "Sport", "Gemüse einkaufen"],
+  "mood": "Gut geschlafen, erholt",
+  "energy": "Nur ~3h effektiv gearbeitet",
+  "reflection": "Niku Post-Production endlich fertig! Neuer Lead Amy heute treffen.",
+  "completed": [
+    "Jidai/Jedi Shoot (4.5.)",
+    "Niku Post-Production ✅ FERTIG!"
+  ],
+  "newLead": {
+    "name": "Amy",
+    "type": "Restaurant",
+    "meeting": "Mi 6.5. persönliches Kennenlernen",
+    "potential": "High"
+  },
+  "privateTasks": ["Haushalt", "Sport", "Gemüse einkaufen"],
   "criticalTasks": [
-    {"text": "🎬 2 Videos schneiden (Jidai/Jedi)", "time": "3-4h", "priority": "urgent"},
-    {"text": "📸 Fotos bearbeiten (Jidai/Jedi)", "time": "2h", "priority": "urgent"},
-    {"text": "🎬 NOMU Post-Production", "daysOverdue": 11, "priority": "critical"},
-    {"text": "🎬 Niku Post-Production", "daysOverdue": 9, "priority": "critical"},
-    {"text": "🎬 Sentai Post-Production", "daysOverdue": 5, "priority": "critical"},
-    {"text": "📧 Kyberg Mail — Termin 22. Mai + Onkel fragen", "time": "30min", "priority": "high"},
-    {"text": "📝 Postplan Nico, Monki, Ginza", "time": "1h", "priority": "high"}
+    {"text": "🎬 Kono Shoot", "priority": "urgent", "today": true},
+    {"text": "🤝 Meeting Amy (Restaurant)", "priority": "urgent", "today": true},
+    {"text": "🎬 NOMU Post-Production", "daysOverdue": 12, "priority": "critical"},
+    {"text": "🎬 Sentai Post-Production", "daysOverdue": 6, "priority": "critical"},
+    {"text": "🎬 Jidai 2. Video fertig machen", "priority": "high"},
+    {"text": "📝 Niko Content-Plan", "priority": "medium"}
+  ],
+  "pipeline": [
+    {"client": "Sentai", "stage": "won", "value": "5.000€"},
+    {"client": "LuBu Projekt", "stage": "won", "value": "1.400€"},
+    {"client": "Weinbar Dario", "stage": "pitch", "probability": "50%"},
+    {"client": "Luma Labs", "stage": "pitch", "probability": "60%"},
+    {"client": "Japanese Pancake München", "stage": "pitch", "probability": "40%"},
+    {"client": "Kyberg Videoproduktionen", "stage": "lead", "probability": "40%", "next": "22. Mai Termin"},
+    {"client": "Little Hiro", "stage": "lead", "probability": "30%"},
+    {"client": "Amy (Restaurant)", "stage": "lead", "probability": "TBD", "new": true}
   ]
 }
