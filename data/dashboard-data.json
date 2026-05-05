@@ -1,6 +1,6 @@
 {
-  "version": "v5.4.24",
-  "lastUpdated": "2026-05-05T04:04:00+02:00",
+  "version": "v5.4.25",
+  "lastUpdated": "2026-05-05T08:04:00+02:00",
   "metrics": {
     "urgentTasks": 7,
     "highPriority": 5,
@@ -14,9 +14,9 @@
     "openInvoices": 9000
   },
   "overdue": {
-    "nomu": 10,
-    "niku": 8,
-    "sentai": 4
+    "nomu": 11,
+    "niku": 9,
+    "sentai": 5
   },
   "shootWeek": {
     "week": "KW19",
@@ -39,8 +39,8 @@
   "movedToKW20": ["Anju Shoot", "Zenti Shoot", "Sentai Shoot"],
   "privateTasks": ["Nebenkostenabrechnung", "Gerichtsvollzieher anrufen", "Gerichtshof (Fallback)"],
   "criticalTasks": [
-    {"text": "🎬 NOMU Post-Production", "daysOverdue": 10, "priority": "critical"},
-    {"text": "🎬 Niku Post-Production", "daysOverdue": 8, "priority": "critical"},
+    {"text": "🎬 NOMU Post-Production", "daysOverdue": 11, "priority": "critical"},
+    {"text": "🎬 Niku Post-Production", "daysOverdue": 9, "priority": "critical"},
     {"text": "🎬 Jidai Shoot — NICHT bestätigt", "daysLeft": 0, "priority": "urgent"},
     {"text": "📞 Telefonate (Auto)", "priority": "high"},
     {"text": "📄 Japanese Pancake Angebot", "priority": "medium"},
