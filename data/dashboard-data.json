@@ -1,6 +1,6 @@
 {
-  "version": "v5.4.28",
-  "lastUpdated": "2026-05-06T00:04:00+02:00",
+  "version": "v5.4.31",
+  "lastUpdated": "2026-05-06T16:04:00+02:00",
   "metrics": {
     "urgentTasks": 6,
     "highPriority": 4,
@@ -14,15 +14,15 @@
     "openInvoices": 9000
   },
   "overdue": {
-    "nomu": 12,
-    "sentai": 6
+    "nomu": 13,
+    "sentai": 7
   },
   "shootWeek": {
     "week": "KW19",
     "startDate": "2026-05-04",
     "shoots": [
       {"day": "Di 5.5.", "client": "Jidai/Jedi", "status": "✅ Erledigt", "urgent": true, "confirmed": true, "done": true},
-      {"day": "Mi 6.5.", "client": "Kono", "status": "🔴 Shoot Heute", "urgent": true, "confirmed": true},
+      {"day": "Mi 6.5.", "client": "Kono", "status": "🔴 Shoot Heute", "urgent": true, "confirmed": true, "today": true},
       {"day": "Fr 9.5.", "client": "Zentai", "status": "⏳ TBD", "confirmed": false}
     ]
   },
@@ -32,8 +32,8 @@
     "successRate": "65%"
   },
   "mood": "Gut geschlafen, erholt",
-  "energy": "Nur ~3h effektiv gearbeitet",
-  "reflection": "Niku Post-Production endlich fertig! Neuer Lead Amy heute treffen.",
+  "energy": "Voller Energie für den Kono Shoot",
+  "reflection": "Guter Produktivtag — Kono erledigt, Amy getroffen! NOMU + Sentai warten noch.",
   "completed": [
     "Jidai/Jedi Shoot (4.5.)",
     "Niku Post-Production ✅ FERTIG!"
@@ -46,12 +46,14 @@
   },
   "privateTasks": ["Haushalt", "Sport", "Gemüse einkaufen"],
   "criticalTasks": [
-    {"text": "🎬 Kono Shoot", "priority": "urgent", "today": true},
-    {"text": "🤝 Meeting Amy (Restaurant)", "priority": "urgent", "today": true},
+    {"text": "🎬 Kono Shoot", "priority": "urgent", "today": true, "project": "Tough Cookie"},
+    {"text": "🤝 Meeting Amy (Restaurant)", "priority": "urgent", "today": true, "project": "Neuer Lead"},
     {"text": "🎬 NOMU Post-Production", "daysOverdue": 12, "priority": "critical"},
     {"text": "🎬 Sentai Post-Production", "daysOverdue": 6, "priority": "critical"},
-    {"text": "🎬 Jidai 2. Video fertig machen", "priority": "high"},
-    {"text": "📝 Niko Content-Plan", "priority": "medium"}
+    {"text": "🎬 Jidai 2. Video fertig machen", "priority": "high", "project": "Tough Cookie"},
+    {"text": "📝 Niko Content-Plan", "priority": "medium", "project": "Social Media"},
+    {"text": "🎬 Zentai Pre-Production", "priority": "medium", "project": "Tough Cookie"},
+    {"text": "📧 Kyberg Mail - Termin 22. Mai", "priority": "low", "project": "Export"}
   ],
   "pipeline": [
     {"client": "Sentai", "stage": "won", "value": "5.000€"},
@@ -61,6 +63,7 @@
     {"client": "Japanese Pancake München", "stage": "pitch", "probability": "40%"},
     {"client": "Kyberg Videoproduktionen", "stage": "lead", "probability": "40%", "next": "22. Mai Termin"},
     {"client": "Little Hiro", "stage": "lead", "probability": "30%"},
-    {"client": "Amy (Restaurant)", "stage": "lead", "probability": "TBD", "new": true}
-  ]
+    {"client": "Amy (Restaurant)", "stage": "lead", "probability": "TBD", "new": true, "meetingToday": true}
+  ],
+  "nextUpdate": "2026-05-06T20:04:00+02:00"
 }
