@@ -1,6 +1,6 @@
 {
-  "version": "v5.4.32",
-  "lastUpdated": "2026-05-06T20:04:00+02:00",
+  "version": "v5.4.33",
+  "lastUpdated": "2026-05-07T00:04:00+02:00",
   "metrics": {
     "urgentTasks": 6,
     "highPriority": 4,
@@ -33,23 +33,33 @@
   },
   "mood": "Produktiv",
   "energy": "Kono + Amy erledigt",
-  "reflection": "Guter Produktivtag — Kono erledigt, Amy getroffen! NOMU (13 Tage) + Sentai (7 Tage) warten noch.",
+  "reflection": "Sehr produktiver Tag — Kono ✅, Amy ✅, Jidai Video ✅, Zentai Pre-Production ✅. Aber: Frustration über Tough Cookie Struktur. NOMU (13 Tage) + Sentai (7 Tage) weiterhin offen.",
   "completed": [
-    "Jidai/Jedi Shoot (4.5.)",
+    "Jidai/Jedi Shoot (4.5.) ✅",
     "Niku Post-Production ✅ FERTIG!",
     "🎬 Kono Shoot (6.5.) ✅",
-    "🤝 Amy Meeting (6.5.) ✅"
+    "🤝 Amy Meeting (6.5.) ✅",
+    "🎬 Jidai Video fertig ✅",
+    "📸 Jidai Fotos bearbeitet ✅",
+    "📄 Angebot rausgeschickt ✅",
+    "🎬 Zentai Pre-Production fertig ✅",
+    "📱 Posts: Nico & Monki ✅",
+    "🏃 Sport: Joggen + Climbs ✅"
   ],
   "newLead": {
     "name": "Amy",
     "type": "Restaurant",
-    "meeting": "Mi 6.5. persönliches Kennenlernen ✅ Erledigt",
-    "potential": "High"
+    "meeting": "Mi 6.5. persönliches Kennenlernen ✅ Erfolgreich!",
+    "potential": "High",
+    "status": "In Pipeline"
   },
+  "notes": "Sentai/Zentai gewonnen = 5.000€ für Tough Cookie, aber 0€ persönlich. Giang frustriert über Struktur.",
   "privateTasks": ["Haushalt", "Sport", "Gemüse einkaufen"],
   "criticalTasks": [
-    {"text": "🎬 Kono Shoot", "priority": "urgent", "today": true, "project": "Tough Cookie", "done": true},
-    {"text": "🤝 Meeting Amy (Restaurant)", "priority": "urgent", "today": true, "project": "Neuer Lead", "done": true},
+    {"text": "🎬 Kono Shoot", "priority": "urgent", "today": true, "project": "Tough Cookie", "done": true, "date": "6.5."},
+    {"text": "🤝 Meeting Amy (Restaurant)", "priority": "urgent", "today": true, "project": "Neuer Lead", "done": true, "date": "6.5."},
+    {"text": "📄 Angebot fertig machen", "priority": "urgent", "today": false, "project": "Lead", "due": "7.5."},
+    {"text": "📱 Monki Post nachholen", "priority": "high", "today": false, "due": "7.5."},
     {"text": "🎬 NOMU Post-Production", "daysOverdue": 13, "priority": "critical"},
     {"text": "🎬 Sentai Post-Production", "daysOverdue": 7, "priority": "critical"},
     {"text": "🎬 Jidai 2. Video fertig machen", "priority": "high", "project": "Tough Cookie"},
@@ -58,14 +68,15 @@
     {"text": "📧 Kyberg Mail - Termin 22. Mai", "priority": "low", "project": "Export"}
   ],
   "pipeline": [
-    {"client": "Sentai", "stage": "won", "value": "5.000€"},
+    {"client": "Sentai", "stage": "won", "value": "5.000€", "note": "Tough Cookie, nicht persönlich"},
+    {"client": "Zentai", "stage": "won", "value": "TBD", "note": "Tough Cookie, nicht persönlich"},{
     {"client": "LuBu Projekt", "stage": "won", "value": "1.400€"},
     {"client": "Weinbar Dario", "stage": "pitch", "probability": "50%"},
     {"client": "Luma Labs", "stage": "pitch", "probability": "60%"},
     {"client": "Japanese Pancake München", "stage": "pitch", "probability": "40%"},
-    {"client": "Kyberg Videoproduktionen", "stage": "lead", "probability": "40%", "next": "22. Mai Termin"},
+    {"client": "Kyberg Videoproduktionen", "stage": "lead", "probability": "40%", "next": "22. Mai Termin", "action": "Onkel fragen"},{
     {"client": "Little Hiro", "stage": "lead", "probability": "30%"},
-    {"client": "Amy (Restaurant)", "stage": "lead", "probability": "TBD", "new": true, "meetingToday": true, "meetingDone": true}
+    {"client": "Amy (Restaurant)", "stage": "lead", "probability": "High", "new": true, "meetingDone": true}
   ],
   "nextUpdate": "2026-05-07T00:04:00+02:00"
 }
