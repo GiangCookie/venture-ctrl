@@ -1,6 +1,6 @@
 {
-  "version": "v5.4.35",
-  "lastUpdated": "2026-05-07T08:04:00+02:00",
+  "version": "v5.4.37",
+  "lastUpdated": "2026-05-07T16:04:00+02:00",
   "status": "active",
   "metrics": {
     "urgentTasks": 5,
@@ -11,6 +11,7 @@
   "today": "2026-05-07",
   "kw": 19,
   "dayOfWeek": "DONNERSTAG",
+  "time": "16:04",
   "lastSession": {
     "date": "2026-05-06",
     "mood": "😊",
@@ -108,5 +109,12 @@
       "Kyberg: Zoll-Richtlinien Vietnam",
       "Onkel anrufen für Termin 22.5."
     ]
-  }
+  },
+  "updates": [
+    {
+      "time": "16:04",
+      "type": "cron",
+      "message": "Dashboard Update alle 4 Stunden — Daten aktuell"
+    }
+  ]
 }
