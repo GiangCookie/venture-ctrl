@@ -1,82 +1,112 @@
 {
-  "version": "v5.4.33",
-  "lastUpdated": "2026-05-07T00:04:00+02:00",
+  "version": "v5.4.36",
+  "lastUpdated": "2026-05-07T12:04:00+02:00",
+  "status": "active",
   "metrics": {
-    "urgentTasks": 6,
-    "highPriority": 4,
-    "income": "5.6k€",
-    "deals": 9
+    "urgentTasks": 5,
+    "highPriority": 3,
+    "income": "2.1k€",
+    "deals": 10
   },
-  "finances": {
-    "income": 5600,
-    "expenses": 700,
-    "profit": 4900,
-    "openInvoices": 9000
-  },
-  "overdue": {
-    "nomu": 13,
-    "sentai": 7
-  },
-  "shootWeek": {
-    "week": "KW19",
-    "startDate": "2026-05-04",
-    "shoots": [
-      {"day": "Di 5.5.", "client": "Jidai/Jedi", "status": "✅ Erledigt", "urgent": true, "confirmed": true, "done": true},
-      {"day": "Mi 6.5.", "client": "Kono", "status": "✅ Erledigt", "urgent": true, "confirmed": true, "done": true},
-      {"day": "Fr 9.5.", "client": "Zentai", "status": "⏳ TBD", "confirmed": false}
+  "today": "2026-05-07",
+  "kw": 19,
+  "dayOfWeek": "DONNERSTAG",
+  "lastSession": {
+    "date": "2026-05-06",
+    "mood": "😊",
+    "energy": 4,
+    "completed": [
+      "Kono Shoot",
+      "Amy Meeting (neuer Lead)",
+      "Jidai Video FERTIG",
+      "Jidai Fotos bearbeitet",
+      "Angebot rausgeschickt",
+      "Zentai Pre-Production",
+      "Nico & Monki Posts",
+      "Sport (Joggen + Climbs)"
+    ],
+    "frustrations": [
+      "Sentai/Zentai gewonnen aber 0€ persönlich (nur Tough Cookie)",
+      "Geschäftspartner auf OMR statt Arbeit",
+      "PM/Team arbeitet nicht genug"
     ]
   },
-  "kw18Recap": {
-    "wins": 11,
-    "fails": 6,
-    "successRate": "65%"
+  "masterplan": {
+    "status": "active",
+    "targetIncome": "5.000€/Monat",
+    "currentIncome": "2.100€/Monat",
+    "gap": "2.900€/Monat",
+    "strategy": "ZWEI SÄULEN: Tough Cookie stabilisieren + Freelance ausbauen",
+    "deadline": "November 2026 (6 Monate Ultimatum)"
   },
-  "mood": "Produktiv",
-  "energy": "Kono + Amy erledigt",
-  "reflection": "Sehr produktiver Tag — Kono ✅, Amy ✅, Jidai Video ✅, Zentai Pre-Production ✅. Aber: Frustration über Tough Cookie Struktur. NOMU (13 Tage) + Sentai (7 Tage) weiterhin offen.",
-  "completed": [
-    "Jidai/Jedi Shoot (4.5.) ✅",
-    "Niku Post-Production ✅ FERTIG!",
-    "🎬 Kono Shoot (6.5.) ✅",
-    "🤝 Amy Meeting (6.5.) ✅",
-    "🎬 Jidai Video fertig ✅",
-    "📸 Jidai Fotos bearbeitet ✅",
-    "📄 Angebot rausgeschickt ✅",
-    "🎬 Zentai Pre-Production fertig ✅",
-    "📱 Posts: Nico & Monki ✅",
-    "🏃 Sport: Joggen + Climbs ✅"
+  "openTasks": [
+    {
+      "task": "Verleih anrufen",
+      "project": "Tough Cookie",
+      "due": "2026-05-07",
+      "priority": "urgent",
+      "note": "Für Freitag Zentai Dreh!"
+    },
+    {
+      "task": "Angebot fertig machen",
+      "project": "Lead",
+      "due": "2026-05-07",
+      "priority": "high"
+    },
+    {
+      "task": "Monki Post",
+      "project": "Social Media",
+      "due": "2026-05-07",
+      "priority": "normal"
+    },
+    {
+      "task": "Kyberg Mail (Onkel fragen)",
+      "project": "Kyberg Export",
+      "due": "2026-05-22",
+      "priority": "normal"
+    },
+    {
+      "task": "NOMU Post-Production",
+      "project": "NOMU",
+      "daysOverdue": 14,
+      "priority": "urgent"
+    },
+    {
+      "task": "Sentai Post-Production",
+      "project": "Tough Cookie",
+      "daysOverdue": 8,
+      "priority": "urgent"
+    }
   ],
-  "newLead": {
-    "name": "Amy",
-    "type": "Restaurant",
-    "meeting": "Mi 6.5. persönliches Kennenlernen ✅ Erfolgreich!",
-    "potential": "High",
-    "status": "In Pipeline"
-  },
-  "notes": "Sentai/Zentai gewonnen = 5.000€ für Tough Cookie, aber 0€ persönlich. Giang frustriert über Struktur.",
-  "privateTasks": ["Haushalt", "Sport", "Gemüse einkaufen"],
-  "criticalTasks": [
-    {"text": "🎬 Kono Shoot", "priority": "urgent", "today": true, "project": "Tough Cookie", "done": true, "date": "6.5."},
-    {"text": "🤝 Meeting Amy (Restaurant)", "priority": "urgent", "today": true, "project": "Neuer Lead", "done": true, "date": "6.5."},
-    {"text": "📄 Angebot fertig machen", "priority": "urgent", "today": false, "project": "Lead", "due": "7.5."},
-    {"text": "📱 Monki Post nachholen", "priority": "high", "today": false, "due": "7.5."},
-    {"text": "🎬 NOMU Post-Production", "daysOverdue": 13, "priority": "critical"},
-    {"text": "🎬 Sentai Post-Production", "daysOverdue": 7, "priority": "critical"},
-    {"text": "🎬 Jidai 2. Video fertig machen", "priority": "high", "project": "Tough Cookie"},
-    {"text": "📝 Niko Content-Plan", "priority": "medium", "project": "Social Media"},
-    {"text": "🎬 Zentai Pre-Production", "priority": "medium", "project": "Tough Cookie"},
-    {"text": "📧 Kyberg Mail - Termin 22. Mai", "priority": "low", "project": "Export"}
+  "deals": [
+    {
+      "client": "Sentai/Zentai",
+      "value": "5.000€",
+      "status": "Won",
+      "note": "Aber nur für Tough Cookie, nicht persönlich",
+      "frustration": true
+    },
+    {
+      "client": "Amy (Lead)",
+      "value": "TBD",
+      "status": "Lead",
+      "note": "Persönliches Kennenlernen erfolgreich"
+    }
   ],
-  "pipeline": [
-    {"client": "Sentai", "stage": "won", "value": "5.000€", "note": "Tough Cookie, nicht persönlich"},
-    {"client": "Zentai", "stage": "won", "value": "TBD", "note": "Tough Cookie, nicht persönlich"},{
-    {"client": "LuBu Projekt", "stage": "won", "value": "1.400€"},
-    {"client": "Weinbar Dario", "stage": "pitch", "probability": "50%"},
-    {"client": "Luma Labs", "stage": "pitch", "probability": "60%"},
-    {"client": "Japanese Pancake München", "stage": "pitch", "probability": "40%"},
-    {"client": "Kyberg Videoproduktionen", "stage": "lead", "probability": "40%", "next": "22. Mai Termin", "action": "Onkel fragen"},{
-    {"client": "Little Hiro", "stage": "lead", "probability": "30%"},
-    {"client": "Amy (Restaurant)", "stage": "lead", "probability": "High", "new": true, "meetingDone": true}
-  ],
-  "nextUpdate": "2026-05-07T00:04:00+02:00"
+  "weeklyGoals": {
+    "toughCookie": [
+      "Gespräch mit Vincent: 6-Monate-Plan",
+      "Dokumentation Aufgabenverteilung",
+      "Verleih anrufen für Zentai"
+    ],
+    "freelance": [
+      "Preisliste erstellen (800€/Video)",
+      "3 Kunden anschreiben",
+      "Ersten Retainer anbieten"
+    ],
+    "export": [
+      "Kyberg: Zoll-Richtlinien Vietnam",
+      "Onkel anrufen für Termin 22.5."
+    ]
+  }
 }
