@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>VENTURE CTRL v5.4.33 | 7. Mai 2026 — 00:04 Uhr</title>
+<title>VENTURE CTRL v5.4.34 | 7. Mai 2026 — 04:04 Uhr</title>
 <style>
 * { margin:0; padding:0; box-sizing:border-box; }
 :root {
@@ -76,6 +76,7 @@ body {
 .stage-pitch { background:rgba(255,165,2,.2); color:var(--high); }
 .stage-lead { background:rgba(255,71,87,.2); color:var(--urgent); }
 .stage-prod { background:rgba(112,161,255,.2); color:var(--low); }
+.stage-frust { background:rgba(220,20,60,.2); color:#ff6b6b; }
 .mood-box {
   background:linear-gradient(135deg,rgba(46,213,115,.1),rgba(102,126,234,.1));
   border-radius:12px; padding:16px; margin:16px;
@@ -97,6 +98,13 @@ body {
 }
 .success-box h4 { margin-bottom:8px; color:var(--normal); }
 .success-box p { font-size:.9rem; color:var(--text); line-height:1.5; }
+.masterplan-box {
+  background:linear-gradient(135deg,rgba(102,126,234,.2),rgba(118,75,162,.1));
+  border:1px solid var(--accent); border-radius:12px; padding:16px; margin:16px;
+  max-width:800px; margin-left:auto; margin-right:auto;
+}
+.masterplan-box h4 { margin-bottom:8px; color:var(--accent); }
+.masterplan-box p { font-size:.9rem; color:var(--text); line-height:1.5; }
 .shoot-calendar {
   display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin:16px;
   max-width:800px; margin-left:auto; margin-right:auto;
@@ -134,12 +142,12 @@ body {
 <body>
 <div class="header">
   <h1>🚀 VENTURE CTRL</h1>
-  <p>v5.4.33 — 7. Mai 2026, 00:04 Uhr</p>
+  <p>v5.4.34 — 7. Mai 2026, 04:04 Uhr</p>
 </div>
 
 <div class="today-hero">
   <h2>🔥 DONNERSTAG 7.5. — KW19 TAG 4</h2>
-  <p>Heute: Angebot fertig + Monki Post nachholen</p>
+  <p>Heute: Angebot fertig + Verleih anrufen für Zentai</p>
 </div>
 
 <div class="success-box">
@@ -148,18 +156,24 @@ body {
   Aber: Frustration über Tough Cookie Struktur. Sentai/Zentai gewonnen = 5.000€, aber 0€ persönlich</p>
 </div>
 
-<div class="success-box">
-  <h4>✅ WICHTIGER ERFOLG (Gestern)</h4>
-  <p><strong>Niku Post-Production FERTIG!</strong><br>
-  War 9 Tage überfällig — jetzt endlich erledigt! 🎉<br>
-  Pipeline entlastet.</p>
+<div class="masterplan-box">
+  <h4>🎯 GIANG'S MASTERPLAN 2026 (Neu!)</h4>
+  <p><strong>Ziel:</strong> 5.000€/Monat netto | <strong>Aktuell:</strong> 2.100€/Monat | <strong>Lücke:</strong> 2.900€<br>
+  <strong>Strategie:</strong> ZWEI SÄULEN — Tough Cookie stabilisieren + Freelance ausbauen<br>
+  <strong>Ultimatum:</strong> 6 Monate für Vincent (bis November 2026)</p>
+</div>
+
+<div class="alert-box">
+  <h4>⚠️ WICHTIGE ERKENNTNIS</h4>
+  <p><strong>Sentai/Zentai gewonnen = 5.000€</strong> — Aber nur für Tough Cookie, nicht persönlich!<br>
+  Giang bekommt 0€ direkt (nur über Agentur). Das ist der Kern der Frustration.</p>
 </div>
 
 <div class="stats-grid">
-  <div class="stat-box"><div class="num">🔴 6</div><div class="label">Urgent Tasks</div></div>
-  <div class="stat-box"><div class="num">🟡 4</div><div class="label">High Priority</div></div>
-  <div class="stat-box"><div class="num">💰 5.6k€</div><div class="label">Einnahmen</div></div>
-  <div class="stat-box"><div class="num">📋 9</div><div class="label">Deals</div></div>
+  <div class="stat-box"><div class="num">🔴 5</div><div class="label">Urgent Tasks</div></div>
+  <div class="stat-box"><div class="num">🟡 3</div><div class="label">High Priority</div></div>
+  <div class="stat-box"><div class="num">💰 2.1k€</div><div class="label">Dein Einkommen</div></div>
+  <div class="stat-box"><div class="num">📋 10</div><div class="label">Deals</div></div>
 </div>
 
 <div class="card">
@@ -176,9 +190,9 @@ body {
 
 <div class="card">
   <h3>🎯 Heute Geplant (7.5.)</h3>
-  <div class="task"><div class="priority urgent"></div><div class="text">📄 Angebot fertig machen</div><span class="badge badge-today">HEUTE</span></div>
-  <div class="task"><div class="priority high"></div><div class="text">📱 Monki Post nachholen</div><span class="badge badge-tomorrow">NACHHOLEN</span></div>
-  <div class="task"><div class="priority low"></div><div class="text">📧 Kyberg Mail (Termin 22. Mai)</div><span class="badge badge-pending">ASK ONKEL</span></div>
+  <div class="task"><div class="priority high"></div><div class="text">📄 Angebot fertig machen</div><span class="badge badge-today">HEUTE</span></div>
+  <div class="task"><div class="priority normal"></div><div class="text">📱 Monki Post nachholen</div><span class="badge badge-tomorrow">NACHHOLEN</span></div>
+  <div class="task"><div class="priority urgent"></div><div class="text">📞 Verleih anrufen (Zentai)</div><span class="badge badge-today">DRINGEND!</span></div>
 </div>
 
 <div class="card">
@@ -191,23 +205,17 @@ body {
 
 <div class="card">
   <h3>🔴 Überfällige Tasks (CRITICAL)</h3>
-  <div class="task"><div class="priority urgent"></div><div class="text">🎬 NOMU Post-Production</div><span class="badge badge-overdue">13 Tage überfällig</span></div>
-  <div class="task"><div class="priority urgent"></div><div class="text">🎬 Sentai Post-Production</div><span class="badge badge-overdue">7 Tage überfällig</span></div>
+  <div class="task"><div class="priority urgent"></div><div class="text">🎬 NOMU Post-Production</div><span class="badge badge-overdue">14 Tage überfällig</span></div>
+  <div class="task"><div class="priority urgent"></div><div class="text">🎬 Sentai Post-Production</div><span class="badge badge-overdue">8 Tage überfällig</span></div>
 </div>
 
 <div class="card">
-  <h3>🟡 High Priority</h3>
-  <div class="task"><div class="priority high"></div><div class="text">🎬 Jidai 2. Video fertig machen</div><span class="badge badge-pending">Rest</span></div>
-  <div class="task"><div class="priority high"></div><div class="text">📝 Niko Content-Plan</div><span class="badge badge-pending">🟡</span></div>
-  <div class="task"><div class="priority high"></div><div class="text">🎬 Zentai Pre-Production</div><span class="badge badge-pending">🟡</span></div>
-</div>
-
-<div class="card">
-  <h3>🟡 Medium — Kyberg</h3>
+  <h3>🟡 Medium — Kyberg Export</h3>
   <div class="task"><div class="priority high"></div><div class="text">📧 Kyberg Mail</div><span class="badge badge-pending">Termin 22. Mai</span></div>
   <p style="padding:8px 12px; background:var(--surface); border-radius:8px; margin-top:8px; font-size:.85rem; color:var(--muted);">
     ✅ Antwort erhalten — Termin vorschlagen: 22. Mai<br>
-    → Onkel fragen für Infos
+    → Onkel fragen für Zoll-Richtlinien Vietnam<br>
+    → Giang muss Zoll-Papiere ausarbeiten
   </p>
 </div>
 
@@ -224,52 +232,71 @@ body {
       <div class="shoot-name">Kono</div>
       <span class="status status-done">✅ Erledigt</span>
     </div>
-    <div class="shoot-day">
+    <div class="shoot-day active">
       <div class="day-name">Freitag 9.5.</div>
       <div class="shoot-name">Zentai</div>
-      <span class="status status-prep">⏳ TBD</span>
+      <span class="status status-prep">⏳ VERLEIH!</span>
     </div>
   </div>
-  <p style="text-align:center;margin-top:12px;font-size:.85rem;color:var(--muted);">→ Beauty-Event Frankfurt: <strong style="color:var(--urgent)">ABGESAGT</strong> (-1.000€)</p>
+  <p style="text-align:center;margin-top:12px;font-size:.85rem;color:var(--urgent);">⚠️ Verleih heute anrufen für Freitag!</p>
 </div>
 
 <div class="card">
-  <h3>💰 Finanzen</h3>
+  <h3>💰 Finanzielle Realität (Korrigiert)</h3>
   <div class="finances">
-    <div class="fin-box"><div class="amount income">5.600€</div><div class="label">Einnahmen</div></div>
-    <div class="fin-box"><div class="amount expense">700€</div><div class="label">Ausgaben</div></div>
-    <div class="fin-box"><div class="amount profit">4.900€</div><div class="label">Gewinn</div></div>
+    <div class="fin-box"><div class="amount income">1.100€</div><div class="label">Tough Cookie</div></div>
+    <div class="fin-box"><div class="amount income">1.000€</div><div class="label">Freelance</div></div>
+    <div class="fin-box"><div class="amount profit">2.100€</div><div class="label">Gesamt (Ziel: 5k€)</div></div>
   </div>
   <p style="text-align:center;margin-top:12px;font-size:.85rem;color:var(--muted);">
-    ❌ Beauty-Event abgesagt: <span style="color:var(--expense)">-1.000€</span><br>
-    ✅ Kyberg: Antwort erhalten, Termin 22. Mai vorschlagen<br>
-    ✅ Kono Shoot: Erledigt heute
+    <strong style="color:var(--urgent)">Lücke: 2.900€/Monat</strong><br>
+    Sentai/Zentai 5.000€ → Tough Cookie, nicht persönlich 😤<br>
+    Investor-Darlehen: ~10k€ Rest (weg in 1-2 Monaten)
   </p>
 </div>
 
 <div class="card">
   <h3>📊 Pipeline</h3>
-  <div class="deal"><span>Sentai</span><span class="stage stage-won">✅ Closed Won (5.000€)</span></div>
-  <div class="deal"><span>LuBu Projekt</span><span class="stage stage-won">✅ Closed Won (1.400€)</span></div>
-  <div class="deal"><span>Weinbar Dario</span><span class="stage stage-pitch">🎯 Pitch (50%)</span></div>
-  <div class="deal"><span>Luma Labs</span><span class="stage stage-pitch">🎯 Pitch (60%)</span></div>
-  <div class="deal"><span>Japanese Pancake München</span><span class="stage stage-pitch">🎯 Pitch (40%)</span></div>
-  <div class="deal"><span>Kyberg Videoproduktionen</span><span class="stage stage-lead">👋 Lead (40%) — 22. Mai?</span></div>
-  <div class="deal"><span>Little Hiro</span><span class="stage stage-lead">👋 Lead (30%)</span></div>
-  <div class="deal"><span style="color:#a78bfa;">Amy (Restaurant) 🆕</span><span class="stage stage-won">✅ Meeting geführt (Follow-up)</span></div>
+  <div class="deal"><span>Sentai/Zentai</span><span class="stage stage-frust">✅ WON aber 0€ persönlich</span></div>
+  <div class="deal"><span>LuBu Projekt</span><span class="stage stage-won">✅ Closed Won</span></div>
+  <div class="deal"><span>Amy (Restaurant) 🆕</span><span class="stage stage-won">✅ Meeting geführt</span></div>
+  <div class="deal"><span>Weinbar Dario</span><span class="stage stage-pitch">🎯 Pitch</span></div>
+  <div class="deal"><span>Luma Labs</span><span class="stage stage-pitch">🎯 Pitch</span></div>
+  <div class="deal"><span>Japanese Pancake München</span><span class="stage stage-pitch">🎯 Pitch</span></div>
+  <div class="deal"><span>Kyberg Videoproduktionen</span><span class="stage stage-lead">👋 Lead — 22. Mai?</span></div>
+  <div class="deal"><span>Little Hiro</span><span class="stage stage-lead">👋 Lead</span></div>
 </div>
 
 <div class="card">
-  <h3>📝 NOMU Update</h3>
+  <h3>📝 Tough Cookie Struktur-Problematik</h3>
   <p style="color:var(--muted);font-size:.9rem;line-height:1.6;padding:8px;background:var(--surface);border-radius:8px;">
-    <em>"Komme leider vielleicht immer nicht dazu, wird aufgeschoben bis ich dazu komme"</em><br><br>
-    <span style="color:var(--high)">→ Keine Deadline gesetzt, läuft im Hintergrund</span>
+    <strong>Aufteilung:</strong><br>
+    • Giang: 34% — macht 70% der Arbeit — bekommt 1.100€<br>
+    • Vincent: 34% — macht wenig — bekommt 1.100€<br>
+    • Investor: 32% — nur Geld — bekommt 0€ (aber 32% Gewinn)<br><br>
+    <span style="color:var(--urgent)">→ Kein Gewinn, alles reinvestiert</span><br>
+    <strong>6-Monate-Ultimatum gesetzt (bis November 2026)</strong>
+  </p>
+</div>
+
+<div class="card">
+  <h3>🎯 Freelance Strategie — DIE LÖSUNG</h3>
+  <p style="color:var(--muted);font-size:.9rem;line-height:1.6;padding:8px;background:var(--surface);border-radius:8px;">
+    <strong>Ziel: Freelance von 1.000€ auf 2.500€/Monat hochfahren</strong><br><br>
+    <strong>Neue Preise:</strong><br>
+    • Restaurant-Video (1-2 Min): 800€<br>
+    • Restaurant-Fotos (20 Bilder): 600€<br>
+    • Social-Media-Paket monatlich: 400€<br><br>
+    <strong>Diese Woche:</strong><br>
+    1. Preisliste erstellen<br>
+    2. 3 Kunden anschreiben<br>
+    3. Ersten Retainer anbieten
   </p>
 </div>
 
 <div class="footer">
-  <p>v5.4.32 — Letztes Update: 6. Mai 2026, 20:04 Uhr</p>
-  <p style="margin-top:8px;font-size:.7rem;">Automatisches Update via Cron: dashboard-update-4h-v2 | Nächstes Update: 00:04 Uhr</p>
+  <p>v5.4.34 — Letztes Update: 7. Mai 2026, 04:04 Uhr</p>
+  <p style="margin-top:8px;font-size:.7rem;">Automatisches Update via Cron: dashboard-update-4h-v2 | Nächstes Update: 08:04 Uhr</p>
 </div>
 
 </body>

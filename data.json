@@ -1,14 +1,112 @@
 {
-  "version": "v5.4.29",
-  "lastUpdated": "2026-05-06T04:04:00+02:00",
+  "version": "v5.4.33",
+  "lastUpdated": "2026-05-07T04:04:00+02:00",
   "status": "active",
   "metrics": {
-    "urgentTasks": 6,
-    "highPriority": 4,
-    "income": "5.6k€",
-    "deals": 9
+    "urgentTasks": 5,
+    "highPriority": 3,
+    "income": "2.1k€",
+    "deals": 10
   },
-  "today": "2026-05-06",
+  "today": "2026-05-07",
   "kw": 19,
-  "dayOfWeek": "MITTWOCH"
+  "dayOfWeek": "DONNERSTAG",
+  "lastSession": {
+    "date": "2026-05-06",
+    "mood": "😊",
+    "energy": 4,
+    "completed": [
+      "Kono Shoot",
+      "Amy Meeting (neuer Lead)",
+      "Jidai Video FERTIG",
+      "Jidai Fotos bearbeitet",
+      "Angebot rausgeschickt",
+      "Zentai Pre-Production",
+      "Nico & Monki Posts",
+      "Sport (Joggen + Climbs)"
+    ],
+    "frustrations": [
+      "Sentai/Zentai gewonnen aber 0€ persönlich (nur Tough Cookie)",
+      "Geschäftspartner auf OMR statt Arbeit",
+      "PM/Team arbeitet nicht genug"
+    ]
+  },
+  "masterplan": {
+    "status": "created",
+    "targetIncome": "5.000€/Monat",
+    "currentIncome": "2.100€/Monat",
+    "gap": "2.900€/Monat",
+    "strategy": "ZWEI SÄULEN: Tough Cookie stabilisieren + Freelance ausbauen",
+    "deadline": "November 2026 (6 Monate Ultimatum)"
+  },
+  "openTasks": [
+    {
+      "task": "Angebot fertig machen",
+      "project": "Lead",
+      "due": "2026-05-07",
+      "priority": "high"
+    },
+    {
+      "task": "Monki Post",
+      "project": "Social Media",
+      "due": "2026-05-07",
+      "priority": "normal"
+    },
+    {
+      "task": "Kyberg Mail (Onkel fragen)",
+      "project": "Kyberg Export",
+      "due": "2026-05-22",
+      "priority": "normal"
+    },
+    {
+      "task": "Verleih anrufen",
+      "project": "Tough Cookie",
+      "due": "2026-05-07",
+      "priority": "urgent",
+      "note": "Für Freitag Zentai Dreh!"
+    },
+    {
+      "task": "NOMU Post-Production",
+      "project": "NOMU",
+      "daysOverdue": 14,
+      "priority": "urgent"
+    },
+    {
+      "task": "Sentai Post-Production",
+      "project": "Tough Cookie",
+      "daysOverdue": 8,
+      "priority": "urgent"
+    }
+  ],
+  "deals": [
+    {
+      "client": "Sentai/Zentai",
+      "value": "5.000€",
+      "status": "Won",
+      "note": "Aber nur für Tough Cookie, nicht persönlich",
+      "frustration": true
+    },
+    {
+      "client": "Amy (Lead)",
+      "value": "TBD",
+      "status": "Lead",
+      "note": "Persönliches Kennenlernen erfolgreich"
+    }
+  ],
+  "weeklyGoals": {
+    "toughCookie": [
+      "Gespräch mit Vincent: 6-Monate-Plan",
+      "Dokumentation Aufgabenverteilung",
+      "Verleih anrufen für Zentai"
+    ],
+    "freelance": [
+      "Preisliste erstellen (800€/Video)",
+      "3 Kunden anschreiben",
+      "Ersten Retainer anbieten"
+    ],
+    "export": [
+      "Kyberg: Zoll-Richtlinien Vietnam",
+      "Onkel anrufen für Termin 22.5."
+    ]
+  }
 }
