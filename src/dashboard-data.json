@@ -1,5 +1,5 @@
 {
-  "version": "v5.4.38",
+  "version": "v5.4.37",
   "lastUpdated": "2026-05-08T00:04:00+02:00",
   "status": "active",
   "metrics": {
@@ -151,5 +151,23 @@
       "photos": "600€/20 Bilder",
       "socialPackage": "400€/Monat (4 Posts + 1 Story/Reel)"
     }
-  }
+  },
+  "reminders": [
+    {
+      "date": "2026-05-10",
+      "tasks": ["Onkel-Antwort versendet?", "Onkel-Telefonat geführt?", "Pitchdeck-Slide überarbeitet?", "Beide Pitchdecks finalisiert?"]
+    },
+    {
+      "date": "2026-05-17",
+      "tasks": ["Distributor Profile PDF fertig?"]
+    },
+    {
+      "date": "2026-05-24",
+      "tasks": ["Kyberg-Erstkontakt erfolgt?", "Anwaltstermin gebucht?"]
+    },
+    {
+      "date": "2026-05-31",
+      "tasks": ["Markt-Recherche abgeschlossen?", "Onkel-Folgemail mit Produktvorschlägen?"]
+    }
+  ]
 }

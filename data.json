@@ -1,85 +1,113 @@
 {
   "version": "v5.4.38",
-  "lastUpdated": "2026-05-07T20:04:00+02:00",
+  "lastUpdated": "2026-05-08T00:04:00+02:00",
   "status": "active",
   "metrics": {
-    "urgentTasks": 5,
-    "highPriority": 3,
+    "urgentTasks": 4,
+    "highPriority": 5,
     "income": "2.1k€",
-    "deals": 10
+    "deals": 12
   },
-  "today": "2026-05-07",
+  "today": "2026-05-08",
   "kw": 19,
-  "dayOfWeek": "DONNERSTAG",
-  "time": "16:04",
+  "dayOfWeek": "FREITAG",
+  "time": "00:04",
   "lastSession": {
-    "date": "2026-05-06",
-    "mood": "😊",
-    "energy": 4,
+    "date": "2026-05-07",
+    "mood": "🚀",
+    "energy": 5,
     "completed": [
-      "Kono Shoot",
-      "Amy Meeting (neuer Lead)",
-      "Jidai Video FERTIG",
-      "Jidai Fotos bearbeitet",
-      "Angebot rausgeschickt",
-      "Zentai Pre-Production",
-      "Nico & Monki Posts",
-      "Sport (Joggen + Climbs)"
+      "Kyberg Export Game Changer!",
+      "Onkel-Antwort: 13 Mio USD Volumen",
+      "Tough Cookie Pitchdeck Pricing final",
+      "Zentai Dreh Pre-Production",
+      "Verleih anrufen (für Freitag)"
     ],
     "frustrations": [
-      "Sentai/Zentai gewonnen aber 0€ persönlich (nur Tough Cookie)",
-      "Geschäftspartner auf OMR statt Arbeit",
-      "PM/Team arbeitet nicht genug"
+      "Sentai/Zentai gewonnen aber 0€ persönlich",
+      "NOMU weiter überfällig (14 Tage)",
+      "Sentai Post-Production überfällig (8 Tage)"
     ]
   },
   "masterplan": {
-    "status": "created",
+    "status": "active",
     "targetIncome": "5.000€/Monat",
     "currentIncome": "2.100€/Monat",
     "gap": "2.900€/Monat",
-    "strategy": "ZWEI SÄULEN: Tough Cookie stabilisieren + Freelance ausbauen",
-    "deadline": "November 2026 (6 Monate Ultimatum)"
+    "strategy": "ZWEI SÄULEN: Tough Cookie stabilisieren + Freelance ausbauen + Export (Kyberg) als Game Changer",
+    "deadline": "November 2026 (6 Monate Ultimatum)",
+    "kybergUpdate": "Onkel: 13 Mio USD Jahresimportvolumen (10 Mio Pharma + 3 Mio NEM)"
   },
   "openTasks": [
     {
-      "task": "Angebot fertig machen",
-      "project": "Lead",
-      "due": "2026-05-07",
-      "priority": "high"
-    },
-    {
-      "task": "Monki Post",
-      "project": "Social Media",
-      "due": "2026-05-07",
-      "priority": "normal"
-    },
-    {
-      "task": "Kyberg Mail (Onkel fragen)",
+      "task": "Onkel-Antwort auf Vietnamesisch",
       "project": "Kyberg Export",
-      "due": "2026-05-22",
-      "priority": "normal"
+      "due": "2026-05-10",
+      "priority": "urgent",
+      "note": "13 Mio USD Volumen — game changer!"
     },
     {
-      "task": "Verleih anrufen",
-      "project": "Tough Cookie",
-      "due": "2026-05-07",
+      "task": "Telefonat mit Onkel (Provision klären)",
+      "project": "Kyberg Export",
+      "due": "2026-05-10",
       "priority": "urgent",
-      "note": "Für Freitag Zentai Dreh!"
+      "note": "5-7% Provision, Exklusivität Vietnam"
+    },
+    {
+      "task": "Pitchdeck-Slide 'Packages' überarbeiten",
+      "project": "Tough Cookie",
+      "due": "2026-05-10",
+      "priority": "urgent",
+      "note": "Flex 1.490€, Growth 1.290€, Partner 1.190€"
+    },
+    {
+      "task": "Zwei Pitchdecks finalisieren",
+      "project": "Tough Cookie",
+      "due": "2026-05-10",
+      "priority": "urgent",
+      "note": "Neue Pricing-Struktur!"
+    },
+    {
+      "task": "Zentai Dreh",
+      "project": "Tough Cookie",
+      "due": "2026-05-09",
+      "priority": "urgent",
+      "note": "Freitag — Equipment reserviert!"
     },
     {
       "task": "NOMU Post-Production",
       "project": "NOMU",
-      "daysOverdue": 14,
-      "priority": "urgent"
+      "daysOverdue": 15,
+      "priority": "high"
     },
     {
       "task": "Sentai Post-Production",
       "project": "Tough Cookie",
-      "daysOverdue": 8,
-      "priority": "urgent"
+      "daysOverdue": 9,
+      "priority": "high"
+    },
+    {
+      "task": "Distributor Profile PDF erstellen",
+      "project": "Kyberg Export",
+      "due": "2026-05-17",
+      "priority": "high"
+    },
+    {
+      "task": "Kyberg-Erstkontakt initiieren",
+      "project": "Kyberg Export",
+      "due": "2026-05-24",
+      "priority": "high"
     }
   ],
   "deals": [
+    {
+      "client": "Kyberg Export (Onkel)",
+      "value": "13 Mio USD Volumen",
+      "status": "Game Changer",
+      "note": "10 Mio Pharma + 3 Mio NEM, Importlizenz vorhanden",
+      "frustration": false,
+      "highlight": true
+    },
     {
       "client": "Sentai/Zentai",
       "value": "5.000€",
@@ -95,26 +123,41 @@
     }
   ],
   "weeklyGoals": {
+    "kybergExport": [
+      "Onkel-Antwort auf Vietnamesisch (bis So)",
+      "Telefonat mit Onkel (Provision 5-7%)",
+      "Distributor Profile PDF erstellen (bis Fr 17.5.)",
+      "Kyberg-Erstkontakt initiieren (bis Fr 24.5.)"
+    ],
     "toughCookie": [
-      "Gespräch mit Vincent: 6-Monate-Plan",
-      "Dokumentation Aufgabenverteilung",
-      "Verleih anrufen für Zentai"
+      "Pitchdeck-Slide 'Packages' überarbeiten",
+      "Zwei Pitchdecks finalisieren",
+      "Zentai Dreh am Freitag",
+      "Sentai Post-Production nachholen"
     ],
     "freelance": [
       "Preisliste erstellen (800€/Video)",
       "3 Kunden anschreiben",
       "Ersten Retainer anbieten"
-    ],
-    "export": [
-      "Kyberg: Zoll-Richtlinien Vietnam",
-      "Onkel anrufen für Termin 22.5."
     ]
+  },
+  "pricing": {
+    "toughCookie": {
+      "flex": "1.490€/Monat (5 Reels, monatlich kündbar)",
+      "growth": "1.290€/Monat (5 Reels, 3 Monate Mindestlaufzeit) — EMPFOHLEN",
+      "partner": "1.190€/Monat (7 Reels, 6 Monate — nur intern/Renewals)"
+    },
+    "freelance": {
+      "video": "800€/Video",
+      "photos": "600€/20 Bilder",
+      "socialPackage": "400€/Monat (4 Posts + 1 Story/Reel)"
+    }
   },
   "updates": [
     {
-      "time": "16:04",
+      "time": "00:04",
       "type": "cron",
-      "message": "Dashboard Update alle 4 Stunden — Daten aktuell"
+      "message": "Dashboard Update — 13 Mio USD Kyberg Game Changer!"
     }
   ]
 }
