@@ -1,6 +1,6 @@
 {
-  "version": "v5.4.37",
-  "lastUpdated": "2026-05-08T00:04:00+02:00",
+  "version": "v5.4.39",
+  "lastUpdated": "2026-05-08T04:04:00+02:00",
   "status": "active",
   "metrics": {
     "urgentTasks": 4,
@@ -168,6 +168,13 @@
     {
       "date": "2026-05-31",
       "tasks": ["Markt-Recherche abgeschlossen?", "Onkel-Folgemail mit Produktvorschlägen?"]
+    }
+  ],
+  "updates": [
+    {
+      "time": "04:04",
+      "type": "cron",
+      "message": "Dashboard Update v5.4.39 — Automatisches 4h-Update"
     }
   ]
 }
