@@ -1,6 +1,6 @@
 {
-  "version": "v5.4.39",
-  "lastUpdated": "2026-05-08T04:04:00+02:00",
+  "version": "v5.4.42",
+  "lastUpdated": "2026-05-10T00:04:00+02:00",
   "status": "active",
   "metrics": {
     "urgentTasks": 4,
@@ -8,25 +8,22 @@
     "income": "2.1k€",
     "deals": 12
   },
-  "today": "2026-05-08",
+  "today": "2026-05-10",
   "kw": 19,
-  "dayOfWeek": "FREITAG",
-  "time": "04:04",
+  "dayOfWeek": "SONNTAG",
+  "time": "00:04",
   "lastSession": {
-    "date": "2026-05-07",
-    "mood": "🚀",
-    "energy": 5,
+    "date": "2026-05-09",
+    "mood": "🤷",
+    "energy": 3,
     "completed": [
-      "Kyberg Export Game Changer!",
-      "Onkel-Antwort: 13 Mio USD Volumen",
-      "Tough Cookie Pitchdeck Pricing final",
-      "Zentai Dreh Pre-Production",
-      "Verleih anrufen (für Freitag)"
+      "Keine Updates erhalten"
     ],
     "frustrations": [
-      "Sentai/Zentai gewonnen aber 0€ persönlich",
-      "NOMU weiter überfällig (14 Tage)",
-      "Sentai Post-Production überfällig (8 Tage)"
+      "NOMU jetzt 17 Tage überfällig",
+      "Sentai jetzt 11 Tage überfällig",
+      "G-Life Rechnung immer noch nicht raus",
+      "4 Deadlines laufen heute ab!"
     ]
   },
   "masterplan": {
@@ -36,7 +33,8 @@
     "gap": "2.900€/Monat",
     "strategy": "ZWEI SÄULEN: Tough Cookie stabilisieren + Freelance ausbauen + Export (Kyberg) als Game Changer",
     "deadline": "November 2026 (6 Monate Ultimatum)",
-    "kybergUpdate": "Onkel: 13 Mio USD Jahresimportvolumen (10 Mio Pharma + 3 Mio NEM)"
+    "kybergUpdate": "Onkel: 13 Mio USD Jahresimportvolumen (10 Mio Pharma + 3 Mio NEM)",
+    "todayFocus": "🔥 SONNTAG = DEADLINE-DAY! 4 Tasks fällig: Onkel-Antwort, Telefonat, Pitchdeck-Slides, Pitchdecks final. + NOMU (17 Tage überfällig!) + Sentai (11 Tage überfällig!)"
   },
   "openTasks": [
     {
@@ -44,59 +42,78 @@
       "project": "Kyberg Export",
       "due": "2026-05-10",
       "priority": "urgent",
-      "note": "13 Mio USD Volumen — game changer!"
+      "note": "13 Mio USD Volumen — Deadline HEUTE!",
+      "status": "pending"
     },
     {
       "task": "Telefonat mit Onkel (Provision klären)",
       "project": "Kyberg Export",
       "due": "2026-05-10",
       "priority": "urgent",
-      "note": "5-7% Provision, Exklusivität Vietnam"
+      "note": "5-7% Provision, Exklusivität Vietnam — Deadline HEUTE!",
+      "status": "pending"
     },
     {
       "task": "Pitchdeck-Slide 'Packages' überarbeiten",
       "project": "Tough Cookie",
       "due": "2026-05-10",
       "priority": "urgent",
-      "note": "Flex 1.490€, Growth 1.290€, Partner 1.190€"
+      "note": "Flex 1.490€, Growth 1.290€, Partner 1.190€ — Deadline HEUTE!",
+      "status": "pending"
     },
     {
       "task": "Zwei Pitchdecks finalisieren",
       "project": "Tough Cookie",
       "due": "2026-05-10",
       "priority": "urgent",
-      "note": "Neue Pricing-Struktur!"
+      "note": "Neue Pricing-Struktur! Deadline HEUTE!",
+      "status": "pending"
     },
     {
-      "task": "Zentai Dreh",
+      "task": "💰 G-Life Rechnung rausschicken",
+      "project": "Freelance",
+      "due": "2026-05-09",
+      "priority": "high",
+      "note": "✅ Fertig, nur abschicken! Quick Win!",
+      "status": "pending"
+    },
+    {
+      "task": "🎬 Nikku Post-Production",
       "project": "Tough Cookie",
       "due": "2026-05-09",
-      "priority": "urgent",
-      "note": "Freitag — Equipment reserviert!"
+      "priority": "high",
+      "note": "Wochenende geplant",
+      "status": "pending"
     },
     {
       "task": "NOMU Post-Production",
       "project": "NOMU",
-      "daysOverdue": 15,
-      "priority": "high"
+      "daysOverdue": 17,
+      "priority": "high",
+      "note": "🔥 17 Tage überfällig!",
+      "status": "overdue"
     },
     {
       "task": "Sentai Post-Production",
       "project": "Tough Cookie",
-      "daysOverdue": 9,
-      "priority": "high"
+      "daysOverdue": 11,
+      "priority": "high",
+      "note": "🔥 11 Tage überfällig!",
+      "status": "overdue"
     },
     {
       "task": "Distributor Profile PDF erstellen",
       "project": "Kyberg Export",
       "due": "2026-05-17",
-      "priority": "high"
+      "priority": "high",
+      "status": "pending"
     },
     {
       "task": "Kyberg-Erstkontakt initiieren",
       "project": "Kyberg Export",
       "due": "2026-05-24",
-      "priority": "high"
+      "priority": "high",
+      "status": "pending"
     }
   ],
   "deals": [
@@ -132,7 +149,7 @@
     "toughCookie": [
       "Pitchdeck-Slide 'Packages' überarbeiten",
       "Zwei Pitchdecks finalisieren",
-      "Zentai Dreh am Freitag",
+      "Zentai Dreh am Freitag ✅ (erledigt)",
       "Sentai Post-Production nachholen"
     ],
     "freelance": [
@@ -155,9 +172,24 @@
   },
   "updates": [
     {
-      "time": "04:04",
+      "time": "00:04",
       "type": "cron",
-      "message": "Dashboard Update v5.4.39 — Automatisches 4h-Update"
+      "message": "Dashboard Update v5.4.42 — SONNTAG DEADLINE-DAY! 4 Tasks fällig + 2 überfällige Projekte!"
+    },
+    {
+      "time": "20:04",
+      "type": "cron",
+      "message": "Dashboard Update v5.4.41 — SAMSTAG: Personal Brand + Sport + Nikku Post-Production"
+    },
+    {
+      "time": "08:04",
+      "type": "cron",
+      "message": "Dashboard Update v5.4.40 — Zentai Dreh läuft!"
+    },
+    {
+      "time": "00:04",
+      "type": "cron",
+      "message": "Dashboard Update v5.4.38 — 13 Mio USD Kyberg Game Changer!"
     }
   ]
 }
