@@ -1,6 +1,6 @@
 {
-  "version": "v5.4.42",
-  "lastUpdated": "2026-05-10T00:04:00+02:00",
+  "version": "v5.4.45",
+  "lastUpdated": "2026-05-10T12:04:00+02:00",
   "status": "active",
   "metrics": {
     "urgentTasks": 4,
@@ -11,7 +11,7 @@
   "today": "2026-05-10",
   "kw": 19,
   "dayOfWeek": "SONNTAG",
-  "time": "00:04",
+  "time": "12:04",
   "lastSession": {
     "date": "2026-05-09",
     "mood": "🤷",
@@ -88,7 +88,7 @@
     {
       "task": "NOMU Post-Production",
       "project": "NOMU",
-      "daysOverdue": 17,
+      "daysOverdue": 18,
       "priority": "high",
       "note": "🔥 17 Tage überfällig!",
       "status": "overdue"
@@ -96,7 +96,7 @@
     {
       "task": "Sentai Post-Production",
       "project": "Tough Cookie",
-      "daysOverdue": 11,
+      "daysOverdue": 12,
       "priority": "high",
       "note": "🔥 11 Tage überfällig!",
       "status": "overdue"
@@ -171,6 +171,21 @@
     }
   },
   "updates": [
+    {
+      "time": "12:04",
+      "type": "cron",
+      "message": "Dashboard Update v5.4.45 — SONNTAG MITTAG: 4 Deadlines noch aktiv, NOMU jetzt 18 Tage überfällig!"
+    },
+    {
+      "time": "08:04",
+      "type": "cron",
+      "message": "Dashboard Update v5.4.44 — SONNTAG DEADLINE-DAY! 4 Tasks fällig + 2 überfällige Projekte!"
+    },
+    {
+      "time": "04:04",
+      "type": "cron",
+      "message": "Dashboard Update v5.4.43 — SONNTAG DEADLINE-DAY! 4 Tasks fällig + 2 überfällige Projekte!"
+    },
     {
       "time": "00:04",
       "type": "cron",

@@ -1,6 +1,6 @@
 {
-  "version": "v5.4.42",
-  "lastUpdated": "2026-05-10T00:04:00+02:00",
+  "version": "v5.4.45",
+  "lastUpdated": "2026-05-10T12:04:00+02:00",
   "status": "active",
   "metrics": {
     "urgentTasks": 4,
@@ -11,7 +11,7 @@
   "today": "2026-05-10",
   "kw": 19,
   "dayOfWeek": "SONNTAG",
-  "time": "00:04",
+  "time": "12:04",
   "lastSession": {
     "date": "2026-05-09",
     "mood": "🤷",
@@ -172,9 +172,19 @@
   },
   "updates": [
     {
-      "time": "00:04",
+      "time": "12:04",
       "type": "cron",
-      "message": "Dashboard Update v5.4.42 — SONNTAG DEADLINE-DAY! 4 Tasks fällig + 2 überfällige Projekte!"
+      "message": "Dashboard Update v5.4.45 — SONNTAG MITTAG: 4 Deadlines noch aktiv!"
+    },
+    {
+      "time": "08:04",
+      "type": "cron",
+      "message": "Dashboard Update v5.4.44 — SONNTAG DEADLINE-DAY! 4 Tasks fällig + 2 überfällige Projekte!"
+    },
+    {
+      "time": "04:04",
+      "type": "cron",
+      "message": "Dashboard Update v5.4.43 — Sonntag Deadline-Day!"
     },
     {
       "time": "20:04",
@@ -185,11 +195,6 @@
       "time": "08:04",
       "type": "cron",
       "message": "Dashboard Update v5.4.40 — Zentai Dreh läuft!"
-    },
-    {
-      "time": "00:04",
-      "type": "cron",
-      "message": "Dashboard Update v5.4.38 — 13 Mio USD Kyberg Game Changer!"
     }
   ]
 }
