@@ -1,6 +1,6 @@
 {
-  "version": "v5.4.45",
-  "lastUpdated": "2026-05-10T12:04:00+02:00",
+  "version": "v5.4.46",
+  "lastUpdated": "2026-05-10T16:04:00+02:00",
   "status": "active",
   "metrics": {
     "urgentTasks": 4,
@@ -11,7 +11,7 @@
   "today": "2026-05-10",
   "kw": 19,
   "dayOfWeek": "SONNTAG",
-  "time": "12:04",
+  "time": "16:04",
   "lastSession": {
     "date": "2026-05-09",
     "mood": "🤷",
@@ -20,8 +20,8 @@
       "Keine Updates erhalten"
     ],
     "frustrations": [
-      "NOMU jetzt 17 Tage überfällig",
-      "Sentai jetzt 11 Tage überfällig",
+      "NOMU jetzt 18 Tage überfällig",
+      "Sentai jetzt 12 Tage überfällig",
       "G-Life Rechnung immer noch nicht raus",
       "4 Deadlines laufen heute ab!"
     ]
@@ -34,7 +34,7 @@
     "strategy": "ZWEI SÄULEN: Tough Cookie stabilisieren + Freelance ausbauen + Export (Kyberg) als Game Changer",
     "deadline": "November 2026 (6 Monate Ultimatum)",
     "kybergUpdate": "Onkel: 13 Mio USD Jahresimportvolumen (10 Mio Pharma + 3 Mio NEM)",
-    "todayFocus": "🔥 SONNTAG = DEADLINE-DAY! 4 Tasks fällig: Onkel-Antwort, Telefonat, Pitchdeck-Slides, Pitchdecks final. + NOMU (17 Tage überfällig!) + Sentai (11 Tage überfällig!)"
+    "todayFocus": "🔥 SONNTAG NACHMITTAG: Alle 4 Deadlines noch offen! NOMU (18 Tage) + Sentai (12 Tage) weiter überfällig"
   },
   "openTasks": [
     {
@@ -90,7 +90,7 @@
       "project": "NOMU",
       "daysOverdue": 18,
       "priority": "high",
-      "note": "🔥 17 Tage überfällig!",
+      "note": "🔥 18 Tage überfällig!",
       "status": "overdue"
     },
     {
@@ -98,7 +98,7 @@
       "project": "Tough Cookie",
       "daysOverdue": 12,
       "priority": "high",
-      "note": "🔥 11 Tage überfällig!",
+      "note": "🔥 12 Tage überfällig!",
       "status": "overdue"
     },
     {
@@ -172,9 +172,14 @@
   },
   "updates": [
     {
+      "time": "16:04",
+      "type": "cron",
+      "message": "Dashboard Update v5.4.46 — SONNTAG NACHMITTAG: Alle 4 Deadlines noch offen! NOMU (18 Tage) + Sentai (12 Tage)"
+    },
+    {
       "time": "12:04",
       "type": "cron",
-      "message": "Dashboard Update v5.4.45 — SONNTAG MITTAG: 4 Deadlines noch aktiv, NOMU jetzt 18 Tage überfällig!"
+      "message": "Dashboard Update v5.4.45 — SONNTAG MITTAG: 4 Deadlines noch aktiv!"
     },
     {
       "time": "08:04",
@@ -184,12 +189,7 @@
     {
       "time": "04:04",
       "type": "cron",
-      "message": "Dashboard Update v5.4.43 — SONNTAG DEADLINE-DAY! 4 Tasks fällig + 2 überfällige Projekte!"
-    },
-    {
-      "time": "00:04",
-      "type": "cron",
-      "message": "Dashboard Update v5.4.42 — SONNTAG DEADLINE-DAY! 4 Tasks fällig + 2 überfällige Projekte!"
+      "message": "Dashboard Update v5.4.43 — Sonntag Deadline-Day!"
     },
     {
       "time": "20:04",
@@ -200,11 +200,6 @@
       "time": "08:04",
       "type": "cron",
       "message": "Dashboard Update v5.4.40 — Zentai Dreh läuft!"
-    },
-    {
-      "time": "00:04",
-      "type": "cron",
-      "message": "Dashboard Update v5.4.38 — 13 Mio USD Kyberg Game Changer!"
     }
   ]
 }

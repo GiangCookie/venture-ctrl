@@ -1,64 +1,8 @@
 {
   "timeSessions": [],
-  "income": [
-    { "id": "inc-001", "projectId": "sentai", "amount": 5000, "date": "2026-04-28", "description": "Sentai Beratung - Rechnung versendet", "tags": ["Rechnung", "Bezahlt", "Sentai"] },
-    { "id": "inc-002", "projectId": "lubu", "amount": 1400, "date": "2026-04-22", "description": "LuBu Projekt - Rechnung versendet", "tags": ["Rechnung", "Bezahlt", "LuBu"] },
-    { "id": "inc-003", "projectId": "foto-shoot", "amount": 1000, "date": "2026-04-29", "description": "Foto-Shoot Mai", "tags": ["Rechnung", "Bezahlt", "Foto"] },
-    { "id": "inc-004", "projectId": "freelance", "amount": 200, "date": "2026-04-28", "description": "Mini-Shoot", "tags": ["Rechnung", "Freelance"] }
-  ],
-  "expenses": [
-    { "id": "exp-001", "projectId": "freelance", "amount": 200, "date": "2026-04-22", "description": "Investitionen", "tags": ["Investition"] },
-    { "id": "exp-002", "projectId": "kyberg", "amount": 500, "date": "2026-04-22", "description": "Export Business Investition", "tags": ["Investition", "Export"] }
-  ],
-  "todos": [
-    { "id": "todo-001", "projectId": "nomu", "text": "NOMU Post-Production", "priority": "🔴 Urgent", "done": false, "deadline": "2026-04-28", "tags": ["Postproduction", "NOMU", "Overdue"] },
-    { "id": "todo-002", "projectId": "niku", "text": "Niku Post-Production", "priority": "🔴 Urgent", "done": false, "deadline": "2026-04-30", "tags": ["Postproduction", "Niku", "Overdue"] },
-    { "id": "todo-003", "projectId": "jidai", "text": "Pre-Production Jidai (KW19)", "priority": "🔴 Urgent", "done": false, "deadline": "2026-05-05", "tags": ["Preproduction", "Jidai", "KW19"] },
-    { "id": "todo-004", "projectId": "kono", "text": "Pre-Production Kono (KW19)", "priority": "🔴 Urgent", "done": false, "deadline": "2026-05-06", "tags": ["Preproduction", "Kono", "KW19"] },
-    { "id": "todo-005", "projectId": "anju", "text": "Pre-Production Anju (KW19)", "priority": "🔴 Urgent", "done": false, "deadline": "2026-05-07", "tags": ["Preproduction", "Anju", "KW19"] },
-    { "id": "todo-006", "projectId": "zenti", "text": "Pre-Production Zenti (KW19)", "priority": "🔴 Urgent", "done": false, "deadline": "2026-05-08", "tags": ["Preproduction", "Zenti", "KW19"] },
-    { "id": "todo-007", "projectId": "sentai", "text": "Sentai Pre-Production (Dreh Mitte Mai)", "priority": "🟡 High", "done": false, "tags": ["Preproduction", "Sentai"] },
-    { "id": "todo-008", "projectId": "wittmann", "text": "Hotel Wittmann Pre-Production", "priority": "🟡 High", "done": false, "tags": ["Preproduction", "Hotel"] },
-    { "id": "todo-009", "projectId": "dario", "text": "Weinbar Dario — Pitch folgen", "priority": "🟡 High", "done": false, "tags": ["Pitch", "Dario", "Weinbar"] },
-    { "id": "todo-010", "projectId": "kyberg", "text": "Kyberg Videoproduktionen — Call terminieren", "priority": "🟡 High", "done": false, "tags": ["Call", "Kyberg", "Video"] }
-  ],
-  "pipeline": [
-    { "id": "deal-001", "projectId": "sentai", "name": "Sentai", "stage": "Closed Won", "value": 5000, "probability": 1.0, "tags": ["Beratung", "München", "Won"] },
-    { "id": "deal-002", "projectId": "lubu", "name": "LuBu Projekt", "stage": "Closed Won", "value": 1400, "probability": 1.0, "tags": ["LuBu", "Rechnung", "Won"] },
-    { "id": "deal-003", "projectId": "foto-shoot", "name": "Foto-Shoot Mai", "stage": "Closed Won", "value": 1000, "probability": 1.0, "tags": ["Foto", "Won"] },
-    { "id": "deal-004", "projectId": "dario", "name": "Weinbar Dario", "stage": "Pitch", "value": 3000, "probability": 0.5, "tags": ["Weinbar", "Pitch"] },
-    { "id": "deal-005", "projectId": "luma", "name": "Luma Labs", "stage": "Pitch", "value": 250, "probability": 0.6, "tags": ["Luma", "Pitch"] },
-    { "id": "deal-006", "projectId": "pancake", "name": "Japanese Pancake", "stage": "Pitch", "value": 1500, "probability": 0.4, "tags": ["Pancake", "München", "Pitch"] },
-    { "id": "deal-007", "projectId": "kyberg", "name": "Kyberg Videoproduktionen", "stage": "Lead", "value": 0, "probability": 0.4, "tags": ["Kyberg", "Video", "Lead"] },
-    { "id": "deal-008", "projectId": "hiro", "name": "Little Hiro", "stage": "Lead", "value": 1500, "probability": 0.3, "tags": ["Hiro", "Lead"] }
-  ],
+  "income": [],
+  "todos": [],
+  "pipeline": [],
   "activeSession": null,
-  "tags": ["Preproduction", "Postproduction", "Pitch", "Rechnung", "KW19", "Overdue", "Won", "Lead"],
-  "lastUpdated": "2026-05-01T18:04:00+02:00",
-  "version": "5.4.6",
-  "journalEntry": {
-    "date": "2026-05-01",
-    "mood": 4,
-    "energyLevel": 6,
-    "notes": "KW19 Shoot-Woche steht bevor. NOMU und Niku Post-Production überfällig.",
-    "wins": ["Dashboard automatisch aktualisiert"],
-    "challenges": ["NOMU 3 Tage überfällig", "Niku 1 Tag überfällig"],
-    "gratitude": ["KW19 Shoot-Woche mit 4 Aufträgen"]
-  },
-  "finances": {
-    "income": 6600,
-    "expenses": 700,
-    "profit": 5900,
-    "openInvoices": 9000
-  },
-  "shootWeek": {
-    "week": 19,
-    "year": 2026,
-    "shoots": [
-      { "day": "Montag 5.5.", "name": "Jidai", "status": "Pre-Production nötig" },
-      { "day": "Dienstag 6.5.", "name": "Kono", "status": "Pre-Production nötig" },
-      { "day": "Mittwoch 7.5.", "name": "Anju", "status": "Pre-Production nötig" },
-      { "day": "Donnerstag 8.5.", "name": "Zenti", "status": "Pre-Production nötig" }
-    ]
-  }
+  "tags": []
 }
