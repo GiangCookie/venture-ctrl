@@ -1,330 +1,383 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>VENTURE CTRL v5.4.39 | 8. Mai 2026 — 04:04 Uhr</title>
-<style>
-* { margin:0; padding:0; box-sizing:border-box; }
-:root {
-  --bg:#0a0a0f; --card:#1a1a2e; --surface:#16213e;
-  --border:#2a2a4a; --text:#e0e0e0; --muted:#888;
-  --urgent:#ff4757; --high:#ffa502; --normal:#2ed573;
-  --low:#70a1ff; --accent:#667eea;
-  --income:#2ed573; --expense:#ff4757;
-}
-body {
-  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
-  background:var(--bg); color:var(--text); min-height:100vh;
-  padding-bottom:20px;
-}
-.header {
-  background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);
-  padding:20px; text-align:center;
-}
-.header h1 { font-size:1.5rem; margin-bottom:4px; }
-.header p { font-size:.8rem; opacity:.8; }
-.today-hero {
-  background:linear-gradient(135deg,#ff4757,#ff6348);
-  border-radius:16px; padding:20px; margin:16px;
-  text-align:center; max-width:800px; margin-left:auto; margin-right:auto;
-}
-.today-hero h2 { font-size:1.2rem; margin-bottom:8px; }
-.stats-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin:16px; max-width:800px; margin-left:auto; margin-right:auto; }
-.stat-box {
-  background:var(--card); border:1px solid var(--border); border-radius:10px; padding:14px; text-align:center;
-}
-.stat-box .num { font-size:1.5rem; font-weight:700; color:var(--accent); }
-.stat-box .label { font-size:.7rem; color:var(--muted); margin-top:4px; }
-.card {
-  background:var(--card); border:1px solid var(--border); border-radius:12px;
-  padding:16px; margin:16px; max-width:800px; margin-left:auto; margin-right:auto;
-}
-.card h3 { font-size:1rem; margin-bottom:12px; color:var(--accent); }
-.task {
-  display:flex; align-items:center; padding:12px; background:var(--surface);
-  border-radius:10px; margin-bottom:8px;
-}
-.task .priority {
-  width:4px; height:40px; border-radius:2px; margin-right:12px; flex-shrink:0;
-}
-.task .priority.urgent { background:var(--urgent); }
-.task .priority.high { background:var(--high); }
-.task .priority.normal { background:var(--normal); }
-.task .priority.low { background:var(--low); }
-.task .text { flex:1; font-size:.9rem; }
-.task .text.done { text-decoration:line-through; opacity:.5; }
-.task .badge {
-  font-size:.65rem; padding:2px 8px; border-radius:20px; margin-left:8px;
-}
-.badge-done { background:var(--normal); color:#0a0a0f; }
-.badge-today { background:var(--urgent); color:#fff; }
-.badge-tomorrow { background:var(--high); color:#0a0a0f; }
-.badge-pending { background:var(--high); color:#0a0a0f; }
-.badge-won { background:var(--normal); color:#0a0a0f; }
-.badge-overdue { background:#dc143c; color:#fff; animation:pulse 2s infinite; }
-.badge-new { background:#a78bfa; color:#fff; }
-.badge-gamechanger { background:linear-gradient(135deg,#fbbf24,#f59e0b); color:#0a0a0f; font-weight:bold; }
-@keyframes pulse { 0%,100% { opacity:1; } 50% { opacity:.7; } }
-.deal {
-  display:flex; justify-content:space-between; align-items:center;
-  padding:12px; background:var(--surface); border-radius:10px; margin-bottom:8px;
-}
-.stage {
-  padding:4px 12px; border-radius:20px; font-size:.75rem;
-}
-.stage-won { background:rgba(46,213,115,.2); color:var(--normal); }
-.stage-pitch { background:rgba(255,165,2,.2); color:var(--high); }
-.stage-lead { background:rgba(255,71,87,.2); color:var(--urgent); }
-.stage-prod { background:rgba(112,161,255,.2); color:var(--low); }
-.stage-frust { background:rgba(220,20,60,.2); color:#ff6b6b; }
-.stage-gamechanger { background:linear-gradient(135deg,rgba(251,191,36,.3),rgba(245,158,11,.3)); color:#fbbf24; border:1px solid #fbbf24; }
-.mood-box {
-  background:linear-gradient(135deg,rgba(46,213,115,.1),rgba(102,126,234,.1));
-  border-radius:12px; padding:16px; margin:16px;
-  border:1px solid var(--border); max-width:800px; margin-left:auto; margin-right:auto;
-}
-.mood-box h4 { margin-bottom:8px; color:var(--normal); }
-.mood-box p { font-size:.9rem; color:var(--muted); line-height:1.5; }
-.alert-box {
-  background:linear-gradient(135deg,rgba(255,71,87,.2),rgba(220,20,60,.1));
-  border:1px solid var(--urgent); border-radius:12px; padding:16px; margin:16px;
-  max-width:800px; margin-left:auto; margin-right:auto;
-}
-.alert-box h4 { margin-bottom:8px; color:var(--urgent); }
-.alert-box p { font-size:.9rem; color:var(--text); line-height:1.5; }
-.success-box {
-  background:linear-gradient(135deg,rgba(46,213,115,.2),rgba(46,213,115,.1));
-  border:1px solid var(--normal); border-radius:12px; padding:16px; margin:16px;
-  max-width:800px; margin-left:auto; margin-right:auto;
-}
-.success-box h4 { margin-bottom:8px; color:var(--normal); }
-.success-box p { font-size:.9rem; color:var(--text); line-height:1.5; }
-.gamechanger-box {
-  background:linear-gradient(135deg,rgba(251,191,36,.2),rgba(245,158,11,.15));
-  border:2px solid #fbbf24; border-radius:12px; padding:16px; margin:16px;
-  max-width:800px; margin-left:auto; margin-right:auto;
-}
-.gamechanger-box h4 { margin-bottom:8px; color:#fbbf24; }
-.gamechanger-box p { font-size:.9rem; color:var(--text); line-height:1.5; }
-.masterplan-box {
-  background:linear-gradient(135deg,rgba(102,126,234,.2),rgba(118,75,162,.1));
-  border:1px solid var(--accent); border-radius:12px; padding:16px; margin:16px;
-  max-width:800px; margin-left:auto; margin-right:auto;
-}
-.masterplan-box h4 { margin-bottom:8px; color:var(--accent); }
-.masterplan-box p { font-size:.9rem; color:var(--text); line-height:1.5; }
-.shoot-calendar {
-  display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin:16px;
-  max-width:800px; margin-left:auto; margin-right:auto;
-}
-.shoot-day {
-  background:var(--card); border:1px solid var(--border); border-radius:10px;
-  padding:12px; text-align:center;
-}
-.shoot-day.active { border:2px solid var(--urgent); }
-.shoot-day .day-name { font-size:.75rem; color:var(--muted); }
-.shoot-day .shoot-name { font-size:1rem; font-weight:600; margin:6px 0; }
-.shoot-day .status { font-size:.7rem; padding:4px 8px; border-radius:12px; }
-.shoot-day .status-prep { background:rgba(255,71,87,.2); color:var(--urgent); }
-.shoot-day .status-done { background:rgba(46,213,115,.2); color:var(--normal); }
-.shoot-day .status-today { background:rgba(255,71,87,.3); color:var(--urgent); animation:pulse 2s infinite; }
-.finances { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin:16px; max-width:800px; margin-left:auto; margin-right:auto; }
-.fin-box {
-  background:var(--card); border:1px solid var(--border); border-radius:10px;
-  padding:16px; text-align:center;
-}
-.fin-box .amount { font-size:1.4rem; font-weight:700; }
-.fin-box .amount.income { color:var(--income); }
-.fin-box .amount.expense { color:var(--expense); }
-.fin-box .amount.profit { color:var(--accent); }
-.fin-box .label { font-size:.7rem; color:var(--muted); margin-top:4px; }
-.pricing-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin:16px; max-width:800px; margin-left:auto; margin-right:auto; }
-.pricing-box {
-  background:var(--card); border:1px solid var(--border); border-radius:10px;
-  padding:14px; text-align:center;
-}
-.pricing-box.recommended { border:2px solid #fbbf24; }
-.pricing-box .package { font-size:.8rem; color:var(--muted); }
-.pricing-box .price { font-size:1.3rem; font-weight:700; color:var(--text); margin:8px 0; }
-.pricing-box .details { font-size:.75rem; color:var(--muted); line-height:1.4; }
-.pricing-box .badge-rec { background:#fbbf24; color:#0a0a0f; font-size:.6rem; padding:2px 6px; border-radius:10px; }
-.footer {
-  text-align:center; color:var(--muted); margin-top:30px; font-size:.8rem; padding:20px;
-}
-@media (max-width:600px) {
-  .stats-grid, .shoot-calendar, .finances, .pricing-grid { grid-template-columns:repeat(2,1fr); }
-  .header h1 { font-size:1.2rem; }
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VENTURE CTRL v5.4.48</title>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; 
+            background: #0a0a0f; 
+            color: #e0e0e0; 
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .header { 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
+            padding: 25px; 
+            border-radius: 12px; 
+            margin-bottom: 25px;
+            text-align: center;
+            position: relative;
+        }
+        .header h1 { font-size: 2.2rem; margin-bottom: 5px; color: white; }
+        .header p { color: rgba(255,255,255,0.8); }
+        .version-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+        .grid { display: grid; gap: 20px; grid-template-columns: 1fr; }
+        @media (min-width: 768px) {
+            .grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        .card { 
+            background: rgba(255,255,255,0.05); 
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 20px; 
+            border-radius: 10px;
+        }
+        .card h2 { color: #667eea; margin-bottom: 15px; font-size: 1.1rem; }
+        .stat-row { 
+            display: flex; 
+            justify-content: space-between; 
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        .stat-row:last-child { border-bottom: none; }
+        .stat-label { color: #888; }
+        .stat-value { font-weight: bold; }
+        .positive { color: #4ade80; }
+        .negative { color: #f87171; }
+        .warning { color: #fbbf24; }
+        .todo { 
+            padding: 12px; 
+            margin-bottom: 8px; 
+            border-radius: 8px;
+            border-left: 3px solid;
+            background: rgba(255,255,255,0.03);
+        }
+        .urgent { border-left-color: #f87171; background: rgba(248, 113, 113, 0.08); }
+        .high { border-left-color: #fbbf24; background: rgba(251, 191, 36, 0.08); }
+        .normal { border-left-color: #60a5fa; }
+        .low { border-left-color: #9ca3af; }
+        .overdue { 
+            border-left-color: #ef4444; 
+            background: rgba(239, 68, 68, 0.15);
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+        .deal { 
+            display: flex; 
+            justify-content: space-between; 
+            padding: 10px;
+            margin-bottom: 6px;
+            border-radius: 6px;
+            background: rgba(255,255,255,0.03);
+        }
+        .stage { padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; }
+        .won { background: rgba(74,222,128,0.2); color: #4ade80; }
+        .pitch { background: rgba(251,191,36,0.2); color: #fbbf24; }
+        .lead { background: rgba(96,165,250,0.2); color: #60a5fa; }
+        .gamechanger { background: rgba(139, 92, 246, 0.2); color: #a78bfa; }
+        .meta { color: #666; font-size: 0.8rem; margin-top: 20px; text-align: center; }
+        .highlight { background: rgba(102, 126, 234, 0.1); padding: 8px 12px; border-radius: 6px; margin-bottom: 10px; }
+        .today-badge { 
+            background: linear-gradient(135deg, #f87171 0%, #fbbf24 100%);
+            color: white;
+            padding: 2px 10px;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: bold;
+        }
+        .content-reminder {
+            background: rgba(251, 191, 36, 0.1);
+            border: 1px solid rgba(251, 191, 36, 0.3);
+            padding: 10px 15px;
+            border-radius: 8px;
+            margin-bottom: 8px;
+        }
+        .timestamp {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            color: #888;
+            margin-top: 5px;
+        }
+        .kw-badge {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 2px 10px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            margin-left: 10px;
+        }
+        .overdue-days {
+            background: #ef4444;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 0.7rem;
+            margin-left: 8px;
+        }
+        .masterplan-box {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+            border: 1px solid rgba(102, 126, 234, 0.3);
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        .masterplan-box h3 {
+            color: #667eea;
+            margin-bottom: 8px;
+        }
+        .gap-value {
+            color: #f87171;
+            font-weight: bold;
+        }
+        .target-value {
+            color: #4ade80;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-<div class="header">
-  <h1>🚀 VENTURE CTRL</h1>
-  <p>v5.4.39 — 8. Mai 2026, 04:04 Uhr</p>
-</div>
-
-<div class="today-hero">
-  <h2>🔥 FREITAG 8.5. — KW19 TAG 5 (Flex-Tag & Dreh!)</h2>
-  <p>Heute: Zentai Dreh → Equipment bereit! 🎬</p>
-</div>
-
-<div class="gamechanger-box">
-  <h4>🚀 GAME CHANGER: KYBERG EXPORT!</h4>
-  <p><strong>Onkel in Vietnam:</strong> <span style="color:#fbbf24;font-size:1.1rem;font-weight:bold;">13 Mio USD Jahresimportvolumen</span><br>
-  • 10 Mio USD Pharma • 3 Mio USD Nahrungsergänzungsmittel<br>
-  • Importlizenz vorhanden • Distribution landesweit<br><br>
-  <strong style="color:#fbbf24">Das verändert ALLES!</strong> Du hast jetzt einen Massen-Distributor. Kyberg wird dich ernst nehmen. 5-7% Provision auf Millionen-Volumen = echtes Geld!</p>
-</div>
-
-<div class="success-box">
-  <h4>💡 Gestern Mega-Update (7.5., 23:46 Uhr)</h4>
-  <p><strong>Kyberg Export durchbruch!</strong> — Onkel-Antwort mit 13 Mio USD Volumen 🎉<br>
-  <strong>Tough Cookie Pitchdeck final</strong> — Neue Pricing-Struktur steht<br>
-  <strong>Zentai Dreh</strong> — Pre-Production fertig, Verleih kontaktiert</p>
-</div>
-
-<div class="masterplan-box">
-  <h4>🎯 GIANG'S MASTERPLAN 2026 — UPDATE</h4>
-  <p><strong>Ziel:</strong> 5.000€/Monat netto | <strong>Aktuell:</strong> 2.100€/Monat | <strong>Lücke:</strong> 2.900€<br>
-  <strong>Strategie:</strong> ZWEI SÄULEN + Kyberg Export als Game Changer<br>
-  <strong>Ultimatum:</strong> 6 Monate für Tough Cookie (bis November 2026)<br>
-  <strong style="color:#fbbf24;">🆕 Export könnte zum zweiten Standbein werden!</strong></p>
-</div>
-
-<div class="alert-box">
-  <h4>⏰ WICHITGE DEADLINES DIESE WOCHE (bis So 10.05.)</h4>
-  <p><strong>Sonntag 10.05.:</strong><br>
-  • Onkel-Antwort auf Vietnamesisch<br>
-  • Telefonat mit Onkel (Provision 5-7% klären)<br>
-  • Pitchdeck-Slide "Packages" überarbeiten<br>
-  • Zwei Pitchdecks finalisieren</p>
-</div>
-
-<div class="stats-grid">
-  <div class="stat-box"><div class="num">🔴 4</div><div class="label">Urgent Tasks</div></div>
-  <div class="stat-box"><div class="num">🟡 5</div><div class="label">High Priority</div></div>
-  <div class="stat-box"><div class="num">💰 2.1k€</div><div class="label">Dein Einkommen</div></div>
-  <div class="stat-box"><div class="num">📋 12</div><div class="label">Deals</div></div>
-</div>
-
-<div class="card">
-  <h3>🎯 HEUTE (Freitag 8.5.) — FLEX-TAG & DREH</h3>
-  <div class="task"><div class="priority urgent"></div><div class="text"><strong>🎬 ZENTAI DREH</strong></div><span class="badge badge-today">HEUTE!</span></div>
-  <div class="task"><div class="priority normal"></div><div class="text">Tough Cookie Catch-up</div><span class="badge badge-pending">WENN ZEIT</span></div>
-  <div class="task"><div class="priority normal"></div><div class="text">Freelance Projekte</div><span class="badge badge-pending">OPTIONAL</span></div>
-</div>
-
-<div class="card">
-  <h3>🔴 KRITISCHE TASKS (Bis So 10.05.)</h3>
-  <div class="task"><div class="priority urgent"></div><div class="text">📝 Onkel-Antwort auf Vietnamesisch</div><span class="badge badge-gamechanger">SONNTAG</span></div>
-  <div class="task"><div class="priority urgent"></div><div class="text">📞 Telefonat mit Onkel (Provision 5-7%)</div><span class="badge badge-gamechanger">SONNTAG</span></div>
-  <div class="task"><div class="priority urgent"></div><div class="text">🎨 Pitchdeck-Slide "Packages" überarbeiten</div><span class="badge badge-today">SONNTAG</span></div>
-  <div class="task"><div class="priority urgent"></div><div class="text">📄 Zwei Pitchdecks finalisieren</div><span class="badge badge-today">SONNTAG</span></div>
-</div>
-
-<div class="card">
-  <h3>🟡 WÖCHENTLICHE ZIELE</h3>
-  <p style="font-size:.85rem;color:var(--muted);margin-bottom:12px;"><strong>Kyberg Export (Priorität #1):</strong></p>
-  <div class="task"><div class="priority high"></div><div class="text">Distributor Profile PDF erstellen</div><span class="badge badge-pending">Fr 17.5.</span></div>
-  <div class="task"><div class="priority high"></div><div class="text">Kyberg-Erstkontakt initiieren</div><span class="badge badge-pending">Fr 24.5.</span></div>
-  <p style="font-size:.85rem;color:var(--muted);margin:16px 0 12px;"><strong>Tough Cookie:</strong></p>
-  <div class="task"><div class="priority high"></div><div class="text">Sentai Post-Production</div><span class="badge badge-overdue">9 Tage überfällig</span></div>
-  <p style="font-size:.85rem;color:var(--muted);margin:16px 0 12px;"><strong>Freelance:</strong></p>
-  <div class="task"><div class="priority normal"></div><div class="text">Preisliste finalisieren (800€/Video)</div><span class="badge badge-pending">Diese Woche</span></div>
-  <div class="task"><div class="priority normal"></div><div class="text">3 Kunden anschreiben</div><span class="badge badge-pending">Diese Woche</span></div>
-</div>
-
-<div class="card">
-  <h3>🔴 Überfällige Tasks (CRITICAL)</h3>
-  <div class="task"><div class="priority urgent"></div><div class="text">🎬 NOMU Post-Production</div><span class="badge badge-overdue">15 Tage überfällig</span></div>
-  <div class="task"><div class="priority urgent"></div><div class="text">🎬 Sentai Post-Production</div><span class="badge badge-overdue">9 Tage überfällig</span></div>
-</div>
-
-<div class="card">
-  <h3>💰 Tough Cookie — NEUE PRICING STRUKTUR</h3>
-  <div class="pricing-grid">
-    <div class="pricing-box">
-      <div class="package">FLEX</div>
-      <div class="price">1.490€</div>
-      <div class="details">5 Reels<br>Monatlich kündbar</div>
+    <div class="header">
+        <span class="version-badge">v5.4.48</span>
+        <h1>🚀 VENTURE CTRL</h1>
+        <p>Montag, 11. Mai 2026 — 04:04 Uhr <span class="kw-badge">KW20</span></p>
     </div>
-    <div class="pricing-box recommended">
-      <div class="badge-rec">EMPFOHLEN</div>
-      <div class="package">GROWTH</div>
-      <div class="price">1.290€</div>
-      <div class="details">5 Reels<br>3 Monate Mindestlaufzeit</div>
+
+    <div class="grid">
+        <!-- Masterplan -->
+        <div class="card" style="grid-column: span 2;">
+            <h2>🎯 Masterplan: 5.000€/Monat bis November 2026</h2>
+            <div class="masterplan-box">
+                <div class="stat-row">
+                    <span class="stat-label">💰 Ziel-Einkommen</span>
+                    <span class="target-value">5.000€/Monat</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">💵 Aktuell</span>
+                    <span class="stat-value">2.100€/Monat</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">📉 Lücke</span>
+                    <span class="gap-value">2.900€/Monat</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">⏰ Deadline</span>
+                    <span class="stat-value warning">6 Monate (Nov 2026)</span>
+                </div>
+            </div>
+            <p style="color: #888; font-size: 0.9rem; margin-top: 10px;">
+                <strong>Strategie:</strong> ZWEI SÄULEN — Tough Cookie stabilisieren + Freelance ausbauen + Kyberg Export als Game Changer
+            </p>
+        </div>
+
+        <!-- Stats -->
+        <div class="card">
+            <h2>📊 Quick Stats</h2>
+            <div class="stat-row">
+                <span class="stat-label">🔴 Urgent Tasks</span>
+                <span class="stat-value negative">4 überfällig</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">🟡 High Priority</span>
+                <span class="stat-value warning">5 offen</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">💰 Monatseinkommen</span>
+                <span class="stat-value">~2.1k€</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">🎯 Aktive Deals</span>
+                <span class="stat-value">12</span>
+            </div>
+        </div>
+
+        <!-- Kyberg Game Changer -->
+        <div class="card" style="border: 2px solid #8b5cf6;">
+            <h2>🚀 Kyberg Export — GAME CHANGER</h2>
+            <div class="highlight">
+                <strong>💎 Onkel Deal:</strong> 13 Mio USD Jahresvolumen
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">Pharma</span>
+                <span class="stat-value">10 Mio USD</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">Nahrungsergänzung</span>
+                <span class="stat-value">3 Mio USD</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">Status</span>
+                <span class="stat-value positive">✅ Importlizenz vorhanden</span>
+            </div>
+            <p style="color: #fbbf24; margin-top: 10px; font-size: 0.9rem;">
+                🔥 5-7% Provision möglich — Exklusivität Vietnam klären!
+            </p>
+        </div>
+
+        <!-- Overdue Tasks -->
+        <div class="card" style="border: 2px solid #ef4444;">
+            <h2>🔥 ÜBERFÄLLIG (Seit Sonntag)</h2>
+            <div class="todo overdue">
+                <strong>🇻🇳 Onkel-Antwort auf Vietnamesisch</strong>
+                <span class="overdue-days">1 Tag</span>
+                <br><small style="color: #f87171;">Kyberg Export — 13 Mio USD Volumen wartet!</small>
+            </div>
+            <div class="todo overdue">
+                <strong>📞 Telefonat mit Onkel</strong>
+                <span class="overdue-days">1 Tag</span>
+                <br><small style="color: #f87171;">Provision 5-7%, Exklusivität klären</small>
+            </div>
+            <div class="todo overdue">
+                <strong>📊 Pitchdeck-Slide 'Packages' überarbeiten</strong>
+                <span class="overdue-days">1 Tag</span>
+                <br><small style="color: #f87171;">Flex 1.490€, Growth 1.290€, Partner 1.190€</small>
+            </div>
+            <div class="todo overdue">
+                <strong>📄 Zwei Pitchdecks finalisieren</strong>
+                <span class="overdue-days">1 Tag</span>
+                <br><small style="color: #f87171;">Neue Pricing-Struktur implementieren</small>
+            </div>
+        </div>
+
+        <!-- High Priority -->
+        <div class="card">
+            <h2>🟡 HIGH PRIORITY</h2>
+            <div class="todo overdue">
+                <strong>🎬 NOMU Post-Production</strong>
+                <span class="overdue-days">19 Tage</span>
+                <br><small style="color: #f87171;">🔥 Ältestes überfälliges Projekt!</small>
+            </div>
+            <div class="todo overdue">
+                <strong>🎬 Sentai Post-Production</strong>
+                <span class="overdue-days">13 Tage</span>
+                <br><small style="color: #f87171;">🔥 Zweitältestes überfälliges Projekt!</small>
+            </div>
+            <div class="todo high">
+                <strong>💰 G-Life Rechnung rausschicken</strong>
+                <span class="today-badge">QUICK WIN</span>
+                <br><small>✅ Bereit — nur abschicken!</small>
+            </div>
+            <div class="todo high">
+                <strong>🎬 Nikku Post-Production</strong>
+                <br><small>Wochenende geplant</small>
+            </div>
+        </div>
+
+        <!-- Pipeline -->
+        <div class="card">
+            <h2>🎯 Pipeline</h2>
+            <div class="deal">
+                <span>💎 Kyberg Export (Onkel)</span>
+                <span class="stage gamechanger">13 Mio USD</span>
+            </div>
+            <div class="deal">
+                <span>🎌 Sentai/Zentai</span>
+                <span class="stage won">✅ 5.000€</span>
+            </div>
+            <div class="deal">
+                <span>👤 Amy</span>
+                <span class="stage lead">Lead</span>
+            </div>
+        </div>
+
+        <!-- KW20 Focus -->
+        <div class="card">
+            <h2>📅 KW20 Fokus</h2>
+            <div class="stat-row">
+                <span class="stat-label">Mo</span>
+                <span class="stat-value warning">🔥 Überfällige Tasks nachholen</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">Di-Do</span>
+                <span class="stat-value">Neue Shoots planen, Pipeline füllen</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">Fr</span>
+                <span class="stat-value">Post-Production vorbereiten</span>
+            </div>
+        </div>
+
+        <!-- Pricing -->
+        <div class="card">
+            <h2>💰 Pricing (Neu)</h2>
+            <div style="margin-bottom: 15px;">
+                <strong style="color: #667eea;">🍪 Tough Cookie</strong>
+                <div class="stat-row">
+                    <span class="stat-label">Flex</span>
+                    <span class="stat-value">1.490€/Mo</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">Growth ⭐</span>
+                    <span class="stat-value">1.290€/Mo</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">Partner</span>
+                    <span class="stat-value">1.190€/Mo</span>
+                </div>
+            </div>
+            <div>
+                <strong style="color: #667eea;">🎬 Freelance</strong>
+                <div class="stat-row">
+                    <span class="stat-label">Video</span>
+                    <span class="stat-value">800€</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">Fotos (20)</span>
+                    <span class="stat-value">600€</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- System -->
+        <div class="card">
+            <h2>⚙️ System-Status</h2>
+            <div class="stat-row">
+                <span class="stat-label">Dashboard</span>
+                <span class="stat-value positive">✅ Aktiv v5.4.48</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">Auto-Update</span>
+                <span class="stat-value positive">✅ 4h-Cron</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">Last Updated</span>
+                <span class="timestamp">2026-05-11 00:04 CET</span>
+            </div>
+        </div>
     </div>
-    <div class="pricing-box">
-      <div class="package">PARTNER</div>
-      <div class="price">1.190€</div>
-      <div class="details">7 Reels<br>6 Monate (nur intern)</div>
+
+    <div class="meta">
+        <p>Venture CTRL v5.4.48 | Letztes Update: 11. Mai 2026, 00:04 Uhr</p>
+        <p>🔥 <strong>MONTAG:</strong> KW20 startet — 4 überfällige Deadlines vom Sonntag nachholen!</p>
+        <p>🚀 <strong>Kyberg Export:</strong> 13 Mio USD Onkel-Deal wartet auf Antwort!</p>
     </div>
-  </div>
-  <p style="text-align:center;margin-top:12px;font-size:.8rem;color:var(--muted);">To-Do: Foto Day auf Add-on-Slide, "Hero/Pulse" statt "UGC/High Quality", Ersparnis-Hinweis</p>
-</div>
 
-<div class="card">
-  <h3>🎬 KW19 Shoot-Kalender</h3>
-  <div class="shoot-calendar">
-    <div class="shoot-day">
-      <div class="day-name">Dienstag 5.5.</div>
-      <div class="shoot-name">Jidai/Jedi</div>
-      <span class="status status-done">✅ Erledigt</span>
-    </div>
-    <div class="shoot-day">
-      <div class="day-name">Mittwoch 6.5.</div>
-      <div class="shoot-name">Kono</div>
-      <span class="status status-done">✅ Erledigt</span>
-    </div>
-    <div class="shoot-day active">
-      <div class="day-name">Freitag 9.5.</div>
-      <div class="shoot-name">Zentai</div>
-      <span class="status status-today">🔴 HEUTE!</span>
-    </div>
-  </div>
-</div>
-
-<div class="card">
-  <h3>💰 Finanzielle Realität</h3>
-  <div class="finances">
-    <div class="fin-box"><div class="amount income">1.100€</div><div class="label">Tough Cookie</div></div>
-    <div class="fin-box"><div class="amount income">1.000€</div><div class="label">Freelance</div></div>
-    <div class="fin-box"><div class="amount profit">2.100€</div><div class="label">Gesamt (Ziel: 5k€)</div></div>
-  </div>
-  <p style="text-align:center;margin-top:12px;font-size:.85rem;color:var(--muted);">
-    <strong style="color:var(--urgent)">Lücke: 2.900€/Monat</strong><br>
-    <strong style="color:#fbbf24;">🆕 Kyberg Export:</strong> 5-7% Provision auf 13 Mio USD Volumen<br>
-    → Das könnte ein zweites Standbein werden!
-  </p>
-</div>
-
-<div class="card">
-  <h3>📊 Pipeline</h3>
-  <div class="deal"><span><strong>Kyberg Export (Onkel)</strong> 🚀</span><span class="stage stage-gamechanger">🚀 13 Mio USD</span></div>
-  <div class="deal"><span>Sentai/Zentai</span><span class="stage stage-frust">✅ WON aber 0€ persönlich</span></div>
-  <div class="deal"><span>LuBu Projekt</span><span class="stage stage-won">✅ Closed Won</span></div>
-  <div class="deal"><span>Amy (Restaurant)</span><span class="stage stage-won">✅ Meeting geführt</span></div>
-  <div class="deal"><span>Weinbar Dario</span><span class="stage stage-pitch">🎯 Pitch</span></div>
-  <div class="deal"><span>Luma Labs</span><span class="stage stage-pitch">🎯 Pitch</span></div>
-  <div class="deal"><span>Japanese Pancake München</span><span class="stage stage-pitch">🎯 Pitch</span></div>
-  <div class="deal"><span>Little Hiro</span><span class="stage stage-lead">👋 Lead</span></div>
-</div>
-
-<div class="card">
-  <h3>📝 NÄCHSTE ERINNERUNGEN</h3>
-  <p style="color:var(--muted);font-size:.9rem;line-height:1.6;padding:8px;background:var(--surface);border-radius:8px;">
-    <strong>So 10.05.:</strong> Onkel-Antwort? Telefonat? Pitchdeck fertig?<br>
-    <strong>Fr 17.05.:</strong> Distributor Profile PDF fertig?<br>
-    <strong>Fr 24.05.:</strong> Kyberg-Erstkontakt? Anwaltstermin?<br>
-    <strong>Sa 31.05.:</strong> Markt-Recherche? Onkel-Folgemail?
-  </p>
-</div>
-
-<div class="footer">
-  <p>v5.4.39 — Letztes Update: 8. Mai 2026, 04:04 Uhr</p>
-  <p style="margin-top:8px;font-size:.7rem;">Automatisches Update via Cron: dashboard-update-4h-v2 | Nächstes Update: 04:04 Uhr</p>
-</div>
-
+    <script>
+        // Auto-refresh alle 30 Minuten
+        setInterval(() => {
+            location.reload();
+        }, 30 * 60 * 1000);
+        
+        console.log('Venture CTRL v5.4.48 loaded at', new Date().toLocaleString('de-DE'));
+        console.log('🔥 KW20: 4 überfällige Tasks + Kyberg Game Changer');
+    </script>
 </body>
 </html>
