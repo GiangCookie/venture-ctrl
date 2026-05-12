@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VENTURE CTRL v5.4.53</title>
+    <title>VENTURE CTRL v5.4.55</title>
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
@@ -117,6 +117,13 @@
             font-size: 0.7rem;
             font-weight: bold;
         }
+        .content-reminder {
+            background: rgba(251, 191, 36, 0.1);
+            border: 1px solid rgba(251, 191, 36, 0.3);
+            padding: 10px 15px;
+            border-radius: 8px;
+            margin-bottom: 8px;
+        }
         .timestamp {
             font-family: 'JetBrains Mono', monospace;
             font-size: 0.7rem;
@@ -156,6 +163,10 @@
             border-radius: 8px;
             margin-bottom: 10px;
         }
+        .masterplan-box h3 {
+            color: #667eea;
+            margin-bottom: 8px;
+        }
         .gap-value {
             color: #f87171;
             font-weight: bold;
@@ -179,19 +190,27 @@
         .alert-banner p {
             color: #fca5a5;
         }
+        .tomorrow-badge {
+            background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%);
+            color: white;
+            padding: 2px 10px;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
     <div class="header">
-        <span class="version-badge">v5.4.53</span>
+        <span class="version-badge">v5.4.55</span>
         <h1>🚀 VENTURE CTRL</h1>
-        <p>Dienstag, 12. Mai 2026 — 00:04 Uhr <span class="kw-badge">KW20</span></p>
+        <p>Dienstag, 12. Mai 2026 — 08:04 Uhr <span class="kw-badge">KW20</span></p>
     </div>
 
     <!-- Critical Alert Banner -->
     <div class="alert-banner">
         <h3>🚨 KRITISCHE SITUATION</h3>
-        <p>7 Tasks überfällig — Niku HEUTE fällig! NOMU (23+ Tage) + Sentai (17 Tage)</p>
+        <p>6 Tasks überfällig — NOMU (22+ Tage) + Sentai (16 Tage) — Niku ✅ FERTIG!</p>
     </div>
 
     <div class="grid">
@@ -216,6 +235,7 @@
                     <span>November 2026</span>
                 </div>
             </div>
+            <p style="font-size: 0.9rem; color: #888;">🔥 DIENSTAG MORGEN: 6 kritische Tasks — Niku ✅ FERTIG!</p>
         </div>
 
         <!-- Stats -->
@@ -223,11 +243,11 @@
             <h2>📊 ÜBERSICHT</h2>
             <div class="stat-row">
                 <span class="stat-label">🔴 Kritische Tasks:</span>
-                <span class="stat-value critical">7</span>
+                <span class="stat-value critical">6</span>
             </div>
             <div class="stat-row">
                 <span class="stat-label">🟡 Wichtige Tasks:</span>
-                <span class="stat-value warning">4</span>
+                <span class="stat-value warning">5</span>
             </div>
             <div class="stat-row">
                 <span class="stat-label">💰 Aktuelles Einkommen:</span>
@@ -237,6 +257,14 @@
                 <span class="stat-label">🤝 Active Deals:</span>
                 <span class="stat-value">12</span>
             </div>
+            <div class="stat-row">
+                <span class="stat-label">📅 Wochentag:</span>
+                <span class="stat-value">Dienstag</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">⚡ KW:</span>
+                <span class="stat-value">20</span>
+            </div>
         </div>
 
         <!-- Overdue Tasks -->
@@ -244,38 +272,32 @@
             <h2>🔥 ÜBERFÄLLIGE TASKS</h2>
             
             <div class="todo extreme">
-                <strong>🎬 Niku Post-Production (2 Reels + Bilder)</strong>
-                <span class="today-badge">HEUTE!</span>
-                <br><small style="color: #fca5a5;">🔥🔥🔥 HEUTE FÄLLIG! 12.05. DIENSTAG!</small>
-            </div>
-
-            <div class="todo extreme">
                 <strong>🎬 NOMU Post-Production</strong>
-                <span class="extreme-days">23+ TAGE</span>
+                <span class="extreme-days">22+ TAGE</span>
                 <br><small style="color: #fca5a5;">🔥🔥🔥🔥 KUNDE WARTET — KRITISCH!</small>
             </div>
 
             <div class="todo overdue">
                 <strong>🎬 Sentai Post-Production (2 Reels)</strong>
-                <span class="overdue-days">17 TAGE</span>
-                <br><small style="color: #fca5a5;">🔥🔥🔥 DRINGEND!</small>
+                <span class="overdue-days">16 TAGE</span>
+                <br><small style="color: #fca5a5;">🔥🔥🔥 2 TAGE BIS DEADLINE (Do 14.05.)!</small>
             </div>
 
             <div class="todo overdue">
                 <strong>💰 Rechnung Jidai rausschicken</strong>
-                <span class="overdue-days">GESTERN</span>
-                <br><small style="color: #fca5a5;">🔴 Gestern fällig! Direkter Cashflow!</small>
+                <span class="quickwin-badge">QUICK WIN</span>
+                <br><small style="color: #fca5a5;">🔴 10 Minuten — Sofortiger Cashflow!</small>
             </div>
 
             <div class="todo overdue">
                 <strong>📧 Onkel-Antwort auf Vietnamesisch</strong>
-                <span class="overdue-days">3+ TAGE</span>
+                <span class="overdue-days">2+ TAGE</span>
                 <br><small>13 Mio USD Volumen</small>
             </div>
 
             <div class="todo overdue">
                 <strong>📞 Telefonat mit Onkel (Provision klären)</strong>
-                <span class="overdue-days">3+ TAGE</span>
+                <span class="overdue-days">2+ TAGE</span>
                 <br><small>5-7% Provision, Exklusivität Vietnam</small>
             </div>
         </div>
@@ -283,16 +305,28 @@
         <!-- High Priority Tasks -->
         <div class="card">
             <h2>📋 WICHTIGE TASKS</h2>
-            
+
+            <div class="todo high">
+                <strong>✅ Niku Post-Production</strong>
+                <span class="quickwin-badge">FERTIG!</span>
+                <br><small style="color: #4ade80;">🎉 EINEN TAG FRÜHER GESCHAFFT!</small>
+            </div>
+
+            <div class="todo high">
+                <strong>✅ Niku Posts (Woche)</strong>
+                <span class="quickwin-badge">FERTIG!</span>
+                <br><small style="color: #4ade80;">🎉 Alle Posts für die Woche erstellt!</small>
+            </div>
+
             <div class="todo high">
                 <strong>📊 Pitchdeck-Slide 'Packages'</strong>
-                <span class="overdue-days">3+ TAGE</span>
+                <span class="overdue-days">2+ TAGE</span>
                 <br><small>Flex 1.490€, Growth 1.290€, Partner 1.190€</small>
             </div>
 
             <div class="todo high">
                 <strong>📄 Zwei Pitchdecks finalisieren</strong>
-                <span class="overdue-days">3+ TAGE</span>
+                <span class="overdue-days">2+ TAGE</span>
                 <br><small>Neue Pricing-Struktur!</small>
             </div>
 
@@ -304,6 +338,22 @@
             <div class="todo high">
                 <strong>🎬 Japanese Pancake Pre-Production</strong>
                 <br><small>Freitag 15.5.</small>
+            </div>
+
+            <div class="todo high">
+                <strong>💰 G-Life Rechnung rausschicken</strong>
+                <span class="quickwin-badge">QUICK WIN</span>
+                <br><small>✅ Fertig, nur abschicken!</small>
+            </div>
+
+            <div class="todo high">
+                <strong>📑 Distributor Profile PDF</strong>
+                <br><small>Bis Freitag 17.5.</small>
+            </div>
+
+            <div class="todo high">
+                <strong>🤝 Kyberg-Erstkontakt</strong>
+                <br><small>Bis Freitag 24.5.</small>
             </div>
         </div>
 
@@ -335,11 +385,102 @@
                 <span class="stage lead">LEAD</span>
             </div>
         </div>
+
+        <!-- Pricing -->
+        <div class="card">
+            <h2>💰 PRICING</h2>
+            <h3 style="color: #888; font-size: 0.9rem; margin-bottom: 10px;">Tough Cookie</h3>
+            <div class="stat-row">
+                <span class="stat-label">Flex:</span>
+                <span>1.490€/Mo</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">Growth ⭐:</span>
+                <span>1.290€/Mo</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">Partner:</span>
+                <span>1.190€/Mo</span>
+            </div>
+            
+            <h3 style="color: #888; font-size: 0.9rem; margin: 15px 0 10px 0;">Freelance</h3>
+            <div class="stat-row">
+                <span class="stat-label">Video:</span>
+                <span>800€</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">Fotos:</span>
+                <span>600€</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">Social Paket:</span>
+                <span>400€/Mo</span>
+            </div>
+        </div>
+
+        <!-- This Week's Goals -->
+        <div class="card" style="grid-column: 1 / -1;">
+            <h2>🎯 WOCHENZIELE KW20</h2>
+            <div class="grid" style="margin-top: 10px;">
+                <div>
+                    <h3 style="color: #f87171; font-size: 0.9rem; margin-bottom: 10px;">🔴 Tough Cookie (KRITISCH)</h3>
+                    <p style="font-size: 0.85rem; margin-bottom: 5px;"><span style="color: #4ade80;">✅ Niku Post-Production (FERTIG!)</span></p>
+                    <p style="font-size: 0.85rem; margin-bottom: 5px;">🔥 Sentai Post-Production (Do 14.5.)</p>
+                    <p style="font-size: 0.85rem; margin-bottom: 5px;">🔥 NOMU Post-Production (SOFORT)</p>
+                    <p style="font-size: 0.85rem; margin-bottom: 5px;">💰 Rechnung Jidai (ASAP)</p>
+                    <p style="font-size: 0.85rem; margin-bottom: 5px;">🎥 Nebelmaschine besorgen (Fr 15.5.)</p>
+                    <p style="font-size: 0.85rem;">🎬 Japanese Pancake Pre-Prod (Fr 15.5.)</p>
+                </div>
+                <div>
+                    <h3 style="color: #a78bfa; font-size: 0.9rem; margin-bottom: 10px;">🟣 Kyberg Export</h3>
+                    <p style="font-size: 0.85rem; margin-bottom: 5px;">📧 Onkel-Antwort Vietnamesisch</p>
+                    <p style="font-size: 0.85rem; margin-bottom: 5px;">📞 Telefonat Provision 5-7%</p>
+                    <p style="font-size: 0.85rem; margin-bottom: 5px;">📑 Distributor Profile (bis Fr 17.5.)</p>
+                    <p style="font-size: 0.85rem;">🤝 Erstkontakt (bis Fr 24.5.)</p>
+                </div>
+                <div>
+                    <h3 style="color: #4ade80; font-size: 0.9rem; margin-bottom: 10px;">🟢 Freelance</h3>
+                    <p style="font-size: 0.85rem; margin-bottom: 5px;">💰 G-Life Rechnung abschicken</p>
+                    <p style="font-size: 0.85rem; margin-bottom: 5px;">📋 Preisliste erstellen</p>
+                    <p style="font-size: 0.85rem; margin-bottom: 5px;">📧 3 Kunden anschreiben</p>
+                    <p style="font-size: 0.85rem;">🤝 Ersten Retainer anbieten</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recent Updates -->
+        <div class="card" style="grid-column: 1 / -1;">
+            <h2>📝 LETZTE UPDATES</h2>
+            <div class="stat-row">
+                <span class="stat-label timestamp">08:04</span>
+                <span style="font-size: 0.9rem;">Dashboard Update v5.4.55 — Niku ✅ FERTIG! 6 Tasks übrig</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label timestamp">00:04</span>
+                <span style="font-size: 0.9rem;">Dashboard Update v5.4.53 — 7 kritische Tasks, Niku HEUTE fällig!</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label timestamp">20:04</span>
+                <span style="font-size: 0.9rem;">Dashboard Update v5.4.52 — 7 kritische Tasks, Niku morgen fällig!</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label timestamp">16:04</span>
+                <span style="font-size: 0.9rem;">Dashboard Update v5.4.51 — 6 überfällige Tasks</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label timestamp">12:04</span>
+                <span style="font-size: 0.9rem;">Dashboard Update v5.4.50 — 6 überfällige Tasks</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label timestamp">08:04</span>
+                <span style="font-size: 0.9rem;">Dashboard Update v5.4.49 — 6 überfällige Tasks</span>
+            </div>
+        </div>
     </div>
 
     <div class="meta">
-        <p>🚀 VENTURE CTRL v5.4.53 | Letztes Update: 12. Mai 2026, 00:04 Uhr</p>
-        <p style="margin-top: 5px;"><a href="dashboard.html" style="color: #667eea;">→ Vollständiges Dashboard</a></p>
+        <p>🚀 VENTURE CTRL v5.4.55 | Letztes Update: 12. Mai 2026, 08:04 Uhr</p>
+        <p style="margin-top: 5px;">Nächstes Update: 12:04 Uhr</p>
     </div>
 </body>
 </html>
