@@ -1,6 +1,6 @@
 {
-  "version": "v5.4.56",
-  "lastUpdated": "2026-05-12T12:04:00+02:00",
+  "version": "v5.4.57",
+  "lastUpdated": "2026-05-12T16:04:00+02:00",
   "status": "active",
   "metrics": {
     "urgentTasks": 6,
@@ -11,7 +11,7 @@
   "today": "2026-05-12",
   "kw": 20,
   "dayOfWeek": "DIENSTAG",
-  "time": "12:04",
+  "time": "16:04",
   "lastSession": {
     "date": "2026-05-11",
     "mood": "💪",
@@ -36,7 +36,7 @@
     "strategy": "ZWEI SÄULEN: Tough Cookie stabilisieren + Freelance ausbauen + Export (Kyberg) als Game Changer",
     "deadline": "November 2026 (6 Monate Ultimatum)",
     "kybergUpdate": "Export-Meeting vorbereitet, Kyberg Erstkontakt in Planung",
-    "todayFocus": "🔥 DIENSTAG MITTAG: 6 kritische Tasks — NOMU + Sentai Priorität!"
+    "todayFocus": "🔥 DIENSTAG NACHMITTAG: 6 kritische Tasks — NOMU (24 Tage) + Sentai (18 Tage) Priorität!"
   },
   "completedToday": [
     {
@@ -54,17 +54,17 @@
     {
       "task": "🎬 NOMU Post-Production",
       "project": "NOMU",
-      "daysOverdue": 23,
+      "daysOverdue": 24,
       "priority": "urgent",
-      "note": "🔥🔥🔥🔥 23 TAGE ÜBERFÄLLIG — KUNDE WARTET — EXTREM KRITISCH!",
+      "note": "🔥🔥🔥🔥 24 TAGE ÜBERFÄLLIG — KUNDE WARTET — EXTREM KRITISCH!",
       "status": "overdue"
     },
     {
       "task": "🎬 Sentai Post-Production (2 Reels)",
       "project": "Tough Cookie",
-      "daysOverdue": 17,
+      "daysOverdue": 18,
       "priority": "urgent",
-      "note": "🔥🔥🔥 17 TAGE ÜBERFÄLLIG — Do 14.05. DEADLINE!",
+      "note": "🔥🔥🔥 18 TAGE ÜBERFÄLLIG — Do 14.05. DEADLINE!",
       "status": "overdue"
     },
     {
@@ -72,7 +72,7 @@
       "project": "Tough Cookie",
       "due": "2026-05-11",
       "priority": "urgent",
-      "note": "🔴 1 TAG ÜBERFÄLLIG — 10 Minuten — Sofortiger Cashflow! QUICK WIN!",
+      "note": "🔴 2 TAGE ÜBERFÄLLIG — 10 Minuten — Sofortiger Cashflow! QUICK WIN!",
       "status": "overdue"
     },
     {
@@ -80,7 +80,7 @@
       "project": "Kyberg Export",
       "due": "2026-05-10",
       "priority": "urgent",
-      "note": "13 Mio USD Volumen — 2+ Tage überfällig!",
+      "note": "13 Mio USD Volumen — 3+ Tage überfällig!",
       "status": "overdue"
     },
     {
@@ -88,7 +88,7 @@
       "project": "Kyberg Export",
       "due": "2026-05-10",
       "priority": "urgent",
-      "note": "5-7% Provision, Exklusivität Vietnam — 2+ Tage überfällig!",
+      "note": "5-7% Provision, Exklusivität Vietnam — 3+ Tage überfällig!",
       "status": "overdue"
     },
     {
@@ -96,7 +96,7 @@
       "project": "Tough Cookie",
       "due": "2026-05-10",
       "priority": "high",
-      "note": "Flex 1.490€, Growth 1.290€, Partner 1.190€ — 2+ Tage überfällig!",
+      "note": "Flex 1.490€, Growth 1.290€, Partner 1.190€ — 3+ Tage überfällig!",
       "status": "overdue"
     },
     {
@@ -104,7 +104,7 @@
       "project": "Tough Cookie",
       "due": "2026-05-10",
       "priority": "high",
-      "note": "Neue Pricing-Struktur! 2+ Tage überfällig!",
+      "note": "Neue Pricing-Struktur! 3+ Tage überfällig!",
       "status": "overdue"
     },
     {
@@ -128,7 +128,7 @@
       "project": "Freelance",
       "due": "2026-05-09",
       "priority": "high",
-      "note": "✅ Fertig, nur abschicken! 10min Quick Win!",
+      "note": "✅ Fertig, nur abschicken! 10min Quick Win! 4+ Tage überfällig!",
       "status": "overdue"
     },
     {
@@ -171,7 +171,7 @@
   ],
   "weeklyGoals": {
     "kybergExport": [
-      "Onkel-Antwort auf Vietnamesisch (2+ Tage überfällig)",
+      "Onkel-Antwort auf Vietnamesisch (3+ Tage überfällig)",
       "Telefonat mit Onkel (Provision 5-7%)",
       "Distributor Profile PDF erstellen (bis Fr 17.5.)",
       "Kyberg-Erstkontakt initiieren (bis Fr 24.5.)"
@@ -179,7 +179,7 @@
     "toughCookie": [
       "✅ Niku Post-Production (FERTIG!)",
       "🔥 Sentai Post-Production (Do 14.5.)",
-      "🔥 NOMU Post-Production (SOFORT — 23 Tage überfällig!)",
+      "🔥 NOMU Post-Production (SOFORT — 24 Tage überfällig!)",
       "Rechnung Jidai (ASAP)",
       "Nebelmaschine besorgen (Fr 15.5.)",
       "Japanese Pancake Pre-Production (Fr 15.5.)"
@@ -205,6 +205,11 @@
   },
   "updates": [
     {
+      "time": "16:04",
+      "type": "cron",
+      "message": "Dashboard Update v5.4.57 — DIENSTAG NACHMITTAG: 6 kritische Tasks — NOMU (24 Tage) + Sentai (18 Tage) — Deadline Donnerstag!"
+    },
+    {
       "time": "12:04",
       "type": "cron",
       "message": "Dashboard Update v5.4.56 — DIENSTAG MITTAG: 6 kritische Tasks — NOMU (23 Tage) + Sentai (17 Tage) Priorität!"
@@ -223,11 +228,6 @@
       "time": "00:04",
       "type": "cron",
       "message": "Dashboard Update v5.4.53 — DIENSTAG FRÜH: 7 kritische Tasks — Niku (HEUTE!) + NOMU (23+ Tage) + Sentai (17 Tage)"
-    },
-    {
-      "time": "20:04",
-      "type": "cron",
-      "message": "Dashboard Update v5.4.52 — MONTAG ABEND: 7 kritische Tasks"
     }
   ]
 }
