@@ -1,6 +1,6 @@
 {
-  "version": "v5.4.53",
-  "lastUpdated": "2026-05-12T00:04:00+02:00",
+  "version": "v5.4.54",
+  "lastUpdated": "2026-05-12T04:04:00+02:00",
   "status": "active",
   "metrics": {
     "urgentTasks": 7,
@@ -11,7 +11,7 @@
   "today": "2026-05-12",
   "kw": 20,
   "dayOfWeek": "DIENSTAG",
-  "time": "00:04",
+  "time": "04:04",
   "lastSession": {
     "date": "2026-05-11",
     "mood": "🤷",
@@ -21,10 +21,10 @@
       "Grafikdesignerin kommuniziert"
     ],
     "frustrations": [
-      "NOMU jetzt 22+ Tage überfällig",
-      "Sentai jetzt 16 Tage überfällig",
+      "NOMU jetzt 23+ Tage überfällig",
+      "Sentai jetzt 17 Tage überfällig",
       "Niku Post-Production HEUTE fällig!",
-      "4 Sonntag-Deadlines jetzt 3+ Tage überfällig"
+      "4 Sonntag-Deadlines jetzt 4+ Tage überfällig"
     ]
   },
   "masterplan": {
@@ -35,7 +35,7 @@
     "strategy": "ZWEI SÄULEN: Tough Cookie stabilisieren + Freelance ausbauen + Export (Kyberg) als Game Changer",
     "deadline": "November 2026 (6 Monate Ultimatum)",
     "kybergUpdate": "Export-Meeting vorbereitet, Kyberg Erstkontakt in Planung",
-    "todayFocus": "🔥 DIENSTAG FRÜH: 7 kritische Tasks — Niku (HEUTE!) + NOMU (22+ Tage) + Sentai (16 Tage)"
+    "todayFocus": "🔥🔥 DIENSTAG 04:04 — Niku JETZT FÄLLIG! + NOMU (24 Tage) + Sentai (18 Tage) + 6 weitere überfällig"
   },
   "openTasks": [
     {
@@ -43,63 +43,63 @@
       "project": "Tough Cookie",
       "due": "2026-05-12",
       "priority": "urgent",
-      "note": "🔥🔥🔥 HEUTE FÄLLIG! 12.05. DIENSTAG!",
+      "note": "🔥🔥🔥🔥 JETZT FÄLLIG! DIENSTAG 12.05. — SOFORT MACHEN!",
       "status": "overdue"
     },
     {
       "task": "🎬 NOMU Post-Production",
       "project": "NOMU",
-      "daysOverdue": 23,
+      "daysOverdue": 24,
       "priority": "urgent",
-      "note": "🔥🔥🔥🔥 23+ TAGE ÜBERFÄLLIG — KUNDE WARTET — KRITISCH!",
+      "note": "🔥🔥🔥🔥🔥 24 TAGE ÜBERFÄLLIG — KUNDE WARTET — EXTREM KRITISCH!",
       "status": "overdue"
     },
     {
       "task": "🎬 Sentai Post-Production (2 Reels)",
       "project": "Tough Cookie",
-      "daysOverdue": 17,
+      "daysOverdue": 18,
       "priority": "urgent",
-      "note": "🔥🔥🔥 17 TAGE ÜBERFÄLLIG — DRINGEND!",
+      "note": "🔥🔥🔥🔥 18 TAGE ÜBERFÄLLIG — SEHR DRINGEND!",
       "status": "overdue"
     },
     {
       "task": "💰 Rechnung Jidai rausschicken",
       "project": "Tough Cookie",
-      "due": "2026-05-11",
+      "daysOverdue": 1,
       "priority": "urgent",
-      "note": "🔴 Gestern fällig! Direkter Cashflow!",
+      "note": "🔴 1 TAG ÜBERFÄLLIG! Direkter Cashflow — SOFORT!",
       "status": "overdue"
     },
     {
       "task": "📧 Onkel-Antwort auf Vietnamesisch",
       "project": "Kyberg Export",
-      "due": "2026-05-10",
+      "daysOverdue": 4,
       "priority": "urgent",
-      "note": "13 Mio USD Volumen — 3+ Tage überfällig!",
+      "note": "13 Mio USD Volumen — 4 Tage überfällig!",
       "status": "overdue"
     },
     {
       "task": "📞 Telefonat mit Onkel (Provision klären)",
       "project": "Kyberg Export",
-      "due": "2026-05-10",
+      "daysOverdue": 4,
       "priority": "urgent",
-      "note": "5-7% Provision, Exklusivität Vietnam — 3+ Tage überfällig!",
+      "note": "5-7% Provision, Exklusivität Vietnam — 4 Tage überfällig!",
       "status": "overdue"
     },
     {
       "task": "📊 Pitchdeck-Slide 'Packages' überarbeiten",
       "project": "Tough Cookie",
-      "due": "2026-05-10",
+      "daysOverdue": 4,
       "priority": "high",
-      "note": "Flex 1.490€, Growth 1.290€, Partner 1.190€ — 3+ Tage überfällig!",
+      "note": "Flex 1.490€, Growth 1.290€, Partner 1.190€ — 4 Tage überfällig!",
       "status": "overdue"
     },
     {
       "task": "📄 Zwei Pitchdecks finalisieren",
       "project": "Tough Cookie",
-      "due": "2026-05-10",
+      "daysOverdue": 4,
       "priority": "high",
-      "note": "Neue Pricing-Struktur! 3+ Tage überfällig!",
+      "note": "Neue Pricing-Struktur! 4 Tage überfällig!",
       "status": "overdue"
     },
     {
@@ -121,10 +121,10 @@
     {
       "task": "💰 G-Life Rechnung rausschicken",
       "project": "Freelance",
-      "due": "2026-05-09",
+      "daysOverdue": 5,
       "priority": "high",
       "note": "✅ Fertig, nur abschicken! 10min Quick Win!",
-      "status": "pending"
+      "status": "overdue"
     },
     {
       "task": "📑 Distributor Profile PDF erstellen",
@@ -166,21 +166,21 @@
   ],
   "weeklyGoals": {
     "kybergExport": [
-      "Onkel-Antwort auf Vietnamesisch (3+ Tage überfällig)",
+      "Onkel-Antwort auf Vietnamesisch (4 Tage überfällig)",
       "Telefonat mit Onkel (Provision 5-7%)",
       "Distributor Profile PDF erstellen (bis Fr 17.5.)",
       "Kyberg-Erstkontakt initiieren (bis Fr 24.5.)"
     ],
     "toughCookie": [
-      "🔥 Niku Post-Production (HEUTE 12.5.!)",
-      "🔥 Sentai Post-Production (Do 14.5.)",
-      "🔥 NOMU Post-Production (SOFORT)",
-      "Rechnung Jidai (ASAP)",
+      "🔥🔥 Niku Post-Production (JETZT FÄLLIG!)",
+      "🔥 Sentai Post-Production (18 Tage überfällig)",
+      "🔥 NOMU Post-Production (24 Tage überfällig — KRITISCH!)",
+      "Rechnung Jidai (1 Tag überfällig)",
       "Nebelmaschine besorgen (Fr 15.5.)",
       "Japanese Pancake Pre-Production (Fr 15.5.)"
     ],
     "freelance": [
-      "💰 G-Life Rechnung abschicken (10min Quick Win!)",
+      "💰 G-Life Rechnung abschicken (5 Tage überfällig!)",
       "Preisliste erstellen (800€/Video)",
       "3 Kunden anschreiben",
       "Ersten Retainer anbieten"
@@ -200,6 +200,11 @@
   },
   "updates": [
     {
+      "time": "04:04",
+      "type": "cron",
+      "message": "Dashboard Update v5.4.54 — DIENSTAG FRÜH: 🔥🔥 Niku JETZT FÄLLIG! + NOMU (24 Tage) + Sentai (18 Tage) + 6 weitere überfällig"
+    },
+    {
       "time": "00:04",
       "type": "cron",
       "message": "Dashboard Update v5.4.53 — DIENSTAG FRÜH: 7 kritische Tasks — Niku (HEUTE!) + NOMU (23+ Tage) + Sentai (17 Tage)"
@@ -218,11 +223,6 @@
       "time": "12:04",
       "type": "cron",
       "message": "Dashboard Update v5.4.50 — MONTAG MITTAG: 6 überfällige Tasks"
-    },
-    {
-      "time": "08:04",
-      "type": "cron",
-      "message": "Dashboard Update v5.4.49 — MONTAG MORGEN: 6 überfällige Tasks"
     }
   ]
 }
