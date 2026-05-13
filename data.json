@@ -1,6 +1,6 @@
 {
-  "version": "v5.4.62",
-  "lastUpdated": "2026-05-13T12:04:00+02:00",
+  "version": "v5.4.63",
+  "lastUpdated": "2026-05-13T16:04:00+02:00",
   "status": "active",
   "metrics": {
     "urgentTasks": 6,
@@ -11,7 +11,7 @@
   "today": "2026-05-13",
   "kw": 20,
   "dayOfWeek": "MITTWOCH",
-  "time": "12:04",
+  "time": "16:04",
   "lastSession": {
     "date": "2026-05-12",
     "mood": "💪",
@@ -36,7 +36,7 @@
     "strategy": "ZWEI SÄULEN: Tough Cookie stabilisieren + Freelance ausbauen + Export (Kyberg) als Game Changer",
     "deadline": "November 2026 (6 Monate Ultimatum)",
     "kybergUpdate": "Export-Meeting vorbereitet, Kyberg Erstkontakt in Planung",
-    "todayFocus": "🔥 MITTWOCH MITTAG: Anju-Shoot läuft! NOMU (25 Tage) + Sentai (19 Tage) heute Abend?"
+    "todayFocus": "🔥 MITTWOCH NACHMITTAG: Anju-Shoot läuft! NOMU (26 Tage) + Sentai (19 Tage) — Deadline MORGEN!"
   },
   "completedToday": [
     {
@@ -56,7 +56,7 @@
     }
   ],
   "openTasks": [
-    { "task": "🎬 NOMU Post-Production", "project": "NOMU", "daysOverdue": 25, "priority": "urgent", "note": "🔥🔥🔥🔥 25 TAGE ÜBERFÄLLIG — KUNDE WARTET — EXTREM KRITISCH!", "status": "overdue" },
+    { "task": "🎬 NOMU Post-Production", "project": "NOMU", "daysOverdue": 26, "priority": "urgent", "note": "🔥🔥🔥🔥🔥 26 TAGE ÜBERFÄLLIG — KUNDE WARTET — EXTREM KRITISCH!", "status": "overdue" },
     {
       "task": "🎬 Sentai Post-Production (2 Reels)",
       "project": "Tough Cookie",
@@ -174,7 +174,7 @@
     }
   },
   "updates": [
-    { "time": "12:04", "type": "cron", "message": "Dashboard Update v5.4.62 — MITTWOCH MITTAG: Anju-Shoot läuft! NOMU + Sentai heute Abend?" },
+    { "time": "12:04", "type": "cron", "message": "Dashboard Update v5.4.63 — MITTWOCH NACHMITTAG: NOMU jetzt 26 Tage + Sentai DEADLINE MORGEN!" },
     { "time": "08:04", "type": "cron", "message": "Dashboard Update v5.4.61 — MITTWOCH MORGEN: NOMU + Sentai EXTREM KRITISCH — Deadline morgen!" },
     { "time": "04:04", "type": "cron", "message": "Dashboard Update v5.4.60 — MITTWOCH FRÜH: NOMU (25 Tage) + Sentai (19 Tage) JETZT!" },
     { "time": "00:04", "type": "cron", "message": "Dashboard Update v5.4.59 — MITTWOCH FRÜH: 6 kritische Tasks — NOMU (25) + Sentai (19)" },
