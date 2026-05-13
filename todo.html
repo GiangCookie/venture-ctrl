@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#1a1a2e">
+    <title>Giang's Todos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: #1a1a2e;
+            color: #eee;
+            padding: 20px;
+            max-width: 100%;
+            min-height: 100vh;
+        }
+        h1 {
+            font-size: 1.5em;
+            margin-bottom: 5px;
+            color: #f39c12;
+        }
+        .date {
+            color: #888;
+            font-size: 0.85em;
+            margin-bottom: 20px;
+        }
+        .todo-item {
+            background: #16213e;
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 12px;
+            border-left: 4px solid #e74c3c;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+        .todo-item.yellow {
+            border-left-color: #f39c12;
+        }
+        .todo-item.green {
+            border-left-color: #2ecc71;
+        }
+        .priority {
+            font-size: 0.75em;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+        .priority.red { color: #e74c3c; }
+        .priority.yellow { color: #f39c12; }
+        .priority.green { color: #2ecc71; }
+        .text {
+            font-size: 1em;
+            line-height: 1.4;
+        }
+        .meta {
+            font-size: 0.8em;
+            color: #888;
+            margin-top: 4px;
+        }
+        .footer {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 0.75em;
+            color: #666;
+        }
+        .refresh-btn {
+            background: #f39c12;
+            color: #1a1a2e;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 25px;
+            font-size: 1em;
+            font-weight: bold;
+            width: 100%;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+        .section-title {
+            font-size: 0.85em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #888;
+            margin: 20px 0 10px 0;
+            border-bottom: 1px solid #333;
+            padding-bottom: 5px;
+        }
+        .done-count {
+            text-align: center;
+            margin: 20px 0;
+            padding: 15px;
+            background: #16213e;
+            border-radius: 12px;
+        }
+        .done-count .number {
+            font-size: 2em;
+            font-weight: bold;
+            color: #f39c12;
+        }
+    </style>
+</head>
+<body>
+    <button class="refresh-btn" onclick="location.reload()">🔄 Aktualisieren</button>
+    
+    <h1>🎯 Giang's Todos</h1>
+    <div class="date">Mi 13. Mai 2026, 19:24 Uhr</div>
+    
+    <div class="done-count">
+        <div class="number">1/10</div>
+        <div>Heute erledigt</div>
+    </div>
+    
+    <div class="section-title">🔥 SOFORT</div>
+    
+    <div class="todo-item">
+        <div>
+            <div class="priority red">🔴 HEUTE ABEND</div>
+            <div class="text">🎬 Sentai Post-Production</div>
+            <div class="meta">Deadline: MORGEN Do 14.05. | 2-3h</div>
+        </div>
+    </div>
+    
+    <div class="section-title">📅 DIESE WOCHE</div>
+    
+    <div class="todo-item">
+        <div>
+            <div class="priority red">🔴 25 Tage überfällig</div>
+            <div class="text">🎬 NOMU Post-Production</div>
+            <div class="meta">Kunde wartet! | 2h</div>
+        </div>
+    </div>
+    
+    <div class="todo-item">
+        <div>
+            <div class="priority yellow">🟡 Fr 15.05.</div>
+            <div class="text">🎬 Japanese Pancake Pre-Production</div>
+            <div class="meta">Dreh vorbereiten | 2h</div>
+        </div>
+    </div>
+    
+    <div class="todo-item">
+        <div>
+            <div class="priority yellow">🟡 Fr 15.05.</div>
+            <div class="text">🎥 Nebelmaschine besorgen</div>
+            <div class="meta">Für Niku Shooting | 1h</div>
+        </div>
+    </div>
+    
+    <div class="todo-item">
+        <div>
+            <div class="priority yellow">🟡 Fr 15.05.</div>
+            <div class="text">📸 Nico Fotoshoot</div>
+            <div class="meta">Geplant für Freitag</div>
+        </div>
+    </div>
+    
+    <div class="todo-item">
+        <div>
+            <div class="priority green">⚡ 10 MIN</div>
+            <div class="text">💰 Rechnung Jidai rausschicken</div>
+            <div class="meta">Quick Win — sofortiger Cashflow!</div>
+        </div>
+    </div>
+    
+    <div class="section-title">🏨 NEU — BIS MONTAG</div>
+    
+    <div class="todo-item yellow">
+        <div>
+            <div class="priority yellow">🟡 Deadline Mo 18.05.</div>
+            <div class="text">🏨 Armando Hotelkette Angebot</div>
+            <div class="meta">4 Social Media Accounts | 3.500€/Monat empfohlen | 6-8h Arbeit</div>
+        </div>
+    </div>
+    
+    <div class="section-title">📋 ADMIN</div>
+    
+    <div class="todo-item green">
+        <div>
+            <div class="priority green">🟢 Wenn Zeit</div>
+            <div class="text">📧 Onkel-Antwort (Export)</div>
+            <div class="meta">30min | Kyberg/Kennedy</div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        Auto-Update alle 4h via Gerhard 🤖<br>
+        Zum Homescreen hinzufügen für App-Feeling
+    </div>
+</body>
+</html>
