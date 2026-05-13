@@ -1,6 +1,6 @@
 {
-  "version": "v5.4.61",
-  "lastUpdated": "2026-05-13T08:04:00+02:00",
+  "version": "v5.4.62",
+  "lastUpdated": "2026-05-13T12:04:00+02:00",
   "status": "active",
   "metrics": {
     "urgentTasks": 6,
@@ -11,7 +11,7 @@
   "today": "2026-05-13",
   "kw": 20,
   "dayOfWeek": "MITTWOCH",
-  "time": "08:04",
+  "time": "12:04",
   "lastSession": {
     "date": "2026-05-12",
     "mood": "💪",
@@ -36,7 +36,7 @@
     "strategy": "ZWEI SÄULEN: Tough Cookie stabilisieren + Freelance ausbauen + Export (Kyberg) als Game Changer",
     "deadline": "November 2026 (6 Monate Ultimatum)",
     "kybergUpdate": "Export-Meeting vorbereitet, Kyberg Erstkontakt in Planung",
-    "todayFocus": "🔥 MITTWOCH MORGEN: NOMU (25 Tage) + Sentai (19 Tage) EXTREM KRITISCH — Deadline morgen!"
+    "todayFocus": "🔥 MITTWOCH MITTAG: Anju-Shoot läuft! NOMU (25 Tage) + Sentai (19 Tage) heute Abend?"
   },
   "completedToday": [
     {
@@ -48,6 +48,11 @@
       "task": "✅ Niku Posts (Woche)",
       "project": "Tough Cookie",
       "note": "🎉 Alle Posts für die Woche erstellt!"
+    },
+    {
+      "task": "✅ Anju-Shoot Pre-Production",
+      "project": "Tough Cookie",
+      "note": "🎬 Fotoshoot heute — ca. 3 Stunden!"
     }
   ],
   "openTasks": [
@@ -169,10 +174,10 @@
     }
   },
   "updates": [
+    { "time": "12:04", "type": "cron", "message": "Dashboard Update v5.4.62 — MITTWOCH MITTAG: Anju-Shoot läuft! NOMU + Sentai heute Abend?" },
     { "time": "08:04", "type": "cron", "message": "Dashboard Update v5.4.61 — MITTWOCH MORGEN: NOMU + Sentai EXTREM KRITISCH — Deadline morgen!" },
     { "time": "04:04", "type": "cron", "message": "Dashboard Update v5.4.60 — MITTWOCH FRÜH: NOMU (25 Tage) + Sentai (19 Tage) JETZT!" },
     { "time": "00:04", "type": "cron", "message": "Dashboard Update v5.4.59 — MITTWOCH FRÜH: 6 kritische Tasks — NOMU (25) + Sentai (19)" },
-    { "time": "20:04", "type": "cron", "message": "Dashboard Update v5.4.58 — DIENSTAG ABEND: 6 kritische Tasks — NOMU (24) + Sentai (18)" },
-    { "time": "16:04", "type": "cron", "message": "Dashboard Update v5.4.57 — DIENSTAG NACHMITTAG: 6 kritische Tasks" }
+    { "time": "20:04", "type": "cron", "message": "Dashboard Update v5.4.58 — DIENSTAG ABEND: 6 kritische Tasks — NOMU (24) + Sentai (18)" }
   ]
 }
