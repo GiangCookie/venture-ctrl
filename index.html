@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VENTURE CTRL v5.4.57</title>
+    <title>VENTURE CTRL v5.4.60</title>
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
@@ -198,19 +198,40 @@
             font-size: 0.7rem;
             font-weight: bold;
         }
+        .completed-badge {
+            background: linear-gradient(135deg, #22c55e 0%, #4ade80 100%);
+            color: white;
+            padding: 2px 10px;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: bold;
+        }
+        .success-box {
+            background: rgba(74, 222, 128, 0.1);
+            border: 1px solid rgba(74, 222, 128, 0.3);
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        .completed-task {
+            border-left-color: #22c55e;
+            background: rgba(34, 197, 94, 0.08);
+            text-decoration: line-through;
+            opacity: 0.8;
+        }
     </style>
 </head>
 <body>
     <div class="header">
-        <span class="version-badge">v5.4.57</span>
+        <span class="version-badge">v5.4.60</span>
         <h1>🚀 VENTURE CTRL</h1>
-        <p>Dienstag, 12. Mai 2026 — 16:04 Uhr <span class="kw-badge">KW20</span></p>
+        <p>Mittwoch, 13. Mai 2026 — 00:04 Uhr <span class="kw-badge">KW20</span></p>
     </div>
 
     <!-- Critical Alert Banner -->
     <div class="alert-banner">
         <h3>🚨 KRITISCHE SITUATION</h3>
-        <p>6 Tasks überfällig — NOMU (23 Tage) + Sentai (17 Tage) — Niku ✅ FERTIG!</p>
+        <p>6 Tasks überfällig — NOMU (25 Tage) + Sentai (19 Tage) JETZT!</p>
     </div>
 
     <div class="grid">
@@ -235,7 +256,7 @@
                     <span>November 2026</span>
                 </div>
             </div>
-            <p style="font-size: 0.9rem; color: #888;">🔥 DIENSTAG NACHMITTAG: 6 kritische Tasks — NOMU + Sentai Priorität!</p>
+            <p style="font-size: 0.9rem; color: #888;">🔥 MITTWOCH FRÜH: 6 kritische Tasks</p>
         </div>
 
         <!-- Stats -->
@@ -259,11 +280,28 @@
             </div>
             <div class="stat-row">
                 <span class="stat-label">📅 Wochentag:</span>
-                <span class="stat-value">Dienstag</span>
+                <span class="stat-value">Mittwoch</span>
             </div>
             <div class="stat-row">
                 <span class="stat-label">⚡ KW:</span>
                 <span class="stat-value">20</span>
+            </div>
+        </div>
+
+        <!-- Completed Today -->
+        <div class="card" style="grid-column: 1 / -1;">
+            <h2>✅ HEUTE ERLEDIGT</h2>
+            
+            <div class="success-box">
+                <strong>🎬 Niku Post-Production (2 Reels + Bilder)</strong>
+                <span class="completed-badge">FERTIG!</span>
+                <br><small style="color: #4ade80;">🎉 EINEN TAG FRÜHER GESCHAFFT!</small>
+            </div>
+
+            <div class="success-box">
+                <strong>📝 Niku Posts für die Woche</strong>
+                <span class="completed-badge">FERTIG!</span>
+                <br><small style="color: #4ade80;">🎉 Alle Posts für die Woche erstellt!</small>
             </div>
         </div>
 
@@ -273,61 +311,54 @@
             
             <div class="todo extreme">
                 <strong>🎬 NOMU Post-Production</strong>
-                <span class="extreme-days">24 TAGE</span>
+                <span class="extreme-days">25 TAGE</span>
                 <br><small style="color: #fca5a5;">🔥🔥🔥🔥 KUNDE WARTET — EXTREM KRITISCH!</small>
             </div>
 
-            <div class="todo overdue">
+            <div class="todo extreme">
                 <strong>🎬 Sentai Post-Production (2 Reels)</strong>
-                <span class="overdue-days">18 TAGE</span>
-                <br><small style="color: #fca5a5;">🔥🔥🔥 Do 14.05. DEADLINE — 2 TAGE!</small>
+                <span class="extreme-days">19 TAGE</span>
+                <br><small style="color: #fca5a5;">🔥🔥🔥 Mi 13.05. JETZT!</small>
             </div>
 
             <div class="todo overdue">
                 <strong>💰 Rechnung Jidai rausschicken</strong>
-                <span class="quickwin-badge">QUICK WIN</span>
-                <span class="overdue-days">2 TAGE</span>
-                <br><small style="color: #fca5a5;">🔴 10 Minuten — Sofortiger Cashflow!</small>
+                <span class="overdue-days">3 TAGE</span>
+                <br><small style="color: #fca5a5;">🔴 Überfällig — 10 Minuten — Sofortiger Cashflow! QUICK WIN!</small>
             </div>
 
             <div class="todo overdue">
                 <strong>📧 Onkel-Antwort auf Vietnamesisch</strong>
-                <span class="overdue-days">2+ TAGE</span>
-                <br><small>13 Mio USD Volumen</small>
+                <span class="overdue-days">4 TAGE</span>
+                <br><small>13 Mio USD Volumen — Kyberg Export</small>
             </div>
 
             <div class="todo overdue">
                 <strong>📞 Telefonat mit Onkel (Provision klären)</strong>
-                <span class="overdue-days">2+ TAGE</span>
+                <span class="overdue-days">4 TAGE</span>
                 <br><small>5-7% Provision, Exklusivität Vietnam</small>
+            </div>
+
+            <div class="todo overdue">
+                <strong>💰 G-Life Rechnung rausschicken</strong>
+                <span class="overdue-days">5 TAGE</span>
+                <br><small style="color: #fca5a5;">✅ Fertig, nur abschicken! 10min Quick Win!</small>
             </div>
         </div>
 
         <!-- High Priority Tasks -->
         <div class="card">
             <h2>📋 WICHTIGE TASKS</h2>
-
-            <div class="todo high">
-                <strong>✅ Niku Post-Production</strong>
-                <span class="quickwin-badge">FERTIG!</span>
-                <br><small style="color: #4ade80;">🎉 EINEN TAG FRÜHER GESCHAFFT!</small>
-            </div>
-
-            <div class="todo high">
-                <strong>✅ Niku Posts (Woche)</strong>
-                <span class="quickwin-badge">FERTIG!</span>
-                <br><small style="color: #4ade80;">🎉 Alle Posts für die Woche erstellt!</small>
-            </div>
-
+            
             <div class="todo high">
                 <strong>📊 Pitchdeck-Slide 'Packages'</strong>
-                <span class="overdue-days">2+ TAGE</span>
+                <span class="overdue-days">3+ TAGE</span>
                 <br><small>Flex 1.490€, Growth 1.290€, Partner 1.190€</small>
             </div>
 
             <div class="todo high">
                 <strong>📄 Zwei Pitchdecks finalisieren</strong>
-                <span class="overdue-days">2+ TAGE</span>
+                <span class="overdue-days">3+ TAGE</span>
                 <br><small>Neue Pricing-Struktur!</small>
             </div>
 
@@ -339,12 +370,6 @@
             <div class="todo high">
                 <strong>🎬 Japanese Pancake Pre-Production</strong>
                 <br><small>Freitag 15.5.</small>
-            </div>
-
-            <div class="todo high">
-                <strong>💰 G-Life Rechnung rausschicken</strong>
-                <span class="quickwin-badge">QUICK WIN</span>
-                <br><small>✅ Fertig, nur abschicken!</small>
             </div>
 
             <div class="todo high">
@@ -425,9 +450,10 @@
             <div class="grid" style="margin-top: 10px;">
                 <div>
                     <h3 style="color: #f87171; font-size: 0.9rem; margin-bottom: 10px;">🔴 Tough Cookie (KRITISCH)</h3>
-                    <p style="font-size: 0.85rem; margin-bottom: 5px;"><span style="color: #4ade80;">✅ Niku Post-Production (FERTIG!)</span></p>
-                    <p style="font-size: 0.85rem; margin-bottom: 5px;">🔥 Sentai Post-Production (Do 14.5.)</p>
-                    <p style="font-size: 0.85rem; margin-bottom: 5px;">🔥 NOMU Post-Production (SOFORT — 23 Tage!)</p>
+                    <p style="font-size: 0.85rem; margin-bottom: 5px; color: #4ade80;">✅ Niku Post-Production (FERTIG!)</p>
+                    <p style="font-size: 0.85rem; margin-bottom: 5px; color: #4ade80;">✅ Niku Posts Woche (FERTIG!)</p>
+                    <p style="font-size: 0.85rem; margin-bottom: 5px; color: #fca5a5;">🔥 Sentai Post-Production (Do 14.5.)</p>
+                    <p style="font-size: 0.85rem; margin-bottom: 5px; color: #fca5a5;">🔥 NOMU Post-Production (SOFORT)</p>
                     <p style="font-size: 0.85rem; margin-bottom: 5px;">💰 Rechnung Jidai (ASAP)</p>
                     <p style="font-size: 0.85rem; margin-bottom: 5px;">🎥 Nebelmaschine besorgen (Fr 15.5.)</p>
                     <p style="font-size: 0.85rem;">🎬 Japanese Pancake Pre-Prod (Fr 15.5.)</p>
@@ -453,39 +479,31 @@
         <div class="card" style="grid-column: 1 / -1;">
             <h2>📝 LETZTE UPDATES</h2>
             <div class="stat-row">
-                <span class="stat-label timestamp">12:04</span>
-                <span style="font-size: 0.9rem;">Dashboard Update v5.4.57 — NOMU (23 Tage) + Sentai (17 Tage) Priorität!</span>
-            </div>
-            <div class="stat-row">
-                <span class="stat-label timestamp">08:04</span>
-                <span style="font-size: 0.9rem;">Dashboard Update v5.4.55 — Niku ✅ FERTIG! 6 Tasks übrig</span>
-            </div>
-            <div class="stat-row">
-                <span class="stat-label timestamp">04:04</span>
-                <span style="font-size: 0.9rem;">Dashboard Update v5.4.54 — Niku JETZT FÄLLIG! + NOMU (24 Tage)</span>
-            </div>
-            <div class="stat-row">
                 <span class="stat-label timestamp">00:04</span>
-                <span style="font-size: 0.9rem;">Dashboard Update v5.4.53 — 7 kritische Tasks, Niku HEUTE fällig!</span>
+                <span style="font-size: 0.9rem;">Dashboard Update v5.4.59 — MITTWOCH FRÜH: NOMU (25) + Sentai (19) JETZT!</span>
             </div>
             <div class="stat-row">
                 <span class="stat-label timestamp">20:04</span>
-                <span style="font-size: 0.9rem;">Dashboard Update v5.4.52 — 7 kritische Tasks, Niku morgen fällig!</span>
+                <span style="font-size: 0.9rem;">Dashboard Update v5.4.58 — DIENSTAG ABEND: 6 kritische Tasks — NOMU (24) + Sentai (18)</span>
             </div>
             <div class="stat-row">
                 <span class="stat-label timestamp">16:04</span>
-                <span style="font-size: 0.9rem;">Dashboard Update v5.4.51 — 6 überfällige Tasks</span>
+                <span style="font-size: 0.9rem;">Dashboard Update v5.4.57 — DIENSTAG NACHMITTAG: 6 kritische Tasks</span>
             </div>
             <div class="stat-row">
                 <span class="stat-label timestamp">12:04</span>
-                <span style="font-size: 0.9rem;">Dashboard Update v5.4.50 — 6 überfällige Tasks</span>
+                <span style="font-size: 0.9rem;">Dashboard Update v5.4.56 — DIENSTAG MITTAG: NOMU (23) + Sentai (17)</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label timestamp">08:04</span>
+                <span style="font-size: 0.9rem;">Dashboard Update v5.4.55 — Niku ✅ FERTIG! 6 kritische Tasks übrig</span>
             </div>
         </div>
     </div>
 
     <div class="meta">
-        <p>🚀 VENTURE CTRL v5.4.57 | Letztes Update: 12. Mai 2026, 16:04 Uhr</p>
-        <p style="margin-top: 5px;">Nächstes Update: 16:04 Uhr</p>
+        <p>🚀 VENTURE CTRL v5.4.58 | Letztes Update: 12. Mai 2026, 20:04 Uhr</p>
+        <p style="margin-top: 5px;">Nächstes Update: 00:04 Uhr</p>
     </div>
 </body>
 </html>
