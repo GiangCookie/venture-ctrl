@@ -3,513 +3,291 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VENTURE CTRL v5.4.63</title>
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
+    <title>venture-ctrl v5.4.64</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; 
-            background: #0a0a0f; 
-            color: #e0e0e0; 
-            padding: 20px;
-            line-height: 1.6;
+        * { font-family: 'Inter', sans-serif; }
+        .glass {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
-        .header { 
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
-            padding: 25px; 
-            border-radius: 12px; 
-            margin-bottom: 25px;
-            text-align: center;
-            position: relative;
+        .animate-pulse-fast { animation: pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
         }
-        .header h1 { font-size: 2.2rem; margin-bottom: 5px; color: white; }
-        .header p { color: rgba(255,255,255,0.8); }
-        .version-badge {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background: rgba(255,255,255,0.2);
-            color: white;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: bold;
+        .slide-in { animation: slideIn 0.4s ease-out; }
+        .gradient-text {
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
-        .grid { display: grid; gap: 20px; grid-template-columns: 1fr; }
-        @media (min-width: 768px) {
-            .grid { grid-template-columns: repeat(2, 1fr); }
+        .urgent-glow {
+            box-shadow: 0 0 20px rgba(239, 68, 68, 0.4);
+            animation: urgentPulse 2s ease-in-out infinite;
         }
-        .card { 
-            background: rgba(255,255,255,0.05); 
-            border: 1px solid rgba(255,255,255,0.1);
-            padding: 20px; 
-            border-radius: 10px;
+        @keyframes urgentPulse {
+            0%, 100% { box-shadow: 0 0 20px rgba(239, 68, 68, 0.4); }
+            50% { box-shadow: 0 0 40px rgba(239, 68, 68, 0.7); }
         }
-        .card h2 { color: #667eea; margin-bottom: 15px; font-size: 1.1rem; }
-        .stat-row { 
-            display: flex; 
-            justify-content: space-between; 
-            padding: 10px 0;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
+        .new-project-glow {
+            box-shadow: 0 0 25px rgba(59, 130, 246, 0.5);
+            animation: newPulse 3s ease-in-out infinite;
         }
-        .stat-row:last-child { border-bottom: none; }
-        .stat-label { color: #888; }
-        .stat-value { font-weight: bold; }
-        .positive { color: #4ade80; }
-        .negative { color: #f87171; }
-        .warning { color: #fbbf24; }
-        .critical { color: #ef4444; font-weight: bold; }
-        .todo { 
-            padding: 12px; 
-            margin-bottom: 8px; 
-            border-radius: 8px;
-            border-left: 3px solid;
-            background: rgba(255,255,255,0.03);
-        }
-        .urgent { border-left-color: #f87171; background: rgba(248, 113, 113, 0.08); }
-        .high { border-left-color: #fbbf24; background: rgba(251, 191, 36, 0.08); }
-        .normal { border-left-color: #60a5fa; }
-        .low { border-left-color: #9ca3af; }
-        .overdue { 
-            border-left-color: #ef4444; 
-            background: rgba(239, 68, 68, 0.15);
-            animation: pulse 2s infinite;
-        }
-        .extreme {
-            border: 2px solid #ef4444;
-            background: rgba(239, 68, 68, 0.25);
-            animation: pulse 1.5s infinite;
-        }
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.8; }
-        }
-        .deal { 
-            display: flex; 
-            justify-content: space-between; 
-            padding: 10px;
-            margin-bottom: 6px;
-            border-radius: 6px;
-            background: rgba(255,255,255,0.03);
-        }
-        .stage { padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; }
-        .won { background: rgba(74,222,128,0.2); color: #4ade80; }
-        .pitch { background: rgba(251,191,36,0.2); color: #fbbf24; }
-        .lead { background: rgba(96,165,250,0.2); color: #60a5fa; }
-        .gamechanger { background: rgba(139, 92, 246, 0.2); color: #a78bfa; }
-        .meta { color: #666; font-size: 0.8rem; margin-top: 20px; text-align: center; }
-        .highlight { background: rgba(102, 126, 234, 0.1); padding: 8px 12px; border-radius: 6px; margin-bottom: 10px; }
-        .today-badge { 
-            background: linear-gradient(135deg, #f87171 0%, #fbbf24 100%);
-            color: white;
-            padding: 2px 10px;
-            border-radius: 12px;
-            font-size: 0.7rem;
-            font-weight: bold;
-        }
-        .quickwin-badge {
-            background: linear-gradient(135deg, #22c55e 0%, #4ade80 100%);
-            color: white;
-            padding: 2px 10px;
-            border-radius: 12px;
-            font-size: 0.7rem;
-            font-weight: bold;
-        }
-        .content-reminder {
-            background: rgba(251, 191, 36, 0.1);
-            border: 1px solid rgba(251, 191, 36, 0.3);
-            padding: 10px 15px;
-            border-radius: 8px;
-            margin-bottom: 8px;
-        }
-        .timestamp {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.7rem;
-            color: #888;
-            margin-top: 5px;
-        }
-        .kw-badge {
-            display: inline-block;
-            background: #667eea;
-            color: white;
-            padding: 2px 10px;
-            border-radius: 12px;
-            font-size: 0.75rem;
-            margin-left: 10px;
-        }
-        .overdue-days {
-            background: #ef4444;
-            color: white;
-            padding: 2px 8px;
-            border-radius: 10px;
-            font-size: 0.7rem;
-            margin-left: 8px;
-        }
-        .extreme-days {
-            background: #7f1d1d;
-            color: white;
-            padding: 2px 8px;
-            border-radius: 10px;
-            font-size: 0.7rem;
-            margin-left: 8px;
-            font-weight: bold;
-        }
-        .masterplan-box {
-            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
-            border: 1px solid rgba(102, 126, 234, 0.3);
-            padding: 15px;
-            border-radius: 8px;
-            margin-bottom: 10px;
-        }
-        .masterplan-box h3 {
-            color: #667eea;
-            margin-bottom: 8px;
-        }
-        .gap-value {
-            color: #f87171;
-            font-weight: bold;
-        }
-        .target-value {
-            color: #4ade80;
-            font-weight: bold;
-        }
-        .alert-banner {
-            background: linear-gradient(135deg, rgba(239, 68, 68, 0.2), rgba(251, 191, 36, 0.2));
-            border: 2px solid #ef4444;
-            padding: 15px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-        .alert-banner h3 {
-            color: #ef4444;
-            margin-bottom: 5px;
-        }
-        .alert-banner p {
-            color: #fca5a5;
-        }
-        .tomorrow-badge {
-            background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%);
-            color: white;
-            padding: 2px 10px;
-            border-radius: 12px;
-            font-size: 0.7rem;
-            font-weight: bold;
-        }
-        .completed-badge {
-            background: linear-gradient(135deg, #22c55e 0%, #4ade80 100%);
-            color: white;
-            padding: 2px 10px;
-            border-radius: 12px;
-            font-size: 0.7rem;
-            font-weight: bold;
-        }
-        .success-box {
-            background: rgba(74, 222, 128, 0.1);
-            border: 1px solid rgba(74, 222, 128, 0.3);
-            padding: 12px;
-            border-radius: 8px;
-            margin-bottom: 10px;
-        }
-        .completed-task {
-            border-left-color: #22c55e;
-            background: rgba(34, 197, 94, 0.08);
-            text-decoration: line-through;
-            opacity: 0.8;
+        @keyframes newPulse {
+            0%, 100% { box-shadow: 0 0 25px rgba(59, 130, 246, 0.5); }
+            50% { box-shadow: 0 0 40px rgba(59, 130, 246, 0.8); }
         }
     </style>
 </head>
-<body>
-    <div class="header">
-        <span class="version-badge">v5.4.63</span>
-        <h1>🚀 VENTURE CTRL</h1>
-        <p>Mittwoch, 13. Mai 2026 — 16:04 Uhr <span class="kw-badge">KW20</span></p>
+<body class="bg-slate-900 text-white min-h-screen">
+    <div class="max-w-7xl mx-auto p-6">
+        
+        <!-- Header -->
+        <header class="mb-8 slide-in">
+            <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center text-2xl font-bold shadow-lg">
+                        vc
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-bold">venture-ctrl</h1>
+                        <p class="text-slate-400 text-sm">v5.4.64 — Mi 13. Mai 2026, 20:04 Uhr</p>
+                    </div>
+                </div>
+                <div class="flex gap-3">
+                    <a href="todo.html" class="px-4 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-amber-400 text-sm font-medium transition">📱 Mobile Todos</a>
+                    <a href="dashboard.html" class="px-4 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-amber-400 text-sm font-medium transition">📊 Full Dashboard</a>
+                </div>
+            </div>
+            
+            <!-- Critical Alert -->
+            <div class="glass rounded-2xl p-6 urgent-glow mb-4">
+                <div class="flex items-start gap-4">
+                    <div class="text-4xl animate-pulse-fast">🚨</div>
+                    <div class="flex-1">
+                        <h2 class="text-xl font-bold text-red-400 mb-2">KRITISCHER STATUS — Handlung erforderlich!</h2>
+                        <p class="text-slate-300 mb-3">Giang hat heute das Anju-Shoot erfolgreich durchgeführt, meldet aber Überforderung durch parallele Projekte. <strong>Neues RIESIGES Projekt:</strong> Armando Hotelkette (bis Montag!)</p>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="px-3 py-1 rounded-full bg-red-500/20 text-red-300 text-sm font-medium">🔴 NOMU: 26 Tage überfällig</span>
+                            <span class="px-3 py-1 rounded-full bg-red-500/20 text-red-300 text-sm font-medium">🔴 Sentai: Deadline MORGEN!</span>
+                            <span class="px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 text-sm font-medium">🏨 Armando: NEU bis Montag!</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Metrics Grid -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8 slide-in" style="animation-delay: 0.1s">
+            <div class="glass rounded-2xl p-5 text-center">
+                <div class="text-3xl font-bold text-red-400 mb-1">7</div>
+                <div class="text-slate-400 text-sm">Kritische Tasks</div>
+            </div>
+            <div class="glass rounded-2xl p-5 text-center">
+                <div class="text-3xl font-bold text-amber-400 mb-1">5</div>
+                <div class="text-slate-400 text-sm">Wichtige Tasks</div>
+            </div>
+            <div class="glass rounded-2xl p-5 text-center">
+                <div class="text-3xl font-bold text-emerald-400 mb-1">2.1k€</div>
+                <div class="text-slate-400 text-sm">Aktueller Umsatz</div>
+            </div>
+            <div class="glass rounded-2xl p-5 text-center">
+                <div class="text-3xl font-bold text-blue-400 mb-1">12</div>
+                <div class="text-slate-400 text-sm">Aktive Deals</div>
+            </div>
+        </div>
+
+        <!-- NEW: Armando Hotelkette Project -->
+        <div class="glass rounded-2xl p-6 mb-6 new-project-glow slide-in" style="animation-delay: 0.2s">
+            <div class="flex items-start gap-4">
+                <div class="text-5xl">🏨</div>
+                <div class="flex-1">
+                    <div class="flex items-center gap-3 mb-2">
+                        <h3 class="text-xl font-bold text-blue-400">NEUES RIESIGES PROJEKT</h3>
+                        <span class="px-2 py-1 rounded bg-red-500 text-white text-xs font-bold">BIS MONTAG!</span>
+                    </div>
+                    <h4 class="text-lg font-semibold mb-2">Armando Hotelkette — München</h4>
+                    <p class="text-slate-300 mb-3">4 Social Media Accounts betreuen (2 Hotel + 2 Bar). Komplette Übernahme: Verwaltung + Content-Erstellung. Angebot muss bis Montag fertig sein!</p>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="bg-slate-800/50 rounded-xl p-4">
+                            <div class="text-slate-400 text-sm mb-1">Umfang</div>
+                            <div class="font-medium">Content-Produktion + Betreuung für 4 Accounts</div>
+                        </div>
+                        <div class="bg-slate-800/50 rounded-xl p-4">
+                            <div class="text-slate-400 text-sm mb-1">Geschätzter Preis</div>
+                            <div class="font-medium text-emerald-400">3.500€/Monat</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Critical Tasks -->
+        <div class="mb-8 slide-in" style="animation-delay: 0.3s">
+            <h3 class="text-lg font-bold mb-4 flex items-center gap-2">
+                <span class="text-red-500">🔥</span> 
+                <span class="text-white">KRITISCHE TASKS — JETZT!</span>
+                <span class="px-2 py-0.5 rounded bg-red-500 text-white text-xs">SOFORT</span>
+            </h3>
+            
+            <div class="space-y-3">
+                <!-- NOMU -->
+                <div class="glass rounded-xl p-4 urgent-glow border-l-4 border-red-500">
+                    <div class="flex items-start justify-between gap-4">
+                        <div class="flex-1">
+                            <div class="flex items-center gap-2 mb-1">
+                                <span class="text-xl">🎬</span>
+                                <span class="font-semibold text-white">NOMU Post-Production</span>
+                                <span class="px-2 py-0.5 rounded bg-red-500 text-white text-xs font-bold">26 TAGE</span>
+                            </div>
+                            <p class="text-slate-300 text-sm">Kunde wartet seit 26 Tagen. Höchste Priorität für Kundenbeziehung!</p>
+                        </div>
+                        <div class="text-right">
+                            <div class="text-2xl font-bold text-red-400">26</div>
+                            <div class="text-slate-400 text-xs">Tage überfällig</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sentai -->
+                <div class="glass rounded-xl p-4 urgent-glow border-l-4 border-red-500">
+                    <div class="flex items-start justify-between gap-4">
+                        <div class="flex-1">
+                            <div class="flex items-center gap-2 mb-1">
+                                <span class="text-xl">🎬</span>
+                                <span class="font-semibold text-white">Sentai Post-Production</span>
+                                <span class="px-2 py-0.5 rounded bg-red-500 text-white text-xs font-bold">19 TAGE</span>
+                            </div>
+                            <p class="text-slate-300 text-sm"><strong>DEADLINE MORGEN Do 14.05.!</strong> 2 Reels fertigstellen.</p>
+                        </div>
+                        <div class="text-right">
+                            <div class="text-2xl font-bold text-red-400">1</div>
+                            <div class="text-slate-400 text-xs">Tag bis Deadline</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rechnung Jidai -->
+                <div class="glass rounded-xl p-4 border-l-4 border-amber-500">
+                    <div class="flex items-start justify-between gap-4">
+                        <div class="flex-1">
+                            <div class="flex items-center gap-2 mb-1">
+                                <span class="text-xl">💰</span>
+                                <span class="font-semibold text-white">Rechnung Jidai rausschicken</span>
+                                <span class="px-2 py-0.5 rounded bg-amber-500 text-white text-xs font-bold">3 TAGE</span>
+                                <span class="px-2 py-0.5 rounded bg-emerald-500 text-white text-xs">⚡ 10 MIN</span>
+                            </div>
+                            <p class="text-slate-300 text-sm">Post-Production fertig — nur abschicken! Sofortiger Cashflow.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Giang's Status -->
+        <div class="glass rounded-2xl p-6 mb-8 slide-in" style="animation-delay: 0.4s">
+            <h3 class="text-lg font-bold mb-4 flex items-center gap-2">
+                <span>💭</span> Giang's Status & Erkenntnisse
+            </h3>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <div>
+                    <div class="text-slate-400 text-sm mb-2">Heute geschafft</div>
+                    <ul class="space-y-2">
+                        <li class="flex items-start gap-2">
+                            <span class="text-emerald-400">✅</span>
+                            <span>Anju-Shoot durchgeführt (ca. 3h)</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-emerald-400">✅</span>
+                            <span>KI-Bilder erstellt</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-emerald-400">✅</span>
+                            <span>Prompts für KI entwickelt</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="text-slate-400 text-sm mb-2">Erkenntnis zur Arbeitsstruktur</div>
+                    <div class="bg-slate-800/50 rounded-xl p-4 text-sm">
+                        <p class="mb-2"><strong>Giang:</strong> "Zu viele Bausteine parallel... Ich fühle mich leicht überfordert."</p>
+                        <p class="mb-2"><strong>Lösung:</strong> Zeit-Blöcke statt Tages-Blöcke:</p>
+                        <ul class="list-disc list-inside text-slate-300 space-y-1">
+                            <li>09:00–10:00: Jour Fixe (Tough Cookie)</li>
+                            <li>13:00–14:00: Export (nur 1h!)</li>
+                            <li>18:00–20:00: Freelance/NOMU/etc.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Weekly Focus -->
+        <div class="glass rounded-2xl p-6 mb-8 slide-in" style="animation-delay: 0.5s">
+            <h3 class="text-lg font-bold mb-4 flex items-center gap-2">
+                <span>🎯</span> Fokus diese Woche
+            </h3>
+            
+            <div class="space-y-4">
+                <div class="flex items-start gap-3 p-3 rounded-xl bg-red-500/10 border border-red-500/30">
+                    <span class="text-2xl">🔥</span>
+                    <div>
+                        <div class="font-semibold text-red-300">SOFORT (heute Abend)</div>
+                        <div class="text-slate-300">Sentai fertigstellen (Deadline morgen!) + NOMU anfangen</div>
+                    </div>
+                </div>
+                
+                <div class="flex items-start gap-3 p-3 rounded-xl bg-blue-500/10 border border-blue-500/30">
+                    <span class="text-2xl">🏨</span>
+                    <div>
+                        <div class="font-semibold text-blue-300">ARMANDO HOTELKETTE (bis Montag)</div>
+                        <div class="text-slate-300">Angebot erstellen — 3.500€/Monat Potenzial!</div>
+                    </div>
+                </div>
+                
+                <div class="flex items-start gap-3 p-3 rounded-xl bg-amber-500/10 border border-amber-500/30">
+                    <span class="text-2xl">⚡</span>
+                    <div>
+                        <div class="font-semibold text-amber-300">QUICK WINS</div>
+                        <div class="text-slate-300">Rechnung Jidai (10min) + G-Life Rechnung (10min)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="grid md:grid-cols-2 gap-4 slide-in" style="animation-delay: 0.6s">
+            <a href="todo.html" class="glass rounded-xl p-5 hover:bg-slate-800/80 transition text-center group">
+                <div class="text-3xl mb-2 group-hover:scale-110 transition">📱</div>
+                <div class="font-semibold text-amber-400">Mobile Todo-Liste</div>
+                <div class="text-slate-400 text-sm">Optimiert für Smartphone</div>
+            </a>
+            <a href="dashboard.html" class="glass rounded-xl p-5 hover:bg-slate-800/80 transition text-center group">
+                <div class="text-3xl mb-2 group-hover:scale-110 transition">📊</div>
+                <div class="font-semibold text-amber-400">Vollständiges Dashboard</div>
+                <div class="text-slate-400 text-sm">Alle Details & Metriken</div>
+            </a>
+        </div>
+
+        <!-- Footer -->
+        <footer class="mt-12 text-center text-slate-500 text-sm">
+            <p>venture-ctrl v5.4.64 — Letztes Update: Mi 13. Mai 2026, 20:04 Uhr</p>
+            <p class="mt-1">Auto-Deployment via GitHub Pages • Cron: dashboard-update-4h-v2</p>
+        </footer>
     </div>
 
-    <!-- Critical Alert Banner -->
-    <div class="alert-banner">
-        <h3>🚨 KRITISCHE SITUATION</h3>
-        <p>6 Tasks überfällig — NOMU (26 Tage) + Sentai (19 Tage) — Deadline MORGEN!</p>
-    </div>
-
-    <div class="grid">
-        <!-- Masterplan -->
-        <div class="card">
-            <h2>🎯 MASTERPLAN 2026</h2>
-            <div class="masterplan-box">
-                <div class="stat-row">
-                    <span class="stat-label">Ziel:</span>
-                    <span class="target-value">5.000€/Monat</span>
-                </div>
-                <div class="stat-row">
-                    <span class="stat-label">Aktuell:</span>
-                    <span>2.100€/Monat</span>
-                </div>
-                <div class="stat-row">
-                    <span class="stat-label">Lücke:</span>
-                    <span class="gap-value">2.900€/Monat</span>
-                </div>
-                <div class="stat-row">
-                    <span class="stat-label">Deadline:</span>
-                    <span>November 2026</span>
-                </div>
-            </div>
-            <p style="font-size: 0.9rem; color: #888;">🔥 MITTWOCH NACHMITTAG: NOMU (26 Tage) + Sentai (19 Tage) — Deadline MORGEN!</p>
-        </div>
-
-        <!-- Stats -->
-        <div class="card">
-            <h2>📊 ÜBERSICHT</h2>
-            <div class="stat-row">
-                <span class="stat-label">🔴 Kritische Tasks:</span>
-                <span class="stat-value critical">6</span>
-            </div>
-            <div class="stat-row">
-                <span class="stat-label">🟡 Wichtige Tasks:</span>
-                <span class="stat-value warning">5</span>
-            </div>
-            <div class="stat-row">
-                <span class="stat-label">💰 Aktuelles Einkommen:</span>
-                <span class="stat-value">2.1k€</span>
-            </div>
-            <div class="stat-row">
-                <span class="stat-label">🤝 Active Deals:</span>
-                <span class="stat-value">12</span>
-            </div>
-            <div class="stat-row">
-                <span class="stat-label">📅 Wochentag:</span>
-                <span class="stat-value">Mittwoch</span>
-            </div>
-            <div class="stat-row">
-                <span class="stat-label">⚡ KW:</span>
-                <span class="stat-value">20</span>
-            </div>
-        </div>
-
-        <!-- Completed Today -->
-        <div class="card" style="grid-column: 1 / -1;">
-            <h2>✅ HEUTE ERLEDIGT</h2>
-            
-            <div class="success-box">
-                <strong>🎬 Niku Post-Production (2 Reels + Bilder)</strong>
-                <span class="completed-badge">FERTIG!</span>
-                <br><small style="color: #4ade80;">🎉 EINEN TAG FRÜHER GESCHAFFT!</small>
-            </div>
-
-            <div class="success-box">
-                <strong>📝 Niku Posts für die Woche</strong>
-                <span class="completed-badge">FERTIG!</span>
-                <br><small style="color: #4ade80;">🎉 Alle Posts für die Woche erstellt!</small>
-            </div>
-
-            <div class="success-box">
-                <strong>🎥 Anju-Shoot Pre-Production</strong>
-                <span class="completed-badge">FERTIG!</span>
-                <br><small style="color: #4ade80;">🎬 Fotoshoot heute — ca. 3 Stunden!</small>
-            </div>
-        </div>
-
-        <!-- Overdue Tasks -->
-        <div class="card" style="grid-column: 1 / -1;">
-            <h2>🔥 ÜBERFÄLLIGE TASKS</h2>
-            
-            <div class="todo extreme">
-                <strong>🎬 NOMU Post-Production</strong>
-                <span class="extreme-days">26 TAGE</span>
-                <br><small style="color: #fca5a5;">🔥🔥🔥🔥🔥 KUNDE WARTET — EXTREM KRITISCH!</small>
-            </div>
-
-            <div class="todo extreme">
-                <strong>🎬 Sentai Post-Production (2 Reels)</strong>
-                <span class="extreme-days">19 TAGE</span>
-                <br><small style="color: #fca5a5;">🔥🔥🔥 DEADLINE MORGEN Do 14.05.!</small>
-            </div>
-
-            <div class="todo overdue">
-                <strong>💰 Rechnung Jidai rausschicken</strong>
-                <span class="overdue-days">3 TAGE</span>
-                <br><small style="color: #fca5a5;">🔴 Überfällig — 10 Minuten — Sofortiger Cashflow! QUICK WIN!</small>
-            </div>
-
-            <div class="todo overdue">
-                <strong>📧 Onkel-Antwort auf Vietnamesisch</strong>
-                <span class="overdue-days">4 TAGE</span>
-                <br><small>13 Mio USD Volumen — Kyberg Export</small>
-            </div>
-
-            <div class="todo overdue">
-                <strong>📞 Telefonat mit Onkel (Provision klären)</strong>
-                <span class="overdue-days">4 TAGE</span>
-                <br><small>5-7% Provision, Exklusivität Vietnam</small>
-            </div>
-
-            <div class="todo overdue">
-                <strong>💰 G-Life Rechnung rausschicken</strong>
-                <span class="overdue-days">5 TAGE</span>
-                <br><small style="color: #fca5a5;">✅ Fertig, nur abschicken! 10min Quick Win!</small>
-            </div>
-        </div>
-
-        <!-- High Priority Tasks -->
-        <div class="card">
-            <h2>📋 WICHTIGE TASKS</h2>
-            
-            <div class="todo high">
-                <strong>📊 Pitchdeck-Slide 'Packages'</strong>
-                <span class="overdue-days">3+ TAGE</span>
-                <br><small>Flex 1.490€, Growth 1.290€, Partner 1.190€</small>
-            </div>
-
-            <div class="todo high">
-                <strong>📄 Zwei Pitchdecks finalisieren</strong>
-                <span class="overdue-days">3+ TAGE</span>
-                <br><small>Neue Pricing-Struktur!</small>
-            </div>
-
-            <div class="todo high">
-                <strong>🎥 Nebelmaschine besorgen</strong>
-                <br><small>Für Niku Shooting Freitag 15.5.</small>
-            </div>
-
-            <div class="todo high">
-                <strong>🎬 Japanese Pancake Pre-Production</strong>
-                <br><small>Freitag 15.5.</small>
-            </div>
-
-            <div class="todo high">
-                <strong>📑 Distributor Profile PDF</strong>
-                <br><small>Bis Freitag 17.5.</small>
-            </div>
-
-            <div class="todo high">
-                <strong>🤝 Kyberg-Erstkontakt</strong>
-                <br><small>Bis Freitag 24.5.</small>
-            </div>
-        </div>
-
-        <!-- Deals -->
-        <div class="card">
-            <h2>🤝 DEALS</h2>
-            
-            <div class="deal">
-                <div>
-                    <strong>Kyberg Export (Onkel)</strong>
-                    <br><small style="color: #a78bfa;">10 Mio Pharma + 3 Mio NEM</small>
-                </div>
-                <span class="stage gamechanger">GAME CHANGER</span>
-            </div>
-
-            <div class="deal">
-                <div>
-                    <strong>Sentai/Zentai</strong>
-                    <br><small style="color: #888;">5.000€ — Nur für Tough Cookie</small>
-                </div>
-                <span class="stage won">WON</span>
-            </div>
-
-            <div class="deal">
-                <div>
-                    <strong>Amy</strong>
-                    <br><small style="color: #888;">Kennenlernen erfolgreich</small>
-                </div>
-                <span class="stage lead">LEAD</span>
-            </div>
-        </div>
-
-        <!-- Pricing -->
-        <div class="card">
-            <h2>💰 PRICING</h2>
-            <h3 style="color: #888; font-size: 0.9rem; margin-bottom: 10px;">Tough Cookie</h3>
-            <div class="stat-row">
-                <span class="stat-label">Flex:</span>
-                <span>1.490€/Mo</span>
-            </div>
-            <div class="stat-row">
-                <span class="stat-label">Growth ⭐:</span>
-                <span>1.290€/Mo</span>
-            </div>
-            <div class="stat-row">
-                <span class="stat-label">Partner:</span>
-                <span>1.190€/Mo</span>
-            </div>
-            
-            <h3 style="color: #888; font-size: 0.9rem; margin: 15px 0 10px 0;">Freelance</h3>
-            <div class="stat-row">
-                <span class="stat-label">Video:</span>
-                <span>800€</span>
-            </div>
-            <div class="stat-row">
-                <span class="stat-label">Fotos:</span>
-                <span>600€</span>
-            </div>
-            <div class="stat-row">
-                <span class="stat-label">Social Paket:</span>
-                <span>400€/Mo</span>
-            </div>
-        </div>
-
-        <!-- This Week's Goals -->
-        <div class="card" style="grid-column: 1 / -1;">
-            <h2>🎯 WOCHENZIELE KW20</h2>
-            <div class="grid" style="margin-top: 10px;">
-                <div>
-                    <h3 style="color: #f87171; font-size: 0.9rem; margin-bottom: 10px;">🔴 Tough Cookie (KRITISCH)</h3>
-                    <p style="font-size: 0.85rem; margin-bottom: 5px; color: #4ade80;">✅ Niku Post-Production (FERTIG!)</p>
-                    <p style="font-size: 0.85rem; margin-bottom: 5px; color: #4ade80;">✅ Niku Posts Woche (FERTIG!)</p>
-                    <p style="font-size: 0.85rem; margin-bottom: 5px; color: #fca5a5;">🔥 Sentai Post-Production (Do 14.5.)</p>
-                    <p style="font-size: 0.85rem; margin-bottom: 5px; color: #fca5a5;">🔥 NOMU Post-Production (SOFORT)</p>
-                    <p style="font-size: 0.85rem; margin-bottom: 5px;">💰 Rechnung Jidai (ASAP)</p>
-                    <p style="font-size: 0.85rem; margin-bottom: 5px;">🎥 Nebelmaschine besorgen (Fr 15.5.)</p>
-                    <p style="font-size: 0.85rem;">🎬 Japanese Pancake Pre-Prod (Fr 15.5.)</p>
-                </div>
-                <div>
-                    <h3 style="color: #a78bfa; font-size: 0.9rem; margin-bottom: 10px;">🟣 Kyberg Export</h3>
-                    <p style="font-size: 0.85rem; margin-bottom: 5px;">📧 Onkel-Antwort Vietnamesisch</p>
-                    <p style="font-size: 0.85rem; margin-bottom: 5px;">📞 Telefonat Provision 5-7%</p>
-                    <p style="font-size: 0.85rem; margin-bottom: 5px;">📑 Distributor Profile (bis Fr 17.5.)</p>
-                    <p style="font-size: 0.85rem;">🤝 Erstkontakt (bis Fr 24.5.)</p>
-                </div>
-                <div>
-                    <h3 style="color: #4ade80; font-size: 0.9rem; margin-bottom: 10px;">🟢 Freelance</h3>
-                    <p style="font-size: 0.85rem; margin-bottom: 5px;">💰 G-Life Rechnung abschicken</p>
-                    <p style="font-size: 0.85rem; margin-bottom: 5px;">📋 Preisliste erstellen</p>
-                    <p style="font-size: 0.85rem; margin-bottom: 5px;">📧 3 Kunden anschreiben</p>
-                    <p style="font-size: 0.85rem;">🤝 Ersten Retainer anbieten</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Recent Updates -->
-        <div class="card" style="grid-column: 1 / -1;">
-            <h2>📝 LETZTE UPDATES</h2>
-            <div class="stat-row">
-                <span class="stat-label timestamp">12:04</span>
-                <span style="font-size: 0.9rem;">Dashboard Update v5.4.63 — MITTWOCH NACHMITTAG: NOMU jetzt 26 Tage + Sentai DEADLINE MORGEN!</span>
-            </div>
-            <div class="stat-row">
-                <span class="stat-label timestamp">08:04</span>
-                <span style="font-size: 0.9rem;">Dashboard Update v5.4.61 — MITTWOCH MORGEN: NOMU + Sentai EXTREM KRITISCH — Deadline morgen!</span>
-            </div>
-            <div class="stat-row">
-                <span class="stat-label timestamp">04:04</span>
-                <span style="font-size: 0.9rem;">Dashboard Update v5.4.60 — MITTWOCH FRÜH: NOMU (25 Tage) + Sentai (19 Tage) JETZT!</span>
-            </div>
-            <div class="stat-row">
-                <span class="stat-label timestamp">00:04</span>
-                <span style="font-size: 0.9rem;">Dashboard Update v5.4.59 — MITTWOCH FRÜH: 6 kritische Tasks — NOMU (25) + Sentai (19)</span>
-            </div>
-            <div class="stat-row">
-                <span class="stat-label timestamp">20:04</span>
-                <span style="font-size: 0.9rem;">Dashboard Update v5.4.58 — DIENSTAG ABEND: 6 kritische Tasks — NOMU (24) + Sentai (18)</span>
-            </div>
-        </div>
-    </div>
-
-    <div class="meta">
-        <p>🚀 VENTURE CTRL v5.4.62 | Letztes Update: 13. Mai 2026, 12:04 Uhr</p>
-        <p style="margin-top: 5px;">Nächstes Update: 16:04 Uhr</p>
-    </div>
+    <script>
+        // Auto-refresh every 15 minutes
+        setInterval(() => {
+            location.reload();
+        }, 15 * 60 * 1000);
+    </script>
 </body>
 </html>
