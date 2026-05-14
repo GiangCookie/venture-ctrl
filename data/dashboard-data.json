@@ -1,31 +1,31 @@
 {
-  "version": "v5.4.57",
-  "lastUpdated": "2026-05-12T16:04:00+02:00",
+  "version": "v5.4.66",
+  "lastUpdated": "2026-05-14T04:04:00+02:00",
   "status": "active",
   "metrics": {
-    "urgentTasks": 6,
+    "urgentTasks": 7,
     "highPriority": 5,
     "income": "2.1k€",
-    "deals": 12
+    "deals": 13
   },
-  "today": "2026-05-12",
+  "today": "2026-05-14",
   "kw": 20,
-  "dayOfWeek": "DIENSTAG",
-  "time": "16:04",
+  "dayOfWeek": "DONNERSTAG",
+  "time": "04:04",
   "lastSession": {
-    "date": "2026-05-11",
-    "mood": "💪",
-    "energy": 5,
+    "date": "2026-05-13",
+    "mood": "😰",
+    "energy": 4,
     "completed": [
-      "Niku Post-Production (einen Tag früher!)",
-      "Niku Posts für die Woche",
-      "Export-Meeting vorbereitet (Kyberg)",
-      "Grafikdesignerin kommuniziert",
-      "Joggen"
+      "Anju-Shoot (ca. 3h)",
+      "KI-Bilder erstellt",
+      "Prompts für KI entwickelt",
+      "Export-Meeting vorbereitet"
     ],
     "frustrations": [
-      "NOMU noch 22+ Tage überfällig",
-      "Sentai noch 16 Tage überfällig"
+      "Gefühlt überfordert - zu viele Bausteine parallel",
+      "NOMU 26+ Tage überfällig",
+      "Sentai 19+ Tage überfällig"
     ]
   },
   "masterplan": {
@@ -35,60 +35,81 @@
     "gap": "2.900€/Monat",
     "strategy": "ZWEI SÄULEN: Tough Cookie stabilisieren + Freelance ausbauen + Export (Kyberg) als Game Changer",
     "deadline": "November 2026 (6 Monate Ultimatum)",
-    "kybergUpdate": "Export-Meeting vorbereitet, Kyberg Erstkontakt in Planung",
-    "todayFocus": "🔥 DIENSTAG NACHMITTAG: 6 kritische Tasks — NOMU (24 Tage) + Sentai (18 Tage) Priorität!"
+    "kybergUpdate": "Export-Meeting vorbereitet, Onkel-Antwort überfällig (13 Mio USD Volumen)",
+    "todayFocus": "🔥 KRITISCH: Sentai (WAR GESTERN FÄLLIG!) + NOMU (27 TAGE!) — Deadline-Watch!"
   },
   "completedToday": [
     {
-      "task": "✅ Niku Post-Production (2 Reels + Bilder)",
+      "task": "✅ Anju-Shoot fertiggestellt",
       "project": "Tough Cookie",
-      "note": "🎉 EINEN TAG FRÜHER GESCHAFFT!"
+      "note": "Ca. 3h Fotoshooting absolviert"
     },
     {
-      "task": "✅ Niku Posts (Woche)",
+      "task": "✅ KI-Bilder erstellt",
       "project": "Tough Cookie",
-      "note": "🎉 Alle Posts für die Woche erstellt!"
+      "note": "Neue KI-generierte Bilder für Content"
+    },
+    {
+      "task": "✅ Prompts entwickelt",
+      "project": "Tough Cookie",
+      "note": "Optimierte Prompts für KI-Workflow"
     }
   ],
   "openTasks": [
     {
       "task": "🎬 NOMU Post-Production",
       "project": "NOMU",
-      "daysOverdue": 24,
+      "daysOverdue": 27,
       "priority": "urgent",
-      "note": "🔥🔥🔥🔥 24 TAGE ÜBERFÄLLIG — KUNDE WARTET — EXTREM KRITISCH!",
+      "note": "🔥🔥🔥🔥🔥 27 TAGE ÜBERFÄLLIG — EXTREM KRITISCH!",
       "status": "overdue"
     },
     {
       "task": "🎬 Sentai Post-Production (2 Reels)",
       "project": "Tough Cookie",
-      "daysOverdue": 18,
+      "daysOverdue": 20,
       "priority": "urgent",
-      "note": "🔥🔥🔥 18 TAGE ÜBERFÄLLIG — Do 14.05. DEADLINE!",
+      "note": "🔥🔥🔥🔥 WAR GESTERN FÄLLIG! KUNDE WARTET!",
       "status": "overdue"
     },
     {
       "task": "💰 Rechnung Jidai rausschicken",
       "project": "Tough Cookie",
-      "due": "2026-05-11",
+      "due": "2026-05-10",
       "priority": "urgent",
-      "note": "🔴 2 TAGE ÜBERFÄLLIG — 10 Minuten — Sofortiger Cashflow! QUICK WIN!",
+      "note": "🔴 4 TAGE ÜBERFÄLLIG — 10 Minuten — Sofortiger Cashflow! QUICK WIN!",
       "status": "overdue"
     },
     {
       "task": "📧 Onkel-Antwort auf Vietnamesisch",
       "project": "Kyberg Export",
-      "due": "2026-05-10",
+      "due": "2026-05-09",
       "priority": "urgent",
-      "note": "13 Mio USD Volumen — 3+ Tage überfällig!",
+      "note": "13 Mio USD Volumen — 5+ Tage überfällig!",
       "status": "overdue"
     },
     {
       "task": "📞 Telefonat mit Onkel (Provision klären)",
       "project": "Kyberg Export",
-      "due": "2026-05-10",
+      "due": "2026-05-09",
       "priority": "urgent",
-      "note": "5-7% Provision, Exklusivität Vietnam — 3+ Tage überfällig!",
+      "note": "5-7% Provision, Exklusivität Vietnam — 5+ Tage überfällig!",
+      "status": "overdue"
+    },
+    {
+      "task": "🏨 Armando Angebot erstellen",
+      "project": "Freelance",
+      "due": "2026-05-18",
+      "priority": "urgent",
+      "note": "🔥 NEUER LEAD! Bis Montag 18.5.! 4 Social Media Accounts, 3.500€/Monat",
+      "status": "pending"
+    },
+    {
+      "task": "💰 G-Life Rechnung rausschicken",
+      "project": "Freelance",
+      "due": "2026-05-08",
+      "priority": "high",
+      "note": "6 TAGE ÜBERFÄLLIG — 10min Quick Win!",
       "status": "overdue"
     },
     {
@@ -96,7 +117,7 @@
       "project": "Tough Cookie",
       "due": "2026-05-10",
       "priority": "high",
-      "note": "Flex 1.490€, Growth 1.290€, Partner 1.190€ — 3+ Tage überfällig!",
+      "note": "4+ Tage überfällig!",
       "status": "overdue"
     },
     {
@@ -104,7 +125,7 @@
       "project": "Tough Cookie",
       "due": "2026-05-10",
       "priority": "high",
-      "note": "Neue Pricing-Struktur! 3+ Tage überfällig!",
+      "note": "4+ Tage überfällig!",
       "status": "overdue"
     },
     {
@@ -112,7 +133,7 @@
       "project": "Tough Cookie",
       "due": "2026-05-15",
       "priority": "high",
-      "note": "Für Niku Shooting am Freitag",
+      "note": "Bis Freitag 15.5.",
       "status": "pending"
     },
     {
@@ -122,31 +143,17 @@
       "priority": "high",
       "note": "Freitag 15.5.",
       "status": "pending"
-    },
-    {
-      "task": "💰 G-Life Rechnung rausschicken",
-      "project": "Freelance",
-      "due": "2026-05-09",
-      "priority": "high",
-      "note": "✅ Fertig, nur abschicken! 10min Quick Win! 4+ Tage überfällig!",
-      "status": "overdue"
-    },
-    {
-      "task": "📑 Distributor Profile PDF erstellen",
-      "project": "Kyberg Export",
-      "due": "2026-05-17",
-      "priority": "high",
-      "status": "pending"
-    },
-    {
-      "task": "🤝 Kyberg-Erstkontakt initiieren",
-      "project": "Kyberg Export",
-      "due": "2026-05-24",
-      "priority": "high",
-      "status": "pending"
     }
   ],
   "deals": [
+    {
+      "client": "🏨 Armando Hotelkette",
+      "value": "3.500€/Monat (geschätzt)",
+      "status": "NEUER LEAD",
+      "note": "4 Social Media Accounts (2 Hotel + 2 Bar), München, Angebot bis Mo 18.5.",
+      "frustration": false,
+      "highlight": true
+    },
     {
       "client": "Kyberg Export (Onkel)",
       "value": "13 Mio USD Volumen",
@@ -169,26 +176,38 @@
       "note": "Persönliches Kennenlernen erfolgreich"
     }
   ],
+  "giangStructure": {
+    "note": "Neue Arbeitsstruktur (ab 13.5.)",
+    "blocks": [
+      {"time": "09:00–10:00", "activity": "Jour Fixe", "project": "Tough Cookie"},
+      {"time": "10:00–12:00", "activity": "Content-Produktion", "project": "Tough Cookie"},
+      {"time": "12:00–13:00", "activity": "Mittag", "project": null},
+      {"time": "13:00–14:00", "activity": "Export (nur 1h!)", "project": "Kyberg"},
+      {"time": "14:00–17:00", "activity": "Content/Schnitt", "project": "Tough Cookie"},
+      {"time": "17:00–18:00", "activity": "Admin", "project": "Tough Cookie"},
+      {"time": "18:00–20:00", "activity": "Freelance/NOMU/etc.", "project": "Freelance"}
+    ]
+  },
   "weeklyGoals": {
     "kybergExport": [
-      "Onkel-Antwort auf Vietnamesisch (3+ Tage überfällig)",
-      "Telefonat mit Onkel (Provision 5-7%)",
-      "Distributor Profile PDF erstellen (bis Fr 17.5.)",
-      "Kyberg-Erstkontakt initiieren (bis Fr 24.5.)"
+      "🔴 Onkel-Antwort auf Vietnamesisch (5+ Tage überfällig)",
+      "🔴 Telefonat mit Onkel (Provision 5-7%)",
+      "📑 Distributor Profile PDF erstellen (bis Fr 17.5.)",
+      "🤝 Kyberg-Erstkontakt initiieren (bis Fr 24.5.)"
     ],
     "toughCookie": [
-      "✅ Niku Post-Production (FERTIG!)",
-      "🔥 Sentai Post-Production (Do 14.5.)",
-      "🔥 NOMU Post-Production (SOFORT — 24 Tage überfällig!)",
-      "Rechnung Jidai (ASAP)",
-      "Nebelmaschine besorgen (Fr 15.5.)",
-      "Japanese Pancake Pre-Production (Fr 15.5.)"
+      "✅ Anju-Shoot (FERTIG!)",
+      "🔥 Sentai Post-Production (WAR GESTERN FÄLLIG!)",
+      "🔥 NOMU Post-Production (27 TAGE!)",
+      "🔴 Rechnung Jidai (4 TAGE!)",
+      "🎥 Nebelmaschine (bis Fr 15.5.)",
+      "🎬 Japanese Pancake (Fr 15.5.)"
     ],
     "freelance": [
-      "💰 G-Life Rechnung abschicken",
+      "🔴 G-Life Rechnung (6 TAGE!)",
+      "🔴 Armando Angebot (bis Mo 18.5.)",
       "Preisliste erstellen (800€/Video)",
-      "3 Kunden anschreiben",
-      "Ersten Retainer anbieten"
+      "3 Kunden anschreiben"
     ]
   },
   "pricing": {
@@ -205,29 +224,19 @@
   },
   "updates": [
     {
-      "time": "16:04",
-      "type": "cron",
-      "message": "Dashboard Update v5.4.57 — DIENSTAG NACHMITTAG: 6 kritische Tasks — NOMU (24 Tage) + Sentai (18 Tage) — Deadline Donnerstag!"
-    },
-    {
-      "time": "12:04",
-      "type": "cron",
-      "message": "Dashboard Update v5.4.56 — DIENSTAG MITTAG: 6 kritische Tasks — NOMU (23 Tage) + Sentai (17 Tage) Priorität!"
-    },
-    {
-      "time": "08:04",
-      "type": "cron",
-      "message": "Dashboard Update v5.4.55 — Niku ✅ FERTIG! 6 kritische Tasks übrig"
-    },
-    {
       "time": "04:04",
       "type": "cron",
-      "message": "Dashboard Update v5.4.54 — DIENSTAG FRÜH: Niku JETZT FÄLLIG! + NOMU (24 Tage) + Sentai (18 Tage) überfällig"
+      "message": "Dashboard Update v5.4.66 — DONNERSTAG FRÜH: 7 kritische Tasks — Sentai (WAR GESTERN FÄLLIG!) + NOMU (27 TAGE!) — NEU: Armando Hotelkette Lead!"
     },
     {
       "time": "00:04",
       "type": "cron",
-      "message": "Dashboard Update v5.4.53 — DIENSTAG FRÜH: 7 kritische Tasks — Niku (HEUTE!) + NOMU (23+ Tage) + Sentai (17 Tage)"
+      "message": "Dashboard Update v5.4.65 — MITTERMACHT: 7 kritische Tasks — Sentai (WAR GESTERN FÄLLIG!) + NOMU (27 TAGE!) + Giang's neue Struktur"
+    },
+    {
+      "time": "20:04",
+      "type": "cron",
+      "message": "Dashboard Update v5.4.64 — ABENDS: NEUER LEAD Armando Hotelkette! Giang überfordert aber strukturiert neu"
     }
   ]
 }
