@@ -1,6 +1,6 @@
 {
-  "version": "v5.4.67",
-  "lastUpdated": "2026-05-14T08:04:00+02:00",
+  "version": "v5.4.68",
+  "lastUpdated": "2026-05-14T12:04:00+02:00",
   "status": "active",
   "metrics": {
     "urgentTasks": 7,
@@ -11,7 +11,7 @@
   "today": "2026-05-14",
   "kw": 20,
   "dayOfWeek": "DONNERSTAG",
-  "time": "08:04",
+  "time": "12:04",
   "lastSession": {
     "date": "2026-05-13",
     "mood": "😅",
@@ -256,6 +256,11 @@
     "note": "Export nur 1 Stunde (E-Mails, Weiterleiten), nicht ganzer Tag!"
   },
   "updates": [
+    {
+      "time": "12:04",
+      "type": "cron",
+      "message": "Dashboard Update v5.4.68 — DO 12:00: Status stabil, Sentai + NOMU weiterhin kritisch, Armando-Angebot bis Montag priorität"
+    },
     {
       "time": "08:04",
       "type": "cron",
