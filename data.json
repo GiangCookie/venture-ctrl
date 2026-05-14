@@ -1,6 +1,6 @@
 {
-  "version": "v5.4.65",
-  "lastUpdated": "2026-05-14T00:04:00+02:00",
+  "version": "v5.4.67",
+  "lastUpdated": "2026-05-14T08:04:00+02:00",
   "status": "active",
   "metrics": {
     "urgentTasks": 7,
@@ -11,7 +11,7 @@
   "today": "2026-05-14",
   "kw": 20,
   "dayOfWeek": "DONNERSTAG",
-  "time": "00:04",
+  "time": "08:04",
   "lastSession": {
     "date": "2026-05-13",
     "mood": "😅",
@@ -19,11 +19,12 @@
     "completed": [
       "Anju-Shoot (ca. 3h)",
       "KI-Bilder erstellt",
-      "Prompts für KI entwickelt"
+      "Prompts für KI entwickelt",
+      "Anju an Grafikerin weitergeleitet"
     ],
     "frustrations": [
-      "NOMU noch 26+ Tage überfällig",
-      "Sentai noch 19 Tage überfällig",
+      "NOMU noch 27 Tage überfällig",
+      "Sentai war gestern fällig",
       "Viele Bausteine parallel – leicht überfordert"
     ]
   },
@@ -53,6 +54,11 @@
       "task": "💡 Prompts für KI entwickeln",
       "project": "Tough Cookie",
       "note": "✅ Optimierte Prompts erstellt"
+    },
+    {
+      "task": "📤 Anju an Grafikerin weitergeleitet",
+      "project": "Tough Cookie",
+      "note": "✅ Erledigt"
     }
   ],
   "openTasks": [
@@ -69,7 +75,7 @@
       "project": "Tough Cookie",
       "daysOverdue": 20,
       "priority": "urgent",
-      "note": "🔥🔥🔥🔥 20 TAGE ÜBERFÄLLIG — WAR GESTERN (Mi 13.05.) FÄLLIG!",
+      "note": "🔥🔥🔥🔥 WAR GESTERN FÄLLIG! KUNDE WARTET!",
       "status": "overdue"
     },
     {
@@ -139,6 +145,14 @@
     {
       "task": "🎬 Japanese Pancake Pre-Production",
       "project": "Tough Cookie",
+      "due": "2026-05-15",
+      "priority": "high",
+      "note": "Freitag 15.5.",
+      "status": "pending"
+    },
+    {
+      "task": "📸 Nico Fotoshoot",
+      "project": "Freelance",
       "due": "2026-05-15",
       "priority": "high",
       "note": "Freitag 15.5.",
@@ -243,29 +257,19 @@
   },
   "updates": [
     {
-      "time": "00:04",
-      "type": "cron",
-      "message": "Dashboard Update v5.4.65 — DONNERSTAG FRÜH: Sentai WAR GESTERN FÄLLIG! + NOMU (27 Tage) + Armando-Recherche aktiv"
-    },
-    {
-      "time": "20:04",
-      "type": "cron",
-      "message": "Dashboard Update v5.4.64 — Mittwoch Abend: Armando Hotel NEU! + Giang's neue Struktur"
-    },
-    {
-      "time": "16:04",
-      "type": "cron",
-      "message": "Dashboard Update v5.4.63 — 7 kritische Tasks + Armando neu"
-    },
-    {
-      "time": "12:04",
-      "type": "cron",
-      "message": "Dashboard Update v5.4.62 — 6 kritische Tasks — Sentai Deadline morgen!"
-    },
-    {
       "time": "08:04",
       "type": "cron",
-      "message": "Dashboard Update v5.4.61 — NOMU (25 Tage) + Sentai (19 Tage)"
+      "message": "Dashboard Update v5.4.67 — DONNERSTAG 08:00: Sentai (1 Tag überfällig) + NOMU (27 Tage) + Armando (bis Mo 18.5.)"
+    },
+    {
+      "time": "04:04",
+      "type": "cron",
+      "message": "Dashboard Update v5.4.66 — DONNERSTAG FRÜH: 7 kritische Tasks — Sentai (WAR GESTERN FÄLLIG!) + NOMU (27 TAGE!) — NEU: Armando Hotelkette Lead!"
+    },
+    {
+      "time": "00:04",
+      "type": "cron",
+      "message": "Dashboard Update v5.4.65 — MITTERMACHT: 7 kritische Tasks — Sentai (WAR GESTERN FÄLLIG!) + NOMU (27 TAGE!) + Giang's neue Struktur"
     }
   ]
 }
