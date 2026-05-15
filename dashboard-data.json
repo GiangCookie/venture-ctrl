@@ -1,34 +1,28 @@
 {
-  "version": "v5.4.73",
-  "lastUpdated": "2026-05-15T12:04:00+02:00",
+  "version": "v5.4.74",
+  "lastUpdated": "2026-05-15T16:04:00+02:00",
   "status": "active",
   "metrics": {
-    "urgentTasks": 6,
-    "highPriority": 5,
+    "urgentTasks": 5,
+    "highPriority": 4,
     "income": "2.1k€",
     "deals": 13
   },
   "today": "2026-05-15",
   "kw": 20,
   "dayOfWeek": "FREITAG",
-  "time": "12:04",
+  "time": "16:04",
   "lastSession": {
-    "date": "2026-05-14",
-    "mood": "💪",
+    "date": "2026-05-15",
+    "mood": "🏃",
     "energy": 4,
     "completed": [
-      "📸 Anju Shoot",
-      "🎨 Anju Post-Production (fertig!)",
-      "📤 Anju an Grafikerin weitergeleitet",
-      "🏨 Armando Hotelkette bekannt",
-      "🎨 Grafikdesignerin kommuniziert"
+      "📸 Niku Fotoshoot (läuft gerade)"
     ],
     "frustrations": [
-      "NOMU noch 27 Tage überfällig",
-      "Sentai war gestern fällig",
-      "💰 Rechnung Jidai immer noch offen",
-      "📧 Onkel-Antwort überfällig",
-      "📞 Onkel-Telefonat überfällig"
+      "Sentai noch 3 Tage überfällig",
+      "NOMU noch 28 Tage überfällig",
+      "Rechnung Jidai immer noch offen"
     ]
   },
   "masterplan": {
@@ -40,42 +34,22 @@
     "deadline": "November 2026 (6 Monate Ultimatum)",
     "kybergUpdate": "Export-Meeting vorbereitet, Onkel-Antwort 6 Tage überfällig",
     "armandoUpdate": "🏨 NEU: Hotelkette München, 4 Social Media Accounts, Angebot bis Montag 18.05.",
-    "todayFocus": "🔥 FREITAG: Sentai (3 Tage überfällig!) + NOMU (28 Tage!) + HEUTE: Japanese Pancake, Nebelmaschine, Nico-Shoot"
+    "todayFocus": "🔥 FREITAG NACHMITTAG: Niku Shoot läuft → Fotos bearbeiten → Joggen → Sentai/Armando"
   },
   "completedToday": [
     {
-      "task": "📸 Anju-Shoot",
+      "task": "📸 Niku Fotoshoot",
       "project": "Tough Cookie",
-      "note": "✅ Ca. 3 Stunden, erfolgreich abgeschlossen"
-    },
-    {
-      "task": "🎨 Anju Post-Production (fertig!)",
-      "project": "Tough Cookie",
-      "note": "✅ EINEN TAG FRÜHER GESCHAFFT! 🎉"
-    },
-    {
-      "task": "📤 Anju an Grafikerin weitergeleitet",
-      "project": "Tough Cookie",
-      "note": "✅ Erledigt"
-    },
-    {
-      "task": "🏨 Armando Hotelkette bekannt",
-      "project": "Tough Cookie",
-      "note": "✅ 4 Social Media Accounts, München"
-    },
-    {
-      "task": "🎨 Grafikdesignerin kommuniziert",
-      "project": "Tough Cookie",
-      "note": "✅ Erledigt"
+      "note": "✅ Läuft gerade (seit 14:30 Uhr)"
     }
   ],
   "openTasks": [
     {
-      "task": "🎬 Sentai Post-Production (2 Reels)",
+      "task": "🎬 Sentai Post-Production (Interview)",
       "project": "Tough Cookie",
       "daysOverdue": 3,
       "priority": "urgent",
-      "note": "🔥🔥🔥🔥 JETZT 3 TAGE ÜBERFÄLLIG! KUNDE WARTET!",
+      "note": "🔥🔥🔥🔥 3 TAGE ÜBERFÄLLIG! Heute Abend oder morgen früh!",
       "status": "overdue"
     },
     {
@@ -111,10 +85,18 @@
       "status": "overdue"
     },
     {
+      "task": "🎨 Niku Fotos bearbeiten",
+      "project": "Tough Cookie",
+      "due": "2026-05-15",
+      "priority": "high",
+      "note": "🔥 Nach dem Shoot (1-2h Arbeit)",
+      "status": "in-progress"
+    },
+    {
       "task": "🏨 Armando Hotel Angebot erstellen",
       "project": "Tough Cookie",
       "due": "2026-05-18",
-      "priority": "urgent",
+      "priority": "high",
       "note": "🔥 NEU: 4 Social Media Accounts, München, bis MONTAG! Potenzial: 3.500€/Monat",
       "status": "pending"
     },
@@ -127,46 +109,6 @@
       "status": "overdue"
     },
     {
-      "task": "📊 Pitchdeck-Slide 'Packages' überarbeiten",
-      "project": "Tough Cookie",
-      "due": "2026-05-10",
-      "priority": "high",
-      "note": "Flex 1.490€, Growth 1.290€, Partner 1.190€ — 5+ Tage überfällig!",
-      "status": "overdue"
-    },
-    {
-      "task": "📄 Zwei Pitchdecks finalisieren",
-      "project": "Tough Cookie",
-      "due": "2026-05-10",
-      "priority": "high",
-      "note": "Neue Pricing-Struktur! 5+ Tage überfällig!",
-      "status": "overdue"
-    },
-    {
-      "task": "🎬 Japanese Pancake Pre-Production",
-      "project": "Tough Cookie",
-      "due": "2026-05-15",
-      "priority": "high",
-      "note": "🔥 HEUTE FRITAG 15.05.!",
-      "status": "due-today"
-    },
-    {
-      "task": "🎥 Nebelmaschine besorgen",
-      "project": "Tough Cookie",
-      "due": "2026-05-15",
-      "priority": "high",
-      "note": "🔥 HEUTE FRITAG 15.05.!",
-      "status": "due-today"
-    },
-    {
-      "task": "📸 Nico Fotoshoot",
-      "project": "Freelance",
-      "due": "2026-05-15",
-      "priority": "high",
-      "note": "🔥 HEUTE FRITAG 15.05.!",
-      "status": "due-today"
-    },
-    {
       "task": "📑 Distributor Profile PDF erstellen",
       "project": "Kyberg Export",
       "due": "2026-05-17",
@@ -177,7 +119,7 @@
       "task": "🤝 Kyberg-Erstkontakt initiieren",
       "project": "Kyberg Export",
       "due": "2026-05-24",
-      "priority": "high",
+      "priority": "medium",
       "status": "pending"
     }
   ],
@@ -186,7 +128,7 @@
       "client": "Armando Hotelkette",
       "value": "3.500€/Monat (geschätzt)",
       "status": "NEUER LEAD",
-      "note": "🏨 4 Social Media Accounts (2 Hotel + 2 Bar), München, Komplette Übernahme",
+      "note": "🏨 4 Social Media Accounts (2 Hotel + 2 Bar), München, Komplette Übernahme bis Mo 18.05.",
       "frustration": false,
       "highlight": true
     },
@@ -223,16 +165,11 @@
       "🔥 Sentai Post-Production (3 TAGE ÜBERFÄLLIG!)",
       "🔥 NOMU Post-Production (28 TAGE ÜBERFÄLLIG!)",
       "🏨 Armando Angebot erstellen (bis Mo 18.5.)",
-      "🔥 Japanese Pancake Pre-Production (FR 15.05.)",
-      "🔥 Nebelmaschine besorgen (FR 15.05.)",
-      "Rechnung Jidai (ASAP)"
+      "🎨 Niku Fotos bearbeiten (heute)"
     ],
     "freelance": [
       "💰 G-Life Rechnung abschicken",
-      "🔥 Nico Fotoshoot (FR 15.05.)",
-      "Preisliste erstellen (800€/Video)",
-      "3 Kunden anschreiben",
-      "Ersten Retainer anbieten"
+      "Preisliste erstellen (800€/Video)"
     ]
   },
   "pricing": {
@@ -253,32 +190,31 @@
     }
   },
   "schedule": {
-    "giangNewStructure": {
-      "09:00-10:00": "Jour Fixe (Tough Cookie Team)",
-      "10:00-12:00": "Content-Produktion (Tough Cookie)",
-      "12:00-13:00": "Mittag",
-      "13:00-14:00": "Export (Kyberg — nur 1h!)",
-      "14:00-17:00": "Content/Schnitt (Tough Cookie)",
-      "17:00-18:00": "Admin (Tough Cookie)",
-      "18:00-20:00": "Freelance/NOMU/etc."
+    "todayPlan": {
+      "14:30": "🎬 Niku Fotoshoot (läuft)",
+      "~17:00": "🎨 Niku Fotos bearbeiten (1-2h)",
+      "~19:00": "🏃 Joggen",
+      "~20:00": "🎬 Sentai Interview (falls Energie) ODER morgen früh"
     },
-    "note": "Export nur 1 Stunde (E-Mails, Weiterleiten), nicht ganzer Tag!"
+    "tomorrow": {
+      "Samstag": "🏨 Armando Hotel Angebot erstellen (4-6h) + Sentai fertig"
+    }
   },
   "updates": [
     {
+      "time": "16:04",
+      "type": "cron",
+      "message": "Dashboard Update v5.4.74 — FREITAG 16:04: Niku Shoot läuft, Sentai (3 Tage), NOMU (28 Tage), Armando bis Montag"
+    },
+    {
+      "time": "14:32",
+      "type": "user",
+      "message": "Giang beim Niku-Shoot, will danach joggen, Sentai heute Abend oder morgen"
+    },
+    {
       "time": "12:04",
       "type": "cron",
-      "message": "Dashboard Update v5.4.73 — FREITAG 12:04: Keine neuen Updates seit 08:04. Sentai (3 Tage), NOMU (28 Tage), HEUTE: Pancake, Nebelmaschine, Nico-Shoot"
-    },
-    {
-      "time": "08:04",
-      "type": "cron",
-      "message": "Dashboard Update v5.4.72 — FREITAG 08:04: Sentai (3 Tage), NOMU (28 Tage), HEUTE: Pancake, Nebelmaschine, Nico-Shoot"
-    },
-    {
-      "time": "04:04",
-      "type": "cron",
-      "message": "Dashboard Update v5.4.71 — FREITAG 04:04: Sentai (3 Tage), NOMU (28 Tage), Armando neu"
+      "message": "Dashboard Update v5.4.73 — FREITAG 12:04: Keine neuen Updates seit 08:04. Sentai (3 Tage), NOMU (28 Tage)"
     }
   ]
 }
