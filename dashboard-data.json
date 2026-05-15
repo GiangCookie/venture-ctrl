@@ -1,6 +1,6 @@
 {
-  "version": "v5.4.70",
-  "lastUpdated": "2026-05-15T00:04:00+02:00",
+  "version": "v5.4.73",
+  "lastUpdated": "2026-05-15T12:04:00+02:00",
   "status": "active",
   "metrics": {
     "urgentTasks": 6,
@@ -11,7 +11,7 @@
   "today": "2026-05-15",
   "kw": 20,
   "dayOfWeek": "FREITAG",
-  "time": "00:04",
+  "time": "12:04",
   "lastSession": {
     "date": "2026-05-14",
     "mood": "💪",
@@ -266,19 +266,19 @@
   },
   "updates": [
     {
-      "time": "00:04",
-      "type": "cron",
-      "message": "Dashboard Update v5.4.70 — FREITAG 00:04: Sentai (3 Tage), NOMU (28 Tage), HEUTE: Pancake, Nebelmaschine, Nico-Shoot"
-    },
-    {
       "time": "12:04",
       "type": "cron",
-      "message": "Dashboard Update v5.4.69 — DO 12:00: Anju fertig!, Sentai (2 Tage überfällig), NOMU (27 Tage), Armando neu"
+      "message": "Dashboard Update v5.4.73 — FREITAG 12:04: Keine neuen Updates seit 08:04. Sentai (3 Tage), NOMU (28 Tage), HEUTE: Pancake, Nebelmaschine, Nico-Shoot"
     },
     {
       "time": "08:04",
       "type": "cron",
-      "message": "Dashboard Update v5.4.68 — DONNERSTAG 08:00: Sentai (2 Tage überfällig) + NOMU (27 Tage) + Armando (bis Mo 18.5.)"
+      "message": "Dashboard Update v5.4.72 — FREITAG 08:04: Sentai (3 Tage), NOMU (28 Tage), HEUTE: Pancake, Nebelmaschine, Nico-Shoot"
+    },
+    {
+      "time": "04:04",
+      "type": "cron",
+      "message": "Dashboard Update v5.4.71 — FREITAG 04:04: Sentai (3 Tage), NOMU (28 Tage), Armando neu"
     }
   ]
 }
