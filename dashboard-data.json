@@ -1,6 +1,6 @@
 {
-  "version": "v5.4.74",
-  "lastUpdated": "2026-05-15T16:04:00+02:00",
+  "version": "v5.4.75",
+  "lastUpdated": "2026-05-15T20:10:00+02:00",
   "status": "active",
   "metrics": {
     "urgentTasks": 5,
@@ -10,19 +10,21 @@
   },
   "today": "2026-05-15",
   "kw": 20,
-  "dayOfWeek": "FREITAG",
-  "time": "16:04",
+  "dayOfWeek": "FREITAG ABEND",
+  "time": "20:10",
   "lastSession": {
     "date": "2026-05-15",
     "mood": "🏃",
     "energy": 4,
     "completed": [
-      "📸 Niku Fotoshoot (läuft gerade)"
+      "📸 Niku Fotoshoot (nachmittags)",
+      "🏃 Joggen (nach dem Shoot)"
     ],
     "frustrations": [
       "Sentai noch 3 Tage überfällig",
       "NOMU noch 28 Tage überfällig",
-      "Rechnung Jidai immer noch offen"
+      "Rechnung Jidai immer noch offen",
+      "Keine weiteren Updates seit 14:32"
     ]
   },
   "masterplan": {
@@ -34,13 +36,18 @@
     "deadline": "November 2026 (6 Monate Ultimatum)",
     "kybergUpdate": "Export-Meeting vorbereitet, Onkel-Antwort 6 Tage überfällig",
     "armandoUpdate": "🏨 NEU: Hotelkette München, 4 Social Media Accounts, Angebot bis Montag 18.05.",
-    "todayFocus": "🔥 FREITAG NACHMITTAG: Niku Shoot läuft → Fotos bearbeiten → Joggen → Sentai/Armando"
+    "todayFocus": "🔥 FREITAG ABEND: Niku Shoot erledigt ✅ Joggen erledigt ✅ Sentai morgen früh!"
   },
   "completedToday": [
     {
       "task": "📸 Niku Fotoshoot",
       "project": "Tough Cookie",
-      "note": "✅ Läuft gerade (seit 14:30 Uhr)"
+      "note": "✅ Nachmittags erledigt (seit 14:30 Uhr)"
+    },
+    {
+      "task": "🏃 Joggen",
+      "project": "Privat",
+      "note": "✅ Nach dem Shoot erledigt"
     }
   ],
   "openTasks": [
@@ -49,7 +56,7 @@
       "project": "Tough Cookie",
       "daysOverdue": 3,
       "priority": "urgent",
-      "note": "🔥🔥🔥🔥 3 TAGE ÜBERFÄLLIG! Heute Abend oder morgen früh!",
+      "note": "🔥🔥🔥🔥 3 TAGE ÜBERFÄLLIG! MORGEN FRÜH ANFASSEN!",
       "status": "overdue"
     },
     {
@@ -87,10 +94,10 @@
     {
       "task": "🎨 Niku Fotos bearbeiten",
       "project": "Tough Cookie",
-      "due": "2026-05-15",
+      "due": "2026-05-16",
       "priority": "high",
-      "note": "🔥 Nach dem Shoot (1-2h Arbeit)",
-      "status": "in-progress"
+      "note": "🔥 MORGEN ERLEDIGEN (1-2h Arbeit)",
+      "status": "pending"
     },
     {
       "task": "🏨 Armando Hotel Angebot erstellen",
@@ -165,7 +172,7 @@
       "🔥 Sentai Post-Production (3 TAGE ÜBERFÄLLIG!)",
       "🔥 NOMU Post-Production (28 TAGE ÜBERFÄLLIG!)",
       "🏨 Armando Angebot erstellen (bis Mo 18.5.)",
-      "🎨 Niku Fotos bearbeiten (heute)"
+      "🎨 Niku Fotos bearbeiten (morgen)"
     ],
     "freelance": [
       "💰 G-Life Rechnung abschicken",
@@ -190,17 +197,22 @@
     }
   },
   "schedule": {
-    "todayPlan": {
-      "14:30": "🎬 Niku Fotoshoot (läuft)",
-      "~17:00": "🎨 Niku Fotos bearbeiten (1-2h)",
-      "~19:00": "🏃 Joggen",
-      "~20:00": "🎬 Sentai Interview (falls Energie) ODER morgen früh"
+    "todayReview": {
+      "14:30": "🎬 Niku Fotoshoot gestartet ✅",
+      "~17:00": "🎨 Fotos bearbeiten (verschoben auf morgen)",
+      "~19:00": "🏃 Joggen ✅",
+      "~20:00": "🎬 Sentai Interview (verschoben auf morgen)"
     },
     "tomorrow": {
-      "Samstag": "🏨 Armando Hotel Angebot erstellen (4-6h) + Sentai fertig"
+      "Samstag": "🔥 Sentai Post-Production (Morgenpriorität!) + 🏨 Armando Angebot (4-6h) + 🎨 Niku Fotos"
     }
   },
   "updates": [
+    {
+      "time": "20:10",
+      "type": "cron",
+      "message": "Dashboard Update v5.4.75 — FREITAG 20:10: Niku Shoot ✅ Joggen ✅ Sentai/NOMU/Armando morgen!"
+    },
     {
       "time": "16:04",
       "type": "cron",
@@ -210,11 +222,6 @@
       "time": "14:32",
       "type": "user",
       "message": "Giang beim Niku-Shoot, will danach joggen, Sentai heute Abend oder morgen"
-    },
-    {
-      "time": "12:04",
-      "type": "cron",
-      "message": "Dashboard Update v5.4.73 — FREITAG 12:04: Keine neuen Updates seit 08:04. Sentai (3 Tage), NOMU (28 Tage)"
     }
   ]
 }
