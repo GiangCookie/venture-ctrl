@@ -1,6 +1,6 @@
 {
-  "version": "v5.4.75",
-  "lastUpdated": "2026-05-15T20:10:00+02:00",
+  "version": "v5.4.76",
+  "lastUpdated": "2026-05-16T00:04:00+02:00",
   "status": "active",
   "metrics": {
     "urgentTasks": 5,
@@ -8,10 +8,10 @@
     "income": "2.1k€",
     "deals": 13
   },
-  "today": "2026-05-15",
+  "today": "2026-05-16",
   "kw": 20,
-  "dayOfWeek": "FREITAG ABEND",
-  "time": "20:10",
+  "dayOfWeek": "SAMSTAG MORGEN",
+  "time": "00:04",
   "lastSession": {
     "date": "2026-05-15",
     "mood": "🏃",
@@ -24,7 +24,7 @@
       "Sentai noch 3 Tage überfällig",
       "NOMU noch 28 Tage überfällig",
       "Rechnung Jidai immer noch offen",
-      "Keine weiteren Updates seit 14:32"
+      "Keine Updates seit 20:10 Uhr"
     ]
   },
   "masterplan": {
@@ -35,36 +35,25 @@
     "strategy": "ZWEI SÄULEN: Tough Cookie stabilisieren + Freelance ausbauen + Export (Kyberg) als Game Changer + Armando als neues großes Projekt",
     "deadline": "November 2026 (6 Monate Ultimatum)",
     "kybergUpdate": "Export-Meeting vorbereitet, Onkel-Antwort 6 Tage überfällig",
-    "armandoUpdate": "🏨 NEU: Hotelkette München, 4 Social Media Accounts, Angebot bis Montag 18.05.",
-    "todayFocus": "🔥 FREITAG ABEND: Niku Shoot erledigt ✅ Joggen erledigt ✅ Sentai morgen früh!"
+    "armandoUpdate": "🏨 NEU: Hotelkette München, 4 Social Media Accounts, Angebot bis Montag 18.05. — NOCH NICHT BEGONNEN",
+    "todayFocus": "🔥 SAMSTAG: Sentai Post-Production (Morgenpriorität #1) + Armando Angebot (Nachmittag) + Niku Fotos"
   },
-  "completedToday": [
-    {
-      "task": "📸 Niku Fotoshoot",
-      "project": "Tough Cookie",
-      "note": "✅ Nachmittags erledigt (seit 14:30 Uhr)"
-    },
-    {
-      "task": "🏃 Joggen",
-      "project": "Privat",
-      "note": "✅ Nach dem Shoot erledigt"
-    }
-  ],
+  "completedToday": [],
   "openTasks": [
     {
       "task": "🎬 Sentai Post-Production (Interview)",
       "project": "Tough Cookie",
       "daysOverdue": 3,
       "priority": "urgent",
-      "note": "🔥🔥🔥🔥 3 TAGE ÜBERFÄLLIG! MORGEN FRÜH ANFASSEN!",
+      "note": "🔥🔥🔥🔥 MORGEN FRÜH SOFORT ANFASSEN! 3 TAGE ÜBERFÄLLIG!",
       "status": "overdue"
     },
     {
       "task": "🎬 NOMU Post-Production",
       "project": "NOMU",
-      "daysOverdue": 28,
+      "daysOverdue": 29,
       "priority": "urgent",
-      "note": "🔥🔥🔥🔥🔥 28 TAGE ÜBERFÄLLIG — KUNDE WARTET — EXTREM KRITISCH!",
+      "note": "🔥🔥🔥🔥🔥 29 TAGE ÜBERFÄLLIG — KUNDE WARTET — EXTREM KRITISCH!",
       "status": "overdue"
     },
     {
@@ -72,7 +61,7 @@
       "project": "Tough Cookie",
       "due": "2026-05-11",
       "priority": "urgent",
-      "note": "🔴 5 TAGE ÜBERFÄLLIG — 10 Minuten — Sofortiger Cashflow! QUICK WIN!",
+      "note": "🔴 6 TAGE ÜBERFÄLLIG — 10 Minuten — Sofortiger Cashflow! QUICK WIN!",
       "status": "overdue"
     },
     {
@@ -80,7 +69,7 @@
       "project": "Kyberg Export",
       "due": "2026-05-10",
       "priority": "urgent",
-      "note": "13 Mio USD Volumen — 6 Tage überfällig!",
+      "note": "13 Mio USD Volumen — 7 Tage überfällig!",
       "status": "overdue"
     },
     {
@@ -88,23 +77,23 @@
       "project": "Kyberg Export",
       "due": "2026-05-10",
       "priority": "urgent",
-      "note": "5-7% Provision, Exklusivität Vietnam — 6 Tage überfällig!",
+      "note": "5-7% Provision, Exklusivität Vietnam — 7 Tage überfällig!",
       "status": "overdue"
-    },
-    {
-      "task": "🎨 Niku Fotos bearbeiten",
-      "project": "Tough Cookie",
-      "due": "2026-05-16",
-      "priority": "high",
-      "note": "🔥 MORGEN ERLEDIGEN (1-2h Arbeit)",
-      "status": "pending"
     },
     {
       "task": "🏨 Armando Hotel Angebot erstellen",
       "project": "Tough Cookie",
       "due": "2026-05-18",
       "priority": "high",
-      "note": "🔥 NEU: 4 Social Media Accounts, München, bis MONTAG! Potenzial: 3.500€/Monat",
+      "note": "🔥🔥 WICHTIG: 4 Social Media Accounts, München, bis MONTAG! Noch 2 Tage!",
+      "status": "pending"
+    },
+    {
+      "task": "🎨 Niku Fotos bearbeiten",
+      "project": "Tough Cookie",
+      "due": "2026-05-16",
+      "priority": "high",
+      "note": "🔥 HEUTE ERLEDIGEN (1-2h Arbeit)",
       "status": "pending"
     },
     {
@@ -112,7 +101,7 @@
       "project": "Freelance",
       "due": "2026-05-09",
       "priority": "high",
-      "note": "✅ Fertig, nur abschicken! 10min Quick Win! 7 Tage überfällig!",
+      "note": "✅ Fertig, nur abschicken! 10min Quick Win! 8 Tage überfällig!",
       "status": "overdue"
     },
     {
@@ -120,6 +109,7 @@
       "project": "Kyberg Export",
       "due": "2026-05-17",
       "priority": "high",
+      "note": "🔥 Heute/Sonntag erledigen — Meeting steht bevor!",
       "status": "pending"
     },
     {
@@ -134,8 +124,8 @@
     {
       "client": "Armando Hotelkette",
       "value": "3.500€/Monat (geschätzt)",
-      "status": "NEUER LEAD",
-      "note": "🏨 4 Social Media Accounts (2 Hotel + 2 Bar), München, Komplette Übernahme bis Mo 18.05.",
+      "status": "URGENT — BIS MONTAG!",
+      "note": "🏨 4 Social Media Accounts (2 Hotel + 2 Bar), München, Komplette Übernahme bis Mo 18.05. — NOCH NICHT BEGONNEN!",
       "frustration": false,
       "highlight": true
     },
@@ -163,19 +153,19 @@
   ],
   "weeklyGoals": {
     "kybergExport": [
-      "Onkel-Antwort auf Vietnamesisch (6 Tage überfällig)",
+      "Onkel-Antwort auf Vietnamesisch (7 Tage überfällig!)",
       "Telefonat mit Onkel (Provision 5-7%)",
-      "Distributor Profile PDF erstellen (bis Fr 17.5.)",
+      "Distributor Profile PDF erstellen (bis So 17.5.!)",
       "Kyberg-Erstkontakt initiieren (bis Fr 24.5.)"
     ],
     "toughCookie": [
-      "🔥 Sentai Post-Production (3 TAGE ÜBERFÄLLIG!)",
-      "🔥 NOMU Post-Production (28 TAGE ÜBERFÄLLIG!)",
-      "🏨 Armando Angebot erstellen (bis Mo 18.5.)",
-      "🎨 Niku Fotos bearbeiten (morgen)"
+      "🔥 Sentai Post-Production (3 TAGE ÜBERFÄLLIG — MORGEN FRÜH!)",
+      "🔥 NOMU Post-Production (29 TAGE ÜBERFÄLLIG!)",
+      "🔥 Armando Angebot erstellen (bis Mo 18.5. — noch 2 Tage!)",
+      "🎨 Niku Fotos bearbeiten (heute)"
     ],
     "freelance": [
-      "💰 G-Life Rechnung abschicken",
+      "💰 G-Life Rechnung abschicken (8 Tage überfällig!)",
       "Preisliste erstellen (800€/Video)"
     ]
   },
@@ -197,31 +187,25 @@
     }
   },
   "schedule": {
-    "todayReview": {
-      "14:30": "🎬 Niku Fotoshoot gestartet ✅",
-      "~17:00": "🎨 Fotos bearbeiten (verschoben auf morgen)",
-      "~19:00": "🏃 Joggen ✅",
-      "~20:00": "🎬 Sentai Interview (verschoben auf morgen)"
+    "today": {
+      "Morgens": "🔥 Sentai Post-Production (Priorität #1!)",
+      "Nachmittag": "🏨 Armando Angebot erstellen (4-6h)",
+      "Zwischendurch": "🎨 Niku Fotos bearbeiten"
     },
     "tomorrow": {
-      "Samstag": "🔥 Sentai Post-Production (Morgenpriorität!) + 🏨 Armando Angebot (4-6h) + 🎨 Niku Fotos"
+      "Sonntag": "📑 Distributor Profile + Kyberg Vorbereitung"
     }
   },
   "updates": [
     {
+      "time": "00:04",
+      "type": "cron",
+      "message": "Dashboard Update v5.4.76 — SAMSTAG 00:04: Keine neuen Updates. Sentai (3 Tage!), NOMU (29 Tage!), Armando (2 Tage bis Deadline)"
+    },
+    {
       "time": "20:10",
       "type": "cron",
       "message": "Dashboard Update v5.4.75 — FREITAG 20:10: Niku Shoot ✅ Joggen ✅ Sentai/NOMU/Armando morgen!"
-    },
-    {
-      "time": "16:04",
-      "type": "cron",
-      "message": "Dashboard Update v5.4.74 — FREITAG 16:04: Niku Shoot läuft, Sentai (3 Tage), NOMU (28 Tage), Armando bis Montag"
-    },
-    {
-      "time": "14:32",
-      "type": "user",
-      "message": "Giang beim Niku-Shoot, will danach joggen, Sentai heute Abend oder morgen"
     }
   ]
 }
