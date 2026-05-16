@@ -1,6 +1,6 @@
 {
-  "version": "v5.4.76",
-  "lastUpdated": "2026-05-16T00:04:00+02:00",
+  "version": "v5.4.77",
+  "lastUpdated": "2026-05-16T04:04:00+02:00",
   "status": "active",
   "metrics": {
     "urgentTasks": 5,
@@ -10,8 +10,8 @@
   },
   "today": "2026-05-16",
   "kw": 20,
-  "dayOfWeek": "SAMSTAG MORGEN",
-  "time": "00:04",
+  "dayOfWeek": "SAMSTAG FRÜH",
+  "time": "04:04",
   "lastSession": {
     "date": "2026-05-15",
     "mood": "🏃",
@@ -22,9 +22,9 @@
     ],
     "frustrations": [
       "Sentai noch 3 Tage überfällig",
-      "NOMU noch 28 Tage überfällig",
+      "NOMU noch 29 Tage überfällig",
       "Rechnung Jidai immer noch offen",
-      "Keine Updates seit 20:10 Uhr"
+      "Armando noch nicht begonnen"
     ]
   },
   "masterplan": {
@@ -34,7 +34,7 @@
     "gap": "2.900€/Monat",
     "strategy": "ZWEI SÄULEN: Tough Cookie stabilisieren + Freelance ausbauen + Export (Kyberg) als Game Changer + Armando als neues großes Projekt",
     "deadline": "November 2026 (6 Monate Ultimatum)",
-    "kybergUpdate": "Export-Meeting vorbereitet, Onkel-Antwort 6 Tage überfällig",
+    "kybergUpdate": "Export-Meeting vorbereitet, Onkel-Antwort 7 Tage überfällig",
     "armandoUpdate": "🏨 NEU: Hotelkette München, 4 Social Media Accounts, Angebot bis Montag 18.05. — NOCH NICHT BEGONNEN",
     "todayFocus": "🔥 SAMSTAG: Sentai Post-Production (Morgenpriorität #1) + Armando Angebot (Nachmittag) + Niku Fotos"
   },
@@ -45,7 +45,7 @@
       "project": "Tough Cookie",
       "daysOverdue": 3,
       "priority": "urgent",
-      "note": "🔥🔥🔥🔥 MORGEN FRÜH SOFORT ANFASSEN! 3 TAGE ÜBERFÄLLIG!",
+      "note": "🔥🔥🔥🔥 SOFORT ANFASSEN! 3 TAGE ÜBERFÄLLIG!",
       "status": "overdue"
     },
     {
@@ -198,9 +198,14 @@
   },
   "updates": [
     {
+      "time": "04:04",
+      "type": "cron",
+      "message": "Dashboard Update v5.4.77 — SAMSTAG 04:04: Keine neuen Updates. Sentai (3 Tage!), NOMU (29 Tage!), Armando (2 Tage bis Deadline)"
+    },
+    {
       "time": "00:04",
       "type": "cron",
-      "message": "Dashboard Update v5.4.76 — SAMSTAG 00:04: Keine neuen Updates. Sentai (3 Tage!), NOMU (29 Tage!), Armando (2 Tage bis Deadline)"
+      "message": "Dashboard Update v5.4.76 — SAMSTAG 00:04: Keine neuen Updates. Sentai/NOMU/Armando morgen!"
     },
     {
       "time": "20:10",
