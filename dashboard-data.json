@@ -1,6 +1,6 @@
 {
-  "version": "v5.4.77",
-  "lastUpdated": "2026-05-16T04:04:00+02:00",
+  "version": "v5.4.78",
+  "lastUpdated": "2026-05-16T08:04:00+02:00",
   "status": "active",
   "metrics": {
     "urgentTasks": 5,
@@ -10,8 +10,8 @@
   },
   "today": "2026-05-16",
   "kw": 20,
-  "dayOfWeek": "SAMSTAG FRÜH",
-  "time": "04:04",
+  "dayOfWeek": "SAMSTAG MORGEN",
+  "time": "08:04",
   "lastSession": {
     "date": "2026-05-15",
     "mood": "🏃",
@@ -85,7 +85,7 @@
       "project": "Tough Cookie",
       "due": "2026-05-18",
       "priority": "high",
-      "note": "🔥🔥 WICHTIG: 4 Social Media Accounts, München, bis MONTAG! Noch 2 Tage!",
+      "note": "🔥🔥 WICHTIG: 4 Social Media Accounts, München, bis MONTAG! Nur noch 1 Tag!",
       "status": "pending"
     },
     {
@@ -124,7 +124,7 @@
     {
       "client": "Armando Hotelkette",
       "value": "3.500€/Monat (geschätzt)",
-      "status": "URGENT — BIS MONTAG!",
+      "status": "🔥 URGENT — NUR NOCH 1 TAG!",
       "note": "🏨 4 Social Media Accounts (2 Hotel + 2 Bar), München, Komplette Übernahme bis Mo 18.05. — NOCH NICHT BEGONNEN!",
       "frustration": false,
       "highlight": true
@@ -161,7 +161,7 @@
     "toughCookie": [
       "🔥 Sentai Post-Production (3 TAGE ÜBERFÄLLIG — MORGEN FRÜH!)",
       "🔥 NOMU Post-Production (29 TAGE ÜBERFÄLLIG!)",
-      "🔥 Armando Angebot erstellen (bis Mo 18.5. — noch 2 Tage!)",
+      "🔥 Armando Angebot erstellen (bis Mo 18.5. — nur noch 1 Tag!)",
       "🎨 Niku Fotos bearbeiten (heute)"
     ],
     "freelance": [
@@ -197,6 +197,11 @@
     }
   },
   "updates": [
+    {
+      "time": "08:04",
+      "type": "cron",
+      "message": "Dashboard Update v5.4.78 — SAMSTAG 08:04: Keine neuen Updates. Sentai (3 Tage!), NOMU (29 Tage!), Armando (nur noch 1 Tag bis Montag!)"
+    },
     {
       "time": "04:04",
       "type": "cron",
