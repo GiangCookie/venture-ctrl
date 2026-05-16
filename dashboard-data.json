@@ -1,6 +1,6 @@
 {
-  "version": "v5.4.78",
-  "lastUpdated": "2026-05-16T08:04:00+02:00",
+  "version": "v5.4.80",
+  "lastUpdated": "2026-05-16T16:04:00+02:00",
   "status": "active",
   "metrics": {
     "urgentTasks": 5,
@@ -10,8 +10,8 @@
   },
   "today": "2026-05-16",
   "kw": 20,
-  "dayOfWeek": "SAMSTAG MORGEN",
-  "time": "08:04",
+  "dayOfWeek": "SAMSTAG NACHMITTAG",
+  "time": "16:04",
   "lastSession": {
     "date": "2026-05-15",
     "mood": "🏃",
@@ -35,8 +35,8 @@
     "strategy": "ZWEI SÄULEN: Tough Cookie stabilisieren + Freelance ausbauen + Export (Kyberg) als Game Changer + Armando als neues großes Projekt",
     "deadline": "November 2026 (6 Monate Ultimatum)",
     "kybergUpdate": "Export-Meeting vorbereitet, Onkel-Antwort 7 Tage überfällig",
-    "armandoUpdate": "🏨 NEU: Hotelkette München, 4 Social Media Accounts, Angebot bis Montag 18.05. — NOCH NICHT BEGONNEN",
-    "todayFocus": "🔥 SAMSTAG: Sentai Post-Production (Morgenpriorität #1) + Armando Angebot (Nachmittag) + Niku Fotos"
+    "armandoUpdate": "🏨 KRITISCH: Angebot muss HEUTE NIGHT oder MORGEN FRÜH fertig sein! 3.500€/Monat Potenzial",
+    "todayFocus": "🔥 SAMSTAG NACHMITTAG: Armando HEUTE NIGHT/MORGEN FRÜH (KRITISCH!) + Sentai (immer noch 3 Tage überfällig)"
   },
   "completedToday": [],
   "openTasks": [
@@ -84,8 +84,8 @@
       "task": "🏨 Armando Hotel Angebot erstellen",
       "project": "Tough Cookie",
       "due": "2026-05-18",
-      "priority": "high",
-      "note": "🔥🔥 WICHTIG: 4 Social Media Accounts, München, bis MONTAG! Nur noch 1 Tag!",
+      "priority": "urgent",
+      "note": "🔥🔥🔥 HEUTE NIGHT oder MORGEN FRÜH! 4 Social Media Accounts, München. MACHEN JETZT!",
       "status": "pending"
     },
     {
@@ -124,9 +124,9 @@
     {
       "client": "Armando Hotelkette",
       "value": "3.500€/Monat (geschätzt)",
-      "status": "🔥 URGENT — NUR NOCH 1 TAG!",
-      "note": "🏨 4 Social Media Accounts (2 Hotel + 2 Bar), München, Komplette Übernahme bis Mo 18.05. — NOCH NICHT BEGONNEN!",
-      "frustration": false,
+      "status": "🔥🔥🔥 KRITISCH — HEUTE NIGHT/MORGEN FRÜH!",
+      "note": "🏨 4 Social Media Accounts (2 Hotel + 2 Bar), München, Komplette Übernahme bis Mo 18.05. — MACHEN JETZT!",
+      "frustration": true,
       "highlight": true
     },
     {
@@ -159,9 +159,9 @@
       "Kyberg-Erstkontakt initiieren (bis Fr 24.5.)"
     ],
     "toughCookie": [
-      "🔥 Sentai Post-Production (3 TAGE ÜBERFÄLLIG — MORGEN FRÜH!)",
+      "🔥 Sentai Post-Production (3 TAGE ÜBERFÄLLIG!)",
       "🔥 NOMU Post-Production (29 TAGE ÜBERFÄLLIG!)",
-      "🔥 Armando Angebot erstellen (bis Mo 18.5. — nur noch 1 Tag!)",
+      "🔥 Armando Angebot erstellen (HEUTE NIGHT/MORGEN FRÜH!)",
       "🎨 Niku Fotos bearbeiten (heute)"
     ],
     "freelance": [
@@ -188,8 +188,8 @@
   },
   "schedule": {
     "today": {
-      "Morgens": "🔥 Sentai Post-Production (Priorität #1!)",
-      "Nachmittag": "🏨 Armando Angebot erstellen (4-6h)",
+      "Jetzt (16:04)": "🏨 Armando Angebot erstellen (HEUTE NIGHT/MORGEN FRÜH!)",
+      "Heute noch": "🔥 Sentai Post-Production (3 Tage überfällig!)",
       "Zwischendurch": "🎨 Niku Fotos bearbeiten"
     },
     "tomorrow": {
@@ -197,6 +197,16 @@
     }
   },
   "updates": [
+    {
+      "time": "16:04",
+      "type": "cron",
+      "message": "Dashboard Update v5.4.80 — SAMSTAG 16:04: Status unverändert. Armando noch heute Nacht/Morgen früh! Sentai weiter 3 Tage überfällig."
+    },
+    {
+      "time": "12:04",
+      "type": "cron",
+      "message": "Dashboard Update v5.4.79 — SAMSTAG 12:04: Nachmittag! Armando noch 1 Tag! Sentai immer noch 3 Tage überfällig."
+    },
     {
       "time": "08:04",
       "type": "cron",
