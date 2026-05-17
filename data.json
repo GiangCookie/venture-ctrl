@@ -1,6 +1,6 @@
 {
-  "version": "v5.4.87",
-  "lastUpdated": "2026-05-17T20:04:00+02:00",
+  "version": "v5.4.88",
+  "lastUpdated": "2026-05-18T00:04:00+02:00",
   "status": "critical",
   "metrics": {
     "urgentTasks": 5,
@@ -8,12 +8,12 @@
     "income": "2.1k€",
     "deals": 13
   },
-  "today": "2026-05-17",
+  "today": "2026-05-18",
   "kw": 20,
-  "dayOfWeek": "SONNTAG ABEND",
-  "time": "20:04",
+  "dayOfWeek": "MONTAG FRÜH",
+  "time": "00:04",
   "lastSession": {
-    "date": "2026-05-15",
+    "date": "2026-05-17",
     "mood": "🏃",
     "energy": 4,
     "completed": [
@@ -25,7 +25,7 @@
       "Sentai 6 Tage überfällig",
       "NOMU 32 Tage überfällig",
       "Rechnungen 9-11 Tage überfällig",
-      "Armando Deadline war heute!"
+      "Armando Deadline war gestern (So 17.5.)!"
     ]
   },
   "masterplan": {
@@ -35,9 +35,9 @@
     "gap": "2.900€/Monat",
     "strategy": "ZWEI SÄULEN: Tough Cookie stabilisieren + Freelance ausbauen + Export (Kyberg) als Game Changer + Armando als neues großes Projekt",
     "deadline": "November 2026 (6 Monate Ultimatum)",
-    "kybergUpdate": "Export-Meeting vorbereitet, Onkel-Antwort 7 Tage überfällig",
-    "armandoUpdate": "🔥🔥🔥 KRITISCH: Deadline war HEUTE! Angebot noch nicht abgeschickt! 3.500€/Monat auf dem Spiel",
-    "todayFocus": "🔥 SONNTAG ABEND: Wochenende verloren — Morgen ist Rettungs-Tag! Armando + Rechnungen sofort!"
+    "kybergUpdate": "Export-Meeting vorbereitet, Onkel-Antwort 8 Tage überfällig",
+    "armandoUpdate": "🔥🔥🔥🔥🔥 EXTREM KRITISCH: Deadline war GESTERN (So 17.5.)! Angebot noch nicht abgeschickt! 3.500€/Monat auf dem Spiel",
+    "todayFocus": "🔥 MONTAG FRÜH: Armando Deadline war GESTERN! Sofort aufstehen und Angebot fertig machen! 3.500€/Monat retten!"
   },
   "completedToday": [],
   "openTasks": [
@@ -46,7 +46,7 @@
       "project": "Tough Cookie",
       "due": "2026-05-17",
       "priority": "urgent",
-      "note": "🔥🔥🔥 HEUTE WAR DEADLINE! Morgen früh letzte Chance! 3.500€/Monat Potenzial",
+      "note": "🔥🔥🔥🔥🔥 GESTERN WAR DEADLINE! JETZT 1 TAG ÜBERFÄLLIG! Sofort aufstehen und fertig machen! 3.500€/Monat Potenzial",
       "status": "overdue"
     },
     {
@@ -86,8 +86,8 @@
     {
       "client": "Armando Hotelkette",
       "value": "3.500€/Monat (geschätzt)",
-      "status": "🔥🔥🔥 KRITISCH — DEADLINE WAR HEUTE!",
-      "note": "🏨 4 Social Media Accounts (2 Hotel + 2 Bar), München — 42.000€/Jahr auf dem Spiel!",
+      "status": "🔥🔥🔥🔥🔥 EXTREM KRITISCH — DEADLINE WAR GESTERN!",
+      "note": "🏨 4 Social Media Accounts (2 Hotel + 2 Bar), München — 42.000€/Jahr auf dem Spiel! JETZT HANDELN!",
       "frustration": true,
       "highlight": true
     },
@@ -115,13 +115,13 @@
   ],
   "weeklyGoals": {
     "kybergExport": [
-      "Onkel-Antwort auf Vietnamesisch (7 Tage überfällig!)",
+      "Onkel-Antwort auf Vietnamesisch (8 Tage überfällig!)",
       "Telefonat mit Onkel (Provision 5-7%)",
       "Distributor Profile PDF erstellen",
       "Kyberg-Erstkontakt initiieren"
     ],
     "toughCookie": [
-      "🔥 ARMANDO Angebot abschicken (DEADLINE WAR HEUTE!)",
+      "🔥🔥🔥 ARMANDO Angebot abschicken (DEADLINE WAR GESTERN!)",
       "🔥 Sentai Post-Production (6 TAGE ÜBERFÄLLIG!)",
       "🔥 NOMU Post-Production (32 TAGE ÜBERFÄLLIG!)",
       "🎨 Niku Fotos bearbeiten fertig"
@@ -151,13 +151,18 @@
   },
   "schedule": {
     "today": {
-      "Status": "🔴 Wochenende komplett still — keine Updates seit Fr 15.5."
+      "Status": "🔴 EXTREM KRITISCH — Armando Deadline war GESTERN!"
     },
     "tomorrow": {
-      "Montag": "🏥 ARMANDO — letzte Chance! + 💰 Rechnungen (20min = 3.700€)"
+      "Montag": "🏥 ARMANDO — letzte Chance vorbei! + 💰 Rechnungen (20min = 3.700€)"
     }
   },
   "updates": [
+    {
+      "time": "00:04",
+      "type": "cron",
+      "message": "Dashboard Update v5.4.88 — MONTAG 00:04: 🔥🔥🔥 EXTREM KRITISCH! Armando Deadline war GESTERN! Sofort aufstehen und Angebot fertig machen!"
+    },
     {
       "time": "20:04",
       "type": "cron",
@@ -182,11 +187,6 @@
       "time": "04:04",
       "type": "cron",
       "message": "Dashboard Update v5.4.83 — SONNTAG 04:04: Keine Updates. Armando Deadline in 16h!"
-    },
-    {
-      "time": "00:04",
-      "type": "cron",
-      "message": "Dashboard Update v5.4.82 — SONNTAG 00:04: Keine neuen Updates. Armando Deadline morgen! Sentai 5 Tage überfällig."
     }
   ]
 }
