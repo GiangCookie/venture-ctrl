@@ -1,16 +1,16 @@
 {
-  "version": "v5.4.81",
-  "lastUpdated": "2026-05-16T20:04:00+02:00",
-  "status": "active",
+  "version": "v5.4.87",
+  "lastUpdated": "2026-05-17T20:04:00+02:00",
+  "status": "critical",
   "metrics": {
     "urgentTasks": 5,
     "highPriority": 4,
     "income": "2.1k€",
     "deals": 13
   },
-  "today": "2026-05-16",
+  "today": "2026-05-17",
   "kw": 20,
-  "dayOfWeek": "SAMSTAG ABEND",
+  "dayOfWeek": "SONNTAG ABEND",
   "time": "20:04",
   "lastSession": {
     "date": "2026-05-15",
@@ -21,39 +21,48 @@
       "🏃 Joggen (nach dem Shoot)"
     ],
     "frustrations": [
-      "Sentai noch 3 Tage überfällig",
-      "NOMU noch 29 Tage überfällig",
-      "Rechnung Jidai immer noch offen",
-      "Armando noch nicht begonnen"
+      "Wochenende komplett still — keine Updates seit Fr 15.5.",
+      "Sentai 6 Tage überfällig",
+      "NOMU 32 Tage überfällig",
+      "Rechnungen 9-11 Tage überfällig",
+      "Armando Deadline war heute!"
     ]
   },
   "masterplan": {
-    "status": "active",
+    "status": "critical",
     "targetIncome": "5.000€/Monat",
     "currentIncome": "2.100€/Monat",
     "gap": "2.900€/Monat",
     "strategy": "ZWEI SÄULEN: Tough Cookie stabilisieren + Freelance ausbauen + Export (Kyberg) als Game Changer + Armando als neues großes Projekt",
     "deadline": "November 2026 (6 Monate Ultimatum)",
     "kybergUpdate": "Export-Meeting vorbereitet, Onkel-Antwort 7 Tage überfällig",
-    "armandoUpdate": "🏨 KRITISCH: Angebot muss HEUTE NIGHT oder MORGEN FRÜH fertig sein! 3.500€/Monat Potenzial",
-    "todayFocus": "🔥 SAMSTAG NACHMITTAG: Armando HEUTE NIGHT/MORGEN FRÜH (KRITISCH!) + Sentai (immer noch 3 Tage überfällig)"
+    "armandoUpdate": "🔥🔥🔥 KRITISCH: Deadline war HEUTE! Angebot noch nicht abgeschickt! 3.500€/Monat auf dem Spiel",
+    "todayFocus": "🔥 SONNTAG ABEND: Wochenende verloren — Morgen ist Rettungs-Tag! Armando + Rechnungen sofort!"
   },
   "completedToday": [],
   "openTasks": [
     {
-      "task": "🎬 Sentai Post-Production (Interview)",
+      "task": "🏨 ARMANDO Hotel Angebot",
       "project": "Tough Cookie",
-      "daysOverdue": 3,
+      "due": "2026-05-17",
       "priority": "urgent",
-      "note": "🔥🔥🔥🔥 SOFORT ANFASSEN! 3 TAGE ÜBERFÄLLIG!",
+      "note": "🔥🔥🔥 HEUTE WAR DEADLINE! Morgen früh letzte Chance! 3.500€/Monat Potenzial",
       "status": "overdue"
     },
     {
       "task": "🎬 NOMU Post-Production",
       "project": "NOMU",
-      "daysOverdue": 29,
+      "daysOverdue": 32,
       "priority": "urgent",
-      "note": "🔥🔥🔥🔥🔥 29 TAGE ÜBERFÄLLIG — KUNDE WARTET — EXTREM KRITISCH!",
+      "note": "🔥🔥🔥🔥🔥 32 TAGE ÜBERFÄLLIG — KUNDE WARTET — EXTREM KRITISCH!",
+      "status": "overdue"
+    },
+    {
+      "task": "🎬 Sentai Post-Production (Interview)",
+      "project": "Tough Cookie",
+      "daysOverdue": 6,
+      "priority": "urgent",
+      "note": "🔥🔥🔥🔥 SOFORT ANFASSEN! 6 TAGE ÜBERFÄLLIG!",
       "status": "overdue"
     },
     {
@@ -61,71 +70,24 @@
       "project": "Tough Cookie",
       "due": "2026-05-11",
       "priority": "urgent",
-      "note": "🔴 6 TAGE ÜBERFÄLLIG — 10 Minuten — Sofortiger Cashflow! QUICK WIN!",
+      "note": "🔴 9 TAGE ÜBERFÄLLIG — 10 Minuten — Sofortiger Cashflow! QUICK WIN!",
       "status": "overdue"
-    },
-    {
-      "task": "📧 Onkel-Antwort auf Vietnamesisch",
-      "project": "Kyberg Export",
-      "due": "2026-05-10",
-      "priority": "urgent",
-      "note": "13 Mio USD Volumen — 7 Tage überfällig!",
-      "status": "overdue"
-    },
-    {
-      "task": "📞 Telefonat mit Onkel (Provision klären)",
-      "project": "Kyberg Export",
-      "due": "2026-05-10",
-      "priority": "urgent",
-      "note": "5-7% Provision, Exklusivität Vietnam — 7 Tage überfällig!",
-      "status": "overdue"
-    },
-    {
-      "task": "🏨 Armando Hotel Angebot erstellen",
-      "project": "Tough Cookie",
-      "due": "2026-05-18",
-      "priority": "urgent",
-      "note": "🔥🔥🔥 HEUTE NIGHT oder MORGEN FRÜH! 4 Social Media Accounts, München. MACHEN JETZT!",
-      "status": "pending"
-    },
-    {
-      "task": "🎨 Niku Fotos bearbeiten",
-      "project": "Tough Cookie",
-      "due": "2026-05-16",
-      "priority": "high",
-      "note": "🔥 HEUTE ERLEDIGEN (1-2h Arbeit)",
-      "status": "pending"
     },
     {
       "task": "💰 G-Life Rechnung rausschicken",
       "project": "Freelance",
       "due": "2026-05-09",
-      "priority": "high",
-      "note": "✅ Fertig, nur abschicken! 10min Quick Win! 8 Tage überfällig!",
+      "priority": "urgent",
+      "note": "✅ Fertig, nur abschicken! 10min Quick Win! 11 Tage überfällig!",
       "status": "overdue"
-    },
-    {
-      "task": "📑 Distributor Profile PDF erstellen",
-      "project": "Kyberg Export",
-      "due": "2026-05-17",
-      "priority": "high",
-      "note": "🔥 Heute/Sonntag erledigen — Meeting steht bevor!",
-      "status": "pending"
-    },
-    {
-      "task": "🤝 Kyberg-Erstkontakt initiieren",
-      "project": "Kyberg Export",
-      "due": "2026-05-24",
-      "priority": "medium",
-      "status": "pending"
     }
   ],
   "deals": [
     {
       "client": "Armando Hotelkette",
       "value": "3.500€/Monat (geschätzt)",
-      "status": "🔥🔥🔥 KRITISCH — HEUTE NIGHT/MORGEN FRÜH!",
-      "note": "🏨 4 Social Media Accounts (2 Hotel + 2 Bar), München, Komplette Übernahme bis Mo 18.05. — MACHEN JETZT!",
+      "status": "🔥🔥🔥 KRITISCH — DEADLINE WAR HEUTE!",
+      "note": "🏨 4 Social Media Accounts (2 Hotel + 2 Bar), München — 42.000€/Jahr auf dem Spiel!",
       "frustration": true,
       "highlight": true
     },
@@ -155,17 +117,18 @@
     "kybergExport": [
       "Onkel-Antwort auf Vietnamesisch (7 Tage überfällig!)",
       "Telefonat mit Onkel (Provision 5-7%)",
-      "Distributor Profile PDF erstellen (bis So 17.5.!)",
-      "Kyberg-Erstkontakt initiieren (bis Fr 24.5.)"
+      "Distributor Profile PDF erstellen",
+      "Kyberg-Erstkontakt initiieren"
     ],
     "toughCookie": [
-      "🔥 Sentai Post-Production (3 TAGE ÜBERFÄLLIG!)",
-      "🔥 NOMU Post-Production (29 TAGE ÜBERFÄLLIG!)",
-      "🔥 Armando Angebot erstellen (HEUTE NIGHT/MORGEN FRÜH!)",
-      "🎨 Niku Fotos bearbeiten (heute)"
+      "🔥 ARMANDO Angebot abschicken (DEADLINE WAR HEUTE!)",
+      "🔥 Sentai Post-Production (6 TAGE ÜBERFÄLLIG!)",
+      "🔥 NOMU Post-Production (32 TAGE ÜBERFÄLLIG!)",
+      "🎨 Niku Fotos bearbeiten fertig"
     ],
     "freelance": [
-      "💰 G-Life Rechnung abschicken (8 Tage überfällig!)",
+      "💰 G-Life Rechnung abschicken (11 Tage überfällig!)",
+      "💰 Jidai Rechnung abschicken (9 Tage überfällig!)",
       "Preisliste erstellen (800€/Video)"
     ]
   },
@@ -188,49 +151,42 @@
   },
   "schedule": {
     "today": {
-      "Jetzt (16:04)": "🏨 Armando Angebot erstellen (HEUTE NIGHT/MORGEN FRÜH!)",
-      "Heute noch": "🔥 Sentai Post-Production (3 Tage überfällig!)",
-      "Zwischendurch": "🎨 Niku Fotos bearbeiten"
+      "Status": "🔴 Wochenende komplett still — keine Updates seit Fr 15.5."
     },
     "tomorrow": {
-      "Sonntag": "📑 Distributor Profile + Kyberg Vorbereitung"
+      "Montag": "🏥 ARMANDO — letzte Chance! + 💰 Rechnungen (20min = 3.700€)"
     }
   },
   "updates": [
     {
       "time": "20:04",
       "type": "cron",
-      "message": "Dashboard Update v5.4.81 — SAMSTAG 20:04: Status unverändert. Armando muss MORGEN FRÜH fertig sein! Sentai weiterhin 3 Tage überfällig."
+      "message": "Dashboard Update v5.4.87 — SONNTAG 20:04: 🔴 KRITISCH! Wochenende verloren. Armando Deadline war HEUTE! Sentai 6 Tage, NOMU 32 Tage überfällig."
     },
     {
       "time": "16:04",
       "type": "cron",
-      "message": "Dashboard Update v5.4.80 — SAMSTAG 16:04: Status unverändert. Armando noch heute Nacht/Morgen früh! Sentai weiter 3 Tage überfällig."
+      "message": "Dashboard Update v5.4.86 — SONNTAG 16:04: Status unverändert. Armando Deadline HEUTE! Sentai/NOMU/Rechnungen überfällig."
     },
     {
       "time": "12:04",
       "type": "cron",
-      "message": "Dashboard Update v5.4.79 — SAMSTAG 12:04: Nachmittag! Armando noch 1 Tag! Sentai immer noch 3 Tage überfällig."
+      "message": "Dashboard Update v5.4.85 — SONNTAG 12:04: Keine Updates. Armando Deadline heute! Sentai 6 Tage überfällig."
     },
     {
       "time": "08:04",
       "type": "cron",
-      "message": "Dashboard Update v5.4.78 — SAMSTAG 08:04: Keine neuen Updates. Sentai (3 Tage!), NOMU (29 Tage!), Armando (nur noch 1 Tag bis Montag!)"
+      "message": "Dashboard Update v5.4.84 — SONNTAG 08:04: Keine neuen Updates. Armando Deadline heute! Sentai 6 Tage, NOMU 32 Tage überfällig."
     },
     {
       "time": "04:04",
       "type": "cron",
-      "message": "Dashboard Update v5.4.77 — SAMSTAG 04:04: Keine neuen Updates. Sentai (3 Tage!), NOMU (29 Tage!), Armando (2 Tage bis Deadline)"
+      "message": "Dashboard Update v5.4.83 — SONNTAG 04:04: Keine Updates. Armando Deadline in 16h!"
     },
     {
       "time": "00:04",
       "type": "cron",
-      "message": "Dashboard Update v5.4.76 — SAMSTAG 00:04: Keine neuen Updates. Sentai/NOMU/Armando morgen!"
-    },
-    {
-      "time": "20:10",
-      "type": "cron",
-      "message": "Dashboard Update v5.4.75 — FREITAG 20:10: Niku Shoot ✅ Joggen ✅ Sentai/NOMU/Armando morgen!"
+      "message": "Dashboard Update v5.4.82 — SONNTAG 00:04: Keine neuen Updates. Armando Deadline morgen! Sentai 5 Tage überfällig."
     }
   ]
 }

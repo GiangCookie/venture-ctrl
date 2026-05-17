@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VENTURE CTRL v5.4.86</title>
+    <title>VENTURE CTRL v5.4.87</title>
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
@@ -176,7 +176,7 @@
             font-weight: bold;
         }
         .alert-banner {
-            background: linear-gradient(135deg, rgba(239, 68, 68, 0.2), rgba(251, 191, 36, 0.2));
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0.2), rgba(127, 29, 29, 0.3));
             border: 2px solid #ef4444;
             padding: 15px;
             border-radius: 10px;
@@ -198,40 +198,35 @@
             font-size: 0.7rem;
             font-weight: bold;
         }
-        .completed-badge {
-            background: linear-gradient(135deg, #22c55e 0%, #4ade80 100%);
+        .weekend-badge {
+            background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
             color: white;
             padding: 2px 10px;
             border-radius: 12px;
             font-size: 0.7rem;
             font-weight: bold;
         }
-        .success-box {
-            background: rgba(74, 222, 128, 0.1);
-            border: 1px solid rgba(74, 222, 128, 0.3);
-            padding: 12px;
-            border-radius: 8px;
-            margin-bottom: 10px;
-        }
-        .completed-task {
-            border-left-color: #22c55e;
-            background: rgba(34, 197, 94, 0.08);
-            text-decoration: line-through;
-            opacity: 0.8;
+        .lost-badge {
+            background: #374151;
+            color: #9ca3af;
+            padding: 2px 10px;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
     <div class="header">
-        <span class="version-badge">v5.4.86</span>
+        <span class="version-badge">v5.4.87</span>
         <h1>🚀 VENTURE CTRL</h1>
-        <p>Sonntag, 17. Mai 2026 — 14:04 Uhr <span class="kw-badge">KW20</span></p>
+        <p>Sonntag, 17. Mai 2026 — 20:04 Uhr <span class="kw-badge">KW20</span></p>
     </div>
 
     <!-- Critical Alert Banner -->
     <div class="alert-banner">
         <h3>🚨 KRITISCHE SITUATION</h3>
-        <p>5 Tasks — ARMANDO HEUTE NACHMITTAG! + Sentai (6 Tage) + NOMU (32 Tage)</p>
+        <p>🔴 Wochenende verloren — ARMANDO Deadline war HEUTE! + Sentai (6 Tage) + NOMU (32 Tage)</p>
     </div>
 
     <div class="grid">
@@ -256,7 +251,7 @@
                     <span>November 2026</span>
                 </div>
             </div>
-            <p style="font-size: 0.9rem; color: #888;">🔥 SONNTAG MITTAG: 5 kritische Tasks</p>
+            <p style="font-size: 0.9rem; color: #888; margin-top: 10px;">🔥 SONNTAG ABEND: Keine Updates seit Fr 15.5. — Wochenende komplett still</p>
         </div>
 
         <!-- Stats -->
@@ -283,8 +278,8 @@
                 <span class="stat-value">Sonntag</span>
             </div>
             <div class="stat-row">
-                <span class="stat-label">⚡ KW:</span>
-                <span class="stat-value">20</span>
+                <span class="stat-label">⚡ Status:</span>
+                <span class="stat-value critical">KRITISCH</span>
             </div>
         </div>
 
@@ -294,26 +289,26 @@
             
             <div class="todo extreme">
                 <strong>🏨 ARMANDO Hotel Angebot</strong>
-                <span class="tomorrow-badge">MORGEN FRÜH</span>
-                <br><small style="color: #fca5a5;">🔥🔥🔥 3.500€/Monat Potenzial — HEUTE NACHMITTAG/ABEND MACHEN!</small>
+                <span class="tomorrow-badge">DEADLINE WAR HEUTE</span>
+                <br><small style="color: #fca5a5;">🔥🔥🔥🔥 3.500€/Monat Potenzial — MORGEN FRÜH LETZTE CHANCE!</small>
             </div>
 
             <div class="todo extreme">
                 <strong>🎬 NOMU Post-Production</strong>
                 <span class="extreme-days">32 TAGE</span>
-                <br><small style="color: #fca5a5;">🔥🔥🔥🔥 KUNDE WARTET — EXTREM KRITISCH!</small>
+                <br><small style="color: #fca5a5;">🔥🔥🔥🔥🔥 KUNDE WARTET — EXTREM KRITISCH!</small>
             </div>
 
             <div class="todo extreme">
-                <strong>🎬 Sentai Post-Production (2 Reels)</strong>
+                <strong>🎬 Sentai Post-Production (Interview)</strong>
                 <span class="extreme-days">6 TAGE</span>
-                <br><small style="color: #fca5a5;">🔥🔥🔥 6 Tage überfällig!</small>
+                <br><small style="color: #fca5a5;">🔥🔥🔥🔥 SOFORT ANFASSEN! 6 Tage überfällig!</small>
             </div>
 
             <div class="todo overdue">
                 <strong>💰 Rechnung Jidai rausschicken</strong>
                 <span class="overdue-days">9 TAGE</span>
-                <br><small style="color: #fca5a5;">🔴 Überfällig — 10 Minuten — Sofortiger Cashflow! QUICK WIN!</small>
+                <br><small style="color: #fca5a5;">🔴 9 Tage überfällig — 10 Minuten = Cashflow! QUICK WIN!</small>
             </div>
 
             <div class="todo overdue">
@@ -338,12 +333,8 @@
             </div>
 
             <div class="todo high">
-                <strong>🎥 Nebelmaschine besorgen</strong>
-                <br><small>Für Niku Shooting</small>
-            </div>
-
-            <div class="todo high">
-                <strong>🎬 Japanese Pancake Pre-Production</strong>
+                <strong>🎨 Niku Fotos bearbeiten</strong>
+                <br><small>Shoot war Fr 15.5. — jetzt bearbeiten!</small>
             </div>
         </div>
 
@@ -351,12 +342,12 @@
         <div class="card">
             <h2>🤝 DEALS</h2>
             
-            <div class="deal">
+            <div class="deal" style="border: 1px solid #ef4444;">
                 <div>
                     <strong>🏨 Armando Hotelkette</strong>
-                    <br><small style="color: #ef4444;">3.500€/Monat — MORGEN FRÜH!</small>
+                    <br><small style="color: #ef4444; font-weight: bold;">3.500€/Monat — DEADLINE WAR HEUTE!</small>
                 </div>
-                <span class="stage pitch">PITCH</span>
+                <span class="stage pitch">🔥 PITCH</span>
             </div>
 
             <div class="deal">
@@ -417,8 +408,8 @@
         </div>
 
         <!-- Armando Focus -->
-        <div class="card" style="grid-column: 1 / -1;">
-            <h2>🏨 ARMANDO HOTELKETTE — MORGEN FRÜH!</h2>
+        <div class="card" style="grid-column: 1 / -1; border: 2px solid #ef4444;">
+            <h2 style="color: #ef4444;">🏨 ARMANDO HOTELKETTE — DEADLINE WAR HEUTE!</h2>
             <div class="masterplan-box" style="border-color: #ef4444;">
                 <div class="stat-row">
                     <span class="stat-label">Potenzial:</span>
@@ -426,40 +417,63 @@
                 </div>
                 <div class="stat-row">
                     <span class="stat-label">Scope:</span>
-                    <span>4 Social Media Accounts</span>
+                    <span>4 Social Media Accounts (2 Hotel + 2 Bar)</span>
                 </div>
                 <div class="stat-row">
                     <span class="stat-label">Deadline:</span>
-                    <span class="critical">Montag 18.05. MORGEN FRÜH</span>
+                    <span class="critical">Montag 18.05. — WAR HEUTE!</span>
                 </div>
                 <div class="stat-row">
-                    <span class="stat-label">Verbleibend:</span>
-                    <span class="critical">HEUTE NACHMITTAG/ABEND MACHEN!</span>
+                    <span class="stat-label">Jährlicher Wert:</span>
+                    <span class="critical">42.000€ auf dem Spiel!</span>
                 </div>
             </div>
             <p style="color: #fca5a5; font-size: 0.9rem; margin-top: 10px;">
-                🔥 KRITISCH: Angebot muss MORGEN FRÜH fertig sein! Heute Nachmittag/Abend ist die letzte Chance!
+                🔥🔥🔥 EXTREM KRITISCH: Angebot muss MORGEN FRÜH raus! Sonst: 42.000€/Jahr verloren!
             </p>
+        </div>
+
+        <!-- Weekly Recap -->
+        <div class="card" style="grid-column: 1 / -1;">
+            <h2>🗓️ WOCHEN-RECAP KW 20</h2>
+            <div class="masterplan-box">
+                <h3 style="color: #4ade80;">✅ Highlights</h3>
+                <ul style="color: #e0e0e0; margin-left: 20px; margin-bottom: 15px;">
+                    <li>🏆 Niku EINEN TAG FRÜHER fertig (Do statt Fr)</li>
+                    <li>🏆 Anju Post-Production bis 00:29 Uhr fertig!</li>
+                    <li>📸 Niku Fotoshoot erfolgreich (Fr)</li>
+                    <li>🚀 Kyberg Export 13 Mio USD — Strategie-Update</li>
+                    <li>🏨 Armando Hotelkette — neuer riesiger Deal entdeckt</li>
+                </ul>
+                
+                <h3 style="color: #ef4444;">❌ Probleme</h3>
+                <ul style="color: #fca5a5; margin-left: 20px;">
+                    <li>🔴 <strong>Sa+So 16-17.5.:</strong> Vollständige Funkstille — Keine Updates</li>
+                    <li>🔴 <strong>Sentai:</strong> 6 Tage überfällig</li>
+                    <li>🔴 <strong>NOMU:</strong> 32 Tage überfällig</li>
+                    <li>🔴 <strong>Rechnungen:</strong> 9-11 Tage überfällig</li>
+                </ul>
+            </div>
         </div>
 
         <!-- Recent Updates -->
         <div class="card" style="grid-column: 1 / -1;">
             <h2>📝 LETZTE UPDATES</h2>
             <div class="stat-row">
-                <span class="stat-label timestamp">14:04</span>
-                <span style="font-size: 0.9rem;">Dashboard Update v5.4.86 — SONNTAG NACHMITTAG: ARMANDO HEUTE ABEND! + Sentai (6 Tage) + NOMU (32 Tage)</span>
+                <span class="stat-label timestamp">20:04</span>
+                <span style="font-size: 0.9rem;">Dashboard Update v5.4.87 — SONNTAG ABEND: 🔴 KRITISCH! Wochenende verloren. Armando Deadline war HEUTE!</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label timestamp">16:04</span>
+                <span style="font-size: 0.9rem;">Dashboard Update v5.4.86 — SONNTAG NACHMITTAG: Status unverändert. Armando Deadline HEUTE!</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label timestamp">12:04</span>
+                <span style="font-size: 0.9rem;">Dashboard Update v5.4.85 — SONNTAG MITTAG: Keine Updates. Armando Deadline heute!</span>
             </div>
             <div class="stat-row">
                 <span class="stat-label timestamp">08:04</span>
-                <span style="font-size: 0.9rem;">Dashboard Update v5.4.84 — SONNTAG MORGEN: ARMANDO &lt;24h! + 5 kritische Tasks</span>
-            </div>
-            <div class="stat-row">
-                <span class="stat-label timestamp">04:04</span>
-                <span style="font-size: 0.9rem;">Dashboard Update v5.4.83 — SONNTAG FRÜH: ARMANDO &lt;24h! + 5 kritische Tasks</span>
-            </div>
-            <div class="stat-row">
-                <span class="stat-label timestamp">00:04</span>
-                <span style="font-size: 0.9rem;">Dashboard Update v5.4.82 — SONNTAG NACHT: Status unverändert</span>
+                <span style="font-size: 0.9rem;">Dashboard Update v5.4.84 — SONNTAG MORGEN: ARMANDO <24h! + 5 kritische Tasks</span>
             </div>
             <div class="stat-row">
                 <span class="stat-label timestamp">20:04</span>
@@ -469,8 +483,8 @@
     </div>
 
     <div class="meta">
-        <p>🚀 VENTURE CTRL v5.4.86 | Letztes Update: 17. Mai 2026, 14:04 Uhr</p>
-        <p style="margin-top: 5px;">Nächstes Update: 16:04 Uhr</p>
+        <p>🚀 VENTURE CTRL v5.4.87 | Letztes Update: 17. Mai 2026, 20:04 Uhr</p>
+        <p style="margin-top: 5px; color: #ef4444;">🔴 STATUS: KRITISCH — Wochenende verloren, Armando Deadline überfällig!</p>
     </div>
 </body>
 </html>
