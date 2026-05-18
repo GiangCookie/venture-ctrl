@@ -1,6 +1,6 @@
 {
-  "version": "v5.4.88",
-  "lastUpdated": "2026-05-18T04:04:00+02:00",
+  "version": "v5.4.89",
+  "lastUpdated": "2026-05-18T08:04:00+02:00",
   "status": "critical",
   "metrics": {
     "urgentTasks": 5,
@@ -9,16 +9,16 @@
     "deals": 13
   },
   "today": "2026-05-18",
-  "kw": 20,
+  "kw": 21,
   "dayOfWeek": "MONTAG FRÜH",
-  "time": "04:04",
+  "time": "08:04",
   "openTasks": [
     {
       "task": "🏨 ARMANDO Hotel Angebot",
       "project": "Tough Cookie",
       "due": "2026-05-17",
       "priority": "urgent",
-      "note": "🔥🔥🔥🔥🔥 GESTERN WAR DEADLINE! JETZT 1 TAG ÜBERFÄLLIG! Sofort aufstehen und fertig machen! 3.500€/Monat Potenzial",
+      "note": "🔥🔥🔥🔥🔥 GESTERN WAR DEADLINE! JETZT 1 TAG ÜBERFÄLLIG! Sofort anfangen und fertig machen! 3.500€/Monat Potenzial",
       "status": "overdue"
     },
     {
