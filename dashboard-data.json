@@ -1,6 +1,6 @@
 {
-  "version": "v5.4.90",
-  "lastUpdated": "2026-05-18T12:04:00+02:00",
+  "version": "v5.4.91",
+  "lastUpdated": "2026-05-18T14:04:00+02:00",
   "status": "critical",
   "metrics": {
     "urgentTasks": 5,
@@ -10,15 +10,15 @@
   },
   "today": "2026-05-18",
   "kw": 21,
-  "dayOfWeek": "MONTAG MITTAG",
-  "time": "12:04",
+  "dayOfWeek": "MONTAG NACHMITTAG",
+  "time": "14:04",
   "openTasks": [
     {
       "task": "🏨 ARMANDO Hotel Angebot",
       "project": "Tough Cookie",
       "due": "2026-05-17",
       "priority": "urgent",
-      "note": "🔥🔥🔥🔥🔥 JETZT 1 TAG ÜBERFÄLLIG! Deadline war gestern! Soffort fertig machen und abschicken! 3.500€/Monat = 42.000€/Jahr auf dem Spiel!",
+      "note": "🔥🔥🔥🔥🔥 JETZT 1 TAG ÜBERFÄLLIG! Deadline war gestern! Sofort fertig machen und abschicken! 3.500€/Monat = 42.000€/Jahr auf dem Spiel!",
       "status": "overdue"
     },
     {
@@ -56,27 +56,22 @@
   ],
   "schedule": [
     {
-      "time": "12:00–13:00",
-      "activity": "🍽️ Mittagspause",
-      "priority": "low"
-    },
-    {
-      "time": "13:00–14:00",
+      "time": "14:00–15:00",
       "activity": "💰 RECHNUNGEN RAUSSCHICKEN (20min)",
       "priority": "urgent"
     },
     {
-      "time": "14:00–17:00",
+      "time": "15:00–18:00",
       "activity": "🏨 Armando Angebot fertig (3h)",
       "priority": "urgent"
     },
     {
-      "time": "17:00–18:00",
+      "time": "18:00–19:00",
       "activity": "📧 Armando Angebot abschicken",
       "priority": "urgent"
     },
     {
-      "time": "18:00–20:00",
+      "time": "19:00–20:00",
       "activity": "🎬 Sentai Post-Production (falls Energie)",
       "priority": "high"
     }
@@ -85,7 +80,7 @@
     "🚨 ARMANDO: 1 TAG ÜBERFÄLLIG! Deadline war gestern!",
     "⏰ NOMU: 34 Tage überfällig — seit über 1 Monat!",
     "💰 Rechnungen: 3.700€ liegen für 20 Min Arbeit",
-    "🎯 Halber Tag vorbei — Armando muss HEUTE noch raus!",
+    "🎯 Nachmittag — nur noch 6 Stunden bis Feierabend!",
     "⏰ Feierabend um 20:00 — nicht verhandelbar!"
   ]
 }
