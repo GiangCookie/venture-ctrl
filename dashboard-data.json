@@ -1,6 +1,6 @@
 {
-  "version": "v5.4.95",
-  "lastUpdated": "2026-05-19T08:04:00+02:00",
+  "version": "v5.4.96",
+  "lastUpdated": "2026-05-19T12:04:00+02:00",
   "status": "critical",
   "metrics": {
     "urgentTasks": 5,
@@ -10,15 +10,15 @@
   },
   "today": "2026-05-19",
   "kw": 21,
-  "dayOfWeek": "DIENSTAG MORGEN",
-  "time": "08:04",
+  "dayOfWeek": "DIENSTAG MITTAG",
+  "time": "12:04",
   "openTasks": [
     {
       "task": "🏨 ARMANDO Hotel Angebot",
       "project": "Tough Cookie",
       "due": "2026-05-17",
       "priority": "urgent",
-      "note": "🔥🔥🔥🔥🔥 2 TAGE ÜBERFÄLLIG — NOCH MACHBAR! JETZT ERSTE PRIORITÄT! 3.500€/Monat Potenzial",
+      "note": "🔥🔥🔥🔥🔥 2 TAGE ÜBERFÄLLIG — Mittags-Check! Noch Zeit heute Nachmittag!",
       "status": "overdue"
     },
     {
@@ -56,28 +56,13 @@
   ],
   "schedule": [
     {
-      "time": "08:00–08:30",
-      "activity": "☕ Kaffee + Review",
-      "priority": "low"
-    },
-    {
-      "time": "08:30–09:00",
-      "activity": "💰 RECHNUNGEN RAUSSCHICKEN (20min)",
-      "priority": "urgent"
-    },
-    {
-      "time": "09:00–12:00",
-      "activity": "🏨 ARMANDO ANGEBOT (3h)",
-      "priority": "urgent"
-    },
-    {
       "time": "12:00–13:00",
       "activity": "🍽️ Mittagspause",
       "priority": "low"
     },
     {
       "time": "13:00–16:00",
-      "activity": "🏨 Armando fertig + abschicken (3h)",
+      "activity": "🏨 ARMANDO ANGEBOT (3h)",
       "priority": "urgent"
     },
     {
@@ -92,11 +77,11 @@
     }
   ],
   "notes": [
-    "🚨 ARMANDO: 2 TAGE ÜBERFÄLLIG — ABER NOCH MACHBAR!",
-    "💪 Heute liefern wir! Armando Angebot bis 16:30 abschicken!",
+    "🚨 ARMANDO: 2 TAGE ÜBERFÄLLIG — Mittagspause jetzt, dann Angebot erstellen!",
+    "💰 Rechnungen noch nicht raus? 20 Min = 3.700€ — IMMER NOCH MÖGLICH!",
     "⏰ NOMU: 35 Tage überfällig — seit über 1 Monat!",
-    "💰 Rechnungen: 3.700€ liegen für 20 Min Arbeit — QUICK WINS!",
-    "🎯 Schnitt-Tag (Di) laut Masterplan — Fokus auf Armando!",
-    "⏰ 08:04 Uhr — Guten Morgen Giang! Heute wird ein guter Tag!"
+    "🎯 Schnitt-Tag (Di) — Fokus auf Armando nach der Mittagspause!",
+    "⏰ 12:04 Uhr — Mittags-Check: Noch 4 Stunden bis Feierabend!",
+    "💪 Du schaffst das! Armando heute Nachmittag noch möglich!"
   ]
 }

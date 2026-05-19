@@ -1,17 +1,25 @@
-# Deploy Status v5.4.94
+# Deploy Status — v5.4.96
 
-**Version:** v5.4.94  
-**Deployed:** 2026-05-19 04:04 UTC / 06:04 Europe/Berlin  
-**Status:** ✅ ACTIVE
+**Letztes Update:** 19. Mai 2026, 12:04 Uhr (Europe/Berlin)
+**Version:** v5.4.96
+**Status:** ✅ ERFOLGREICH DEPLOYED
 
-## Files Deployed
-- ✅ `index.html` → v5.4.94
-- ✅ `dashboard.html` → v5.4.94
-- ✅ `dashboard-data.json` → v5.4.94
-- ✅ `data/dashboard-data.json` → v5.4.94
+## Geänderte Dateien
 
-## Changes
-- Version bump: v5.4.93 → v5.4.94
-- Zeitstempel aktualisiert: 04:04 Uhr (Dienstag Früh)
-- Überfälligkeit: Unverändert (keine neuen Updates)
-- Status: EXTREM KRITISCH — Dienstag Früh
+- `dashboard-data.json` — v5.4.96
+- `dashboard.html` — v5.4.96
+- `index.html` — v5.4.96
+
+## Änderungen v5.4.95 → v5.4.96
+
+- Zeit: 08:04 → 12:04 Uhr
+- Phase: DIENSTAG MORGEN → DIENSTAG MITTAG
+- Tagesplan: Mittags-Check mit Fokus auf Nachmittag
+- Alert-Banner: Angepasst auf Mittags-Status
+
+## Nächstes Update
+
+Geplant: 19. Mai 2026, 16:04 Uhr
+
+---
+*Auto-Deploy via Cron: dashboard-update-4h-v2*
