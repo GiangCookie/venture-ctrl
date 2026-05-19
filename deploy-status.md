@@ -1,27 +1,17 @@
-✅ Dashboard Update v5.4.91 erfolgreich!
+# Deploy Status v5.4.94
 
-**Status:** EXTREM KRITISCH 🔥🔥🔥
-**Zeit:** Montag, 18. Mai 2026, 14:04 Uhr
+**Version:** v5.4.94  
+**Deployed:** 2026-05-19 04:04 UTC / 06:04 Europe/Berlin  
+**Status:** ✅ ACTIVE
 
-## Änderungen:
-- Version aktualisiert: v5.4.90 → v5.4.91
-- Zeit aktualisiert: 14:04 Uhr (Nachmittag)
-- Restzeit: Nur noch ~6 Stunden bis Feierabend
-- Armando Hotel: Weiterhin 1 TAG überfällig
-- Sentai: Weiterhin 8 Tage überfällig
-- NOMU: Weiterhin 34 Tage überfällig
-- Rechnungen: Weiterhin 11-13 Tage überfällig
+## Files Deployed
+- ✅ `index.html` → v5.4.94
+- ✅ `dashboard.html` → v5.4.94
+- ✅ `dashboard-data.json` → v5.4.94
+- ✅ `data/dashboard-data.json` → v5.4.94
 
-## Offene Tasks:
-1. 🔥🔥🔥🔥🔥 **ARMANDO Hotel Angebot** — 1 TAG ÜBERFÄLLIG! 42.000€/Jahr auf dem Spiel!
-2. 🎬 NOMU Post-Production — 34 Tage überfällig
-3. 🎬 Sentai Post-Production — 8 Tage überfällig
-4. 💰 Rechnung Jidai — 11 Tage überfällig
-5. 💰 G-Life Rechnung — 13 Tage überfällig
-
-## Files aktualisiert:
-- `dashboard-data.json` ✓
-- `index.html` ✓
-- `dashboard.html` ✓
-
-**WICHTIG:** Nur noch 6 Stunden heute! Armando muss JETZT priorisiert werden!
+## Changes
+- Version bump: v5.4.93 → v5.4.94
+- Zeitstempel aktualisiert: 04:04 Uhr (Dienstag Früh)
+- Überfälligkeit: Unverändert (keine neuen Updates)
+- Status: EXTREM KRITISCH — Dienstag Früh

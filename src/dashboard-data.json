@@ -1,6 +1,6 @@
 {
-  "version": "v5.4.89",
-  "lastUpdated": "2026-05-18T08:04:00+02:00",
+  "version": "v5.4.93",
+  "lastUpdated": "2026-05-19T00:04:00+02:00",
   "status": "critical",
   "metrics": {
     "urgentTasks": 5,
@@ -8,33 +8,33 @@
     "income": "2.1k€",
     "deals": 13
   },
-  "today": "2026-05-18",
+  "today": "2026-05-19",
   "kw": 21,
-  "dayOfWeek": "MONTAG FRÜH",
-  "time": "08:04",
+  "dayOfWeek": "DIENSTAG NACHT",
+  "time": "00:04",
   "openTasks": [
     {
       "task": "🏨 ARMANDO Hotel Angebot",
       "project": "Tough Cookie",
       "due": "2026-05-17",
       "priority": "urgent",
-      "note": "🔥🔥🔥🔥🔥 GESTERN WAR DEADLINE! JETZT 1 TAG ÜBERFÄLLIG! Sofort anfangen und fertig machen! 3.500€/Monat Potenzial",
+      "note": "🔥🔥🔥🔥🔥 3 TAGE ÜBERFÄLLIG! JETZT EXTREM KRITISCH! Sofort anfangen und fertig machen! 3.500€/Monat Potenzial",
       "status": "overdue"
     },
     {
       "task": "🎬 NOMU Post-Production",
       "project": "NOMU",
-      "daysOverdue": 33,
+      "daysOverdue": 35,
       "priority": "urgent",
-      "note": "🔥🔥🔥🔥🔥 33 TAGE ÜBERFÄLLIG — KUNDE WARTET — EXTREM KRITISCH!",
+      "note": "🔥🔥🔥🔥🔥 35 TAGE ÜBERFÄLLIG — KUNDE WARTET — EXTREM KRITISCH!",
       "status": "overdue"
     },
     {
       "task": "🎬 Sentai Post-Production (Interview)",
       "project": "Tough Cookie",
-      "daysOverdue": 7,
+      "daysOverdue": 9,
       "priority": "urgent",
-      "note": "🔥🔥🔥🔥 SOFORT ANFASSEN! 7 TAGE ÜBERFÄLLIG!",
+      "note": "🔥🔥🔥🔥 SOFORT ANFASSEN! 9 TAGE ÜBERFÄLLIG!",
       "status": "overdue"
     },
     {
@@ -42,7 +42,7 @@
       "project": "Tough Cookie",
       "due": "2026-05-11",
       "priority": "urgent",
-      "note": "🔴 10 TAGE ÜBERFÄLLIG — 10 Minuten — Sofortiger Cashflow! QUICK WIN!",
+      "note": "🔴 12 TAGE ÜBERFÄLLIG — 10 Minuten — Sofortiger Cashflow! QUICK WIN!",
       "status": "overdue"
     },
     {
@@ -50,15 +50,20 @@
       "project": "Freelance",
       "due": "2026-05-09",
       "priority": "urgent",
-      "note": "✅ Fertig, nur abschicken! 10min Quick Win! 12 Tage überfällig!",
+      "note": "✅ Fertig, nur abschicken! 10min Quick Win! 14 Tage überfällig!",
       "status": "overdue"
     }
   ],
   "schedule": [
     {
-      "time": "08:00–09:00",
-      "activity": "☕ Kaffee + Mentale Vorbereitung",
+      "time": "08:00–08:30",
+      "activity": "☕ Kaffee + Review",
       "priority": "low"
+    },
+    {
+      "time": "08:30–09:00",
+      "activity": "💰 RECHNUNGEN RAUSSCHICKEN (20min)",
+      "priority": "urgent"
     },
     {
       "time": "09:00–12:00",
@@ -71,24 +76,19 @@
       "priority": "low"
     },
     {
-      "time": "13:00–14:00",
-      "activity": "💰 RECHNUNGEN RAUSSCHICKEN (20min)",
+      "time": "13:00–15:00",
+      "activity": "🏨 Armando fertig (2h)",
       "priority": "urgent"
     },
     {
-      "time": "14:00–17:00",
-      "activity": "🏨 Armando Angebot fertig (3h)",
-      "priority": "urgent"
-    },
-    {
-      "time": "17:00–18:00",
+      "time": "15:00–16:00",
       "activity": "📧 Armando Angebot abschicken",
       "priority": "urgent"
     }
   ],
   "notes": [
-    "🚨 ARMANDO: Deadline war GESTERN! Jetzt 1 Tag überfällig!",
-    "⏰ NOMU: 33 Tage überfällig — seit über 1 Monat!",
+    "🚨 ARMANDO: Jetzt 3 TAGE ÜBERFÄLLIG — EXTREM KRITISCH!",
+    "⏰ NOMU: 35 Tage überfällig — seit über 1 Monat!",
     "💰 Rechnungen: 3.700€ liegen für 20 Min Arbeit",
     "🎯 Heute ist der Tag der Entscheidung — Armando retten oder verlieren!"
   ]
