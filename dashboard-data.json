@@ -1,6 +1,6 @@
 {
-  "version": "v5.4.96",
-  "lastUpdated": "2026-05-19T12:04:00+02:00",
+  "version": "v5.4.97",
+  "lastUpdated": "2026-05-19T14:04:00+02:00",
   "status": "critical",
   "metrics": {
     "urgentTasks": 5,
@@ -10,15 +10,15 @@
   },
   "today": "2026-05-19",
   "kw": 21,
-  "dayOfWeek": "DIENSTAG MITTAG",
-  "time": "12:04",
+  "dayOfWeek": "DIENSTAG NACHMITTAG",
+  "time": "14:04",
   "openTasks": [
     {
       "task": "🏨 ARMANDO Hotel Angebot",
       "project": "Tough Cookie",
       "due": "2026-05-17",
       "priority": "urgent",
-      "note": "🔥🔥🔥🔥🔥 2 TAGE ÜBERFÄLLIG — Mittags-Check! Noch Zeit heute Nachmittag!",
+      "note": "🔥🔥🔥🔥🔥 2 TAGE ÜBERFÄLLIG — Nachmittag läuft! Noch Zeit heute!",
       "status": "overdue"
     },
     {
@@ -56,13 +56,8 @@
   ],
   "schedule": [
     {
-      "time": "12:00–13:00",
-      "activity": "🍽️ Mittagspause",
-      "priority": "low"
-    },
-    {
-      "time": "13:00–16:00",
-      "activity": "🏨 ARMANDO ANGEBOT (3h)",
+      "time": "14:00–16:00",
+      "activity": "🏨 ARMANDO ANGEBOT (2h)",
       "priority": "urgent"
     },
     {
@@ -77,11 +72,11 @@
     }
   ],
   "notes": [
-    "🚨 ARMANDO: 2 TAGE ÜBERFÄLLIG — Mittagspause jetzt, dann Angebot erstellen!",
+    "🚨 ARMANDO: 2 TAGE ÜBERFÄLLIG — Nachmittag läuft! Noch 2 Stunden bis Feierabend!",
     "💰 Rechnungen noch nicht raus? 20 Min = 3.700€ — IMMER NOCH MÖGLICH!",
     "⏰ NOMU: 35 Tage überfällig — seit über 1 Monat!",
-    "🎯 Schnitt-Tag (Di) — Fokus auf Armando nach der Mittagspause!",
-    "⏰ 12:04 Uhr — Mittags-Check: Noch 4 Stunden bis Feierabend!",
-    "💪 Du schaffst das! Armando heute Nachmittag noch möglich!"
+    "🎯 Nachmittag-Update — Fokus auf Armando jetzt!",
+    "⏰ 14:04 Uhr — Noch 2 Stunden bis Feierabend!",
+    "💪 Du schaffst das! Armando heute noch möglich!"
   ]
 }
