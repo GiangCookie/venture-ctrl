@@ -1,6 +1,6 @@
 {
-  "version": "v5.4.101",
-  "lastUpdated": "2026-05-20T08:04:00+02:00",
+  "version": "v5.4.103",
+  "lastUpdated": "2026-05-20T16:04:00+02:00",
   "status": "warning",
   "metrics": {
     "urgentTasks": 4,
@@ -10,8 +10,8 @@
   },
   "today": "2026-05-20",
   "kw": 21,
-  "dayOfWeek": "MITTWOCH MORGEN",
-  "time": "08:04",
+  "dayOfWeek": "MITTWOCH NACHMITTAG",
+  "time": "16:04",
   "openTasks": [
     {
       "task": "🎬 NOMU Post-Production",
@@ -68,34 +68,19 @@
   ],
   "schedule": [
     {
-      "time": "08:04",
-      "activity": "🌅 Morgenbriefing - Dashboard Update",
+      "time": "16:04",
+      "activity": "🔄 Dashboard Update v5.4.103",
       "priority": "info"
     },
     {
-      "time": "08:30",
-      "activity": "🚀 RECHNUNGEN RAUS — ERSTE PRIORITÄT!",
+      "time": "16:30",
+      "activity": "🚀 RECHNUNGEN RAUS — IMMER NOCH OFFEN!",
       "priority": "urgent"
     },
     {
-      "time": "09:00",
+      "time": "17:00",
       "activity": "🎬 NOMU Post-Production (3h Block)",
       "priority": "urgent"
-    },
-    {
-      "time": "12:00",
-      "activity": "🍽️ Mittagspause",
-      "priority": "info"
-    },
-    {
-      "time": "13:00",
-      "activity": "🎬 Sentai Post-Production (3h)",
-      "priority": "high"
-    },
-    {
-      "time": "16:00",
-      "activity": "🏃 Sport / Energie tanken",
-      "priority": "medium"
     },
     {
       "time": "20:00",
@@ -105,13 +90,14 @@
   ],
   "notes": [
     "🎉 ARMANDO ABGESCHICKT! Riesenerfolg — 42.000€/Jahr Potenzial!",
-    "🎬 Gestern Nacht: Japanese Pancake + Sentai — jeweils 3 Shoots DONE!",
-    "💰 Rechnungen: Noch immer nicht raus — 12-14 Tage überfällig!",
+    "🎬 Letzte Nacht: Japanese Pancake + Sentai — jeweils 3 Shoots DONE!",
+    "💰 Rechnungen: 12-14 Tage überfällig — IMMER NOCH NICHT RAUS!",
     "🎯 NOMU: 35 Tage überfällig — seit über 1 Monat!",
-    "⏰ 08:04 Uhr — Morgenroutine startet.",
-    "💪 Heute: Rechnungen → NOMU → Sentai → Sport!",
-    "🌟 Erfolg feiern: Armando + alle gestrigen Shoots erledigt!",
-    "🚀 Motivation: Du hast bewiesen, dass du liefern kannst!"
+    "⏰ 16:04 Uhr — Nachmittag / Dashboard Update v5.4.103",
+    "💪 Bis Feierabend: Rechnungen → NOMU Post-Production!",
+    "🌟 Feiern: Armando + alle gestrigen Shoots erledigt!",
+    "⚠️ WARNUNG: Rechnungen immer noch offen — 3.700€ liegen brach!",
+    "🔔 Dashboard aktualisiert — Zeitplan angepasst für Nachmittag"
   ],
   "quickWins": [
     {
@@ -126,5 +112,11 @@
     "🎬 Japanese Pancake: 3/3 Shoots",
     "🎬 Sentai: 3/3 Shoots",
     "📋 Beide Pre-Productions fertig"
-  ]
+  ],
+  "cronUpdate": {
+    "trigger": "dashboard-update-4h-v2",
+    "previousVersion": "v5.4.102",
+    "currentVersion": "v5.4.103",
+    "interval": "4 Stunden"
+  }
 }
