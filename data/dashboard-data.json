@@ -1,26 +1,18 @@
 {
-  "version": "v5.4.96",
-  "lastUpdated": "2026-05-19T12:04:00+02:00",
-  "status": "critical",
+  "version": "v5.4.100",
+  "lastUpdated": "2026-05-20T04:04:00+02:00",
+  "status": "warning",
   "metrics": {
-    "urgentTasks": 5,
+    "urgentTasks": 4,
     "highPriority": 4,
     "income": "2.1k€",
     "deals": 13
   },
-  "today": "2026-05-19",
+  "today": "2026-05-20",
   "kw": 21,
-  "dayOfWeek": "DIENSTAG MITTAG",
-  "time": "12:04",
+  "dayOfWeek": "MITTWOCH FRÜH",
+  "time": "04:04",
   "openTasks": [
-    {
-      "task": "🏨 ARMANDO Hotel Angebot",
-      "project": "Tough Cookie",
-      "due": "2026-05-17",
-      "priority": "urgent",
-      "note": "🔥🔥🔥🔥🔥 2 TAGE ÜBERFÄLLIG — Mittags-Check! Noch Zeit heute Nachmittag!",
-      "status": "overdue"
-    },
     {
       "task": "🎬 NOMU Post-Production",
       "project": "NOMU",
@@ -50,38 +42,41 @@
       "project": "Freelance",
       "due": "2026-05-09",
       "priority": "urgent",
-      "note": "✅ Fertig, nur abschicken! 14 Tage überfällig — Quick Win!",
+      "note": "🔴 14 TAGE ÜBERFÄLLIG — Quick Win! Abschicken = Cashflow!",
       "status": "overdue"
+    }
+  ],
+  "completedTasks": [
+    {
+      "task": "🏨 ARMANDO Hotel Angebot",
+      "project": "Tough Cookie",
+      "completedAt": "2026-05-20T00:11:00+02:00",
+      "note": "✅✅✅ FERTIG UND ABGESCHICKT! 🎉 42.000€/Jahr Potenzial!"
     }
   ],
   "schedule": [
     {
-      "time": "12:00–13:00",
-      "activity": "🍽️ Mittagspause",
-      "priority": "low"
+      "time": "04:04",
+      "activity": "🌙 Nacht/Früher Morgen",
+      "priority": "info"
     },
     {
-      "time": "13:00–16:00",
-      "activity": "🏨 ARMANDO ANGEBOT (3h)",
+      "time": "08:00",
+      "activity": "🚀 Rechnungen raus — ERSTE PRIORITÄT",
       "priority": "urgent"
     },
     {
-      "time": "16:00–16:30",
-      "activity": "📧 Armando Angebot abschicken",
+      "time": "08:30",
+      "activity": "🎬 NOMU Post-Production",
       "priority": "urgent"
-    },
-    {
-      "time": "16:30–18:00",
-      "activity": "🎬 Sentai (falls Energie)",
-      "priority": "medium"
     }
   ],
   "notes": [
-    "🚨 ARMANDO: 2 TAGE ÜBERFÄLLIG — Mittagspause jetzt, dann Angebot erstellen!",
-    "💰 Rechnungen noch nicht raus? 20 Min = 3.700€ — IMMER NOCH MÖGLICH!",
-    "⏰ NOMU: 35 Tage überfällig — seit über 1 Monat!",
-    "🎯 Schnitt-Tag (Di) — Fokus auf Armando nach der Mittagspause!",
-    "⏰ 12:04 Uhr — Mittags-Check: Noch 4 Stunden bis Feierabend!",
-    "💪 Du schaffst das! Armando heute Nachmittag noch möglich!"
+    "🎉 ARMANDO ABGESCHICKT! Riesenerfolg — 42.000€/Jahr!",
+    "💰 Rechnungen: Noch immer nicht raus — 12-14 Tage überfällig!",
+    "🎯 NOMU: 35 Tage überfällig — seit über 1 Monat!",
+    "⏰ 04:04 Uhr — Früher Morgen.",
+    "💪 Heute: Rechnungen + NOMU/Sentai Post-Production!",
+    "🌟 Erfolg feiern: Armando ist erledigt!"
   ]
 }

@@ -1,26 +1,18 @@
 {
-  "version": "v5.4.98",
-  "lastUpdated": "2026-05-19T18:04:00+02:00",
-  "status": "critical",
+  "version": "v5.4.100",
+  "lastUpdated": "2026-05-20T04:04:00+02:00",
+  "status": "warning",
   "metrics": {
-    "urgentTasks": 5,
+    "urgentTasks": 4,
     "highPriority": 4,
     "income": "2.1k€",
     "deals": 13
   },
-  "today": "2026-05-19",
+  "today": "2026-05-20",
   "kw": 21,
-  "dayOfWeek": "DIENSTAG ABEND",
-  "time": "18:04",
+  "dayOfWeek": "MITTWOCH FRÜH",
+  "time": "04:04",
   "openTasks": [
-    {
-      "task": "🏨 ARMANDO Hotel Angebot",
-      "project": "Tough Cookie",
-      "due": "2026-05-17",
-      "priority": "urgent",
-      "note": "🔥🔥🔥🔥🔥 FEIERABEND — Heute nicht mehr möglich. Morgen früh starten!",
-      "status": "overdue"
-    },
     {
       "task": "🎬 NOMU Post-Production",
       "project": "NOMU",
@@ -54,24 +46,37 @@
       "status": "overdue"
     }
   ],
+  "completedTasks": [
+    {
+      "task": "🏨 ARMANDO Hotel Angebot",
+      "project": "Tough Cookie",
+      "completedAt": "2026-05-20T00:11:00+02:00",
+      "note": "✅✅✅ FERTIG UND ABGESCHICKT! 🎉 42.000€/Jahr Potenzial!"
+    }
+  ],
   "schedule": [
     {
-      "time": "18:04",
-      "activity": "🏁 FEIERABEND",
+      "time": "04:04",
+      "activity": "🌙 Nacht/Früher Morgen",
       "priority": "info"
     },
     {
-      "time": "Morgen 08:00",
-      "activity": "🚀 Armando Angebot — ERSTE PRIORITÄT",
+      "time": "08:00",
+      "activity": "🚀 Rechnungen raus — ERSTE PRIORITÄT",
+      "priority": "urgent"
+    },
+    {
+      "time": "08:30",
+      "activity": "🎬 NOMU Post-Production",
       "priority": "urgent"
     }
   ],
   "notes": [
-    "🌙 FEIERABEND — Der Tag ist vorbei.",
-    "🏨 Armando: Heute nicht mehr möglich. Morgen früh starten!",
-    "💰 Rechnungen: Noch immer nicht raus — morgen FIRST THING!",
+    "🎉 ARMANDO ABGESCHICKT! Riesenerfolg — 42.000€/Jahr!",
+    "💰 Rechnungen: Noch immer nicht raus — 12-14 Tage überfällig!",
     "🎯 NOMU: 35 Tage überfällig — seit über 1 Monat!",
-    "⏰ 18:04 Uhr — Zeit zum Ausruhen.",
-    "💪 Morgen ist ein neuer Tag — mit frischer Energie angreifen!"
+    "⏰ 04:04 Uhr — Früher Morgen.",
+    "💪 Heute: Rechnungen + NOMU/Sentai Post-Production!",
+    "🌟 Erfolg feiern: Armando ist erledigt!"
   ]
 }
