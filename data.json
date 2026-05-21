@@ -1,68 +1,32 @@
 {
-  "version": "v5.4.88",
-  "lastUpdated": "2026-05-18T00:04:00+02:00",
-  "status": "critical",
+  "version": "v5.4.106",
+  "lastUpdated": "2026-05-21T04:04:00+02:00",
+  "status": "warning",
   "metrics": {
-    "urgentTasks": 5,
-    "highPriority": 4,
+    "urgentTasks": 3,
+    "highPriority": 3,
     "income": "2.1k€",
     "deals": 13
   },
-  "today": "2026-05-18",
-  "kw": 20,
-  "dayOfWeek": "MONTAG FRÜH",
-  "time": "00:04",
-  "lastSession": {
-    "date": "2026-05-17",
-    "mood": "🏃",
-    "energy": 4,
-    "completed": [
-      "📸 Niku Fotoshoot (nachmittags)",
-      "🏃 Joggen (nach dem Shoot)"
-    ],
-    "frustrations": [
-      "Wochenende komplett still — keine Updates seit Fr 15.5.",
-      "Sentai 6 Tage überfällig",
-      "NOMU 32 Tage überfällig",
-      "Rechnungen 9-11 Tage überfällig",
-      "Armando Deadline war gestern (So 17.5.)!"
-    ]
-  },
-  "masterplan": {
-    "status": "critical",
-    "targetIncome": "5.000€/Monat",
-    "currentIncome": "2.100€/Monat",
-    "gap": "2.900€/Monat",
-    "strategy": "ZWEI SÄULEN: Tough Cookie stabilisieren + Freelance ausbauen + Export (Kyberg) als Game Changer + Armando als neues großes Projekt",
-    "deadline": "November 2026 (6 Monate Ultimatum)",
-    "kybergUpdate": "Export-Meeting vorbereitet, Onkel-Antwort 8 Tage überfällig",
-    "armandoUpdate": "🔥🔥🔥🔥🔥 EXTREM KRITISCH: Deadline war GESTERN (So 17.5.)! Angebot noch nicht abgeschickt! 3.500€/Monat auf dem Spiel",
-    "todayFocus": "🔥 MONTAG FRÜH: Armando Deadline war GESTERN! Sofort aufstehen und Angebot fertig machen! 3.500€/Monat retten!"
-  },
-  "completedToday": [],
+  "today": "2026-05-21",
+  "kw": 21,
+  "dayOfWeek": "DONNERSTAG",
+  "time": "04:04",
   "openTasks": [
-    {
-      "task": "🏨 ARMANDO Hotel Angebot",
-      "project": "Tough Cookie",
-      "due": "2026-05-17",
-      "priority": "urgent",
-      "note": "🔥🔥🔥🔥🔥 GESTERN WAR DEADLINE! JETZT 1 TAG ÜBERFÄLLIG! Sofort aufstehen und fertig machen! 3.500€/Monat Potenzial",
-      "status": "overdue"
-    },
     {
       "task": "🎬 NOMU Post-Production",
       "project": "NOMU",
-      "daysOverdue": 32,
+      "daysOverdue": 36,
       "priority": "urgent",
-      "note": "🔥🔥🔥🔥🔥 32 TAGE ÜBERFÄLLIG — KUNDE WARTET — EXTREM KRITISCH!",
+      "note": "🔥🔥🔥🔥🔥 36 TAGE ÜBERFÄLLIG — KUNDE WARTET — EXTREM KRITISCH!",
       "status": "overdue"
     },
     {
       "task": "🎬 Sentai Post-Production (Interview)",
       "project": "Tough Cookie",
-      "daysOverdue": 6,
+      "daysOverdue": 10,
       "priority": "urgent",
-      "note": "🔥🔥🔥🔥 SOFORT ANFASSEN! 6 TAGE ÜBERFÄLLIG!",
+      "note": "🔥🔥🔥🔥 10 TAGE ÜBERFÄLLIG — Shoots sind gemacht, nur noch Schnitt!",
       "status": "overdue"
     },
     {
@@ -70,123 +34,80 @@
       "project": "Tough Cookie",
       "due": "2026-05-11",
       "priority": "urgent",
-      "note": "🔴 9 TAGE ÜBERFÄLLIG — 10 Minuten — Sofortiger Cashflow! QUICK WIN!",
+      "note": "🔴 13 TAGE ÜBERFÄLLIG — Quick Win! 10 Min = Sofortiger Cashflow!",
       "status": "overdue"
-    },
+    }
+  ],
+  "completedTasks": [
     {
       "task": "💰 G-Life Rechnung rausschicken",
       "project": "Freelance",
-      "due": "2026-05-09",
-      "priority": "urgent",
-      "note": "✅ Fertig, nur abschicken! 10min Quick Win! 11 Tage überfällig!",
-      "status": "overdue"
+      "completedAt": "2026-05-20T22:52:00+02:00",
+      "note": "✅✅✅ RAUSGESCHICKT! 🎉 Gute Nachrichten!"
+    },
+    {
+      "task": "🏨 ARMANDO Hotel Angebot",
+      "project": "Tough Cookie",
+      "completedAt": "2026-05-20T00:11:00+02:00",
+      "note": "✅✅✅ FERTIG UND ABGESCHICKT! 🎉 42.000€/Jahr Potenzial!"
+    },
+    {
+      "task": "🎬 Japanese Pancake - 3 Shoots",
+      "project": "Tough Cookie",
+      "completedAt": "2026-05-19T23:00:00+02:00",
+      "note": "✅ Alle 3 Shoots erledigt + Pre-Production fertig!"
+    },
+    {
+      "task": "🎬 Sentai - 3 Shoots",
+      "project": "Tough Cookie",
+      "completedAt": "2026-05-19T22:00:00+02:00",
+      "note": "✅ Alle 3 Shoots erledigt + Pre-Production fertig!"
     }
   ],
-  "deals": [
-    {
-      "client": "Armando Hotelkette",
-      "value": "3.500€/Monat (geschätzt)",
-      "status": "🔥🔥🔥🔥🔥 EXTREM KRITISCH — DEADLINE WAR GESTERN!",
-      "note": "🏨 4 Social Media Accounts (2 Hotel + 2 Bar), München — 42.000€/Jahr auf dem Spiel! JETZT HANDELN!",
-      "frustration": true,
-      "highlight": true
-    },
-    {
-      "client": "Kyberg Export (Onkel)",
-      "value": "13 Mio USD Volumen",
-      "status": "Game Changer",
-      "note": "10 Mio Pharma + 3 Mio NEM, Importlizenz vorhanden",
-      "frustration": false,
-      "highlight": true
-    },
-    {
-      "client": "Sentai/Zentai",
-      "value": "5.000€",
-      "status": "Won",
-      "note": "Aber nur für Tough Cookie, nicht persönlich",
-      "frustration": true
-    },
-    {
-      "client": "Amy (Lead)",
-      "value": "TBD",
-      "status": "Lead",
-      "note": "Persönliches Kennenlernen erfolgreich"
-    }
-  ],
-  "weeklyGoals": {
-    "kybergExport": [
-      "Onkel-Antwort auf Vietnamesisch (8 Tage überfällig!)",
-      "Telefonat mit Onkel (Provision 5-7%)",
-      "Distributor Profile PDF erstellen",
-      "Kyberg-Erstkontakt initiieren"
-    ],
-    "toughCookie": [
-      "🔥🔥🔥 ARMANDO Angebot abschicken (DEADLINE WAR GESTERN!)",
-      "🔥 Sentai Post-Production (6 TAGE ÜBERFÄLLIG!)",
-      "🔥 NOMU Post-Production (32 TAGE ÜBERFÄLLIG!)",
-      "🎨 Niku Fotos bearbeiten fertig"
-    ],
-    "freelance": [
-      "💰 G-Life Rechnung abschicken (11 Tage überfällig!)",
-      "💰 Jidai Rechnung abschicken (9 Tage überfällig!)",
-      "Preisliste erstellen (800€/Video)"
-    ]
-  },
-  "pricing": {
-    "toughCookie": {
-      "flex": "1.490€/Monat (5 Reels, monatlich kündbar)",
-      "growth": "1.290€/Monat (5 Reels, 3 Monate Mindestlaufzeit) — EMPFOHLEN",
-      "partner": "1.190€/Monat (7 Reels, 6 Monate — nur intern/Renewals)"
-    },
-    "freelance": {
-      "video": "800€/Video",
-      "photos": "600€/20 Bilder",
-      "socialPackage": "400€/Monat (4 Posts + 1 Story/Reel)"
-    },
-    "armandoResearch": {
-      "socialManagementHotel": "2.000-4.000€/Monat",
-      "estimatedQuote": "3.500€/Monat für 4 Accounts",
-      "projectDuration": "1 Jahr empfohlen"
-    }
-  },
-  "schedule": {
-    "today": {
-      "Status": "🔴 EXTREM KRITISCH — Armando Deadline war GESTERN!"
-    },
-    "tomorrow": {
-      "Montag": "🏥 ARMANDO — letzte Chance vorbei! + 💰 Rechnungen (20min = 3.700€)"
-    }
-  },
-  "updates": [
-    {
-      "time": "00:04",
-      "type": "cron",
-      "message": "Dashboard Update v5.4.88 — MONTAG 00:04: 🔥🔥🔥 EXTREM KRITISCH! Armando Deadline war GESTERN! Sofort aufstehen und Angebot fertig machen!"
-    },
-    {
-      "time": "20:04",
-      "type": "cron",
-      "message": "Dashboard Update v5.4.87 — SONNTAG 20:04: 🔴 KRITISCH! Wochenende verloren. Armando Deadline war HEUTE! Sentai 6 Tage, NOMU 32 Tage überfällig."
-    },
-    {
-      "time": "16:04",
-      "type": "cron",
-      "message": "Dashboard Update v5.4.86 — SONNTAG 16:04: Status unverändert. Armando Deadline HEUTE! Sentai/NOMU/Rechnungen überfällig."
-    },
-    {
-      "time": "12:04",
-      "type": "cron",
-      "message": "Dashboard Update v5.4.85 — SONNTAG 12:04: Keine Updates. Armando Deadline heute! Sentai 6 Tage überfällig."
-    },
-    {
-      "time": "08:04",
-      "type": "cron",
-      "message": "Dashboard Update v5.4.84 — SONNTAG 08:04: Keine neuen Updates. Armando Deadline heute! Sentai 6 Tage, NOMU 32 Tage überfällig."
-    },
+  "schedule": [
     {
       "time": "04:04",
-      "type": "cron",
-      "message": "Dashboard Update v5.4.83 — SONNTAG 04:04: Keine Updates. Armando Deadline in 16h!"
+      "activity": "🌙 Nacht-Update v5.4.106",
+      "priority": "info"
     }
+  ],
+  "notes": [
+    "🎉 G-Life RECHNUNG RAUS! Riesenerfolg von gestern!",
+    "✅ ARMANDO ABGESCHICKT! 42.000€/Jahr Potenzial!",
+    "🎬 Japanese Pancake + Sentai — jeweils 3 Shoots DONE!",
+    "💰 Jidai Rechnung: 13 Tage überfällig — NÄCHSTER Quick Win!",
+    "🎯 NOMU: 36 Tage überfällig — SEIT ÜBER 1 MONAT!",
+    "📋 Heute: Brief für Japanese Pancake + Call mit Little Hero",
+    "⏰ 04:04 Uhr — Neuer Tag / Dashboard Update v5.4.106",
+    "💪 Bilanz: G-Life ✅ | Armando ✅ | Shoots ✅ | Jidai ❌ | NOMU ❌",
+    "🌟 Feiern: G-Life Rechnung ist draußen!",
+    "⚠️ WARNUNG: Jidai Rechnung noch offen — ~2.000€ liegen brach!",
+    "🔔 Dashboard aktualisiert — v5.4.106"
+  ],
+  "quickWins": [
+    {
+      "task": "Rechnung Jidai",
+      "time": "10 Minuten",
+      "value": "~2.000€ Cashflow",
+      "priority": "highest"
+    }
+  ],
+  "achievements": [
+    "💰 G-Life Rechnung: RAUSGESCHICKT! 🎉",
+    "🏨 Armando Pitch: Fertig & abgeschickt",
+    "🎬 Japanese Pancake: 3/3 Shoots",
+    "🎬 Sentai: 3/3 Shoots",
+    "📋 Beide Pre-Productions fertig"
+  ],
+  "cronUpdate": {
+    "trigger": "dashboard-update-4h-v2",
+    "previousVersion": "v5.4.105",
+    "currentVersion": "v5.4.106",
+    "interval": "4 Stunden"
+  },
+  "todayPlan": [
+    "📝 Brief für Japanese Pancake schreiben",
+    "📞 Call mit Little Hero (Shoot für Montag)",
+    "💰 Rechnung Jidai rausschicken (Quick Win!)"
   ]
 }

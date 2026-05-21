@@ -1,32 +1,32 @@
 {
-  "version": "v5.4.103",
-  "lastUpdated": "2026-05-20T16:04:00+02:00",
+  "version": "v5.4.106",
+  "lastUpdated": "2026-05-21T04:04:00+02:00",
   "status": "warning",
   "metrics": {
-    "urgentTasks": 4,
-    "highPriority": 4,
+    "urgentTasks": 3,
+    "highPriority": 3,
     "income": "2.1k€",
     "deals": 13
   },
-  "today": "2026-05-20",
+  "today": "2026-05-21",
   "kw": 21,
-  "dayOfWeek": "MITTWOCH NACHMITTAG",
-  "time": "16:04",
+  "dayOfWeek": "DONNERSTAG",
+  "time": "04:04",
   "openTasks": [
     {
       "task": "🎬 NOMU Post-Production",
       "project": "NOMU",
-      "daysOverdue": 35,
+      "daysOverdue": 36,
       "priority": "urgent",
-      "note": "🔥🔥🔥🔥🔥 35 TAGE ÜBERFÄLLIG — KUNDE WARTET — EXTREM KRITISCH!",
+      "note": "🔥🔥🔥🔥🔥 36 TAGE ÜBERFÄLLIG — KUNDE WARTET — EXTREM KRITISCH!",
       "status": "overdue"
     },
     {
       "task": "🎬 Sentai Post-Production (Interview)",
       "project": "Tough Cookie",
-      "daysOverdue": 9,
+      "daysOverdue": 10,
       "priority": "urgent",
-      "note": "🔥🔥🔥🔥 9 TAGE ÜBERFÄLLIG — Shoots sind gemacht, nur noch Schnitt!",
+      "note": "🔥🔥🔥🔥 10 TAGE ÜBERFÄLLIG — Shoots sind gemacht, nur noch Schnitt!",
       "status": "overdue"
     },
     {
@@ -34,19 +34,17 @@
       "project": "Tough Cookie",
       "due": "2026-05-11",
       "priority": "urgent",
-      "note": "🔴 12 TAGE ÜBERFÄLLIG — Quick Win! 10 Min = Sofortiger Cashflow!",
-      "status": "overdue"
-    },
-    {
-      "task": "💰 G-Life Rechnung rausschicken",
-      "project": "Freelance",
-      "due": "2026-05-09",
-      "priority": "urgent",
-      "note": "🔴 14 TAGE ÜBERFÄLLIG — Quick Win! Abschicken = Cashflow!",
+      "note": "🔴 13 TAGE ÜBERFÄLLIG — Quick Win! 10 Min = Sofortiger Cashflow!",
       "status": "overdue"
     }
   ],
   "completedTasks": [
+    {
+      "task": "💰 G-Life Rechnung rausschicken",
+      "project": "Freelance",
+      "completedAt": "2026-05-20T22:52:00+02:00",
+      "note": "✅✅✅ RAUSGESCHICKT! 🎉 Gute Nachrichten!"
+    },
     {
       "task": "🏨 ARMANDO Hotel Angebot",
       "project": "Tough Cookie",
@@ -68,46 +66,34 @@
   ],
   "schedule": [
     {
-      "time": "16:04",
-      "activity": "🔄 Dashboard Update v5.4.103",
-      "priority": "info"
-    },
-    {
-      "time": "16:30",
-      "activity": "🚀 RECHNUNGEN RAUS — IMMER NOCH OFFEN!",
-      "priority": "urgent"
-    },
-    {
-      "time": "17:00",
-      "activity": "🎬 NOMU Post-Production (3h Block)",
-      "priority": "urgent"
-    },
-    {
-      "time": "20:00",
-      "activity": "🌙 Feierabend - nicht verhandelbar!",
+      "time": "04:04",
+      "activity": "🌙 Nacht-Update v5.4.106",
       "priority": "info"
     }
   ],
   "notes": [
-    "🎉 ARMANDO ABGESCHICKT! Riesenerfolg — 42.000€/Jahr Potenzial!",
-    "🎬 Letzte Nacht: Japanese Pancake + Sentai — jeweils 3 Shoots DONE!",
-    "💰 Rechnungen: 12-14 Tage überfällig — IMMER NOCH NICHT RAUS!",
-    "🎯 NOMU: 35 Tage überfällig — seit über 1 Monat!",
-    "⏰ 16:04 Uhr — Nachmittag / Dashboard Update v5.4.103",
-    "💪 Bis Feierabend: Rechnungen → NOMU Post-Production!",
-    "🌟 Feiern: Armando + alle gestrigen Shoots erledigt!",
-    "⚠️ WARNUNG: Rechnungen immer noch offen — 3.700€ liegen brach!",
-    "🔔 Dashboard aktualisiert — Zeitplan angepasst für Nachmittag"
+    "🎉 G-Life RECHNUNG RAUS! Riesenerfolg von gestern!",
+    "✅ ARMANDO ABGESCHICKT! 42.000€/Jahr Potenzial!",
+    "🎬 Japanese Pancake + Sentai — jeweils 3 Shoots DONE!",
+    "💰 Jidai Rechnung: 13 Tage überfällig — NÄCHSTER Quick Win!",
+    "🎯 NOMU: 36 Tage überfällig — SEIT ÜBER 1 MONAT!",
+    "📋 Heute: Brief für Japanese Pancake + Call mit Little Hero",
+    "⏰ 04:04 Uhr — Neuer Tag / Dashboard Update v5.4.106",
+    "💪 Bilanz: G-Life ✅ | Armando ✅ | Shoots ✅ | Jidai ❌ | NOMU ❌",
+    "🌟 Feiern: G-Life Rechnung ist draußen!",
+    "⚠️ WARNUNG: Jidai Rechnung noch offen — ~2.000€ liegen brach!",
+    "🔔 Dashboard aktualisiert — v5.4.106"
   ],
   "quickWins": [
     {
-      "task": "Rechnung Jidai + G-Life",
-      "time": "20 Minuten",
-      "value": "~3.700€ Cashflow",
+      "task": "Rechnung Jidai",
+      "time": "10 Minuten",
+      "value": "~2.000€ Cashflow",
       "priority": "highest"
     }
   ],
   "achievements": [
+    "💰 G-Life Rechnung: RAUSGESCHICKT! 🎉",
     "🏨 Armando Pitch: Fertig & abgeschickt",
     "🎬 Japanese Pancake: 3/3 Shoots",
     "🎬 Sentai: 3/3 Shoots",
@@ -115,8 +101,13 @@
   ],
   "cronUpdate": {
     "trigger": "dashboard-update-4h-v2",
-    "previousVersion": "v5.4.102",
-    "currentVersion": "v5.4.103",
+    "previousVersion": "v5.4.105",
+    "currentVersion": "v5.4.106",
     "interval": "4 Stunden"
-  }
+  },
+  "todayPlan": [
+    "📝 Brief für Japanese Pancake schreiben",
+    "📞 Call mit Little Hero (Shoot für Montag)",
+    "💰 Rechnung Jidai rausschicken (Quick Win!)"
+  ]
 }
