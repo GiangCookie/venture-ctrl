@@ -1,49 +1,63 @@
 {
-  "version": "v5.4.105",
-  "lastUpdated": "2026-05-21T00:04:00+02:00",
+  "version": "v5.4.111",
+  "lastUpdated": "2026-05-22T00:04:00+02:00",
   "status": "warning",
   "metrics": {
-    "urgentTasks": 3,
-    "highPriority": 3,
+    "urgentTasks": 1,
+    "highPriority": 4,
     "income": "2.1k€",
     "deals": 13
   },
-  "today": "2026-05-21",
+  "today": "2026-05-22",
   "kw": 21,
-  "dayOfWeek": "DONNERSTAG",
+  "dayOfWeek": "FREITAG",
   "time": "00:04",
   "openTasks": [
     {
       "task": "🎬 NOMU Post-Production",
       "project": "NOMU",
-      "daysOverdue": 36,
+      "daysOverdue": 37,
       "priority": "urgent",
-      "note": "🔥🔥🔥🔥🔥 36 TAGE ÜBERFÄLLIG — KUNDE WARTET — EXTREM KRITISCH!",
-      "status": "overdue"
-    },
-    {
-      "task": "🎬 Sentai Post-Production (Interview)",
-      "project": "Tough Cookie",
-      "daysOverdue": 10,
-      "priority": "urgent",
-      "note": "🔥🔥🔥🔥 10 TAGE ÜBERFÄLLIG — Shoots sind gemacht, nur noch Schnitt!",
-      "status": "overdue"
-    },
-    {
-      "task": "💰 Rechnung Jidai rausschicken",
-      "project": "Tough Cookie",
-      "due": "2026-05-11",
-      "priority": "urgent",
-      "note": "🔴 13 TAGE ÜBERFÄLLIG — Quick Win! 10 Min = Sofortiger Cashflow!",
+      "note": "🔥🔥🔥🔥🔥 37 TAGE ÜBERFÄLLIG — KUNDE WARTET — LETZTER KRITISCHER BLOCKER!",
       "status": "overdue"
     }
   ],
   "completedTasks": [
     {
+      "task": "💰 Rechnung Jidai rausschicken",
+      "project": "Tough Cookie",
+      "completedAt": "2026-05-21T22:24:00+02:00",
+      "note": "✅✅✅ RAUSGESCHICKT! Donnerstag 22:24 Uhr! ~2.000€ Cashflow!"
+    },
+    {
+      "task": "📧 Export-Mails beantworten",
+      "project": "Freelance",
+      "completedAt": "2026-05-21T23:48:00+02:00",
+      "note": "✅✅✅ ERLEDIGT! Alle Export-Mails beantwortet!"
+    },
+    {
+      "task": "🎨 Auf Grafikerin antworten",
+      "project": "Tough Cookie",
+      "completedAt": "2026-05-21T23:48:00+02:00",
+      "note": "✅✅✅ ERLEDIGT! Grafikerin kontaktiert!"
+    },
+    {
+      "task": "🎬 Sentai Post-Production (Interview)",
+      "project": "Tough Cookie",
+      "completedAt": "2026-05-21T19:12:00+02:00",
+      "note": "✅✅✅ DURCHGEZOGEN! Respekt, Giang! Post-Production geschafft!"
+    },
+    {
+      "task": "🎬 Japanese Pancake Dreh",
+      "project": "Tough Cookie",
+      "completedAt": "2026-05-21T19:12:00+02:00",
+      "note": "✅✅✅ DREH DURCH! Unglaublicher Fortschritt!"
+    },
+    {
       "task": "💰 G-Life Rechnung rausschicken",
       "project": "Freelance",
       "completedAt": "2026-05-20T22:52:00+02:00",
-      "note": "✅✅✅ RAUSGESCHICKT! 🎉 Gute Nachrichten!"
+      "note": "✅✅✅ RAUSGESCHICKT! Mittwoch 22:52 Uhr!"
     },
     {
       "task": "🏨 ARMANDO Hotel Angebot",
@@ -67,42 +81,72 @@
   "schedule": [
     {
       "time": "00:04",
-      "activity": "🌙 Nacht-Update v5.4.105",
+      "activity": "🌙 Nacht-Update v5.4.111 — Feierabend!",
       "priority": "info"
     }
   ],
   "notes": [
-    "🎉 G-Life RECHNUNG RAUS! Riesenerfolg von gestern!",
+    "🎉 JIDAI RECHNUNG RAUS! Donnerstag 22:24 Uhr! ~2.000€ Cashflow!",
+    "🎉 EXPORT-MAILS BEANTWORTET! Alle offenen Mails erledigt!",
+    "🎉 GRAFIKERIN KONTAKTIERT! Kommunikation läuft!",
+    "🎉 SENTAI POST-PRODUCTION: DURCHGEZOGEN! 🔥🔥🔥",
+    "🎉 JAPANESE PANCAKE DREH: ERLEDIGT! 🔥🔥🔥",
+    "✅ G-Life RECHNUNG RAUS! Mittwoch 22:52 Uhr!",
     "✅ ARMANDO ABGESCHICKT! 42.000€/Jahr Potenzial!",
-    "🎬 Japanese Pancake + Sentai — jeweils 3 Shoots DONE!",
-    "💰 Jidai Rechnung: 13 Tage überfällig — NÄCHSTER Quick Win!",
-    "🎯 NOMU: 36 Tage überfällig — SEIT ÜBER 1 MONAT!",
-    "📋 Heute: Brief für Japanese Pancake + Call mit Little Hero",
-    "⏰ 00:04 Uhr — Neuer Tag / Dashboard Update v5.4.105",
-    "💪 Bilanz: G-Life ✅ | Armando ✅ | Shoots ✅ | Jidai ❌ | NOMU ❌",
-    "🌟 Feiern: G-Life Rechnung ist draußen!",
-    "⚠️ WARNUNG: Jidai Rechnung noch offen — ~2.000€ liegen brach!",
-    "🔔 Dashboard aktualisiert — v5.4.105"
+    "🎯 NOMU: 37 Tage überfällig — LETZTE GROSSE BLOCKADE!",
+    "⏰ 00:04 Uhr — Freitag-Morgen-Update v5.4.111",
+    "💪 Respekt, Giang! Donnerstag war ein MEGA-Tag!",
+    "🌟 6 große Tasks in einem Tag erledigt — Champion!",
+    "🔔 Dashboard aktualisiert — v5.4.111",
+    "📊 Gerhard's Vertrauensindex: STEIGEND! Alle Rechnungen raus!",
+    "🎯 Heute: NOMU angehen — letzte große Blockade!",
+    "🏆 Bilanz gestern: 6 SIEGE in einem Tag!"
   ],
-  "quickWins": [
-    {
-      "task": "Rechnung Jidai",
-      "time": "10 Minuten",
-      "value": "~2.000€ Cashflow",
-      "priority": "highest"
-    }
-  ],
+  "quickWins": [],
   "achievements": [
+    "💰 Jidai Rechnung: RAUS! ~2.000€ 🎉",
+    "📧 Export-Mails: Alle beantwortet!",
+    "🎨 Grafikerin: Kontaktiert!",
+    "🎬 Sentai Post-Production: DURCHGEZOGEN! 🔥",
+    "🎬 Japanese Pancake Dreh: ERLEDIGT! 🔥",
     "💰 G-Life Rechnung: RAUSGESCHICKT! 🎉",
     "🏨 Armando Pitch: Fertig & abgeschickt",
     "🎬 Japanese Pancake: 3/3 Shoots",
-    "🎬 Sentai: 3/3 Shoots",
-    "📋 Beide Pre-Productions fertig"
+    "🎬 Sentai: 3/3 Shoots"
   ],
   "cronUpdate": {
     "trigger": "dashboard-update-4h-v2",
-    "previousVersion": "v5.4.104",
-    "currentVersion": "v5.4.105",
+    "previousVersion": "v5.4.110",
+    "currentVersion": "v5.4.111",
     "interval": "4 Stunden"
+  },
+  "todayPlan": [
+    "🎬 NOMU Post-Production angehen (letzte Blockade!)"
+  ],
+  "reports": [
+    {
+      "date": "2026-05-21",
+      "title": "Abend-Report Donnerstag",
+      "summary": "6 SIEGE! Jidai + Sentai + Japanese Pancake + Export-Mails + Grafikerin! NOMU bleibt.",
+      "url": "abend-report-2026-05-21.md"
+    },
+    {
+      "date": "2026-05-20",
+      "title": "Abend-Report Mittwoch",
+      "summary": "G-Life Rechnung raus! Aber Jidai, NOMU, Sentai noch offen.",
+      "url": "abend-report-2026-05-20.md"
+    }
+  ],
+  "insights": {
+    "pattern": "Du lieferst konstant! 6 große Tasks an einem Tag — der Motor läuft!",
+    "blocker": "NOMU 37 Tage überfällig — aber jetzt bist du allein mit der Königin der Blocker!",
+    "momentum": "Riesen-Durchbruch gestern: Alle Rechnungen raus + Post-Productions durch!"
+  },
+  "yesterdaySummary": {
+    "date": "2026-05-21",
+    "tasksCompleted": 6,
+    "highlight": "Jidai Rechnung + Sentai Post-Production + Japanese Pancake + Export-Mails + Grafikerin!",
+    "cashflowUnlocked": "~2.000€",
+    "biggestWin": "Alle Rechnungen sind jetzt RAUS!"
   }
 }
