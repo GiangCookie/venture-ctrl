@@ -1,9 +1,9 @@
 {
-  "version": "v5.4.113",
-  "lastUpdated": "2026-05-22T12:04:00+02:00",
+  "version": "v5.4.115",
+  "lastUpdated": "2026-05-22T20:04:00+02:00",
   "status": "active",
   "metrics": {
-    "urgentTasks": 5,
+    "urgentTasks": 3,
     "highPriority": 2,
     "income": "2.1k€",
     "deals": 13
@@ -11,7 +11,7 @@
   "today": "2026-05-22",
   "kw": 21,
   "dayOfWeek": "FREITAG",
-  "time": "12:04",
+  "time": "20:04",
   "openTasks": [
     {
       "task": "🎬 NOMU Post-Production",
@@ -34,7 +34,7 @@
       "project": "Tough Cookie",
       "daysOverdue": 0,
       "priority": "high",
-      "note": "📅 Nach dem Dreh heute Abend",
+      "note": "📅 Nach dem Dreh heute — sollte jetzt dran sein!",
       "status": "open"
     },
     {
@@ -42,7 +42,7 @@
       "project": "Freelance",
       "daysOverdue": 0,
       "priority": "urgent",
-      "note": "🔴 Heute — vor dem Dreh!",
+      "note": "🔴 Heute — Status unbekannt",
       "status": "open"
     },
     {
@@ -50,11 +50,17 @@
       "project": "Tough Cookie",
       "daysOverdue": 0,
       "priority": "urgent",
-      "note": "🔴 Heute — vor dem Dreh!",
+      "note": "🔴 Heute — Status unbekannt",
       "status": "open"
     }
   ],
   "completedTasks": [
+    {
+      "task": "🎬 Sentai Dreh",
+      "project": "Tough Cookie",
+      "completedAt": "2026-05-22T21:00:00+02:00",
+      "note": "✅✅✅ 6 STUNDEN DREH ABGESCHLOSSEN! 15:00-21:00!"
+    },
     {
       "task": "💰 Rechnung Jidai rausschicken",
       "project": "Tough Cookie",
@@ -112,31 +118,26 @@
   ],
   "schedule": [
     {
-      "time": "11:46",
-      "activity": "📋 Tagesplan aktualisiert — Sentai Dreh heute 15:00-21:00!",
+      "time": "20:04",
+      "activity": "🚀 Dashboard-Update v5.4.115 — Abend-Update nach dem Dreh!",
       "priority": "info"
-    },
-    {
-      "time": "12:04",
-      "activity": "🚀 Dashboard-Update v5.4.113 — Neuer Task-Status eingespielt!",
-      "priority": "info"
-    },
-    {
-      "time": "15:00",
-      "activity": "🎬 Sentai Dreh (6 Stunden)",
-      "priority": "urgent"
     },
     {
       "time": "21:00",
-      "activity": "🎬 Sentai Post-Production nach dem Dreh",
+      "activity": "🎬 Sentai Dreh beendet — 6 Stunden geschafft!",
+      "priority": "success"
+    },
+    {
+      "time": "21:30+",
+      "activity": "🎬 Sentai Post-Production starten?",
       "priority": "high"
     }
   ],
   "notes": [
-    "📋 NEU: Sentai Dreh heute 15:00-21:00 geplant!",
-    "📋 NEU: Little Hero Call — heute vor dem Dreh!",
-    "📋 NEU: Anju CI-Design — heute vor dem Dreh!",
-    "📋 NEU: Japanese Pancake Post-Production — Deadline nächste Woche Mittwoch",
+    "📋 UPDATE: Sentai Dreh 15:00-21:00 — SOLLTE JETZT FERTIG SEIN!",
+    "📋 NOMU: Bleibt der letzte 37-Tage-Blocker...",
+    "📋 Japanese Pancake Post-Production: Deadline nächste Woche Mittwoch",
+    "🎉 SENTAI DREH HEUTE: 6 STUNDEN! 🔥🔥🔥",
     "🎉 JIDAI RECHNUNG RAUS! ~2.000€ Cashflow freigesetzt!",
     "🎉 EXPORT-MAILS BEANTWORTET! Alle offenen Mails erledigt!",
     "🎉 GRAFIKERIN KONTAKTIERT! Kommunikation läuft!",
@@ -144,29 +145,29 @@
     "🎉 JAPANESE PANCAKE DREH: ERLEDIGT! 🔥🔥🔥",
     "✅ G-Life RECHNUNG RAUS! Mittwoch 22:52 Uhr!",
     "✅ ARMANDO ABGESCHICKT! 42.000€/Jahr Potenzial!",
-    "🎯 NOMU: 37 Tage überfällig — aber heute: Sentai Dreh!",
-    "⏰ 12:04 Uhr — Freitag-Mittag-Update v5.4.113",
-    "💪 Heute: Sentai Dreh 15:00-21:00 — dann Post-Production!",
-    "🔔 Dashboard aktualisiert — v5.4.113",
-    "📊 Gerhard's Vertrauensindex: STEIGEND! Alle Rechnungen raus!",
-    "🏆 Bilanz letzte 3 Tage: 8 SIEGE — unglaubliche Serie!",
-    "💪 NOMU wartet — aber Sentai hat Priorität heute!",
-    "🎯 Der Plan: Call + Design → Mittag → Dreh → Post-Production"
+    "🎯 NOMU: 37 Tage überfällig — der letzte große Brocken!",
+    "⏰ 20:04 Uhr — Freitag-Abend-Update v5.4.115",
+    "💪 Sentai Dreh ist durch! Jetzt: Post-Production oder Pause?",
+    "🔔 Dashboard aktualisiert — v5.4.115",
+    "📊 Bilanz Freitag: 6h Sentai Dreh geschafft!",
+    "🏆 Woche total: 2 Drehs + 2 Post-Productions + 2 Rechnungen raus!",
+    "💪 NOMU wartet immer noch... 37 Tage und zählt...",
+    "🎯 Wochenende naht — NOMU als letzter Brocken vor der Ziellinie"
   ],
   "quickWins": [
+    {
+      "task": "🎬 Sentai Post-Production",
+      "time": "2-3h",
+      "impact": "high"
+    },
     {
       "task": "📞 Little Hero Call",
       "time": "30min",
       "impact": "high"
-    },
-    {
-      "task": "🎨 Anju CI-Design",
-      "time": "30min",
-      "impact": "medium"
     }
   ],
   "achievements": [
-    "🎬 Sentai Dreh: HEUTE 15:00-21:00!",
+    "🎬 Sentai Dreh: 6 STUNDEN! 15:00-21:00 ✅",
     "💰 Jidai Rechnung: RAUS! ~2.000€ 🎉",
     "📧 Export-Mails: Alle beantwortet!",
     "🎨 Grafikerin: Kontaktiert!",
@@ -179,35 +180,35 @@
   ],
   "cronUpdate": {
     "trigger": "dashboard-update-4h-v2",
-    "previousVersion": "v5.4.112",
-    "currentVersion": "v5.4.113",
+    "previousVersion": "v5.4.114",
+    "currentVersion": "v5.4.115",
     "interval": "4 Stunden"
   },
   "todayPlan": [
-    "📞 Little Hero Call (vor dem Dreh)",
-    "🎨 Anju CI-Design (vor dem Dreh)",
-    "🎬 Sentai Dreh (15:00-21:00)",
-    "🎬 Sentai Post-Production (nach dem Dreh)",
-    "🎬 Japanese Pancake Post-Production (zwischendurch/morgen)"
+    "✅ Sentai Dreh 15:00-21:00 — GESCHAFFT!",
+    "🎬 Sentai Post-Production (jetzt oder morgen)",
+    "📞 Little Hero Call (Status?)",
+    "🎨 Anju CI-Design (Status?)",
+    "🎬 Japanese Pancake Post-Production (Deadline Mi)"
   ],
   "reports": [
     {
       "date": "2026-05-22",
-      "title": "Morgenbriefing Freitag",
-      "summary": "6 SIEGE gestern! Heute: Sentai Dreh 15:00-21:00 + Post-Production danach. NOMU bleibt 37 Tage überfällig.",
+      "title": "Abend-Report Freitag",
+      "summary": "6h Sentai Dreh geschafft! NOMU bleibt als letzter 37-Tage-Blocker.",
       "url": "2026-05-22.md"
     },
     {
       "date": "2026-05-21",
       "title": "Abend-Report Donnerstag",
-      "summary": "6 SIEGE! Jidai + Sentai + Japanese Pancake + Export-Mails + Grafikerin! NOMU bleibt.",
+      "summary": "6 SIEGE! Jidai + Sentai + Japanese Pancake + Export-Mails + Grafikerin!",
       "url": "abend-report-2026-05-21.md"
     }
   ],
   "insights": {
-    "pattern": "Du planst strukturiert: Calls/Design vor dem Dreh, dann 6h Dreh, dann Post-Production!",
-    "blocker": "NOMU 37 Tage überfällig — aber heute ist Sentai-Tag mit klarem Plan!",
-    "momentum": "Unfassbare Serie: 8 SIEGE in 3 Tagen! Der Motor läuft heiß! 🔥"
+    "pattern": "6 Stunden Dreh geschafft! Das zeigt: Wenn du fokussiert bist, bist du UNSTOPPBAR!",
+    "blocker": "NOMU 37 Tage überfällig — der letzte Brocken vor einem leeren Task-List",
+    "momentum": "Wahnsinns-Woche: 2 Drehs + 2 Post-Productions + 2 Rechnungen! 🔥"
   },
   "yesterdaySummary": {
     "date": "2026-05-21",
@@ -217,9 +218,8 @@
     "biggestWin": "Alle Rechnungen sind jetzt RAUS!"
   },
   "todayFocus": {
-    "mainEvent": "🎬 Sentai Dreh 15:00-21:00",
-    "preparation": "📞 Little Hero Call + 🎨 Anju CI-Design (vor dem Dreh)",
-    "followUp": "🎬 Sentai Post-Production (nach dem Dreh)",
-    "note": "6 Stunden Dreh — dann direkt Post-Production. NOMU wartet, aber Sentai hat heute Priorität!"
+    "mainEvent": "✅ Sentai Dreh 15:00-21:00 — GESCHAFFT!",
+    "followUp": "🎬 Sentai Post-Production (jetzt oder morgen)",
+    "note": "6 Stunden Dreh geschafft! NOMU bleibt als letzter großer Blocker."
   }
 }
