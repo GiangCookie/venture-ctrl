@@ -1,6 +1,6 @@
 {
-  "version": "v5.4.111",
-  "lastUpdated": "2026-05-22T00:04:00+02:00",
+  "version": "v5.4.112",
+  "lastUpdated": "2026-05-22T04:04:00+02:00",
   "status": "warning",
   "metrics": {
     "urgentTasks": 1,
@@ -11,7 +11,7 @@
   "today": "2026-05-22",
   "kw": 21,
   "dayOfWeek": "FREITAG",
-  "time": "00:04",
+  "time": "04:04",
   "openTasks": [
     {
       "task": "🎬 NOMU Post-Production",
@@ -80,13 +80,13 @@
   ],
   "schedule": [
     {
-      "time": "00:04",
-      "activity": "🌙 Nacht-Update v5.4.111 — Feierabend!",
+      "time": "04:04",
+      "activity": "🌙 Frühbird-Update v5.4.112 — Neuer Tag, neue Chancen!",
       "priority": "info"
     }
   ],
   "notes": [
-    "🎉 JIDAI RECHNUNG RAUS! Donnerstag 22:24 Uhr! ~2.000€ Cashflow!",
+    "🎉 JIDAI RECHNUNG RAUS! ~2.000€ Cashflow freigesetzt!",
     "🎉 EXPORT-MAILS BEANTWORTET! Alle offenen Mails erledigt!",
     "🎉 GRAFIKERIN KONTAKTIERT! Kommunikation läuft!",
     "🎉 SENTAI POST-PRODUCTION: DURCHGEZOGEN! 🔥🔥🔥",
@@ -94,10 +94,10 @@
     "✅ G-Life RECHNUNG RAUS! Mittwoch 22:52 Uhr!",
     "✅ ARMANDO ABGESCHICKT! 42.000€/Jahr Potenzial!",
     "🎯 NOMU: 37 Tage überfällig — LETZTE GROSSE BLOCKADE!",
-    "⏰ 00:04 Uhr — Freitag-Morgen-Update v5.4.111",
+    "⏰ 04:04 Uhr — Freitag-Frühbird-Update v5.4.112",
     "💪 Respekt, Giang! Donnerstag war ein MEGA-Tag!",
     "🌟 6 große Tasks in einem Tag erledigt — Champion!",
-    "🔔 Dashboard aktualisiert — v5.4.111",
+    "🔔 Dashboard aktualisiert — v5.4.112",
     "📊 Gerhard's Vertrauensindex: STEIGEND! Alle Rechnungen raus!",
     "🎯 Heute: NOMU angehen — letzte große Blockade!",
     "🏆 Bilanz gestern: 6 SIEGE in einem Tag!"
@@ -116,8 +116,8 @@
   ],
   "cronUpdate": {
     "trigger": "dashboard-update-4h-v2",
-    "previousVersion": "v5.4.110",
-    "currentVersion": "v5.4.111",
+    "previousVersion": "v5.4.111",
+    "currentVersion": "v5.4.112",
     "interval": "4 Stunden"
   },
   "todayPlan": [
