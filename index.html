@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VENTURE CTRL v5.4.120</title>
+    <title>VENTURE CTRL v5.4.115</title>
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
@@ -68,7 +68,7 @@
             border-left: 3px solid;
             background: rgba(255,255,255,0.03);
         }
-        .completed { 
+        .done { 
             border-left-color: #22c55e; 
             background: rgba(34, 197, 94, 0.08);
         }
@@ -105,44 +105,6 @@
         .gamechanger { background: rgba(139, 92, 246, 0.2); color: #a78bfa; }
         .meta { color: #666; font-size: 0.8rem; margin-top: 20px; text-align: center; }
         .highlight { background: rgba(102, 126, 234, 0.1); padding: 8px 12px; border-radius: 6px; margin-bottom: 10px; }
-        .today-badge { 
-            background: linear-gradient(135deg, #f87171 0%, #fbbf24 100%);
-            color: white;
-            padding: 2px 10px;
-            border-radius: 12px;
-            font-size: 0.7rem;
-            font-weight: bold;
-        }
-        .quickwin-badge {
-            background: linear-gradient(135deg, #22c55e 0%, #4ade80 100%);
-            color: white;
-            padding: 2px 10px;
-            border-radius: 12px;
-            font-size: 0.7rem;
-            font-weight: bold;
-        }
-        .content-reminder {
-            background: rgba(251, 191, 36, 0.1);
-            border: 1px solid rgba(251, 191, 36, 0.3);
-            padding: 10px 15px;
-            border-radius: 8px;
-            margin-bottom: 8px;
-        }
-        .timestamp {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.7rem;
-            color: #888;
-            margin-top: 5px;
-        }
-        .kw-badge {
-            display: inline-block;
-            background: #667eea;
-            color: white;
-            padding: 2px 10px;
-            border-radius: 12px;
-            font-size: 0.75rem;
-            margin-left: 10px;
-        }
         .overdue-days {
             background: #ef4444;
             color: white;
@@ -153,15 +115,6 @@
         }
         .extreme-days {
             background: #7f1d1d;
-            color: white;
-            padding: 2px 8px;
-            border-radius: 10px;
-            font-size: 0.7rem;
-            margin-left: 8px;
-            font-weight: bold;
-        }
-        .success-days {
-            background: #15803d;
             color: white;
             padding: 2px 8px;
             border-radius: 10px;
@@ -180,31 +133,12 @@
             color: #667eea;
             margin-bottom: 8px;
         }
-        .gap-value {
-            color: #f87171;
-            font-weight: bold;
-        }
         .target-value {
             color: #4ade80;
             font-weight: bold;
         }
-        .alert-banner {
-            background: linear-gradient(135deg, rgba(251, 191, 36, 0.2), rgba(245, 158, 11, 0.3));
-            border: 2px solid #fbbf24;
-            padding: 15px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-        .alert-banner h3 {
-            color: #fbbf24;
-            margin-bottom: 5px;
-        }
-        .alert-banner p {
-            color: #fcd34d;
-        }
         .success-banner {
-            background: linear-gradient(135deg, rgba(34, 197, 94, 0.2), rgba(21, 128, 61, 0.3));
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.2), rgba(22, 163, 74, 0.3));
             border: 2px solid #22c55e;
             padding: 15px;
             border-radius: 10px;
@@ -212,117 +146,80 @@
             text-align: center;
         }
         .success-banner h3 {
-            color: #22c55e;
+            color: #4ade80;
             margin-bottom: 5px;
         }
         .success-banner p {
             color: #86efac;
         }
-        .afternoon-banner {
-            background: linear-gradient(135deg, rgba(251, 191, 36, 0.2), rgba(251, 146, 60, 0.3));
-            border: 2px solid #fbbf24;
+        .alert-banner {
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0.2), rgba(127, 29, 29, 0.3));
+            border: 2px solid #ef4444;
             padding: 15px;
             border-radius: 10px;
             margin-bottom: 20px;
             text-align: center;
         }
-        .afternoon-banner h3 {
-            color: #fbbf24;
+        .alert-banner h3 {
+            color: #fca5a5;
             margin-bottom: 5px;
         }
-        .afternoon-banner p {
-            color: #fcd34d;
+        .timestamp {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            color: #888;
+            margin-top: 5px;
         }
-        .morning-badge {
-            background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%);
+        .achievement-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #22c55e, #4ade80);
             color: white;
-            padding: 2px 10px;
-            border-radius: 12px;
-            font-size: 0.7rem;
-            font-weight: bold;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            margin: 3px;
         }
-        .overdue-badge {
-            background: linear-gradient(135deg, #7f1d1d 0%, #dc2626 100%);
-            color: white;
-            padding: 2px 10px;
-            border-radius: 12px;
-            font-size: 0.7rem;
-            font-weight: bold;
+        .weekend-banner {
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(124, 58, 237, 0.3));
+            border: 2px solid #a78bfa;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            text-align: center;
         }
-        .lost-badge {
-            background: #374151;
-            color: #9ca3af;
-            padding: 2px 10px;
-            border-radius: 12px;
-            font-size: 0.7rem;
-            font-weight: bold;
+        .weekend-banner h3 {
+            color: #a78bfa;
+            margin-bottom: 5px;
         }
-        .afternoon-badge {
-            background: linear-gradient(135deg, #f97316 0%, #fbbf24 100%);
-            color: white;
-            padding: 2px 10px;
-            border-radius: 12px;
-            font-size: 0.7rem;
-            font-weight: bold;
-        }
-        .success-badge {
-            background: linear-gradient(135deg, #15803d 0%, #22c55e 100%);
-            color: white;
-            padding: 2px 10px;
-            border-radius: 12px;
-            font-size: 0.7rem;
-            font-weight: bold;
+        .weekend-banner p {
+            color: #c4b5fd;
         }
     </style>
 </head>
 <body>
     <div class="header">
-        <span class="version-badge">v5.4.120</span>
+        <span class="version-badge">v5.4.115</span>
         <h1>🚀 VENTURE CTRL</h1>
-        <p>Samstag, 23. Mai 2026 — 16:04 Uhr <span class="kw-badge">KW21</span></p>
+        <p>Dashboard Update: Samstag, 23. Mai 2026, 20:04 Uhr</p>
     </div>
 
-    <!-- Afternoon Update Banner -->
-    <div class="afternoon-banner">
-        <h3>☀️ NACHMITTAGS-UPDATE v5.4.120</h3>
-        <p>Status stabil seit 12:04 — Wochenende-Modus aktiv! Keine neuen Tasks, keine Änderungen. Zeit für Entspannung oder NOMU? 🎬</p>
+    <!-- Weekend Banner -->
+    <div class="weekend-banner">
+        <h3>🌟 WOCHENENDE — ZEIT ZUR RUHE</h3>
+        <p>Samstag Abend. Zeit für Balance: Arbeit & Erholung. 🧘‍♂️</p>
     </div>
 
     <div class="grid">
-        <!-- Masterplan -->
-        <div class="card">
-            <h2>🎯 MASTERPLAN 2026</h2>
-            <div class="masterplan-box">
-                <div class="stat-row">
-                    <span class="stat-label">Ziel:</span>
-                    <span class="target-value">5.000€/Monat</span>
-                </div>
-                <div class="stat-row">
-                    <span class="stat-label">Aktuell:</span>
-                    <span>2.100€/Monat</span>
-                </div>
-                <div class="stat-row">
-                    <span class="stat-label">Lücke:</span>
-                    <span class="gap-value">2.900€/Monat</span>
-                </div>
-                <div class="stat-row">
-                    <span class="stat-label">Deadline:</span>
-                    <span>November 2026</span>
-                </div>
-            </div>
-            <p style="font-size: 0.9rem; color: #888; margin-top: 10px;">☀️ SAMSTAG NACHMITTAG: Zeit für Post-Production oder Chill? NOMU wartet immer noch...</p>
-        </div>
-
         <!-- Stats -->
         <div class="card">
             <h2>📊 ÜBERSICHT</h2>
             <div class="stat-row">
                 <span class="stat-label">🔴 Kritische Tasks:</span>
-                <span class="stat-value critical">3</span>
+                <span class="stat-value critical">1</span>
             </div>
             <div class="stat-row">
                 <span class="stat-label">🟡 Wichtige Tasks:</span>
-                <span class="stat-value warning">2</span>
+                <span class="stat-value warning">3</span>
             </div>
             <div class="stat-row">
                 <span class="stat-label">💰 Aktuelles Einkommen:</span>
@@ -338,138 +235,177 @@
             </div>
             <div class="stat-row">
                 <span class="stat-label">⚡ Status:</span>
-                <span class="stat-value warning">STABLE</span>
+                <span class="stat-value positive">SOLID</span>
             </div>
             <div class="stat-row">
-                <span class="stat-label">🎯 Heute:</span>
-                <span class="stat-value">Wochenende-Modus</span>
+                <span class="stat-label">🎯 Fokus:</span>
+                <span class="stat-value warning">NOMU beenden</span>
+            </div>
+        </div>
+
+        <!-- Achievements -->
+        <div class="card">
+            <h2>🏆 LETZTE ERfolge (22. Mai)</h2>
+            <div style="display: flex; flex-wrap: wrap; gap: 5px;">
+                <span class="achievement-badge">📞 Little Hero Call</span>
+                <span class="achievement-badge">🎨 Anju CI-Design</span>
+                <span class="achievement-badge">🎬 Sentai Dreh</span>
+                <span class="achievement-badge">🎬 Sentai Post-Prod</span>
+            </div>
+            <p style="color: #888; font-size: 0.85rem; margin-top: 10px;">
+                📊 <strong>8 SIEGE in 3 Tagen</strong> — Unglaubliche Serie!
+            </p>
+        </div>
+
+        <!-- Critical Blocker -->
+        <div class="card" style="grid-column: 1 / -1;">
+            <h2>🔥 DER LETZTE GROSSE BLOCKER</h2>
+            <div class="todo extreme">
+                <strong>🎬 NOMU Post-Production</strong>
+                <span class="extreme-days">38 TAGE</span>
+                <br><small style="color: #fca5a5;">🔥🔥🔥🔥🔥 DER LETZTE GROSSE BLOCKER — 38 Tage überfällig!</small>
+            </div>
+            <p style="color: #fbbf24; font-size: 0.9rem; margin-top: 10px; text-align: center;">
+                🎯 Alle anderen großen Tasks sind erledigt. NOMU ist der letzte Brocken — dann ist die Liste leer!
+            </p>
+        </div>
+
+        <!-- Open Tasks -->
+        <div class="card" style="grid-column: 1 / -1;">
+            <h2>🔴 OFFENE TASKS</h2>
+            
+            <div class="todo extreme">
+                <strong>🎬 NOMU Post-Production</strong>
+                <span class="extreme-days">38 TAGE</span>
+                <br><small style="color: #fca5a5;">🔥🔥🔥 DER LETZTE BLOCKER — Absolut prioritär!</small>
+            </div>
+
+            <div class="todo high">
+                <strong>🎬 Japanese Pancake Post-Production</strong>
+                <span style="background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%); color: white; padding: 2px 10px; border-radius: 12px; font-size: 0.7rem;">MI 28.5.</span>
+                <br><small style="color: #fbbf24;">📅 Deadline: Mittwoch, 28. Mai</small>
+            </div>
+
+            <div class="todo normal">
+                <strong>📧 Little Hero Call</strong>
+                <span style="background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%); color: white; padding: 2px 10px; border-radius: 12px; font-size: 0.7rem;">OFFEN</span>
+                <br><small style="color: #60a5fa;">📋 Wurde für Freitag geplant</small>
+            </div>
+
+            <div class="todo normal">
+                <strong>🎨 Anju CI-Design</strong>
+                <span style="background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%); color: white; padding: 2px 10px; border-radius: 12px; font-size: 0.7rem;">OFFEN</span>
+                <br><small style="color: #60a5fa;">📋 Wurde für Freitag geplant</small>
             </div>
         </div>
 
         <!-- Completed Tasks -->
         <div class="card" style="grid-column: 1 / -1;">
-            <h2 style="color: #22c55e;">✅ ERLEDIGT (Letzte 7 Tage)</h2>
+            <h2 style="color: #22c55e;">✅ ERLEDIGT (Letzte 72h)</h2>
             
-            <div class="todo completed">
-                <strong>🎬 Sentai Dreh</strong>
-                <span class="success-badge">6 STUNDEN!</span>
-                <br><small style="color: #86efac;">✅✅✅ Freitag 15:00-21:00 — Unglaubliche Leistung!</small>
+            <div class="todo done">
+                <strong>💰 Rechnung Jidai rausschicken</strong>
+                <br><small style="color: #86efac;">✅✅✅ RAUSGESCHICKT! ~2.000€ Cashflow!</small>
             </div>
 
-            <div class="todo completed">
-                <strong>💰 Rechnung Jidai</strong>
-                <span class="success-badge">RAUS!</span>
-                <br><small style="color: #86efac;">✅✅✅ ~2.000€ Cashflow freigeschaltet!</small>
+            <div class="todo done">
+                <strong>📧 Export-Mails beantworten</strong>
+                <br><small style="color: #86efac;">✅✅✅ ERLEDIGT! Alle Export-Mails beantwortet!</small>
             </div>
 
-            <div class="todo completed">
-                <strong>📧 Export-Mails</strong>
-                <span class="success-badge">BEANTWORTET!</span>
-                <br><small style="color: #86efac;">✅✅✅ Alle offenen Mails erledigt!</small>
+            <div class="todo done">
+                <strong>🎨 Auf Grafikerin antworten</strong>
+                <br><small style="color: #86efac;">✅✅✅ ERLEDIGT! Grafikerin kontaktiert!</small>
             </div>
 
-            <div class="todo completed">
-                <strong>🎨 Grafikerin Antwort</strong>
-                <span class="success-badge">KONTAKTIERT!</span>
-                <br><small style="color: #86efac;">✅✅✅ Kommunikation läuft!</small>
-            </div>
-
-            <div class="todo completed">
+            <div class="todo done">
                 <strong>🎬 Sentai Post-Production (Interview)</strong>
-                <span class="success-badge">DURCH!</span>
-                <br><small style="color: #86efac;">✅✅✅ Post-Production geschafft!</small>
+                <br><small style="color: #86efac;">✅✅✅ DURCHGEZOGEN!</small>
             </div>
 
-            <div class="todo completed">
+            <div class="todo done">
                 <strong>🎬 Japanese Pancake Dreh</strong>
-                <span class="success-badge">ERLEDIGT!</span>
-                <br><small style="color: #86efac;">✅✅✅ Dreh durchgezogen!</small>
+                <br><small style="color: #86efac;">✅✅✅ DREH DURCH!</small>
             </div>
 
-            <div class="todo completed">
-                <strong>💰 G-Life Rechnung</strong>
-                <span class="success-badge">RAUS!</span>
-                <br><small style="color: #86efac;">✅✅✅ Mittwoch 22:52 Uhr!</small>
+            <div class="todo done">
+                <strong>💰 G-Life Rechnung rausschicken</strong>
+                <br><small style="color: #86efac;">✅✅✅ RAUSGESCHICKT!</small>
             </div>
 
-            <div class="todo completed">
-                <strong>🏨 ARMANDO Hotel</strong>
-                <span class="success-badge">ABGESCHICKT!</span>
-                <br><small style="color: #86efac;">✅✅✅ 42.000€/Jahr Potenzial!</small>
+            <div class="todo done">
+                <strong>🏨 ARMANDO Hotel Angebot</strong>
+                <br><small style="color: #86efac;">✅✅✅ FERTIG UND ABGESCHICKT! 🎉 42.000€/Jahr Potenzial!</small>
             </div>
         </div>
 
-        <!-- Critical Blockers -->
-        <div class="card" style="grid-column: 1 / -1;">
-            <h2>🔥 KRITISCHE BLOCKER — 5 OFFENE TASKS</h2>
+        <!-- Deals -->
+        <div class="card">
+            <h2>🤝 DEALS</h2>
             
-            <div class="todo extreme">
-                <strong>🎬 NOMU Post-Production</strong>
-                <span class="extreme-days">38 TAGE</span>
-                <br><small style="color: #fca5a5;">🔥🔥🔥🔥🔥 LETZTER GROSSER BLOCKER — KUNDE WARTET!</small>
+            <div class="deal" style="border: 2px solid #22c55e;">
+                <div>
+                    <strong>🏨 Armando Hotelkette</strong>
+                    <br><small style="color: #4ade80; font-weight: bold;">3.500€/Monat — ✅ ABGESCHICKT!</small>
+                </div>
+                <span class="stage won">🎉 PITCH GESENDET</span>
             </div>
 
-            <div class="todo urgent">
-                <strong>📞 Little Hero Call</strong>
-                <span class="overdue-badge">KRITISCH</span>
-                <br><small style="color: #fca5a5;">🔴 Gestern offen — Status unbekannt</small>
+            <div class="deal">
+                <div>
+                    <strong>Kyberg Export (Onkel)</strong>
+                    <br><small style="color: #a78bfa;">10 Mio Pharma + 3 Mio NEM</small>
+                </div>
+                <span class="stage gamechanger">GAME CHANGER</span>
             </div>
 
-            <div class="todo urgent">
-                <strong>🎨 Anju CI-Design</strong>
-                <span class="overdue-badge">KRITISCH</span>
-                <br><small style="color: #fca5a5;">🔴 Gestern offen — Status unbekannt</small>
+            <div class="deal">
+                <div>
+                    <strong>Sentai/Zentai</strong>
+                    <br><small style="color: #888;">5.000€ — Nur für Tough Cookie</small>
+                </div>
+                <span class="stage won">WON</span>
             </div>
 
-            <div class="todo high">
-                <strong>🎬 Japanese Pancake Post-Production</strong>
-                <span class="morning-badge">HOCH</span>
-                <br><small style="color: #fcd34d;">📅 Deadline: Nächste Woche Mittwoch</small>
-            </div>
-
-            <div class="todo high">
-                <strong>🎬 Sentai Post-Production</strong>
-                <span class="morning-badge">HOCH</span>
-                <br><small style="color: #fcd34d;">📅 Nach dem Dreh gestern — sollte jetzt dran sein!</small>
+            <div class="deal">
+                <div>
+                    <strong>Amy</strong>
+                    <br><small style="color: #888;">Kennenlernen erfolgreich</small>
+                </div>
+                <span class="stage lead">LEAD</span>
             </div>
         </div>
 
-        <!-- Today's Schedule -->
-        <div class="card" style="grid-column: 1 / -1;">
-            <h2>⏰ WOCHENENDE-PLAN</h2>
+        <!-- Insights -->
+        <div class="card">
+            <h2>💡 INSIGHTS</h2>
             <div class="masterplan-box">
-                <div class="stat-row" style="border-left: 3px solid #fbbf24; padding-left: 10px; background: rgba(251,191,36,0.1);">
-                    <span class="stat-label warning">Samstag Nachmittag</span>
-                    <span class="warning">☀️ <strong>Kaffee / Pause / Chill</strong> — Entspannung!</span>
-                </div>
-                <div class="stat-row" style="border-left: 3px solid #9ca3af; padding-left: 10px;">
-                    <span class="stat-label">Samstag Abend</span>
-                    <span>🎬 Sentai Post-Production (optional)</span>
-                </div>
-                <div class="stat-row" style="border-left: 3px solid #9ca3af; padding-left: 10px;">
-                    <span class="stat-label">Sonntag</span>
-                    <span>🎬 NOMU Post-Production? (wenn Zeit)</span>
-                </div>
-                <div class="stat-row" style="border-left: 3px solid #ef4444; padding-left: 10px; background: rgba(239,68,68,0.1);">
-                    <span class="stat-label critical">Montag</span>
-                    <span class="critical">🎬 Japanese Pancake Post-Production (Deadline Mi)</span>
-                </div>
+                <p style="color: #4ade80; margin-bottom: 10px;"><strong>🎯 Erfolg:</strong> 8 Siege in 3 Tagen — unfassbare Serie!</p>
+                <p style="color: #f87171; margin-bottom: 10px;"><strong>🔴 Blocker:</strong> NOMU jetzt 38 Tage überfällig — DER LETZTE GROSSE BLOCKER!</p>
+                <p style="color: #fbbf24;"><strong>🎯 Deadline:</strong> Japanese Pancake bis Mi 28.5. — dann NOMU!</p>
             </div>
-            <p style="color: #4ade80; font-size: 0.9rem; margin-top: 10px; text-align: center;">
-                💪 Giang — du hast eine unglaubliche Woche hingelegt! 2 Drehs + 2 Rechnungen raus + Mails erledigt!
-            </p>
         </div>
 
         <!-- Quick Wins -->
         <div class="card" style="grid-column: 1 / -1;">
-            <h2 style="color: #22c55e;">⚡ QUICK WINS</h2>
+            <h2 style="color: #22c55e;">⚡ NÄCHSTE SCHRITTE</h2>
             <div class="masterplan-box" style="border-color: #22c55e;">
-                <p style="color: #4ade80; font-weight: bold;">
-                    🎯 Sentai Post-Production (2-3h) — Einfach als nächstes!
-                </p>
-                <p style="color: #4ade80;">
-                    📞 Little Hero Call (30min) — Schnell erledigt!
-                </p>
+                <div class="stat-row" style="border-left: 3px solid #ef4444; padding-left: 10px; background: rgba(239,68,68,0.1);">
+                    <span class="stat-label critical"><strong>1. 🎬 NOMU Post-Production</strong></span>
+                    <span class="critical">Sofort!</span>
+                </div>
+                <div class="stat-row" style="border-left: 3px solid #fbbf24; padding-left: 10px; background: rgba(251,191,36,0.1);">
+                    <span class="stat-label"><strong>2. 🎬 Japanese Pancake Post-Production</strong></span>
+                    <span>Bis Mi 28.5.</span>
+                </div>
+                <div class="stat-row" style="border-left: 3px solid #60a5fa; padding-left: 10px; background: rgba(96,165,250,0.05);">
+                    <span class="stat-label"><strong>3. 📞 Little Hero Call</strong></span>
+                    <span>Wenn Zeit</span>
+                </div>
+                <div class="stat-row" style="border-left: 3px solid #60a5fa; padding-left: 10px; background: rgba(96,165,250,0.05);">
+                    <span class="stat-label"><strong>4. 🎨 Anju CI-Design</strong></span>
+                    <span>Wenn Zeit</span>
+                </div>
             </div>
         </div>
 
@@ -477,23 +413,27 @@
         <div class="card" style="grid-column: 1 / -1;">
             <h2>📝 LETZTE UPDATES</h2>
             <div class="stat-row">
-                <span class="stat-label timestamp">16:04</span>
-                <span style="font-size: 0.9rem;">Dashboard Update v5.4.120 — SAMSTAG NACHMITTAG: Automatisches 4h-Update. Status stabil.</span>
+                <span class="stat-label timestamp">20:04 Sa</span>
+                <span style="font-size: 0.9rem; color: #a78bfa;">Dashboard v5.4.115 — Samstag Abend Update, NOMU jetzt 38 Tage überfällig</span>
             </div>
             <div class="stat-row">
-                <span class="stat-label timestamp">12:04</span>
-                <span style="font-size: 0.9rem;">Dashboard Update v5.4.119 — SAMSTAG MITTAG: Status-Update nach Sentai Dreh.</span>
+                <span class="stat-label timestamp">14:04 Fr</span>
+                <span style="font-size: 0.9rem;">Dashboard v5.4.114 — Sentai Dreh läuft heute 15:00-21:00!</span>
             </div>
             <div class="stat-row">
-                <span class="stat-label timestamp">08:07</span>
-                <span style="font-size: 0.9rem;">Dashboard Update v5.4.118 — SAMSTAG MORGEN: 38-Tage-NOMU-Reminder.</span>
+                <span class="stat-label timestamp">12:04 Fr</span>
+                <span style="font-size: 0.9rem; color: #4ade80;">🎉 Dashboard v5.4.113 — Neuer Task-Status mit Sentai Dreh Plan!</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label timestamp">23:48 Do</span>
+                <span style="font-size: 0.9rem; color: #4ade80;">🎉 6 SIEGE gestern! Jidai + Export-Mails + Grafikerin + Sentai + Japanese Pancake!</span>
             </div>
         </div>
     </div>
 
     <div class="meta">
-        <p>🚀 VENTURE CTRL v5.4.120 | Letztes Update: 23. Mai 2026, 16:04 Uhr</p>
-        <p style="margin-top: 5px; color: #fbbf24;">⚠️ STATUS: STABLE — 3 kritische Tasks, 2 hohe Tasks. Wochenende-Modus aktiv.</p>
+        <p>🚀 VENTURE CTRL v5.4.115 | Letztes Update: 23. Mai 2026, 20:04 Uhr</p>
+        <p style="margin-top: 5px; color: #a78bfa;">⚡ STATUS: SOLID — Wochenende! Zeit für Balance: NOMU & Ruhe 🧘‍♂️</p>
     </div>
 </body>
 </html>
