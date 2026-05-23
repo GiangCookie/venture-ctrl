@@ -1,6 +1,6 @@
 {
-  "version": "v5.4.118",
-  "lastUpdated": "2026-05-23T08:04:00+02:00",
+  "version": "v5.4.119",
+  "lastUpdated": "2026-05-23T12:04:00+02:00",
   "status": "active",
   "metrics": {
     "urgentTasks": 3,
@@ -11,7 +11,7 @@
   "today": "2026-05-23",
   "kw": 21,
   "dayOfWeek": "SAMSTAG",
-  "time": "08:04",
+  "time": "12:04",
   "openTasks": [
     {
       "task": "🎬 NOMU Post-Production",
@@ -118,18 +118,18 @@
   ],
   "schedule": [
     {
-      "time": "08:04",
-      "activity": "🚀 Dashboard-Update v5.4.118 — Samstag Morgen!",
+      "time": "12:04",
+      "activity": "🚀 Dashboard-Update v5.4.119 — Samstag Mittag!",
       "priority": "info"
     },
     {
-      "time": "09:00+",
+      "time": "12:04+",
       "activity": "☀️ Samstag: Post-Production oder Entspannung?",
       "priority": "medium"
     }
   ],
   "notes": [
-    "☀️ SAMSTAG MORGEN — KW 21",
+    "☀️ SAMSTAG MITTAG — KW 21",
     "📋 NOMU: Bleibt der letzte 38-Tage-Blocker...",
     "📋 Japanese Pancake Post-Production: Deadline nächste Woche Mittwoch",
     "🎉 FREITAG: 6h Sentai Dreh geschafft!",
@@ -141,14 +141,14 @@
     "✅ G-Life RECHNUNG RAUS! Mittwoch 22:52 Uhr!",
     "✅ ARMANDO ABGESCHICKT! 42.000€/Jahr Potenzial!",
     "🎯 NOMU: 38 Tage überfällig — der letzte große Brocken!",
-    "⏰ 08:04 Uhr — Samstag Morgen-Update v5.4.118",
+    "⏰ 12:04 Uhr — Samstag Mittags-Update v5.4.119",
     "💪 Sentai Dreh ist durch! NOMU wartet...",
-    "🔔 Dashboard aktualisiert — v5.4.118",
+    "🔔 Dashboard aktualisiert — v5.4.119",
     "📊 Bilanz Freitag: 6h Sentai Dreh geschafft!",
     "🏆 Woche total: 2 Drehs + 2 Post-Productions + 2 Rechnungen raus!",
     "💪 NOMU wartet immer noch... 38 Tage und zählt...",
     "🎯 Wochenende — Zeit für NOMU oder Erholung?",
-    "☀️ Guten Morgen, Giang! Schöner Samstag!"
+    "☀️ Guten Mittag, Giang! Schöner Samstag!"
   ],
   "quickWins": [
     {
@@ -176,12 +176,12 @@
   ],
   "cronUpdate": {
     "trigger": "dashboard-update-4h-v2",
-    "previousVersion": "v5.4.117",
-    "currentVersion": "v5.4.118",
+    "previousVersion": "v5.4.118",
+    "currentVersion": "v5.4.119",
     "interval": "4 Stunden"
   },
   "todayPlan": [
-    "☀️ Samstag Morgen: Frühstück / Ruhe",
+    "☀️ Samstag Mittag: Pause / Mittagessen",
     "🎬 Sentai Post-Production (Wochenende)",
     "📞 Little Hero Call (Status?)",
     "🎨 Anju CI-Design (Status?)",
@@ -214,7 +214,7 @@
     "biggestWin": "6h Sentai Dreh durchgezogen!"
   },
   "todayFocus": {
-    "mainEvent": "☀️ Samstag Morgen — Erholung oder NOMU?",
+    "mainEvent": "☀️ Samstag Mittag — Zeit für Pause oder NOMU?",
     "followUp": "🎬 Sentai Post-Production (Wochenende)",
     "note": "NOMU ist jetzt 38 Tage überfällig — letzter großer Brocken."
   }
