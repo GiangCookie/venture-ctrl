@@ -1,52 +1,67 @@
-# Deploy Status v5.4.119
+# Deploy Status v5.4.169
 
 **Status:** ✅ ERFOLGREICH
-**Zeit:** 2026-05-23 12:04:00+02:00
-**Version:** v5.4.119
+**Zeit:** 2026-06-01 08:04:00+02:00
+**Version:** v5.4.169
 
 ## Übersicht
 
 | Attribut | Wert |
 |----------|------|
-| Version | v5.4.119 |
-| Vorherige | v5.4.118 |
-| Zeit | 12:04 Uhr (Europe/Berlin) |
-| Tag | Samstag, 23. Mai 2026 |
-| KW | 21 |
+| Version | v5.4.169 |
+| Vorherige | v5.4.168 |
+| Zeit | 08:04 Uhr (Europe/Berlin) |
+| Tag | Montag, 1. Juni 2026 |
+| KW | 23, Tag 1 |
 
 ## Build
 
 ```
 vite v5.4.21 building for production...
 ✓ 2 modules transformed.
-dist/index.html  21.47 kB │ gzip: 4.45 kB
-✓ built in 144ms
+dist/index.html  18.22 kB │ gzip: 3.87 kB
+✓ built in 216ms
 ```
 
 ## Dashboard-Status
 
-- **Status:** active
-- **Urgent Tasks:** 3
+- **Status:** kw23-morning
+- **Urgent Tasks:** 2
 - **High Priority:** 2
 - **Income:** 2.1k€
 - **Deals:** 13
+- **KW 21 Erfolgsrate:** 73% (8 Siege)
+- **KW 22 Erfolgsrate:** 0% (Pause-Woche)
 
 ## Blocker
 
-🎬 **NOMU Post-Production** — 38 TAGE ÜBERFÄLLIG
+🎬 **NOMU Post-Production** — 46 TAGE ÜBERFÄLLIG
+🎬 **Japanese Pancake Post-Production** — 6 TAGE ÜBERFÄLLIG
 
-Der letzte große Brocken vor einem leeren Task-List.
+## KW 22 Recap (0% Erfolgsrate)
 
-## Letzte Erfolge
+**Das war bewusst.** Nach KW 21 (8 Siege, 73%) war eine Regenerationsphase nötig.
 
-- ✅ 6h Sentai Dreh (Freitag)
-- ✅ Jidai Rechnung raus (~2.000€)
-- ✅ Export-Mails beantwortet
-- ✅ Grafikerin kontaktiert
-- ✅ G-Life Rechnung raus
-- ✅ Armando Pitch abgeschickt (42k€/Jahr Potenzial)
+### Patterns erkannt:
+1. **Crash nach High** — Nach intensiver Woche folgt Pause
+2. **Post-Production = Prokrastination** — NOMU, JP, Sentai alle überfällig
+3. **Calls werden vermieden** — Little Hero, Onkel
+4. **Deadlines werden ignoriert** — Wenn innere Bremse zieht
+
+## Heute (KW 23 Tag 1)
+
+**Keine Pflicht-Tasks.**
+**Kein Druck.**
+**Keine Erwartungen.**
+
+Heute ist ein "Guck-mal-was-passiert"-Tag.
+
+Falls Lust: NOMU, Japanese Pancake, Calls, Anju CI.
 
 ## Nächstes Update
 
-- **Geplant:** Samstag 23. Mai, 16:04 Uhr
-- **Version:** v5.4.120
+- **Geplant:** Montag 1. Juni, 12:04 Uhr
+- **Version:** v5.4.170
+
+---
+*Dashboard v5.4.169 erfolgreich deployed* 🚀

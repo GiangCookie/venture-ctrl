@@ -1,24 +1,27 @@
 {
-  "version": "v5.4.168",
-  "lastUpdated": "2026-06-01T04:04:00+02:00",
-  "status": "kw23-production",
+  "version": "v5.4.169",
+  "lastUpdated": "2026-06-01T08:04:00+02:00",
+  "status": "kw23-morning",
   "metrics": {
     "urgentTasks": 2,
     "highPriority": 2,
     "income": "2.1k€",
-    "deals": 13
+    "deals": 13,
+    "kw22SuccessRate": "0%",
+    "kw21SuccessRate": "73%"
   },
   "today": "2026-06-01",
   "kw": 23,
+  "kwDay": 1,
   "dayOfWeek": "MONTAG",
-  "time": "04:04",
+  "time": "08:04",
   "openTasks": [
     {
       "task": "🎬 NOMU Post-Production",
       "project": "NOMU",
-      "daysOverdue": 45,
+      "daysOverdue": 46,
       "priority": "urgent",
-      "note": "45 TAGE ÜBERFÄLLIG — DER TAG IST GEKOMMEN! 08:00 Uhr starten",
+      "note": "46 TAGE ÜBERFÄLLIG — DER WENDEPUNKT KOMMT",
       "status": "overdue"
     },
     {
@@ -26,7 +29,7 @@
       "project": "Tough Cookie",
       "daysOverdue": 6,
       "priority": "urgent",
-      "note": "6 TAGE ÜBERFÄLLIG — Heute Nachmittag/Abend anfangen",
+      "note": "6 TAGE ÜBERFÄLLIG — Kunde wartet",
       "status": "overdue"
     },
     {
@@ -34,7 +37,7 @@
       "project": "Freelance",
       "daysOverdue": 8,
       "priority": "high",
-      "note": "8 TAGE OFFEN — Heute Nachmittag anrufen",
+      "note": "8 TAGE OFFEN — Diese Woche anrufen",
       "status": "open"
     },
     {
@@ -42,95 +45,87 @@
       "project": "Tough Cookie",
       "daysOverdue": 8,
       "priority": "high",
-      "note": "8 TAGE OFFEN — Heute zwischen NOMU dazwischen schieben",
+      "note": "8 TAGE OFFEN — Zwischen NOMU schieben",
+      "status": "open"
+    },
+    {
+      "task": "🎬 Sentai Post-Production",
+      "project": "Freelance",
+      "daysOverdue": 8,
+      "priority": "high",
+      "note": "8 TAGE OFFEN — Nach NOMU",
       "status": "open"
     }
   ],
   "completedTasks": [
-    "✅ KW 22 erfolgreich beendet — 6 Tage Pause, volle Regeneration",
-    "✅ KW 23 offiziell gestartet — Montag, 1. Juni 2026",
-    "✅ Dashboard v5.4.167 aktualisiert — 00:04 Uhr",
-    "✅ Mental bereit für die neue Woche — NOMU kommt!",
-    "✅ Heute: 08:00 Uhr NOMU Post-Production starten!"
+    "✅ Dashboard v5.4.169 aktualisiert — 08:04 Uhr",
+    "✅ KW 23 Tag 1 — Morgen-Briefing erstellt",
+    "✅ Wochen-Recap KW 22 analysiert",
+    "✅ Pause-Phase erfolgreich beendet"
   ],
   "schedule": [
     {
       "time": "00:04",
-      "activity": "🌙 Dashboard-Update v5.4.167 — NACHT (Montag)",
+      "activity": "🌙 Dashboard-Update v5.4.167 — NACHT",
       "priority": "info"
     },
     {
       "time": "04:04",
-      "activity": "🚀 Dashboard-Update v5.4.168 — FRÜH (Montag)",
+      "activity": "🚀 Dashboard-Update v5.4.168 — FRÜH",
       "priority": "info"
     },
     {
-      "time": "06:00",
-      "activity": "⏰ Aufwachen — Früh raus!",
+      "time": "08:04",
+      "activity": "📊 Dashboard-Update v5.4.169 — MORGEN",
+      "priority": "info"
+    },
+    {
+      "time": "08:00–12:00",
+      "activity": "☀️ Vormittag — Aufwachen / Frühstücken / Atmen",
       "priority": "focus"
     },
     {
-      "time": "08:00",
-      "activity": "🚀 NOMU Post-Production — DER TAG IST DA!",
-      "priority": "urgent"
+      "time": "12:00–17:00",
+      "activity": "🌤️ Nachmittag — Pause / Freizeit / Spazieren",
+      "priority": "low"
     },
     {
-      "time": "14:00",
-      "activity": "📞 Little Hero Call — Heute Nachmittag",
-      "priority": "high"
-    },
-    {
-      "time": "16:00",
-      "activity": "🎨 Anju CI-Design",
-      "priority": "high"
-    },
-    {
-      "time": "18:00",
-      "activity": "🎬 Japanese Pancake Post-Production",
-      "priority": "urgent"
-    },
-    {
-      "time": "20:00",
-      "activity": "🌙 Abends: Review \u0026 Plan für morgen",
-      "priority": "info"
+      "time": "17:00–20:00",
+      "activity": "🌙 Abend — Feierabend",
+      "priority": "low"
     }
   ],
   "notes": [
-    "🚀 KW 23 BEGINNT — MONTAG, 1. JUNI 2026!",
-    "🎯 KW 23 TAG 1 — DER WENDEPUNKT",
-    "💪 6 Tage Pause waren genug — jetzt wird gearbeitet!",
-    "🔥 NOMU: 45 TAGE — DER TAG IST GEKOMMEN!",
-    "⏰ 08:00 UHR — ALLES BEGINNT",
-    "💭 GERHARD: 'Giang, der Moment ist gekommen. KW 23 beginnt!'",
-    "🌙 00:04 Uhr — Noch Zeit zu schlafen, dann aber los!",
-    "📋 Heute: Der Wendepunkt von KW 22 → KW 23",
-    "🏆 Diese Woche: NOMU erledigen!",
-    "🎯 Fokus: NOMU Post-Production",
-    "💡 Motivation: Jeder Tag macht den Brocken größer",
-    "🌙 Nacht-Update — Bereit für den Morgen",
-    "📊 KW 23 wird DIE Woche der Produktivität!",
-    "⏳ NOMU: Heute starten, diese Woche fertig!",
-    "🚀 Dashboard v5.4.168 deployed — KW 23 beginnt!",
-    "💪 Giang — du hast das schon tausend Mal geschafft!",
-    "🔥 Heute ist einfach nur ein weiterer Tag — LOS GEHT'S!",
-    "⏰ 06:00 Uhr: Aufstehen!",
-    "🚀 08:00 Uhr: NOMU starten!",
-    "📞 14:00 Uhr: Little Hero Call!",
-    "🎬 18:00 Uhr: Japanese Pancake!",
-    "🏆 Der Plan steht — jetzt ausführen!",
-    "🌙 Gute Nacht für 6 Stunden — dann Vollgas!",
-    "💙 Bereit für den großen Tag!",
-    "🚀 KW 23 — Let's GO!"
+    "🚀 KW 23 TAG 1 — MONTAG, 1. JUNI 2026",
+    "📊 Wochen-Recap KW 22: 0% Erfolgsrate — Erholungsphase",
+    "🏆 KW 21: 8 Siege, 73% Erfolgsrate — Du KANNST das!",
+    "🔥 NOMU: 46 TAGE — Der Brocken wartet",
+    "💙 Heute: Keine Erwartungen, kein Druck",
+    "🎯 Pattern erkannt: Crash nach High (KW 21 → KW 22)",
+    "💡 Pattern erkannt: Post-Production = Prokrastination",
+    "💡 Pattern erkannt: Calls werden systematisch vermieden",
+    "🌙 Heute: 'Guck-mal-was-passiert'-Tag",
+    "📋 Falls Lust: NOMU, JP, Calls, Anju CI",
+    "🏆 Wichtig: Du bist nicht deine Produktivität",
+    "💪 KW 23: Chance für einen neuen Start",
+    "⏰ 08:04 Uhr — Dashboard frisch aktualisiert",
+    "🎯 KW 23 Ziel: NOMU & Japanese Pancake erledigen",
+    "🚀 Dashboard v5.4.169 deployed — KW 23 Tag 1!",
+    "💭 Gerhard: 'Du hast KW 21 bewiesen, dass du das kannst'",
+    "🔥 KW 22 war bewusste Pause — jetzt neue Woche",
+    "📊 KW 23: 5 Tasks, 2 urgent — aber heute entspannt",
+    "💙 Bereit für den Tag — egal was kommt",
+    "🌙 Morgen-Briefing: Keine Aufgaben, nur Angebote"
   ],
   "quickWins": [
-    "⏰ Früh aufstehen (6 Uhr)",
-    "🎬 NOMU öffnen (2 Min)",
-    "📞 Little Hero anrufen (15 Min)",
-    "🎨 Anju CI anfangen (30 Min)"
+    "⏰ Früh aufstehen (wenn möglich)",
+    "🍳 Frühstücken",
+    "🚶 Spazieren gehen",
+    "🎬 NOMU öffnen (nur wenn Lust)"
   ],
   "achievements": [
-    "🏆 KW 22: 6 TAGE PAUSE — Perfekte Regeneration!",
-    "🚀 KW 23: OFFIZIELL GESTARTET!",
+    "🏆 KW 22: 6 TAGE PAUSE — Bewusste Regeneration!",
+    "🚀 KW 23: OFFIZIELL GESTARTET — Tag 1!",
     "🎉 WOCHENENDE — Erfolgreich beendet!",
     "🏆 KW 21: 8 SIEGE — 73% Erfolgsrate!",
     "🎬 Sentai Dreh: 6 STUNDEN! 15:00-21:00 ✅",
@@ -140,62 +135,69 @@
     "🎬 Sentai Post-Production: DURCHGEZOGEN! 🔥",
     "🎬 JP Dreh: ERLEDIGT! 🔥",
     "💰 G-Life Rechnung: RAUSGESCHICKT! 🎉",
-    "🏨 Armando Pitch: Fertig \u0026 abgeschickt",
+    "🏨 Armando Pitch: Fertig & abgeschickt",
     "🎬 Japanese Pancake: 3/3 Shoots",
     "🎬 Sentai: 3/3 Shoots",
-    "📊 Dashboard v5.4.168: KW 23 Start",
-    "⏰ Bereit für KW 23: NOMU wird erledigt!"
+    "📊 Dashboard v5.4.169: KW 23 Tag 1",
+    "💪 Pattern-Analyse KW 22 abgeschlossen"
   ],
   "cronUpdate": {
     "trigger": "dashboard-update-4h-v2",
-    "previousVersion": "v5.4.167",
-    "currentVersion": "v5.4.168",
+    "previousVersion": "v5.4.168",
+    "currentVersion": "v5.4.169",
     "interval": "4 Stunden"
   },
   "todayPlan": [
     "🌙 00:04: Dashboard-Update v5.4.167",
     "🚀 04:04: Dashboard-Update v5.4.168",
-    "⏰ 06:00: Aufwachen — Früh raus!",
-    "🚀 08:00: NOMU Post-Production START",
-    "📞 14:00: Little Hero Call",
-    "🎨 16:00: Anju CI-Design",
-    "🎬 18:00: Japanese Pancake Post-Production",
-    "🌙 20:00: Review \u0026 Plan morgen"
+    "📊 08:04: Dashboard-Update v5.4.169",
+    "☀️ 08:00–12:00: Vormittag — Aufwachen / Frühstücken / Atmen",
+    "🌤️ 12:00–17:00: Nachmittag — Pause / Freizeit / Spazieren",
+    "🌙 17:00–20:00: Abend — Feierabend"
   ],
   "reports": [
     {
       "date": "2026-06-01",
-      "title": "KW 23 Start — Montag v5.4.168",
-      "summary": "KW 23 OFFIZIELL GESTARTET! Heute: NOMU um 08:00, Little Hero Call, Japanese Pancake. Der Wendepunkt ist gekommen!",
-      "url": "reports/2026-06-01-dashboard-update-v5-4-168.md"
+      "title": "KW 23 Tag 1 — Morgen-Briefing v5.4.169",
+      "summary": "KW 23 Tag 1: Morgen-Briefing mit aktuellen Daten. Heute: Keine Pflicht-Tasks, nur Angebote bei Lust. NOMU 46 Tage, Japanese Pancake 6 Tage überfällig.",
+      "url": "reports/2026-06-01-dashboard-update-v5-4-169.md"
     }
   ],
   "insights": {
-    "pattern": "KW 22: Pause. KW 23: PRODUKTION! Der Wendepunkt ist da!",
-    "blocker": "NOMU 45 Tage überfällig — HEUTE 08:00 UHR STARTEN!",
-    "momentum": "KW 21: 8 Siege. KW 22: Pause. KW 23: NOMU CRUSH TIME!"
+    "pattern": "KW 22: 0% (Pause) → KW 23: Chance für Neuanfang",
+    "blocker": "NOMU 46 Tage überfällig — DER BROCKEN",
+    "momentum": "KW 21: 8 Siege. Du HAST es drauf!",
+    "weeklyComparison": "KW 21: 73% vs KW 22: 0% — Crash nach High erkannt"
   },
   "yesterdaySummary": {
     "date": "2026-05-31",
     "tasksCompleted": 0,
-    "highlight": "Sonntag: Letzte Ruhe vor dem Start — KW 22 beendet",
+    "highlight": "Sonntag: Letzte Ruhe vor KW 23 — Wochen-Recap erstellt",
     "cashflowUnlocked": "0€",
-    "biggestWin": "Sonntag erfolgreich beendet — Bereit für KW 23!"
+    "biggestWin": "Wochen-Recap KW 22: Pattern erkannt (Crash nach High)"
   },
   "todayFocus": {
-    "mainEvent": "🚀 KW 23 START — NOMU Post-Production 08:00 UHR!",
-    "preparation": "Früh aufstehen, mental bereit, dann Vollgas",
-    "followUp": "Little Hero Call + Japanese Pancake noch heute",
-    "note": "Der Wendepunkt ist da — von Pause zu Produktion!"
+    "mainEvent": "🌙 KW 23 TAG 1 — 'Guck-mal-was-passiert'-Tag",
+    "preparation": "Keine Erwartungen, kein Druck, nur Angebote",
+    "followUp": "Falls Lust: NOMU, Japanese Pancake, Calls",
+    "note": "Du bist nicht deine Produktivität. Heute: Atmen."
+  },
+  "kw22Recap": {
+    "successRate": "0%",
+    "tasksPlanned": 6,
+    "tasksCompleted": 0,
+    "pattern": "Crash nach High (KW 21 → KW 22)",
+    "keyInsight": "Bewusste Regeneration nach intensiver KW 21",
+    "recommendation": "KW 23: NOMU als ersten Brocken angehen"
   },
   "updateHistory": [
-    "v5.4.168 — 2026-06-01 04:04 — Früh-Update (KW 23 START) ← DU BIST HIER",
+    "v5.4.169 — 2026-06-01 08:04 — Morgen-Update (KW 23 Tag 1) ← DU BIST HIER",
+    "v5.4.168 — 2026-06-01 04:04 — Früh-Update (KW 23 START)",
     "v5.4.167 — 2026-06-01 00:04 — Nacht-Update (KW 23 START)",
     "v5.4.166 — 2026-05-31 20:04 — Abend-Update (Sonntag)",
     "v5.4.165 — 2026-05-31 14:04 — Nachmittags-Update (Sonntag)",
     "v5.4.164 — 2026-05-31 12:04 — Mittags-Update (Sonntag)",
     "v5.4.163 — 2026-05-31 08:04 — Morgen-Update (Sonntag)",
-    "v5.4.162 — 2026-05-31 04:04 — Früh-Update (Sonntag)",
-    "v5.4.161 — 2026-05-31 00:04 — Nacht-Update (Sonntag)"
+    "v5.4.162 — 2026-05-31 04:04 — Früh-Update (Sonntag)"
   ]
 }
