@@ -1,7 +1,7 @@
 {
-  "version": "v5.4.167",
-  "lastUpdated": "2026-06-01T00:04:00+02:00",
-  "status": "night-prep-kw23",
+  "version": "v5.4.168",
+  "lastUpdated": "2026-06-01T04:04:00+02:00",
+  "status": "kw23-production",
   "metrics": {
     "urgentTasks": 2,
     "highPriority": 2,
@@ -10,8 +10,8 @@
   },
   "today": "2026-06-01",
   "kw": 23,
-  "dayOfWeek": "MONTAG FRÜH",
-  "time": "00:04",
+  "dayOfWeek": "MONTAG",
+  "time": "04:04",
   "openTasks": [
     {
       "task": "🎬 NOMU Post-Production",
@@ -60,6 +60,11 @@
       "priority": "info"
     },
     {
+      "time": "04:04",
+      "activity": "🚀 Dashboard-Update v5.4.168 — FRÜH (Montag)",
+      "priority": "info"
+    },
+    {
       "time": "06:00",
       "activity": "⏰ Aufwachen — Früh raus!",
       "priority": "focus"
@@ -75,13 +80,18 @@
       "priority": "high"
     },
     {
+      "time": "16:00",
+      "activity": "🎨 Anju CI-Design",
+      "priority": "high"
+    },
+    {
       "time": "18:00",
       "activity": "🎬 Japanese Pancake Post-Production",
       "priority": "urgent"
     },
     {
       "time": "20:00",
-      "activity": "🌙 Abends: Review & Plan für morgen",
+      "activity": "🌙 Abends: Review \u0026 Plan für morgen",
       "priority": "info"
     }
   ],
@@ -100,7 +110,7 @@
     "🌙 Nacht-Update — Bereit für den Morgen",
     "📊 KW 23 wird DIE Woche der Produktivität!",
     "⏳ NOMU: Heute starten, diese Woche fertig!",
-    "🚀 Dashboard v5.4.167 deployed — KW 23 beginnt!",
+    "🚀 Dashboard v5.4.168 deployed — KW 23 beginnt!",
     "💪 Giang — du hast das schon tausend Mal geschafft!",
     "🔥 Heute ist einfach nur ein weiterer Tag — LOS GEHT'S!",
     "⏰ 06:00 Uhr: Aufstehen!",
@@ -130,33 +140,34 @@
     "🎬 Sentai Post-Production: DURCHGEZOGEN! 🔥",
     "🎬 JP Dreh: ERLEDIGT! 🔥",
     "💰 G-Life Rechnung: RAUSGESCHICKT! 🎉",
-    "🏨 Armando Pitch: Fertig & abgeschickt",
+    "🏨 Armando Pitch: Fertig \u0026 abgeschickt",
     "🎬 Japanese Pancake: 3/3 Shoots",
     "🎬 Sentai: 3/3 Shoots",
-    "📊 Dashboard v5.4.167: KW 23 Update",
+    "📊 Dashboard v5.4.168: KW 23 Start",
     "⏰ Bereit für KW 23: NOMU wird erledigt!"
   ],
   "cronUpdate": {
     "trigger": "dashboard-update-4h-v2",
-    "previousVersion": "v5.4.166",
-    "currentVersion": "v5.4.167",
+    "previousVersion": "v5.4.167",
+    "currentVersion": "v5.4.168",
     "interval": "4 Stunden"
   },
   "todayPlan": [
     "🌙 00:04: Dashboard-Update v5.4.167",
+    "🚀 04:04: Dashboard-Update v5.4.168",
     "⏰ 06:00: Aufwachen — Früh raus!",
     "🚀 08:00: NOMU Post-Production START",
     "📞 14:00: Little Hero Call",
     "🎨 16:00: Anju CI-Design",
     "🎬 18:00: Japanese Pancake Post-Production",
-    "🌙 20:00: Review & Plan morgen"
+    "🌙 20:00: Review \u0026 Plan morgen"
   ],
   "reports": [
     {
       "date": "2026-06-01",
-      "title": "KW 23 Start — Montag v5.4.167",
+      "title": "KW 23 Start — Montag v5.4.168",
       "summary": "KW 23 OFFIZIELL GESTARTET! Heute: NOMU um 08:00, Little Hero Call, Japanese Pancake. Der Wendepunkt ist gekommen!",
-      "url": "reports/2026-06-01-dashboard-update-v5-4-167.md"
+      "url": "reports/2026-06-01-dashboard-update-v5-4-168.md"
     }
   ],
   "insights": {
@@ -178,14 +189,13 @@
     "note": "Der Wendepunkt ist da — von Pause zu Produktion!"
   },
   "updateHistory": [
-    "v5.4.167 — 2026-06-01 00:04 — Nacht-Update (KW 23 START) ← DU BIST HIER",
+    "v5.4.168 — 2026-06-01 04:04 — Früh-Update (KW 23 START) ← DU BIST HIER",
+    "v5.4.167 — 2026-06-01 00:04 — Nacht-Update (KW 23 START)",
     "v5.4.166 — 2026-05-31 20:04 — Abend-Update (Sonntag)",
     "v5.4.165 — 2026-05-31 14:04 — Nachmittags-Update (Sonntag)",
     "v5.4.164 — 2026-05-31 12:04 — Mittags-Update (Sonntag)",
     "v5.4.163 — 2026-05-31 08:04 — Morgen-Update (Sonntag)",
     "v5.4.162 — 2026-05-31 04:04 — Früh-Update (Sonntag)",
-    "v5.4.161 — 2026-05-31 00:04 — Nacht-Update (Sonntag)",
-    "v5.4.160 — 2026-05-30 20:04 — Abend-Update (Samstag)",
-    "v5.4.159 — 2026-05-30 16:04 — Nachmittags-Update (Samstag)"
+    "v5.4.161 — 2026-05-31 00:04 — Nacht-Update (Sonntag)"
   ]
 }
