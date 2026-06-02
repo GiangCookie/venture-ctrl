@@ -1,0 +1,240 @@
+{
+  "version": "v5.4.177",
+  "lastUpdated": "2026-06-03T00:04:00+02:00",
+  "status": "kw23-nacht",
+  "metrics": {
+    "urgentTasks": 2,
+    "highPriority": 3,
+    "income": "2.1k€",
+    "deals": 13,
+    "kw22SuccessRate": "0%",
+    "kw21SuccessRate": "73%"
+  },
+  "today": "2026-06-03",
+  "kw": 23,
+  "kwDay": 3,
+  "dayOfWeek": "MITTWOCH",
+  "time": "00:04",
+  "openTasks": [
+    {
+      "task": "🎬 NOMU Post-Production",
+      "project": "NOMU",
+      "daysOverdue": 48,
+      "priority": "urgent",
+      "note": "48 TAGE ÜBERFÄLLIG — DER WENDEPUNKT KOMMT",
+      "status": "overdue",
+      "projectId": "nomu"
+    },
+    {
+      "task": "🎬 Japanese Pancake Post-Production",
+      "project": "Tough Cookie",
+      "daysOverdue": 8,
+      "priority": "urgent",
+      "note": "8 TAGE ÜBERFÄLLIG — Kunde wartet",
+      "status": "overdue",
+      "projectId": "tough-cookie"
+    },
+    {
+      "task": "📞 Little Hero Call",
+      "project": "Freelance",
+      "daysOverdue": 10,
+      "priority": "high",
+      "note": "10 TAGE OFFEN — Diese Woche anrufen",
+      "status": "open",
+      "projectId": "freelance"
+    },
+    {
+      "task": "🎨 Anju CI-Design",
+      "project": "Tough Cookie",
+      "daysOverdue": 10,
+      "priority": "high",
+      "note": "10 TAGE OFFEN — Zwischen NOMU schieben",
+      "status": "open",
+      "projectId": "tough-cookie"
+    },
+    {
+      "task": "🎬 Sentai Post-Production",
+      "project": "Freelance",
+      "daysOverdue": 10,
+      "priority": "high",
+      "note": "10 TAGE OFFEN — Nach NOMU",
+      "status": "open",
+      "projectId": "freelance"
+    }
+  ],
+  "completedTasks": [
+    {
+      "task": "✅ Dashboard v5.4.176 aktualisiert — 20:04 Uhr",
+      "completedAt": "2026-06-02T20:04:00+02:00"
+    },
+    {
+      "task": "✅ Dashboard v5.4.175 aktualisiert — 08:04 Uhr",
+      "completedAt": "2026-06-02T08:04:00+02:00"
+    },
+    {
+      "task": "✅ Dashboard v5.4.174 aktualisiert — 04:04 Uhr",
+      "completedAt": "2026-06-02T04:04:00+02:00"
+    },
+    {
+      "task": "✅ KW 23 Tag 2 erfolgreich beendet",
+      "completedAt": "2026-06-02T23:59:00+02:00"
+    }
+  ],
+  "schedule": [
+    {
+      "time": "00:04",
+      "activity": "🌙 Dashboard-Update v5.4.177 — NACHT",
+      "priority": "info"
+    }
+  ],
+  "notes": [
+    "🚀 KW 23 TAG 3 — MITTWOCH, 3. JUNI 2026",
+    "📊 Gestern (KW 23 Tag 2): Dienstag beendet",
+    "🏆 KW 21: 8 Siege, 73% Erfolgsrate — Du KANNST das!",
+    "🔥 NOMU: 48 TAGE — Der Wendepunkt kommt!",
+    "💙 Giang liest gerade: Atomic Habits von James Clear",
+    "🎯 Reactiv-Modus: Nur antworten wenn Giang anschreibt",
+    "💙 Kurz, direkt, kein Bullshit",
+    "🚀 Dashboard v5.4.177 deployed — 00:04 Nacht-Update!",
+    "📊 Alle Systeme nominal"
+  ],
+  "quickWins": [
+    {
+      "task": "🛏️ Gut schlafen",
+      "time": "8h",
+      "impact": "high"
+    },
+    {
+      "task": "📖 NOMU mental vorbereiten",
+      "time": "5min",
+      "impact": "high"
+    }
+  ],
+  "achievements": [
+    "🚀 Dashboard v5.4.177 deployed — 00:04 Nacht-Update!",
+    "🏆 KW 23 TAG 2 — DIENSTAG ABGESCHLOSSEN!",
+    "🏆 KW 22: 6 TAGE PAUSE — Bewusste Regeneration!",
+    "🏆 KW 21: 8 SIEGE — 73% Erfolgsrate!",
+    "🎬 Sentai Dreh: 6 STUNDEN!",
+    "💰 Jidai Rechnung: RAUS! ~2.000€",
+    "📧 Export-Mails: Alle beantwortet!",
+    "🎨 Grafikerin: Kontaktiert!",
+    "🎬 Japanese Pancake: 3/3 Shoots",
+    "🎬 Sentai: 3/3 Shoots"
+  ],
+  "cronUpdate": {
+    "trigger": "dashboard-update-4h-v2",
+    "previousVersion": "v5.4.176",
+    "currentVersion": "v5.4.177",
+    "interval": "4 Stunden",
+    "note": "⚠️ Giang hat automatische Updates am 2.6. deaktiviert — dies ist das letzte Update"
+  },
+  "todayPlan": [
+    "🌙 00:04: Dashboard-Update v5.4.177"
+  ],
+  "reports": [],
+  "insights": {
+    "pattern": "KW 22: 0% (Pause) → KW 23: Produktivität zurückgewinnen",
+    "blocker": "NOMU 48 Tage überfällig",
+    "momentum": "KW 21: 8 Siege. Du HAST es drauf!",
+    "weeklyComparison": "KW 21: 73% vs KW 22: 0% → KW 23: Ziel 50%+",
+    "todayInsight": "KW 23 Tag 3: Nacht-Update — MITTWOCH"
+  },
+  "yesterdaySummary": {
+    "date": "2026-06-02",
+    "tasksCompleted": 0,
+    "highlight": "KW 23 Tag 2: Dienstag entspannt beendet",
+    "cashflowUnlocked": "0€",
+    "biggestWin": "Erfolgreicher entspannter Tag"
+  },
+  "todayFocus": {
+    "mainEvent": "🎬 NOMU POST-PRODUCTION — 48 TAGE",
+    "preparation": "Kleiner Schritt nach dem anderen",
+    "followUp": "Japanese Pancake danach",
+    "note": "Mittwoch — neuer Tag, neue Chance"
+  },
+  "kw22Recap": {
+    "successRate": "0%",
+    "tasksPlanned": 6,
+    "tasksCompleted": 0,
+    "pattern": "Crash nach High (KW 21 → KW 22)",
+    "keyInsight": "Bewusste Regeneration nach intensiver KW 21",
+    "recommendation": "KW 23: NOMU als ersten Brocken angehen"
+  },
+  "updateHistory": [
+    "v5.4.177 — 2026-06-03 00:04 — Nacht-Update (KW 23 Tag 3) ← DU BIST HIER",
+    "v5.4.176 — 2026-06-02 20:04 — Abend-Update (KW 23 Tag 2)",
+    "v5.4.175 — 2026-06-02 08:04 — Morgen-Update (KW 23 Tag 2)",
+    "v5.4.174 — 2026-06-02 04:04 — Früh-Update (KW 23 Tag 2)"
+  ],
+  "timeSessions": [],
+  "income": [],
+  "todos": [
+    {
+      "id": 1,
+      "title": "NOMU Post-Production",
+      "projectId": "nomu",
+      "priority": "🔴 Urgent",
+      "completed": false,
+      "createdAt": "2026-04-16T00:00:00+02:00",
+      "tags": ["post-production", "urgent"]
+    },
+    {
+      "id": 2,
+      "title": "Japanese Pancake Post-Production",
+      "projectId": "tough-cookie",
+      "priority": "🔴 Urgent",
+      "completed": false,
+      "createdAt": "2026-05-26T00:00:00+02:00",
+      "tags": ["post-production", "urgent"]
+    },
+    {
+      "id": 3,
+      "title": "Little Hero Call",
+      "projectId": "freelance",
+      "priority": "🟡 High",
+      "completed": false,
+      "createdAt": "2026-05-24T00:00:00+02:00",
+      "tags": ["call", "client"]
+    },
+    {
+      "id": 4,
+      "title": "Anju CI-Design",
+      "projectId": "tough-cookie",
+      "priority": "🟡 High",
+      "completed": false,
+      "createdAt": "2026-05-24T00:00:00+02:00",
+      "tags": ["design", "branding"]
+    },
+    {
+      "id": 5,
+      "title": "Sentai Post-Production",
+      "projectId": "freelance",
+      "priority": "🟡 High",
+      "completed": false,
+      "createdAt": "2026-05-24T00:00:00+02:00",
+      "tags": ["post-production"]
+    }
+  ],
+  "pipeline": [],
+  "activeSession": null,
+  "tags": ["post-production", "urgent", "call", "client", "design", "branding"],
+  "journalEntry": {
+    "date": "2026-06-03",
+    "mood": 4,
+    "energyLevel": 4,
+    "notes": "KW 23 Tag 3 Nacht-Update v5.4.177. Dashboard aktualisiert um 00:04. Giang liest Atomic Habits. Modus: Reactiv only. ⚠️ Letztes automatisches Update — Cron wird deaktiviert.",
+    "wins": [
+      "Dashboard v5.4.177 aktualisiert — 00:04",
+      "KW 23 Tag 3 gestartet"
+    ],
+    "challenges": [
+      "NOMU 48 Tage überfällig",
+      "Japanese Pancake 8 Tage überfällig"
+    ],
+    "gratitude": [
+      "Neuer Tag, neue Chance",
+      "Atomic Habits lesen"
+    ]
+  }
+}
