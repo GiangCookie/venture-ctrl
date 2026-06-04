@@ -1,190 +1,57 @@
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  "version": "v5.4.177",
-  "lastUpdated": "2026-06-03T00:04:00+02:00",
-  "status": "kw23-nacht",
-=======
-  "version": "v5.4.172",
-  "lastUpdated": "2026-06-01T20:04:00+02:00",
-  "status": "kw22-abend",
->>>>>>> 800be68 (Dashboard v5.4.172: KW 23 Tag 1 Abend-Update)
-=======
-  "version": "v5.4.182",
-  "lastUpdated": "2026-06-04T08:04:00+02:00",
+  "version": "v5.4.183",
+  "lastUpdated": "2026-06-04T12:04:00+02:00",
   "status": "reactive-mode",
   "mode": "📵 REACTIV ONLY — Keine automatischen Updates",
->>>>>>> 1602f33 (Dashboard v5.4.182: Morgen-Update (Reactiv Mode) - 50 Tage NOMU, Cron dokumentiert)
   "metrics": {
     "urgentTasks": 5,
     "highPriority": 0,
     "income": "2.1k€",
     "deals": 13
   },
-<<<<<<< HEAD
-  "today": "2026-06-03",
-  "kw": 23,
-<<<<<<< HEAD
-  "kwDay": 3,
-  "dayOfWeek": "MITTWOCH",
-  "time": "00:04",
-=======
-  "kwDay": 1,
-  "dayOfWeek": "MONTAG",
-  "time": "20:04",
->>>>>>> 800be68 (Dashboard v5.4.172: KW 23 Tag 1 Abend-Update)
-=======
   "today": "2026-06-04",
   "kw": 23,
   "dayOfWeek": "DONNERSTAG",
-  "time": "08:04",
->>>>>>> 1602f33 (Dashboard v5.4.182: Morgen-Update (Reactiv Mode) - 50 Tage NOMU, Cron dokumentiert)
+  "time": "12:04",
   "openTasks": [
     {
       "task": "🎬 NOMU Post-Production",
       "project": "NOMU",
-<<<<<<< HEAD
-      "daysOverdue": 48,
+      "daysOverdue": 51,
       "priority": "urgent",
-      "note": "48 TAGE ÜBERFÄLLIG — DER WENDEPUNKT KOMMT",
-      "status": "overdue",
-      "projectId": "nomu"
-=======
-      "daysOverdue": 50,
-      "priority": "urgent",
-      "note": "50 TAGE ÜBERFÄLLIG — Giang entscheidet wann",
+      "note": "51 TAGE ÜBERFÄLLIG — Giang entscheidet wann",
       "status": "overdue"
->>>>>>> 1602f33 (Dashboard v5.4.182: Morgen-Update (Reactiv Mode) - 50 Tage NOMU, Cron dokumentiert)
     },
     {
       "task": "🎬 Japanese Pancake Post-Production",
       "project": "Tough Cookie",
-<<<<<<< HEAD
-      "daysOverdue": 8,
+      "daysOverdue": 11,
       "priority": "urgent",
-      "note": "8 TAGE ÜBERFÄLLIG — Kunde wartet",
-      "status": "overdue",
-      "projectId": "tough-cookie"
-=======
-      "daysOverdue": 10,
-      "priority": "urgent",
-      "note": "10 TAGE ÜBERFÄLLIG — Kunde wartet",
+      "note": "11 TAGE ÜBERFÄLLIG — Kunde wartet",
       "status": "overdue"
->>>>>>> 1602f33 (Dashboard v5.4.182: Morgen-Update (Reactiv Mode) - 50 Tage NOMU, Cron dokumentiert)
     },
     {
       "task": "📞 Little Hero Call",
       "project": "Freelance",
-<<<<<<< HEAD
-      "daysOverdue": 10,
-      "priority": "high",
-      "note": "10 TAGE OFFEN — Diese Woche anrufen",
-      "status": "open",
-      "projectId": "freelance"
-=======
-      "daysOverdue": 11,
+      "daysOverdue": 12,
       "priority": "urgent",
-      "note": "11 TAGE OFFEN — Potenzieller Deal",
+      "note": "12 TAGE OFFEN — Potenzieller Deal",
       "status": "open"
->>>>>>> 1602f33 (Dashboard v5.4.182: Morgen-Update (Reactiv Mode) - 50 Tage NOMU, Cron dokumentiert)
     },
     {
       "task": "🎨 Anju CI-Design",
       "project": "Tough Cookie",
-<<<<<<< HEAD
-      "daysOverdue": 10,
-      "priority": "high",
-      "note": "10 TAGE OFFEN — Zwischen NOMU schieben",
-      "status": "open",
-      "projectId": "tough-cookie"
-    },
-    {
-      "task": "🎬 Sentai Post-Production",
-      "project": "Freelance",
-      "daysOverdue": 10,
-      "priority": "high",
-      "note": "10 TAGE OFFEN — Nach NOMU",
-      "status": "open",
-      "projectId": "freelance"
-    }
-  ],
-  "completedTasks": [
-    {
-<<<<<<< HEAD
-      "task": "✅ Dashboard v5.4.176 aktualisiert — 20:04 Uhr",
-      "completedAt": "2026-06-02T20:04:00+02:00"
-    },
-    {
-      "task": "✅ Dashboard v5.4.175 aktualisiert — 08:04 Uhr",
-      "completedAt": "2026-06-02T08:04:00+02:00"
-    },
-    {
-      "task": "✅ Dashboard v5.4.174 aktualisiert — 04:04 Uhr",
-      "completedAt": "2026-06-02T04:04:00+02:00"
-=======
-      "task": "✅ Dashboard v5.4.172 aktualisiert — 20:04 Uhr",
-      "completedAt": "2026-06-01T20:04:00+02:00"
-    },
-    {
-      "task": "✅ KW 23 Tag 1 — Abend-Check-in erfolgreich",
-      "completedAt": "2026-06-01T20:04:00+02:00"
-    },
-    {
-      "task": "✅ Abend entspannt verbracht",
-      "completedAt": "2026-06-01T19:00:00+02:00"
-    },
-    {
-      "task": "✅ Feierabend genossen",
-      "completedAt": "2026-06-01T17:00:00+02:00"
-    },
-    {
-      "task": "✅ Nachmittags-Update v5.4.171 deployed",
-      "completedAt": "2026-06-01T16:04:00+02:00"
->>>>>>> 800be68 (Dashboard v5.4.172: KW 23 Tag 1 Abend-Update)
-    },
-    {
-      "task": "✅ KW 23 Tag 2 erfolgreich beendet",
-      "completedAt": "2026-06-02T23:59:00+02:00"
-    }
-  ],
-  "schedule": [
-    {
-      "time": "00:04",
-      "activity": "🌙 Dashboard-Update v5.4.177 — NACHT",
-      "priority": "info"
-<<<<<<< HEAD
-    }
-  ],
-  "notes": [
-    "🚀 KW 23 TAG 3 — MITTWOCH, 3. JUNI 2026",
-    "📊 Gestern (KW 23 Tag 2): Dienstag beendet",
-    "🏆 KW 21: 8 Siege, 73% Erfolgsrate — Du KANNST das!",
-    "🔥 NOMU: 48 TAGE — Der Wendepunkt kommt!",
-    "💙 Giang liest gerade: Atomic Habits von James Clear",
-    "🎯 Reactiv-Modus: Nur antworten wenn Giang anschreibt",
-    "💙 Kurz, direkt, kein Bullshit",
-    "🚀 Dashboard v5.4.177 deployed — 00:04 Nacht-Update!",
-    "📊 Alle Systeme nominal"
-=======
-    },
-    {
-      "time": "04:04",
-      "activity": "🚀 Dashboard-Update v5.4.168 — FRÜH",
-      "priority": "info"
-    },
-    {
-=======
-      "daysOverdue": 11,
+      "daysOverdue": 12,
       "priority": "urgent",
-      "note": "11 TAGE OFFEN — Markenauftritt",
+      "note": "12 TAGE OFFEN — Markenauftritt",
       "status": "open"
     },
     {
       "task": "🎬 Sentai Post-Production",
       "project": "Tough Cookie",
-      "daysOverdue": 11,
+      "daysOverdue": 12,
       "priority": "high",
-      "note": "11 Tage offen — Pipeline",
+      "note": "12 Tage offen — Pipeline",
       "status": "overdue"
     }
   ],
@@ -194,9 +61,8 @@
   ],
   "schedule": [
     {
->>>>>>> 1602f33 (Dashboard v5.4.182: Morgen-Update (Reactiv Mode) - 50 Tage NOMU, Cron dokumentiert)
-      "time": "08:04",
-      "activity": "🚀 Dashboard-Update v5.4.182 — MORGEN (Donnerstag)",
+      "time": "12:04",
+      "activity": "🚀 Dashboard-Update v5.4.183 — MITTAG (Donnerstag)",
       "priority": "info"
     },
     {
@@ -206,86 +72,26 @@
     }
   ],
   "notes": [
-<<<<<<< HEAD
-    "🚀 KW 23 TAG 1 — MONTAG, 1. JUNI 2026 — ABGESCHLOSSEN",
-    "📊 Wochen-Recap KW 22: 0% Erfolgsrate — Erholungsphase",
-    "🏆 KW 21: 8 Siege, 73% Erfolgsrate — Du KANNST das!",
-    "🔥 NOMU: 46 TAGE — Morgen angehen!",
-    "💙 Heute: Keine Erwartungen, kein Druck — ERLEDIGT",
-    "🎯 Pattern erkannt: Crash nach High (KW 21 → KW 22)",
-    "💡 Pattern erkannt: Post-Production = Prokrastination",
-    "💡 Pattern erkannt: Calls werden systematisch vermieden",
-    "🌙 KW 23 Tag 1: Erfolgreich entspannt beendet",
-    "📋 Morgen: NOMU als ersten Brocken angehen",
-    "🏆 Wichtig: Du bist nicht deine Produktivität",
-    "💪 KW 23: Chance für einen neuen Start — GENUTZT",
-    "🌤️ 20:04 Uhr — Abend-Update: Tag erfolgreich beendet",
-    "🎯 KW 23 Ziel: NOMU & Japanese Pancake erledigen",
-    "🚀 Dashboard v5.4.172 deployed — KW 23 Tag 1 Abend!",
-    "💭 Gerhard: 'Du hast KW 21 bewiesen, dass du das kannst'",
-    "🔥 KW 22 war bewusste Pause — jetzt neue Woche",
-    "📊 KW 23 Tag 1: 5 Tasks, 2 urgent — aber heute entspannt",
-    "💙 Bereit für KW 23 Tag 2 — morgen produktiv!",
-    "⏰ 20:04 — Abend-Update: Tag beendet, gut geschlafen werden",
-    "🏆 Tagesbilanz: Entspannter Tag, keine Schuld, neue Woche gestartet",
-    "🌙 Feierabend: Erfolgreich genossen!"
->>>>>>> 800be68 (Dashboard v5.4.172: KW 23 Tag 1 Abend-Update)
-  ],
-  "quickWins": [
-    {
-      "task": "🛏️ Gut schlafen",
-      "time": "8h",
-      "impact": "high"
-    },
-    {
-<<<<<<< HEAD
-      "task": "📖 NOMU mental vorbereiten",
-      "time": "5min",
-=======
-      "task": "📖 Morgen planen",
-      "time": "5min",
-      "impact": "medium"
-    },
-    {
-      "task": "🎬 NOMU mental vorbereiten",
-      "time": "2min",
->>>>>>> 800be68 (Dashboard v5.4.172: KW 23 Tag 1 Abend-Update)
-      "impact": "high"
-    }
-=======
-    "🚀 KW 23 Tag 4 — Donnerstag, 4. Juni 2026, 08:04 Uhr",
+    "🚀 KW 23 Tag 4 — Donnerstag, 4. Juni 2026, 12:04 Uhr",
     "📵 REACTIV ONLY — Keine automatischen Nachrichten",
     "📖 Atomic Habits — James Clear, passend zum Moment",
     "🎯 Giang kontrolliert das Tempo — nicht das System",
-    "🔥 NOMU: 50 Tage überfällig — aber auf Giang's Bedingungen",
+    "🔥 NOMU: 51 Tage überfällig — aber auf Giang's Bedingungen",
     "💪 Selbstbestimmung > Externer Druck",
     "🌟 KW 21 bewiesen: Du KANNST das. Wann, entscheidest du.",
     "⏸️ Pause ist OK — solange sie selbstbestimmt ist",
-    "⚡ Dashboard-Update v5.4.182 — Automatischer Cron-Lauf",
+    "⚡ Dashboard-Update v5.4.183 — Automatischer Cron-Lauf",
     "🎮 Giang hat die Kontrolle übernommen — System folgt",
     "📵 Keine automatischen Erinnerungen — nur auf Anfrage",
     "📝 Update nur noch wenn Giang explizit danach fragt",
     "💡 Reactiv Only: Weniger ist mehr",
     "🔕 Cron-Job läuft alle 4h, aber Giang entscheidet über Relevanz",
     "⚠️ Hinweis: Cron läuft weiter, aber ohne aktive Benachrichtigung",
-    "🌙 Nacht-Update v5.4.181 bereits durchgeführt (00:04 Uhr)"
->>>>>>> 1602f33 (Dashboard v5.4.182: Morgen-Update (Reactiv Mode) - 50 Tage NOMU, Cron dokumentiert)
+    "🌙 Nacht-Update v5.4.181 bereits durchgeführt (00:04 Uhr)",
+    "☀️ Morgen-Update v5.4.182 bereits durchgeführt (08:04 Uhr)"
   ],
   "quickWins": [],
   "achievements": [
-<<<<<<< HEAD
-<<<<<<< HEAD
-    "🚀 Dashboard v5.4.177 deployed — 00:04 Nacht-Update!",
-    "🏆 KW 23 TAG 2 — DIENSTAG ABGESCHLOSSEN!",
-=======
-    "🏆 KW 23 TAG 1 — VOLLSTÄNDIG ABGESCHLOSSEN!",
-    "🚀 KW 23: OFFIZIELL GESTARTET — Tag 1 entspannt!",
->>>>>>> 800be68 (Dashboard v5.4.172: KW 23 Tag 1 Abend-Update)
-    "🏆 KW 22: 6 TAGE PAUSE — Bewusste Regeneration!",
-    "🏆 KW 21: 8 SIEGE — 73% Erfolgsrate!",
-    "🎬 Sentai Dreh: 6 STUNDEN!",
-    "💰 Jidai Rechnung: RAUS! ~2.000€",
-=======
     "🏆 REACTIV ONLY — Giang hat die Kontrolle!",
     "📚 Atomic Habits gelesen — James Clear",
     "🎯 Selbstbestimmung über externes System",
@@ -293,201 +99,35 @@
     "🌟 KW 21: 8 SIEGE — 73% Erfolgsrate!",
     "🎬 Sentai Dreh: 6 STUNDEN! 15:00-21:00 ✅",
     "💰 Jidai Rechnung: RAUS! ~2.000€ 🎉",
->>>>>>> 1602f33 (Dashboard v5.4.182: Morgen-Update (Reactiv Mode) - 50 Tage NOMU, Cron dokumentiert)
     "📧 Export-Mails: Alle beantwortet!",
     "🎨 Grafikerin: Kontaktiert!",
     "🎬 Japanese Pancake: 3/3 Shoots",
-<<<<<<< HEAD
-    "🎬 Sentai: 3/3 Shoots"
-  ],
-  "cronUpdate": {
-    "trigger": "dashboard-update-4h-v2",
-    "previousVersion": "v5.4.176",
-    "currentVersion": "v5.4.177",
-    "interval": "4 Stunden",
-    "note": "⚠️ Giang hat automatische Updates am 2.6. deaktiviert — dies ist das letzte Update"
-  },
-  "todayPlan": [
-    "🌙 00:04: Dashboard-Update v5.4.177"
-=======
     "🎬 Sentai: 3/3 Shoots",
-    "📊 Dashboard v5.4.182: Reactiv-Mode aktiv"
+    "📊 Dashboard v5.4.183: Reactiv-Mode aktiv"
   ],
   "cronUpdate": {
     "trigger": "dashboard-update-4h-v2",
-    "previousVersion": "v5.4.181",
-    "currentVersion": "v5.4.182",
+    "previousVersion": "v5.4.182",
+    "currentVersion": "v5.4.183",
     "interval": "4 Stunden (Reactiv Mode)",
     "note": "Automatisches Update ohne aktive Benachrichtigung"
   },
   "todayPlan": [
-    "🚀 08:04: Dashboard-Update v5.4.182 (Reactiv Mode)",
+    "🚀 12:04: Dashboard-Update v5.4.183 (Reactiv Mode)",
     "📵 Keine automatischen Updates — nur auf Anfrage",
     "⏸️ Giang entscheidet, wann was passiert"
   ],
   "reports": [
     {
       "date": "2026-06-04",
-      "title": "Reactiv-Update Morgen v5.4.182",
+      "title": "Reactiv-Update Mittag v5.4.183",
       "summary": "KW 23 Tag 4: Reactiv-Only-Modus. Giang hat die Kontrolle. Dashboard automatisch aktualisiert.",
-      "url": "reports/2026-06-04-dashboard-update-v5-4-182.md"
+      "url": "reports/2026-06-04-dashboard-update-v5-4-183.md"
     }
->>>>>>> 800be68 (Dashboard v5.4.172: KW 23 Tag 1 Abend-Update)
   ],
-  "reports": [],
   "insights": {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    "pattern": "KW 22: 0% (Pause) → KW 23: Produktivität zurückgewinnen",
-    "blocker": "NOMU 48 Tage überfällig",
-    "momentum": "KW 21: 8 Siege. Du HAST es drauf!",
-    "weeklyComparison": "KW 21: 73% vs KW 22: 0% → KW 23: Ziel 50%+",
-    "todayInsight": "KW 23 Tag 3: Nacht-Update — MITTWOCH"
-=======
-    "pattern": "KW 22: 0% (Pause) → KW 23: Chance für Neuanfang → GENUTZT",
-    "blocker": "NOMU 46 Tage überfällig — MORGEN angehen!",
-    "momentum": "KW 21: 8 Siege. Du HAST es drauf!",
-    "weeklyComparison": "KW 21: 73% vs KW 22: 0% — Crash nach High erkannt",
-    "todayInsight": "KW 23 Tag 1 erfolgreich beendet — morgen geht's los!"
->>>>>>> 800be68 (Dashboard v5.4.172: KW 23 Tag 1 Abend-Update)
-  },
-  "yesterdaySummary": {
-    "date": "2026-06-02",
-    "tasksCompleted": 0,
-    "highlight": "KW 23 Tag 2: Dienstag entspannt beendet",
-    "cashflowUnlocked": "0€",
-    "biggestWin": "Erfolgreicher entspannter Tag"
-  },
-  "todayFocus": {
-<<<<<<< HEAD
-    "mainEvent": "🎬 NOMU POST-PRODUCTION — 48 TAGE",
-    "preparation": "Kleiner Schritt nach dem anderen",
-    "followUp": "Japanese Pancake danach",
-    "note": "Mittwoch — neuer Tag, neue Chance"
-=======
-    "mainEvent": "🌙 ABEND — KW 23 Tag 1 beendet",
-    "preparation": "Vormittag, Nachmittag & Abend entspannt — Kein Druck",
-    "followUp": "Morgen: NOMU als ersten Brocken",
-    "note": "Gut geschlafen, morgen produktiv starten!"
->>>>>>> 800be68 (Dashboard v5.4.172: KW 23 Tag 1 Abend-Update)
-  },
-  "kw22Recap": {
-    "successRate": "0%",
-    "tasksPlanned": 6,
-    "tasksCompleted": 0,
-    "pattern": "Crash nach High (KW 21 → KW 22)",
-    "keyInsight": "Bewusste Regeneration nach intensiver KW 21",
-    "recommendation": "KW 23: NOMU als ersten Brocken angehen"
-  },
-  "updateHistory": [
-<<<<<<< HEAD
-    "v5.4.177 — 2026-06-03 00:04 — Nacht-Update (KW 23 Tag 3) ← DU BIST HIER",
-    "v5.4.176 — 2026-06-02 20:04 — Abend-Update (KW 23 Tag 2)",
-    "v5.4.175 — 2026-06-02 08:04 — Morgen-Update (KW 23 Tag 2)",
-    "v5.4.174 — 2026-06-02 04:04 — Früh-Update (KW 23 Tag 2)"
-=======
-    "v5.4.172 — 2026-06-01 20:04 — Abend-Update (KW 23 Tag 1) ← DU BIST HIER",
-    "v5.4.171 — 2026-06-01 16:04 — Nachmittags-Update (KW 23 Tag 1)",
-    "v5.4.170 — 2026-06-01 12:04 — Mittags-Update (KW 23 Tag 1)",
-    "v5.4.169 — 2026-06-01 08:04 — Morgen-Update (KW 23 Tag 1)",
-    "v5.4.168 — 2026-06-01 04:04 — Früh-Update (KW 23 START)",
-    "v5.4.167 — 2026-06-01 00:04 — Nacht-Update (KW 23 START)",
-    "v5.4.166 — 2026-05-31 20:04 — Abend-Update (Sonntag)",
-    "v5.4.165 — 2026-05-31 14:04 — Nachmittags-Update (Sonntag)"
->>>>>>> 800be68 (Dashboard v5.4.172: KW 23 Tag 1 Abend-Update)
-  ],
-  "timeSessions": [],
-  "income": [],
-  "todos": [
-    {
-      "id": 1,
-      "title": "NOMU Post-Production",
-      "projectId": "nomu",
-      "priority": "🔴 Urgent",
-      "completed": false,
-      "createdAt": "2026-04-16T00:00:00+02:00",
-      "tags": ["post-production", "urgent"]
-    },
-    {
-      "id": 2,
-      "title": "Japanese Pancake Post-Production",
-      "projectId": "tough-cookie",
-      "priority": "🔴 Urgent",
-      "completed": false,
-      "createdAt": "2026-05-26T00:00:00+02:00",
-      "tags": ["post-production", "urgent"]
-    },
-    {
-      "id": 3,
-      "title": "Little Hero Call",
-      "projectId": "freelance",
-      "priority": "🟡 High",
-      "completed": false,
-      "createdAt": "2026-05-24T00:00:00+02:00",
-      "tags": ["call", "client"]
-    },
-    {
-      "id": 4,
-      "title": "Anju CI-Design",
-      "projectId": "tough-cookie",
-      "priority": "🟡 High",
-      "completed": false,
-      "createdAt": "2026-05-24T00:00:00+02:00",
-      "tags": ["design", "branding"]
-    },
-    {
-      "id": 5,
-      "title": "Sentai Post-Production",
-      "projectId": "freelance",
-      "priority": "🟡 High",
-      "completed": false,
-      "createdAt": "2026-05-24T00:00:00+02:00",
-      "tags": ["post-production"]
-    }
-  ],
-  "pipeline": [],
-  "activeSession": null,
-  "tags": ["post-production", "urgent", "call", "client", "design", "branding"],
-  "journalEntry": {
-<<<<<<< HEAD
-    "date": "2026-06-03",
-    "mood": 4,
-    "energyLevel": 4,
-    "notes": "KW 23 Tag 3 Nacht-Update v5.4.177. Dashboard aktualisiert um 00:04. Giang liest Atomic Habits. Modus: Reactiv only. ⚠️ Letztes automatisches Update — Cron wird deaktiviert.",
-    "wins": [
-      "Dashboard v5.4.177 aktualisiert — 00:04",
-      "KW 23 Tag 3 gestartet"
-=======
-    "date": "2026-06-01",
-    "mood": 5,
-    "energyLevel": 6,
-    "notes": "KW 23 Tag 1 Abend. Vormittag, Nachmittag & Abend erfolgreich entspannt verbracht. Tag wohlverdient beendet! Morgen geht's mit NOMU los.",
-    "wins": [
-      "Dashboard v5.4.172 aktualisiert",
-      "KW 23 Tag 1 erfolgreich beendet",
-      "Vormittag, Nachmittag & Abend entspannt",
-      "Kein schlechtes Gewissen",
-      "Bereit für morgen"
->>>>>>> 800be68 (Dashboard v5.4.172: KW 23 Tag 1 Abend-Update)
-    ],
-    "challenges": [
-      "NOMU 48 Tage überfällig",
-      "Japanese Pancake 8 Tage überfällig"
-    ],
-    "gratitude": [
-<<<<<<< HEAD
-      "Neuer Tag, neue Chance",
-      "Atomic Habits lesen"
-=======
-      "Erfolgreicher entspannter Tag",
-      "Guter Start in KW 23",
-      "Bereit für morgen",
-      "Gute Erholung genossen"
->>>>>>> 800be68 (Dashboard v5.4.172: KW 23 Tag 1 Abend-Update)
-    ]
-=======
     "pattern": "Reactiv Only: Giang entscheidet, wann was passiert",
-    "blocker": "NOMU 50 Tage überfällig — aber auf Giang's Bedingungen",
+    "blocker": "NOMU 51 Tage überfällig — aber auf Giang's Bedingungen",
     "momentum": "KW 21: 8 Siege. Jetzt: Selbstbestimmte Pause.",
     "reading": "Atomic Habits — James Clear"
   },
@@ -499,18 +139,18 @@
     "biggestWin": "System-Konflikt transparent dokumentiert"
   },
   "todayFocus": {
-    "mainEvent": "🚀 Donnerstag Morgen: Dashboard-Update v5.4.182",
+    "mainEvent": "🚀 Donnerstag Mittag: Dashboard-Update v5.4.183",
     "preparation": "Giang entscheidet den Flow",
     "followUp": "Keine automatischen Aktionen nötig",
     "note": "Dashboard aktualisiert, Cron läuft im Hintergrund"
   },
   "updateHistory": [
+    "v5.4.183 — 2026-06-04 12:04 — Mittags-Update (Donnerstag, KW 23 Tag 4) ← DU BIST HIER",
     "v5.4.182 — 2026-06-04 08:04 — Morgen-Update (Donnerstag, KW 23 Tag 4)",
     "v5.4.181 — 2026-06-04 00:04 — Nachts-Update (Mittwoch → Donnerstag)",
     "v5.4.180 — 2026-06-03 20:04 — Abend-Update (Mittwoch, Cron-Konflikt)",
     "v5.4.179 — 2026-06-03 14:04 — Nachmittags-Update (Reactiv Mode)",
-    "v5.4.178 — 2026-06-03 12:04 — Mittags-Update",
-    "v5.4.176 — 2026-06-02 20:04 — Abend-Update (Dienstag)"
+    "v5.4.178 — 2026-06-03 12:04 — Mittags-Update"
   ],
   "reactiveMode": {
     "enabled": true,
@@ -518,6 +158,5 @@
     "reason": "Giang hat explizit KEINE automatischen Updates angefordert",
     "communicationStyle": "Kurz, direkt, kein Bullshit",
     "autoUpdates": false
->>>>>>> 1602f33 (Dashboard v5.4.182: Morgen-Update (Reactiv Mode) - 50 Tage NOMU, Cron dokumentiert)
   }
 }
