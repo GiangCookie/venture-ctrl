@@ -1,6 +1,6 @@
 {
   "version": "v5.4.183",
-  "lastUpdated": "2026-06-04T12:04:00+02:00",
+  "lastUpdated": "2026-06-04T14:04:00+02:00",
   "status": "reactive-mode",
   "mode": "📵 REACTIV ONLY — Keine automatischen Updates",
   "metrics": {
@@ -11,47 +11,47 @@
   },
   "today": "2026-06-04",
   "kw": 23,
-  "dayOfWeek": "DONNERSTAG",
-  "time": "12:04",
+  "dayOfWeek": "DONNERSTAG NACHMITTAG",
+  "time": "14:04",
   "openTasks": [
     {
       "task": "🎬 NOMU Post-Production",
       "project": "NOMU",
-      "daysOverdue": 51,
+      "daysOverdue": 50,
       "priority": "urgent",
-      "note": "51 TAGE ÜBERFÄLLIG — Giang entscheidet wann",
+      "note": "50 TAGE ÜBERFÄLLIG — Giang entscheidet wann",
       "status": "overdue"
     },
     {
       "task": "🎬 Japanese Pancake Post-Production",
       "project": "Tough Cookie",
-      "daysOverdue": 11,
+      "daysOverdue": 10,
       "priority": "urgent",
-      "note": "11 TAGE ÜBERFÄLLIG — Kunde wartet",
+      "note": "10 TAGE ÜBERFÄLLIG — Kunde wartet",
       "status": "overdue"
     },
     {
       "task": "📞 Little Hero Call",
       "project": "Freelance",
-      "daysOverdue": 12,
+      "daysOverdue": 11,
       "priority": "urgent",
-      "note": "12 TAGE OFFEN — Potenzieller Deal",
+      "note": "11 TAGE OFFEN — Potenzieller Deal",
       "status": "open"
     },
     {
       "task": "🎨 Anju CI-Design",
       "project": "Tough Cookie",
-      "daysOverdue": 12,
+      "daysOverdue": 11,
       "priority": "urgent",
-      "note": "12 TAGE OFFEN — Markenauftritt",
+      "note": "11 TAGE OFFEN — Markenauftritt",
       "status": "open"
     },
     {
       "task": "🎬 Sentai Post-Production",
       "project": "Tough Cookie",
-      "daysOverdue": 12,
+      "daysOverdue": 11,
       "priority": "high",
-      "note": "12 Tage offen — Pipeline",
+      "note": "11 Tage offen — Pipeline",
       "status": "overdue"
     }
   ],
@@ -61,8 +61,8 @@
   ],
   "schedule": [
     {
-      "time": "12:04",
-      "activity": "🚀 Dashboard-Update v5.4.183 — MITTAG (Donnerstag)",
+      "time": "14:04",
+      "activity": "🚀 Dashboard-Update v5.4.183 — NACHMITTAG (Donnerstag)",
       "priority": "info"
     },
     {
@@ -72,11 +72,11 @@
     }
   ],
   "notes": [
-    "🚀 KW 23 Tag 4 — Donnerstag, 4. Juni 2026, 12:04 Uhr",
+    "🚀 KW 23 Tag 4 — Donnerstag, 4. Juni 2026, 14:04 Uhr",
     "📵 REACTIV ONLY — Keine automatischen Nachrichten",
     "📖 Atomic Habits — James Clear, passend zum Moment",
     "🎯 Giang kontrolliert das Tempo — nicht das System",
-    "🔥 NOMU: 51 Tage überfällig — aber auf Giang's Bedingungen",
+    "🔥 NOMU: 50 Tage überfällig — aber auf Giang's Bedingungen",
     "💪 Selbstbestimmung > Externer Druck",
     "🌟 KW 21 bewiesen: Du KANNST das. Wann, entscheidest du.",
     "⏸️ Pause ist OK — solange sie selbstbestimmt ist",
@@ -86,9 +86,7 @@
     "📝 Update nur noch wenn Giang explizit danach fragt",
     "💡 Reactiv Only: Weniger ist mehr",
     "🔕 Cron-Job läuft alle 4h, aber Giang entscheidet über Relevanz",
-    "⚠️ Hinweis: Cron läuft weiter, aber ohne aktive Benachrichtigung",
-    "🌙 Nacht-Update v5.4.181 bereits durchgeführt (00:04 Uhr)",
-    "☀️ Morgen-Update v5.4.182 bereits durchgeführt (08:04 Uhr)"
+    "⚠️ Hinweis: Cron läuft weiter, aber ohne aktive Benachrichtigung"
   ],
   "quickWins": [],
   "achievements": [
@@ -101,6 +99,10 @@
     "💰 Jidai Rechnung: RAUS! ~2.000€ 🎉",
     "📧 Export-Mails: Alle beantwortet!",
     "🎨 Grafikerin: Kontaktiert!",
+    "🎬 Sentai Post-Production: DURCHGEZOGEN! 🔥",
+    "🎬 JP Dreh: ERLEDIGT! 🔥",
+    "💰 G-Life Rechnung: RAUSGESCHICKT! 🎉",
+    "🏨 Armando Pitch: Fertig & abgeschickt",
     "🎬 Japanese Pancake: 3/3 Shoots",
     "🎬 Sentai: 3/3 Shoots",
     "📊 Dashboard v5.4.183: Reactiv-Mode aktiv"
@@ -113,21 +115,21 @@
     "note": "Automatisches Update ohne aktive Benachrichtigung"
   },
   "todayPlan": [
-    "🚀 12:04: Dashboard-Update v5.4.183 (Reactiv Mode)",
+    "🚀 14:04: Dashboard-Update v5.4.183 (Reactiv Mode)",
     "📵 Keine automatischen Updates — nur auf Anfrage",
     "⏸️ Giang entscheidet, wann was passiert"
   ],
   "reports": [
     {
       "date": "2026-06-04",
-      "title": "Reactiv-Update Mittag v5.4.183",
-      "summary": "KW 23 Tag 4: Reactiv-Only-Modus. Giang hat die Kontrolle. Dashboard automatisch aktualisiert.",
+      "title": "Reactiv-Update Donnerstag v5.4.183",
+      "summary": "KW 23 Tag 4: Reactiv-Only-Modus. Cron-Lauf dokumentiert.",
       "url": "reports/2026-06-04-dashboard-update-v5-4-183.md"
     }
   ],
   "insights": {
     "pattern": "Reactiv Only: Giang entscheidet, wann was passiert",
-    "blocker": "NOMU 51 Tage überfällig — aber auf Giang's Bedingungen",
+    "blocker": "NOMU 50 Tage überfällig — aber auf Giang's Bedingungen",
     "momentum": "KW 21: 8 Siege. Jetzt: Selbstbestimmte Pause.",
     "reading": "Atomic Habits — James Clear"
   },
@@ -139,18 +141,20 @@
     "biggestWin": "System-Konflikt transparent dokumentiert"
   },
   "todayFocus": {
-    "mainEvent": "🚀 Donnerstag Mittag: Dashboard-Update v5.4.183",
+    "mainEvent": "🚀 Donnerstag Nachmittag: Dashboard-Update v5.4.183",
     "preparation": "Giang entscheidet den Flow",
     "followUp": "Keine automatischen Aktionen nötig",
     "note": "Dashboard aktualisiert, Cron läuft im Hintergrund"
   },
   "updateHistory": [
-    "v5.4.183 — 2026-06-04 12:04 — Mittags-Update (Donnerstag, KW 23 Tag 4) ← DU BIST HIER",
-    "v5.4.182 — 2026-06-04 08:04 — Morgen-Update (Donnerstag, KW 23 Tag 4)",
+    "v5.4.183 — 2026-06-04 14:04 — Nachmittags-Update (Donnerstag, Cron-Lauf)",
+    "v5.4.182 — 2026-06-04 04:04 — Früh-Update (Donnerstag, Cron-Lauf)",
     "v5.4.181 — 2026-06-04 00:04 — Nachts-Update (Mittwoch → Donnerstag)",
     "v5.4.180 — 2026-06-03 20:04 — Abend-Update (Mittwoch, Cron-Konflikt)",
     "v5.4.179 — 2026-06-03 14:04 — Nachmittags-Update (Reactiv Mode)",
-    "v5.4.178 — 2026-06-03 12:04 — Mittags-Update"
+    "v5.4.178 — 2026-06-03 12:04 — Mittags-Update",
+    "v5.4.177 — 2026-06-03 04:04 — Früh-Update (Mittwoch)",
+    "v5.4.176 — 2026-06-02 20:04 — Abend-Update (Dienstag)"
   ],
   "reactiveMode": {
     "enabled": true,
