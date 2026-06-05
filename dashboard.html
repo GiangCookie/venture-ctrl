@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>venture-ctrl Dashboard v5.4.183</title>
+    <title>venture-ctrl Dashboard v5.4.188</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -271,12 +271,12 @@
     <div class="container">
         <div class="header">
             <h1>🚀 venture-ctrl</h1>
-            <span class="version" id="version">v5.4.183</span>
-            <div class="timestamp" id="timestamp">Letztes Update: 14:04 Uhr · KW 23 Tag 4</div>
+            <span class="version" id="version">v5.4.189</span>
+            <div class="timestamp" id="timestamp">Letztes Update: 00:04 Uhr · KW 23 Tag 6 (Samstag Nacht)</div>
         </div>
         
         <div class="status-banner status-reactiv" id="status-banner">
-            🟢 REACTIV ONLY — Giang kontrolliert · Cron-Lauf 14:04 (stumm)
+            🟢 REACTIV ONLY — Giang kontrolliert · Cron-Lauf 00:04 (stumm)
         </div>
         
         <div class="mode-box">
@@ -286,16 +286,16 @@
         
         <div class="metrics-grid">
             <div class="metric-card">
-                <div class="metric-value warning" id="urgent-tasks">5</div>
-                <div class="metric-label">Offene Tasks</div>
+                <div class="metric-value warning" id="urgent-tasks">7</div>
+                <div class="metric-label">Offene Tasks (von 8)</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value success" id="completed-tasks">1</div>
+                <div class="metric-label">✅ Aimy fertig</div>
             </div>
             <div class="metric-card">
                 <div class="metric-value" id="high-priority">0</div>
                 <div class="metric-label">Hohe Priorität</div>
-            </div>
-            <div class="metric-card">
-                <div class="metric-value success" id="income">2.1k€</div>
-                <div class="metric-label">Einnahmen</div>
             </div>
             <div class="metric-card">
                 <div class="metric-value" id="deals">13</div>
@@ -306,45 +306,67 @@
         <div class="alert-box">
             <h3>🚨 BLOCKER-STATUS</h3>
             <ul>
-                <li>🎬 <strong>NOMU Post-Production:</strong> <span style="color:#ff6b6b">50 TAGE ÜBERFÄLLIG</span> — Giang entscheidet wann</li>
-                <li>🎬 <strong>Japanese Pancake:</strong> <span style="color:#ff6b6b">10 TAGE ÜBERFÄLLIG</span> — Kunde wartet</li>
-                <li>📞 <strong>Little Hero Call:</strong> <span style="color:#ffd93d">11 TAGE OFFEN</span> — Potenzielle Einnahmen</li>
-                <li>🎨 <strong>Anju CI-Design:</strong> <span style="color:#ffd93d">11 TAGE OFFEN</span> — Markenauftritt</li>
-                <li>🎬 <strong>Sentai Post-Production:</strong> <span style="color:#74c0fc">11 TAGE OFFEN</span> — Pipeline</li>
+                <li>🎬 <strong>NOMU Post-Production:</strong> <span style="color:#ff6b6b">51 TAGE ÜBERFÄLLIG</span> — Giang entscheidet wann</li>
+                <li>🎬 <strong>Japanese Pancake:</strong> <span style="color:#ff6b6b">11 TAGE ÜBERFÄLLIG</span> — Kunde wartet</li>
+                <li>📞 <strong>Little Hero Call:</strong> <span style="color:#ffd93d">12 TAGE OFFEN</span> — Potenzielle Einnahmen</li>
+                <li>🎨 <strong>Anju CI-Design:</strong> <span style="color:#ffd93d">12 TAGE OFFEN</span> — Markenauftritt</li>
+                <li>🎬 <strong>Sentai Post-Production:</strong> <span style="color:#74c0fc">12 TAGE OFFEN</span> — Pipeline</li>
             </ul>
         </div>
         
         <div class="card">
-            <h2>📋 Offene Tasks</h2>
+            <h2>📋 Tages-Tasks (Freitag, 5. Juni)</h2>
+            <div class="insight-box" style="margin-bottom:15px;">
+                <div class="insight-label">Tagesbilanz</div>
+                <div class="insight-text">✅ <strong>1/8 erledigt</strong> — Aimy Interieur Bilder fertig!</div>
+            </div>
             <ul class="task-list" id="task-list">
-                <li class="task-item task-urgent">
-                    <div class="task-project">NOMU</div>
-                    <div class="task-name">🎬 NOMU Post-Production</div>
-                    <div class="task-note">50 TAGE ÜBERFÄLLIG — Giang entscheidet, wann er rangeht</div>
-                    <span class="task-status status-overdue">KRITISCH</span>
+                <li class="task-item" style="border-color: #51cf66; background: rgba(81,207,102,0.1);">
+                    <div class="task-project">Aimy</div>
+                    <div class="task-name">✅ Interieur Bilder bearbeiten</div>
+                    <div class="task-note">FERTIG um 17:30 Uhr</div>
+                    <span class="task-status" style="background: rgba(81,207,102,0.3); color: #51cf66;">ERLEDIGT</span>
                 </li>
-                <li class="task-item task-urgent">
-                    <div class="task-project">Tough Cookie</div>
-                    <div class="task-name">🎬 Japanese Pancake Post-Production</div>
-                    <div class="task-note">10 TAGE ÜBERFÄLLIG — Kunde wartet</div>
-                    <span class="task-status status-overdue">KRITISCH</span>
-                </li>
-                <li class="task-item task-high">
-                    <div class="task-project">Freelance</div>
-                    <div class="task-name">📞 Little Hero Call</div>
-                    <div class="task-note">11 TAGE OFFEN — Wichtiger potenzieller Deal</div>
+                <li class="task-item task-open">
+                    <div class="task-project">Hiro Sakao</div>
+                    <div class="task-name">🃏 Musterkarten raussuchen</div>
+                    <div class="task-note">🔴 Offen — Karten Projekt</div>
                     <span class="task-status status-open">OFFEN</span>
                 </li>
-                <li class="task-item task-high">
-                    <div class="task-project">Tough Cookie</div>
-                    <div class="task-name">🎨 Anju CI-Design</div>
-                    <div class="task-note">11 TAGE OFFEN — Markenauftritt verbessern</div>
+                <li class="task-item task-open">
+                    <div class="task-project">Wittmann</div>
+                    <div class="task-name">🎬 Konkrete Preproduction</div>
+                    <div class="task-note">🔴 Offen — Vorbereitung</div>
+                    <span class="task-status status-open">OFFEN</span>
+                </li>
+                <li class="task-item task-open">
+                    <div class="task-project">Golf</div>
+                    <div class="task-name">⛳ Golf Footgolfvideo UGC</div>
+                    <div class="task-note">🔴 Offen — Content Creation</div>
                     <span class="task-status status-open">OFFEN</span>
                 </li>
                 <li class="task-item task-open">
                     <div class="task-project">Tough Cookie</div>
-                    <div class="task-name">🎬 Sentai Post-Production</div>
-                    <div class="task-note">11 Tage offen — In der Pipeline</div>
+                    <div class="task-name">⛳ Golfplatz video TC</div>
+                    <div class="task-note">🔴 Offen — Videoproduktion</div>
+                    <span class="task-status status-open">OFFEN</span>
+                </li>
+                <li class="task-item task-open">
+                    <div class="task-project">Niku</div>
+                    <div class="task-name">📺 Niku Fernseher AD</div>
+                    <div class="task-note">🔴 Offen — Werbung</div>
+                    <span class="task-status status-open">OFFEN</span>
+                </li>
+                <li class="task-item task-open">
+                    <div class="task-project">Admin</div>
+                    <div class="task-name">📄 Verträge</div>
+                    <div class="task-note">🔴 Offen — Papierkram</div>
+                    <span class="task-status status-open">OFFEN</span>
+                </li>
+                <li class="task-item task-open">
+                    <div class="task-project">Kinchia</div>
+                    <div class="task-name">📱 Stories für Kinchia</div>
+                    <div class="task-note">🔴 Offen — Social Media</div>
                     <span class="task-status status-open">OFFEN</span>
                 </li>
             </ul>
@@ -373,8 +395,16 @@
                 <div class="insight-text">🌙 Bewusste Pause Tag 3 — Cron-Konflikt dokumentiert, Atomic Habits gelesen</div>
             </div>
             <div class="insight-box">
-                <div class="insight-label">Donnerstag 4.6. (heute)</div>
-                <div class="insight-text">❓ Offen — KW 23 Tag 4. Giang entscheidet. Kein Druck.</div>
+                <div class="insight-label">Donnerstag 4.6.</div>
+                <div class="insight-text">🌙 Bewusste Pause Tag 4 — Vierter Erholungstag, Atomic Habits weitergelesen</div>
+            </div>
+            <div class="insight-box">
+                <div class="insight-label">Freitag 5.6.</div>
+                <div class="insight-text">✅ <strong>1/8 Tasks erledigt!</strong> Aimy Interieur Bilder fertig um 17:30 Uhr. Reactiv-Mode funktioniert.</div>
+            </div>
+            <div class="insight-box">
+                <div class="insight-label">Samstag 6.6. (heute)</div>
+                <div class="insight-text">🌙 KW 23 Tag 6. Weekend-Modus. Kein Druck, kein Muss. Giang entscheidet.</div>
             </div>
         </div>
         
@@ -413,30 +443,35 @@
         <div class="card">
             <h2>📝 Aktuelle Notizen</h2>
             <div class="notes-grid">
-                <div class="note-item">🚀 KW 23 Tag 4 — Donnerstag, 4. Juni 2026, 14:04</div>
+                <div class="note-item">✅ Aimy FERTIG — Interieur Bilder bearbeitet (17:30 Uhr)</div>
+                <div class="note-item">🚀 KW 23 Tag 6 — Samstag, 6. Juni 2026, 00:04</div>
                 <div class="note-item">📵 Reactiv Only — Cron läuft, aber ohne Benachrichtigung</div>
                 <div class="note-item">📖 Atomic Habits — James Clear, passend zum Moment</div>
                 <div class="note-item">🎯 Giang kontrolliert das Tempo — nicht das System</div>
-                <div class="note-item">🔥 NOMU: 50 Tage — aber auf Giang's Bedingungen</div>
                 <div class="note-item">💪 Selbstbestimmung > Externer Druck</div>
                 <div class="note-item">🌟 KW 21 bewiesen: Du KANNST das. Wann, entscheidest du.</div>
                 <div class="note-item">⏸️ Pause ist OK — solange sie selbstbestimmt ist</div>
-                <div class="note-item">⚡ Dashboard v5.4.183 — Automatischer Cron-Lauf</div>
+                <div class="note-item">⚡ Dashboard v5.4.189 — Nacht-Update (Samstag)</div>
                 <div class="note-item">🎮 Giang hat die Kontrolle übernommen</div>
+                <div class="note-item">🌙 Weekend-Modus — Kein Muss, nur wenn du willst</div>
             </div>
         </div>
         
         <div class="card">
             <h2>🔄 Update-Verlauf</h2>
             <div class="history-list">
-                <div class="history-item">v5.4.183 — 2026-06-04 14:04 — Nachmittags-Update (Donnerstag, Cron-Lauf)</div>
+                <div class="history-item">v5.4.189 — 2026-06-06 00:04 — Nacht-Update (Samstag, Cron-Lauf)</div>
+                <div class="history-item">v5.4.188 — 2026-06-05 12:04 — Mittags-Update (Freitag, Cron-Lauf)</div>
+                <div class="history-item">v5.4.187 — 2026-06-05 08:04 — Früh-Update (Freitag, Cron-Lauf)</div>
+                <div class="history-item">v5.4.186 — 2026-06-05 04:04 — Früh-Update (Freitag, Cron-Lauf)</div>
+                <div class="history-item">v5.4.185 — 2026-06-05 00:04 — Nacht-Update (Freitag, Cron-Lauf)</div>
+                <div class="history-item">v5.4.183 — 2026-06-04 20:04 — Abend-Update (Donnerstag, Cron-Lauf)</div>
                 <div class="history-item">v5.4.182 — 2026-06-04 04:04 — Früh-Update (Donnerstag, Cron-Lauf)</div>
                 <div class="history-item">v5.4.181 — 2026-06-04 00:04 — Nachts-Update (Mittwoch→Donnerstag)</div>
                 <div class="history-item">v5.4.180 — 2026-06-03 20:04 — Abend-Update (Mittwoch, Cron-Konflikt)</div>
                 <div class="history-item">v5.4.179 — 2026-06-03 14:04 — Nachmittags-Update (Reactiv Mode)</div>
                 <div class="history-item">v5.4.178 — 2026-06-03 12:04 — Mittags-Update (Mittwoch)</div>
                 <div class="history-item">v5.4.176 — 2026-06-02 20:04 — Abend-Update (Dienstag)</div>
-                <div class="history-item">v5.4.173 — 2026-06-02 12:04 — Mittags-Update (Dienstag)</div>
             </div>
         </div>
     </div>
