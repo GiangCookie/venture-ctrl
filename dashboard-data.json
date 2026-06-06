@@ -1,6 +1,6 @@
 {
-  "version": "v5.4.188",
-  "lastUpdated": "2026-06-05T12:04:00+02:00",
+  "version": "v5.5.3",
+  "lastUpdated": "2026-06-07T00:04:00+02:00",
   "status": "reactive-mode",
   "mode": "📵 REACTIV ONLY — Keine automatischen Updates",
   "metrics": {
@@ -9,61 +9,61 @@
     "income": "2.1k€",
     "deals": 13
   },
-  "today": "2026-06-05",
+  "today": "2026-06-07",
   "kw": 23,
-  "dayOfWeek": "FREITAG MITTAG",
-  "time": "12:04",
+  "dayOfWeek": "SONNTAG NACHT",
+  "time": "00:04",
   "openTasks": [
     {
       "task": "🎬 NOMU Post-Production",
       "project": "NOMU",
-      "daysOverdue": 51,
+      "daysOverdue": 55,
       "priority": "urgent",
-      "note": "51 TAGE ÜBERFÄLLIG — Giang entscheidet wann",
+      "note": "55 TAGE ÜBERFÄLLIG — Giang entscheidet wann",
       "status": "overdue"
     },
     {
       "task": "🎬 Japanese Pancake Post-Production",
       "project": "Tough Cookie",
-      "daysOverdue": 11,
+      "daysOverdue": 15,
       "priority": "urgent",
-      "note": "11 TAGE ÜBERFÄLLIG — Kunde wartet",
+      "note": "15 TAGE ÜBERFÄLLIG — Kunde wartet",
       "status": "overdue"
     },
     {
       "task": "📞 Little Hero Call",
       "project": "Freelance",
-      "daysOverdue": 12,
+      "daysOverdue": 15,
       "priority": "urgent",
-      "note": "12 TAGE OFFEN — Potenzieller Deal",
+      "note": "15 TAGE OFFEN — Potenzieller Deal",
       "status": "open"
     },
     {
       "task": "🎨 Anju CI-Design",
       "project": "Tough Cookie",
-      "daysOverdue": 12,
+      "daysOverdue": 15,
       "priority": "urgent",
-      "note": "12 TAGE OFFEN — Markenauftritt",
+      "note": "15 TAGE OFFEN — Markenauftritt",
       "status": "open"
     },
     {
       "task": "🎬 Sentai Post-Production",
       "project": "Tough Cookie",
-      "daysOverdue": 12,
+      "daysOverdue": 15,
       "priority": "high",
-      "note": "12 Tage offen — Pipeline",
+      "note": "15 Tage offen — Pipeline",
       "status": "overdue"
     }
   ],
   "completedTasks": [
     "✅ Reactiv-Only-Modus aktiv — Giang hat die Kontrolle",
     "✅ Atomic Habits — Giang liest gerade",
-    "✅ Cron-Update v5.4.188 — Mittag 12:04 (Freitag)"
+    "✅ Cron-Update v5.5.3 — Nacht 00:04 (Sonntag)"
   ],
   "schedule": [
     {
-      "time": "12:04",
-      "activity": "🚀 Dashboard-Update v5.4.188 — MITTAG (Freitag)",
+      "time": "00:04",
+      "activity": "🚀 Dashboard-Update v5.5.3 — NACHT (Sonntag)",
       "priority": "info"
     },
     {
@@ -73,22 +73,22 @@
     }
   ],
   "notes": [
-    "🚀 KW 23 Tag 5 — Freitag, 5. Juni 2026, 12:04 Uhr",
+    "🚀 KW 23 Tag 7 — Sonntag, 7. Juni 2026, 00:04 Uhr",
     "📵 REACTIV ONLY — Keine automatischen Nachrichten",
     "📖 Atomic Habits — James Clear, passend zum Moment",
     "🎯 Giang kontrolliert das Tempo — nicht das System",
-    "🔥 NOMU: 51 Tage überfällig — aber auf Giang's Bedingungen",
+    "🔥 NOMU: 55 Tage überfällig — aber auf Giang's Bedingungen",
     "💪 Selbstbestimmung > Externer Druck",
     "🌟 KW 21 bewiesen: Du KANNST das. Wann, entscheidest du.",
     "⏸️ Pause ist OK — solange sie selbstbestimmt ist",
-    "⚡ Dashboard-Update v5.4.188 — Automatischer Cron-Lauf (12 Uhr)",
+    "⚡ Dashboard-Update v5.5.3 — Automatischer Cron-Lauf (00 Uhr)",
     "🎮 Giang hat die Kontrolle übernommen — System folgt",
     "📵 Keine automatischen Erinnerungen — nur auf Anfrage",
     "📝 Update nur noch wenn Giang explizit danach fragt",
     "💡 Reactiv Only: Weniger ist mehr",
     "🔕 Cron-Job läuft alle 4h, aber Giang entscheidet über Relevanz",
     "⚠️ Hinweis: Cron läuft weiter, aber ohne aktive Benachrichtigung",
-    "🌙 Mittag-Update — Freitag, KW 23 Tag 5"
+    "🌙 Nacht-Update — Sonntag, KW 23 Tag 7"
   ],
   "quickWins": [],
   "achievements": [
@@ -107,54 +107,56 @@
     "🏨 Armando Pitch: Fertig & abgeschickt",
     "🎬 Japanese Pancake: 3/3 Shoots",
     "🎬 Sentai: 3/3 Shoots",
-    "📊 Dashboard v5.4.188: Reactiv-Mode aktiv"
+    "📊 Dashboard v5.5.3: Reactiv-Mode aktiv"
   ],
   "cronUpdate": {
     "trigger": "dashboard-update-4h-v2",
-    "previousVersion": "v5.4.187",
-    "currentVersion": "v5.4.188",
+    "previousVersion": "v5.5.2",
+    "currentVersion": "v5.5.3",
     "interval": "4 Stunden (Reactiv Mode)",
     "note": "Automatisches Update ohne aktive Benachrichtigung"
   },
   "todayPlan": [
-    "🚀 12:04: Dashboard-Update v5.4.188 (Reactiv Mode)",
+    "🚀 00:04: Dashboard-Update v5.5.3 (Reactiv Mode)",
     "📵 Keine automatischen Updates — nur auf Anfrage",
     "⏸️ Giang entscheidet, wann was passiert"
   ],
   "reports": [
     {
-      "date": "2026-06-05",
-      "title": "Reactiv-Update Freitag v5.4.187",
-      "summary": "KW 23 Tag 5: Reactiv-Only-Modus. Früh-Update.",
-      "url": "reports/2026-06-05-dashboard-update-v5-4-187.md"
+      "date": "2026-06-06",
+      "title": "Reactiv-Update Samstag v5.5.2",
+      "summary": "KW 23 Tag 6: Reactiv-Only-Modus. Nachmittags-Update.",
+      "url": "reports/2026-06-06-dashboard-update-v5-5-2.md"
     },
     {
-      "date": "2026-06-04",
-      "title": "Reactiv-Update Donnerstag v5.4.183",
-      "summary": "KW 23 Tag 4: Reactiv-Only-Modus. Cron-Lauf Nacht.",
-      "url": "reports/2026-06-04-dashboard-update-v5-4-183.md"
+      "date": "2026-06-05",
+      "title": "Reactiv-Update Freitag v5.4.188",
+      "summary": "KW 23 Tag 5: Reactiv-Only-Modus. Mittags-Update.",
+      "url": "reports/2026-06-05-dashboard-update-v5-4-188.md"
     }
   ],
   "insights": {
     "pattern": "Reactiv Only: Giang entscheidet, wann was passiert",
-    "blocker": "NOMU 51 Tage überfällig — aber auf Giang's Bedingungen",
+    "blocker": "NOMU 55 Tage überfällig — aber auf Giang's Bedingungen",
     "momentum": "KW 21: 8 Siege. Jetzt: Selbstbestimmte Pause.",
     "reading": "Atomic Habits — James Clear"
   },
   "yesterdaySummary": {
-    "date": "2026-06-04",
+    "date": "2026-06-06",
     "tasksCompleted": 0,
-    "highlight": "Donnerstag: Vierter Pause-Tag, Atomic Habits gelesen, Cron läuft",
+    "highlight": "Samstag: Sechster Pause-Tag, Cron läuft stabil",
     "cashflowUnlocked": "0€",
-    "biggestWin": "Stabile Pause gehalten — vier Tage am Stück"
+    "biggestWin": "Sechs Tage Pause am Stück — System respektiert Rhythmus"
   },
   "todayFocus": {
-    "mainEvent": "🚀 Freitag Mittag: Dashboard-Update v5.4.188",
+    "mainEvent": "🚀 Sonntag Nacht: Dashboard-Update v5.5.3",
     "preparation": "Giang entscheidet den Flow",
     "followUp": "Keine automatischen Aktionen nötig",
     "note": "Dashboard aktualisiert, Cron läuft im Hintergrund"
   },
   "updateHistory": [
+    "v5.5.3 — 2026-06-07 00:04 — Nacht-Update (Sonntag, Cron-Lauf)",
+    "v5.5.2 — 2026-06-06 14:04 — Nachmittags-Update (Samstag, Cron-Lauf)",
     "v5.4.188 — 2026-06-05 12:04 — Mittag-Update (Freitag, Cron-Lauf)",
     "v5.4.187 — 2026-06-05 08:04 — Früh-Update (Freitag, Cron-Lauf)",
     "v5.4.186 — 2026-06-05 04:04 — Früh-Update (Freitag, Cron-Lauf)",
@@ -162,9 +164,7 @@
     "v5.4.183 — 2026-06-04 20:04 — Abend-Update (Donnerstag, Cron-Lauf)",
     "v5.4.182 — 2026-06-04 04:04 — Früh-Update (Donnerstag, Cron-Lauf)",
     "v5.4.181 — 2026-06-04 00:04 — Nachts-Update (Mittwoch → Donnerstag)",
-    "v5.4.180 — 2026-06-03 20:04 — Abend-Update (Mittwoch, Cron-Konflikt)",
-    "v5.4.179 — 2026-06-03 14:04 — Nachmittags-Update (Reactiv Mode)",
-    "v5.4.178 — 2026-06-03 12:04 — Mittags-Update"
+    "v5.4.180 — 2026-06-03 20:04 — Abend-Update (Mittwoch, Cron-Konflikt)"
   ],
   "reactiveMode": {
     "enabled": true,
