@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>venture-ctrl | Dashboard v5.5.2</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0a0a0f;
+            --bg-secondary: #12121a;
+            --bg-tertiary: #1a1a25;
+            --accent-cyan: #00d4ff;
+            --accent-purple: #8b5cf6;
+            --accent-orange: #f97316;
+            --accent-red: #ef4444;
+            --accent-green: #22c55e;
+            --accent-yellow: #eab308;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            --border-color: #27273a;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 24px;
+        }
+        
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 32px;
+        }
+        
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        
+        .brand-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 700;
+        }
+        
+        .brand-text h1 {
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+        
+        .brand-text span {
+            color: var(--accent-cyan);
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        .meta {
+            text-align: right;
+        }
+        
+        .meta .date {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+        
+        .meta .version {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+        
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+        
+        .stat-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 20px;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-2px);
+            border-color: var(--accent-cyan);
+        }
+        
+        .stat-card.critical {
+            border-color: var(--accent-red);
+        }
+        
+        .stat-card.warning {
+            border-color: var(--accent-orange);
+        }
+        
+        .stat-card.success {
+            border-color: var(--accent-green);
+        }
+        
+        .stat-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 12px;
+        }
+        
+        .stat-label {
+            font-size: 13px;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .stat-icon {
+            font-size: 20px;
+        }
+        
+        .stat-value {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+        
+        .stat-subtitle {
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+        
+        /* Two Column Layout */
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-bottom: 32px;
+        }
+        
+        @media (max-width: 900px) {
+            .two-column {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .panel {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        
+        .panel-header {
+            padding: 16px 20px;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .panel-title {
+            font-size: 16px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .panel-content {
+            padding: 20px;
+        }
+        
+        /* Task List */
+        .task-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .task-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 16px;
+            background: var(--bg-tertiary);
+            border-radius: 8px;
+            border-left: 3px solid transparent;
+            transition: all 0.2s;
+        }
+        
+        .task-item:hover {
+            background: var(--border-color);
+        }
+        
+        .task-item.completed {
+            border-left-color: var(--accent-green);
+            opacity: 0.7;
+        }
+        
+        .task-item.open {
+            border-left-color: var(--accent-orange);
+        }
+        
+        .task-item.critical {
+            border-left-color: var(--accent-red);
+        }
+        
+        .task-checkbox {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+        }
+        
+        .task-item.completed .task-checkbox {
+            background: var(--accent-green);
+        }
+        
+        .task-item.open .task-checkbox,
+        .task-item.critical .task-checkbox {
+            border: 2px solid var(--text-muted);
+        }
+        
+        .task-content {
+            flex: 1;
+        }
+        
+        .task-name {
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        .task-item.completed .task-name {
+            text-decoration: line-through;
+            color: var(--text-muted);
+        }
+        
+        .task-meta {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-top: 2px;
+        }
+        
+        .task-badge {
+            font-size: 11px;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+        
+        .badge-critical {
+            background: rgba(239, 68, 68, 0.2);
+            color: var(--accent-red);
+        }
+        
+        .badge-overdue {
+            background: rgba(249, 115, 22, 0.2);
+            color: var(--accent-orange);
+        }
+        
+        .badge-completed {
+            background: rgba(34, 197, 94, 0.2);
+            color: var(--accent-green);
+        }
+        
+        /* Overdue List */
+        .overdue-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .overdue-item:last-child {
+            border-bottom: none;
+        }
+        
+        .overdue-info {
+            flex: 1;
+        }
+        
+        .overdue-name {
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 4px;
+        }
+        
+        .overdue-type {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+        
+        .overdue-days {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--accent-red);
+        }
+        
+        /* Patterns */
+        .pattern-item {
+            padding: 16px;
+            background: var(--bg-tertiary);
+            border-radius: 8px;
+            margin-bottom: 12px;
+        }
+        
+        .pattern-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .pattern-name {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--accent-cyan);
+            margin-bottom: 4px;
+        }
+        
+        .pattern-desc {
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+        
+        /* Weekly Summary */
+        .weekly-bar {
+            height: 8px;
+            background: var(--bg-tertiary);
+            border-radius: 4px;
+            overflow: hidden;
+            margin: 16px 0;
+        }
+        
+        .weekly-progress {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent-cyan), var(--accent-purple));
+            border-radius: 4px;
+            transition: width 0.5s ease;
+        }
+        
+        .weekly-stats {
+            display: flex;
+            justify-content: space-between;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 32px 0;
+            border-top: 1px solid var(--border-color);
+            margin-top: 48px;
+        }
+        
+        footer p {
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+        
+        /* Animations */
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.6; }
+        }
+        
+        .pulse {
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-in {
+            animation: slideIn 0.4s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="brand">
+                <div class="brand-icon">VC</div>
+                <div class="brand-text">
+                    <h1>venture-ctrl</h1>
+                    <span>Dashboard v5.5.2 • KW 23</span>
+                </div>
+            </div>
+            <div class="meta">
+                <div class="date">Samstag, 6. Juni 2026 • 14:04 Uhr</div>
+                <div class="version">Last updated: just now</div>
+            </div>
+        </header>
+
+        <!-- Stats Grid -->
+        <div class="stats-grid">
+            <div class="stat-card warning animate-in">
+                <div class="stat-header">
+                    <span class="stat-label">Heute Erledigt</span>
+                    <span class="stat-icon">📊</span>
+                </div>
+                <div class="stat-value" style="color: var(--accent-orange);">0/7</div>
+                <div class="stat-subtitle">0% Erfolgsrate (Wochenende)</div>
+            </div>
+            
+            <div class="stat-card critical animate-in" style="animation-delay: 0.1s;">
+                <div class="stat-header">
+                    <span class="stat-label">Kritisch Überfällig</span>
+                    <span class="stat-icon">🔥</span>
+                </div>
+                <div class="stat-value" style="color: var(--accent-red);">54</div>
+                <div class="stat-subtitle">NOMU Tage überfällig</div>
+            </div>
+            
+            <div class="stat-card warning animate-in" style="animation-delay: 0.2s;">
+                <div class="stat-header">
+                    <span class="stat-label">Weitere Überfällig</span>
+                    <span class="stat-icon">⚠️</span>
+                </div>
+                <div class="stat-value" style="color: var(--accent-orange);">4</div>
+                <div class="stat-subtitle">14+ Tage überfällig</div>
+            </div>
+            
+            <div class="stat-card animate-in" style="animation-delay: 0.3s;">
+                <div class="stat-header">
+                    <span class="stat-label">KW 23 Erfolg</span>
+                    <span class="stat-icon">📈</span>
+                </div>
+                <div class="stat-value" style="color: var(--text-secondary);">12.5%</div>
+                <div class="stat-subtitle">1/8 Tasks</div>
+            </div>
+        </div>
+
+        <!-- Two Column: Today's Tasks & Critical -->
+        <div class="two-column">
+            <div class="panel">
+                <div class="panel-header">
+                    <div class="panel-title">
+                        <span>📋</span>
+                        Heutige Tasks (Samstag)
+                    </div>
+                    <span class="task-badge badge-overdue">7 Open</span>
+                </div>
+                <div class="panel-content">
+                    <div class="task-list">
+                        <div class="task-item open">
+                            <div class="task-checkbox"></div>
+                            <div class="task-content">
+                                <div class="task-name">Musterkarten raussuchen</div>
+                                <div class="task-meta">Hiro Sakao Karten Projekt</div>
+                            </div>
+                        </div>
+                        <div class="task-item open">
+                            <div class="task-checkbox"></div>
+                            <div class="task-content">
+                                <div class="task-name">Konkrete Preproduction</div>
+                                <div class="task-meta">Wittmann</div>
+                            </div>
+                        </div>
+                        <div class="task-item open">
+                            <div class="task-checkbox"></div>
+                            <div class="task-content">
+                                <div class="task-name">Golf Footgolfvideo UGC</div>
+                                <div class="task-meta">Golf</div>
+                            </div>
+                        </div>
+                        <div class="task-item open">
+                            <div class="task-checkbox"></div>
+                            <div class="task-content">
+                                <div class="task-name">Golfplatz video TC</div>
+                                <div class="task-meta">Tough Cookie</div>
+                            </div>
+                        </div>
+                        <div class="task-item open">
+                            <div class="task-checkbox"></div>
+                            <div class="task-content">
+                                <div class="task-name">Niku Fernseher AD</div>
+                                <div class="task-meta">Niku</div>
+                            </div>
+                        </div>
+                        <div class="task-item open">
+                            <div class="task-checkbox"></div>
+                            <div class="task-content">
+                                <div class="task-name">Verträge</div>
+                                <div class="task-meta">Admin</div>
+                            </div>
+                        </div>
+                        <div class="task-item open">
+                            <div class="task-checkbox"></div>
+                            <div class="task-content">
+                                <div class="task-name">Stories für Kinchia</div>
+                                <div class="task-meta">Kinchia</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="panel">
+                <div class="panel-header">
+                    <div class="panel-title">
+                        <span>🔥</span>
+                        Kritische Überfälligkeit
+                    </div>
+                    <span class="task-badge badge-critical">2 Tasks</span>
+                </div>
+                <div class="panel-content">
+                    <div class="overdue-item">
+                        <div class="overdue-info">
+                            <div class="overdue-name">NOMU Post-Production</div>
+                            <div class="overdue-type">Post-Production • KRITISCH</div>
+                        </div>
+                        <div class="overdue-days">54</div>
+                    </div>
+                    <div class="overdue-item">
+                        <div class="overdue-info">
+                            <div class="overdue-name">Japanese Pancake Post-Production</div>
+                            <div class="overdue-type">Post-Production • Kunde wartet</div>
+                        </div>
+                        <div class="overdue-days">14</div>
+                    </div>
+                    <div style="margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--border-color);">
+                        <div class="panel-title" style="margin-bottom: 12px;">
+                            <span>⚠️</span>
+                            Weitere überfällig
+                        </div>
+                        <div class="overdue-item">
+                            <div class="overdue-info">
+                                <div class="overdue-name">Little Hero Call</div>
+                                <div class="overdue-type">Call • 14 Tage</div>
+                            </div>
+                        </div>
+                        <div class="overdue-item">
+                            <div class="overdue-info">
+                                <div class="overdue-name">Anju CI-Design</div>
+                                <div class="overdue-type">Design • 14 Tage</div>
+                            </div>
+                        </div>
+                        <div class="overdue-item">
+                            <div class="overdue-info">
+                                <div class="overdue-name">Sentai Post-Production</div>
+                                <div class="overdue-type">Post-Production • 14 Tage</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Two Column: Patterns & Weekly -->
+        <div class="two-column">
+            <div class="panel">
+                <div class="panel-header">
+                    <div class="panel-title">
+                        <span>🧠</span>
+                        Erkannte Patterns
+                    </div>
+                </div>
+                <div class="panel-content">
+                    <div class="pattern-item">
+                        <div class="pattern-name">Crash nach High</div>
+                        <div class="pattern-desc">Nach intensiver Woche folgt automatisch eine Pause-Woche. Beobachtet: KW 21 (73% Erfolg) → KW 22 (0% Erfolg)</div>
+                    </div>
+                    <div class="pattern-item">
+                        <div class="pattern-name">Post-Production = Prokrastination</div>
+                        <div class="pattern-desc">Post-Production wird immer verschoben, egal wie dringend. NOMU: 54 Tage, Japanese Pancake: 14 Tage</div>
+                    </div>
+                    <div class="pattern-item">
+                        <div class="pattern-name">Calls = Unangenehm</div>
+                        <div class="pattern-desc">Calls werden systematisch vermieden. Little Hero: 14 Tage überfällig.</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="panel">
+                <div class="panel-header">
+                    <div class="panel-title">
+                        <span>📅</span>
+                        Wochenübersicht KW 23
+                    </div>
+                </div>
+                <div class="panel-content">
+                    <div class="weekly-stats">
+                        <span>1/8 Tasks</span>
+                        <span style="color: var(--text-secondary);">12.5% Erfolgsrate</span>
+                    </div>
+                    <div class="weekly-bar">
+                        <div class="weekly-progress" style="width: 12.5%"></div>
+                    </div>
+                    <p style="font-size: 13px; color: var(--text-secondary); margin-top: 16px; line-height: 1.6;">
+                        KW 23 startete mit einem Task (Aimy Interieur Bilder) am Freitag. Samstag ist Wochenende-Modus. Reactiv Only aktiviert.
+                    </p>
+                    <div style="margin-top: 20px; padding: 16px; background: var(--bg-tertiary); border-radius: 8px;">
+                        <div style="font-size: 13px; color: var(--accent-cyan); font-weight: 600; margin-bottom: 8px;">
+                            🧠 Reactiv Only Mode
+                        </div>
+                        <div style="font-size: 13px; color: var(--text-secondary); line-height: 1.5;">
+                            Seit 2.6.2026 aktiv. Keine automatischen Erinnerungen. Dashboard läuft im Hintergrund. Giang entscheidet das Tempo.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>venture-ctrl Dashboard v5.5.2 • Built with data from Memory-Logs • Auto-updated every 4h</p>
+        </footer>
+    </div>
+    
+    <script>
+        // Animate numbers on load
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.stat-card');
+            cards.forEach((card, i) => {
+                setTimeout(() => {
+                    card.style.opacity = '0';
+                    card.style.transform = 'translateY(20px)';
+                    card.style.transition = 'all 0.5s ease';
+                    
+                    setTimeout(() => {
+                        card.style.opacity = '1';
+                        card.style.transform = 'translateY(0)';
+                    }, 50);
+                }, i * 100);
+            });
+        });
+    </script>
+</body>
+</html>

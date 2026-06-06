@@ -1,0 +1,57 @@
+{
+  "version": "v5.5.2",
+  "lastUpdated": "2026-06-06T12:04:00Z",
+  "week": "KW 23",
+  "mode": "REACTIV",
+  "summary": {
+    "tasksCompleted": 0,
+    "tasksTotal": 7,
+    "successRate": "0%",
+    "criticalOverdue": 2,
+    "highOverdue": 3
+  },
+  "today": {
+    "date": "2026-06-06",
+    "day": "Samstag",
+    "completed": 0,
+    "total": 7,
+    "tasks": [
+      {"id": 1, "name": "Musterkarten raussuchen", "project": "Hiro Sakao", "status": "open"},
+      {"id": 2, "name": "Konkrete Preproduction", "project": "Wittmann", "status": "open"},
+      {"id": 3, "name": "Golf Footgolfvideo UGC", "project": "Golf", "status": "open"},
+      {"id": 4, "name": "Golfplatz video TC", "project": "Tough Cookie", "status": "open"},
+      {"id": 5, "name": "Niku Fernseher AD", "project": "Niku", "status": "open"},
+      {"id": 6, "name": "Verträge", "project": "Admin", "status": "open"},
+      {"id": 7, "name": "Stories für Kinchia", "project": "Kinchia", "status": "open"}
+    ]
+  },
+  "critical": [
+    {"task": "NOMU Post-Production", "overdue": 53, "days": 53, "type": "post-production", "priority": "critical"},
+    {"task": "Japanese Pancake Post-Production", "overdue": 13, "days": 13, "type": "post-production", "priority": "critical"}
+  ],
+  "overdue": [
+    {"task": "Little Hero Call", "days": 13, "type": "call", "priority": "high"},
+    {"task": "Anju CI-Design", "days": 13, "type": "design", "priority": "high"},
+    {"task": "Sentai Post-Production", "days": 13, "type": "post-production", "priority": "high"}
+  ],
+  "patterns": [
+    {"name": "Crash nach High", "description": "Nach intensiver Woche folgt automatisch eine Pause-Woche", "status": "active"},
+    {"name": "Post-Production = Prokrastination", "description": "Post-Production wird immer verschoben", "status": "active"},
+    {"name": "Calls = Unangenehm", "description": "Calls werden systematisch vermieden", "status": "active"}
+  ],
+  "weekly": {
+    "week": "KW 23",
+    "completed": 1,
+    "planned": 8,
+    "successRate": "12.5%",
+    "notes": "Samstag Nachmittag - Reactiv Only Mode"
+  },
+  "history": [
+    {"date": "2026-06-06", "completed": 0, "total": 7},
+    {"date": "2026-06-05", "completed": 1, "total": 8},
+    {"date": "2026-06-04", "completed": 0, "total": 0},
+    {"date": "2026-06-03", "completed": 0, "total": 0},
+    {"date": "2026-06-02", "completed": 0, "total": 0},
+    {"date": "2026-06-01", "completed": 0, "total": 0}
+  ]
+}
