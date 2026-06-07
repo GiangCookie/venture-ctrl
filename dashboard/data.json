@@ -1,6 +1,6 @@
 {
-  "version": "v5.5.2",
-  "lastUpdated": "2026-06-07T06:05:00Z",
+  "version": "v5.5.3",
+  "lastUpdated": "2026-06-07T10:04:00Z",
   "week": "KW 23",
   "mode": "REACTIV",
   "summary": {
@@ -26,14 +26,14 @@
     ]
   },
   "critical": [
-    {"task": "NOMU Post-Production", "overdue": 56, "days": 56, "type": "post-production", "priority": "critical"},
-    {"task": "Japanese Pancake Post-Production", "overdue": 16, "days": 16, "type": "post-production", "priority": "critical"}
+    {"task": "NOMU Post-Production", "overdue": 60, "days": 60, "type": "post-production", "priority": "critical"},
+    {"task": "Japanese Pancake Post-Production", "overdue": 20, "days": 20, "type": "post-production", "priority": "critical"}
   ],
   "overdue": [
-    {"task": "Little Hero Call", "days": 16, "type": "call", "priority": "high"},
-    {"task": "Anju CI-Design", "days": 16, "type": "design", "priority": "high"},
-    {"task": "Sentai Post-Production", "days": 16, "type": "post-production", "priority": "high"},
-    {"task": "Aimy Interieur Bilder", "days": 2, "type": "design", "priority": "medium"}
+    {"task": "Little Hero Call", "days": 20, "type": "call", "priority": "high"},
+    {"task": "Anju CI-Design", "days": 20, "type": "design", "priority": "high"},
+    {"task": "Sentai Post-Production", "days": 20, "type": "post-production", "priority": "high"},
+    {"task": "Aimy Interieur Bilder", "days": 6, "type": "design", "priority": "medium"}
   ],
   "patterns": [
     {"name": "Crash nach High", "description": "Nach intensiver Woche folgt automatisch eine Pause-Woche", "status": "active"},
@@ -45,7 +45,7 @@
     "completed": 1,
     "planned": 8,
     "successRate": "12.5%",
-    "notes": "Sonntag - Reactiv Only Mode. Samstag keine Tasks erledigt."
+    "notes": "Sonntag - Reactiv Only Mode. Samstag keine Tasks erledigt. Aimy Interieur Fr erledigt."
   },
   "history": [
     {"date": "2026-06-07", "completed": 0, "total": 7},
