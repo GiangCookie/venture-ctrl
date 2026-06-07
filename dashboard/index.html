@@ -3,673 +3,455 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>venture-ctrl | Dashboard v5.5.3</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>VENTURE CTRL v5.5.5</title>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <style>
-        :root {
-            --bg-primary: #0a0a0f;
-            --bg-secondary: #12121a;
-            --bg-tertiary: #1a1a25;
-            --accent-cyan: #00d4ff;
-            --accent-purple: #8b5cf6;
-            --accent-orange: #f97316;
-            --accent-red: #ef4444;
-            --accent-green: #22c55e;
-            --accent-yellow: #eab308;
-            --text-primary: #f8fafc;
-            --text-secondary: #94a3b8;
-            --text-muted: #64748b;
-            --border-color: #27273a;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Inter', -apple-system, sans-serif;
-            background: var(--bg-primary);
-            color: var(--text-primary);
-            min-height: 100vh;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; 
+            background: #0a0a0f; 
+            color: #e0e0e0; 
+            padding: 20px;
             line-height: 1.6;
         }
-        
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 24px;
-        }
-        
-        /* Header */
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 0;
-            border-bottom: 1px solid var(--border-color);
-            margin-bottom: 32px;
-        }
-        
-        .brand {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-        }
-        
-        .brand-icon {
-            width: 48px;
-            height: 48px;
-            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            font-weight: 700;
-        }
-        
-        .brand-text h1 {
-            font-size: 24px;
-            font-weight: 700;
-            letter-spacing: -0.5px;
-        }
-        
-        .brand-text span {
-            color: var(--accent-cyan);
-            font-size: 14px;
-            font-weight: 500;
-        }
-        
-        .meta {
-            text-align: right;
-        }
-        
-        .meta .date {
-            font-size: 14px;
-            color: var(--text-secondary);
-        }
-        
-        .meta .version {
-            font-size: 12px;
-            color: var(--text-muted);
-            margin-top: 4px;
-        }
-        
-        /* Stats Grid */
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 16px;
-            margin-bottom: 32px;
-        }
-        
-        .stat-card {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 20px;
-            transition: transform 0.2s, border-color 0.2s;
-        }
-        
-        .stat-card:hover {
-            transform: translateY(-2px);
-            border-color: var(--accent-cyan);
-        }
-        
-        .stat-card.critical {
-            border-color: var(--accent-red);
-        }
-        
-        .stat-card.warning {
-            border-color: var(--accent-orange);
-        }
-        
-        .stat-card.success {
-            border-color: var(--accent-green);
-        }
-        
-        .stat-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 12px;
-        }
-        
-        .stat-label {
-            font-size: 13px;
-            color: var(--text-secondary);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        
-        .stat-icon {
-            font-size: 20px;
-        }
-        
-        .stat-value {
-            font-size: 32px;
-            font-weight: 700;
-            margin-bottom: 4px;
-        }
-        
-        .stat-subtitle {
-            font-size: 13px;
-            color: var(--text-muted);
-        }
-        
-        /* Two Column Layout */
-        .two-column {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 24px;
-            margin-bottom: 32px;
-        }
-        
-        @media (max-width: 900px) {
-            .two-column {
-                grid-template-columns: 1fr;
-            }
-        }
-        
-        .panel {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            overflow: hidden;
-        }
-        
-        .panel-header {
-            padding: 16px 20px;
-            border-bottom: 1px solid var(--border-color);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .panel-title {
-            font-size: 16px;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        
-        .panel-content {
-            padding: 20px;
-        }
-        
-        /* Task List */
-        .task-list {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-        
-        .task-item {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            padding: 12px 16px;
-            background: var(--bg-tertiary);
-            border-radius: 8px;
-            border-left: 3px solid transparent;
-            transition: all 0.2s;
-        }
-        
-        .task-item:hover {
-            background: var(--border-color);
-        }
-        
-        .task-item.completed {
-            border-left-color: var(--accent-green);
-            opacity: 0.7;
-        }
-        
-        .task-item.open {
-            border-left-color: var(--accent-orange);
-        }
-        
-        .task-item.critical {
-            border-left-color: var(--accent-red);
-        }
-        
-        .task-checkbox {
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 12px;
-        }
-        
-        .task-item.completed .task-checkbox {
-            background: var(--accent-green);
-        }
-        
-        .task-item.open .task-checkbox,
-        .task-item.critical .task-checkbox {
-            border: 2px solid var(--text-muted);
-        }
-        
-        .task-content {
-            flex: 1;
-        }
-        
-        .task-name {
-            font-size: 14px;
-            font-weight: 500;
-        }
-        
-        .task-item.completed .task-name {
-            text-decoration: line-through;
-            color: var(--text-muted);
-        }
-        
-        .task-meta {
-            font-size: 12px;
-            color: var(--text-muted);
-            margin-top: 2px;
-        }
-        
-        .task-badge {
-            font-size: 11px;
-            padding: 2px 8px;
-            border-radius: 4px;
-            font-weight: 600;
-        }
-        
-        .badge-critical {
-            background: rgba(239, 68, 68, 0.2);
-            color: var(--accent-red);
-        }
-        
-        .badge-overdue {
-            background: rgba(249, 115, 22, 0.2);
-            color: var(--accent-orange);
-        }
-        
-        .badge-completed {
-            background: rgba(34, 197, 94, 0.2);
-            color: var(--accent-green);
-        }
-        
-        /* Overdue List */
-        .overdue-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 12px 0;
-            border-bottom: 1px solid var(--border-color);
-        }
-        
-        .overdue-item:last-child {
-            border-bottom: none;
-        }
-        
-        .overdue-info {
-            flex: 1;
-        }
-        
-        .overdue-name {
-            font-size: 14px;
-            font-weight: 500;
-            margin-bottom: 4px;
-        }
-        
-        .overdue-type {
-            font-size: 12px;
-            color: var(--text-muted);
-        }
-        
-        .overdue-days {
-            font-size: 24px;
-            font-weight: 700;
-            color: var(--accent-red);
-        }
-        
-        /* Patterns */
-        .pattern-item {
-            padding: 16px;
-            background: var(--bg-tertiary);
-            border-radius: 8px;
-            margin-bottom: 12px;
-        }
-        
-        .pattern-item:last-child {
-            margin-bottom: 0;
-        }
-        
-        .pattern-name {
-            font-size: 14px;
-            font-weight: 600;
-            color: var(--accent-cyan);
-            margin-bottom: 4px;
-        }
-        
-        .pattern-desc {
-            font-size: 13px;
-            color: var(--text-secondary);
-        }
-        
-        /* Weekly Summary */
-        .weekly-bar {
-            height: 8px;
-            background: var(--bg-tertiary);
-            border-radius: 4px;
-            overflow: hidden;
-            margin: 16px 0;
-        }
-        
-        .weekly-progress {
-            height: 100%;
-            background: linear-gradient(90deg, var(--accent-cyan), var(--accent-purple));
-            border-radius: 4px;
-            transition: width 0.5s ease;
-        }
-        
-        .weekly-stats {
-            display: flex;
-            justify-content: space-between;
-            font-size: 13px;
-            color: var(--text-secondary);
-        }
-        
-        /* Footer */
-        footer {
+        .header { 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
+            padding: 25px; 
+            border-radius: 12px; 
+            margin-bottom: 25px;
             text-align: center;
-            padding: 32px 0;
-            border-top: 1px solid var(--border-color);
-            margin-top: 48px;
+            position: relative;
         }
-        
-        footer p {
-            font-size: 13px;
-            color: var(--text-muted);
+        .header h1 { font-size: 2.2rem; margin-bottom: 5px; color: white; }
+        .header p { color: rgba(255,255,255,0.8); }
+        .version-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
         }
-        
-        /* Animations */
+        .grid { display: grid; gap: 20px; grid-template-columns: 1fr; }
+        @media (min-width: 768px) {
+            .grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        .card { 
+            background: rgba(255,255,255,0.05); 
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 20px; 
+            border-radius: 10px;
+        }
+        .card h2 { color: #667eea; margin-bottom: 15px; font-size: 1.1rem; }
+        .stat-row { 
+            display: flex; 
+            justify-content: space-between; 
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        .stat-row:last-child { border-bottom: none; }
+        .stat-label { color: #888; }
+        .stat-value { font-weight: bold; }
+        .positive { color: #4ade80; }
+        .negative { color: #f87171; }
+        .warning { color: #fbbf24; }
+        .critical { color: #ef4444; font-weight: bold; }
+        .todo { 
+            padding: 12px; 
+            margin-bottom: 8px; 
+            border-radius: 8px;
+            border-left: 3px solid;
+            background: rgba(255,255,255,0.03);
+        }
+        .done { 
+            border-left-color: #22c55e; 
+            background: rgba(34, 197, 94, 0.08);
+        }
+        .urgent { border-left-color: #f87171; background: rgba(248, 113, 113, 0.08); }
+        .high { border-left-color: #fbbf24; background: rgba(251, 191, 36, 0.08); }
+        .normal { border-left-color: #60a5fa; }
+        .low { border-left-color: #9ca3af; }
+        .overdue { 
+            border-left-color: #ef4444; 
+            background: rgba(239, 68, 68, 0.15);
+            animation: pulse 2s infinite;
+        }
+        .extreme {
+            border: 2px solid #ef4444;
+            background: rgba(239, 68, 68, 0.25);
+            animation: pulse 1.5s infinite;
+        }
         @keyframes pulse {
             0%, 100% { opacity: 1; }
-            50% { opacity: 0.6; }
+            50% { opacity: 0.8; }
         }
-        
-        .pulse {
-            animation: pulse 2s ease-in-out infinite;
+        .deal { 
+            display: flex; 
+            justify-content: space-between; 
+            padding: 10px;
+            margin-bottom: 6px;
+            border-radius: 6px;
+            background: rgba(255,255,255,0.03);
         }
-        
-        @keyframes slideIn {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .stage { padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; }
+        .won { background: rgba(74,222,128,0.2); color: #4ade80; }
+        .pitch { background: rgba(251,191,36,0.2); color: #fbbf24; }
+        .lead { background: rgba(96,165,250,0.2); color: #60a5fa; }
+        .gamechanger { background: rgba(139, 92, 246, 0.2); color: #a78bfa; }
+        .meta { color: #666; font-size: 0.8rem; margin-top: 20px; text-align: center; }
+        .highlight { background: rgba(102, 126, 234, 0.1); padding: 8px 12px; border-radius: 6px; margin-bottom: 10px; }
+        .overdue-days {
+            background: #ef4444;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 0.7rem;
+            margin-left: 8px;
         }
-        
-        .animate-in {
-            animation: slideIn 0.4s ease-out;
+        .extreme-days {
+            background: #7f1d1d;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 0.7rem;
+            margin-left: 8px;
+            font-weight: bold;
+        }
+        .masterplan-box {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+            border: 1px solid rgba(102, 126, 234, 0.3);
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        .masterplan-box h3 {
+            color: #667eea;
+            margin-bottom: 8px;
+        }
+        .target-value {
+            color: #4ade80;
+            font-weight: bold;
+        }
+        .success-banner {
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.2), rgba(22, 163, 74, 0.3));
+            border: 2px solid #22c55e;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .success-banner h3 {
+            color: #4ade80;
+            margin-bottom: 5px;
+        }
+        .success-banner p {
+            color: #86efac;
+        }
+        .alert-banner {
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0.2), rgba(127, 29, 29, 0.3));
+            border: 2px solid #ef4444;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .alert-banner h3 {
+            color: #fca5a5;
+            margin-bottom: 5px;
+        }
+        .kw23-banner {
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.3), rgba(102, 126, 234, 0.3));
+            border: 2px solid #4ade80;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .kw23-banner h3 {
+            color: #4ade80;
+            margin-bottom: 5px;
+        }
+        .kw23-banner p {
+            color: #86efac;
+        }
+        .timestamp {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            color: #888;
+            margin-top: 5px;
+        }
+        .achievement-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #22c55e, #4ade80);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            margin: 3px;
+        }
+        .weekend-banner {
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(124, 58, 237, 0.3));
+            border: 2px solid #a78bfa;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .weekend-banner h3 {
+            color: #a78bfa;
+            margin-bottom: 5px;
+        }
+        .weekend-banner p {
+            color: #c4b5fd;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <div class="brand">
-                <div class="brand-icon">VC</div>
-                <div class="brand-text">
-                    <h1>venture-ctrl</h1>
-                    <span>Dashboard v5.5.3 • KW 23</span>
-                </div>
-            </div>
-            <div class="meta">
-                <div class="date">Sonntag, 7. Juni 2026 • 10:04 Uhr</div>
-                <div class="version">Last updated: just now</div>
-            </div>
-        </header>
-
-        <!-- Stats Grid -->
-        <div class="stats-grid">
-            <div class="stat-card warning animate-in">
-                <div class="stat-header">
-                    <span class="stat-label">Heute Erledigt</span>
-                    <span class="stat-icon">📊</span>
-                </div>
-                <div class="stat-value" style="color: var(--accent-orange);">0/7</div>
-                <div class="stat-subtitle">0% Erfolgsrate (Wochenende)</div>
-            </div>
-            
-            <div class="stat-card critical animate-in" style="animation-delay: 0.1s;">
-                <div class="stat-header">
-                    <span class="stat-label">Kritisch Überfällig</span>
-                    <span class="stat-icon">🔥</span>
-                </div>
-                <div class="stat-value" style="color: var(--accent-red);">60</div>
-                <div class="stat-subtitle">NOMU Tage überfällig</div>
-            </div>
-            
-            <div class="stat-card warning animate-in" style="animation-delay: 0.2s;">
-                <div class="stat-header">
-                    <span class="stat-label">Weitere Überfällig</span>
-                    <span class="stat-icon">⚠️</span>
-                </div>
-                <div class="stat-value" style="color: var(--accent-orange);">4</div>
-                <div class="stat-subtitle">15+ Tage überfällig</div>
-            </div>
-            
-            <div class="stat-card animate-in" style="animation-delay: 0.3s;">
-                <div class="stat-header">
-                    <span class="stat-label">KW 23 Erfolg</span>
-                    <span class="stat-icon">📈</span>
-                </div>
-                <div class="stat-value" style="color: var(--text-secondary);">12.5%</div>
-                <div class="stat-subtitle">1/8 Tasks</div>
-            </div>
-        </div>
-
-        <!-- Two Column: Today's Tasks & Critical -->
-        <div class="two-column">
-            <div class="panel">
-                <div class="panel-header">
-                    <div class="panel-title">
-                        <span>📋</span>
-                        Heutige Tasks (Sonntag)
-                    </div>
-                    <span class="task-badge badge-overdue">7 Open</span>
-                </div>
-                <div class="panel-content">
-                    <div class="task-list">
-                        <div class="task-item open">
-                            <div class="task-checkbox"></div>
-                            <div class="task-content">
-                                <div class="task-name">Musterkarten raussuchen</div>
-                                <div class="task-meta">Hiro Sakao Karten Projekt</div>
-                            </div>
-                        </div>
-                        <div class="task-item open">
-                            <div class="task-checkbox"></div>
-                            <div class="task-content">
-                                <div class="task-name">Konkrete Preproduction</div>
-                                <div class="task-meta">Wittmann</div>
-                            </div>
-                        </div>
-                        <div class="task-item open">
-                            <div class="task-checkbox"></div>
-                            <div class="task-content">
-                                <div class="task-name">Golf Footgolfvideo UGC</div>
-                                <div class="task-meta">Golf</div>
-                            </div>
-                        </div>
-                        <div class="task-item open">
-                            <div class="task-checkbox"></div>
-                            <div class="task-content">
-                                <div class="task-name">Golfplatz video TC</div>
-                                <div class="task-meta">Tough Cookie</div>
-                            </div>
-                        </div>
-                        <div class="task-item open">
-                            <div class="task-checkbox"></div>
-                            <div class="task-content">
-                                <div class="task-name">Niku Fernseher AD</div>
-                                <div class="task-meta">Niku</div>
-                            </div>
-                        </div>
-                        <div class="task-item open">
-                            <div class="task-checkbox"></div>
-                            <div class="task-content">
-                                <div class="task-name">Verträge</div>
-                                <div class="task-meta">Admin</div>
-                            </div>
-                        </div>
-                        <div class="task-item open">
-                            <div class="task-checkbox"></div>
-                            <div class="task-content">
-                                <div class="task-name">Stories für Kinchia</div>
-                                <div class="task-meta">Kinchia</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="panel">
-                <div class="panel-header">
-                    <div class="panel-title">
-                        <span>🔥</span>
-                        Kritische Überfälligkeit
-                    </div>
-                    <span class="task-badge badge-critical">2 Tasks</span>
-                </div>
-                <div class="panel-content">
-                    <div class="overdue-item">
-                        <div class="overdue-info">
-                            <div class="overdue-name">NOMU Post-Production</div>
-                            <div class="overdue-type">Post-Production • KRITISCH</div>
-                        </div>
-                        <div class="overdue-days">60</div>
-                    </div>
-                    <div class="overdue-item">
-                        <div class="overdue-info">
-                            <div class="overdue-name">Japanese Pancake Post-Production</div>
-                            <div class="overdue-type">Post-Production • Kunde wartet</div>
-                        </div>
-                        <div class="overdue-days">16</div>
-                    </div>
-                    <div style="margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--border-color);">
-                        <div class="panel-title" style="margin-bottom: 12px;">
-                            <span>⚠️</span>
-                            Weitere überfällig
-                        </div>
-                        <div class="overdue-item">
-                            <div class="overdue-info">
-                                <div class="overdue-name">Little Hero Call</div>
-                                <div class="overdue-type">Call • 20 Tage</div>
-                            </div>
-                        </div>
-                        <div class="overdue-item">
-                            <div class="overdue-info">
-                                <div class="overdue-name">Anju CI-Design</div>
-                                <div class="overdue-type">Design • 20 Tage</div>
-                            </div>
-                        </div>
-                        <div class="overdue-item">
-                            <div class="overdue-info">
-                                <div class="overdue-name">Sentai Post-Production</div>
-                                <div class="overdue-type">Post-Production • 20 Tage</div>
-                            </div>
-                        </div>
-                        <div class="overdue-item">
-                            <div class="overdue-info">
-                                <div class="overdue-name">Aimy Interieur Bilder</div>
-                                <div class="overdue-type">Design • 6 Tage (Fr erledigt?)</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Two Column: Patterns & Weekly -->
-        <div class="two-column">
-            <div class="panel">
-                <div class="panel-header">
-                    <div class="panel-title">
-                        <span>🧠</span>
-                        Erkannte Patterns
-                    </div>
-                </div>
-                <div class="panel-content">
-                    <div class="pattern-item">
-                        <div class="pattern-name">Crash nach High</div>
-                        <div class="pattern-desc">Nach intensiver Woche folgt automatisch eine Pause-Woche. Beobachtet: KW 21 (73% Erfolg) → KW 22 (0% Erfolg)</div>
-                    </div>
-                    <div class="pattern-item">
-                        <div class="pattern-name">Post-Production = Prokrastination</div>
-                        <div class="pattern-desc">Post-Production wird immer verschoben, egal wie dringend. NOMU: 60 Tage, Japanese Pancake: 20 Tage</div>
-                    </div>
-                    <div class="pattern-item">
-                        <div class="pattern-name">Calls = Unangenehm</div>
-                        <div class="pattern-desc">Calls werden systematisch vermieden. Little Hero: 20 Tage überfällig.</div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="panel">
-                <div class="panel-header">
-                    <div class="panel-title">
-                        <span>📅</span>
-                        Wochenübersicht KW 23
-                    </div>
-                </div>
-                <div class="panel-content">
-                    <div class="weekly-stats">
-                        <span>1/8 Tasks</span>
-                        <span style="color: var(--text-secondary);">12.5% Erfolgsrate</span>
-                    </div>
-                    <div class="weekly-bar">
-                        <div class="weekly-progress" style="width: 12.5%"></div>
-                    </div>
-                    <p style="font-size: 13px; color: var(--text-secondary); margin-top: 16px; line-height: 1.6;">
-                        KW 23 startete mit einem Task (Aimy Interieur Bilder) am Freitag. Samstag/Sonntag Wochenende. Reactiv Only aktiviert.
-                    </p>
-                    <div style="margin-top: 20px; padding: 16px; background: var(--bg-tertiary); border-radius: 8px;">
-                        <div style="font-size: 13px; color: var(--accent-cyan); font-weight: 600; margin-bottom: 8px;">
-                            🧠 Reactiv Only Mode
-                        </div>
-                        <div style="font-size: 13px; color: var(--text-secondary); line-height: 1.5;">
-                            Seit 2.6.2026 aktiv. Keine automatischen Erinnerungen. Dashboard läuft im Hintergrund. Giang entscheidet das Tempo.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <footer>
-            <p>venture-ctrl Dashboard v5.5.3 • Built with data from Memory-Logs • Auto-updated every 4h</p>
-        </footer>
+    <div class="header">
+        <span class="version-badge">v5.5.5</span>
+        <h1>🚀 VENTURE CTRL</h1>
+        <p>Dashboard Update: Sonntag, 7. Juni 2026, 14:04 Uhr · Reactiv Mode</p>
     </div>
-    
-    <script>
-        // Animate numbers on load
-        document.addEventListener('DOMContentLoaded', () => {
-            const cards = document.querySelectorAll('.stat-card');
-            cards.forEach((card, i) => {
-                setTimeout(() => {
-                    card.style.opacity = '0';
-                    card.style.transform = 'translateY(20px)';
-                    card.style.transition = 'all 0.5s ease';
-                    
-                    setTimeout(() => {
-                        card.style.opacity = '1';
-                        card.style.transform = 'translateY(0)';
-                    }, 50);
-                }, i * 100);
-            });
-        });
-    </script>
+
+    <!-- KW23 Finale Banner -->
+    <div class="weekend-banner">
+        <h3>🌅 KW 23 FINALE — REACTIV ONLY MODE</h3>
+        <p>Sonntag, 7. Juni 2026. 1/8 Tasks diese Woche (12.5%). Pause akzeptieren, KW 24 plant sich neu. 🎯</p>
+    </div>
+
+    <div class="grid">
+        <!-- Stats -->
+        <div class="card">
+            <h2>📊 ÜBERSICHT</h2>
+            <div class="stat-row">
+                <span class="stat-label">🔴 Kritische Tasks:</span>
+                <span class="stat-value critical">2</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">🟡 Wichtige Tasks:</span>
+                <span class="stat-value warning">2</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">💰 Aktuelles Einkommen:</span>
+                <span class="stat-value">2.1k€</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">🤝 Active Deals:</span>
+                <span class="stat-value">13</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">📅 Wochentag:</span>
+                <span class="stat-value">Sonntag (KW 23 Finale)</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">⚡ Status:</span>
+                <span class="stat-value positive">REACTIV ONLY</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">🎯 KW 23:</span>
+                <span class="stat-value warning">1/8 Tasks (12.5%)</span>
+            </div>
+        </div>
+
+        <!-- Achievements -->
+        <div class="card">
+            <h2>🏆 LETZTE ERfolge</h2>
+            <div style="display: flex; flex-wrap: wrap; gap: 5px;">
+                <span class="achievement-badge">🏆 KW 22 Pause</span>
+                <span class="achievement-badge">✅ KW 23 Start</span>
+                <span class="achievement-badge">🎬 Sentai Dreh</span>
+                <span class="achievement-badge">💰 Jidai Rechnung</span>
+            </div>
+            <p style="color: #888; font-size: 0.85rem; margin-top: 10px;">
+                📊 <strong>KW 21: 8 SIEGE</strong> — jetzt KW 23: NOMU Crush Time!
+            </p>
+        </div>
+
+        <!-- Critical Blocker -->
+        <div class="card" style="grid-column: 1 / -1;">
+            <h2>🔥 KRITISCHE ÜBERFÄLLIGKEIT</h2>
+            <div class="todo extreme">
+                <strong>🎬 NOMU Post-Production</strong>
+                <span class="extreme-days">60 TAGE</span>
+                <br><small style="color: #fca5a5;">🔴 DER BROCKEN — Giang entscheidet wann</small>
+            </div>
+            <div class="todo extreme">
+                <strong>🎬 Japanese Pancake Post-Production</strong>
+                <span class="extreme-days">20 TAGE</span>
+                <br><small style="color: #fca5a5;">🔴 Kunde wartet</small>
+            </div>
+            <div class="todo overdue">
+                <strong>📞 Little Hero Call</strong>
+                <span class="overdue-days">20 TAGE</span>
+                <br><small style="color: #fca5a5;">🟡 Call</small>
+            </div>
+            <div class="todo overdue">
+                <strong>🎨 Anju CI-Design</strong>
+                <span class="overdue-days">20 TAGE</span>
+                <br><small style="color: #fca5a5;">🟡 Design</small>
+            </div>
+            <div class="todo overdue">
+                <strong>🎬 Sentai Post-Production</strong>
+                <span class="overdue-days">20 TAGE</span>
+                <br><small style="color: #fca5a5;">🟡 Post-Pro</small>
+            </div>
+            <p style="color: #fbbf24; font-size: 0.9rem; margin-top: 10px; text-align: center;">
+                🎯 Reactiv Only — Keine automatischen Erinnerungen. Giang hat die Kontrolle.
+            </p>
+        </div>
+
+        <!-- Open Tasks -->
+        <div class="card" style="grid-column: 1 / -1;">
+            <h2>🔴 HEUTIGE TASKS (Sonntag, 7.6.)</h2>
+            
+            <div class="todo high">
+                <strong>🎴 Musterkarten raussuchen</strong>
+                <span style="background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%); color: white; padding: 2px 10px; border-radius: 12px; font-size: 0.7rem;">OFFEN</span>
+                <br><small style="color: #fbbf24;">📋 Hiro Sakao</small>
+            </div>
+
+            <div class="todo high">
+                <strong>🎬 Konkrete Preproduction</strong>
+                <span style="background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%); color: white; padding: 2px 10px; border-radius: 12px; font-size: 0.7rem;">OFFEN</span>
+                <br><small style="color: #fbbf24;">📋 Wittmann</small>
+            </div>
+
+            <div class="todo high">
+                <strong>⛳ Golf Footgolfvideo UGC</strong>
+                <span style="background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%); color: white; padding: 2px 10px; border-radius: 12px; font-size: 0.7rem;">OFFEN</span>
+                <br><small style="color: #fbbf24;">📋 Golf</small>
+            </div>
+
+            <div class="todo high">
+                <strong>⛳ Golfplatz video TC</strong>
+                <span style="background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%); color: white; padding: 2px 10px; border-radius: 12px; font-size: 0.7rem;">OFFEN</span>
+                <br><small style="color: #fbbf24;">📋 Tough Cookie</small>
+            </div>
+
+            <div class="todo high">
+                <strong>📺 Niku Fernseher AD</strong>
+                <span style="background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%); color: white; padding: 2px 10px; border-radius: 12px; font-size: 0.7rem;">OFFEN</span>
+                <br><small style="color: #fbbf24;">📋 Niku</small>
+            </div>
+
+            <div class="todo high">
+                <strong>📝 Verträge</strong>
+                <span style="background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%); color: white; padding: 2px 10px; border-radius: 12px; font-size: 0.7rem;">OFFEN</span>
+                <br><small style="color: #fbbf24;">📋 Admin</small>
+            </div>
+
+            <div class="todo high">
+                <strong>📱 Stories für Kinchia</strong>
+                <span style="background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%); color: white; padding: 2px 10px; border-radius: 12px; font-size: 0.7rem;">OFFEN</span>
+                <br><small style="color: #fbbf24;">📋 Kinchia</small>
+            </div>
+        </div>
+
+        <!-- Completed Tasks -->
+        <div class="card" style="grid-column: 1 / -1;">
+            <h2 style="color: #22c55e;">✅ KW 23 ERLEDIGT (1 Task)</h2>
+            
+            <div class="todo done">
+                <strong>🖼️ Aimy Interieur Bilder bearbeiten</strong>
+                <br><small style="color: #86efac;">✅ Erledigt am Freitag, 5.6.</small>
+            </div>
+            
+            <p style="color: #888; font-size: 0.85rem; margin-top: 10px;">
+                📊 <strong>KW 23: 1/8 Tasks = 12.5%</strong> — Reactiv Mode akzeptiert
+            </p>
+        </div>
+
+        <!-- Deals -->
+        <div class="card">
+            <h2>🤝 DEALS</h2>
+            
+            <div class="deal" style="border: 2px solid #22c55e;">
+                <div>
+                    <strong>🏨 Armando Hotelkette</strong>
+                    <br><small style="color: #4ade80; font-weight: bold;">3.500€/Monat — ✅ ABGESCHICKT!</small>
+                </div>
+                <span class="stage won">🎉 PITCH GESENDET</span>
+            </div>
+
+            <div class="deal">
+                <div>
+                    <strong>Kyberg Export (Onkel)</strong>
+                    <br><small style="color: #a78bfa;">10 Mio Pharma + 3 Mio NEM</small>
+                </div>
+                <span class="stage gamechanger">GAME CHANGER</span>
+            </div>
+
+            <div class="deal">
+                <div>
+                    <strong>Sentai/Zentai</strong>
+                    <br><small style="color: #888;">5.000€ — Nur für Tough Cookie</small>
+                </div>
+                <span class="stage won">WON</span>
+            </div>
+        </div>
+
+        <!-- Insights -->
+        <div class="card">
+            <h2>💡 INSIGHTS</h2>
+            <div class="masterplan-box">
+                <p style="color: #f87171; margin-bottom: 10px;"><strong>🎯 KW 23:</strong> 1/8 Tasks (12.5%) — Crash nach intensiver KW 21</p>
+                <p style="color: #fbbf24; margin-bottom: 10px;"><strong>🔴 Pattern:</strong> Crash nach High — Pause-Woche nach intensiver Woche</p>
+                <p style="color: #4ade80;"><strong>🚀 KW 24:</strong> Morgen startet eine neue Chance — reaktiv entscheiden</p>
+            </div>
+        </div>
+
+        <!-- Quick Wins -->
+        <div class="card" style="grid-column: 1 / -1;">
+            <h2 style="color: #a78bfa;">⚡ Wochenend-Modus</h2>
+            <div class="masterplan-box" style="border-color: #a78bfa;">
+                <p style="color: #a78bfa; text-align: center; margin-bottom: 15px;">
+                    <strong>🌅 Sonntag Nachmittag — Reactiv Only</strong>
+                </p>
+                <div class="stat-row" style="border-left: 3px solid #a78bfa; padding-left: 10px; background: rgba(139,92,246,0.1);">
+                    <span class="stat-label"><strong>📵 Kein automatischer Druck</strong></span>
+                    <span style="color: #a78bfa;">Reactiv Mode</span>
+                </div>
+                <div class="stat-row" style="border-left: 3px solid #a78bfa; padding-left: 10px; background: rgba(139,92,246,0.1);">
+                    <span class="stat-label"><strong>🎯 KW 23: 1/8 Tasks</strong></span>
+                    <span style="color: #a78bfa;">12.5%</span>
+                </div>
+                <div class="stat-row" style="border-left: 3px solid #22c55e; padding-left: 10px; background: rgba(34,197,94,0.1);">
+                    <span class="stat-label"><strong>🌟 Morgen: KW 24</strong></span>
+                    <span style="color: #4ade80;">Neustart</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recent Updates -->
+        <div class="card" style="grid-column: 1 / -1;">
+            <h2>📝 LETZTE UPDATES</h2>
+            <div class="stat-row">
+                <span class="stat-label timestamp">14:04 So</span>
+                <span style="font-size: 0.9rem; color: #4ade80;"><strong>Dashboard v5.5.5 — KW 23 Finale · Reactiv Only</strong></span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label timestamp">04:04 So</span>
+                <span style="font-size: 0.9rem;">Dashboard v5.5.4 — Früh-Update (Sonntag)</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label timestamp">08:04 So</span>
+                <span style="font-size: 0.9rem;">Dashboard v5.5.3 — Morgen-Update (Sonntag)</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label timestamp">20:04 Sa</span>
+                <span style="font-size: 0.9rem;">Dashboard v5.5.2 — Abend-Update (Samstag)</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="meta">
+        <p>🚀 VENTURE CTRL v5.5.5 | Letztes Update: 7. Juni 2026, 14:04 Uhr</p>
+        <p style="margin-top: 5px; color: #a78bfa;">⚡ STATUS: REACTIV ONLY — Giang entscheidet wann was passiert 🎯</p>
+    </div>
 </body>
 </html>

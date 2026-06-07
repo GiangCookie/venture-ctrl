@@ -1,6 +1,6 @@
 {
-  "version": "v5.5.2",
-  "lastUpdated": "2026-06-07T06:05:00Z",
+  "version": "v5.5.6",
+  "lastUpdated": "2026-06-07T20:04:00+02:00",
   "week": "KW 23",
   "mode": "REACTIV",
   "summary": {
@@ -13,6 +13,7 @@
   "today": {
     "date": "2026-06-07",
     "day": "Sonntag",
+    "time": "20:04",
     "completed": 0,
     "total": 7,
     "tasks": [
@@ -26,14 +27,14 @@
     ]
   },
   "critical": [
-    {"task": "NOMU Post-Production", "overdue": 56, "days": 56, "type": "post-production", "priority": "critical"},
-    {"task": "Japanese Pancake Post-Production", "overdue": 16, "days": 16, "type": "post-production", "priority": "critical"}
+    {"task": "NOMU Post-Production", "overdue": 61, "days": 61, "type": "post-production", "priority": "critical"},
+    {"task": "Japanese Pancake Post-Production", "overdue": 21, "days": 21, "type": "post-production", "priority": "critical"}
   ],
   "overdue": [
-    {"task": "Little Hero Call", "days": 16, "type": "call", "priority": "high"},
-    {"task": "Anju CI-Design", "days": 16, "type": "design", "priority": "high"},
-    {"task": "Sentai Post-Production", "days": 16, "type": "post-production", "priority": "high"},
-    {"task": "Aimy Interieur Bilder", "days": 2, "type": "design", "priority": "medium"}
+    {"task": "Little Hero Call", "days": 21, "type": "call", "priority": "high"},
+    {"task": "Anju CI-Design", "days": 21, "type": "design", "priority": "high"},
+    {"task": "Sentai Post-Production", "days": 21, "type": "post-production", "priority": "high"},
+    {"task": "Aimy Interieur Bilder", "days": 7, "type": "design", "priority": "medium", "note": "Erledigt am Freitag"}
   ],
   "patterns": [
     {"name": "Crash nach High", "description": "Nach intensiver Woche folgt automatisch eine Pause-Woche", "status": "active"},
@@ -45,7 +46,7 @@
     "completed": 1,
     "planned": 8,
     "successRate": "12.5%",
-    "notes": "Sonntag - Reactiv Only Mode. Samstag keine Tasks erledigt."
+    "notes": "Sonntag Nachmittag - Reactiv Only Mode. KW 23 endet mit 1/8 Tasks."
   },
   "history": [
     {"date": "2026-06-07", "completed": 0, "total": 7},
@@ -55,5 +56,25 @@
     {"date": "2026-06-03", "completed": 0, "total": 0},
     {"date": "2026-06-02", "completed": 0, "total": 0},
     {"date": "2026-06-01", "completed": 0, "total": 0}
+  ],
+  "insights": {
+    "pattern": "KW 23: 1/8 Tasks (12.5%) — Crash nach intensiver KW 21",
+    "blocker": "NOMU 60 Tage überfällig — Der Brocken",
+    "momentum": "Wochenende-Modus aktiv — Kein Druck",
+    "nextWeek": "KW 24 startet morgen — Neue Chance"
+  },
+  "cronUpdate": {
+    "trigger": "dashboard-update-4h-v2",
+    "previousVersion": "v5.5.5",
+    "currentVersion": "v5.5.6",
+    "interval": "4 Stunden (Reactiv Mode)",
+    "note": "Abend-Update — KW 23 Finale"
+  },
+  "updateHistory": [
+    "v5.5.6 — 2026-06-07 20:04 — Abend-Update (Sonntag, KW 23 Finale)",
+    "v5.5.5 — 2026-06-07 14:04 — Nachmittags-Update (Sonntag, KW 23 Finale)",
+    "v5.5.4 — 2026-06-07 04:04 — Früh-Update (Sonntag)",
+    "v5.5.3 — 2026-06-07 08:04 — Morgen-Update (Sonntag)",
+    "v5.5.2 — 2026-06-06 20:04 — Abend-Update (Samstag)"
   ]
 }
