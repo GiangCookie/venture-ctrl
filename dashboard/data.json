@@ -1,6 +1,6 @@
 {
   "version": "v5.5.2",
-  "lastUpdated": "2026-06-06T12:04:00Z",
+  "lastUpdated": "2026-06-07T06:05:00Z",
   "week": "KW 23",
   "mode": "REACTIV",
   "summary": {
@@ -8,11 +8,11 @@
     "tasksTotal": 7,
     "successRate": "0%",
     "criticalOverdue": 2,
-    "highOverdue": 3
+    "highOverdue": 4
   },
   "today": {
-    "date": "2026-06-06",
-    "day": "Samstag",
+    "date": "2026-06-07",
+    "day": "Sonntag",
     "completed": 0,
     "total": 7,
     "tasks": [
@@ -26,13 +26,14 @@
     ]
   },
   "critical": [
-    {"task": "NOMU Post-Production", "overdue": 53, "days": 53, "type": "post-production", "priority": "critical"},
-    {"task": "Japanese Pancake Post-Production", "overdue": 13, "days": 13, "type": "post-production", "priority": "critical"}
+    {"task": "NOMU Post-Production", "overdue": 56, "days": 56, "type": "post-production", "priority": "critical"},
+    {"task": "Japanese Pancake Post-Production", "overdue": 16, "days": 16, "type": "post-production", "priority": "critical"}
   ],
   "overdue": [
-    {"task": "Little Hero Call", "days": 13, "type": "call", "priority": "high"},
-    {"task": "Anju CI-Design", "days": 13, "type": "design", "priority": "high"},
-    {"task": "Sentai Post-Production", "days": 13, "type": "post-production", "priority": "high"}
+    {"task": "Little Hero Call", "days": 16, "type": "call", "priority": "high"},
+    {"task": "Anju CI-Design", "days": 16, "type": "design", "priority": "high"},
+    {"task": "Sentai Post-Production", "days": 16, "type": "post-production", "priority": "high"},
+    {"task": "Aimy Interieur Bilder", "days": 2, "type": "design", "priority": "medium"}
   ],
   "patterns": [
     {"name": "Crash nach High", "description": "Nach intensiver Woche folgt automatisch eine Pause-Woche", "status": "active"},
@@ -44,9 +45,10 @@
     "completed": 1,
     "planned": 8,
     "successRate": "12.5%",
-    "notes": "Samstag Nachmittag - Reactiv Only Mode"
+    "notes": "Sonntag - Reactiv Only Mode. Samstag keine Tasks erledigt."
   },
   "history": [
+    {"date": "2026-06-07", "completed": 0, "total": 7},
     {"date": "2026-06-06", "completed": 0, "total": 7},
     {"date": "2026-06-05", "completed": 1, "total": 8},
     {"date": "2026-06-04", "completed": 0, "total": 0},

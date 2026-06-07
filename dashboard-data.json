@@ -1,176 +1,59 @@
 {
-  "version": "v5.5.3",
-  "lastUpdated": "2026-06-07T00:04:00+02:00",
-  "status": "reactive-mode",
-  "mode": "📵 REACTIV ONLY — Keine automatischen Updates",
-  "metrics": {
-    "urgentTasks": 5,
-    "highPriority": 0,
-    "income": "2.1k€",
-    "deals": 13
-  },
-  "today": "2026-06-07",
-  "kw": 23,
-  "dayOfWeek": "SONNTAG NACHT",
-  "time": "00:04",
-  "openTasks": [
-    {
-      "task": "🎬 NOMU Post-Production",
-      "project": "NOMU",
-      "daysOverdue": 55,
-      "priority": "urgent",
-      "note": "55 TAGE ÜBERFÄLLIG — Giang entscheidet wann",
-      "status": "overdue"
-    },
-    {
-      "task": "🎬 Japanese Pancake Post-Production",
-      "project": "Tough Cookie",
-      "daysOverdue": 15,
-      "priority": "urgent",
-      "note": "15 TAGE ÜBERFÄLLIG — Kunde wartet",
-      "status": "overdue"
-    },
-    {
-      "task": "📞 Little Hero Call",
-      "project": "Freelance",
-      "daysOverdue": 15,
-      "priority": "urgent",
-      "note": "15 TAGE OFFEN — Potenzieller Deal",
-      "status": "open"
-    },
-    {
-      "task": "🎨 Anju CI-Design",
-      "project": "Tough Cookie",
-      "daysOverdue": 15,
-      "priority": "urgent",
-      "note": "15 TAGE OFFEN — Markenauftritt",
-      "status": "open"
-    },
-    {
-      "task": "🎬 Sentai Post-Production",
-      "project": "Tough Cookie",
-      "daysOverdue": 15,
-      "priority": "high",
-      "note": "15 Tage offen — Pipeline",
-      "status": "overdue"
-    }
-  ],
-  "completedTasks": [
-    "✅ Reactiv-Only-Modus aktiv — Giang hat die Kontrolle",
-    "✅ Atomic Habits — Giang liest gerade",
-    "✅ Cron-Update v5.5.3 — Nacht 00:04 (Sonntag)"
-  ],
-  "schedule": [
-    {
-      "time": "00:04",
-      "activity": "🚀 Dashboard-Update v5.5.3 — NACHT (Sonntag)",
-      "priority": "info"
-    },
-    {
-      "time": "—",
-      "activity": "📵 Reactiv Only — Update nur auf Anfrage",
-      "priority": "celebrate"
-    }
-  ],
-  "notes": [
-    "🚀 KW 23 Tag 7 — Sonntag, 7. Juni 2026, 00:04 Uhr",
-    "📵 REACTIV ONLY — Keine automatischen Nachrichten",
-    "📖 Atomic Habits — James Clear, passend zum Moment",
-    "🎯 Giang kontrolliert das Tempo — nicht das System",
-    "🔥 NOMU: 55 Tage überfällig — aber auf Giang's Bedingungen",
-    "💪 Selbstbestimmung > Externer Druck",
-    "🌟 KW 21 bewiesen: Du KANNST das. Wann, entscheidest du.",
-    "⏸️ Pause ist OK — solange sie selbstbestimmt ist",
-    "⚡ Dashboard-Update v5.5.3 — Automatischer Cron-Lauf (00 Uhr)",
-    "🎮 Giang hat die Kontrolle übernommen — System folgt",
-    "📵 Keine automatischen Erinnerungen — nur auf Anfrage",
-    "📝 Update nur noch wenn Giang explizit danach fragt",
-    "💡 Reactiv Only: Weniger ist mehr",
-    "🔕 Cron-Job läuft alle 4h, aber Giang entscheidet über Relevanz",
-    "⚠️ Hinweis: Cron läuft weiter, aber ohne aktive Benachrichtigung",
-    "🌙 Nacht-Update — Sonntag, KW 23 Tag 7"
-  ],
-  "quickWins": [],
-  "achievements": [
-    "🏆 REACTIV ONLY — Giang hat die Kontrolle!",
-    "📚 Atomic Habits gelesen — James Clear",
-    "🎯 Selbstbestimmung über externes System",
-    "🔕 Keine automatischen Erinnerungen nötig",
-    "🌟 KW 21: 8 SIEGE — 73% Erfolgsrate!",
-    "🎬 Sentai Dreh: 6 STUNDEN! 15:00-21:00 ✅",
-    "💰 Jidai Rechnung: RAUS! ~2.000€ 🎉",
-    "📧 Export-Mails: Alle beantwortet!",
-    "🎨 Grafikerin: Kontaktiert!",
-    "🎬 Sentai Post-Production: DURCHGEZOGEN! 🔥",
-    "🎬 JP Dreh: ERLEDIGT! 🔥",
-    "💰 G-Life Rechnung: RAUSGESCHICKT! 🎉",
-    "🏨 Armando Pitch: Fertig & abgeschickt",
-    "🎬 Japanese Pancake: 3/3 Shoots",
-    "🎬 Sentai: 3/3 Shoots",
-    "📊 Dashboard v5.5.3: Reactiv-Mode aktiv"
-  ],
-  "cronUpdate": {
-    "trigger": "dashboard-update-4h-v2",
-    "previousVersion": "v5.5.2",
-    "currentVersion": "v5.5.3",
-    "interval": "4 Stunden (Reactiv Mode)",
-    "note": "Automatisches Update ohne aktive Benachrichtigung"
-  },
-  "todayPlan": [
-    "🚀 00:04: Dashboard-Update v5.5.3 (Reactiv Mode)",
-    "📵 Keine automatischen Updates — nur auf Anfrage",
-    "⏸️ Giang entscheidet, wann was passiert"
-  ],
-  "reports": [
-    {
-      "date": "2026-06-06",
-      "title": "Reactiv-Update Samstag v5.5.2",
-      "summary": "KW 23 Tag 6: Reactiv-Only-Modus. Nachmittags-Update.",
-      "url": "reports/2026-06-06-dashboard-update-v5-5-2.md"
-    },
-    {
-      "date": "2026-06-05",
-      "title": "Reactiv-Update Freitag v5.4.188",
-      "summary": "KW 23 Tag 5: Reactiv-Only-Modus. Mittags-Update.",
-      "url": "reports/2026-06-05-dashboard-update-v5-4-188.md"
-    }
-  ],
-  "insights": {
-    "pattern": "Reactiv Only: Giang entscheidet, wann was passiert",
-    "blocker": "NOMU 55 Tage überfällig — aber auf Giang's Bedingungen",
-    "momentum": "KW 21: 8 Siege. Jetzt: Selbstbestimmte Pause.",
-    "reading": "Atomic Habits — James Clear"
-  },
-  "yesterdaySummary": {
-    "date": "2026-06-06",
+  "version": "v5.5.2",
+  "lastUpdated": "2026-06-07T06:05:00Z",
+  "week": "KW 23",
+  "mode": "REACTIV",
+  "summary": {
     "tasksCompleted": 0,
-    "highlight": "Samstag: Sechster Pause-Tag, Cron läuft stabil",
-    "cashflowUnlocked": "0€",
-    "biggestWin": "Sechs Tage Pause am Stück — System respektiert Rhythmus"
+    "tasksTotal": 7,
+    "successRate": "0%",
+    "criticalOverdue": 2,
+    "highOverdue": 4
   },
-  "todayFocus": {
-    "mainEvent": "🚀 Sonntag Nacht: Dashboard-Update v5.5.3",
-    "preparation": "Giang entscheidet den Flow",
-    "followUp": "Keine automatischen Aktionen nötig",
-    "note": "Dashboard aktualisiert, Cron läuft im Hintergrund"
+  "today": {
+    "date": "2026-06-07",
+    "day": "Sonntag",
+    "completed": 0,
+    "total": 7,
+    "tasks": [
+      {"id": 1, "name": "Musterkarten raussuchen", "project": "Hiro Sakao", "status": "open"},
+      {"id": 2, "name": "Konkrete Preproduction", "project": "Wittmann", "status": "open"},
+      {"id": 3, "name": "Golf Footgolfvideo UGC", "project": "Golf", "status": "open"},
+      {"id": 4, "name": "Golfplatz video TC", "project": "Tough Cookie", "status": "open"},
+      {"id": 5, "name": "Niku Fernseher AD", "project": "Niku", "status": "open"},
+      {"id": 6, "name": "Verträge", "project": "Admin", "status": "open"},
+      {"id": 7, "name": "Stories für Kinchia", "project": "Kinchia", "status": "open"}
+    ]
   },
-  "updateHistory": [
-    "v5.5.3 — 2026-06-07 00:04 — Nacht-Update (Sonntag, Cron-Lauf)",
-    "v5.5.2 — 2026-06-06 14:04 — Nachmittags-Update (Samstag, Cron-Lauf)",
-    "v5.4.188 — 2026-06-05 12:04 — Mittag-Update (Freitag, Cron-Lauf)",
-    "v5.4.187 — 2026-06-05 08:04 — Früh-Update (Freitag, Cron-Lauf)",
-    "v5.4.186 — 2026-06-05 04:04 — Früh-Update (Freitag, Cron-Lauf)",
-    "v5.4.185 — 2026-06-05 00:04 — Nacht-Update (Freitag, Cron-Lauf)",
-    "v5.4.183 — 2026-06-04 20:04 — Abend-Update (Donnerstag, Cron-Lauf)",
-    "v5.4.182 — 2026-06-04 04:04 — Früh-Update (Donnerstag, Cron-Lauf)",
-    "v5.4.181 — 2026-06-04 00:04 — Nachts-Update (Mittwoch → Donnerstag)",
-    "v5.4.180 — 2026-06-03 20:04 — Abend-Update (Mittwoch, Cron-Konflikt)"
+  "critical": [
+    {"task": "NOMU Post-Production", "overdue": 56, "days": 56, "type": "post-production", "priority": "critical"},
+    {"task": "Japanese Pancake Post-Production", "overdue": 16, "days": 16, "type": "post-production", "priority": "critical"}
   ],
-  "reactiveMode": {
-    "enabled": true,
-    "since": "2026-06-02",
-    "reason": "Giang hat explizit KEINE automatischen Updates angefordert",
-    "communicationStyle": "Kurz, direkt, kein Bullshit",
-    "autoUpdates": false
-  }
+  "overdue": [
+    {"task": "Little Hero Call", "days": 16, "type": "call", "priority": "high"},
+    {"task": "Anju CI-Design", "days": 16, "type": "design", "priority": "high"},
+    {"task": "Sentai Post-Production", "days": 16, "type": "post-production", "priority": "high"},
+    {"task": "Aimy Interieur Bilder", "days": 2, "type": "design", "priority": "medium"}
+  ],
+  "patterns": [
+    {"name": "Crash nach High", "description": "Nach intensiver Woche folgt automatisch eine Pause-Woche", "status": "active"},
+    {"name": "Post-Production = Prokrastination", "description": "Post-Production wird immer verschoben", "status": "active"},
+    {"name": "Calls = Unangenehm", "description": "Calls werden systematisch vermieden", "status": "active"}
+  ],
+  "weekly": {
+    "week": "KW 23",
+    "completed": 1,
+    "planned": 8,
+    "successRate": "12.5%",
+    "notes": "Sonntag - Reactiv Only Mode. Samstag keine Tasks erledigt."
+  },
+  "history": [
+    {"date": "2026-06-07", "completed": 0, "total": 7},
+    {"date": "2026-06-06", "completed": 0, "total": 7},
+    {"date": "2026-06-05", "completed": 1, "total": 8},
+    {"date": "2026-06-04", "completed": 0, "total": 0},
+    {"date": "2026-06-03", "completed": 0, "total": 0},
+    {"date": "2026-06-02", "completed": 0, "total": 0},
+    {"date": "2026-06-01", "completed": 0, "total": 0}
+  ]
 }
