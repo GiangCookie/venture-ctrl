@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VENTURE CTRL v5.5.9</title>
+    <title>VENTURE CTRL v5.5.10</title>
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
@@ -205,19 +205,28 @@
         .weekend-banner h3 {
             color: #a78bfa;
         }
+        .task-count {
+            display: inline-block;
+            background: rgba(248, 113, 113, 0.2);
+            color: #f87171;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 0.75rem;
+            margin-left: 8px;
+        }
     </style>
 </head>
 <body>
     <div class="header">
-        <span class="version-badge">v5.5.9</span>
+        <span class="version-badge">v5.5.10</span>
         <h1>🚀 VENTURE CTRL</h1>
-        <p>Dashboard Update: Montag, 8. Juni 2026, 08:04 Uhr · Reactiv Mode</p>
+        <p>Dashboard Update: Montag, 8. Juni 2026, 12:04 Uhr · Reactiv Mode</p>
     </div>
 
-    <!-- KW24 Start Banner -->
+    <!-- KW24 Tag 1 Banner -->
     <div class="kw24-banner">
-        <h3>🌅 KW 24 STARTET — NEUE WOCHE, NEUE CHANCE</h3>
-        <p>KW 24 Tag 1. KW 23 war 38% erfolgreich (5/13 Tasks). NOMU jetzt 63 Tage überfällig. Morgen: Kyberg Meeting mit Partner-Backup. 🎯</p>
+        <h3>📋 KW 24 TAG 1 — 7 TASKS OFFEN</h3>
+        <p>Heute: 7 Tasks zu erledigen. Morgen: Kyberg Meeting mit Partner-Backup. NOMU 63 Tage überfällig — Entscheidung nötig! 🎯</p>
     </div>
 
     <div class="grid">
@@ -233,8 +242,8 @@
                 <span class="stat-value warning">2</span>
             </div>
             <div class="stat-row">
-                <span class="stat-label">✅ KW 23 Erledigt:</span>
-                <span class="stat-value positive">5/13 (38%)</span>
+                <span class="stat-label">📋 Heute offen:</span>
+                <span class="stat-value critical">7 Tasks</span>
             </div>
             <div class="stat-row">
                 <span class="stat-label">📅 Heute (KW 24):</span>
@@ -246,27 +255,36 @@
             </div>
         </div>
 
-        <!-- KW 23 Recap -->
+        <!-- Heutige Tasks -->
         <div class="card">
-            <h2>📈 KW 23 RECAP (1.6. - 7.6.)</h2>
-            <div class="todo done">
-                <strong>✅ Japanese Pancake Post-Production</strong><br>
-                <span style="font-size: 0.85rem; color: #888;">Erledigt am 3.6.</span>
+            <h2>📋 HEUTIGE TASKS (Mo 8.6.)</h2>
+            <div class="todo urgent">
+                <strong>🎬 Niku Fernseher AD</strong><span class="task-count">Offen</span><br>
+                <span style="font-size: 0.85rem; color: #888;">Post-Production Task</span>
             </div>
-            <div class="todo done">
-                <strong>✅ Little Hero Call</strong><br>
-                <span style="font-size: 0.85rem; color: #888;">Erledigt am 3.6.</span>
+            <div class="todo urgent">
+                <strong>📋 Wittmann Preproduction</strong><span class="task-count">Offen</span><br>
+                <span style="font-size: 0.85rem; color: #888;">Vorbereitung</span>
             </div>
-            <div class="todo done">
-                <strong>✅ Aimy Interieur Bilder</strong><br>
-                <span style="font-size: 0.85rem; color: #888;">Erledigt am 5.6.</span>
+            <div class="todo normal">
+                <strong>📝 Verträge finalisieren</strong><span class="task-count">Offen</span><br>
+                <span style="font-size: 0.85rem; color: #888;">Admin/Task</span>
             </div>
-            <div class="todo done">
-                <strong>✅ Hiro Sakao Speisekarten</strong><br>
-                <span style="font-size: 0.85rem; color: #888;">Erledigt am 6.6.</span>
+            <div class="todo high">
+                <strong>🎨 Anju CI weiterleiten</strong><span class="task-count">Offen</span><br>
+                <span style="font-size: 0.85rem; color: #888;">Design (22 Tage überfällig)</span>
             </div>
-            <div style="margin-top: 10px; padding: 8px; background: rgba(34, 197, 94, 0.1); border-radius: 6px; border-left: 3px solid #22c55e;">
-                <strong>Besser als KW 22:</strong> Von 0% auf 38% Erfolgsrate
+            <div class="todo normal">
+                <strong>🎬 Golf Footgolf UGC</strong><span class="task-count">Offen</span><br>
+                <span style="font-size: 0.85rem; color: #888;">Content-Erstellung</span>
+            </div>
+            <div class="todo urgent">
+                <strong>📞 Call mit Golf Club</strong><span class="task-count">Offen</span><br>
+                <span style="font-size: 0.85rem; color: #888;">Call — systematisch vermieden</span>
+            </div>
+            <div class="todo normal">
+                <strong>📅 Drehtermin Niku finalisieren</strong><span class="task-count">Offen</span><br>
+                <span style="font-size: 0.85rem; color: #888;">Planung</span>
             </div>
         </div>
 
@@ -283,7 +301,7 @@
             <div class="todo overdue">
                 <strong>Anju CI-Design</strong>
                 <span class="overdue-days">22 TAGE</span><br>
-                <span style="font-size: 0.85rem; color: #888;">Design-Projekt — noch offen</span>
+                <span style="font-size: 0.85rem; color: #888;">Design-Projekt — auch heute noch offen</span>
             </div>
             
             <div class="todo overdue">
@@ -291,10 +309,10 @@
                 <span class="overdue-days">22 TAGE</span><br>
                 <span style="font-size: 0.85rem; color: #888;">Post-Production — noch offen</span>
             </div>
-                <span style="font-size: 0.85rem; color: #888;">Der ewige Blocker — immer noch offen</span>
-            </div>
             
-
+            <div style="margin-top: 15px; padding: 10px; background: rgba(239, 68, 68, 0.1); border-radius: 6px; border-left: 3px solid #ef4444;">
+                <strong>🚨 NOMU muss entschieden werden:</strong> Extern vergeben oder aufgeben. 63 Tage sind genug.
+            </div>
         </div>
 
         <!-- Patterns -->
@@ -303,8 +321,8 @@
             
             <div class="todo urgent">
                 <strong>Crash nach High</strong><br>
-                <span style="font-size: 0.85rem; color: #888;">Nach intensiver KW 21 kam die Pause-Woche KW 22</span><br>
-                <span style="font-size: 0.85rem; color: #888;">→ KW 23 war besser (38%), aber immer noch ungleichmäßig</span>
+                <span style="font-size: 0.85rem; color: #888;">Nach intensiver Woche folgt automatisch Pause</span><br>
+                <span style="font-size: 0.85rem; color: #888;">→ KW 23: 38% Erfolgsquote (besser als KW 22)</span>
             </div>
             
             <div class="todo urgent">
@@ -314,12 +332,12 @@
             
             <div class="todo urgent">
                 <strong>Calls = Unangenehm</strong><br>
-                <span style="font-size: 0.85rem; color: #888;">Calls werden systematisch vermieden — Little Hero 22 Tage</span>
+                <span style="font-size: 0.85rem; color: #888;">Calls werden systematisch vermieden</span>
             </div>
             
             <div class="todo normal">
                 <strong>Positiv: Reactiv-Modus funktioniert</strong><br>
-                <span style="font-size: 0.85rem; color: #888;">Wenn gefragt, schnelle Ergebnisse (Kyberg-Präsentation in Minuten)</span>
+                <span style="font-size: 0.85rem; color: #888;">Wenn gefragt, schnelle Ergebnisse</span>
             </div>
         </div>
 
@@ -355,7 +373,7 @@
             <h2>📅 LETZTE 7 TAGE</h2>
             <div class="stat-row">
                 <span class="stat-label timestamp">Mo 8.6.</span>
-                <span class="stat-value" style="color: #a78bfa;">KW 24 Start</span>
+                <span class="stat-value" style="color: #f87171;">0/7 Tasks</span>
             </div>
             <div class="stat-row">
                 <span class="stat-label timestamp">So 7.6.</span>
@@ -375,7 +393,7 @@
             </div>
             <div class="stat-row">
                 <span class="stat-label timestamp">Mi 3.6.</span>
-                <span style="color: #666;">2 Tasks erledigt</span>
+                <span style="color: #4ade80;">2 Tasks erledigt</span>
             </div>
             <div class="stat-row">
                 <span class="stat-label timestamp">Di 2.6.</span>
@@ -387,30 +405,30 @@
         <div class="card" style="grid-column: 1 / -1;">
             <h2>📝 LETZTE UPDATES</h2>
             <div class="stat-row">
+                <span class="stat-label timestamp">12:04 Mo</span>
+                <span style="font-size: 0.9rem; color: #4ade80;"><strong>Dashboard v5.5.10 — Mittags-Update · 7 Tasks offen</strong></span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label timestamp">08:04 Mo</span>
+                <span style="font-size: 0.9rem;">Dashboard v5.5.9 — Morgen-Update (Montag, KW 24)</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label timestamp">04:04 Mo</span>
+                <span style="font-size: 0.9rem;">Dashboard v5.5.8 — Nacht-Update (Montag, KW 24 Start)</span>
+            </div>
+            <div class="stat-row">
                 <span class="stat-label timestamp">00:04 Mo</span>
-                <span style="font-size: 0.9rem; color: #4ade80;"><strong>Dashboard v5.5.7 — KW 24 Start · Reactiv Only</strong></span>
+                <span style="font-size: 0.9rem;">Dashboard v5.5.7 — KW 24 Start Update</span>
             </div>
             <div class="stat-row">
                 <span class="stat-label timestamp">20:04 So</span>
-                <span style="font-size: 0.9rem;">Dashboard v5.5.6 — KW 23 Finale (Sonntag)</span>
-            </div>
-            <div class="stat-row">
-                <span class="stat-label timestamp">14:04 So</span>
-                <span style="font-size: 0.9rem;">Dashboard v5.5.5 — Nachmittags-Update (Sonntag)</span>
-            </div>
-            <div class="stat-row">
-                <span class="stat-label timestamp">08:04 So</span>
-                <span style="font-size: 0.9rem;">Dashboard v5.5.3 — Morgen-Update (Sonntag)</span>
-            </div>
-            <div class="stat-row">
-                <span class="stat-label timestamp">20:04 Sa</span>
-                <span style="font-size: 0.9rem;">Dashboard v5.5.2 — Abend-Update (Samstag)</span>
+                <span style="font-size: 0.9rem;">Dashboard v5.5.6 — Abend-Update (Sonntag, KW 23 Finale)</span>
             </div>
         </div>
     </div>
 
     <div class="meta">
-        <p>🚀 VENTURE CTRL v5.5.9 | Letztes Update: 8. Juni 2026, 08:04 Uhr</p>
+        <p>🚀 VENTURE CTRL v5.5.10 | Letztes Update: 8. Juni 2026, 12:04 Uhr</p>
         <p style="margin-top: 5px; color: #a78bfa;">⚡ STATUS: REACTIV ONLY — Giang entscheidet wann was passiert 🎯</p>
     </div>
 </body>

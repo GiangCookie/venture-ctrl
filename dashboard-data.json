@@ -1,11 +1,11 @@
 {
-  "version": "v5.5.9",
-  "lastUpdated": "2026-06-08T08:04:00+02:00",
+  "version": "v5.5.10",
+  "lastUpdated": "2026-06-08T12:04:00+02:00",
   "week": "KW 24",
   "mode": "REACTIV",
   "summary": {
     "tasksCompleted": 0,
-    "tasksTotal": 0,
+    "tasksTotal": 7,
     "successRate": "0%",
     "criticalOverdue": 1,
     "highOverdue": 2
@@ -13,10 +13,18 @@
   "today": {
     "date": "2026-06-08",
     "day": "Montag",
-    "time": "08:04",
+    "time": "12:04",
     "completed": 0,
-    "total": 0,
-    "tasks": []
+    "total": 7,
+    "tasks": [
+      {"task": "Niku Fernseher AD", "status": "offen", "type": "post-production"},
+      {"task": "Wittmann Preproduction", "status": "offen", "type": "pre-production"},
+      {"task": "Verträge finalisieren", "status": "offen", "type": "admin"},
+      {"task": "Anju CI weiterleiten", "status": "offen", "type": "design"},
+      {"task": "Golf Footgolf UGC", "status": "offen", "type": "content"},
+      {"task": "Call mit Golf Club", "status": "offen", "type": "call"},
+      {"task": "Drehtermin Niku finalisieren", "status": "offen", "type": "planning"}
+    ]
   },
   "critical": [
     {"task": "NOMU Post-Production", "overdue": 63, "days": 63, "type": "post-production", "priority": "critical"}
@@ -33,12 +41,12 @@
   "weekly": {
     "week": "KW 24",
     "completed": 0,
-    "planned": 0,
+    "planned": 7,
     "successRate": "0%",
-    "notes": "Montag Morgen - KW 24 Tag 1. Kyberg Meeting morgen (Di, 9.6.)"
+    "notes": "Montag Mittag - 7 Tasks offen. Kyberg Meeting morgen (Di, 9.6.)"
   },
   "history": [
-    {"date": "2026-06-08", "completed": 0, "total": 0},
+    {"date": "2026-06-08", "completed": 0, "total": 7},
     {"date": "2026-06-07", "completed": 0, "total": 7},
     {"date": "2026-06-06", "completed": 0, "total": 7},
     {"date": "2026-06-05", "completed": 1, "total": 8},
@@ -50,20 +58,20 @@
     "pattern": "KW 23: 38% Erfolgsquote — Reactiv-Modus zeigt Wirkung",
     "blocker": "NOMU 63 Tage überfällig — Entscheidung nötig",
     "momentum": "KW 24: Kyberg Meeting morgen (Di, 9.6.) mit Partner-Backup",
-    "nextWeek": "KW 24: Fokus auf Partner-Meeting und NOMU-Entscheidung"
+    "nextWeek": "Heute: 7 Tasks zu erledigen"
   },
   "cronUpdate": {
     "trigger": "dashboard-update-4h-v2",
-    "previousVersion": "v5.5.8",
-    "currentVersion": "v5.5.9",
+    "previousVersion": "v5.5.9",
+    "currentVersion": "v5.5.10",
     "interval": "4 Stunden (Reactiv Mode)",
-    "note": "Morgen-Update — KW 24 Tag 1"
+    "note": "Mittags-Update — KW 24 Tag 1, 7 Tasks offen"
   },
   "updateHistory": [
+    "v5.5.10 — 2026-06-08 12:04 — Mittags-Update (Montag, KW 24)",
     "v5.5.9 — 2026-06-08 08:04 — Morgen-Update (Montag, KW 24)",
     "v5.5.8 — 2026-06-08 04:04 — Nacht-Update (Montag, KW 24 Start)",
     "v5.5.7 — 2026-06-08 00:04 — KW 24 Start Update (Montag)",
-    "v5.5.6 — 2026-06-07 20:04 — Abend-Update (Sonntag, KW 23 Finale)",
-    "v5.5.5 — 2026-06-07 14:04 — Nachmittags-Update (Sonntag, KW 23 Finale)"
+    "v5.5.6 — 2026-06-07 20:04 — Abend-Update (Sonntag, KW 23 Finale)"
   ]
 }
