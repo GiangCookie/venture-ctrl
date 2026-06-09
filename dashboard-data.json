@@ -1,77 +1,88 @@
 {
-  "version": "v5.5.11",
-  "lastUpdated": "2026-06-08T14:04:00+02:00",
+  "version": "v5.6.1",
+  "lastUpdated": "2026-06-09T04:04:00+02:00",
   "week": "KW 24",
   "mode": "REACTIV",
   "summary": {
-    "tasksCompleted": 2,
-    "tasksTotal": 7,
-    "successRate": "29%",
+    "tasksCompleted": 4,
+    "tasksTotal": 8,
+    "successRate": "50%",
     "criticalOverdue": 1,
-    "highOverdue": 2
+    "highOverdue": 3
   },
   "today": {
-    "date": "2026-06-08",
-    "day": "Montag",
-    "time": "14:04",
-    "completed": 2,
-    "total": 7,
+    "date": "2026-06-09",
+    "day": "Dienstag",
+    "time": "04:04",
+    "completed": 0,
+    "total": 5,
     "tasks": [
-      {"task": "Niku Fernseher AD", "status": "offen", "type": "post-production"},
-      {"task": "Wittmann Preproduction", "status": "offen", "type": "pre-production"},
-      {"task": "Verträge finalisieren", "status": "erledigt", "type": "admin"},
-      {"task": "Anju CI weiterleiten", "status": "erledigt", "type": "design"},
-      {"task": "Golf Footgolf UGC", "status": "offen", "type": "content"},
-      {"task": "Call mit Golf Club", "status": "offen", "type": "call"},
-      {"task": "Drehtermin Niku finalisieren", "status": "offen", "type": "planning"}
+      {"id": 1, "name": "Niku Fernseher AD", "project": "Niku", "status": "open"},
+      {"id": 2, "name": "Wittmann Preproduction", "project": "Wittmann", "status": "open"},
+      {"id": 3, "name": "Golf Footgolfvideo UGC", "project": "Golf", "status": "open"},
+      {"id": 4, "name": "Call mit Golf Club", "project": "Golf", "status": "open"},
+      {"id": 5, "name": "Drehtermin Niku finalisieren", "project": "Niku", "status": "open"}
     ]
   },
   "critical": [
-    {"task": "NOMU Post-Production", "overdue": 63, "days": 63, "type": "post-production", "priority": "critical"}
+    {"task": "NOMU Post-Production", "overdue": 64, "days": 64, "type": "post-production", "priority": "critical", "note": "Der ewige Brocken"}
   ],
   "overdue": [
-    {"task": "Anju CI-Design", "days": 22, "type": "design", "priority": "high"},
-    {"task": "Sentai Post-Production", "days": 22, "type": "post-production", "priority": "high"}
+    {"task": "Sentai Post-Production", "days": 22, "type": "post-production", "priority": "high"},
+    {"task": "Hiro Sakao Musterkarten", "days": 15, "type": "research", "priority": "medium"},
+    {"task": "Tough Cookie Golfplatz Video", "days": 15, "type": "content", "priority": "medium"}
+  ],
+  "completedToday": [],
+  "completedWeek": [
+    {"task": "Japanese Pancake Post-Production", "project": "Tough Cookie", "date": "2026-06-07"},
+    {"task": "Little Hero Call", "project": "Freelance", "date": "2026-06-07"},
+    {"task": "Verträge finalisieren", "project": "Admin", "date": "2026-06-08"},
+    {"task": "Anju CI weiterleiten", "project": "Tough Cookie", "date": "2026-06-08"}
+  ],
+  "upcoming": [
+    {"event": "Kyberg Meeting", "date": "Heute, 9.6.", "type": "meeting", "note": "Präsentation fertig — Wichtiger Pitch!", "priority": "critical"}
   ],
   "patterns": [
-    {"name": "Crash nach High", "description": "Nach intensiver Woche folgt automatisch eine Pause-Woche", "status": "active"},
-    {"name": "Post-Production = Prokrastination", "description": "Post-Production wird immer verschoben", "status": "active"},
-    {"name": "Calls = Unangenehm", "description": "Calls werden systematisch vermieden", "status": "active"}
+    {"name": "Wellenrhythmus", "description": "KW 23: 1/8 → KW 24: 2/7 Tag 1. Produktiver Start!", "status": "active"},
+    {"name": "Post-Production = Prokrastination", "description": "NOMU 64 Tage — Entscheidung nötig", "status": "active"},
+    {"name": "Calls = Unangenehm", "description": "Little Hero Call erledigt! Golf Call noch offen", "status": "improving"}
   ],
   "weekly": {
     "week": "KW 24",
-    "completed": 2,
-    "planned": 7,
-    "successRate": "29%",
-    "notes": "Montag Nachmittag - 2/7 Tasks erledigt. Kyberg Meeting morgen (Di, 9.6.)"
+    "completed": 4,
+    "planned": 8,
+    "successRate": "50%",
+    "notes": "KW 24 Tag 2 — Kyberg Meeting heute!"
   },
   "history": [
+    {"date": "2026-06-09", "completed": 0, "total": 5},
     {"date": "2026-06-08", "completed": 2, "total": 7},
-    {"date": "2026-06-07", "completed": 0, "total": 7},
-    {"date": "2026-06-06", "completed": 0, "total": 7},
+    {"date": "2026-06-07", "completed": 2, "total": 8},
+    {"date": "2026-06-06", "completed": 0, "total": 8},
     {"date": "2026-06-05", "completed": 1, "total": 8},
     {"date": "2026-06-04", "completed": 0, "total": 0},
-    {"date": "2026-06-03", "completed": 0, "total": 0},
-    {"date": "2026-06-02", "completed": 0, "total": 0}
+    {"date": "2026-06-03", "completed": 0, "total": 0}
   ],
   "insights": {
-    "pattern": "KW 23: 38% Erfolgsquote — Reactiv-Modus zeigt Wirkung",
-    "blocker": "NOMU 63 Tage überfällig — Entscheidung nötig",
-    "momentum": "Heute: 2/7 erledigt (Verträge + Anju CI) — 29%",
-    "nextWeek": "KW 24: Kyberg Meeting morgen, 5 Tasks noch offen"
+    "pattern": "KW 24 Tag 2 startet — Kyberg Meeting heute, wichtiger Pitch!",
+    "blocker": "NOMU 64 Tage — Entscheidung: extern geben oder aufgeben?",
+    "momentum": "Montag war produktiv (2 Tasks) — Dienstag kann folgen",
+    "focus": "Kyberg Meeting heute, 9.6. — Präsentation ist fertig!"
   },
   "cronUpdate": {
     "trigger": "dashboard-update-4h-v2",
-    "previousVersion": "v5.5.10",
-    "currentVersion": "v5.5.11",
+    "previousVersion": "v5.6.0",
+    "currentVersion": "v5.6.1",
     "interval": "4 Stunden (Reactiv Mode)",
-    "note": "Nachmittags-Update — 2/7 Tasks erledigt (Verträge + Anju CI)"
+    "note": "Früh-Update — KW 24 Tag 2 (Kyberg Meeting heute!)"
   },
   "updateHistory": [
-    "v5.5.11 — 2026-06-08 14:04 — Nachmittags-Update (2/7 erledigt)",
-    "v5.5.10 — 2026-06-08 12:04 — Mittags-Update (Montag, KW 24)",
-    "v5.5.9 — 2026-06-08 08:04 — Morgen-Update (Montag, KW 24)",
-    "v5.5.8 — 2026-06-08 04:04 — Nacht-Update (Montag, KW 24 Start)",
-    "v5.5.7 — 2026-06-08 00:04 — KW 24 Start Update (Montag)"
+    "v5.6.1 — 2026-06-09 04:04 — Früh-Update (Dienstag, KW 24 Tag 2, Kyberg Meeting heute)",
+    "v5.6.0 — 2026-06-09 00:04 — Nacht-Update (Dienstag, KW 24 Tag 2 startet, Kyberg Meeting heute)",
+    "v5.5.9 — 2026-06-08 20:04 — Abend-Update (Montag, KW 24 Tag 1: 2/7 erledigt)",
+    "v5.5.8 — 2026-06-08 04:04 — Früh-Update (Montag, KW 24 Start)",
+    "v5.5.7 — 2026-06-08 00:04 — Nacht-Update (Montag)",
+    "v5.5.6 — 2026-06-07 20:04 — Abend-Update (Sonntag, KW 23 Finale)",
+    "v5.5.5 — 2026-06-07 14:04 — Nachmittags-Update (Sonntag)"
   ]
 }
