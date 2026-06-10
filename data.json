@@ -1,57 +1,54 @@
 {
-  "version": "v5.5.1",
-  "lastUpdated": "2026-06-06T06:04:00Z",
-  "week": "KW 23",
+  "version": "v5.6.12",
+  "lastUpdated": "2026-06-11T00:04:00+02:00",
+  "week": "KW 24",
   "mode": "REACTIV",
   "summary": {
-    "tasksCompleted": 0,
-    "tasksTotal": 7,
-    "successRate": "0%",
-    "criticalOverdue": 2,
+    "tasksCompleted": 4,
+    "tasksTotal": 8,
+    "successRate": "50%",
+    "criticalOverdue": 1,
     "highOverdue": 3
   },
   "today": {
-    "date": "2026-06-06",
-    "day": "Samstag",
+    "date": "2026-06-11",
+    "day": "Donnerstag",
     "completed": 0,
-    "total": 7,
+    "total": 5,
     "tasks": [
-      {"id": 1, "name": "Musterkarten raussuchen", "project": "Hiro Sakao", "status": "open"},
-      {"id": 2, "name": "Konkrete Preproduction", "project": "Wittmann", "status": "open"},
-      {"id": 3, "name": "Golf Footgolfvideo UGC", "project": "Golf", "status": "open"},
-      {"id": 4, "name": "Golfplatz video TC", "project": "Tough Cookie", "status": "open"},
-      {"id": 5, "name": "Niku Fernseher AD", "project": "Niku", "status": "open"},
-      {"id": 6, "name": "Verträge", "project": "Admin", "status": "open"},
-      {"id": 7, "name": "Stories für Kinchia", "project": "Kinchia", "status": "open"}
+      {"id": 1, "name": "Golf Call", "project": "Golf", "status": "open", "note": "Als erstes!"},
+      {"id": 2, "name": "Niku Fernseher AD", "project": "Niku", "status": "open"},
+      {"id": 3, "name": "Wittmann Preproduction", "project": "Wittmann", "status": "open"},
+      {"id": 4, "name": "Golf Footgolfvideo UGC", "project": "Golf", "status": "open"},
+      {"id": 5, "name": "Drehtermin Niku finalisieren", "project": "Niku", "status": "open"}
     ]
   },
   "critical": [
-    {"task": "NOMU Post-Production", "overdue": 53, "days": 53, "type": "post-production", "priority": "critical"},
-    {"task": "Japanese Pancake Post-Production", "overdue": 13, "days": 13, "type": "post-production", "priority": "critical"}
+    {"task": "NOMU Post-Production", "overdue": 65, "days": 65, "type": "post-production", "priority": "critical", "note": "ENTSCHEIDUNGSTAG!"}
   ],
   "overdue": [
-    {"task": "Little Hero Call", "days": 13, "type": "call", "priority": "high"},
-    {"task": "Anju CI-Design", "days": 13, "type": "design", "priority": "high"},
-    {"task": "Sentai Post-Production", "days": 13, "type": "post-production", "priority": "high"}
+    {"task": "Sentai Post-Production", "days": 23, "type": "post-production", "priority": "high"},
+    {"task": "Hiro Sakao Musterkarten", "days": 16, "type": "research", "priority": "medium"},
+    {"task": "Tough Cookie Golfplatz Video", "days": 16, "type": "content", "priority": "medium"}
   ],
   "patterns": [
-    {"name": "Crash nach High", "description": "Nach intensiver Woche folgt automatisch eine Pause-Woche", "status": "active"},
-    {"name": "Post-Production = Prokrastination", "description": "Post-Production wird immer verschoben", "status": "active"},
-    {"name": "Calls = Unangenehm", "description": "Calls werden systematisch vermieden", "status": "active"}
+    {"name": "Wellenrhythmus", "description": "KW 23: 1/8 → KW 24: 4/8. Tag 4 = Produktivitätstag!", "status": "active"},
+    {"name": "Post-Production = Prokrastination", "description": "NOMU 65 Tage — HEUTE Entscheidung!", "status": "critical"},
+    {"name": "Calls = Unangenehm", "description": "Golf Call wartet — als erstes heute!", "status": "improving"}
   ],
   "weekly": {
-    "week": "KW 23",
-    "completed": 1,
+    "week": "KW 24",
+    "completed": 4,
     "planned": 8,
-    "successRate": "12.5%",
-    "notes": "Samstag - Reactiv Only Mode"
+    "successRate": "50%",
+    "notes": "KW 24 Tag 4 (Donnerstag) — Entscheidungstag für NOMU"
   },
   "history": [
-    {"date": "2026-06-06", "completed": 0, "total": 7},
-    {"date": "2026-06-05", "completed": 1, "total": 8},
-    {"date": "2026-06-04", "completed": 0, "total": 0},
-    {"date": "2026-06-03", "completed": 0, "total": 0},
-    {"date": "2026-06-02", "completed": 0, "total": 0},
-    {"date": "2026-06-01", "completed": 0, "total": 0}
+    {"date": "2026-06-11", "completed": 0, "total": 5},
+    {"date": "2026-06-10", "completed": 0, "total": 5},
+    {"date": "2026-06-09", "completed": 0, "total": 5},
+    {"date": "2026-06-08", "completed": 2, "total": 7},
+    {"date": "2026-06-07", "completed": 2, "total": 8},
+    {"date": "2026-06-06", "completed": 0, "total": 8}
   ]
 }

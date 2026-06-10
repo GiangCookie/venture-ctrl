@@ -1,6 +1,6 @@
 {
-  "version": "v5.6.1",
-  "lastUpdated": "2026-06-09T04:04:00+02:00",
+  "version": "v5.6.12",
+  "lastUpdated": "2026-06-11T00:04:00+02:00",
   "week": "KW 24",
   "mode": "REACTIV",
   "summary": {
@@ -11,26 +11,26 @@
     "highOverdue": 3
   },
   "today": {
-    "date": "2026-06-09",
-    "day": "Dienstag",
-    "time": "04:04",
+    "date": "2026-06-11",
+    "day": "Donnerstag",
+    "time": "00:04",
     "completed": 0,
     "total": 5,
     "tasks": [
-      {"id": 1, "name": "Niku Fernseher AD", "project": "Niku", "status": "open"},
-      {"id": 2, "name": "Wittmann Preproduction", "project": "Wittmann", "status": "open"},
-      {"id": 3, "name": "Golf Footgolfvideo UGC", "project": "Golf", "status": "open"},
-      {"id": 4, "name": "Call mit Golf Club", "project": "Golf", "status": "open"},
+      {"id": 1, "name": "Golf Call", "project": "Golf", "status": "open", "note": "Morgen als erstes!"},
+      {"id": 2, "name": "Niku Fernseher AD", "project": "Niku", "status": "open"},
+      {"id": 3, "name": "Wittmann Preproduction", "project": "Wittmann", "status": "open"},
+      {"id": 4, "name": "Golf Footgolfvideo UGC", "project": "Golf", "status": "open"},
       {"id": 5, "name": "Drehtermin Niku finalisieren", "project": "Niku", "status": "open"}
     ]
   },
   "critical": [
-    {"task": "NOMU Post-Production", "overdue": 64, "days": 64, "type": "post-production", "priority": "critical", "note": "Der ewige Brocken"}
+    {"task": "NOMU Post-Production", "overdue": 65, "days": 65, "type": "post-production", "priority": "critical", "note": "ENTSCHEIDUNGSTAG! Extern, aufgeben oder fertig?"}
   ],
   "overdue": [
-    {"task": "Sentai Post-Production", "days": 22, "type": "post-production", "priority": "high"},
-    {"task": "Hiro Sakao Musterkarten", "days": 15, "type": "research", "priority": "medium"},
-    {"task": "Tough Cookie Golfplatz Video", "days": 15, "type": "content", "priority": "medium"}
+    {"task": "Sentai Post-Production", "days": 23, "type": "post-production", "priority": "high"},
+    {"task": "Hiro Sakao Musterkarten", "days": 16, "type": "research", "priority": "medium"},
+    {"task": "Tough Cookie Golfplatz Video", "days": 16, "type": "content", "priority": "medium"}
   ],
   "completedToday": [],
   "completedWeek": [
@@ -40,49 +40,52 @@
     {"task": "Anju CI weiterleiten", "project": "Tough Cookie", "date": "2026-06-08"}
   ],
   "upcoming": [
-    {"event": "Kyberg Meeting", "date": "Heute, 9.6.", "type": "meeting", "note": "Präsentation fertig — Wichtiger Pitch!", "priority": "critical"}
+    {"event": "KW 24 Tag 4", "date": "Donnerstag, 11.6.", "type": "milestone", "note": "Neuer Tag — 5 Tasks bereit", "priority": "high"}
   ],
   "patterns": [
-    {"name": "Wellenrhythmus", "description": "KW 23: 1/8 → KW 24: 2/7 Tag 1. Produktiver Start!", "status": "active"},
-    {"name": "Post-Production = Prokrastination", "description": "NOMU 64 Tage — Entscheidung nötig", "status": "active"},
-    {"name": "Calls = Unangenehm", "description": "Little Hero Call erledigt! Golf Call noch offen", "status": "improving"}
+    {"name": "Wellenrhythmus", "description": "KW 23: 1/8 → KW 24: 4/8. Tag 4 = Produktivitätstag!", "status": "active"},
+    {"name": "Post-Production = Prokrastination", "description": "NOMU 65 Tage — HEUTE ist Entscheidungstag!", "status": "critical"},
+    {"name": "Calls = Unangenehm", "description": "Golf Call wartet — als erstes heute machen!", "status": "improving"}
   ],
   "weekly": {
     "week": "KW 24",
     "completed": 4,
     "planned": 8,
     "successRate": "50%",
-    "notes": "KW 24 Tag 2 — Kyberg Meeting heute!"
+    "notes": "KW 24 Tag 4 (Donnerstag) — Nacht-Update, neuer Tag"
   },
   "history": [
+    {"date": "2026-06-11", "completed": 0, "total": 5},
+    {"date": "2026-06-10", "completed": 0, "total": 5},
     {"date": "2026-06-09", "completed": 0, "total": 5},
     {"date": "2026-06-08", "completed": 2, "total": 7},
     {"date": "2026-06-07", "completed": 2, "total": 8},
     {"date": "2026-06-06", "completed": 0, "total": 8},
-    {"date": "2026-06-05", "completed": 1, "total": 8},
-    {"date": "2026-06-04", "completed": 0, "total": 0},
-    {"date": "2026-06-03", "completed": 0, "total": 0}
+    {"date": "2026-06-05", "completed": 1, "total": 8}
   ],
   "insights": {
-    "pattern": "KW 24 Tag 2 startet — Kyberg Meeting heute, wichtiger Pitch!",
-    "blocker": "NOMU 64 Tage — Entscheidung: extern geben oder aufgeben?",
-    "momentum": "Montag war produktiv (2 Tasks) — Dienstag kann folgen",
-    "focus": "Kyberg Meeting heute, 9.6. — Präsentation ist fertig!"
+    "pattern": "KW 24 Tag 4 (Donnerstag) — Nacht-Update, 00:04 Uhr",
+    "blocker": "NOMU 65 Tage — HEUTE ist Entscheidungstag!",
+    "momentum": "Donnerstag = traditionell produktivster Tag",
+    "focus": "Golf Call als erstes, dann NOMU-Entscheidung"
   },
   "cronUpdate": {
     "trigger": "dashboard-update-4h-v2",
-    "previousVersion": "v5.6.0",
-    "currentVersion": "v5.6.1",
+    "previousVersion": "v5.6.11",
+    "currentVersion": "v5.6.12",
     "interval": "4 Stunden (Reactiv Mode)",
-    "note": "Früh-Update — KW 24 Tag 2 (Kyberg Meeting heute!)"
+    "note": "Nacht-Update — KW 24 Tag 4 (Donnerstag) 00:04, neuer Tag beginnt"
   },
   "updateHistory": [
-    "v5.6.1 — 2026-06-09 04:04 — Früh-Update (Dienstag, KW 24 Tag 2, Kyberg Meeting heute)",
-    "v5.6.0 — 2026-06-09 00:04 — Nacht-Update (Dienstag, KW 24 Tag 2 startet, Kyberg Meeting heute)",
-    "v5.5.9 — 2026-06-08 20:04 — Abend-Update (Montag, KW 24 Tag 1: 2/7 erledigt)",
-    "v5.5.8 — 2026-06-08 04:04 — Früh-Update (Montag, KW 24 Start)",
-    "v5.5.7 — 2026-06-08 00:04 — Nacht-Update (Montag)",
-    "v5.5.6 — 2026-06-07 20:04 — Abend-Update (Sonntag, KW 23 Finale)",
-    "v5.5.5 — 2026-06-07 14:04 — Nachmittags-Update (Sonntag)"
+    "v5.6.12 — 2026-06-11 00:04 — Nacht-Update (Donnerstag, KW 24 Tag 4)",
+    "v5.6.11 — 2026-06-10 20:04 — Abend-Update (Mittwoch, KW 24 Tag 3)",
+    "v5.6.10 — 2026-06-10 14:04 — Nachmittags-Update (Mittwoch, KW 24 Tag 3)",
+    "v5.6.9 — 2026-06-10 12:04 — Mittags-Update (Mittwoch, KW 24 Tag 3)",
+    "v5.6.8 — 2026-06-10 08:04 — Morgen-Update (Mittwoch, KW 24 Tag 3)",
+    "v5.6.7 — 2026-06-10 04:04 — Früh-Update (Mittwoch, KW 24 Tag 3)",
+    "v5.6.6 — 2026-06-10 00:04 — Nacht-Update (Mittwoch, KW 24 Tag 3 startet)",
+    "v5.6.5 — 2026-06-09 20:04 — Abend-Update (Dienstag, KW 24 Tag 2)",
+    "v5.6.4 — 2026-06-09 16:04 — Nachmittags-Update (Dienstag, KW 24 Tag 2)",
+    "v5.6.3 — 2026-06-09 12:04 — Mittags-Update (Dienstag, KW 24 Tag 2)"
   ]
 }
