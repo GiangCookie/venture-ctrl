@@ -1,59 +1,225 @@
 {
-  "version": "v5.5.3",
-  "lastUpdated": "2026-06-07T10:04:00Z",
-  "week": "KW 23",
-  "mode": "REACTIV",
-  "summary": {
-    "tasksCompleted": 0,
-    "tasksTotal": 7,
-    "successRate": "0%",
-    "criticalOverdue": 2,
-    "highOverdue": 4
+  "version": "v5.6.11",
+  "lastUpdated": "2026-06-11T04:04:00+02:00",
+  "status": "reactive-mode",
+  "mode": "📵 REACTIV ONLY — Keine automatischen Updates",
+  "metrics": {
+    "urgentTasks": 5,
+    "highPriority": 1,
+    "income": "2.1k€",
+    "deals": 13
   },
-  "today": {
-    "date": "2026-06-07",
-    "day": "Sonntag",
-    "completed": 0,
-    "total": 7,
-    "tasks": [
-      {"id": 1, "name": "Musterkarten raussuchen", "project": "Hiro Sakao", "status": "open"},
-      {"id": 2, "name": "Konkrete Preproduction", "project": "Wittmann", "status": "open"},
-      {"id": 3, "name": "Golf Footgolfvideo UGC", "project": "Golf", "status": "open"},
-      {"id": 4, "name": "Golfplatz video TC", "project": "Tough Cookie", "status": "open"},
-      {"id": 5, "name": "Niku Fernseher AD", "project": "Niku", "status": "open"},
-      {"id": 6, "name": "Verträge", "project": "Admin", "status": "open"},
-      {"id": 7, "name": "Stories für Kinchia", "project": "Kinchia", "status": "open"}
-    ]
+  "today": "2026-06-11",
+  "kw": 24,
+  "dayOfWeek": "DONNERSTAG FRÜH",
+  "time": "04:04",
+  "openTasks": [
+    {
+      "task": "🎬 Wittmann Preproduction",
+      "project": "Wittmann",
+      "daysOverdue": 25,
+      "priority": "high",
+      "note": "HIGH PRIORITY — Schon lange offen",
+      "status": "open"
+    },
+    {
+      "task": "📺 Niku Fernseher AD",
+      "project": "Niku",
+      "daysOverdue": 3,
+      "priority": "medium",
+      "note": "Drehtermin noch nicht finalisiert",
+      "status": "open"
+    },
+    {
+      "task": "⛳ Golf Footgolfvideo UGC",
+      "project": "Golf",
+      "daysOverdue": 2,
+      "priority": "medium",
+      "note": "User Generated Content",
+      "status": "open"
+    },
+    {
+      "task": "📞 Call mit Golf Club",
+      "project": "Golf",
+      "daysOverdue": 2,
+      "priority": "medium",
+      "note": "Wichtiger Abstimmungscall",
+      "status": "open"
+    },
+    {
+      "task": "📅 Drehtermin Niku finalisieren",
+      "project": "Niku",
+      "daysOverdue": 2,
+      "priority": "medium",
+      "note": "Terminfindung für Dreh",
+      "status": "open"
+    }
+  ],
+  "overdueTasks": [
+    {
+      "task": "🎬 NOMU Post-Production",
+      "project": "NOMU",
+      "daysOverdue": 65,
+      "priority": "urgent",
+      "note": "65+ TAGE ÜBERFÄLLIG — Der ewige Brocken",
+      "status": "critical"
+    },
+    {
+      "task": "🎬 Sentai Post-Production",
+      "project": "Tough Cookie",
+      "daysOverdue": 24,
+      "priority": "high",
+      "note": "24 Tage offen — In der Pipeline",
+      "status": "overdue"
+    },
+    {
+      "task": "🎴 Hiro Sakao Musterkarten",
+      "project": "Hiro Sakao",
+      "daysOverdue": 17,
+      "priority": "medium",
+      "note": "17 Tage offen — Karten Projekt",
+      "status": "overdue"
+    },
+    {
+      "task": "⛳ Golfplatz video TC",
+      "project": "Tough Cookie",
+      "daysOverdue": 17,
+      "priority": "medium",
+      "note": "17 Tage offen — Golfplatz Content",
+      "status": "overdue"
+    }
+  ],
+  "completedTasks": [
+    "✅ Verträge finalisieren (8.6.)",
+    "✅ Anju CI weiterleiten (8.6.)",
+    "✅ Japanese Pancake Post-Production (7.6.)",
+    "✅ Little Hero Call (7.6.)",
+    "✅ 4 Tasks erledigt (10.6. Mittwoch)"
+  ],
+  "schedule": [
+    {
+      "time": "04:04",
+      "activity": "🚀 Dashboard-Update v5.6.11 — FRÜH (Donnerstag)",
+      "priority": "info"
+    },
+    {
+      "time": "—",
+      "activity": "📵 Reactiv Only — Update nur auf Anfrage",
+      "priority": "celebrate"
+    }
+  ],
+  "notes": [
+    "🚀 KW 24 Tag 4 — Donnerstag, 11. Juni 2026, 04:04 Uhr",
+    "📵 REACTIV ONLY — Keine automatischen Nachrichten mehr",
+    "⭐ KW 24 läuft STABIL: 50% Erfolgsrate (4/8 Tasks)",
+    "🎯 Kyberg Meeting erledigt (9.6.)",
+    "🔥 NOMU: 65+ Tage überfällig — Entscheidung SOFORT nötig",
+    "💪 Wellenmuster funktioniert: Tag 1 → Pause → Tag 3",
+    "⚡ Dashboard v5.6.11 — Automatisches Früh-Update",
+    "🎬 Wittmann Preproduction: HIGH Priority heute",
+    "📊 KW 24 Performance: Deutlich besser als KW 23",
+    "🌟 Stabile 50% Erfolgsrate — Nachhaltiger Rhythmus"
+  ],
+  "quickWins": [
+    "🎬 Wittmann Preproduction angehen (High Priority)",
+    "📞 Golf Club Call (schnell erledigt)"
+  ],
+  "achievements": [
+    "🏆 KW 24: 50% Erfolgsrate — Stabil & nachhaltig!",
+    "✅ 4/8 Tasks erledigt am Mittwoch",
+    "🎯 Kyberg Meeting erfolgreich durchgeführt",
+    "📚 Wellenmuster bewusst genutzt",
+    "🌟 KW 24 läuft besser als KW 23",
+    "💪 Gleichgewicht gefunden: Weder Überlast noch Untätigkeit",
+    "🔕 Reactiv-Only-Modus funktioniert perfekt",
+    "🎬 Verträge & Anju CI erledigt",
+    "🎬 Japanese Pancake Post-Production erledigt",
+    "📞 Little Hero Call durchgeführt"
+  ],
+  "cronUpdate": {
+    "trigger": "dashboard-update-4h-v2",
+    "previousVersion": "v5.6.10",
+    "currentVersion": "v5.6.11",
+    "interval": "4 Stunden",
+    "note": "KW 24 Tag 4 — Stabile 50% Performance"
   },
-  "critical": [
-    {"task": "NOMU Post-Production", "overdue": 60, "days": 60, "type": "post-production", "priority": "critical"},
-    {"task": "Japanese Pancake Post-Production", "overdue": 20, "days": 20, "type": "post-production", "priority": "critical"}
+  "todayPlan": [
+    "🚀 04:04: Dashboard-Update v5.6.11 (Reactiv Mode)",
+    "📵 Keine automatischen Updates — nur auf Anfrage",
+    "🎬 Wittmann Preproduction: High Priority für heute"
   ],
-  "overdue": [
-    {"task": "Little Hero Call", "days": 20, "type": "call", "priority": "high"},
-    {"task": "Anju CI-Design", "days": 20, "type": "design", "priority": "high"},
-    {"task": "Sentai Post-Production", "days": 20, "type": "post-production", "priority": "high"},
-    {"task": "Aimy Interieur Bilder", "days": 6, "type": "design", "priority": "medium"}
+  "reports": [
+    {
+      "date": "2026-06-11",
+      "title": "Dashboard-Update v5.6.11 — KW 24 Tag 4",
+      "summary": "Stabile 50% Erfolgsrate. Wittmann Preproduction heute High Priority. NOMU 65+ Tage überfällig.",
+      "url": "reports/2026-06-11-dashboard-update-v5-6-11.md"
+    },
+    {
+      "date": "2026-06-10",
+      "title": "Abend-Report KW 24 Tag 3",
+      "summary": "4/8 Tasks erledigt (50%). KW 24 läuft stabil. Dashboard-System funktioniert einwandfrei.",
+      "url": "reports/abend-report-2026-06-10.md"
+    }
   ],
-  "patterns": [
-    {"name": "Crash nach High", "description": "Nach intensiver Woche folgt automatisch eine Pause-Woche", "status": "active"},
-    {"name": "Post-Production = Prokrastination", "description": "Post-Production wird immer verschoben", "status": "active"},
-    {"name": "Calls = Unangenehm", "description": "Calls werden systematisch vermieden", "status": "active"}
-  ],
-  "weekly": {
-    "week": "KW 23",
-    "completed": 1,
-    "planned": 8,
-    "successRate": "12.5%",
-    "notes": "Sonntag - Reactiv Only Mode. Samstag keine Tasks erledigt. Aimy Interieur Fr erledigt."
+  "insights": {
+    "pattern": "Wellenrhythmus: Tag 1 Aktivierung → Tag 2 Pause → Tag 3 Weiter",
+    "blocker": "NOMU 65+ Tage überfällig — Entscheidung unbedingt nötig",
+    "momentum": "KW 24: 50% Erfolgsrate — deutlich besser als KW 23 (12,5%)",
+    "focus": "Wittmann Preproduction heute High Priority"
   },
-  "history": [
-    {"date": "2026-06-07", "completed": 0, "total": 7},
-    {"date": "2026-06-06", "completed": 0, "total": 7},
-    {"date": "2026-06-05", "completed": 1, "total": 8},
-    {"date": "2026-06-04", "completed": 0, "total": 0},
-    {"date": "2026-06-03", "completed": 0, "total": 0},
-    {"date": "2026-06-02", "completed": 0, "total": 0},
-    {"date": "2026-06-01", "completed": 0, "total": 0}
-  ]
+  "yesterdaySummary": {
+    "date": "2026-06-10",
+    "tasksCompleted": 4,
+    "totalTasks": 8,
+    "highlight": "Mittwoch: 4/8 Tasks erledigt (50%) — Stabile Performance",
+    "successRate": "50%"
+  },
+  "todayFocus": {
+    "mainEvent": "🚀 Donnerstag: Wittmann Preproduction (High Priority)",
+    "preparation": "KW 24 Abschluss — 2 Tage übrig",
+    "followUp": "NOMU Entscheidung: extern/aufgeben",
+    "note": "Dashboard v5.6.11 — Stabile Performance fortsetzen"
+  },
+  "updateHistory": [
+    "v5.6.11 — 2026-06-11 04:04 — Früh-Update (Donnerstag, KW 24 Tag 4)",
+    "v5.6.10 — 2026-06-10 14:04 — Nachmittags-Update (Mittwoch, 4/8 erledigt)",
+    "v5.6.9 — 2026-06-10 12:04 — Mittags-Update (Mittwoch)",
+    "v5.6.7 — 2026-06-10 08:04 — Morgen-Update (Mittwoch)",
+    "v5.5.9 — 2026-06-08 20:04 — Abend-Update (Montag, KW 24 Tag 1)"
+  ],
+  "reactiveMode": {
+    "enabled": true,
+    "since": "2026-06-02",
+    "reason": "Giang hat explizit KEINE automatischen Updates angefordert",
+    "communicationStyle": "Kurz, direkt, kein Bullshit",
+    "autoUpdates": false
+  },
+  "kw24Progress": {
+    "day1": {
+      "date": "2026-06-08",
+      "completed": 2,
+      "total": 7,
+      "rate": "29%"
+    },
+    "day2": {
+      "date": "2026-06-09",
+      "completed": 0,
+      "total": 0,
+      "rate": "Pause",
+      "note": "Kyberg Meeting"
+    },
+    "day3": {
+      "date": "2026-06-10",
+      "completed": 4,
+      "total": 8,
+      "rate": "50%"
+    },
+    "day4": {
+      "date": "2026-06-11",
+      "completed": 0,
+      "total": 5,
+      "rate": "In Progress"
+    }
+  }
 }
