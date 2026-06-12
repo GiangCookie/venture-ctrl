@@ -1,6 +1,6 @@
 {
-  "version": "v5.6.16",
-  "lastUpdated": "2026-06-11T18:04:00+02:00",
+  "version": "v5.6.19",
+  "lastUpdated": "2026-06-12T12:04:00+02:00",
   "week": "KW 24",
   "mode": "REACTIV",
   "summary": {
@@ -11,13 +11,13 @@
     "highOverdue": 3
   },
   "today": {
-    "date": "2026-06-11",
-    "day": "Donnerstag",
-    "time": "18:04",
+    "date": "2026-06-12",
+    "day": "Freitag",
+    "time": "12:04",
     "completed": 0,
     "total": 5,
     "tasks": [
-      {"id": 1, "name": "🎬 Wittmann Preproduction", "project": "Wittmann", "status": "open", "priority": "high", "note": "Heute als erstes!"},
+      {"id": 1, "name": "🎬 Wittmann Preproduction", "project": "Wittmann", "status": "open", "priority": "high", "note": "Wichtig für nächste Woche!"},
       {"id": 2, "name": "📺 Niku Fernseher AD", "project": "Niku", "status": "open", "priority": "medium"},
       {"id": 3, "name": "⛳ Golf Footgolfvideo UGC", "project": "Golf", "status": "open", "priority": "medium"},
       {"id": 4, "name": "📞 Call mit Golf Club", "project": "Golf", "status": "open", "priority": "medium"},
@@ -25,12 +25,12 @@
     ]
   },
   "critical": [
-    {"task": "NOMU Post-Production", "overdue": 65, "days": 65, "type": "post-production", "priority": "critical", "note": "65+ TAGE — Entscheidung: extern, aufgeben, oder fertig?"}
+    {"task": "NOMU Post-Production", "overdue": 66, "days": 66, "type": "post-production", "priority": "critical", "note": "66+ TAGE — Entscheidung: extern, aufgeben, oder fertig?"}
   ],
   "overdue": [
-    {"task": "Sentai Post-Production", "days": 23, "type": "post-production", "priority": "high"},
-    {"task": "Hiro Sakao Musterkarten", "days": 16, "type": "research", "priority": "medium"},
-    {"task": "Tough Cookie Golfplatz Video", "days": 16, "type": "content", "priority": "medium"}
+    {"task": "Sentai Post-Production", "days": 24, "type": "post-production", "priority": "high"},
+    {"task": "Hiro Sakao Musterkarten", "days": 17, "type": "research", "priority": "medium"},
+    {"task": "Tough Cookie Golfplatz Video", "days": 17, "type": "content", "priority": "medium"}
   ],
   "completedToday": [],
   "completedWeek": [
@@ -40,52 +40,53 @@
     {"task": "Anju CI weiterleiten", "project": "Tough Cookie", "date": "2026-06-08"}
   ],
   "upcoming": [
-    {"event": "Wittmann Preproduction", "date": "Heute 18:04", "type": "task", "note": "🔥 HIGH PRIORITY", "priority": "high"}
+    {"event": "KW 24 Wochenabschluss", "date": "Heute Nachmittag", "type": "milestone", "note": "🔥 Letzte Chance für Tasks vor dem Wochenende", "priority": "high"}
   ],
   "patterns": [
-    {"name": "Wellenrhythmus KW 24", "description": "Tag 1: 29% → Tag 2: Pause → Tag 3: 50% → Tag 4: In Progress", "status": "active"},
-    {"name": "Post-Production = Prokrastination", "description": "NOMU 65+ Tage — der ewige Blocker", "status": "critical"},
-    {"name": "Calls = Unangenehm", "description": "Golf Call wartet seit Tagen", "status": "improving"}
+    {"name": "Wellenrhythmus KW 24", "description": "Tag 1: 29% → Tag 2: Pause → Tag 3: 0% → Tag 4: 0% → Tag 5: ?", "status": "active"},
+    {"name": "Post-Production = Prokrastination", "description": "NOMU 66+ Tage — der ewige Blocker", "status": "critical"},
+    {"name": "Freitag = Abschluss", "description": "KW 24 Abschlusstag — Tasks für Wochenende erledigen", "status": "active"}
   ],
   "weekly": {
     "week": "KW 24",
     "completed": 4,
     "planned": 8,
     "successRate": "50%",
-    "notes": "KW 24 Tag 4 (Donnerstag Abend) — Stabilität vor Burnout"
+    "notes": "KW 24 Tag 5 (Freitag Mittag) — Zeit für Abschlusspush"
   },
   "history": [
+    {"date": "2026-06-12", "completed": 0, "total": 5},
     {"date": "2026-06-11", "completed": 0, "total": 5},
     {"date": "2026-06-10", "completed": 0, "total": 5},
     {"date": "2026-06-09", "completed": 0, "total": 5},
     {"date": "2026-06-08", "completed": 2, "total": 7},
     {"date": "2026-06-07", "completed": 2, "total": 8},
-    {"date": "2026-06-06", "completed": 0, "total": 8},
-    {"date": "2026-06-05", "completed": 1, "total": 8}
+    {"date": "2026-06-06", "completed": 0, "total": 8}
   ],
   "insights": {
-    "pattern": "50% Erfolgsrate = nachhaltige Produktivität ohne Überlastung",
-    "blocker": "NOMU 65+ Tage — Entscheidung unbedingt nötig",
-    "momentum": "KW 24 stabil — Wellenrhythmus funktioniert",
-    "focus": "Wittmann Preproduction heute als HIGH PRIORITY"
+    "pattern": "50% Erfolgsrate = nachhaltige Produktivität",
+    "blocker": "NOMU 66+ Tage — Entscheidung UNBEDINGT nötig",
+    "momentum": "KW 24 Abschluss — Freitag Mittag: Noch Zeit für Tasks!",
+    "focus": "Wittmann Preproduction bleibt HIGH PRIORITY",
+    "window": "~4h bis zum Wochenende"
   },
   "cronUpdate": {
     "trigger": "dashboard-update-4h-v2",
-    "previousVersion": "v5.6.15",
-    "currentVersion": "v5.6.16",
+    "previousVersion": "v5.6.18",
+    "currentVersion": "v5.6.19",
     "interval": "4 Stunden (Reactiv Mode)",
-    "note": "Abend-Update — KW 24 Tag 4 (Donnerstag) 18:04"
+    "note": "Mittags-Update — KW 24 Tag 5 (Freitag) 12:04"
   },
   "updateHistory": [
+    "v5.6.19 — 2026-06-12 12:04 — Mittags-Update (Freitag, KW 24 Tag 5)",
+    "v5.6.18 — 2026-06-12 08:04 — Früh-Update (Freitag, KW 24 Tag 5)",
+    "v5.6.17 — 2026-06-12 04:04 — Früh-Update (Freitag, KW 24 Tag 5)",
     "v5.6.16 — 2026-06-11 18:04 — Abend-Update (Donnerstag, KW 24 Tag 4)",
     "v5.6.15 — 2026-06-11 14:04 — Nachmittags-Update (Donnerstag, KW 24 Tag 4)",
     "v5.6.14 — 2026-06-11 12:04 — Mittags-Update (Donnerstag, KW 24 Tag 4)",
     "v5.6.13 — 2026-06-11 08:04 — Morgen-Update (Donnerstag, KW 24 Tag 4)",
     "v5.6.12 — 2026-06-11 00:04 — Nacht-Update (Donnerstag, KW 24 Tag 4)",
     "v5.6.11 — 2026-06-10 20:04 — Abend-Update (Mittwoch, KW 24 Tag 3)",
-    "v5.6.10 — 2026-06-10 16:04 — Nachmittags-Update (Mittwoch, KW 24 Tag 3)",
-    "v5.6.9 — 2026-06-10 12:04 — Mittags-Update (Mittwoch, KW 24 Tag 3)",
-    "v5.6.8 — 2026-06-10 08:04 — Morgen-Update (Mittwoch, KW 24 Tag 3)",
-    "v5.6.7 — 2026-06-10 04:04 — Früh-Update (Mittwoch, KW 24 Tag 3)"
+    "v5.6.10 — 2026-06-10 16:04 — Nachmittags-Update (Mittwoch, KW 24 Tag 3)"
   ]
 }

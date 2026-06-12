@@ -1,359 +1,93 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>venture-ctrl Dashboard v5.6.16</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-            color: #eee;
-            min-height: 100vh;
-            padding: 20px;
-        }
-        .container { max-width: 1200px; margin: 0 auto; }
-        .header {
-            text-align: center;
-            padding: 30px 20px;
-            background: rgba(255,255,255,0.05);
-            border-radius: 20px;
-            margin-bottom: 20px;
-            border: 1px solid rgba(255,255,255,0.1);
-        }
-        .header h1 {
-            font-size: 2.5rem;
-            background: linear-gradient(90deg, #00d4ff, #7b2cbf);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 10px;
-        }
-        .version {
-            display: inline-block;
-            background: rgba(0,212,255,0.2);
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            color: #00d4ff;
-        }
-        .timestamp {
-            color: #888;
-            margin-top: 10px;
-            font-size: 0.85rem;
-        }
-        .status-banner {
-            padding: 20px;
-            border-radius: 15px;
-            margin-bottom: 20px;
-            text-align: center;
-            font-size: 1.2rem;
-            font-weight: 600;
-        }
-        .status-reactiv {
-            background: linear-gradient(135deg, #82c91e 0%, #51cf66 100%);
-            color: #1a1a2e;
-        }
-        .status-urgent {
-            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
-            animation: pulse 2s infinite;
-        }
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.85; }
-        }
-        .metrics-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            margin-bottom: 20px;
-        }
-        .metric-card {
-            background: rgba(255,255,255,0.05);
-            border-radius: 15px;
-            padding: 20px;
-            text-align: center;
-            border: 1px solid rgba(255,255,255,0.1);
-        }
-        .metric-value {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #00d4ff;
-        }
-        .metric-value.warning { color: #ff6b6b; }
-        .metric-value.success { color: #51cf66; }
-        .metric-label {
-            color: #888;
-            font-size: 0.9rem;
-            margin-top: 5px;
-        }
-        .card {
-            background: rgba(255,255,255,0.05);
-            border-radius: 15px;
-            padding: 20px;
-            margin-bottom: 20px;
-            border: 1px solid rgba(255,255,255,0.1);
-        }
-        .card h2 {
-            color: #00d4ff;
-            margin-bottom: 15px;
-            font-size: 1.3rem;
-        }
-        .task-list { list-style: none; }
-        .task-item {
-            padding: 15px;
-            margin-bottom: 10px;
-            border-radius: 10px;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            align-items: center;
-        }
-        .task-open { background: rgba(255,193,7,0.1); border-left: 4px solid #ffc107; }
-        .task-urgent { background: rgba(244,67,54,0.15); border-left: 4px solid #f44336; }
-        .task-completed { background: rgba(76,175,80,0.15); border-left: 4px solid #4caf50; }
-        .task-project {
-            font-size: 0.75rem;
-            color: #888;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        .task-name {
-            flex: 1;
-            min-width: 200px;
-            font-weight: 500;
-        }
-        .task-status {
-            padding: 5px 12px;
-            border-radius: 15px;
-            font-size: 0.8rem;
-            font-weight: 500;
-        }
-        .status-open { background: rgba(255,193,7,0.3); color: #ffc107; }
-        .status-completed { background: rgba(76,175,80,0.3); color: #4caf50; }
-        .status-overdue { background: rgba(244,67,54,0.3); color: #f44336; }
-        .insight-box {
-            background: rgba(0,212,255,0.08);
-            border-radius: 10px;
-            padding: 15px;
-            margin-bottom: 10px;
-            border-left: 3px solid #00d4ff;
-        }
-        .insight-label {
-            font-weight: 600;
-            color: #00d4ff;
-            margin-bottom: 5px;
-        }
-        .insight-text {
-            color: #aaa;
-            font-size: 0.9rem;
-        }
-        .two-column {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-        .critical-action {
-            background: linear-gradient(135deg, rgba(244,67,54,0.2), rgba(233,30,99,0.1));
-            border: 2px solid rgba(244,67,54,0.5);
-            border-radius: 15px;
-            padding: 20px;
-            margin-bottom: 20px;
-            animation: pulse 2s infinite;
-        }
-        .critical-action h3 {
-            color: #f44336;
-            margin-bottom: 10px;
-        }
-        .evening-push {
-            background: linear-gradient(135deg, rgba(123,44,191,0.2), rgba(0,212,255,0.1));
-            border: 2px solid rgba(123,44,191,0.5);
-            border-radius: 15px;
-            padding: 20px;
-            margin-bottom: 20px;
-        }
-        .evening-push h3 {
-            color: #7b2cbf;
-            margin-bottom: 10px;
-        }
-        @media (max-width: 600px) {
-            .header h1 { font-size: 1.8rem; }
-            .metric-value { font-size: 2rem; }
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div class="header">
-            <h1>🚀 venture-ctrl</h1>
-            <span class="version">v5.6.16</span>
-            <div class="timestamp">Zuletzt aktualisiert: Donnerstag, 11. Juni 2026, 18:04 Uhr</div>
-        </div>
-
-        <div class="status-banner status-reactiv">
-            ⚡ REACTIV MODE — KW 24, Tag 4 (Donnerstag Abend)
-        </div>
-
-        <div class="evening-push">
-            <h3>🌙 ABEND-UPDATE — KW 24 TAG 4</h3>
-            <p><strong>Donnerstag, 11. Juni 2026 — 18:04 Uhr</strong></p>
-            <p>Mittwoch: 0/5 erledigt. Tasks bleiben offen.</p>
-            <p><strong>Heute (Donnerstag):</strong> Abend-Update — Tagesbilanz</p>
-            <p><strong>Priorität:</strong> Wittmann Preproduction als HIGH PRIORITY!</p>
-        </div>
-
-        <div class="critical-action">
-            <h3>🔥 NOMU — ENTSCHEIDUNG DRINGEND!</h3>
-            <p><strong>65+ Tage überfällig</strong></p>
-            <p>Der ewige Brocken seit über 2 Monaten.</p>
-            <p><strong>Optionen:</strong> 1) Extern vergeben 2) Aufgeben 3) Diese Woche fertig</p>
-            <p>Keine weitere Verschiebung!</p>
-        </div>
-
-        <div class="metrics-grid">
-            <div class="metric-card">
-                <div class="metric-value success">50%</div>
-                <div class="metric-label">KW 24 Erfolgsrate</div>
-            </div>
-            <div class="metric-card">
-                <div class="metric-value">4/8</div>
-                <div class="metric-label">Tasks erledigt</div>
-            </div>
-            <div class="metric-card">
-                <div class="metric-value warning">5</div>
-                <div class="metric-label">Heutige Tasks</div>
-            </div>
-            <div class="metric-card">
-                <div class="metric-value warning">65+</div>
-                <div class="metric-label">NOMU Tage überfällig</div>
-            </div>
-        </div>
-
-        <div class="two-column">
-            <div class="card">
-                <h2>📋 Heutige Tasks (Donnerstag, 11.6.)</h2>
-                <ul class="task-list">
-                    <li class="task-item task-urgent">
-                        <div class="task-project">Wittmann</div>
-                        <div class="task-name">🎬 Wittmann Preproduction</div>
-                        <span class="task-status status-overdue">HIGH PRIORITY</span>
-                    </li>
-                    <li class="task-item task-open">
-                        <div class="task-project">Niku</div>
-                        <div class="task-name">📺 Niku Fernseher AD</div>
-                        <span class="task-status status-open">Offen</span>
-                    </li>
-                    <li class="task-item task-open">
-                        <div class="task-project">Golf</div>
-                        <div class="task-name">⛳ Golf Footgolfvideo UGC</div>
-                        <span class="task-status status-open">Offen</span>
-                    </li>
-                    <li class="task-item task-open">
-                        <div class="task-project">Golf</div>
-                        <div class="task-name">📞 Call mit Golf Club</div>
-                        <span class="task-status status-open">Offen</span>
-                    </li>
-                    <li class="task-item task-open">
-                        <div class="task-project">Niku</div>
-                        <div class="task-name">📅 Drehtermin Niku finalisieren</div>
-                        <span class="task-status status-open">Offen</span>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="card">
-                <h2>⚠️ Überfällige Tasks</h2>
-                <ul class="task-list">
-                    <li class="task-item task-urgent">
-                        <div class="task-project">Post-Production</div>
-                        <div class="task-name">NOMU Post-Production</div>
-                        <span class="task-status status-overdue">65+ Tage 🔥🔥🔥</span>
-                    </li>
-                    <li class="task-item task-open">
-                        <div class="task-project">Post-Production</div>
-                        <div class="task-name">Sentai Post-Production</div>
-                        <span class="task-status status-overdue">23 Tage</span>
-                    </li>
-                    <li class="task-item task-open">
-                        <div class="task-project">Research</div>
-                        <div class="task-name">Hiro Sakao Musterkarten</div>
-                        <span class="task-status status-overdue">16 Tage</span>
-                    </li>
-                    <li class="task-item task-open">
-                        <div class="task-project">Content</div>
-                        <div class="task-name">Tough Cookie Golfplatz Video</div>
-                        <span class="task-status status-overdue">16 Tage</span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="card">
-            <h2>🎯 Insights & Patterns</h2>
-            <div class="insight-box">
-                <div class="insight-label">Wellenrhythmus</div>
-                <div class="insight-text">KW 23: 1/8 → KW 24: 4/8. 50% = nachhaltige Produktivität, kein Burnout!</div>
-            </div>
-            <div class="insight-box">
-                <div class="insight-label">Post-Production = Prokrastination</div>
-                <div class="insight-text">NOMU 65+ Tage — Entscheidung unbedingt nötig!</div>
-            </div>
-            <div class="insight-box">
-                <div class="insight-label">KW 24 Tag 4 Abend</div>
-                <div class="insight-text">Donnerstag Abend — Tagesbilanz, Vorbereitung auf Freitag (KW 24 Abschluss)</div>
-            </div>
-        </div>
-
-        <div class="card">
-            <h2>✅ Erledigt diese Woche (KW 24)</h2>
-            <ul class="task-list">
-                <li class="task-item task-completed">
-                    <div class="task-project">Tough Cookie</div>
-                    <div class="task-name">Japanese Pancake Post-Production</div>
-                    <span class="task-status status-completed">Mo, 7.6.</span>
-                </li>
-                <li class="task-item task-completed">
-                    <div class="task-project">Freelance</div>
-                    <div class="task-name">Little Hero Call</div>
-                    <span class="task-status status-completed">Mo, 7.6.</span>
-                </li>
-                <li class="task-item task-completed">
-                    <div class="task-project">Admin</div>
-                    <div class="task-name">Verträge finalisieren</div>
-                    <span class="task-status status-completed">Di, 8.6.</span>
-                </li>
-                <li class="task-item task-completed">
-                    <div class="task-project">Tough Cookie</div>
-                    <div class="task-name">Anju CI weiterleiten</div>
-                    <span class="task-status status-completed">Di, 8.6.</span>
-                </li>
-            </ul>
-        </div>
-
-        <div class="card">
-            <h2>📝 Letzte Updates</h2>
-            <div style="font-size: 0.85rem; color: #888;">
-                <div style="padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.1); color: #00d4ff; font-weight: 600;">
-                    v5.6.16 — 2026-06-11 18:04 — Abend-Update (Donnerstag, KW 24 Tag 4)
-                </div>
-                <div style="padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.1);">
-                    v5.6.15 — 2026-06-11 14:04 — Nachmittags-Update (Donnerstag, KW 24 Tag 4)
-                </div>
-                <div style="padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.1);">
-                    v5.6.14 — 2026-06-11 12:04 — Mittags-Update (Donnerstag, KW 24 Tag 4)
-                </div>
-                <div style="padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.1);">
-                    v5.6.13 — 2026-06-11 08:04 — Morgen-Update (Donnerstag, KW 24 Tag 4)
-                </div>
-                <div style="padding: 8px 0;">
-                    v5.6.12 — 2026-06-11 00:04 — Nacht-Update (Donnerstag, KW 24 Tag 4)
-                </div>
-            </div>
-        </div>
-
-        <div style="text-align: center; padding: 20px; color: #666; font-size: 0.85rem;">
-            venture-ctrl Dashboard v5.6.16 · Automatisch aktualisiert alle 4 Stunden · Reactiv Mode
-        </div>
-    </div>
-</body>
-</html>
+{
+  "version": "v5.6.20",
+  "lastUpdated": "2026-06-12T16:04:00+02:00",
+  "week": "KW 24",
+  "mode": "REACTIV",
+  "summary": {
+    "tasksCompleted": 4,
+    "tasksTotal": 8,
+    "successRate": "50%",
+    "criticalOverdue": 1,
+    "highOverdue": 3
+  },
+  "today": {
+    "date": "2026-06-12",
+    "day": "Freitag",
+    "time": "16:04",
+    "completed": 0,
+    "total": 5,
+    "tasks": [
+      {"id": 1, "name": "🎬 Wittmann Preproduction", "project": "Wittmann", "status": "open", "priority": "high", "note": "Wichtig für nächste Woche!"},
+      {"id": 2, "name": "📺 Niku Fernseher AD", "project": "Niku", "status": "open", "priority": "medium"},
+      {"id": 3, "name": "⛳ Golf Footgolfvideo UGC", "project": "Golf", "status": "open", "priority": "medium"},
+      {"id": 4, "name": "📞 Call mit Golf Club", "project": "Golf", "status": "open", "priority": "medium"},
+      {"id": 5, "name": "📅 Drehtermin Niku finalisieren", "project": "Niku", "status": "open", "priority": "medium"}
+    ]
+  },
+  "critical": [
+    {"task": "NOMU Post-Production", "overdue": 66, "days": 66, "type": "post-production", "priority": "critical", "note": "66+ TAGE — Entscheidung: extern, aufgeben, oder fertig?"}
+  ],
+  "overdue": [
+    {"task": "Sentai Post-Production", "days": 24, "type": "post-production", "priority": "high"},
+    {"task": "Hiro Sakao Musterkarten", "days": 17, "type": "research", "priority": "medium"},
+    {"task": "Tough Cookie Golfplatz Video", "days": 17, "type": "content", "priority": "medium"}
+  ],
+  "completedToday": [],
+  "completedWeek": [
+    {"task": "Japanese Pancake Post-Production", "project": "Tough Cookie", "date": "2026-06-07"},
+    {"task": "Little Hero Call", "project": "Freelance", "date": "2026-06-07"},
+    {"task": "Verträge finalisieren", "project": "Admin", "date": "2026-06-08"},
+    {"task": "Anju CI weiterleiten", "project": "Tough Cookie", "date": "2026-06-08"}
+  ],
+  "upcoming": [
+    {"event": "KW 24 Wochenabschluss", "date": "Heute Abend", "type": "milestone", "note": "🔥 Letzte Chance für Tasks vor dem Wochenende", "priority": "high"},
+    {"event": "KW 25 Planung", "date": "Montag", "type": "planning", "note": "Neue Woche, neuer Fokus", "priority": "medium"}
+  ],
+  "patterns": [
+    {"name": "Wellenrhythmus KW 24", "description": "Tag 1: 29% → Tag 2: Pause → Tag 3: 0% → Tag 4: 0% → Tag 5: ?", "status": "active"},
+    {"name": "Post-Production = Prokrastination", "description": "NOMU 66+ Tage — der ewige Blocker", "status": "critical"},
+    {"name": "Freitag = Abschluss", "description": "KW 24 Abschlusstag — Tasks für Wochenende erledigen", "status": "active"}
+  ],
+  "weekly": {
+    "week": "KW 24",
+    "completed": 4,
+    "planned": 8,
+    "successRate": "50%",
+    "notes": "KW 24 Tag 5 (Freitag Nachmittag) — Wochenabschluss nähert sich"
+  },
+  "history": [
+    {"date": "2026-06-12", "completed": 0, "total": 5},
+    {"date": "2026-06-11", "completed": 0, "total": 5},
+    {"date": "2026-06-10", "completed": 0, "total": 5},
+    {"date": "2026-06-09", "completed": 0, "total": 5},
+    {"date": "2026-06-08", "completed": 2, "total": 7},
+    {"date": "2026-06-07", "completed": 2, "total": 8},
+    {"date": "2026-06-06", "completed": 0, "total": 8}
+  ],
+  "insights": {
+    "pattern": "50% Erfolgsrate = nachhaltige Produktivität",
+    "blocker": "NOMU 66+ Tage — Entscheidung UNBEDINGT nötig",
+    "momentum": "KW 24 Abschluss — Freitag Nachmittag: Wenig Zeit übrig!",
+    "focus": "Wittmann Preproduction bleibt HIGH PRIORITY",
+    "window": "~2h bis zum Wochenende"
+  },
+  "cronUpdate": {
+    "trigger": "dashboard-update-4h-v2",
+    "previousVersion": "v5.6.19",
+    "currentVersion": "v5.6.20",
+    "interval": "4 Stunden (Reactiv Mode)",
+    "note": "Nachmittags-Update — KW 24 Tag 5 (Freitag) 16:04"
+  },
+  "updateHistory": [
+    "v5.6.20 — 2026-06-12 16:04 — Nachmittags-Update (Freitag, KW 24 Tag 5)",
+    "v5.6.19 — 2026-06-12 12:04 — Mittags-Update (Freitag, KW 24 Tag 5)",
+    "v5.6.18 — 2026-06-12 08:04 — Früh-Update (Freitag, KW 24 Tag 5)",
+    "v5.6.17 — 2026-06-12 04:04 — Früh-Update (Freitag, KW 24 Tag 5)",
+    "v5.6.16 — 2026-06-11 18:04 — Abend-Update (Donnerstag, KW 24 Tag 4)",
+    "v5.6.15 — 2026-06-11 14:04 — Nachmittags-Update (Donnerstag, KW 24 Tag 4)",
+    "v5.6.14 — 2026-06-11 12:04 — Mittags-Update (Donnerstag, KW 24 Tag 4)",
+    "v5.6.13 — 2026-06-11 08:04 — Morgen-Update (Donnerstag, KW 24 Tag 4)",
+    "v5.6.12 — 2026-06-11 00:04 — Nacht-Update (Donnerstag, KW 24 Tag 4)",
+    "v5.6.11 — 2026-06-10 20:04 — Abend-Update (Mittwoch, KW 24 Tag 3)"
+  ]
+}
