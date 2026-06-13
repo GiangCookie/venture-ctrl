@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>venture-ctrl Dashboard v5.6.20</title>
+    <title>venture-ctrl Dashboard v5.6.24</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -14,7 +14,7 @@
             padding: 20px;
         }
         .container { max-width: 1200px; margin: 0 auto; }
-
+        
         .header {
             text-align: center;
             padding: 30px 20px;
@@ -43,7 +43,7 @@
             margin-top: 10px;
             font-size: 0.85rem;
         }
-
+        
         .status-banner {
             padding: 20px;
             border-radius: 15px;
@@ -52,22 +52,10 @@
             font-size: 1.2rem;
             font-weight: 600;
         }
-        .status-active {
-            background: linear-gradient(135deg, #00d4ff 0%, #7b2cbf 100%);
+        .status-weekend {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         }
-        .status-urgent {
-            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
-            animation: pulse 2s infinite;
-        }
-        .status-reactiv {
-            background: linear-gradient(135deg, #82c91e 0%, #51cf66 100%);
-            color: #1a1a2e;
-        }
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.85; }
-        }
-
+        
         .metrics-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -93,7 +81,7 @@
             font-size: 0.9rem;
             margin-top: 5px;
         }
-
+        
         .card {
             background: rgba(255,255,255,0.05);
             border-radius: 15px;
@@ -105,137 +93,87 @@
             color: #00d4ff;
             margin-bottom: 15px;
             font-size: 1.3rem;
-            display: flex;
-            align-items: center;
-            gap: 10px;
         }
-
+        
         .task-list { list-style: none; }
-        .task-item {
-            padding: 15px;
-            margin-bottom: 10px;
-            border-radius: 10px;
-            background: rgba(0,0,0,0.2);
-            border-left: 4px solid;
-            transition: transform 0.2s;
+        .task-list li {
+            padding: 10px;
+            margin-bottom: 8px;
+            border-radius: 8px;
+            background: rgba(255,255,255,0.05);
+            border-left: 3px solid #666;
         }
-        .task-item:hover { transform: translateX(5px); }
-        .task-urgent { border-color: #ff6b6b; }
-        .task-high { border-color: #ffd93d; }
-        .task-open { border-color: #74c0fc; }
-        .task-completed { border-color: #51cf66; background: rgba(81,207,102,0.1); }
-        .task-project {
-            font-size: 0.75rem;
-            color: #888;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 5px;
+        .task-list li.critical {
+            border-left-color: #ff6b6b;
+            background: rgba(255,107,107,0.1);
         }
-        .task-name { font-weight: 600; margin-bottom: 5px; }
-        .task-status {
-            display: inline-block;
-            padding: 3px 10px;
-            border-radius: 10px;
-            font-size: 0.75rem;
-            margin-top: 8px;
+        .task-list li.high {
+            border-left-color: #ffa502;
+            background: rgba(255,165,2,0.1);
         }
-        .status-overdue { background: rgba(255,107,107,0.3); color: #ff6b6b; }
-        .status-open { background: rgba(116,192,252,0.3); color: #74c0fc; }
-        .status-completed { background: rgba(81,207,102,0.3); color: #51cf66; }
-
-        .alert-box {
-            background: linear-gradient(135deg, rgba(255,107,107,0.2), rgba(238,90,111,0.1));
-            border: 1px solid rgba(255,107,107,0.3);
-            border-radius: 15px;
-            padding: 20px;
-            margin-bottom: 20px;
+        .task-list li.medium {
+            border-left-color: #74b9ff;
         }
-        .alert-box h3 {
+        .task-days {
+            font-size: 0.8rem;
             color: #ff6b6b;
-            margin-bottom: 10px;
+            margin-left: 10px;
         }
-
-        .mode-box {
-            background: linear-gradient(135deg, rgba(130,201,30,0.2), rgba(81,207,102,0.1));
-            border: 1px solid rgba(130,201,30,0.3);
+        
+        .weekend-mode {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 30px;
             border-radius: 15px;
-            padding: 20px;
+            text-align: center;
             margin-bottom: 20px;
         }
-        .mode-box h3 {
-            color: #82c91e;
+        .weekend-mode h2 {
+            font-size: 2rem;
             margin-bottom: 10px;
         }
-
-        .insight-box {
-            padding: 15px;
-            background: rgba(0,0,0,0.2);
-            border-radius: 10px;
-            margin-bottom: 10px;
+        .weekend-mode p {
+            color: rgba(255,255,255,0.8);
         }
-        .insight-label {
-            font-size: 0.75rem;
-            color: #888;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 5px;
-        }
-        .insight-text {
-            color: #eee;
-            font-size: 0.95rem;
-        }
-
-        .history-list {
-            font-size: 0.85rem;
-        }
-        .history-item {
-            padding: 8px 0;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
-            color: #aaa;
-        }
-        .history-item:first-child {
-            color: #00d4ff;
-            font-weight: 600;
-        }
-
-        .two-column {
+        
+        .kw-summary {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-bottom: 20px;
         }
-
-        .highlight-box {
-            background: linear-gradient(135deg, rgba(0,212,255,0.15), rgba(123,44,191,0.1));
-            border: 2px solid rgba(0,212,255,0.4);
-            border-radius: 15px;
+        .kw-box {
+            background: rgba(255,255,255,0.05);
+            border-radius: 12px;
             padding: 20px;
-            margin-bottom: 20px;
-        }
-        .highlight-box h3 {
-            color: #00d4ff;
-            margin-bottom: 10px;
-        }
-
-        .week-progress {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 20px;
-            flex-wrap: wrap;
-        }
-        .day-pill {
-            padding: 10px 15px;
-            border-radius: 10px;
-            font-size: 0.85rem;
             text-align: center;
         }
-        .day-done { background: rgba(81,207,102,0.2); border: 1px solid #51cf66; }
-        .day-pause { background: rgba(255,193,7,0.2); border: 1px solid #ffc107; }
-        .day-active { background: rgba(0,212,255,0.2); border: 2px solid #00d4ff; }
-        .day-future { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #666; }
-
-        @media (max-width: 600px) {
+        .kw-box h3 {
+            color: #888;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+        .kw-box .value {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #00d4ff;
+        }
+        .kw-box.complete .value { color: #51cf66; }
+        
+        .upcoming {
+            background: rgba(0,212,255,0.1);
+            border-radius: 12px;
+            padding: 15px;
+            margin-top: 15px;
+        }
+        .upcoming h3 {
+            color: #00d4ff;
+            margin-bottom: 10px;
+        }
+        
+        @media (max-width: 768px) {
             .header h1 { font-size: 1.8rem; }
-            .metric-value { font-size: 2rem; }
+            .metrics-grid { grid-template-columns: repeat(2, 1fr); }
+            .kw-summary { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -243,167 +181,135 @@
     <div class="container">
         <div class="header">
             <h1>🚀 venture-ctrl</h1>
-            <span class="version">v5.6.20</span>
-            <div class="timestamp">Zuletzt aktualisiert: Freitag, 12. Juni 2026, 16:04 Uhr</div>
+            <span class="version">v5.6.22</span>
+            <div class="timestamp">Letztes Update: Samstag, 13. Juni 2026 — 04:04 Uhr</div>
         </div>
-
-        <div class="status-banner status-reactiv">
-            ⚡ REACTIV MODE — KW 24, Tag 5 (Freitag Nachmittag) — ~2h bis Wochenende
+        
+        <div class="status-banner status-weekend">
+            🌙 WEEKEND MODE — KW 25 Beginnt
         </div>
-
-        <div class="highlight-box">
-            <h3>🎯 KW 24 ABSCHLUSS</h3>
-            <p><strong>Datum:</strong> Freitag, 12. Juni 2026</p>
-            <p><strong>Status:</strong> 0/5 Tasks erledigt (heute)</p>
-            <p><strong>Priorität:</strong> 🔥 Wittmann Preproduction bleibt HIGH</p>
-            <p><strong>Zeitfenster:</strong> ~2h bis Wochenende — letzte Chance!</p>
+        
+        <div class="weekend-mode">
+            <h2>🌙 Wochenende</h2>
+            <p>Regeneration & Privatleben — Keine Tasks geplant</p>
+            <p style="margin-top: 15px; font-size: 0.9rem;">KW 24 erfolgreich abgeschlossen: 50% Erfolgsrate (4/8 Tasks)</p>
         </div>
-
-        <div class="week-progress">
-            <div class="day-pill day-done">Mo: 2/7<br><strong>29%</strong></div>
-            <div class="day-pill day-pause">Di: —<br>Pause</div>
-            <div class="day-pill day-done">Mi: 0/5<br>—</div>
-            <div class="day-pill day-done">Do: 0/5<br>—</div>
-            <div class="day-pill day-active">Fr: 0/5<br><strong>Wochenabschluss</strong></div>
-        </div>
-
+        
         <div class="metrics-grid">
             <div class="metric-card">
-                <div class="metric-value success">50%</div>
-                <div class="metric-label">KW 24 Erfolgsrate</div>
+                <div class="metric-value">KW 25</div>
+                <div class="metric-label">Aktuelle Woche</div>
             </div>
             <div class="metric-card">
-                <div class="metric-value">4/8</div>
-                <div class="metric-label">Tasks erledigt</div>
+                <div class="metric-value">0</div>
+                <div class="metric-label">Heute erledigt</div>
             </div>
             <div class="metric-card">
-                <div class="metric-value warning">0/5</div>
-                <div class="metric-label">Heutige Tasks</div>
-            </div>
-            <div class="metric-card">
-                <div class="metric-value warning">66</div>
+                <div class="metric-value warning">67</div>
                 <div class="metric-label">NOMU Tage überfällig</div>
             </div>
-        </div>
-
-        <div class="two-column">
-            <div class="card">
-                <h2>📋 Heutige Tasks (Freitag, 12.6.)</h2>
-                <ul class="task-list">
-                    <li class="task-item task-high">
-                        <div class="task-project">Wittmann</div>
-                        <div class="task-name">🎬 Wittmann Preproduction</div>
-                        <span class="task-status status-open">🔥 HIGH PRIORITY</span>
-                    </li>
-                    <li class="task-item task-open">
-                        <div class="task-project">Niku</div>
-                        <div class="task-name">📺 Niku Fernseher AD</div>
-                        <span class="task-status status-open">Offen</span>
-                    </li>
-                    <li class="task-item task-open">
-                        <div class="task-project">Golf</div>
-                        <div class="task-name">⛳ Golf Footgolfvideo UGC</div>
-                        <span class="task-status status-open">Offen</span>
-                    </li>
-                    <li class="task-item task-open">
-                        <div class="task-project">Golf</div>
-                        <div class="task-name">📞 Call mit Golf Club</div>
-                        <span class="task-status status-open">Offen</span>
-                    </li>
-                    <li class="task-item task-open">
-                        <div class="task-project">Niku</div>
-                        <div class="task-name">📅 Drehtermin Niku finalisieren</div>
-                        <span class="task-status status-open">Offen</span>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="card">
-                <h2>⚠️ Überfällige Tasks</h2>
-                <ul class="task-list">
-                    <li class="task-item task-urgent">
-                        <div class="task-project">Post-Production</div>
-                        <div class="task-name">NOMU Post-Production</div>
-                        <span class="task-status status-overdue">66 Tage überfällig</span>
-                    </li>
-                    <li class="task-item task-high">
-                        <div class="task-project">Post-Production</div>
-                        <div class="task-name">Sentai Post-Production</div>
-                        <span class="task-status status-overdue">24 Tage überfällig</span>
-                    </li>
-                    <li class="task-item task-high">
-                        <div class="task-project">Research</div>
-                        <div class="task-name">Hiro Sakao Musterkarten</div>
-                        <span class="task-status status-overdue">17 Tage überfällig</span>
-                    </li>
-                    <li class="task-item task-high">
-                        <div class="task-project">Content</div>
-                        <div class="task-name">Tough Cookie Golfplatz Video</div>
-                        <span class="task-status status-overdue">17 Tage überfällig</span>
-                    </li>
-                </ul>
+            <div class="metric-card">
+                <div class="metric-value">50%</div>
+                <div class="metric-label">KW 24 Erfolgsrate</div>
             </div>
         </div>
-
-        <div class="mode-box">
-            <h3>📊 KW 24 Muster & Erkenntnisse</h3>
-            <div class="insight-box">
-                <div class="insight-label">Wellenrhythmus KW 24</div>
-                <div class="insight-text">Tag 1: 29% → Tag 2: Pause → Tag 3-4: 0% → Tag 5: Wochenabschluss. 50% = nachhaltige Produktivität!</div>
+        
+        <div class="kw-summary">
+            <div class="kw-box complete">
+                <h3>✅ KW 24 Bilanz</h3>
+                <div class="value">4/8</div>
+                <div style="color: #888; font-size: 0.8rem; margin-top: 5px;">Tasks erledigt</div>
             </div>
-            <div class="insight-box">
-                <div class="insight-label">Post-Production = Prokrastination</div>
-                <div class="insight-text">NOMU 66+ Tage — Entscheidung UNBEDINGT nötig (extern / aufgeben / fertig)</div>
-            </div>
-            <div class="insight-box">
-                <div class="insight-label">Freitag = Abschluss</div>
-                <div class="insight-text">~2h bis Wochenende — letzte Chance für KW 24 Tasks. KW 25 Planung steht an!</div>
+            <div class="kw-box">
+                <h3>📅 KW 25 Plan</h3>
+                <div class="value">Montag</div>
+                <div style="color: #888; font-size: 0.8rem; margin-top: 5px;">Wittmann Priorität</div>
             </div>
         </div>
-
+        
         <div class="card">
-            <h2>✅ Erledigt diese Woche (KW 24)</h2>
+            <h2>🔥 KRITISCHE BLOCKER</h2>
             <ul class="task-list">
-                <li class="task-item task-completed">
-                    <div class="task-project">Tough Cookie — 7.6.</div>
-                    <div class="task-name">Japanese Pancake Post-Production</div>
-                    <span class="task-status status-completed">Erledigt</span>
-                </li>
-                <li class="task-item task-completed">
-                    <div class="task-project">Freelance — 7.6.</div>
-                    <div class="task-name">Little Hero Call</div>
-                    <span class="task-status status-completed">Erledigt</span>
-                </li>
-                <li class="task-item task-completed">
-                    <div class="task-project">Admin — 8.6.</div>
-                    <div class="task-name">Verträge finalisieren</div>
-                    <span class="task-status status-completed">Erledigt</span>
-                </li>
-                <li class="task-item task-completed">
-                    <div class="task-project">Tough Cookie — 8.6.</div>
-                    <div class="task-name">Anju CI weiterleiten</div>
-                    <span class="task-status status-completed">Erledigt</span>
+                <li class="critical">
+                    <strong>🎬 NOMU Post-Production</strong>
+                    <span class="task-days">67+ TAGE ÜBERFÄLLIG</span>
+                    <div style="font-size: 0.85rem; color: #888; margin-top: 5px;">
+                        Entscheidung nötig: extern vergeben, aufgeben, oder fertig machen?
+                    </div>
                 </li>
             </ul>
         </div>
-
+        
         <div class="card">
-            <h2>📝 Letzte Updates</h2>
-            <div class="history-list">
-                <div class="history-item">v5.6.20 — 2026-06-12 16:04 — Nachmittags-Update (Freitag, KW 24 Tag 5)</div>
-                <div class="history-item">v5.6.19 — 2026-06-12 12:04 — Mittags-Update (Freitag, KW 24 Tag 5)</div>
-                <div class="history-item">v5.6.18 — 2026-06-12 08:04 — Früh-Update (Freitag, KW 24 Tag 5)</div>
-                <div class="history-item">v5.6.17 — 2026-06-12 04:04 — Früh-Update (Freitag, KW 24 Tag 5)</div>
-                <div class="history-item">v5.6.16 — 2026-06-11 18:04 — Abend-Update (Donnerstag, KW 24 Tag 4)</div>
-                <div class="history-item">v5.6.15 — 2026-06-11 14:04 — Nachmittags-Update (Donnerstag, KW 24 Tag 4)</div>
-                <div class="history-item">v5.6.14 — 2026-06-11 12:04 — Mittags-Update (Donnerstag, KW 24 Tag 4)</div>
-                <div class="history-item">v5.6.13 — 2026-06-11 08:04 — Morgen-Update (Donnerstag, KW 24 Tag 4)</div>
+            <h2>⏰ ÜBERFÄLLIGE TASKS</h2>
+            <ul class="task-list">
+                <li class="high">
+                    <strong>🎬 Sentai Post-Production</strong>
+                    <span class="task-days">25 Tage überfällig</span>
+                </li>
+                <li class="medium">
+                    <strong>🎴 Hiro Sakao Musterkarten</strong>
+                    <span class="task-days">18 Tage überfällig</span>
+                </li>
+                <li class="medium">
+                    <strong>⛳ Tough Cookie Golfplatz Video</strong>
+                    <span class="task-days">18 Tage überfällig</span>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="card">
+            <h2>📅 KW 25 — KOMMENDE WOCHE</h2>
+            <div class="upcoming">
+                <h3>🔥 Top Priorität: Montag</h3>
+                <ul class="task-list">
+                    <li class="high">
+                        <strong>🎬 Wittmann Preproduction</strong>
+                        <div style="font-size: 0.85rem; color: #888; margin-top: 5px;">
+                            Hauptfokus KW 25 — Als erstes angehen!
+                        </div>
+                    </li>
+                    <li>
+                        <strong>⚠️ NOMU Entscheidung</strong>
+                        <div style="font-size: 0.85rem; color: #888; margin-top: 5px;">
+                            Endlich klären: extern/aufgeben/fertig
+                        </div>
+                    </li>
+                    <li>
+                        <strong>📋 KW 25 Planung</strong>
+                        <div style="font-size: 0.85rem; color: #888; margin-top: 5px;">
+                            Neue Woche strukturieren
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
-
-        <div class="card" style="text-align: center; color: #888; font-size: 0.85rem;">
-            <p>⚡ venture-ctrl Dashboard — Automatisch generiert um 16:04 Uhr</p>
-            <p style="margin-top: 5px;">Nächstes Update: ~20:04 Uhr</p>
+        
+        <div class="card">
+            <h2>📊 KW 24 HIGHLIGHTS</h2>
+            <ul class="task-list">
+                <li>✅ Japanese Pancake Post-Production erledigt</li>
+                <li>✅ Little Hero Call durchgeführt</li>
+                <li>✅ Verträge finalisiert</li>
+                <li>✅ Anju CI weitergeleitet</li>
+            </ul>
+            <p style="margin-top: 15px; color: #888; font-size: 0.9rem;">
+                <strong>50% Erfolgsrate</strong> — Nachhaltiger Rhythmus ohne Überlastung
+            </p>
+        </div>
+        
+        <div class="card">
+            <h2>💡 INSIGHTS</h2>
+            <p style="line-height: 1.6;">
+                <strong>Pattern:</strong> KW 24 lief stabil mit 50% Erfolgsrate — Wellenrhythmus funktioniert<br><br>
+                <strong>Blocker:</strong> NOMU 67+ Tage — Entscheidung unbedingt nötig<br><br>
+                <strong>Momentum:</strong> KW 25 startet mit Regeneration — Montag voller Fokus
+            </p>
+        </div>
+        
+        <div style="text-align: center; padding: 20px; color: #666; font-size: 0.85rem;">
+            <p>venture-ctrl v5.6.22 — Automatisch aktualisiert alle 4 Stunden</p>
+            <p style="margin-top: 5px;">KW 25 Beginn — Samstag, 13. Juni 2026</p>
         </div>
     </div>
 </body>

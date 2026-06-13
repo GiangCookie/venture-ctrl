@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>venture-ctrl Dashboard v5.6.20</title>
+    <title>venture-ctrl Dashboard v5.6.22</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -63,6 +63,10 @@
             background: linear-gradient(135deg, #82c91e 0%, #51cf66 100%);
             color: #1a1a2e;
         }
+        .status-weekend {
+            background: linear-gradient(135deg, #7b2cbf 0%, #9c89f3 100%);
+            color: #fff;
+        }
         @keyframes pulse {
             0%, 100% { opacity: 1; }
             50% { opacity: 0.85; }
@@ -88,6 +92,7 @@
         }
         .metric-value.warning { color: #ff6b6b; }
         .metric-value.success { color: #51cf66; }
+        .metric-value.weekend { color: #9c89f3; }
         .metric-label {
             color: #888;
             font-size: 0.9rem;
@@ -211,9 +216,16 @@
             padding: 20px;
             margin-bottom: 20px;
         }
+        .highlight-box.weekend {
+            background: linear-gradient(135deg, rgba(123,44,191,0.2), rgba(156,137,243,0.1));
+            border: 2px solid rgba(156,137,243,0.4);
+        }
         .highlight-box h3 {
             color: #00d4ff;
             margin-bottom: 10px;
+        }
+        .highlight-box.weekend h3 {
+            color: #9c89f3;
         }
 
         .week-progress {
@@ -232,6 +244,17 @@
         .day-pause { background: rgba(255,193,7,0.2); border: 1px solid #ffc107; }
         .day-active { background: rgba(0,212,255,0.2); border: 2px solid #00d4ff; }
         .day-future { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #666; }
+        .day-weekend { background: rgba(156,137,243,0.2); border: 2px solid #9c89f3; }
+
+        .weekend-note {
+            text-align: center;
+            padding: 30px;
+            font-size: 1.3rem;
+            color: #9c89f3;
+            background: rgba(156,137,243,0.1);
+            border-radius: 15px;
+            border: 1px solid rgba(156,137,243,0.3);
+        }
 
         @media (max-width: 600px) {
             .header h1 { font-size: 1.8rem; }
@@ -243,20 +266,20 @@
     <div class="container">
         <div class="header">
             <h1>🚀 venture-ctrl</h1>
-            <span class="version">v5.6.20</span>
-            <div class="timestamp">Zuletzt aktualisiert: Freitag, 12. Juni 2026, 16:04 Uhr</div>
+            <span class="version">v5.6.22</span>
+            <div class="timestamp">Zuletzt aktualisiert: Samstag, 13. Juni 2026, 00:04 Uhr</div>
         </div>
 
-        <div class="status-banner status-reactiv">
-            ⚡ REACTIV MODE — KW 24, Tag 5 (Freitag Nachmittag) — ~2h bis Wochenende
+        <div class="status-banner status-weekend">
+            🌙 WOCHENENDE — KW 25 beginnt (Samstag Nacht) — Zeit für Regeneration & Strategie
         </div>
 
-        <div class="highlight-box">
-            <h3>🎯 KW 24 ABSCHLUSS</h3>
-            <p><strong>Datum:</strong> Freitag, 12. Juni 2026</p>
-            <p><strong>Status:</strong> 0/5 Tasks erledigt (heute)</p>
-            <p><strong>Priorität:</strong> 🔥 Wittmann Preproduction bleibt HIGH</p>
-            <p><strong>Zeitfenster:</strong> ~2h bis Wochenende — letzte Chance!</p>
+        <div class="highlight-box weekend">
+            <h3>🌴 WOCHENENDE-MODUS</h3>
+            <p><strong>Datum:</strong> Samstag, 13. Juni 2026, 00:04 Uhr</p>
+            <p><strong>Status:</strong> 🌙 Keine Tasks — Wochenende aktiv</p>
+            <p><strong>Wochenbilanz KW 24:</strong> 4/8 Tasks — 50% Erfolgsrate</p>
+            <p><strong>Nächste Woche:</strong> Montag — KW 25 Planung mit Wittmann Fokus</p>
         </div>
 
         <div class="week-progress">
@@ -264,146 +287,127 @@
             <div class="day-pill day-pause">Di: —<br>Pause</div>
             <div class="day-pill day-done">Mi: 0/5<br>—</div>
             <div class="day-pill day-done">Do: 0/5<br>—</div>
-            <div class="day-pill day-active">Fr: 0/5<br><strong>Wochenabschluss</strong></div>
+            <div class="day-pill day-done">Fr: 0/5<br>—</div>
+            <div class="day-pill day-weekend">Sa<br>🌙</div>
+            <div class="day-pill day-future">So<br>—</div>
         </div>
 
         <div class="metrics-grid">
+            <div class="metric-card">
+                <div class="metric-value weekend">🌙</div>
+                <div class="metric-label">Heutige Tasks</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value success">4/8</div>
+                <div class="metric-label">KW 24 Erledigt</div>
+            </div>
             <div class="metric-card">
                 <div class="metric-value success">50%</div>
                 <div class="metric-label">KW 24 Erfolgsrate</div>
             </div>
             <div class="metric-card">
-                <div class="metric-value">4/8</div>
-                <div class="metric-label">Tasks erledigt</div>
-            </div>
-            <div class="metric-card">
-                <div class="metric-value warning">0/5</div>
-                <div class="metric-label">Heutige Tasks</div>
-            </div>
-            <div class="metric-card">
-                <div class="metric-value warning">66</div>
+                <div class="metric-value warning">67</div>
                 <div class="metric-label">NOMU Tage überfällig</div>
             </div>
         </div>
 
+        <div class="weekend-note">
+            🌙 Wochenende — Keine Tasks geplant<br>
+            <small>Regeneration & Privatleben</small>
+        </div>
+
         <div class="two-column">
             <div class="card">
-                <h2>📋 Heutige Tasks (Freitag, 12.6.)</h2>
+                <h2>🎯 Kommende Woche (KW 25)</h2>
                 <ul class="task-list">
                     <li class="task-item task-high">
+                        <div class="task-project">KW 25</div>
+                        <div class="task-name">📋 Wochenplanung</div>
+                        <span class="task-status status-open">Montag Morgen</span>
+                    </li>
+                    <li class="task-item task-urgent">
                         <div class="task-project">Wittmann</div>
                         <div class="task-name">🎬 Wittmann Preproduction</div>
-                        <span class="task-status status-open">🔥 HIGH PRIORITY</span>
+                        <span class="task-status status-open">🔥 TOP PRIORITÄT</span>
                     </li>
-                    <li class="task-item task-open">
-                        <div class="task-project">Niku</div>
-                        <div class="task-name">📺 Niku Fernseher AD</div>
-                        <span class="task-status status-open">Offen</span>
-                    </li>
-                    <li class="task-item task-open">
-                        <div class="task-project">Golf</div>
-                        <div class="task-name">⛳ Golf Footgolfvideo UGC</div>
-                        <span class="task-status status-open">Offen</span>
-                    </li>
-                    <li class="task-item task-open">
-                        <div class="task-project">Golf</div>
-                        <div class="task-name">📞 Call mit Golf Club</div>
-                        <span class="task-status status-open">Offen</span>
-                    </li>
-                    <li class="task-item task-open">
-                        <div class="task-project">Niku</div>
-                        <div class="task-name">📅 Drehtermin Niku finalisieren</div>
-                        <span class="task-status status-open">Offen</span>
+                    <li class="task-item task-high">
+                        <div class="task-project">NOMU</div>
+                        <div class="task-name">⚠️ NOMU Entscheidung</div>
+                        <span class="task-status status-overdue">67 Tage überfällig</span>
                     </li>
                 </ul>
             </div>
 
             <div class="card">
-                <h2>⚠️ Überfällige Tasks</h2>
+                <h2>🔥 Überfällige Tasks</h2>
                 <ul class="task-list">
                     <li class="task-item task-urgent">
-                        <div class="task-project">Post-Production</div>
-                        <div class="task-name">NOMU Post-Production</div>
-                        <span class="task-status status-overdue">66 Tage überfällig</span>
+                        <div class="task-project">NOMU</div>
+                        <div class="task-name">Post-Production</div>
+                        <span class="task-status status-overdue">67 TAGE überfällig</span>
                     </li>
                     <li class="task-item task-high">
-                        <div class="task-project">Post-Production</div>
-                        <div class="task-name">Sentai Post-Production</div>
-                        <span class="task-status status-overdue">24 Tage überfällig</span>
+                        <div class="task-project">Sentai</div>
+                        <div class="task-name">Post-Production</div>
+                        <span class="task-status status-overdue">25 Tage überfällig</span>
                     </li>
-                    <li class="task-item task-high">
-                        <div class="task-project">Research</div>
-                        <div class="task-name">Hiro Sakao Musterkarten</div>
-                        <span class="task-status status-overdue">17 Tage überfällig</span>
+                    <li class="task-item task-open">
+                        <div class="task-project">Hiro Sakao</div>
+                        <div class="task-name">Musterkarten</div>
+                        <span class="task-status status-overdue">18 Tage überfällig</span>
                     </li>
-                    <li class="task-item task-high">
-                        <div class="task-project">Content</div>
-                        <div class="task-name">Tough Cookie Golfplatz Video</div>
-                        <span class="task-status status-overdue">17 Tage überfällig</span>
+                    <li class="task-item task-open">
+                        <div class="task-project">Tough Cookie</div>
+                        <div class="task-name">Golfplatz Video</div>
+                        <span class="task-status status-overdue">18 Tage überfällig</span>
                     </li>
                 </ul>
             </div>
         </div>
 
         <div class="mode-box">
-            <h3>📊 KW 24 Muster & Erkenntnisse</h3>
+            <h3>📊 KW 25 Beginn</h3>
+            <p><strong>Status:</strong> Wochenende — Regeneration & Strategie</p>
+            <p><strong>Nächste Woche:</strong> KW 25 Planung am Montag</p>
+            <p><strong>Fokus:</strong> Wittmann Preproduction Priorität 1</p>
+        </div>
+
+        <div class="alert-box">
+            <h3>⚠️ Kritische Entscheidung</h3>
+            <p><strong>NOMU Post-Production:</strong> 67+ Tage überfällig</p>
+            <p>Entscheidung nötig: extern vergeben, aufgeben, oder fertig machen?</p>
+        </div>
+
+        <div class="card">
+            <h2>📈 Insights</h2>
             <div class="insight-box">
-                <div class="insight-label">Wellenrhythmus KW 24</div>
-                <div class="insight-text">Tag 1: 29% → Tag 2: Pause → Tag 3-4: 0% → Tag 5: Wochenabschluss. 50% = nachhaltige Produktivität!</div>
+                <div class="insight-label">Pattern</div>
+                <div class="insight-text">KW 25 beginnt — Wochenende-Modus</div>
             </div>
             <div class="insight-box">
-                <div class="insight-label">Post-Production = Prokrastination</div>
-                <div class="insight-text">NOMU 66+ Tage — Entscheidung UNBEDINGT nötig (extern / aufgeben / fertig)</div>
+                <div class="insight-label">Blocker</div>
+                <div class="insight-text">NOMU 67+ Tage — Entscheidung dringend nötig!</div>
             </div>
             <div class="insight-box">
-                <div class="insight-label">Freitag = Abschluss</div>
-                <div class="insight-text">~2h bis Wochenende — letzte Chance für KW 24 Tasks. KW 25 Planung steht an!</div>
+                <div class="insight-label">Momentum</div>
+                <div class="insight-text">KW 24 abgeschlossen — 50% Erfolgsrate</div>
+            </div>
+            <div class="insight-box">
+                <div class="insight-label">Fokus KW 25</div>
+                <div class="insight-text">Wittmann Preproduction Priorität 1</div>
             </div>
         </div>
 
         <div class="card">
-            <h2>✅ Erledigt diese Woche (KW 24)</h2>
-            <ul class="task-list">
-                <li class="task-item task-completed">
-                    <div class="task-project">Tough Cookie — 7.6.</div>
-                    <div class="task-name">Japanese Pancake Post-Production</div>
-                    <span class="task-status status-completed">Erledigt</span>
-                </li>
-                <li class="task-item task-completed">
-                    <div class="task-project">Freelance — 7.6.</div>
-                    <div class="task-name">Little Hero Call</div>
-                    <span class="task-status status-completed">Erledigt</span>
-                </li>
-                <li class="task-item task-completed">
-                    <div class="task-project">Admin — 8.6.</div>
-                    <div class="task-name">Verträge finalisieren</div>
-                    <span class="task-status status-completed">Erledigt</span>
-                </li>
-                <li class="task-item task-completed">
-                    <div class="task-project">Tough Cookie — 8.6.</div>
-                    <div class="task-name">Anju CI weiterleiten</div>
-                    <span class="task-status status-completed">Erledigt</span>
-                </li>
-            </ul>
-        </div>
-
-        <div class="card">
-            <h2>📝 Letzte Updates</h2>
+            <h2>🔄 Update History</h2>
             <div class="history-list">
+                <div class="history-item">v5.6.22 — 2026-06-13 00:04 — Nacht-Update (Samstag, KW 25 Beginn)</div>
+                <div class="history-item">v5.6.21 — 2026-06-12 20:04 — Abend-Update (Freitag, KW 24 Abschluss)</div>
                 <div class="history-item">v5.6.20 — 2026-06-12 16:04 — Nachmittags-Update (Freitag, KW 24 Tag 5)</div>
                 <div class="history-item">v5.6.19 — 2026-06-12 12:04 — Mittags-Update (Freitag, KW 24 Tag 5)</div>
                 <div class="history-item">v5.6.18 — 2026-06-12 08:04 — Früh-Update (Freitag, KW 24 Tag 5)</div>
                 <div class="history-item">v5.6.17 — 2026-06-12 04:04 — Früh-Update (Freitag, KW 24 Tag 5)</div>
-                <div class="history-item">v5.6.16 — 2026-06-11 18:04 — Abend-Update (Donnerstag, KW 24 Tag 4)</div>
-                <div class="history-item">v5.6.15 — 2026-06-11 14:04 — Nachmittags-Update (Donnerstag, KW 24 Tag 4)</div>
-                <div class="history-item">v5.6.14 — 2026-06-11 12:04 — Mittags-Update (Donnerstag, KW 24 Tag 4)</div>
-                <div class="history-item">v5.6.13 — 2026-06-11 08:04 — Morgen-Update (Donnerstag, KW 24 Tag 4)</div>
             </div>
-        </div>
-
-        <div class="card" style="text-align: center; color: #888; font-size: 0.85rem;">
-            <p>⚡ venture-ctrl Dashboard — Automatisch generiert um 16:04 Uhr</p>
-            <p style="margin-top: 5px;">Nächstes Update: ~20:04 Uhr</p>
         </div>
     </div>
 </body>
