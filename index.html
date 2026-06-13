@@ -3,422 +3,336 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🎮 Giang's Life Dashboard — KW 18</title>
+    <title>venture-ctrl Dashboard v5.6.24</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Segoe UI', -apple-system, sans-serif; background: #0f0f23; color: #eaeaea; padding: 15px; min-height: 100vh; line-height: 1.6; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: #eee;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container { max-width: 1200px; margin: 0 auto; }
         
-        /* WEEKLY REVIEW */
-        .weekly-review { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border-radius: 16px; padding: 20px; margin-bottom: 20px; border: 1px solid rgba(99, 102, 241, 0.3); }
-        .weekly-title { font-size: 1.1rem; font-weight: 700; margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
-        .weekly-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; }
-        .weekly-stat { text-align: center; padding: 15px; background: rgba(0,0,0,0.3); border-radius: 12px; }
-        .weekly-value { font-size: 1.5rem; font-weight: 800; color: #22c55e; }
-        .weekly-value.down { color: #ef4444; }
-        .weekly-label { font-size: 0.75rem; color: #a0a0a0; margin-top: 5px; }
+        .header {
+            text-align: center;
+            padding: 30px 20px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 20px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .header h1 {
+            font-size: 2.5rem;
+            background: linear-gradient(90deg, #00d4ff, #7b2cbf);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+        .version {
+            display: inline-block;
+            background: rgba(0,212,255,0.2);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: #00d4ff;
+        }
+        .timestamp {
+            color: #888;
+            margin-top: 10px;
+            font-size: 0.85rem;
+        }
         
-        /* ALERT BAR */
-        .alert-bar { background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%); border-radius: 12px; padding: 15px 20px; margin-bottom: 20px; display: flex; align-items: center; justify-content: space-between; border: 2px solid #fca5a5; animation: pulse-alert 2s infinite; }
-        @keyframes pulse-alert { 0%, 100% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.7); } 50% { box-shadow: 0 0 20px 5px rgba(220, 38, 38, 0.3); } }
-        .alert-content { display: flex; align-items: center; gap: 15px; }
-        .alert-icon { font-size: 1.5rem; }
-        .alert-text { font-weight: 600; }
-        .alert-action { background: #fff; color: #dc2626; padding: 8px 16px; border-radius: 8px; font-weight: 700; cursor: pointer; border: none; font-size: 0.9rem; }
+        .status-banner {
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        .status-weekend {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
         
-        /* QUEST PANEL */
-        .quest-panel { background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%); border-radius: 16px; padding: 20px; margin-bottom: 20px; border: 1px solid rgba(99, 102, 241, 0.3); }
-        .quest-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
-        .quest-title { font-size: 1.1rem; font-weight: 700; }
-        .quest-xp { color: #fbbf24; font-weight: 700; }
-        .quest-list { display: flex; flex-direction: column; gap: 10px; }
-        .quest-item { display: flex; align-items: center; gap: 12px; padding: 12px; background: rgba(0,0,0,0.3); border-radius: 10px; cursor: pointer; transition: all 0.3s ease; }
-        .quest-item:hover { background: rgba(0,0,0,0.5); transform: translateX(5px); }
-        .quest-checkbox { width: 24px; height: 24px; border: 2px solid #6366f1; border-radius: 6px; display: flex; align-items: center; justify-content: center; }
-        .quest-checkbox.completed { background: #22c55e; border-color: #22c55e; }
-        .quest-checkbox.completed::after { content: '✓'; color: white; font-weight: bold; }
-        .quest-text { flex: 1; }
-        .due-date { font-size: 0.75rem; padding: 3px 8px; border-radius: 4px; margin: 0 10px; }
-        .due-date.urgent { background: rgba(239, 68, 68, 0.2); color: #ef4444; }
-        .due-date.soon { background: rgba(251, 191, 36, 0.2); color: #fbbf24; }
-        .quest-reward { color: #fbbf24; font-size: 0.85rem; font-weight: 600; }
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        .metric-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .metric-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #00d4ff;
+        }
+        .metric-value.warning { color: #ff6b6b; }
+        .metric-value.success { color: #51cf66; }
+        .metric-label {
+            color: #888;
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
         
-        /* HEADER */
-        .header { text-align: center; padding: 30px 20px; background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%); border-radius: 20px; margin-bottom: 20px; }
-        h1 { font-size: 1.8rem; background: linear-gradient(90deg, #fff, #e94560); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .subtitle { color: #a0a0a0; font-size: 0.95rem; }
-        .overall { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 15px; }
-        .overall-stat { text-align: center; background: rgba(0,0,0,0.2); padding: 15px 25px; border-radius: 12px; }
-        .overall-stat .value { font-size: 1.8rem; font-weight: 800; color: #e94560; }
-        .overall-stat .label { font-size: 0.75rem; color: #a0a0a0; text-transform: uppercase; }
+        .card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .card h2 {
+            color: #00d4ff;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
         
-        /* CATEGORY CARDS */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px; max-width: 1400px; margin: 0 auto; }
-        .card { background: linear-gradient(180deg, #16213e 0%, #1a1a2e 100%); border-radius: 16px; padding: 20px; border: 1px solid rgba(255,255,255,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease; }
-        .card:hover { transform: translateY(-3px); box-shadow: 0 15px 30px rgba(0,0,0,0.3); }
-        .card-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
-        .card-icon { font-size: 1.8rem; }
-        .card-title h2 { font-size: 1.1rem; margin-bottom: 3px; }
-        .card-title span { color: #a0a0a0; font-size: 0.8rem; }
-        .level { font-size: 1.5rem; font-weight: 800; }
+        .task-list { list-style: none; }
+        .task-list li {
+            padding: 10px;
+            margin-bottom: 8px;
+            border-radius: 8px;
+            background: rgba(255,255,255,0.05);
+            border-left: 3px solid #666;
+        }
+        .task-list li.critical {
+            border-left-color: #ff6b6b;
+            background: rgba(255,107,107,0.1);
+        }
+        .task-list li.high {
+            border-left-color: #ffa502;
+            background: rgba(255,165,2,0.1);
+        }
+        .task-list li.medium {
+            border-left-color: #74b9ff;
+        }
+        .task-days {
+            font-size: 0.8rem;
+            color: #ff6b6b;
+            margin-left: 10px;
+        }
         
-        /* LEVEL UP REQUIREMENTS */
-        .level-up-req { margin-top: 12px; padding: 12px; background: rgba(251, 191, 36, 0.1); border: 1px solid rgba(251, 191, 36, 0.3); border-radius: 10px; }
-        .level-up-title { font-size: 0.8rem; color: #fbbf24; font-weight: 600; margin-bottom: 5px; }
-        .level-up-text { font-size: 0.85rem; color: #a0a0a0; }
+        .weekend-mode {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .weekend-mode h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        .weekend-mode p {
+            color: rgba(255,255,255,0.8);
+        }
         
-        /* XP BAR */
-        .xp-section { margin: 12px 0; }
-        .xp-info { display: flex; justify-content: space-between; font-size: 0.8rem; color: #a0a0a0; margin-bottom: 6px; }
-        .xp-bar { height: 10px; background: #2d2d44; border-radius: 8px; overflow: hidden; }
-        .xp-fill { height: 100%; border-radius: 8px; transition: width 1.5s ease; background: linear-gradient(90deg, var(--accent), rgba(255,255,255,0.3)); }
+        .kw-summary {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        .kw-box {
+            background: rgba(255,255,255,0.05);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+        }
+        .kw-box h3 {
+            color: #888;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+        .kw-box .value {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #00d4ff;
+        }
+        .kw-box.complete .value { color: #51cf66; }
         
-        /* STREAK BADGE */
-        .streak-badge { display: inline-flex; align-items: center; gap: 5px; padding: 5px 10px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; margin-top: 8px; }
-        .streak-badge.fire { background: rgba(251, 191, 36, 0.2); color: #fbbf24; border: 1px solid rgba(251, 191, 36, 0.3); }
-        .streak-badge.cold { background: rgba(148, 163, 184, 0.2); color: #94a3b8; }
-        .streak-badge.warning { background: rgba(239, 68, 68, 0.2); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.3); }
+        .upcoming {
+            background: rgba(0,212,255,0.1);
+            border-radius: 12px;
+            padding: 15px;
+            margin-top: 15px;
+        }
+        .upcoming h3 {
+            color: #00d4ff;
+            margin-bottom: 10px;
+        }
         
-        /* BLOCKER ALERT */
-        .blocker-alert { background: linear-gradient(135deg, #7c2d12 0%, #9a3412 100%); border: 2px solid #fbbf24; border-radius: 12px; padding: 15px; margin-top: 10px; display: flex; align-items: center; gap: 10px; }
-        .blocker-icon { font-size: 1.2rem; }
-        .blocker-text { flex: 1; font-size: 0.85rem; }
-        .blocker-action { background: #fbbf24; color: #7c2d12; padding: 5px 12px; border-radius: 6px; font-weight: 600; font-size: 0.8rem; cursor: pointer; border: none; }
+        .update-log {
+            background: rgba(255,255,255,0.03);
+            border-radius: 8px;
+            padding: 10px 15px;
+            margin-bottom: 8px;
+            font-size: 0.85rem;
+            color: #888;
+        }
+        .update-log.current {
+            background: rgba(0,212,255,0.1);
+            color: #00d4ff;
+        }
         
-        /* STATS */
-        .stats { margin-top: 12px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 10px; }
-        .stat-row { display: flex; justify-content: space-between; margin-bottom: 6px; font-size: 0.85rem; }
-        .stat-alert { color: #ef4444; font-weight: 600; }
-        .stat-good { color: #4ade80; font-weight: 600; }
-        
-        /* COLORS */
-        .tough { --accent: #ff6b6b; }
-        .nomu { --accent: #4ade80; }
-        .export { --accent: #60a5fa; }
-        .hyrox { --accent: #fbbf24; }
-        .finance { --accent: #a78bfa; }
-        .personal { --accent: #f472b6; }
-        .card-title h2, .level { color: var(--accent); }
-        
-        /* LEVEL UP MODAL */
-        .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); display: none; align-items: center; justify-content: center; z-index: 1000; }
-        .modal-overlay.active { display: flex; }
-        .modal-content { background: linear-gradient(135deg, #1e1b4b 0%, #4338ca 100%); border-radius: 20px; padding: 40px; text-align: center; border: 3px solid #fbbf24; max-width: 400px; animation: modalPop 0.5s ease; }
-        @keyframes modalPop { 0% { transform: scale(0.5); opacity: 0; } 100% { transform: scale(1); opacity: 1; } }
-        .modal-title { font-size: 2rem; font-weight: 800; margin-bottom: 10px; color: #fbbf24; }
-        .modal-text { font-size: 1.2rem; margin-bottom: 20px; }
-        .modal-xp { font-size: 3rem; margin: 20px 0; }
-        .modal-button { background: #fbbf24; color: #1e1b4b; padding: 15px 30px; border-radius: 10px; font-weight: 700; border: none; cursor: pointer; font-size: 1rem; }
-        
-        /* FOOTER */
-        .footer { text-align: center; color: #a0a0a0; margin-top: 30px; padding: 20px; font-size: 0.8rem; }
-        
-        @media (max-width: 768px) { body { padding: 10px; } h1 { font-size: 1.5rem; } .weekly-grid { grid-template-columns: repeat(2, 1fr); } .grid { grid-template-columns: 1fr; } }
+        @media (max-width: 768px) {
+            .header h1 { font-size: 1.8rem; }
+            .metrics-grid { grid-template-columns: repeat(2, 1fr); }
+            .kw-summary { grid-template-columns: 1fr; }
+        }
     </style>
 </head>
 <body>
-    <!-- LEVEL UP MODAL -->
-    <div class="modal-overlay" id="levelUpModal">
-        <div class="modal-content">
-            <div class="modal-title">🎉 LEVEL UP!</div>
-            <div class="modal-text">Du hast Level <span id="newLevel">9</span> erreicht!</div>
-            <div class="modal-xp">✨ +200 XP ✨</div>
-            <div style="font-size: 0.9rem; color: #a0a0a0; margin-bottom: 20px;">Neu freigeschaltet: Nächste Quest-Stufe</div>
-            <button class="modal-button" onclick="closeLevelUp()">Weiter rocken! 🚀</button>
+    <div class="container">
+        <div class="header">
+            <h1>🚀 venture-ctrl</h1>
+            <span class="version">v5.6.24</span>
+            <div class="timestamp">Letztes Update: Samstag, 13. Juni 2026 — 18:04 Uhr</div>
         </div>
-    </div>
-
-    <!-- WEEKLY REVIEW -->
-    <div class="weekly-review">
-        <div class="weekly-title">📊 Diese Woche (KW 18) — Stand: 28. April, 20:04 Uhr</div>
-        <div class="weekly-grid">
-            <div class="weekly-stat"><div class="weekly-value">6</div><div class="weekly-label">Aktive Tasks KW18</div></div>
-            <div class="weekly-stat"><div class="weekly-value">🎬</div><div class="weekly-label">Niku Shooting Do</div></div>
-            <div class="weekly-stat"><div class="weekly-value down">0</div><div class="weekly-label">Trainingseinheiten</div></div>
-            <div class="weekly-stat"><div class="weekly-value down">9.000 €</div><div class="weekly-label">Offene Rechnungen</div></div>
-        </div>
-    </div>
-
-    <!-- ALERT BAR -->
-    <div class="alert-bar">
-        <div class="alert-content">
-            <span class="alert-icon">🚨</span>
-            <div class="alert-text"><strong>Kritisch:</strong> 9.000 € offene Rechnungen seit 30+ Tagen</div>
-        </div>
-        <button class="alert-action" onclick="markAsActioned()">JETZT HANDELN</button>
-    </div>
-
-    <!-- QUEST PANEL -->
-    <div class="quest-panel">
-        <div class="quest-header">
-            <span class="quest-title">🎯 Aktive Quests KW 18</span>
-            <span class="quest-xp">+550 XP möglich</span>
-        </div>
-        <div class="quest-list">
-            <div class="quest-item" onclick="completeQuest(this, 200)">
-                <div class="quest-checkbox completed"></div>
-                <span class="quest-text" style="text-decoration: line-through; opacity: 0.7;">🤝 Sentai Meeting — Auftrag BESTÄTIGT!</span>
-                <span class="due-date" style="background: rgba(34,197,94,0.2); color: #22c55e;">✅ Erledigt</span>
-                <span class="quest-reward">+200 XP</span>
-            </div>
-            <div class="quest-item" onclick="completeQuest(this, 200)">
-                <div class="quest-checkbox"></div>
-                <span class="quest-text">🎥 Sentai Pre-Production planen (Dreh Anfang Mai)</span>
-                <span class="due-date soon">📅 Fällig: Nächste Woche</span>
-                <span class="quest-reward">+200 XP</span>
-            </div>
-            <div class="quest-item" onclick="completeQuest(this, 150)">
-                <div class="quest-checkbox"></div>
-                <span class="quest-text">🎬 NOMU Post-Production finalisieren</span>
-                <span class="due-date urgent">📅 Fällig: JETZT!</span>
-                <span class="quest-reward">+150 XP</span>
-            </div>
-            <div class="quest-item" onclick="completeQuest(this, 100)">
-                <div class="quest-checkbox"></div>
-                <span class="quest-text">🎬 Niku Shooting vorbereiten (Pre-Production)</span>
-                <span class="due-date soon">📅 Fällig: Heute (Di)</span>
-                <span class="quest-reward">+100 XP</span>
-            </div>
-            <div class="quest-item" onclick="completeQuest(this, 100)">
-                <div class="quest-checkbox"></div>
-                <span class="quest-text">🎬 Video für Nico zusammenschneiden</span>
-                <span class="due-date soon">📅 Fällig: Diese Woche</span>
-                <span class="quest-reward">+100 XP</span>
-            </div>
-            <div class="quest-item" onclick="completeQuest(this, 100)">
-                <div class="quest-checkbox"></div>
-                <span class="quest-text">🎨 Anju CI Briefing für Grafikerin</span>
-                <span class="due-date soon">📅 Fällig: Diese Woche</span>
-                <span class="quest-reward">+100 XP</span>
-            </div>
-            <div class="quest-item" onclick="completeQuest(this, 100)">
-                <div class="quest-checkbox"></div>
-                <span class="quest-text">🏨 Hotel Wittmann Pre-Production</span>
-                <span class="due-date soon">📅 Fällig: Diese Woche</span>
-                <span class="quest-reward">+100 XP</span>
-            </div>
-            <div class="quest-item" onclick="completeQuest(this, 50)">
-                <div class="quest-checkbox"></div>
-                <span class="quest-text">💊 Kyberg Call terminieren</span>
-                <span class="due-date soon">📅 Fällig: ASAP</span>
-                <span class="quest-reward">+50 XP</span>
-            </div>
-        </div>
-    </div>
-
-    <!-- HEADER -->
-    <div class="header">
-        <h1>🎮 Giang's Life Dashboard</h1>
-        <p class="subtitle">Level up your life, one day at a time</p>
-        <div class="overall">
-            <div class="overall-stat"><div class="value" id="overallLevel">4</div><div class="label">Overall Level</div></div>
-            <div class="overall-stat"><div class="value" id="totalXP">1,200</div><div class="label">Total XP</div></div>
-            <div class="overall-stat"><div class="value">6</div><div class="label">Active Quests</div></div>
-        </div>
-    </div>
-
-    <!-- CATEGORY CARDS -->
-    <div class="grid">
-        <!-- Tough Cookie -->
-        <div class="card tough">
-            <div class="card-header">
-                <div style="display: flex; align-items: center; gap: 12px;">
-                    <span class="card-icon">💼</span>
-                    <div class="card-title"><h2>Tough Cookie</h2><span>Video-Agentur</span></div>
-                </div>
-                <span class="level">Lvl 8</span>
-            </div>
-            <div class="xp-section">
-                <div class="xp-info"><span>Level 8/20</span><span>65%</span></div>
-                <div class="xp-bar"><div class="xp-fill" style="width: 65%"></div></div>
-            </div>
-            <span class="streak-badge fire">🔥 8 Tage Produktions-Streak</span>
-            <div class="level-up-req">
-                <div class="level-up-title">🎯 Für Level 9:</div>
-                <div class="level-up-text">Offene Rechnungen unter 5.000€ bringen</div>
-            </div>
-            <div class="stats">
-                <div class="stat-row"><span>💰 Offene Rechnungen:</span><span class="stat-alert">~9.000 €</span></div>
-                <div class="stat-row"><span>📊 Monatlicher Umsatz:</span><span class="stat-good">~8.000 €</span></div>
-                <div class="stat-row"><span>🎯 Aktive Projekte:</span><span style="color: #60a5fa; font-weight: 600;">7 (inkl. Sentai)</span></div>
-                <div class="stat-row"><span>✅ Erledigt heute:</span><span style="color: #a0a0a0;">Wartet auf Update...</span></div>
-            </div>
-        </div>
-
-        <!-- NOMU -->
-        <div class="card nomu">
-            <div class="card-header">
-                <div style="display: flex; align-items: center; gap: 12px;">
-                    <span class="card-icon">📱</span>
-                    <div class="card-title"><h2>NOMU</h2><span>Digitale Speisekarte</span></div>
-                </div>
-                <span class="level">Lvl 3</span>
-            </div>
-            <div class="xp-section">
-                <div class="xp-info"><span>Level 3/20</span><span>48%</span></div>
-                <div class="xp-bar"><div class="xp-fill" style="width: 48%"></div></div>
-            </div>
-            <span class="streak-badge warning">⚠️ POST-PRODUCTION BLOCKIERT</span>
-            <div class="level-up-req">
-                <div class="level-up-title">🎯 Für Level 4:</div>
-                <div class="level-up-text">NOMU Video finalisieren und veröffentlichen</div>
-            </div>
-            <div class="stats">
-                <div class="stat-row"><span>🎬 Dreh:</span><span class="stat-good">✅ Erledigt (KW17)</span></div>
-                <div class="stat-row"><span>✂️ Post-Production:</span><span class="stat-alert">🔴 BLOCKIERT</span></div>
-                <div class="stat-row"><span>👥 Beta-Tester:</span><span class="stat-good">2 aktiv</span></div>
-                <div class="stat-row"><span>💳 Preis:</span><span style="color: #4ade80; font-weight: 600;">15-25€/mo</span></div>
-            </div>
-        </div>
-
-        <!-- Export -->
-        <div class="card export">
-            <div class="card-header">
-                <div style="display: flex; align-items: center; gap: 12px;">
-                    <span class="card-icon">🌍</span>
-                    <div class="card-title"><h2>Export</h2><span>Deutschland → Vietnam</span></div>
-                </div>
-                <span class="level">Lvl 2</span>
-            </div>
-            <div class="xp-section">
-                <div class="xp-info"><span>Level 2/20</span><span>40%</span></div>
-                <div class="xp-bar"><div class="xp-fill" style="width: 40%"></div></div>
-            </div>
-            <span class="streak-badge cold">❄️ Keine aktive Streak</span>
-            <div class="blocker-alert">
-                <span class="blocker-icon">⏳</span>
-                <span class="blocker-text">DU wartest auf Kyberg GF seit 14 Tagen</span>
-                <button class="blocker-action" onclick="unblockExport()">ERINNERN</button>
-            </div>
-            <div class="level-up-req">
-                <div class="level-up-title">🎯 Für Level 3:</div>
-                <div class="level-up-text">Kyberg Deal abschließen (GF meldet sich)</div>
-            </div>
-            <div class="stats">
-                <div class="stat-row"><span>📦 Status:</span><span style="color: #60a5fa; font-weight: 600;">Warte auf Antwort</span></div>
-                <div class="stat-row"><span>🌐 Kontakt:</span><span class="stat-alert">Onkel wartet auf Update</span></div>
-            </div>
-        </div>
-
-        <!-- HYROX -->
-        <div class="card hyrox">
-            <div class="card-header">
-                <div style="display: flex; align-items: center; gap: 12px;">
-                    <span class="card-icon">🏃</span>
-                    <div class="card-title"><h2>HYROX</h2><span>Personal Training</span></div>
-                </div>
-                <span class="level">Lvl 1</span>
-            </div>
-            <div class="xp-section">
-                <div class="xp-info"><span>Level 1/20</span><span>20%</span></div>
-                <div class="xp-bar"><div class="xp-fill" style="width: 20%"></div></div>
-            </div>
-            <span class="streak-badge warning">⚠️ Kein Training diese Woche!</span>
-            <div class="level-up-req">
-                <div class="level-up-title">🎯 Für Level 2:</div>
-                <div class="level-up-text">3 Trainingseinheiten diese Woche</div>
-            </div>
-            <div class="stats">
-                <div class="stat-row"><span>🏃 Letztes Training:</span><span style="color: #a0a0a0;">KW17 (Letzte Woche)</span></div>
-                <div class="stat-row"><span>📅 Diese Woche:</span><span class="stat-alert">0/3</span></div>
-                <div class="stat-row"><span>🎯 Zielzeit:</span><span style="color: #fbbf24; font-weight: 600;">1:20 (Ende 2026)</span></div>
-            </div>
-        </div>
-
-        <!-- Finanzen -->
-        <div class="card finance">
-            <div class="card-header">
-                <div style="display: flex; align-items: center; gap: 12px;">
-                    <span class="card-icon">💰</span>
-                    <div class="card-title"><h2>Finanzen</h2><span>Einkommen & Cashflow</span></div>
-                </div>
-                <span class="level">Lvl 5</span>
-            </div>
-            <div class="xp-section">
-                <div class="xp-info"><span>Level 5/20</span><span>56%</span></div>
-                <div class="xp-bar"><div class="xp-fill" style="width: 56%"></div></div>
-            </div>
-            <span class="streak-badge fire">🔥 5 Wochen Budget-Tracking</span>
-            <div class="level-up-req">
-                <div class="level-up-title">🎯 Für Level 6:</div>
-                <div class="level-up-text">1.500 € netto erreichen (+300€)</div>
-            </div>
-            <div class="stats">
-                <div class="stat-row"><span>💶 Netto:</span><span class="stat-alert">1.200 €</span></div>
-                <div class="stat-row"><span>📈 Ziel:</span><span style="color: #a78bfa; font-weight: 600;">2.000 €</span></div>
-                <div class="stat-row"><span>🏁 Meilenstein:</span><span class="stat-good">Juli 2026: Schuld-frei</span></div>
-                <div class="stat-row"><span>⚠️ Deadline:</span><span class="stat-alert">Finanzamt: 20.05.</span></div>
-            </div>
-        </div>
-
-        <!-- Personal Brand -->
-        <div class="card personal">
-            <div class="card-header">
-                <div style="display: flex; align-items: center; gap: 12px;">
-                    <span class="card-icon">🎯</span>
-                    <div class="card-title"><h2>Personal Brand</h2><span>Content & Skills</span></div>
-                </div>
-                <span class="level">Lvl 2</span>
-            </div>
-            <div class="xp-section">
-                <div class="xp-info"><span>Level 2/20</span><span>35%</span></div>
-                <div class="xp-bar"><div class="xp-fill" style="width: 35%"></div></div>
-            </div>
-            <span class="streak-badge warning">⚠️ 2 MONATE STAGNATION!</span>
-            <div class="blocker-alert">
-                <span class="blocker-icon">🚨</span>
-                <span class="blocker-text">2 Monate kein neuer Content!</span>
-                <button class="blocker-action" onclick="suggestContent()">VORSCHLAG</button>
-            </div>
-            <div class="level-up-req">
-                <div class="level-up-title">🎯 Für Level 3:</div>
-                <div class="level-up-text">Golf Spec Video veröffentlichen</div>
-            </div>
-            <div class="stats">
-                <div class="stat-row"><span>🎬 Golf Spec:</span><span style="color: #f472b6; font-weight: 600;">Testaufnahmen OK</span></div>
-                <div class="stat-row"><span>📱 LinkedIn:</span><span style="color: #a0a0a0;">Noch nicht aktiv</span></div>
-                <div class="stat-row"><span>💰 LuBu:</span><span class="stat-good">1.400€ abgerechnet</span></div>
-            </div>
-        </div>
-    </div>
-
-    <div class="footer">
-        <p>🔄 Aktualisiert: 28. April 2026, 20:04 Uhr (Cron: dashboard-update-4h-v2)</p>
-        <p>🎉 Dashboard aktualisiert mit Daten aus memory/2026-04-28.md</p>
-        <p>💡 Tipp: NOMU Post-Production JETZT! + Niku Pre-Production heute + Video für Nico</p>
-    </div>
-    
-    <script>
-        // XP and Level System
-        let currentXP = 1200;
-        let currentLevel = 4;
         
-        function completeQuest(element, xp) {
-            const checkbox = element.querySelector('.quest-checkbox');
-            if (checkbox.classList.contains('completed')) return;
-            checkbox.classList.add('completed');
-            element.style.opacity = '0.6';
-            currentXP += xp;
-            document.getElementById('totalXP').textContent = currentXP.toLocaleString();
-            localStorage.setItem('giang_dashboard_xp', currentXP);
-        }
+        <div class="status-banner status-weekend">
+            🌙 WEEKEND MODE — KW 25 (Samstag Abend)
+        </div>
         
-        function closeLevelUp() { document.getElementById('levelUpModal').classList.remove('active'); }
-        function markAsActioned() { alert('✅ Action tracked! Rechnungen einfordern!'); }
-        function unblockExport() { alert('💡 Vorschlag: Freundliche Erinnerungsmail an Kyberg GF mit Deadline.'); }
-        function suggestContent() { alert('💡 Vorschlag: Golf Spec Behind-the-Scenes Video (60 Sekunden) für LinkedIn.'); }
+        <div class="weekend-mode">
+            <h2>🌙 Wochenende</h2>
+            <p>Regeneration & Privatleben — Keine Tasks geplant</p>
+            <p style="margin-top: 15px; font-size: 0.9rem;">KW 24 Bilanz: 50% Erfolgsrate (4/8 Tasks)</p>
+        </div>
         
-        window.addEventListener('load', function() {
-            const savedXP = localStorage.getItem('giang_dashboard_xp');
-            if (savedXP) {
-                currentXP = parseInt(savedXP);
-                document.getElementById('totalXP').textContent = currentXP.toLocaleString();
-            }
-            document.querySelectorAll('.xp-fill').forEach(bar => {
-                const width = bar.style.width;
-                bar.style.width = '0%';
-                setTimeout(() => { bar.style.width = width; }, 300);
-            });
-        });
-    </script>
+        <div class="metrics-grid">
+            <div class="metric-card">
+                <div class="metric-value">KW 25</div>
+                <div class="metric-label">Aktuelle Woche</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value">0</div>
+                <div class="metric-label">Heute erledigt</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value warning">68</div>
+                <div class="metric-label">NOMU Tage überfällig</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value">50%</div>
+                <div class="metric-label">KW 24 Erfolgsrate</div>
+            </div>
+        </div>
+        
+        <div class="kw-summary">
+            <div class="kw-box complete">
+                <h3>✅ KW 24 Bilanz</h3>
+                <div class="value">4/8</div>
+                <div style="color: #888; font-size: 0.8rem; margin-top: 5px;">Tasks erledigt</div>
+            </div>
+            <div class="kw-box">
+                <h3>📅 KW 25 Plan</h3>
+                <div class="value">Montag</div>
+                <div style="color: #888; font-size: 0.8rem; margin-top: 5px;">Wittmann Priorität</div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2>🔥 KRITISCHE BLOCKER</h2>
+            <ul class="task-list">
+                <li class="critical">
+                    <strong>🎬 NOMU Post-Production</strong>
+                    <span class="task-days">68+ TAGE ÜBERFÄLLIG</span>
+                    <div style="font-size: 0.85rem; color: #888; margin-top: 5px;">
+                        Entscheidung nötig: extern vergeben, aufgeben, oder fertig machen?
+                    </div>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="card">
+            <h2>⏰ ÜBERFÄLLIGE TASKS</h2>
+            <ul class="task-list">
+                <li class="high">
+                    <strong>🎬 Sentai Post-Production</strong>
+                    <span class="task-days">25 Tage überfällig</span>
+                </li>
+                <li class="medium">
+                    <strong>🎴 Hiro Sakao Musterkarten</strong>
+                    <span class="task-days">18 Tage überfällig</span>
+                </li>
+                <li class="medium">
+                    <strong>⛳ Tough Cookie Golfplatz Video</strong>
+                    <span class="task-days">18 Tage überfällig</span>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="card">
+            <h2>📅 KW 25 — KOMMENDE WOCHE</h2>
+            <div class="upcoming">
+                <h3>🔥 Top Priorität: Montag</h3>
+                <ul class="task-list">
+                    <li class="high">
+                        <strong>🎬 Wittmann Preproduction</strong>
+                        <div style="font-size: 0.85rem; color: #888; margin-top: 5px;">
+                            Hauptfokus KW 25 — Als erstes angehen!
+                        </div>
+                    </li>
+                    <li>
+                        <strong>⚠️ NOMU Entscheidung</strong>
+                        <div style="font-size: 0.85rem; color: #888; margin-top: 5px;">
+                            Endlich klären: extern/aufgeben/fertig
+                        </div>
+                    </li>
+                    <li>
+                        <strong>📋 KW 25 Planung</strong>
+                        <div style="font-size: 0.85rem; color: #888; margin-top: 5px;">
+                            Neue Woche strukturieren
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2>📊 KW 24 HIGHLIGHTS</h2>
+            <ul class="task-list">
+                <li>✅ Japanese Pancake Post-Production erledigt</li>
+                <li>✅ Little Hero Call durchgeführt</li>
+                <li>✅ Verträge finalisiert</li>
+                <li>✅ Anju CI weitergeleitet</li>
+            </ul>
+            <p style="margin-top: 15px; color: #888; font-size: 0.9rem;">
+                <strong>50% Erfolgsrate</strong> — Nachhaltiger Rhythmus ohne Überlastung
+            </p>
+        </div>
+        
+        <div class="card">
+            <h2>💡 INSIGHTS</h2>
+            <p style="line-height: 1.6;">
+                <strong>Pattern:</strong> KW 24 lief stabil mit 50% Erfolgsrate — Wellenrhythmus funktioniert<br><br>
+                <strong>Blocker:</strong> NOMU 68+ Tage — Entscheidung am Montag treffen!<br><br>
+                <strong>Momentum:</strong> KW 25 startet morgen — Mental auf Wittmann fokussieren
+            </p>
+        </div>
+        
+        <div class="card">
+            <h2>🔄 UPDATE-VERLAUF</h2>
+            <div class="update-log current">v5.6.24 — 2026-06-13 18:04 — Abend-Update (Samstag, KW 25 Wochenende)</div>
+            <div class="update-log">v5.6.23 — 2026-06-13 08:04 — Morgen-Update (Samstag, KW 25 Beginn)</div>
+            <div class="update-log">v5.6.22 — 2026-06-13 00:04 — Nacht-Update (Samstag, KW 25 Start)</div>
+            <div class="update-log">v5.6.21 — 2026-06-12 20:04 — Abend-Update (Freitag, KW 24 Abschluss)</div>
+            <div class="update-log">v5.6.20 — 2026-06-12 16:04 — Nachmittags-Update (Freitag)</div>
+        </div>
+        
+        <div style="text-align: center; padding: 20px; color: #666; font-size: 0.85rem;">
+            <p>venture-ctrl v5.6.24 — Automatisch aktualisiert alle 4 Stunden</p>
+            <p style="margin-top: 5px;">KW 25 Wochenende — Samstag, 13. Juni 2026</p>
+        </div>
+    </div>
 </body>
 </html>
