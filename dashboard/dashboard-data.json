@@ -1,6 +1,6 @@
 {
-  "version": "v5.6.24",
-  "lastUpdated": "2026-06-13T14:04:00+02:00",
+  "version": "v5.6.26",
+  "lastUpdated": "2026-06-14T04:04:00+02:00",
   "week": "KW 25",
   "mode": "WEEKEND",
   "summary": {
@@ -11,32 +11,32 @@
     "highOverdue": 3
   },
   "today": {
-    "date": "2026-06-13",
-    "day": "Samstag",
-    "time": "14:04",
+    "date": "2026-06-14",
+    "day": "Sonntag",
+    "time": "04:04",
     "completed": 0,
     "total": 0,
     "tasks": [],
     "note": "🌙 Wochenende — Regeneration & Privatleben"
   },
   "critical": [
-    {"task": "NOMU Post-Production", "overdue": 67, "days": 67, "type": "post-production", "priority": "critical", "note": "67+ TAGE — Entscheidung: extern, aufgeben, oder fertig?"}
+    {"task": "NOMU Post-Production", "overdue": 68, "days": 68, "type": "post-production", "priority": "critical", "note": "68+ TAGE — Entscheidung: extern, aufgeben, oder fertig?"}
   ],
   "overdue": [
-    {"task": "Sentai Post-Production", "days": 25, "type": "post-production", "priority": "high"},
-    {"task": "Hiro Sakao Musterkarten", "days": 18, "type": "research", "priority": "medium"},
-    {"task": "Tough Cookie Golfplatz Video", "days": 18, "type": "content", "priority": "medium"}
+    {"task": "Sentai Post-Production", "days": 26, "type": "post-production", "priority": "high"},
+    {"task": "Hiro Sakao Musterkarten", "days": 19, "type": "research", "priority": "medium"},
+    {"task": "Tough Cookie Golfplatz Video", "days": 19, "type": "content", "priority": "medium"}
   ],
   "completedToday": [],
   "completedWeek": [],
   "upcoming": [
-    {"event": "KW 25 Planung", "date": "Montag", "type": "planning", "note": "📝 Neue Woche starten", "priority": "high"},
+    {"event": "KW 25 Start", "date": "Montag", "type": "planning", "note": "📝 Neue Woche beginnt", "priority": "high"},
     {"event": "Wittmann Preproduction", "date": "Montag", "type": "task", "note": "🔥 TOP PRIORITÄT", "priority": "high"},
-    {"event": "NOMU Entscheidung", "date": "KW 25", "type": "decision", "note": "⚠️ 67+ Tage überfällig", "priority": "critical"}
+    {"event": "NOMU Entscheidung", "date": "KW 25", "type": "decision", "note": "⚠️ 68+ Tage überfällig", "priority": "critical"}
   ],
   "patterns": [
-    {"name": "KW 25 Samstag Nachmittag", "description": "Samstag 14:04 — Übergang zu neuer Woche", "status": "active"},
-    {"name": "Post-Production = Prokrastination", "description": "NOMU 67+ Tage — der ewige Blocker bleibt kritisch", "status": "critical"},
+    {"name": "KW 25 Sonntag Früh", "description": "Sonntag 04:04 — Letzte Wochenende-Phase vor Arbeitswoche", "status": "active"},
+    {"name": "Post-Production = Prokrastination", "description": "NOMU 68+ Tage — der ewige Blocker bleibt kritisch", "status": "critical"},
     {"name": "Wochenende = Reset", "description": "Samstag/Sonntag — Zeit für Abstand und Perspektive", "status": "active"}
   ],
   "weekly": {
@@ -44,20 +44,20 @@
     "completed": 0,
     "planned": 0,
     "successRate": "N/A",
-    "notes": "KW 25 — Samstag Nachmittag, Planung folgt am Montag"
+    "notes": "KW 25 — Sonntag Früh, heute startet die neue Woche"
   },
   "history": [
+    {"date": "2026-06-14", "completed": 0, "total": 0, "note": "Sonntag — Wochenende"},
     {"date": "2026-06-13", "completed": 0, "total": 0, "note": "Samstag — Wochenende"},
     {"date": "2026-06-12", "completed": 0, "total": 5, "note": "Freitag — KW 24 Abschluss"},
     {"date": "2026-06-11", "completed": 0, "total": 5, "note": "Donnerstag"},
     {"date": "2026-06-10", "completed": 0, "total": 5, "note": "Mittwoch"},
     {"date": "2026-06-09", "completed": 0, "total": 5, "note": "Dienstag"},
-    {"date": "2026-06-08", "completed": 2, "total": 7, "note": "Montag"},
-    {"date": "2026-06-07", "completed": 2, "total": 8, "note": "Sonntag"}
+    {"date": "2026-06-08", "completed": 2, "total": 7, "note": "Montag"}
   ],
   "insights": {
-    "pattern": "KW 25 — Samstag Nachmittag, Wochenende-Modus aktiv",
-    "blocker": "NOMU 67+ Tage — Entscheidung dringend nötig!",
+    "pattern": "KW 25 — Sonntag Früh, heute startet die Arbeitswoche",
+    "blocker": "NOMU 68+ Tage — Entscheidung heute dringend nötig!",
     "momentum": "KW 24 abgeschlossen — 50% Erfolgsrate",
     "focus": "KW 25: Wittmann Preproduction Priorität 1",
     "window": "Wochenende — Zeit für Reset & Strategie"
@@ -80,19 +80,17 @@
   },
   "cronUpdate": {
     "trigger": "dashboard-update-4h-v2",
-    "previousVersion": "v5.6.23",
-    "currentVersion": "v5.6.24",
+    "previousVersion": "v5.6.25",
+    "currentVersion": "v5.6.26",
     "interval": "4 Stunden (WEEKEND Mode)",
-    "note": "Nachmittags-Update — KW 25 Samstag, 14:04 — Wochenende-Regeneration"
+    "note": "Früh-Update — KW 25 Sonntag, 04:04 — Letzte Wochenende-Phase vor Montag"
   },
   "updateHistory": [
-    "v5.6.24 — 2026-06-13 14:04 — Nachmittags-Update (Samstag, KW 25)",
-    "v5.6.23 — 2026-06-13 08:04 — Morgen-Update (Samstag, KW 25, Wochenende)",
+    "v5.6.26 — 2026-06-14 04:04 — Früh-Update (Sonntag, KW 25, Letzte Phase vor Arbeitswoche)",
+    "v5.6.25 — 2026-06-14 00:04 — Nacht-Update (Sonntag, KW 25)",
+    "v5.6.24 — 2026-06-13 18:04 — Abend-Update (Samstag, KW 25)",
+    "v5.6.23 — 2026-06-13 08:04 — Morgen-Update (Samstag, KW 25)",
     "v5.6.22 — 2026-06-13 00:04 — Nacht-Update (Samstag, KW 25 Beginn)",
-    "v5.6.21 — 2026-06-12 20:04 — Abend-Update (Freitag, KW 24 Abschluss)",
-    "v5.6.20 — 2026-06-12 16:04 — Nachmittags-Update (Freitag, KW 24 Tag 5)",
-    "v5.6.19 — 2026-06-12 12:04 — Mittags-Update (Freitag, KW 24 Tag 5)",
-    "v5.6.18 — 2026-06-12 08:04 — Morgen-Update (Freitag, KW 24 Tag 5)",
-    "v5.6.17 — 2026-06-12 04:04 — Nacht-Update (Freitag, KW 24 Tag 5)"
+    "v5.6.21 — 2026-06-12 20:04 — Abend-Update (Freitag, KW 24 Abschluss)"
   ]
 }
