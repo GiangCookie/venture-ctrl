@@ -1,6 +1,6 @@
 {
   "version": "v5.6.26",
-  "lastUpdated": "2026-06-14T04:04:00+02:00",
+  "lastUpdated": "2026-06-14T08:04:00+02:00",
   "week": "KW 25",
   "mode": "WEEKEND",
   "summary": {
@@ -13,7 +13,7 @@
   "today": {
     "date": "2026-06-14",
     "day": "Sonntag",
-    "time": "04:04",
+    "time": "08:04",
     "completed": 0,
     "total": 0,
     "tasks": [],
@@ -30,12 +30,12 @@
   "completedToday": [],
   "completedWeek": [],
   "upcoming": [
-    {"event": "KW 25 Start", "date": "Montag", "type": "planning", "note": "📝 Neue Woche beginnt", "priority": "high"},
-    {"event": "Wittmann Preproduction", "date": "Montag", "type": "task", "note": "🔥 TOP PRIORITÄT", "priority": "high"},
+    {"event": "KW 25 Start", "date": "Heute", "type": "planning", "note": "📝 Neue Woche beginnt", "priority": "high"},
+    {"event": "Wittmann Preproduction", "date": "Heute", "type": "task", "note": "🔥 TOP PRIORITÄT", "priority": "high"},
     {"event": "NOMU Entscheidung", "date": "KW 25", "type": "decision", "note": "⚠️ 68+ Tage überfällig", "priority": "critical"}
   ],
   "patterns": [
-    {"name": "KW 25 Sonntag Früh", "description": "Sonntag 04:04 — Letzte Wochenende-Phase vor Arbeitswoche", "status": "active"},
+    {"name": "KW 25 Sonntag Früh", "description": "Sonntag 08:04 — Letzte Wochenende-Phase vor Arbeitswoche", "status": "active"},
     {"name": "Post-Production = Prokrastination", "description": "NOMU 68+ Tage — der ewige Blocker bleibt kritisch", "status": "critical"},
     {"name": "Wochenende = Reset", "description": "Samstag/Sonntag — Zeit für Abstand und Perspektive", "status": "active"}
   ],
@@ -83,11 +83,11 @@
     "previousVersion": "v5.6.25",
     "currentVersion": "v5.6.26",
     "interval": "4 Stunden (WEEKEND Mode)",
-    "note": "Früh-Update — KW 25 Sonntag, 04:04 — Letzte Wochenende-Phase vor Montag"
+    "note": "Früh-Update — KW 25 Sonntag, 08:04 — Letzte Wochenende-Phase vor Montag"
   },
   "updateHistory": [
-    "v5.6.26 — 2026-06-14 04:04 — Früh-Update (Sonntag, KW 25, Letzte Phase vor Arbeitswoche)",
-    "v5.6.25 — 2026-06-14 00:04 — Nacht-Update (Sonntag, KW 25)",
+    "v5.6.26 — 2026-06-14 08:04 — Früh-Update (Sonntag, KW 25, Letzte Phase vor Arbeitswoche)",
+    "v5.6.25 — 2026-06-14 04:04 — Nacht-Update (Sonntag, KW 25)",
     "v5.6.24 — 2026-06-13 18:04 — Abend-Update (Samstag, KW 25)",
     "v5.6.23 — 2026-06-13 08:04 — Morgen-Update (Samstag, KW 25)",
     "v5.6.22 — 2026-06-13 00:04 — Nacht-Update (Samstag, KW 25 Beginn)",
