@@ -1,334 +1,96 @@
 {
-  "version": "v5.4.171",
-  "lastUpdated": "2026-06-01T16:04:00+02:00",
-  "status": "kw23-afternoon",
-  "metrics": {
-    "urgentTasks": 2,
-    "highPriority": 3,
-    "income": "2.1k€",
-    "deals": 13,
-    "kw22SuccessRate": "0%",
-    "kw21SuccessRate": "73%"
+  "version": "v5.6.26",
+  "lastUpdated": "2026-06-14T08:04:00+02:00",
+  "week": "KW 25",
+  "mode": "WEEKEND",
+  "summary": {
+    "tasksCompleted": 0,
+    "tasksTotal": 0,
+    "successRate": "N/A",
+    "criticalOverdue": 1,
+    "highOverdue": 3
   },
-  "today": "2026-06-01",
-  "kw": 23,
-  "kwDay": 1,
-  "dayOfWeek": "MONTAG",
-  "time": "16:04",
-  "openTasks": [
-    {
-      "task": "🎬 NOMU Post-Production",
-      "project": "NOMU",
-      "daysOverdue": 46,
-      "priority": "urgent",
-      "note": "46 TAGE ÜBERFÄLLIG — DER WENDEPUNKT KOMMT",
-      "status": "overdue",
-      "projectId": "nomu"
-    },
-    {
-      "task": "🎬 Japanese Pancake Post-Production",
-      "project": "Tough Cookie",
-      "daysOverdue": 6,
-      "priority": "urgent",
-      "note": "6 TAGE ÜBERFÄLLIG — Kunde wartet",
-      "status": "overdue",
-      "projectId": "tough-cookie"
-    },
-    {
-      "task": "📞 Little Hero Call",
-      "project": "Freelance",
-      "daysOverdue": 8,
-      "priority": "high",
-      "note": "8 TAGE OFFEN — Diese Woche anrufen",
-      "status": "open",
-      "projectId": "freelance"
-    },
-    {
-      "task": "🎨 Anju CI-Design",
-      "project": "Tough Cookie",
-      "daysOverdue": 8,
-      "priority": "high",
-      "note": "8 TAGE OFFEN — Zwischen NOMU schieben",
-      "status": "open",
-      "projectId": "tough-cookie"
-    },
-    {
-      "task": "🎬 Sentai Post-Production",
-      "project": "Freelance",
-      "daysOverdue": 8,
-      "priority": "high",
-      "note": "8 TAGE OFFEN — Nach NOMU",
-      "status": "open",
-      "projectId": "freelance"
-    }
-  ],
-  "completedTasks": [
-    {
-      "task": "✅ Dashboard v5.4.171 aktualisiert — 16:04 Uhr",
-      "completedAt": "2026-06-01T16:04:00+02:00"
-    },
-    {
-      "task": "✅ KW 23 Tag 1 — Nachmittag-Check-in erfolgreich",
-      "completedAt": "2026-06-01T16:04:00+02:00"
-    },
-    {
-      "task": "✅ Vormittag entspannt verbracht",
-      "completedAt": "2026-06-01T12:00:00+02:00"
-    },
-    {
-      "task": "✅ Mittags-Update v5.4.170 deployed",
-      "completedAt": "2026-06-01T12:04:00+02:00"
-    }
-  ],
-  "schedule": [
-    {
-      "time": "00:04",
-      "activity": "🌙 Dashboard-Update v5.4.167 — NACHT",
-      "priority": "info"
-    },
-    {
-      "time": "04:04",
-      "activity": "🚀 Dashboard-Update v5.4.168 — FRÜH",
-      "priority": "info"
-    },
-    {
-      "time": "08:04",
-      "activity": "📊 Dashboard-Update v5.4.169 — MORGEN",
-      "priority": "info"
-    },
-    {
-      "time": "12:04",
-      "activity": "☀️ Dashboard-Update v5.4.170 — MITTAG",
-      "priority": "info"
-    },
-    {
-      "time": "16:04",
-      "activity": "🌤️ Dashboard-Update v5.4.171 — NACHMITTAG ← DU BIST HIER",
-      "priority": "info"
-    },
-    {
-      "time": "08:00–12:00",
-      "activity": "☀️ Vormittag — Aufwachen / Frühstücken / Atmen ✓",
-      "priority": "done"
-    },
-    {
-      "time": "12:00–16:04",
-      "activity": "🌤️ Nachmittag — Pause / Freizeit / Spazieren ✓",
-      "priority": "done"
-    },
-    {
-      "time": "16:04–17:00",
-      "activity": "🌤️ Spätnachmittag — Letzte Chance für heute",
-      "priority": "medium"
-    },
-    {
-      "time": "17:00–20:00",
-      "activity": "🌙 Abend — Feierabend",
-      "priority": "low"
-    }
-  ],
-  "notes": [
-    "🚀 KW 23 TAG 1 — MONTAG, 1. JUNI 2026",
-    "📊 Wochen-Recap KW 22: 0% Erfolgsrate — Erholungsphase",
-    "🏆 KW 21: 8 Siege, 73% Erfolgsrate — Du KANNST das!",
-    "🔥 NOMU: 46 TAGE — Der Brocken wartet",
-    "💙 Heute: Keine Erwartungen, kein Druck",
-    "🎯 Pattern erkannt: Crash nach High (KW 21 → KW 22)",
-    "💡 Pattern erkannt: Post-Production = Prokrastination",
-    "💡 Pattern erkannt: Calls werden systematisch vermieden",
-    "🌙 Heute: 'Guck-mal-was-passiert'-Tag",
-    "📋 Falls Lust: NOMU, JP, Calls, Anju CI",
-    "🏆 Wichtig: Du bist nicht deine Produktivität",
-    "💪 KW 23: Chance für einen neuen Start",
-    "🌤️ 16:04 Uhr — Nachmittag fast vorbei",
-    "🎯 KW 23 Ziel: NOMU & Japanese Pancake erledigen",
-    "🚀 Dashboard v5.4.171 deployed — KW 23 Tag 1 Nachmittag!",
-    "💭 Gerhard: 'Du hast KW 21 bewiesen, dass du das kannst'",
-    "🔥 KW 22 war bewusste Pause — jetzt neue Woche",
-    "📊 KW 23: 5 Tasks, 2 urgent — aber heute entspannt",
-    "💙 Bereit für den Tag — egal was kommt",
-    "⏰ 16:04 — Nachmittags-Update: Letzte aktive Stunde",
-    "🎯 Nachmittag: Entspannt verbracht — Keine Pflicht-Tasks nötig",
-    "💪 Abend: Feierabend — Kein schlechtes Gewissen",
-    "🌅 17:00 — Feierabend beginnt — Erfolgreicher Tag!",
-    "🏆 Tagesbilanz: Entspannter Tag, keine Schuld, neue Woche gestartet"
-  ],
-  "quickWins": [
-    {
-      "task": "🌅 Feierabend genießen",
-      "time": "3h",
-      "impact": "high"
-    },
-    {
-      "task": "🍽️ Abendessen",
-      "time": "1h",
-      "impact": "medium"
-    },
-    {
-      "task": "🎬 NOMU öffnen (nur wenn Lust)",
-      "time": "2min",
-      "impact": "high"
-    }
-  ],
-  "achievements": [
-    "🏆 KW 22: 6 TAGE PAUSE — Bewusste Regeneration!",
-    "🚀 KW 23: OFFIZIELL GESTARTET — Tag 1!",
-    "🎉 WOCHENENDE — Erfolgreich beendet!",
-    "🏆 KW 21: 8 SIEGE — 73% Erfolgsrate!",
-    "🎬 Sentai Dreh: 6 STUNDEN! 15:00-21:00 ✅",
-    "💰 Jidai Rechnung: RAUS! ~2.000€ 🎉",
-    "📧 Export-Mails: Alle beantwortet!",
-    "🎨 Grafikerin: Kontaktiert!",
-    "🎬 Sentai Post-Production: DURCHGEZOGEN! 🔥",
-    "🎬 JP Dreh: ERLEDIGT! 🔥",
-    "💰 G-Life Rechnung: RAUSGESCHICKT! 🎉",
-    "🏨 Armando Pitch: Fertig & abgeschickt",
-    "🎬 Japanese Pancake: 3/3 Shoots",
-    "🎬 Sentai: 3/3 Shoots",
-    "📊 Dashboard v5.4.171: KW 23 Tag 1 Nachmittag",
-    "💪 Vormittag erfolgreich entspannt verbracht",
-    "💪 Nachmittag erfolgreich entspannt verbracht",
-    "🌅 Feierabend: Wohlverdient!"
-  ],
-  "cronUpdate": {
-    "trigger": "dashboard-update-4h-v2",
-    "previousVersion": "v5.4.170",
-    "currentVersion": "v5.4.171",
-    "interval": "4 Stunden"
+  "today": {
+    "date": "2026-06-14",
+    "day": "Sonntag",
+    "time": "08:04",
+    "completed": 0,
+    "total": 0,
+    "tasks": [],
+    "note": "🌙 Wochenende — Regeneration & Privatleben"
   },
-  "todayPlan": [
-    "🌙 00:04: Dashboard-Update v5.4.167",
-    "🚀 04:04: Dashboard-Update v5.4.168",
-    "📊 08:04: Dashboard-Update v5.4.169",
-    "☀️ 12:04: Dashboard-Update v5.4.170",
-    "🌤️ 16:04: Dashboard-Update v5.4.171 ← DU BIST HIER",
-    "🌙 17:00–20:00: Abend — Feierabend"
+  "critical": [
+    {"task": "NOMU Post-Production", "overdue": 68, "days": 68, "type": "post-production", "priority": "critical", "note": "68+ TAGE — Entscheidung: extern, aufgeben, oder fertig?"}
   ],
-  "reports": [
-    {
-      "date": "2026-06-01",
-      "title": "KW 23 Tag 1 — Nachmittags-Briefing v5.4.171",
-      "summary": "KW 23 Tag 1: Nachmittags-Check-in. Vormittag & Nachmittag erfolgreich entspannt verbracht. 17:00 Feierabend — wohlverdient!",
-      "url": "reports/2026-06-01-dashboard-update-v5-4-171.md"
-    },
-    {
-      "date": "2026-06-01",
-      "title": "KW 23 Tag 1 — Mittags-Briefing v5.4.170",
-      "summary": "KW 23 Tag 1: Mittags-Check-in. Vormittag erfolgreich entspannt verbracht. Nachmittag: Freizeit oder spontane Produktivität.",
-      "url": "reports/2026-06-01-dashboard-update-v5-4-170.md"
-    }
+  "overdue": [
+    {"task": "Sentai Post-Production", "days": 26, "type": "post-production", "priority": "high"},
+    {"task": "Hiro Sakao Musterkarten", "days": 19, "type": "research", "priority": "medium"},
+    {"task": "Tough Cookie Golfplatz Video", "days": 19, "type": "content", "priority": "medium"}
+  ],
+  "completedToday": [],
+  "completedWeek": [],
+  "upcoming": [
+    {"event": "KW 25 Start", "date": "Heute", "type": "planning", "note": "📝 Neue Woche beginnt", "priority": "high"},
+    {"event": "Wittmann Preproduction", "date": "Heute", "type": "task", "note": "🔥 TOP PRIORITÄT", "priority": "high"},
+    {"event": "NOMU Entscheidung", "date": "KW 25", "type": "decision", "note": "⚠️ 68+ Tage überfällig", "priority": "critical"}
+  ],
+  "patterns": [
+    {"name": "KW 25 Sonntag Früh", "description": "Sonntag 08:04 — Letzte Wochenende-Phase vor Arbeitswoche", "status": "active"},
+    {"name": "Post-Production = Prokrastination", "description": "NOMU 68+ Tage — der ewige Blocker bleibt kritisch", "status": "critical"},
+    {"name": "Wochenende = Reset", "description": "Samstag/Sonntag — Zeit für Abstand und Perspektive", "status": "active"}
+  ],
+  "weekly": {
+    "week": "KW 25",
+    "completed": 0,
+    "planned": 0,
+    "successRate": "N/A",
+    "notes": "KW 25 — Sonntag Früh, heute startet die neue Woche"
+  },
+  "history": [
+    {"date": "2026-06-14", "completed": 0, "total": 0, "note": "Sonntag — Wochenende"},
+    {"date": "2026-06-13", "completed": 0, "total": 0, "note": "Samstag — Wochenende"},
+    {"date": "2026-06-12", "completed": 0, "total": 5, "note": "Freitag — KW 24 Abschluss"},
+    {"date": "2026-06-11", "completed": 0, "total": 5, "note": "Donnerstag"},
+    {"date": "2026-06-10", "completed": 0, "total": 5, "note": "Mittwoch"},
+    {"date": "2026-06-09", "completed": 0, "total": 5, "note": "Dienstag"},
+    {"date": "2026-06-08", "completed": 2, "total": 7, "note": "Montag"}
   ],
   "insights": {
-    "pattern": "KW 22: 0% (Pause) → KW 23: Chance für Neuanfang",
-    "blocker": "NOMU 46 Tage überfällig — DER BROCKEN",
-    "momentum": "KW 21: 8 Siege. Du HAST es drauf!",
-    "weeklyComparison": "KW 21: 73% vs KW 22: 0% — Crash nach High erkannt",
-    "todayInsight": "Entspannter Tag — kein schlechtes Gewissen. Feierabend wohlverdient!"
+    "pattern": "KW 25 — Sonntag Früh, heute startet die Arbeitswoche",
+    "blocker": "NOMU 68+ Tage — Entscheidung heute dringend nötig!",
+    "momentum": "KW 24 abgeschlossen — 50% Erfolgsrate",
+    "focus": "KW 25: Wittmann Preproduction Priorität 1",
+    "window": "Wochenende — Zeit für Reset & Strategie"
   },
-  "yesterdaySummary": {
-    "date": "2026-05-31",
-    "tasksCompleted": 0,
-    "highlight": "Sonntag: Letzte Ruhe vor KW 23 — Wochen-Recap erstellt",
-    "cashflowUnlocked": "0€",
-    "biggestWin": "Wochen-Recap KW 22: Pattern erkannt (Crash nach High)"
+  "kw24Summary": {
+    "totalTasks": 8,
+    "completedTasks": 4,
+    "successRate": "50%",
+    "highlights": [
+      "Japanese Pancake Post-Production erledigt",
+      "Little Hero Call durchgeführt",
+      "Verträge finalisiert",
+      "Anju CI weitergeleitet"
+    ]
   },
-  "todayFocus": {
-    "mainEvent": "🌤️ NACHMITTAG — Fast vorbei, Feierabend kommt",
-    "preparation": "Vormittag & Nachmittag entspannt — Kein Druck",
-    "followUp": "17:00: Feierabend — wohlverdient!",
-    "note": "Du bist nicht deine Produktivität. Heute war ein guter Tag."
+  "kw25Plan": {
+    "focus": "Wittmann Preproduction",
+    "blockerToResolve": "NOMU Entscheidung",
+    "startDate": "2026-06-15"
   },
-  "kw22Recap": {
-    "successRate": "0%",
-    "tasksPlanned": 6,
-    "tasksCompleted": 0,
-    "pattern": "Crash nach High (KW 21 → KW 22)",
-    "keyInsight": "Bewusste Regeneration nach intensiver KW 21",
-    "recommendation": "KW 23: NOMU als ersten Brocken angehen"
+  "cronUpdate": {
+    "trigger": "dashboard-update-4h-v2",
+    "previousVersion": "v5.6.25",
+    "currentVersion": "v5.6.26",
+    "interval": "4 Stunden (WEEKEND Mode)",
+    "note": "Früh-Update — KW 25 Sonntag, 08:04 — Letzte Wochenende-Phase vor Montag"
   },
   "updateHistory": [
-    "v5.4.171 — 2026-06-01 16:04 — Nachmittags-Update (KW 23 Tag 1) ← DU BIST HIER",
-    "v5.4.170 — 2026-06-01 12:04 — Mittags-Update (KW 23 Tag 1)",
-    "v5.4.169 — 2026-06-01 08:04 — Morgen-Update (KW 23 Tag 1)",
-    "v5.4.168 — 2026-06-01 04:04 — Früh-Update (KW 23 START)",
-    "v5.4.167 — 2026-06-01 00:04 — Nacht-Update (KW 23 START)",
-    "v5.4.166 — 2026-05-31 20:04 — Abend-Update (Sonntag)",
-    "v5.4.165 — 2026-05-31 14:04 — Nachmittags-Update (Sonntag)",
-    "v5.4.164 — 2026-05-31 12:04 — Mittags-Update (Sonntag)"
-  ],
-  "timeSessions": [],
-  "income": [],
-  "todos": [
-    {
-      "id": 1,
-      "title": "NOMU Post-Production",
-      "projectId": "nomu",
-      "priority": "🔴 Urgent",
-      "completed": false,
-      "createdAt": "2026-04-16T00:00:00+02:00",
-      "tags": ["post-production", "urgent"]
-    },
-    {
-      "id": 2,
-      "title": "Japanese Pancake Post-Production",
-      "projectId": "tough-cookie",
-      "priority": "🔴 Urgent",
-      "completed": false,
-      "createdAt": "2026-05-26T00:00:00+02:00",
-      "tags": ["post-production", "urgent"]
-    },
-    {
-      "id": 3,
-      "title": "Little Hero Call",
-      "projectId": "freelance",
-      "priority": "🟡 High",
-      "completed": false,
-      "createdAt": "2026-05-24T00:00:00+02:00",
-      "tags": ["call", "client"]
-    },
-    {
-      "id": 4,
-      "title": "Anju CI-Design",
-      "projectId": "tough-cookie",
-      "priority": "🟡 High",
-      "completed": false,
-      "createdAt": "2026-05-24T00:00:00+02:00",
-      "tags": ["design", "branding"]
-    },
-    {
-      "id": 5,
-      "title": "Sentai Post-Production",
-      "projectId": "freelance",
-      "priority": "🟡 High",
-      "completed": false,
-      "createdAt": "2026-05-24T00:00:00+02:00",
-      "tags": ["post-production"]
-    }
-  ],
-  "pipeline": [],
-  "activeSession": null,
-  "tags": ["post-production", "urgent", "call", "client", "design", "branding"],
-  "journalEntry": {
-    "date": "2026-06-01",
-    "mood": 4,
-    "energyLevel": 5,
-    "notes": "KW 23 Tag 1 Nachmittag. Entspannter Tag — Vormittag & Nachmittag erfolgreich entspannt verbracht. 17:00 Feierabend — wohlverdient!",
-    "wins": [
-      "Dashboard v5.4.171 aktualisiert",
-      "KW 23 Tag 1 erfolgreich",
-      "Vormittag & Nachmittag entspannt",
-      "Kein schlechtes Gewissen"
-    ],
-    "challenges": [
-      "NOMU 46 Tage überfällig",
-      "Japanese Pancake 6 Tage überfällig",
-      "5 Tasks offen"
-    ],
-    "gratitude": [
-      "Bewusste Pause in KW 22",
-      "Erfolgreiche Erholung",
-      "Guter Start in KW 23",
-      "Feierabend wohlverdient"
-    ]
-  }
+    "v5.6.26 — 2026-06-14 08:04 — Früh-Update (Sonntag, KW 25, Letzte Phase vor Arbeitswoche)",
+    "v5.6.25 — 2026-06-14 04:04 — Nacht-Update (Sonntag, KW 25)",
+    "v5.6.24 — 2026-06-13 18:04 — Abend-Update (Samstag, KW 25)",
+    "v5.6.23 — 2026-06-13 08:04 — Morgen-Update (Samstag, KW 25)",
+    "v5.6.22 — 2026-06-13 00:04 — Nacht-Update (Samstag, KW 25 Beginn)",
+    "v5.6.21 — 2026-06-12 20:04 — Abend-Update (Freitag, KW 24 Abschluss)"
+  ]
 }
