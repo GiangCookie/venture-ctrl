@@ -1,6 +1,6 @@
 {
-  "version": "v5.6.33",
-  "lastUpdated": "2026-06-15T12:04:00+02:00",
+  "version": "v5.6.34",
+  "lastUpdated": "2026-06-15T16:04:00+02:00",
   "week": "KW 25",
   "mode": "WORKDAY",
   "summary": {
@@ -13,7 +13,7 @@
   "today": {
     "date": "2026-06-15",
     "day": "Montag",
-    "time": "12:04",
+    "time": "16:04",
     "completed": 0,
     "total": 3,
     "tasks": [
@@ -21,7 +21,7 @@
       {"name": "Niku Fernseher AD", "priority": "high", "status": "pending", "note": "Wichtig"},
       {"name": "Golf Club Call", "priority": "medium", "status": "pending", "note": "Termin klären"}
     ],
-    "note": "🚀 KW 25 Montag — 3 Tasks, klare Prioritäten, Wittmann FIRST THING"
+    "note": "🚀 KW 25 Montag Nachmittag — 3 Tasks, klare Prioritäten"
   },
   "critical": [
     {"task": "NOMU Post-Production", "overdue": 70, "days": 70, "type": "post-production", "priority": "critical", "note": "70 TAGE — Entscheidung HEUTE: extern, aufgeben, oder fertig?"}
@@ -35,7 +35,7 @@
   "completedWeek": [],
   "upcoming": [
     {"event": "KW 25 Dienstag", "date": "Dienstag", "type": "planning", "note": "📅 Rest der Woche planen", "priority": "medium"},
-    {"event": "NOMU Entscheidung", "date": "Heute", "type": "decision", "note": "⚠️ 70 Tage überfällig — Entscheidung HEUTE nötig!", "priority": "critical"}
+    {"event": "NOMU Entscheidung", "date": "Heute", "type": "decision", "note": "⚠️ 70 Tage überfällig — Entscheidung nötig!", "priority": "critical"}
   ],
   "patterns": [
     {"name": "Montag-Phänomen", "description": "Montag produktiv, Di-Fr fast nichts — Energie geht am Montag raus", "status": "active"},
@@ -47,7 +47,7 @@
     "completed": 0,
     "planned": 3,
     "successRate": "0%",
-    "notes": "KW 25 Montag: Neustart mit 3 Tasks, Wittmann FIRST THING"
+    "notes": "KW 25 Montag Nachmittag: Neustart mit 3 Tasks"
   },
   "kw24Summary": {
     "totalTasks": 29,
@@ -72,7 +72,7 @@
     ]
   },
   "history": [
-    {"date": "2026-06-15", "completed": 0, "total": 3, "note": "Montag — KW 25 Start, 3 Tasks geplant, Wittmann FIRST THING"},
+    {"date": "2026-06-15", "completed": 0, "total": 3, "note": "Montag Nachmittag — KW 25, 3 Tasks geplant"},
     {"date": "2026-06-14", "completed": 0, "total": 0, "note": "Sonntag — KW 24 Abschluss, 7% Erfolgsrate"},
     {"date": "2026-06-13", "completed": 0, "total": 0, "note": "Samstag — Wochenende"},
     {"date": "2026-06-12", "completed": 0, "total": 5, "note": "Freitag — KW 24 Tag 5"},
@@ -85,7 +85,7 @@
     "pattern": "KW 25 Montag: 3 Tasks statt 29, Fokus auf Qualität",
     "blocker": "NOMU 70 Tage — Entscheidung HEUTE nötig!",
     "momentum": "KW 25 Neustart: Wittmann FIRST THING",
-    "focus": "Montag: Wittmann Preproduction sofort starten",
+    "focus": "Nachmittag: Wittmann Preproduction priorisieren",
     "recommendation": "Operative Tasks delegieren, Giang fokussiert auf Strategie"
   },
   "analysis": {
@@ -95,18 +95,18 @@
   },
   "cronUpdate": {
     "trigger": "dashboard-update-4h-v2",
-    "previousVersion": "v5.6.32",
-    "currentVersion": "v5.6.33",
+    "previousVersion": "v5.6.33",
+    "currentVersion": "v5.6.34",
     "interval": "4 Stunden (WORKDAY Mode)",
-    "note": "Mittags-Update — KW 25 Montag 12:04, NOMU jetzt 70 Tage überfällig"
+    "note": "Nachmittags-Update — KW 25 Montag 16:04, NOMU 70 Tage überfällig"
   },
   "updateHistory": [
-    "v5.6.33 — 2026-06-15 12:04 — Aktuell (Mittags-Update, KW 25 Montag, Wittmann FIRST THING, 70 Tage NOMU)",
-    "v5.6.32 — 2026-06-15 08:04 — Früh-Update (KW 25 Montag, 70 Tage NOMU)",
+    "v5.6.34 — 2026-06-15 16:04 — Aktuell (Nachmittags-Update, KW 25 Montag, 70 Tage NOMU)",
+    "v5.6.33 — 2026-06-15 12:04 — Mittags-Update (KW 25 Montag, Wittmann FIRST THING)",
+    "v5.6.32 — 2026-06-15 08:04 — Früh-Update (KW 25 Montag)",
     "v5.6.31 — 2026-06-15 04:04 — Nacht-Update (KW 25 Montag früh)",
     "v5.6.30 — 2026-06-15 00:04 — Nacht-Update (KW 25 Start)",
-    "v5.6.29 — 2026-06-14 20:04 — Abend-Update (KW 24 Abschluss)",
-    "v5.6.28 — 2026-06-14 16:04 — Nachmittags-Update"
+    "v5.6.29 — 2026-06-14 20:04 — Abend-Update (KW 24 Abschluss)"
   ],
   "timeSessions": [],
   "income": [],
