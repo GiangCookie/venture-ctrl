@@ -1,6 +1,6 @@
 # 🚀 Deploy-Status — venture-ctrl Dashboard
 
-**Letztes Update:** 2026-06-01 12:04 Uhr (Europe/Berlin)
+**Letztes Update:** 2026-06-14 20:04 Uhr (Europe/Berlin)
 
 ---
 
@@ -8,10 +8,10 @@
 
 | Feld | Wert |
 |------|------|
-| **Version** | v5.4.170 |
+| **Version** | v5.6.29 |
 | **Build-Status** | ✅ Erfolgreich |
 | **Deploy-Status** | ✅ LIVE |
-| **URL** | https://clawhub.github.io/venture-ctrl/ |
+| **URL** | https://nicholas-keller.github.io/venture-ctrl/ |
 
 ---
 
@@ -19,21 +19,21 @@
 
 | Version | Zeit | Status |
 |---------|------|--------|
-| v5.4.170 | 12:04 | ✅ LIVE ← AKTUELL |
-| v5.4.169 | 08:04 | ✅ |
-| v5.4.168 | 04:04 | ✅ |
-| v5.4.167 | 00:04 | ✅ |
-| v5.4.166 | 20:04 (31.05.) | ✅ |
+| v5.6.29 | 20:04 | ✅ LIVE ← AKTUELL |
+| v5.6.28 | 16:04 | ✅ |
+| v5.6.27 | 12:04 | ✅ |
+| v5.6.26 | 08:04 | ✅ |
+| v5.6.25 | 04:04 | ✅ |
 
 ---
 
-## 📝 Letzte Änderungen (v5.4.170)
+## 📝 Letzte Änderungen (v5.6.29)
 
-- Dashboard-Daten aktualisiert für 12:04 Uhr
-- Mittags-Briefing hinzugefügt
-- Vormittag als "erledigt" markiert
-- Nachmittag-Phase aktiviert
-- Neue Insights und Notizen
+- KW 24 Abschluss — 7% Erfolgsrate (2/29 Tasks)
+- Strategische Erfolge dokumentiert (Kyberg Meeting)
+- KW 25 Planung hinzugefügt
+- Patterns & Insights aktualisiert
+- Analyse-Sektion mit Stärken/Schwächen
 
 ---
 
