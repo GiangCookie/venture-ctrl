@@ -1,6 +1,6 @@
 {
-  "version": "v5.6.32",
-  "lastUpdated": "2026-06-15T08:04:00+02:00",
+  "version": "v5.6.33",
+  "lastUpdated": "2026-06-15T12:04:00+02:00",
   "week": "KW 25",
   "mode": "WORKDAY",
   "summary": {
@@ -13,7 +13,7 @@
   "today": {
     "date": "2026-06-15",
     "day": "Montag",
-    "time": "08:04",
+    "time": "12:04",
     "completed": 0,
     "total": 3,
     "tasks": [
@@ -95,17 +95,28 @@
   },
   "cronUpdate": {
     "trigger": "dashboard-update-4h-v2",
-    "previousVersion": "v5.6.31",
-    "currentVersion": "v5.6.32",
+    "previousVersion": "v5.6.32",
+    "currentVersion": "v5.6.33",
     "interval": "4 Stunden (WORKDAY Mode)",
-    "note": "Früh-Update — KW 25 Montag 08:04, NOMU jetzt 70 Tage überfällig"
+    "note": "Mittags-Update — KW 25 Montag 12:04, NOMU jetzt 70 Tage überfällig"
   },
   "updateHistory": [
-    "v5.6.32 — 2026-06-15 08:04 — Aktuell (Früh-Update, KW 25 Montag, Wittmann FIRST THING, 70 Tage NOMU)",
+    "v5.6.33 — 2026-06-15 12:04 — Aktuell (Mittags-Update, KW 25 Montag, Wittmann FIRST THING, 70 Tage NOMU)",
+    "v5.6.32 — 2026-06-15 08:04 — Früh-Update (KW 25 Montag, 70 Tage NOMU)",
     "v5.6.31 — 2026-06-15 04:04 — Nacht-Update (KW 25 Montag früh)",
     "v5.6.30 — 2026-06-15 00:04 — Nacht-Update (KW 25 Start)",
     "v5.6.29 — 2026-06-14 20:04 — Abend-Update (KW 24 Abschluss)",
-    "v5.6.28 — 2026-06-14 16:04 — Nachmittags-Update",
-    "v5.6.27 — 2026-06-14 12:04 — Mittags-Update"
-  ]
+    "v5.6.28 — 2026-06-14 16:04 — Nachmittags-Update"
+  ],
+  "timeSessions": [],
+  "income": [],
+  "todos": [
+    {"id": 1, "text": "Wittmann Preproduction", "priority": "critical", "completed": false, "project": "freelance"},
+    {"id": 2, "text": "Niku Fernseher AD", "priority": "high", "completed": false, "project": "tough-cookie"},
+    {"id": 3, "text": "Golf Club Call", "priority": "medium", "completed": false, "project": "tough-cookie"},
+    {"id": 4, "text": "NOMU Post-Production", "priority": "critical", "completed": false, "project": "nomu", "overdue": 70}
+  ],
+  "pipeline": [],
+  "activeSession": null,
+  "tags": []
 }
