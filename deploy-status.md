@@ -1,40 +1,51 @@
-# 🚀 Deploy-Status — venture-ctrl Dashboard
+# Deploy Status — v5.6.40
 
-**Letztes Update:** 2026-06-16 18:04 Uhr (Europe/Berlin)
-
----
-
-## 📊 Aktuelle Version
-
-| Feld | Wert |
-|------|------|
-| **Version** | v5.6.39 |
-| **Build-Status** | ✅ Erfolgreich |
-| **Deploy-Status** | ✅ LIVE |
-| **URL** | https://nicholas-keller.github.io/venture-ctrl/ |
+**Zeit:** Mittwoch, 17. Juni 2026, 00:04 Uhr (Europe/Berlin)
+**Version:** v5.6.40
+**Status:** ✅ Bereit für Deploy
 
 ---
 
-## 🔄 Update-Historie (Letzte 5)
+## Komponenten
 
-| Version | Zeit | Status |
-|---------|------|--------|
-| v5.6.39 | 18:04 | ✅ LIVE ← AKTUELL (KW 25 Dienstag Abend)
-| v5.6.38 | 12:04 | ✅ (Mittags-Update)
-| v5.6.37 | 08:04 | ✅ (Morgens-Update)
-| v5.6.36 | 04:04 | ✅ (Früh-Update)
-| v5.6.35 | 00:04 | ✅ (Nacht-Update)
-
----
-
-## 📝 Letzte Änderungen (v5.6.39)
-
-- KW 25 Dienstag Abend — Tagesbilanz: 0/3 Tasks
-- Tasks vom Montag noch offen (2 Tage überfällig)
-- NOMU bleibt bei 70+ Tagen überfällig
-- Morgen: Neuer Versuch mit Wittmann FIRST THING
-- Pattern: Operativer Stillstand erkannt
+| Datei | Status | Pfad |
+|-------|--------|------|
+| dashboard-data.json | ✅ v5.6.40 | `/data/.openclaw/workspace/venture-ctrl/` |
+| dashboard.html | ✅ v5.6.40 | `/data/.openclaw/workspace/venture-ctrl/` |
+| index.html | ✅ v5.6.40 | `/data/.openclaw/workspace/venture-ctrl/` |
+| data.json | ✅ v5.6.40 | `/data/.openclaw/workspace/venture-ctrl/` |
 
 ---
 
-*Automatisches Dashboard-Update via Cron — dashboard-update-4h-v2*
+## Deploy-Pfad
+
+```
+/dist/
+├── dashboard-data.json  ✅
+├── dashboard.html       ✅
+└── index.html           ✅
+```
+
+---
+
+## Änderungen v5.6.40
+
+- **3-Tage-Block erkannt:** Wittmann, Niku, Golf liegen seit Montag
+- **NOMU:** 71+ Tage überfällig
+- **KW 25:** 3 Tage, 0/3 Tasks — Stillstand eskaliert
+- **Empfehlung:** Tasks heute erledigen ODER offiziell verschieben
+
+---
+
+## Nächster Schritt
+
+```bash
+cd /data/.openclaw/workspace/venture-ctrl
+git add .
+git commit -m "v5.6.40 — 3-Tage-Block erkannt, KW 25 Stillstand"
+git push origin main
+```
+
+---
+
+*Dashboard Update via dashboard-update-4h-v2*
