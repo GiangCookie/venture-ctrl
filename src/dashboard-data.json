@@ -1,6 +1,6 @@
 {
-  "version": "v5.6.36",
-  "lastUpdated": "2026-06-16T04:04:00+02:00",
+  "version": "v5.6.37",
+  "lastUpdated": "2026-06-16T08:04:00+02:00",
   "week": "KW 25",
   "mode": "WORKDAY",
   "summary": {
@@ -13,7 +13,7 @@
   "today": {
     "date": "2026-06-16",
     "day": "Dienstag",
-    "time": "00:04",
+    "time": "08:04",
     "completed": 0,
     "total": 3,
     "tasks": [
@@ -21,7 +21,7 @@
       {"name": "Niku Fernseher AD", "priority": "high", "status": "pending", "note": "Wichtig"},
       {"name": "Golf Club Call", "priority": "medium", "status": "pending", "note": "Termin klären"}
     ],
-    "note": "🚀 KW 25 Dienstag — Tasks vom Montag übertragen"
+    "note": "🚀 KW 25 Dienstag Morgen — Tasks vom Montag noch offen"
   },
   "critical": [
     {"task": "NOMU Post-Production", "overdue": 70, "days": 70, "type": "post-production", "priority": "critical", "note": "70+ TAGE — Entscheidung nötig: extern, aufgeben, oder fertig?"}
@@ -47,7 +47,7 @@
     "completed": 0,
     "planned": 3,
     "successRate": "0%",
-    "notes": "KW 25 Dienstag — Tasks vom Montag übertragen"
+    "notes": "KW 25 Dienstag Morgen — Tasks vom Montag übertragen"
   },
   "kw24Summary": {
     "totalTasks": 29,
@@ -72,7 +72,7 @@
     ]
   },
   "history": [
-    {"date": "2026-06-16", "completed": 0, "total": 3, "note": "Dienstag — Tasks vom Montag übertragen"},
+    {"date": "2026-06-16", "completed": 0, "total": 3, "note": "Dienstag Morgen — Tasks vom Montag übertragen"},
     {"date": "2026-06-15", "completed": 0, "total": 3, "note": "Montag — KW 25 Tag 1, 0/3 Tasks"},
     {"date": "2026-06-14", "completed": 0, "total": 0, "note": "Sonntag — KW 24 Abschluss, 7% Erfolgsrate"},
     {"date": "2026-06-13", "completed": 0, "total": 0, "note": "Samstag — Wochenende"},
@@ -95,19 +95,19 @@
   },
   "cronUpdate": {
     "trigger": "dashboard-update-4h-v2",
-    "previousVersion": "v5.6.34",
-    "currentVersion": "v5.6.35",
+    "previousVersion": "v5.6.36",
+    "currentVersion": "v5.6.37",
     "interval": "4 Stunden (WORKDAY Mode)",
-    "note": "Früh-Update — KW 25 Dienstag Morgen, Tasks vom Montag offen"
+    "note": "Morgens-Update — KW 25 Dienstag 08:04"
   },
   "updateHistory": [
-    "v5.6.36 — 2026-06-16 04:04 — Aktuell (Früh-Update, KW 25 Dienstag Morgen)",
+    "v5.6.37 — 2026-06-16 08:04 — Aktuell (Morgens-Update, KW 25 Dienstag)",
+    "v5.6.36 — 2026-06-16 04:04 — Früh-Update, KW 25 Dienstag Morgen",
     "v5.6.35 — 2026-06-16 00:04 — Nacht-Update, KW 25 Dienstag",
     "v5.6.34 — 2026-06-15 16:04 — Nachmittags-Update (KW 25 Montag)",
     "v5.6.33 — 2026-06-15 12:04 — Mittags-Update (KW 25 Montag)",
     "v5.6.32 — 2026-06-15 08:04 — Früh-Update (KW 25 Montag)",
-    "v5.6.31 — 2026-06-15 04:04 — Nacht-Update (KW 25 Montag früh)",
-    "v5.6.30 — 2026-06-15 00:04 — KW 25 Start"
+    "v5.6.31 — 2026-06-15 04:04 — Nacht-Update (KW 25 Montag früh)"
   ],
   "timeSessions": [],
   "income": [],
