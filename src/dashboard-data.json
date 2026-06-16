@@ -1,96 +1,123 @@
 {
-  "version": "v5.6.28",
-  "lastUpdated": "2026-06-14T16:04:00+02:00",
+  "version": "v5.6.36",
+  "lastUpdated": "2026-06-16T04:04:00+02:00",
   "week": "KW 25",
-  "mode": "WEEKEND",
+  "mode": "WORKDAY",
   "summary": {
     "tasksCompleted": 0,
-    "tasksTotal": 0,
-    "successRate": "N/A",
+    "tasksTotal": 3,
+    "successRate": "0%",
     "criticalOverdue": 1,
     "highOverdue": 3
   },
   "today": {
-    "date": "2026-06-14",
-    "day": "Sonntag",
-    "time": "16:04",
+    "date": "2026-06-16",
+    "day": "Dienstag",
+    "time": "00:04",
     "completed": 0,
-    "total": 0,
-    "tasks": [],
-    "note": "🌙 Wochenende Nachmittag — KW 25 läuft, letzte Stunden vor dem Abend"
+    "total": 3,
+    "tasks": [
+      {"name": "Wittmann Preproduction", "priority": "critical", "status": "pending", "note": "FIRST THING — Top Priorität"},
+      {"name": "Niku Fernseher AD", "priority": "high", "status": "pending", "note": "Wichtig"},
+      {"name": "Golf Club Call", "priority": "medium", "status": "pending", "note": "Termin klären"}
+    ],
+    "note": "🚀 KW 25 Dienstag — Tasks vom Montag übertragen"
   },
   "critical": [
-    {"task": "NOMU Post-Production", "overdue": 68, "days": 68, "type": "post-production", "priority": "critical", "note": "68+ TAGE — Entscheidung: extern, aufgeben, oder fertig?"}
+    {"task": "NOMU Post-Production", "overdue": 70, "days": 70, "type": "post-production", "priority": "critical", "note": "70+ TAGE — Entscheidung nötig: extern, aufgeben, oder fertig?"}
   ],
   "overdue": [
-    {"task": "Sentai Post-Production", "days": 26, "type": "post-production", "priority": "high"},
-    {"task": "Hiro Sakao Musterkarten", "days": 19, "type": "research", "priority": "medium"},
-    {"task": "Tough Cookie Golfplatz Video", "days": 19, "type": "content", "priority": "medium"}
+    {"task": "Sentai Post-Production", "days": 28, "type": "post-production", "priority": "high"},
+    {"task": "Hiro Sakao Musterkarten", "days": 21, "type": "research", "priority": "medium"},
+    {"task": "Tough Cookie Golfplatz Video", "days": 21, "type": "content", "priority": "medium"}
   ],
   "completedToday": [],
   "completedWeek": [],
   "upcoming": [
-    {"event": "KW 25 Läuft", "date": "Heute", "type": "planning", "note": "📝 Neue Woche hat begonnen", "priority": "high"},
-    {"event": "Wittmann Preproduction", "date": "Heute", "type": "task", "note": "🔥 TOP PRIORITÄT", "priority": "high"},
-    {"event": "NOMU Entscheidung", "date": "KW 25", "type": "decision", "note": "⚠️ 68+ Tage überfällig", "priority": "critical"}
+    {"event": "KW 25 Dienstag", "date": "Dienstag", "type": "planning", "note": "📅 Tasks vom Montag abschließen", "priority": "high"},
+    {"event": "NOMU Entscheidung", "date": "Heute", "type": "decision", "note": "⚠️ 70+ Tage überfällig — Entscheidung nötig!", "priority": "critical"}
   ],
   "patterns": [
-    {"name": "KW 25 Sonntag Nachmittag", "description": "Sonntag 16:04 — Letzte Wochenende-Phase vor dem Abend", "status": "active"},
-    {"name": "Post-Production = Prokrastination", "description": "NOMU 68+ Tage — der ewige Blocker bleibt kritisch", "status": "critical"},
-    {"name": "Wochenende = Reset", "description": "Samstag/Sonntag — Zeit für Abstand und Perspektive", "status": "active"}
+    {"name": "Montag-Phänomen", "description": "Montag produktiv, Di-Fr fast nichts — Energie geht am Montag raus", "status": "active"},
+    {"name": "NOMU = Prokrastination", "description": "70+ Tage überfällig — der ewige Blocker", "status": "critical"},
+    {"name": "KW 24 Bilanz", "description": "7% Erfolgsrate (2/29 Tasks) — strategisch erfolgreich, operativ katastrophal", "status": "warning"}
   ],
   "weekly": {
     "week": "KW 25",
     "completed": 0,
-    "planned": 0,
-    "successRate": "N/A",
-    "notes": "KW 25 — Sonntag Nachmittag, heute startet die neue Woche"
-  },
-  "history": [
-    {"date": "2026-06-14", "completed": 0, "total": 0, "note": "Sonntag — Wochenende"},
-    {"date": "2026-06-13", "completed": 0, "total": 0, "note": "Samstag — Wochenende"},
-    {"date": "2026-06-12", "completed": 0, "total": 5, "note": "Freitag — KW 24 Abschluss"},
-    {"date": "2026-06-11", "completed": 0, "total": 5, "note": "Donnerstag"},
-    {"date": "2026-06-10", "completed": 0, "total": 5, "note": "Mittwoch"},
-    {"date": "2026-06-09", "completed": 0, "total": 5, "note": "Dienstag"},
-    {"date": "2026-06-08", "completed": 2, "total": 7, "note": "Montag"}
-  ],
-  "insights": {
-    "pattern": "KW 25 — Sonntag Nachmittag, letzte Wochenende-Phase",
-    "blocker": "NOMU 68+ Tage — Entscheidung heute dringend nötig!",
-    "momentum": "KW 24 abgeschlossen — 50% Erfolgsrate",
-    "focus": "KW 25: Wittmann Preproduction Priorität 1",
-    "window": "Wochenende — Zeit für Reset & Strategie"
+    "planned": 3,
+    "successRate": "0%",
+    "notes": "KW 25 Dienstag — Tasks vom Montag übertragen"
   },
   "kw24Summary": {
-    "totalTasks": 8,
-    "completedTasks": 4,
-    "successRate": "50%",
+    "totalTasks": 29,
+    "completedTasks": 2,
+    "successRate": "7%",
     "highlights": [
-      "Japanese Pancake Post-Production erledigt",
-      "Little Hero Call durchgeführt",
       "Verträge finalisiert",
-      "Anju CI weitergeleitet"
+      "Anju CI weitergeleitet",
+      "Kyberg Meeting erfolgreich (13 Mio. USD/Jahr)",
+      "10-Slide Präsentation erstellt"
     ]
   },
   "kw25Plan": {
     "focus": "Wittmann Preproduction",
     "blockerToResolve": "NOMU Entscheidung",
-    "startDate": "2026-06-15"
+    "startDate": "2026-06-15",
+    "priorities": [
+      "Wittmann Preproduction (FIRST THING)",
+      "Niku Fernseher AD",
+      "Golf Call",
+      "NOMU Entscheidung (extern/beenden)"
+    ]
+  },
+  "history": [
+    {"date": "2026-06-16", "completed": 0, "total": 3, "note": "Dienstag — Tasks vom Montag übertragen"},
+    {"date": "2026-06-15", "completed": 0, "total": 3, "note": "Montag — KW 25 Tag 1, 0/3 Tasks"},
+    {"date": "2026-06-14", "completed": 0, "total": 0, "note": "Sonntag — KW 24 Abschluss, 7% Erfolgsrate"},
+    {"date": "2026-06-13", "completed": 0, "total": 0, "note": "Samstag — Wochenende"},
+    {"date": "2026-06-12", "completed": 0, "total": 5, "note": "Freitag — KW 24 Tag 5"},
+    {"date": "2026-06-11", "completed": 0, "total": 5, "note": "Donnerstag — KW 24 Tag 4"},
+    {"date": "2026-06-10", "completed": 0, "total": 5, "note": "Mittwoch — KW 24 Tag 3"},
+    {"date": "2026-06-09", "completed": 0, "total": 7, "note": "Dienstag — Kyberg Meeting"}
+  ],
+  "insights": {
+    "pattern": "KW 25 Dienstag: Tasks vom Montag übertragen — 0/3 bisher erledigt",
+    "blocker": "NOMU 70+ Tage — Entscheidung nötig!",
+    "momentum": "Neustart nötig: Wittmann FIRST THING",
+    "focus": "Dienstag: Montags-Tasks abschließen",
+    "recommendation": "Operative Tasks delegieren, Giang fokussiert auf Strategie"
+  },
+  "analysis": {
+    "strength": "Strategische Arbeit, Pitches, wichtige Meetings",
+    "weakness": "Operative Routine, Post-Production, Calls",
+    "solution": "Externe Unterstützung für operative Tasks, max 3 Tasks/Tag"
   },
   "cronUpdate": {
     "trigger": "dashboard-update-4h-v2",
-    "previousVersion": "v5.6.27",
-    "currentVersion": "v5.6.28",
-    "interval": "4 Stunden (WEEKEND Mode)",
-    "note": "Nachmittags-Update — KW 25 Sonntag, 16:04 — Letzte Phase vor dem Abend"
+    "previousVersion": "v5.6.34",
+    "currentVersion": "v5.6.35",
+    "interval": "4 Stunden (WORKDAY Mode)",
+    "note": "Früh-Update — KW 25 Dienstag Morgen, Tasks vom Montag offen"
   },
   "updateHistory": [
-    "v5.6.28 — 2026-06-14 16:04 — Nachmittags-Update (Sonntag, KW 25, Letzte Phase vor dem Abend)",
-    "v5.6.27 — 2026-06-14 12:04 — Mittags-Update (Sonntag, KW 25, Letzte Phase vor Montag)",
-    "v5.6.26 — 2026-06-14 08:04 — Früh-Update (Sonntag, KW 25)",
-    "v5.6.25 — 2026-06-14 04:04 — Nacht-Update (Sonntag, KW 25)",
-    "v5.6.24 — 2026-06-13 18:04 — Abend-Update (Samstag, KW 25)",
-    "v5.6.23 — 2026-06-13 08:04 — Morgen-Update (Samstag, KW 25)"
-  ]
+    "v5.6.36 — 2026-06-16 04:04 — Aktuell (Früh-Update, KW 25 Dienstag Morgen)",
+    "v5.6.35 — 2026-06-16 00:04 — Nacht-Update, KW 25 Dienstag",
+    "v5.6.34 — 2026-06-15 16:04 — Nachmittags-Update (KW 25 Montag)",
+    "v5.6.33 — 2026-06-15 12:04 — Mittags-Update (KW 25 Montag)",
+    "v5.6.32 — 2026-06-15 08:04 — Früh-Update (KW 25 Montag)",
+    "v5.6.31 — 2026-06-15 04:04 — Nacht-Update (KW 25 Montag früh)",
+    "v5.6.30 — 2026-06-15 00:04 — KW 25 Start"
+  ],
+  "timeSessions": [],
+  "income": [],
+  "todos": [
+    {"id": 1, "text": "Wittmann Preproduction", "priority": "critical", "completed": false, "project": "freelance"},
+    {"id": 2, "text": "Niku Fernseher AD", "priority": "high", "completed": false, "project": "tough-cookie"},
+    {"id": 3, "text": "Golf Club Call", "priority": "medium", "completed": false, "project": "tough-cookie"},
+    {"id": 4, "text": "NOMU Post-Production", "priority": "critical", "completed": false, "project": "nomu", "overdue": 70}
+  ],
+  "pipeline": [],
+  "activeSession": null,
+  "tags": []
 }
