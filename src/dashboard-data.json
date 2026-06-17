@@ -1,6 +1,6 @@
 {
-  "version": "v5.6.40",
-  "lastUpdated": "2026-06-17T00:04:00+02:00",
+  "version": "v5.6.41",
+  "lastUpdated": "2026-06-17T08:04:00+02:00",
   "week": "KW 25",
   "mode": "WORKDAY",
   "summary": {
@@ -13,7 +13,7 @@
   "today": {
     "date": "2026-06-17",
     "day": "Mittwoch",
-    "time": "00:04",
+    "time": "08:04",
     "completed": 0,
     "total": 3,
     "tasks": [
@@ -21,7 +21,7 @@
       {"name": "Niku Fernseher AD", "priority": "high", "status": "pending", "note": "Wichtig (2 Tage überfällig)"},
       {"name": "Golf Club Call", "priority": "medium", "status": "pending", "note": "Termin klären (2 Tage überfällig)"}
     ],
-    "note": "🌙 KW 25 Mittwoch Nacht — Tasks von Montag/Dienstag übertragen, 3 Tage ohne Erledigung"
+    "note": "🌅 KW 25 Mittwoch Morgen — Tasks von Montag/Dienstag, Vormittag für Erledigung nutzen"
   },
   "critical": [
     {"task": "NOMU Post-Production", "overdue": 71, "days": 71, "type": "post-production", "priority": "critical", "note": "71+ TAGE — Entscheidung nötig: extern, aufgeben, oder fertig?"}
@@ -96,13 +96,14 @@
   },
   "cronUpdate": {
     "trigger": "dashboard-update-4h-v2",
-    "previousVersion": "v5.6.39",
+    "previousVersion": "v5.6.40",
     "currentVersion": "v5.6.40",
     "interval": "4 Stunden (WORKDAY Mode)",
-    "note": "Nacht-Update — KW 25 Mittwoch 00:04, 3-Tage-Block erkannt"
+    "note": "Morgens-Update — KW 25 Mittwoch 08:04, Vormittags-Check"
   },
   "updateHistory": [
-    "v5.6.40 — 2026-06-17 00:04 — Aktuell (Nacht-Update, KW 25 Mittwoch, 3-Tage-Block)",
+    "v5.6.41 — 2026-06-17 08:04 — Aktuell (Morgens-Update, KW 25 Mittwoch)",
+    "v5.6.40 — 2026-06-17 00:04 — Nacht-Update, KW 25 Mittwoch, 3-Tage-Block",
     "v5.6.39 — 2026-06-16 18:04 — Abends-Update, KW 25 Dienstag",
     "v5.6.38 — 2026-06-16 12:04 — Mittags-Update, KW 25 Dienstag",
     "v5.6.37 — 2026-06-16 08:04 — Morgens-Update, KW 25 Dienstag",
