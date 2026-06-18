@@ -1,6 +1,6 @@
 {
-  "version": "v5.6.47",
-  "lastUpdated": "2026-06-18T08:04:00+02:00",
+  "version": "v5.6.48",
+  "lastUpdated": "2026-06-18T12:04:00+02:00",
   "week": "KW 25",
   "mode": "WORKDAY",
   "summary": {
@@ -13,7 +13,7 @@
   "today": {
     "date": "2026-06-18",
     "day": "Donnerstag",
-    "time": "04:04",
+    "time": "12:04",
     "completed": 0,
     "total": 3,
     "tasks": [
@@ -21,7 +21,7 @@
       {"name": "Niku Fernseher AD", "priority": "high", "status": "pending", "note": "Wichtig (3 Tage überfällig)"},
       {"name": "Golf Club Call", "priority": "medium", "status": "pending", "note": "Termin klären (3 Tage überfällig)"}
     ],
-    "note": "🚀 KW 25 Donnerstag Morgen — Letzte Chance vor KW-Ende, 4-Tage-Stillstand"
+    "note": "🌤️ KW 25 Donnerstag Mittag — Halbzeit, 0/12 Tasks in KW, Handlungsdruck steigt"
   },
   "critical": [
     {"task": "NOMU Post-Production", "overdue": 73, "days": 72, "type": "post-production", "priority": "critical", "note": "72+ TAGE — Entscheidung nötig: extern, aufgeben, oder fertig?"}
@@ -34,20 +34,20 @@
   "completedToday": [],
   "completedWeek": [],
   "upcoming": [
-    {"event": "KW 25 Donnerstag", "date": "Heute", "type": "planning", "note": "🌅 LETZTE CHANCE — 4 Tage Stillstand, jetzt handeln", "priority": "critical"},
-    {"event": "NOMU Entscheidung", "date": "Dringend", "type": "decision", "note": "⚠️ 72+ Tage überfällig — Pattern der Vermeidung", "priority": "critical"}
+    {"event": "KW 25 Nachmittag", "date": "Heute", "type": "planning", "note": "⏰ HALBZEIT — 0/3 erledigt, 4-Tage-Stillstand hält an", "priority": "critical"},
+    {"event": "NOMU Entscheidung", "date": "Dringend", "type": "decision", "note": "⚠️ 72+ Tage überfällig — Blocker verhindert Fortschritt", "priority": "critical"}
   ],
   "patterns": [
-    {"name": "4-Tage-Stillstand", "description": "KW 25: 4 Tage, 0/12 Tasks — eskaliert sich weiter", "status": "critical"},
-    {"name": "NOMU = Prokrastination", "description": "72 Tage überfällig — der ewige Blocker", "status": "critical"},
-    {"name": "KW 25 Katastrophe", "description": "Komplette Woche bisher ohne operative Erledigungen", "status": "critical"}
+    {"name": "4-Tage-Stillstand", "description": "KW 25: 4 Tage, 0/12 Tasks — Halbzeit Donnerstag ohne Erledigungen", "status": "critical"},
+    {"name": "NOMU = Prokrastination", "description": "72 Tage überfällig — systematisch ignoriert", "status": "critical"},
+    {"name": "KW 25 Stillstand", "description": "Komplette Woche ohne operative Erledigungen — Handlungsdruck", "status": "critical"}
   ],
   "weekly": {
     "week": "KW 25",
     "completed": 0,
     "planned": 3,
     "successRate": "0%",
-    "notes": "KW 25 Donnerstag Morgen — 4 Tage ohne operative Erledigungen"
+    "notes": "KW 25 Donnerstag Mittag — 4 Tage ohne operative Erledigungen, Halbzeit"
   },
   "kw24Summary": {
     "totalTasks": 29,
@@ -60,48 +60,48 @@
     ]
   },
   "kw25Plan": {
-    "focus": "Donnerstag: Wittmann Preproduction + NOMU Entscheidung",
+    "focus": "Donnerstag Nachmittag: Letzte Chance für operative Tasks",
     "blockerToResolve": "NOMU Entscheidung + operative Tasks",
     "startDate": "2026-06-15",
     "priorities": [
-      "Wittmann Preproduction (FIRST THING)",
+      "Wittmann Preproduction (FIRST THING — jetzt!)",
       "Niku AD (nach Wittmann)",
-      "Golf Call (heute)",
+      "Golf Call (heute Nachmittag)",
       "NOMU Entscheidung (extern/beenden/fertig)"
     ]
   },
   "history": [
-    {"date": "2026-06-18", "completed": 0, "total": 3, "note": "Donnerstag — KW 25 Tag 4 läuft, 0/12 in KW"},
+    {"date": "2026-06-18", "completed": 0, "total": 3, "note": "Donnerstag Mittag — KW 25 Tag 4, 0/12 in KW, Halbzeit"},
     {"date": "2026-06-17", "completed": 0, "total": 3, "note": "Mittwoch — KW 25 Tag 3, 0/9"},
     {"date": "2026-06-16", "completed": 0, "total": 3, "note": "Dienstag — KW 25 Tag 2"},
     {"date": "2026-06-15", "completed": 0, "total": 3, "note": "Montag — KW 25 Tag 1"},
     {"date": "2026-06-14", "completed": 0, "total": 0, "note": "Sonntag — KW 24 Abschluss"}
   ],
   "insights": {
-    "pattern": "4-Tage-Stillstand: Komplette Woche bisher ohne operative Erledigungen",
-    "blocker": "NOMU 72+ Tage — operative Tasks blockiert",
-    "momentum": "Trend beschleunigt sich negativ",
-    "focus": "Donnerstag: Letzte Chance vor KW-Ende",
-    "recommendation": "EXTERN HOLEN: Tasks auf VA übertragen oder offiziell verschieben"
+    "pattern": "4-Tage-Stillstand: Halbzeit Donnerstag, 0/12 Tasks in KW 25",
+    "blocker": "NOMU 72+ Tage — blockiert weiterhin operative Arbeit",
+    "momentum": "Stillstand hält an — Handlungsdruck steigt",
+    "focus": "Donnerstag Nachmittag: Letzte echte Chance vor Freitag",
+    "recommendation": "JETZT HANDELN: Tasks an VA vergeben oder sofort erledigen"
   },
   "analysis": {
     "strength": "Strategische Arbeit, Pitches",
-    "weakness": "Operative Routine, Post-Production, Calls",
-    "solution": "EXTERN: Preproduction, AD, Calls an VA vergeben"
+    "weakness": "Operative Routine, Post-Production, Calls — 4 Tage Stillstand",
+    "solution": "EXTERN HOLEN: Preproduction, AD, Calls an VA vergeben"
   },
   "cronUpdate": {
     "trigger": "dashboard-update-4h-v2",
-    "previousVersion": "v5.6.46",
-    "currentVersion": "v5.6.47",
+    "previousVersion": "v5.6.47",
+    "currentVersion": "v5.6.48",
     "interval": "4 Stunden (WORKDAY Mode)",
-    "note": "Morgens-Update — KW 25 Donnerstag 08:04, 4-Tage-Stillstand, Letzte Chance"
+    "note": "Mittags-Update — KW 25 Donnerstag 12:04, Halbzeit, 4-Tage-Stillstand hält an"
   },
   "updateHistory": [
-    "v5.6.47 — 2026-06-18 08:04 — Aktuell (Morgens-Update, KW 25 Donnerstag, Letzte Chance)",
+    "v5.6.48 — 2026-06-18 12:04 — Aktuell (Mittags-Update, KW 25 Donnerstag Halbzeit)",
+    "v5.6.47 — 2026-06-18 08:04 — Morgens-Update, KW 25 Donnerstag",
     "v5.6.46 — 2026-06-18 04:04 — Nacht-Update, KW 25 Donnerstag",
     "v5.6.45 — 2026-06-18 00:04 — Nacht-Update",
-    "v5.6.44 — 2026-06-17 20:04 — Abends-Update",
-    "v5.6.43 — 2026-06-17 14:04 — Nachmittags-Update"
+    "v5.6.44 — 2026-06-17 20:04 — Abends-Update"
   ],
   "timeSessions": [],
   "income": [],
