@@ -1,8 +1,8 @@
 {
-  "version": "v5.6.46",
-  "lastUpdated": "2026-06-18T04:04:00+02:00",
+  "version": "v5.6.47",
+  "lastUpdated": "2026-06-18T08:04:00+02:00",
   "week": "KW 25",
-  "mode": "NIGHT",
+  "mode": "WORKDAY",
   "summary": {
     "tasksCompleted": 0,
     "tasksTotal": 3,
@@ -21,10 +21,10 @@
       {"name": "Niku Fernseher AD", "priority": "high", "status": "pending", "note": "Wichtig (3 Tage überfällig)"},
       {"name": "Golf Club Call", "priority": "medium", "status": "pending", "note": "Termin klären (3 Tage überfällig)"}
     ],
-    "note": "🌙 KW 25 Donnerstag Morgen — Nacht-Update, 4 Tage operativer Stillstand"
+    "note": "🚀 KW 25 Donnerstag Morgen — Letzte Chance vor KW-Ende, 4-Tage-Stillstand"
   },
   "critical": [
-    {"task": "NOMU Post-Production", "overdue": 72, "days": 72, "type": "post-production", "priority": "critical", "note": "72+ TAGE — Entscheidung nötig: extern, aufgeben, oder fertig?"}
+    {"task": "NOMU Post-Production", "overdue": 73, "days": 72, "type": "post-production", "priority": "critical", "note": "72+ TAGE — Entscheidung nötig: extern, aufgeben, oder fertig?"}
   ],
   "overdue": [
     {"task": "Sentai Post-Production", "days": 30, "type": "post-production", "priority": "high"},
@@ -71,7 +71,7 @@
     ]
   },
   "history": [
-    {"date": "2026-06-18", "completed": 0, "total": 3, "note": "Donnerstag — KW 25 Tag 4 beginnt, 0/12 in KW"},
+    {"date": "2026-06-18", "completed": 0, "total": 3, "note": "Donnerstag — KW 25 Tag 4 läuft, 0/12 in KW"},
     {"date": "2026-06-17", "completed": 0, "total": 3, "note": "Mittwoch — KW 25 Tag 3, 0/9"},
     {"date": "2026-06-16", "completed": 0, "total": 3, "note": "Dienstag — KW 25 Tag 2"},
     {"date": "2026-06-15", "completed": 0, "total": 3, "note": "Montag — KW 25 Tag 1"},
@@ -91,13 +91,14 @@
   },
   "cronUpdate": {
     "trigger": "dashboard-update-4h-v2",
-    "previousVersion": "v5.6.45",
-    "currentVersion": "v5.6.46",
-    "interval": "4 Stunden (NIGHT Mode)",
-    "note": "Nacht-Update — KW 25 Donnerstag 04:04, 4-Tage-Stillstand"
+    "previousVersion": "v5.6.46",
+    "currentVersion": "v5.6.47",
+    "interval": "4 Stunden (WORKDAY Mode)",
+    "note": "Morgens-Update — KW 25 Donnerstag 08:04, 4-Tage-Stillstand, Letzte Chance"
   },
   "updateHistory": [
-    "v5.6.46 — 2026-06-18 04:04 — Aktuell (Nacht-Update, KW 25 Donnerstag)",
+    "v5.6.47 — 2026-06-18 08:04 — Aktuell (Morgens-Update, KW 25 Donnerstag, Letzte Chance)",
+    "v5.6.46 — 2026-06-18 04:04 — Nacht-Update, KW 25 Donnerstag",
     "v5.6.45 — 2026-06-18 00:04 — Nacht-Update",
     "v5.6.44 — 2026-06-17 20:04 — Abends-Update",
     "v5.6.43 — 2026-06-17 14:04 — Nachmittags-Update"
@@ -108,7 +109,7 @@
     {"id": 1, "text": "Wittmann Preproduction", "priority": "critical", "completed": false, "project": "freelance", "overdue": 4},
     {"id": 2, "text": "Niku Fernseher AD", "priority": "high", "completed": false, "project": "tough-cookie", "overdue": 3},
     {"id": 3, "text": "Golf Club Call", "priority": "medium", "completed": false, "project": "tough-cookie", "overdue": 3},
-    {"id": 4, "text": "NOMU Post-Production", "priority": "critical", "completed": false, "project": "nomu", "overdue": 72}
+    {"id": 4, "text": "NOMU Post-Production", "priority": "critical", "completed": false, "project": "nomu", "overdue": 73}
   ],
   "pipeline": [],
   "activeSession": null,
