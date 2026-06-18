@@ -1,6 +1,6 @@
 {
-  "version": "v5.6.48",
-  "lastUpdated": "2026-06-18T12:04:00+02:00",
+  "version": "v5.6.49",
+  "lastUpdated": "2026-06-18T16:04:00+02:00",
   "week": "KW 25",
   "mode": "WORKDAY",
   "summary": {
@@ -13,7 +13,7 @@
   "today": {
     "date": "2026-06-18",
     "day": "Donnerstag",
-    "time": "12:04",
+    "time": "16:04",
     "completed": 0,
     "total": 3,
     "tasks": [
@@ -21,10 +21,10 @@
       {"name": "Niku Fernseher AD", "priority": "high", "status": "pending", "note": "Wichtig (3 Tage überfällig)"},
       {"name": "Golf Club Call", "priority": "medium", "status": "pending", "note": "Termin klären (3 Tage überfällig)"}
     ],
-    "note": "🌤️ KW 25 Donnerstag Mittag — Halbzeit, 0/12 Tasks in KW, Handlungsdruck steigt"
+    "note": "🚀 KW 25 Donnerstag Nachmittag — Letzte Chance vor Freitag, 2-3h noch"
   },
   "critical": [
-    {"task": "NOMU Post-Production", "overdue": 73, "days": 72, "type": "post-production", "priority": "critical", "note": "72+ TAGE — Entscheidung nötig: extern, aufgeben, oder fertig?"}
+    {"task": "NOMU Post-Production", "overdue": 74, "days": 73, "type": "post-production", "priority": "critical", "note": "73+ TAGE — Entscheidung nötig: extern, aufgeben, oder fertig?"}
   ],
   "overdue": [
     {"task": "Sentai Post-Production", "days": 30, "type": "post-production", "priority": "high"},
@@ -34,20 +34,20 @@
   "completedToday": [],
   "completedWeek": [],
   "upcoming": [
-    {"event": "KW 25 Nachmittag", "date": "Heute", "type": "planning", "note": "⏰ HALBZEIT — 0/3 erledigt, 4-Tage-Stillstand hält an", "priority": "critical"},
-    {"event": "NOMU Entscheidung", "date": "Dringend", "type": "decision", "note": "⚠️ 72+ Tage überfällig — Blocker verhindert Fortschritt", "priority": "critical"}
+    {"event": "KW 25 Nachmittag", "date": "Heute", "type": "planning", "note": "⏰ LETZTE CHANCE — 2-3h noch, Geschäftsschluss nähert sich", "priority": "critical"},
+    {"event": "NOMU Entscheidung", "date": "Dringend", "type": "decision", "note": "⚠️ 73+ Tage überfällig — Blocker verhindert Fortschritt", "priority": "critical"}
   ],
   "patterns": [
-    {"name": "4-Tage-Stillstand", "description": "KW 25: 4 Tage, 0/12 Tasks — Halbzeit Donnerstag ohne Erledigungen", "status": "critical"},
-    {"name": "NOMU = Prokrastination", "description": "72 Tage überfällig — systematisch ignoriert", "status": "critical"},
-    {"name": "KW 25 Stillstand", "description": "Komplette Woche ohne operative Erledigungen — Handlungsdruck", "status": "critical"}
+    {"name": "4-Tage-Stillstand", "description": "KW 25: 4 Tage, 0/12 Tasks — Vollständiger Stillstand", "status": "critical"},
+    {"name": "NOMU = Prokrastination", "description": "73 Tage überfällig — systematisch ignoriert", "status": "critical"},
+    {"name": "KW 25 Stillstand", "description": "Komplette Woche ohne operative Erledigungen — Handlungsdruck maximal", "status": "critical"}
   ],
   "weekly": {
     "week": "KW 25",
     "completed": 0,
     "planned": 3,
     "successRate": "0%",
-    "notes": "KW 25 Donnerstag Mittag — 4 Tage ohne operative Erledigungen, Halbzeit"
+    "notes": "KW 25 Donnerstag Nachmittag — 4 Tage ohne operative Erledigungen, Letzte Chance"
   },
   "kw24Summary": {
     "totalTasks": 29,
@@ -60,29 +60,29 @@
     ]
   },
   "kw25Plan": {
-    "focus": "Donnerstag Nachmittag: Letzte Chance für operative Tasks",
+    "focus": "Donnerstag Nachmittag: Letzte Chance für operative Tasks vor Freitag",
     "blockerToResolve": "NOMU Entscheidung + operative Tasks",
     "startDate": "2026-06-15",
     "priorities": [
       "Wittmann Preproduction (FIRST THING — jetzt!)",
       "Niku AD (nach Wittmann)",
-      "Golf Call (heute Nachmittag)",
+      "Golf Call (heute Nachmittag noch möglich)",
       "NOMU Entscheidung (extern/beenden/fertig)"
     ]
   },
   "history": [
-    {"date": "2026-06-18", "completed": 0, "total": 3, "note": "Donnerstag Mittag — KW 25 Tag 4, 0/12 in KW, Halbzeit"},
+    {"date": "2026-06-18", "completed": 0, "total": 3, "note": "Donnerstag Nachmittag — KW 25 Tag 4, 0/12 in KW, Letzte Chance"},
     {"date": "2026-06-17", "completed": 0, "total": 3, "note": "Mittwoch — KW 25 Tag 3, 0/9"},
     {"date": "2026-06-16", "completed": 0, "total": 3, "note": "Dienstag — KW 25 Tag 2"},
     {"date": "2026-06-15", "completed": 0, "total": 3, "note": "Montag — KW 25 Tag 1"},
     {"date": "2026-06-14", "completed": 0, "total": 0, "note": "Sonntag — KW 24 Abschluss"}
   ],
   "insights": {
-    "pattern": "4-Tage-Stillstand: Halbzeit Donnerstag, 0/12 Tasks in KW 25",
-    "blocker": "NOMU 72+ Tage — blockiert weiterhin operative Arbeit",
-    "momentum": "Stillstand hält an — Handlungsdruck steigt",
-    "focus": "Donnerstag Nachmittag: Letzte echte Chance vor Freitag",
-    "recommendation": "JETZT HANDELN: Tasks an VA vergeben oder sofort erledigen"
+    "pattern": "4-Tage-Stillstand: Vollständiger Stillstand KW 25, Letzte Chance vor Freitag",
+    "blocker": "NOMU 73+ Tage — blockiert weiterhin operative Arbeit",
+    "momentum": "Keine Besserung — Handlungsdruck maximal",
+    "focus": "Donnerstag Nachmittag: 2-3h noch für operative Tasks",
+    "recommendation": "JETZT HANDELN: Tasks sofort erledigen oder auf Freitag/NW verschieben"
   },
   "analysis": {
     "strength": "Strategische Arbeit, Pitches",
@@ -91,17 +91,17 @@
   },
   "cronUpdate": {
     "trigger": "dashboard-update-4h-v2",
-    "previousVersion": "v5.6.47",
-    "currentVersion": "v5.6.48",
+    "previousVersion": "v5.6.48",
+    "currentVersion": "v5.6.49",
     "interval": "4 Stunden (WORKDAY Mode)",
-    "note": "Mittags-Update — KW 25 Donnerstag 12:04, Halbzeit, 4-Tage-Stillstand hält an"
+    "note": "Nachmittags-Update — KW 25 Donnerstag 16:04, Letzte Chance vor Freitag"
   },
   "updateHistory": [
-    "v5.6.48 — 2026-06-18 12:04 — Aktuell (Mittags-Update, KW 25 Donnerstag Halbzeit)",
+    "v5.6.49 — 2026-06-18 16:04 — Aktuell (Nachmittags-Update, KW 25 Donnerstag, Letzte Chance)",
+    "v5.6.48 — 2026-06-18 12:04 — Mittags-Update, KW 25 Donnerstag Halbzeit",
     "v5.6.47 — 2026-06-18 08:04 — Morgens-Update, KW 25 Donnerstag",
     "v5.6.46 — 2026-06-18 04:04 — Nacht-Update, KW 25 Donnerstag",
-    "v5.6.45 — 2026-06-18 00:04 — Nacht-Update",
-    "v5.6.44 — 2026-06-17 20:04 — Abends-Update"
+    "v5.6.45 — 2026-06-18 00:04 — Nacht-Update"
   ],
   "timeSessions": [],
   "income": [],
@@ -109,7 +109,7 @@
     {"id": 1, "text": "Wittmann Preproduction", "priority": "critical", "completed": false, "project": "freelance", "overdue": 4},
     {"id": 2, "text": "Niku Fernseher AD", "priority": "high", "completed": false, "project": "tough-cookie", "overdue": 3},
     {"id": 3, "text": "Golf Club Call", "priority": "medium", "completed": false, "project": "tough-cookie", "overdue": 3},
-    {"id": 4, "text": "NOMU Post-Production", "priority": "critical", "completed": false, "project": "nomu", "overdue": 73}
+    {"id": 4, "text": "NOMU Post-Production", "priority": "critical", "completed": false, "project": "nomu", "overdue": 74}
   ],
   "pipeline": [],
   "activeSession": null,
