@@ -1,7 +1,7 @@
-# Deploy Status — v5.6.49
+# Deploy Status — v5.6.54
 
-**Zeit:** Donnerstag, 18. Juni 2026, 16:04 Uhr (Europe/Berlin)  
-**Version:** v5.6.49  
+**Zeit:** Freitag, 19. Juni 2026, 14:04 Uhr (Europe/Berlin)  
+**Version:** v5.6.54  
 **Status:** ✅ Bereit für Deploy
 
 ---
@@ -10,10 +10,10 @@
 
 | Datei | Status | Pfad |
 |-------|--------|------|
-| dashboard-data.json | ✅ v5.6.49 | `/data/.openclaw/workspace/venture-ctrl/` |
-| dashboard.html | ✅ v5.6.49 | `/data/.openclaw/workspace/venture-ctrl/` |
-| index.html | ✅ v5.6.49 | `/data/.openclaw/workspace/venture-ctrl/` |
-| data.json | ✅ v5.6.49 | `/data/.openclaw/workspace/venture-ctrl/` |
+| dashboard-data.json | ✅ v5.6.54 | `/data/.openclaw/workspace/venture-ctrl/` |
+| dashboard.html | ✅ v5.6.54 | `/data/.openclaw/workspace/venture-ctrl/` |
+| index.html | ✅ v5.6.54 | `/data/.openclaw/workspace/venture-ctrl/` |
+| data.json | ✅ v5.6.54 | `/data/.openclaw/workspace/venture-ctrl/` |
 
 ---
 
@@ -21,20 +21,20 @@
 
 ```
 /dist/
-├── dashboard-data.json  ✅ v5.6.49
-├── dashboard.html       ✅ v5.6.49
-└── index.html           ✅ v5.6.49
+├── dashboard-data.json  ✅ v5.6.54
+├── dashboard.html       ✅ v5.6.54
+└── index.html           ✅ v5.6.54
 ```
 
 ---
 
-## Änderungen v5.6.49
+## Änderungen v5.6.54
 
-- **4-Tage-Stillstand:** KW 25 Mo/Di/Mi/Do — 0/12 Tasks (Eskalation!)
-- **NOMU:** 73+ Tage überfällig, blockiert weiterhin operative Tasks
-- **KW 25 Katastrophe:** Vollständiger Stillstand über 4 Tage
-- **Empfehlung:** JETZT HANDELN — 2-3h noch heute, sonst auf Freitag/NW verschieben
-- **Letzte Chance:** Geschäftsschluss nähert sich
+- **5-Tage-Stillstand:** KW 25 Mo/Di/Mi/Do/Fr — 0/12 Tasks (ESKALIERT!)
+- **NOMU:** 74+ Tage überfällig, blockiert weiterhin operative Tasks
+- **KW 25 Katastrophe:** Vollständiger Stillstand über 5 Tage — HISTORISCHER REKORD
+- **Empfehlung:** NACHMITTAGS HANDELN — letzte 2-3h noch heute!
+- **Letzte Chance:** Geschäftsschluss nähert sich!
 
 ---
 
@@ -43,7 +43,7 @@
 ```bash
 cd /data/.openclaw/workspace/venture-ctrl
 git add .
-git commit -m "v5.6.49 — 4-Tage-Stillstand KW 25, Letzte Chance vor Freitag"
+git commit -m "v5.6.54 — 5-Tage-Stillstand KW 25 (HISTORISCH), Letzte Chance Freitag Nachmittag"
 git push origin main
 ```
 
