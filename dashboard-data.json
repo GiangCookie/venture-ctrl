@@ -1,6 +1,6 @@
 {
-  "version": "v5.6.57",
-  "lastUpdated": "2026-06-20T04:04:00+02:00",
+  "version": "v5.6.58",
+  "lastUpdated": "2026-06-20T08:04:00+02:00",
   "week": "KW 25 → 26",
   "mode": "NIGHT_WEEKEND",
   "summary": {
@@ -92,13 +92,14 @@
   },
   "cronUpdate": {
     "trigger": "dashboard-update-4h-v2",
-    "previousVersion": "v5.6.56",
-    "currentVersion": "v5.6.57",
+    "previousVersion": "v5.6.57",
+    "currentVersion": "v5.6.58",
     "interval": "4 Stunden (NIGHT/WEEKEND Mode)",
-    "note": "Nacht-Update — KW 25 Samstag Morgen, Weekend-Modus, KW 26 Preview READY"
+    "note": "Morgens-Update — KW 25 Samstag 8:04, Weekend-Modus, KW 26 RESET Preview"
   },
   "updateHistory": [
-    "v5.6.57 — 2026-06-20 04:04 — Aktuell (Nacht-Update, KW 25 Sa Morgen, Weekend-Modus, KW 26 RESET Preview)",
+    "v5.6.58 — 2026-06-20 08:04 — Aktuell (Morgens-Update, KW 25 Sa, Weekend-Modus, KW 26 RESET Preview)",
+    "v5.6.57 — 2026-06-20 04:04 — Nacht-Update, KW 25 Sa Morgen, Weekend-Modus, KW 26 RESET Preview",
     "v5.6.56 — 2026-06-20 00:04 — Nacht-Update, KW 25 Sa, Weekend-Modus, NOMU 75 Tage",
     "v5.6.55 — 2026-06-19 20:04 — Abends-Update, KW 25 Fr, 5-Tage-Stillstand HISTORISCH",
     "v5.6.54 — 2026-06-19 16:04 — Nachmittags-Update",
