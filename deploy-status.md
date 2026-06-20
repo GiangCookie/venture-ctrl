@@ -1,8 +1,8 @@
-# Deploy Status — v5.6.54
+# Deploy Status — v5.6.57
 
-**Zeit:** Freitag, 19. Juni 2026, 14:04 Uhr (Europe/Berlin)  
-**Version:** v5.6.54  
-**Status:** ✅ Bereit für Deploy
+**Zeit:** Samstag, 20. Juni 2026, 04:04 Uhr (Europe/Berlin)  
+**Version:** v5.6.57  
+**Status:** ✅ Erfolgreich Deployed
 
 ---
 
@@ -10,10 +10,10 @@
 
 | Datei | Status | Pfad |
 |-------|--------|------|
-| dashboard-data.json | ✅ v5.6.54 | `/data/.openclaw/workspace/venture-ctrl/` |
-| dashboard.html | ✅ v5.6.54 | `/data/.openclaw/workspace/venture-ctrl/` |
-| index.html | ✅ v5.6.54 | `/data/.openclaw/workspace/venture-ctrl/` |
-| data.json | ✅ v5.6.54 | `/data/.openclaw/workspace/venture-ctrl/` |
+| dashboard-data.json | ✅ v5.6.57 | `/data/.openclaw/workspace/venture-ctrl/` |
+| dashboard.html | ✅ v5.6.57 | `/data/.openclaw/workspace/venture-ctrl/` |
+| index.html | ✅ v5.6.57 | `/data/.openclaw/workspace/venture-ctrl/dist/` |
+| data.json | ✅ v5.6.57 | `/data/.openclaw/workspace/venture-ctrl/` |
 
 ---
 
@@ -21,20 +21,20 @@
 
 ```
 /dist/
-├── dashboard-data.json  ✅ v5.6.54
-├── dashboard.html       ✅ v5.6.54
-└── index.html           ✅ v5.6.54
+├── index.html           ✅ v5.6.57
+├── dashboard-data.json  ✅ v5.6.57 (kopiert)
+└── dashboard.html       ✅ v5.6.57 (kopiert)
 ```
 
 ---
 
-## Änderungen v5.6.54
+## Änderungen v5.6.57
 
-- **5-Tage-Stillstand:** KW 25 Mo/Di/Mi/Do/Fr — 0/12 Tasks (ESKALIERT!)
-- **NOMU:** 74+ Tage überfällig, blockiert weiterhin operative Tasks
-- **KW 25 Katastrophe:** Vollständiger Stillstand über 5 Tage — HISTORISCHER REKORD
-- **Empfehlung:** NACHMITTAGS HANDELN — letzte 2-3h noch heute!
-- **Letzte Chance:** Geschäftsschluss nähert sich!
+- **KW 25 Totalausfall:** Historischer Rekord — 0/15 Tasks, erste vollständig verfehlte Woche
+- **NOMU:** 75 Tage überfällig — System-Blocker, Entscheidung nötig
+- **KW 26 RESET Preview:** Wittmann, Niku, Golf Call für Montag priorisiert
+- **Mode:** 🌙 NIGHT / WEEKEND — Dashboard im Wochenende-Modus
+- **Nächster Arbeitstag:** Montag 22.06 — RESET-Tag
 
 ---
 
@@ -43,7 +43,7 @@
 ```bash
 cd /data/.openclaw/workspace/venture-ctrl
 git add .
-git commit -m "v5.6.54 — 5-Tage-Stillstand KW 25 (HISTORISCH), Letzte Chance Freitag Nachmittag"
+git commit -m "v5.6.57 — KW 25 Totalausfall HISTORISCH, KW 26 RESET Preview, NOMU 75 Tage"
 git push origin main
 ```
 
