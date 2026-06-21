@@ -1,8 +1,8 @@
 {
-  "version": "v5.6.58",
-  "lastUpdated": "2026-06-20T08:04:00+02:00",
-  "week": "KW 25 → 26",
-  "mode": "NIGHT_WEEKEND",
+  "version": "v5.6.64",
+  "lastUpdated": "2026-06-21T20:04:00+02:00",
+  "week": "KW 26 START",
+  "mode": "EVENING",
   "summary": {
     "tasksCompleted": 0,
     "tasksTotal": 0,
@@ -11,41 +11,67 @@
     "highOverdue": 3
   },
   "today": {
-    "date": "2026-06-20",
-    "day": "Samstag",
-    "time": "04:04",
+    "date": "2026-06-21",
+    "day": "Sonntag",
+    "time": "20:04",
     "completed": 0,
     "total": 0,
     "tasks": [],
-    "note": "🌙 KW 25 Nacht → Wochenende — Historischer Totalausfall: 0/15 Tasks"
+    "note": "🌅 KW 26 START — Heute: KW 25 RECAP fertiggestellt"
   },
   "critical": [
-    {"task": "NOMU Post-Production", "overdue": 75, "days": 75, "type": "post-production", "priority": "critical", "note": "75 TAGE — Entscheidung nötig: extern/beenden/fertig"}
+    {"task": "NOMU Post-Production", "overdue": 76, "days": 76, "type": "post-production", "priority": "critical", "note": "76 TAGE — Entscheidung nötig: extern/beenden/fertig"}
   ],
   "overdue": [
-    {"task": "Wittmann Preproduction", "days": 6, "type": "production", "priority": "critical", "note": "KW 26 Montag FIRST THING"},
-    {"task": "Niku Fernseher AD", "days": 5, "type": "content", "priority": "high", "note": "KW 26 Montag Priorität #2"},
-    {"task": "Golf Club Call", "days": 5, "type": "call", "priority": "medium", "note": "KW 26 Montag morgen"}
+    {"task": "Wittmann Preproduction", "days": 7, "type": "production", "priority": "critical", "note": "Montag FIRST THING — 7 Tage überfällig"},
+    {"task": "Niku Fernseher AD", "days": 6, "type": "content", "priority": "high", "note": "Montag — 6 Tage überfällig"},
+    {"task": "Golf Club Call", "days": 6, "type": "call", "priority": "medium", "note": "Montag morgen — 6 Tage überfällig"}
   ],
   "completedToday": [],
   "completedWeek": [],
   "upcoming": [
-    {"event": "KW 26 Start", "date": "Montag 22.06", "type": "reset", "note": "🌅 RESET-Tag — alle überfälligen Tasks priorisieren", "priority": "critical"},
-    {"event": "Wittmann Preproduction", "date": "Montag FIRST THING", "type": "production", "note": "6 Tage überfällig", "priority": "critical"},
-    {"event": "Niku AD", "date": "Montag", "type": "content", "note": "5 Tage überfällig", "priority": "high"},
-    {"event": "Golf Call", "date": "Montag morgen", "type": "call", "note": "5 Tage überfällig", "priority": "medium"},
-    {"event": "NOMU Entscheidung", "date": "Dringend", "type": "decision", "note": "⚠️ 75 Tage überfällig — Jetzt extern vergeben oder beenden", "priority": "critical"}
+    {"event": "KW 26 START", "date": "Montag 22.06", "type": "reset", "note": "🔥 KW 26 RESET-Tag — alle überfälligen Tasks priorisieren", "priority": "critical"},
+    {"event": "Wittmann Preproduction", "date": "Montag FIRST THING", "type": "production", "note": "🔥 7 Tage überfällig — historisch!", "priority": "critical"},
+    {"event": "Niku AD", "date": "Montag", "type": "content", "note": "🎬 6 Tage überfällig", "priority": "high"},
+    {"event": "Golf Call", "date": "Montag morgen", "type": "call", "note": "📞 6 Tage überfällig", "priority": "medium"},
+    {"event": "NOMU Entscheidung", "date": "Dringend", "type": "decision", "note": "⚠️ 76 Tage überfällig — Extern/beenden/fertig", "priority": "critical"}
   ],
+  "kw25Recap": {
+    "week": "KW 25",
+    "period": "15.–21. Juni 2026",
+    "totalTasks": 15,
+    "completedTasks": 0,
+    "successRate": "0%",
+    "status": "HISTORISCHER REKORD — Totalausfall",
+    "dailyBreakdown": [
+      {"day": "Mo 15.06", "completed": 0, "planned": 3, "rate": "0%"},
+      {"day": "Di 16.06", "completed": 0, "planned": 3, "rate": "0%"},
+      {"day": "Mi 17.06", "completed": 0, "planned": 3, "rate": "0%"},
+      {"day": "Do 18.06", "completed": 0, "planned": 3, "rate": "0%"},
+      {"day": "Fr 19.06", "completed": 0, "planned": 3, "rate": "0%"},
+      {"day": "Sa-So", "completed": 0, "planned": 0, "rate": "—"}
+    ],
+    "achievements": "NICHTS — Erste vollständig verfehlte Woche seit Projektbeginn",
+    "missedTasks": [
+      "🎬 Wittmann Preproduction (7 Tage überfällig geworden)",
+      "🎬 Niku Fernseher AD (6 Tage überfällig)",
+      "📞 Golf Club Call (6 Tage überfällig)",
+      "🎬 NOMU Post-Production (74→76 Tage überfällig)",
+      "Und 11 weitere Tasks"
+    ]
+  },
   "patterns": [
-    {"name": "KW 25 Totalausfall", "description": "Erste vollständig verfehlte Woche: 0/15 Tasks — historischer Rekord", "status": "critical"},
-    {"name": "NOMU = System-Blocker", "description": "75 Tage überfällig — blockiert ALLE operative Arbeit systematisch", "status": "critical"}
+    {"name": "KW 25 Totalausfall", "description": "Historischer Rekord: 0/15 Tasks — erste vollständig verfehlte Woche", "status": "critical"},
+    {"name": "NOMU = System-Blocker", "description": "76 Tage überfällig — blockiert ALLE operative Arbeit systematisch", "status": "critical"},
+    {"name": "7-Tage-Stillstand Wittmann", "description": "Höchste Überfälligkeit bisher — akutes Kundenrisiko", "status": "critical"},
+    {"name": "Montag-Phänomen bricht zusammen", "description": "Früher: Montag produktiv. Jetzt: Selbst Montag 0/3 Tasks", "status": "critical"}
   ],
   "weekly": {
-    "week": "KW 25",
+    "week": "KW 26 START",
     "completed": 0,
-    "planned": 15,
+    "planned": 0,
     "successRate": "0%",
-    "notes": "KW 25 Final: Historischer Totalausfall — 0/15 Tasks"
+    "notes": "KW 25 Final: 0/15 — KW 26 ist RESET-Woche, morgen geht's los"
   },
   "kw25Summary": {
     "totalTasks": 15,
@@ -54,64 +80,70 @@
     "highlights": [
       "Historischer Rekord: Erste vollständig verfehlte Woche",
       "5 Tage ohne operative Erledigungen",
-      "NOMU-Blocker erreicht 75 Tage"
+      "NOMU-Blocker erreicht 76 Tage",
+      "Wittmann: 7 Tage überfällig (neuer Rekord)"
     ]
   },
   "kw26Plan": {
-    "focus": "KW 26 RESET — Alle überfälligen Tasks priorisieren",
+    "focus": "Montag: KW 26 RESET — Alle überfälligen Tasks priorisieren",
     "blockerToResolve": "NOMU Entscheidung (extern/beenden/fertig)",
     "startDate": "2026-06-22",
     "priorities": [
-      "Wittmann Preproduction (FIRST THING — 6 Tage überfällig)",
-      "Niku AD (sofort nach Wittmann — 5 Tage)",
-      "Golf Call (Montag morgen — 5 Tage)",
-      "NOMU Entscheidung (SOFORT — 75 Tage)"
+      "🔥 Wittmann Preproduction (FIRST THING — 7 Tage überfällig)",
+      "🎬 Niku AD (sofort nach Wittmann — 6 Tage)",
+      "📞 Golf Call (Montag morgen — 6 Tage)",
+      "⚠️ NOMU Entscheidung (SOFORT — 76 Tage)"
+    ],
+    "recommendations": [
+      "Max. 1-2 Tasks pro Tag — 3 waren zu viel",
+      "Wittmann FIRST THING — keine Diskussion",
+      "Operative Tasks delegieren — VA/freelancer",
+      "Nur strategische Arbeit selbst",
+      "Wenn 2 Tage keine Erledigungen → Pause/Reset"
     ]
   },
   "history": [
-    {"date": "2026-06-20", "completed": 0, "total": 0, "note": "Samstag Nacht — Wochenende, KW 25 beendet"},
-    {"date": "2026-06-19", "completed": 0, "total": 3, "note": "Freitag — KW 25 Tag 5, 0/3, historischer Stillstand"},
-    {"date": "2026-06-18", "completed": 0, "total": 3, "note": "Donnerstag — 0/3, 4-Tage-Stillstand"},
-    {"date": "2026-06-17", "completed": 0, "total": 3, "note": "Mittwoch — 0/3, 3-Tage-Block"},
-    {"date": "2026-06-16", "completed": 0, "total": 3, "note": "Dienstag — 0/3, operativer Stillstand"},
-    {"date": "2026-06-15", "completed": 0, "total": 3, "note": "Montag — KW 25 Tag 1, 0/3 Tasks"},
-    {"date": "2026-06-14", "completed": 0, "total": 0, "note": "Sonntag — KW 24 Abschluss, 7% Erfolgsrate"},
-    {"date": "2026-06-13", "completed": 0, "total": 0, "note": "Samstag — Wochenende"}
+    {"date": "2026-06-21", "completed": 0, "total": 0, "note": "Sonntag — KW 25 RECAP, KW 26 Vorabend"},
+    {"date": "2026-06-20", "completed": 0, "total": 0, "note": "Samstag — KW 25 beendet, 0/15 Total"},
+    {"date": "2026-06-19", "completed": 0, "total": 3, "note": "Freitag — KW 25 Tag 5, 0/3"},
+    {"date": "2026-06-18", "completed": 0, "total": 3, "note": "Donnerstag — 0/3"},
+    {"date": "2026-06-17", "completed": 0, "total": 3, "note": "Mittwoch — 0/3"},
+    {"date": "2026-06-16", "completed": 0, "total": 3, "note": "Dienstag — 0/3"},
+    {"date": "2026-06-15", "completed": 0, "total": 3, "note": "Montag — KW 25 Tag 1, 0/3"}
   ],
   "insights": {
-    "pattern": "KW 25 Totalausfall: Historischer Rekord — 0/15 Tasks",
-    "blocker": "NOMU 75 Tage — systematischer Blocker",
-    "momentum": "Vollständiger Stillstand — KW 26 als RESET nötig",
-    "focus": "Montag: Wittmann FIRST THING, dann NOMU-Entscheidung",
-    "recommendation": "EXTERN HOLEN: Preproduction, AD-Erstellung, Calls an VA"
+    "pattern": "KW 25 Totalausfall: 0/15 Tasks — historisch",
+    "blocker": "NOMU 76 Tage — systematischer Blocker",
+    "momentum": "Vollständiger Stillstand — morgen KW 26 RESET",
+    "focus": "Montag: Wittmann FIRST THING, dann NOMU",
+    "recommendation": "EXTERN HOLEN: Prepro, AD, Calls an VA"
   },
   "analysis": {
     "strength": "Strategische Arbeit, Pitches, wichtige Meetings",
-    "weakness": "Operative Routine, Post-Production, Calls — kompletter Stillstand KW 25",
-    "solution": "KW 26 RESET + Externe Ressourcen für operative Tasks"
+    "weakness": "Operative Routine, Post-Production, Calls — Stillstand KW 25",
+    "solution": "KW 26 RESET + Externe Ressourcen"
   },
   "cronUpdate": {
     "trigger": "dashboard-update-4h-v2",
-    "previousVersion": "v5.6.57",
-    "currentVersion": "v5.6.58",
-    "interval": "4 Stunden (NIGHT/WEEKEND Mode)",
-    "note": "Morgens-Update — KW 25 Samstag 8:04, Weekend-Modus, KW 26 RESET Preview"
+    "previousVersion": "v5.6.63",
+    "currentVersion": "v5.6.64",
+    "interval": "4 Stunden (EVENING Mode)",
+    "note": "Abend-Update — KW 26 START mit vollständigem KW 25 Recap"
   },
   "updateHistory": [
-    "v5.6.58 — 2026-06-20 08:04 — Aktuell (Morgens-Update, KW 25 Sa, Weekend-Modus, KW 26 RESET Preview)",
-    "v5.6.57 — 2026-06-20 04:04 — Nacht-Update, KW 25 Sa Morgen, Weekend-Modus, KW 26 RESET Preview",
-    "v5.6.56 — 2026-06-20 00:04 — Nacht-Update, KW 25 Sa, Weekend-Modus, NOMU 75 Tage",
-    "v5.6.55 — 2026-06-19 20:04 — Abends-Update, KW 25 Fr, 5-Tage-Stillstand HISTORISCH",
-    "v5.6.54 — 2026-06-19 16:04 — Nachmittags-Update",
-    "v5.6.53 — 2026-06-19 12:04 — Mittags-Update"
+    "v5.6.64 — 2026-06-21 20:04 — Aktuell (Abend-Update, KW 25 Recap, KW 26 RESET-Plan)",
+    "v5.6.63 — 2026-06-21 12:04 — Mittags-Update, KW 26 RESET",
+    "v5.6.62 — 2026-06-21 08:04 — Morgens-Update, KW 26 Vorabend",
+    "v5.6.61 — 2026-06-21 04:04 — Nacht-Update, KW 26 Vorabend",
+    "v5.6.60 — 2026-06-20 20:04 — Abend-Update, KW 25 Sa"
   ],
   "timeSessions": [],
   "income": [],
   "todos": [
-    {"id": 1, "text": "Wittmann Preproduction", "priority": "critical", "completed": false, "project": "freelance", "overdue": 6, "note": "KW 26 Montag FIRST THING"},
-    {"id": 2, "text": "Niku Fernseher AD", "priority": "high", "completed": false, "project": "tough-cookie", "overdue": 5, "note": "KW 26 Montag"},
-    {"id": 3, "text": "Golf Club Call", "priority": "medium", "completed": false, "project": "tough-cookie", "overdue": 5, "note": "KW 26 Montag morgen"},
-    {"id": 4, "text": "NOMU Post-Production", "priority": "critical", "completed": false, "project": "nomu", "overdue": 75, "note": "75 Tage — Entscheidung nötig: extern/beenden/fertig"}
+    {"id": 1, "text": "Wittmann Preproduction", "priority": "critical", "completed": false, "project": "freelance", "overdue": 7, "note": "Montag FIRST THING — 7 Tage überfällig"},
+    {"id": 2, "text": "Niku Fernseher AD", "priority": "high", "completed": false, "project": "tough-cookie", "overdue": 6, "note": "Montag"},
+    {"id": 3, "text": "Golf Club Call", "priority": "medium", "completed": false, "project": "tough-cookie", "overdue": 6, "note": "Montag morgen"},
+    {"id": 4, "text": "NOMU Post-Production", "priority": "critical", "completed": false, "project": "nomu", "overdue": 76, "note": "76 TAGE — Entscheidung: extern/beenden/fertig"}
   ],
   "pipeline": [],
   "activeSession": null,
