@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VENTURE CTRL v5.6.64</title>
+    <title>VENTURE CTRL v5.6.67</title>
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
@@ -62,18 +62,19 @@
         .warning { color: #fbbf24; }
         .critical { color: #ef4444; font-weight: bold; }
         .reset-badge { 
-            background: linear-gradient(135deg, #f59e0b, #d97706);
+            background: linear-gradient(135deg, #ef4444, #dc2626);
             color: white;
-            padding: 6px 14px;
+            padding: 8px 18px;
             border-radius: 20px;
             font-weight: bold;
             display: inline-block;
             margin-top: 10px;
-            animation: glow 2s infinite;
+            animation: pulse 1.5s infinite;
+            font-size: 1.1rem;
         }
-        @keyframes glow {
-            0%, 100% { box-shadow: 0 0 10px rgba(245, 158, 11, 0.5); }
-            50% { box-shadow: 0 0 20px rgba(245, 158, 11, 0.8); }
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 0 15px rgba(239, 68, 68, 0.6); transform: scale(1); }
+            50% { box-shadow: 0 0 30px rgba(239, 68, 68, 1); transform: scale(1.02); }
         }
         .todo { 
             padding: 12px; 
@@ -109,16 +110,17 @@
             margin-top: 20px;
             font-size: 0.9rem;
         }
-        .tomorrow-highlight {
-            background: linear-gradient(135deg, rgba(245, 158, 11, 0.15), rgba(217, 119, 6, 0.1));
-            border: 2px solid #f59e0b;
-            padding: 15px;
-            border-radius: 10px;
-            margin: 10px 0;
+        .today-highlight {
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0.2), rgba(245, 158, 11, 0.15));
+            border: 2px solid #ef4444;
+            padding: 20px;
+            border-radius: 12px;
+            margin: 15px 0;
         }
-        .tomorrow-highlight h3 {
-            color: #f59e0b;
-            margin-bottom: 10px;
+        .today-highlight h3 {
+            color: #ef4444;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
         }
         .footer {
             margin-top: 30px;
@@ -139,17 +141,43 @@
         .mode-morning { background: #fbbf24; color: #000; }
         .mode-afternoon { background: #f97316; color: #fff; }
         .mode-night { background: #6366f1; color: #fff; }
+        .first-thing {
+            background: linear-gradient(135deg, rgba(239,68,68,0.9), rgba(220,38,38,0.9));
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+            font-size: 1.2rem;
+            text-align: center;
+            animation: glow 1.5s infinite;
+        }
+        @keyframes glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(239,68,68,0.6); }
+            50% { box-shadow: 0 0 40px rgba(239,68,68,1); }
+        }
     </style>
 </head>
 <body>
     <div class="header">
-        <div class="version-badge">v5.6.64</div>
+        <div class="version-badge">v5.6.67</div>
         <h1>VENTURE CTRL</h1>
-        <p>Sonntag, 21. Juni 2026 · 16:04 <span class="mode-badge mode-afternoon">AFTERNOON</span></p>
-        <p>KW 26 RESET — Nachmittags-Update</p>
+        <p>Montag, 22. Juni 2026 · 08:04 <span class="mode-badge mode-morning">MORNING</span></p>
+        <p>🔥 KW 26 RESET-Tag — ERSTE AUFGABE: Wittmann FIRST THING</p>
+        <div class="reset-badge">⚡ JETZT STARTEN!</div>
     </div>
 
     <div class="grid">
+        <div class="card" style="grid-column: 1 / -1;">
+            <h2>🎯 ERSTE AUFGABE HEUTE</h2>
+            <div class="first-thing">
+                🔥 WITTMANN PREPRODUCTION — FIRST THING<br>
+                <small>9 Tage überfällig — KEINE DISKUSSION</small>
+            </div>
+            <div style="text-align: center; color: #fbbf24; margin-top: 10px;">
+                👆 Das ist die EINZIGE Priorität jetzt. Alles andere wartet.
+            </div>
+        </div>
+
         <div class="card">
             <h2>📊 KW 25 FINAL BILANZ</h2>
             <div class="stat-row">
@@ -171,49 +199,48 @@
         </div>
 
         <div class="card">
-            <h2>🔴 KRITISCHE BLOCKER</h2>
+            <h2>🔴 KRITISCHE BLOCKER (Update)</h2>
             <div class="todo extreme">
                 <strong>NOMU Post-Production</strong><br>
-                <span class="critical">76 TAGE überfällig</span> — Entscheidung nötig: extern / beenden / fertig
+                <span class="critical">78 TAGE überfällig</span> — Entscheidung nötig: extern / beenden / fertig
             </div>
-            <div class="todo urgent">
+            <div class="todo extreme">
                 <strong>Wittmann Preproduction</strong><br>
-                <span class="negative">7 Tage überfällig</span> — MORGEN FIRST THING
+                <span class="critical">9 Tage überfällig</span> — ERSTE AUFGABE FIRST THING
             </div>
             <div class="todo high">
                 <strong>Niku Fernseher AD</strong><br>
-                <span class="warning">6 Tage überfällig</span> — MORGEN Priorität #2
+                <span class="warning">8 Tage überfällig</span> — Heute
             </div>
             <div class="todo normal">
                 <strong>Golf Club Call</strong><br>
-                <span class="warning">6 Tage überfällig</span> — MORGEN morgen
+                <span class="warning">8 Tage überfällig</span> — Heute morgen
             </div>
         </div>
 
         <div class="card" style="grid-column: 1 / -1;">
-            <h2>🌅 KW 26 RESET — MORGEN (Montag 22.06)</h2>
-            <div class="tomorrow-highlight">
-                <h3>🎯 Prioritäten für Montag</h3>
+            <h2>💡 EMPFEHLUNG FÜR HEUTE</h2>
+            <div class="today-highlight">
+                <h3>⚡ Prioritäten für Montag 22.06</h3>
                 <div style="display: grid; gap: 10px; margin-top: 10px;">
-                    <div class="stat-row" style="background: rgba(239,68,68,0.1); padding: 10px; border-radius: 6px;">
+                    <div class="stat-row" style="background: rgba(239,68,68,0.15); padding: 12px; border-radius: 8px; border: 2px solid #ef4444;">
                         <span>🔥 <strong>Wittmann Preproduction</strong></span>
-                        <span class="critical">FIRST THING</span>
+                        <span class="critical">FIRST THING — 9 Tage</span>
                     </div>
                     <div class="stat-row" style="background: rgba(251,191,36,0.1); padding: 10px; border-radius: 6px;">
                         <span>🎬 <strong>Niku Fernseher AD</strong></span>
-                        <span class="warning">Nach Wittmann</span>
+                        <span class="warning">Heute — 8 Tage</span>
                     </div>
                     <div class="stat-row" style="background: rgba(96,165,250,0.1); padding: 10px; border-radius: 6px;">
                         <span>📞 <strong>Golf Club Call</strong></span>
-                        <span class="warning">Montag morgen</span>
+                        <span class="warning">Heute morgen — 8 Tage</span>
                     </div>
-                    <div class="stat-row" style="background: rgba(239,68,68,0.15); padding: 10px; border-radius: 6px; border: 1px solid #ef4444;">
+                    <div class="stat-row" style="background: rgba(239,68,68,0.12); padding: 10px; border-radius: 6px;">
                         <span>⚠️ <strong>NOMU Entscheidung</strong></span>
-                        <span class="critical">SOFORT — 76 Tage!</span>
+                        <span class="critical">SOFORT — 78 Tage!</span>
                     </div>
                 </div>
             </div>
-            <div class="reset-badge">⏰ 1 TAG BIS RESET</div>
         </div>
 
         <div class="card">
@@ -224,29 +251,44 @@
             </div>
             <div class="pattern">
                 <strong>NOMU = System-Blocker</strong><br>
-                <small>76 Tage überfällig — blockiert ALLE operative Arbeit systematisch</small>
+                <small>78 Tage überfällig — blockiert ALLE operative Arbeit systematisch</small>
             </div>
             <div class="pattern">
-                <strong>7-Tage-Stillstand Wittmann</strong><br>
-                <small>Höchste Überfälligkeit bisher — akutes Kundenrisiko</small>
+                <strong>9-Tage-Stillstand Wittmann</strong><br>
+                <small>Rekord-Überfälligkeit — EXTREMER Kundenrisiko</small>
+            </div>
+            <div class="pattern">
+                <strong>KW 26 RESET-Tag</strong><br>
+                <small>Heute ist der Tag — Wittmann FIRST THING oder nie</small>
             </div>
         </div>
 
         <div class="card">
-            <h2>💡 EMPFEHLUNG</h2>
-            <div class="todo high">
-                <strong>EXTERN HOLEN:</strong> Preproduktion, AD-Erstellung, Calls an VA delegieren
+            <h2>💡 AKTIONSPLAN</h2>
+            <div class="todo extreme">
+                <strong>WITTMANN FIRST THING:</strong> Keine Diskussion, keine Ablenkung — sofort starten
             </div>
             <div class="todo urgent">
-                <strong>NOMU Entscheidung ERZWINGEN:</strong> Heute noch klären — extern / beenden / fertig
+                <strong>EXTERN HOLEN:</strong> Preproduktion, AD-Erstellung, Calls an VA delegieren
+            </div>
+            <div class="todo high">
+                <strong>NOMU Entscheidung ERZWINGEN:</strong> Heute klären — extern / beenden / fertig
             </div>
             <div class="todo normal">
-                <strong>KW 26 als RESET-Woche:</strong> Alle überfälligen Tasks priorisieren, keine neuen Projekte
+                <strong>Max. 1-2 Tasks pro Tag:</strong> 3 waren zu viel — Qualität vor Quantität
             </div>
         </div>
 
         <div class="card">
             <h2>📅 LETZTE 7 TAGE</h2>
+            <div class="stat-row">
+                <span class="stat-label">Mo 22.06</span>
+                <span class="stat-value critical">KW 26 RESET — Heute!</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">So 21.06</span>
+                <span class="stat-value negative">0/0 — KW 25 End</span>
+            </div>
             <div class="stat-row">
                 <span class="stat-label">Sa 20.06</span>
                 <span class="stat-value negative">0/0 — Wochenende</span>
@@ -267,50 +309,42 @@
                 <span class="stat-label">Di 16.06</span>
                 <span class="stat-value negative">0/3</span>
             </div>
-            <div class="stat-row">
-                <span class="stat-label">Mo 15.06</span>
-                <span class="stat-value negative">0/3 — KW 25 Start</span>
-            </div>
-            <div class="stat-row">
-                <span class="stat-label">So 14.06</span>
-                <span class="stat-value warning">KW 24 Abschluss: 7%</span>
-            </div>
         </div>
 
         <div class="card">
             <h2>📋 ÜBERFÄLLIGE TASKS (AKTUELL)</h2>
             <div class="stat-row">
                 <span class="stat-label">NOMU Post-Production</span>
-                <span class="stat-value critical">76 Tage</span>
+                <span class="stat-value critical">78 Tage</span>
             </div>
             <div class="stat-row">
                 <span class="stat-label">Wittmann Preproduction</span>
-                <span class="stat-value negative">7 Tage</span>
+                <span class="stat-value critical">9 Tage</span>
             </div>
             <div class="stat-row">
                 <span class="stat-label">Niku Fernseher AD</span>
-                <span class="stat-value warning">6 Tage</span>
+                <span class="stat-value warning">8 Tage</span>
             </div>
             <div class="stat-row">
                 <span class="stat-label">Golf Club Call</span>
-                <span class="stat-value warning">6 Tage</span>
+                <span class="stat-value warning">8 Tage</span>
             </div>
         </div>
     </div>
 
     <div class="update-info">
-        <strong>🔄 v5.6.64 Update:</strong> Nachmittags-Update — Sonntag 16:04 · KW 26 RESET — MORGEN geht's los!
-        <br><small>Previous: v5.6.63 (2026-06-21 12:04) | Trigger: dashboard-update-4h-v2</small>
+        <strong>🔄 v5.6.67 Update:</strong> Morgen-Update — Montag 08:04 · KW 26 RESET-Tag Tag 1! ☀️ Arbeitstag beginnt — ERSTE AUFGABE: Wittmann FIRST THING
+        <br><small>Previous: v5.6.66 (2026-06-22 04:04) | Trigger: dashboard-update-4h-v2</small>
     </div>
 
     <div class="footer">
-        <p>VENTURE CTRL v5.6.64 · Automatisch generiert via dashboard-update-4h-v2</p>
-        <p>Letztes Update: 2026-06-21 16:04 (Europe/Berlin)</p>
+        <p>VENTURE CTRL v5.6.67 · Automatisch generiert via dashboard-update-4h-v2</p>
+        <p>Letztes Update: 2026-06-22 08:04 (Europe/Berlin)</p>
     </div>
 
     <script>
-        console.log('VENTURE CTRL v5.6.64 loaded');
-        console.log('Mode: AFTERNOON | KW 26 RESET | MORGEN geht es los');
+        console.log('VENTURE CTRL v5.6.67 loaded');
+        console.log('Mode: MORNING | KW 26 RESET-Tag Tag 1 | ☀️ Arbeitstag beginnt!');
     </script>
 </body>
 </html>
