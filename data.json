@@ -1,6 +1,6 @@
 {
   "version": "v5.6.74",
-  "lastUpdated": "2026-06-24T00:04:00+02:00",
+  "lastUpdated": "2026-06-24T04:04:00+02:00",
   "week": "KW 26 Tag 3",
   "mode": "NIGHT",
   "summary": {
@@ -13,7 +13,7 @@
   "today": {
     "date": "2026-06-24",
     "day": "Mittwoch",
-    "time": "00:04",
+    "time": "04:04",
     "completed": 0,
     "total": 4,
     "tasks": [
@@ -132,11 +132,11 @@
     "trigger": "dashboard-update-4h-v2",
     "previousVersion": "v5.6.73",
     "currentVersion": "v5.6.74",
-    "interval": "4 Stunden (NIGHT Mode, neuer Tag)",
+    "interval": "4 Stunden (NIGHT Mode, KW 26 Tag 3 beginnt)",
     "note": "Nacht-Update — 🌙 KW 26 Tag 3 beginnt: LETZTE CHANCE nach 0/8 Tasks!"
   },
   "updateHistory": [
-    "v5.6.74 — 2026-06-24 00:04 — Aktuell (NIGHT Mode, KW 26 Tag 3 beginnt, 🌙 LETZTE CHANCE!)",
+    "v5.6.74 — 2026-06-24 04:04 — Aktuell (NIGHT Mode, KW 26 Tag 3 beginnt, 🌙 LETZTE CHANCE!)",
     "v5.6.73 — 2026-06-23 20:04 — EVENING Mode, KW 26 Tag 2 beendet",
     "v5.6.72 — 2026-06-23 12:04 — MIDDAY Mode, KW 26 Tag 2",
     "v5.6.71 — 2026-06-23 00:04 — NIGHT Mode, KW 26 Tag 2 beginnt",
