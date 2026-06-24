@@ -1,8 +1,8 @@
 {
-  "version": "v5.6.77",
-  "lastUpdated": "2026-06-24T16:04:00+02:00",
+  "version": "v5.6.78",
+  "lastUpdated": "2026-06-24T18:04:00+02:00",
   "week": "KW 26",
-  "mode": "AFTERNOON",
+  "mode": "EVENING",
   "summary": {
     "tasksCompleted": 0,
     "tasksTotal": 4,
@@ -13,11 +13,11 @@
   "today": {
     "date": "2026-06-24",
     "day": "Mittwoch",
-    "time": "16:04",
+    "time": "18:04",
     "completed": 0,
     "total": 4,
     "tasks": [],
-    "note": "🌅 KW 26 Tag 3 — AFTERNOON Update, Wittmann jetzt 11 Tage überfällig, NOMU 80 Tage REKORD"
+    "note": "🌙 KW 26 Tag 3 — EVENING Update, Wittmann jetzt 11 Tage überfällig, NOMU 80 Tage REKORD, Tag fast vorbei"
   },
   "critical": [
     {"task": "NOMU Post-Production", "overdue": 80, "days": 80, "type": "post-production", "priority": "critical", "note": "80 TAGE — NEUER REKORD — Entscheidung SOFORT: extern/beenden/fertig"}
@@ -30,8 +30,8 @@
   "completedToday": [],
   "completedWeek": [],
   "upcoming": [
-    {"event": "KW 26 Tag 3", "date": "Mittwoch 24.06", "type": "reset", "note": "☀️ LETZTE CHANCE nach 0/8 Tasks in KW 26", "priority": "critical"},
-    {"event": "Wittmann Preproduction", "date": "Mittwoch FIRST THING", "type": "production", "note": "11 Tage überfällig — LETZTE CHANCE", "priority": "critical"},
+    {"event": "KW 26 Tag 3", "date": "Mittwoch 24.06", "type": "reset", "note": "🌙 LETZTE CHANCE vorbei — Abendphase, max 3-4 Stunden verbleibend", "priority": "critical"},
+    {"event": "Wittmann Preproduction", "date": "Mittwoch FIRST THING", "type": "production", "note": "11 Tage überfällig — LETZTE CHANCE — Abend noch möglich", "priority": "critical"},
     {"event": "Niku AD", "date": "Mittwoch", "type": "content", "note": "10 Tage überfällig — heute erledigen", "priority": "high"},
     {"event": "Golf Call", "date": "Mittwoch", "type": "call", "note": "10 Tage überfällig — heute erledigen", "priority": "medium"},
     {"event": "NOMU Entscheidung", "date": "SOFORT", "type": "decision", "note": "⚠️ 80 Tage überfällig — NEUER REKORD — SOFORT extern vergeben oder beenden", "priority": "critical"}
@@ -46,7 +46,7 @@
     "completed": 0,
     "planned": 4,
     "successRate": "0%",
-    "notes": "KW 26 Tag 3: 0/8 bisher — LETZTE CHANCE heute"
+    "notes": "KW 26 Tag 3: 0/8 bisher — Abendphase, noch 3-4 Stunden"
   },
   "kw25Summary": {
     "totalTasks": 15,
@@ -58,7 +58,7 @@
     ]
   },
   "kw26Plan": {
-    "focus": "KW 26 Tag 3 LETZTE CHANCE — 0/8 bisher",
+    "focus": "KW 26 Tag 3 LETZTE CHANCE — 0/8 bisher — Abendphase",
     "blockerToResolve": "NOMU Entscheidung (80 Tage — NEUER REKORD)",
     "startDate": "2026-06-24",
     "priorities": [
@@ -69,7 +69,7 @@
     ]
   },
   "history": [
-    {"date": "2026-06-24", "completed": 0, "total": 4, "note": "Mittwoch — KW 26 Tag 3, MIDDAY Update, Wittmann 11 Tage"},
+    {"date": "2026-06-24", "completed": 0, "total": 4, "note": "Mittwoch — KW 26 Tag 3, EVENING Update, Wittmann 11 Tage"},
     {"date": "2026-06-23", "completed": 0, "total": 4, "note": "Dienstag — KW 26 Tag 2, 0/4 verpasst"},
     {"date": "2026-06-22", "completed": 0, "total": 4, "note": "Montag — KW 26 Tag 1, 0/4 verpasst"},
     {"date": "2026-06-21", "completed": 0, "total": 0, "note": "Sonntag — KW 25 Abschluss, 0% Erfolgsrate"},
@@ -81,31 +81,31 @@
     {"date": "2026-06-15", "completed": 0, "total": 3, "note": "Montag — KW 25 Tag 1, 0/3"}
   ],
   "insights": {
-    "pattern": "KW 25 Totalausfall + KW 26 Tag 1+2 verpasst — historische Serie",
+    "pattern": "KW 25 Totalausfall + KW 26 Tag 1+2+3 verpasst — historische Serie",
     "blocker": "NOMU 80 Tage — NEUER REKORD — systematischer Blocker",
-    "momentum": "Vollständiger Stillstand seit 9+ Tagen",
-    "focus": "Mittwoch: Wittmann FIRST THING (11 Tage), dann NOMU-Entscheidung",
+    "momentum": "Vollständiger Stillstand seit 9+ Tagen, Abendphase läuft",
+    "focus": "Mittwoch Abend: Wittmann noch möglich (max 3-4 Stunden)",
     "recommendation": "EXTERN HOLEN SOFORT: Preproduction, AD-Erstellung, Calls an VA"
   },
   "analysis": {
     "strength": "Strategische Arbeit, Pitches, wichtige Meetings",
-    "weakness": "Operative Routine, Post-Production, Calls — kompletter Stillstand KW 25 + KW 26 Tag 1+2",
-    "solution": "KW 26 Tag 3 als LETZTE CHANCE + SOFORT Externe Ressourcen"
+    "weakness": "Operative Routine, Post-Production, Calls — kompletter Stillstand KW 25 + KW 26 bisher",
+    "solution": "KW 26 Tag 3 Abend als LETZTE CHANCE + SOFORT Externe Ressourcen"
   },
   "cronUpdate": {
     "trigger": "dashboard-update-4h-v2",
-    "previousVersion": "v5.6.76",
-    "currentVersion": "v5.6.77",
-    "interval": "4 Stunden (AFTERNOON Mode)",
-    "note": "AFTERNOON Update — KW 26 Mittwoch Tag 3, Wittmann 11 Tage überfällig, NOMU 80 Tage REUER REKORD"
+    "previousVersion": "v5.6.77",
+    "currentVersion": "v5.6.78",
+    "interval": "4 Stunden (EVENING Mode)",
+    "note": "EVENING Update — KW 26 Mittwoch Tag 3 Abend, Wittmann 11 Tage überfällig, NOMU 80 Tage REKORD"
   },
   "updateHistory": [
-    "v5.6.77 — 2026-06-24 16:04 — Aktuell (AFTERNOON Mode, KW 26 Tag 3, 🌅 Wittmann 11 Tage, NOMU 80 Tage NEUER REKORD)",
+    "v5.6.78 — 2026-06-24 18:04 — Aktuell (EVENING Mode, KW 26 Tag 3 Abend, 🌙 Wittmann 11 Tage, NOMU 80 Tage NEUER REKORD)",
+    "v5.6.77 — 2026-06-24 16:04 — AFTERNOON Mode, KW 26 Tag 3, 🌅 Wittmann 11 Tage, NOMU 80 Tage NEUER REKORD",
     "v5.6.76 — 2026-06-24 12:04 — MIDDAY Mode, KW 26 Tag 3, ☀️ Wittmann 11 Tage, NOMU 80 Tage NEUER REKORD",
     "v5.6.75 — 2026-06-24 08:04 — MORNING Mode, KW 26 Tag 3",
     "v5.6.74 — 2026-06-24 04:04 — NIGHT Mode, KW 26 Tag 3 beginnt",
-    "v5.6.73 — 2026-06-23 14:04 — AFTERNOON Mode, KW 26 Tag 2",
-    "v5.6.72 — 2026-06-23 12:04 — MIDDAY Mode, KW 26 Tag 2"
+    "v5.6.73 — 2026-06-23 14:04 — AFTERNOON Mode, KW 26 Tag 2"
   ],
   "timeSessions": [],
   "income": [],
