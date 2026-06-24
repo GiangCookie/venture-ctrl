@@ -1,8 +1,8 @@
 {
-  "version": "v5.6.76",
-  "lastUpdated": "2026-06-24T12:04:00+02:00",
+  "version": "v5.6.77",
+  "lastUpdated": "2026-06-24T16:04:00+02:00",
   "week": "KW 26",
-  "mode": "MIDDAY",
+  "mode": "AFTERNOON",
   "summary": {
     "tasksCompleted": 0,
     "tasksTotal": 4,
@@ -13,11 +13,11 @@
   "today": {
     "date": "2026-06-24",
     "day": "Mittwoch",
-    "time": "12:04",
+    "time": "16:04",
     "completed": 0,
     "total": 4,
     "tasks": [],
-    "note": "☀️ KW 26 Tag 3 — MIDDAY Update, Wittmann jetzt 11 Tage überfällig, NOMU 80 Tage REKORD"
+    "note": "🌅 KW 26 Tag 3 — AFTERNOON Update, Wittmann jetzt 11 Tage überfällig, NOMU 80 Tage REKORD"
   },
   "critical": [
     {"task": "NOMU Post-Production", "overdue": 80, "days": 80, "type": "post-production", "priority": "critical", "note": "80 TAGE — NEUER REKORD — Entscheidung SOFORT: extern/beenden/fertig"}
@@ -94,13 +94,14 @@
   },
   "cronUpdate": {
     "trigger": "dashboard-update-4h-v2",
-    "previousVersion": "v5.6.75",
-    "currentVersion": "v5.6.76",
-    "interval": "4 Stunden (MIDDAY Mode)",
-    "note": "MIDDAY Update — KW 26 Mittwoch Tag 3, Wittmann 11 Tage überfällig, NOMU 80 Tage NEUER REKORD"
+    "previousVersion": "v5.6.76",
+    "currentVersion": "v5.6.77",
+    "interval": "4 Stunden (AFTERNOON Mode)",
+    "note": "AFTERNOON Update — KW 26 Mittwoch Tag 3, Wittmann 11 Tage überfällig, NOMU 80 Tage REUER REKORD"
   },
   "updateHistory": [
-    "v5.6.76 — 2026-06-24 12:04 — Aktuell (MIDDAY Mode, KW 26 Tag 3, ☀️ Wittmann 11 Tage, NOMU 80 Tage NEUER REKORD)",
+    "v5.6.77 — 2026-06-24 16:04 — Aktuell (AFTERNOON Mode, KW 26 Tag 3, 🌅 Wittmann 11 Tage, NOMU 80 Tage NEUER REKORD)",
+    "v5.6.76 — 2026-06-24 12:04 — MIDDAY Mode, KW 26 Tag 3, ☀️ Wittmann 11 Tage, NOMU 80 Tage NEUER REKORD",
     "v5.6.75 — 2026-06-24 08:04 — MORNING Mode, KW 26 Tag 3",
     "v5.6.74 — 2026-06-24 04:04 — NIGHT Mode, KW 26 Tag 3 beginnt",
     "v5.6.73 — 2026-06-23 14:04 — AFTERNOON Mode, KW 26 Tag 2",
