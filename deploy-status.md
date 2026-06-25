@@ -1,63 +1,65 @@
-# Deployment Status v5.6.76
+# Dashboard Deployment Status — v5.6.75
 
-**Letztes Update:** Mittwoch, 24. Juni 2026, 12:04 Uhr  
-**Version:** v5.6.76  
-**Trigger:** dashboard-update-4h-v2 (Cron)
-
-## Deployed Files
-
-| Datei | Pfad | Status | Größe |
-|-------|------|--------|-------|
-| index.html | dist/index.html | ✅ v5.6.76 | ~17 KB |
-| dashboard-data.json | dist/dashboard-data.json | ✅ v5.6.76 | ~8 KB |
-| dashboard.html | dashboard.html (root) | ✅ Gespiegelt | ~17 KB |
-| data.json | data.json (root) | ✅ Gespiegelt | ~8 KB |
-| index.html | index.html (root) | ✅ Gespiegelt | ~17 KB |
-| dashboard-data.json | dashboard-data.json (root) | ✅ Gespiegelt | ~8 KB |
-
-## Änderungen v5.6.75 → v5.6.76
-
-### Zeit & Datum
-- **Neu:** Mittwoch, 24. Juni 2026, 12:04 Uhr
-- **KW:** KW 26 Tag 3 — LETZTE CHANCE
-- **Modus:** ☀️ MORNING → ☀️ MIDDAY
-
-### Neue Rekorde
-| Task | Alt | Neu | Status |
-|------|-----|-----|--------|
-| NOMU Post-Production | 79 Tage | **80 TAGE** | ⚠️ NEUER REKORD |
-| Wittmann Preproduction | 10 Tage | **11 TAGE** | 🔥 LETZTE CHANCE |
-| Niku Fernseher AD | 9 Tage | **10 TAGE** | 🎯 Heute |
-| Golf Club Call | 9 Tage | **10 TAGE** | 🎯 Heute |
-
-### KW 26 Status
-- **Tag 1 (Mo):** 0/4 Tasks — verpasst
-- **Tag 2 (Di):** 0/4 Tasks — verpasst
-- **Tag 3 (Mi):** 0/4 läuft — **LETZTE CHANCE**
-- **Gesamt:** 0/12 Tasks (0%)
-
-### Highlights
-- ☀️ **MIDDAY Mode:** Mittags-Update, Nachmittag zum Erledigen
-- 🎯 **KW 26 Tag 3:** LETZTE CHANCE nach 0/8 in KW 26
-- 🔥 **Wittmann:** 11 Tage überfällig — ERSTE AUFGABE
-- ⚠️ **NOMU 80 Tage:** NEUER REKORD — SOFORT entscheiden
-
-### Empfohlener Nachmittag
-- **12:30-14:00:** Wittmann Preproduction (FIRST THING)
-- **14:00-15:30:** Niku AD Erstellung
-- **15:30-16:00:** Golf Club Call
-- **16:00-17:00:** NOMU Entscheidung
-
-## URLs
-- GitHub Pages: https://philippnagel.github.io/venture-ctrl/
-- Lokale Preview: dist/index.html
-
-## Nächster Cron
-- **Trigger:** dashboard-update-4h-v2
-- **Geplant:** 2026-06-24 16:04 Uhr
-- **Erwarteter Modus:** MIDDAY → AFTERNOON
+**Zeit:** Donnerstag, 25. Juni 2026, 08:04 CET  
+**Version:** v5.6.75  
+**Status:** ✅ ERFOLGREICH DEPLOYED
 
 ---
 
-*Automatisch generiert via venture-ctrl dashboard-update-4h-v2*  
-*Letztes Update: 2026-06-24 12:04 CET*
+## 🚀 DEPLOYMENT ÜBERSICHT
+
+| Datei | Ziel | Status |
+|-------|------|--------|
+| `dist/index.html` | Haupt-Dashboard | ✅ v5.6.75 |
+| `dist/dashboard-data.json` | Daten-API | ✅ v5.6.75 |
+| `index.html` | Spiegel (Root) | ✅ v5.6.75 |
+| `data.json` | Spiegel (Root) | ✅ v5.6.75 |
+| `dashboard.html` | Workspace-Spiegel | ✅ v5.6.75 |
+| `../dashboard.html` | Workspace-Root | ✅ v5.6.75 |
+| `../dashboard-data.json` | Workspace-Root | ✅ v5.6.75 |
+
+---
+
+## 📊 UPDATE-ZUSAMMENFASSUNG
+
+### Änderungen v5.6.74 → v5.6.75
+
+- **Zeit:** Mittwoch 24.06 00:04 → Donnerstag 25.06 08:04
+- **Modus:** 🌙 NIGHT → ☀️ MORNING
+- **Tag:** KW 26 Tag 3 → **KW 26 Tag 4**
+- **Wittmann:** 10 Tage → **11 TAGE** überfällig
+- **Niku:** 9 Tage → **10 TAGE** überfällig
+- **Golf:** 9 Tage → **10 TAGE** überfällig
+- **NOMU:** 79 Tage → **80 TAGE** überfällig (NEUER REKORD!)
+
+### Neue Features
+- ☀️ MORNING Mode Badge
+- KW 26 Tag 4 — Neuer Versuch nach 3 verpassten Tagen
+- Aktualisierte überfällige Tasks (+1 Tag)
+- NOMU 80 TAGE — NEUER SYSTEM-BLOCKER REKORD
+
+### Kritische Metriken
+- **KW 26 bisher:** 0/12 Tasks (0%)
+- **Tage verpasst:** 3 (Montag, Dienstag, Mittwoch)
+- **Wittmann:** 11 TAGE überfällig — DRINGENDSTE PRIORITÄT
+- **NOMU:** 80 TAGE überfällig — SOFORT Entscheidung nötig
+
+---
+
+## 📝 MEMORY-LOG
+
+- **Erstellt:** `memory/2026-06-25-dashboard-update-v5-6-75.md`
+- **Größe:** ~4.1 KB
+
+---
+
+## ✅ NÄCHSTE SCHRITTE
+
+1. Dashboard live prüfen
+2. Tasks für heute (KW 26 Tag 4) priorisieren
+3. NOMU Entscheidung erzwingen
+
+---
+
+*Automatisch deployed via dashboard-update-4h-v2*  
+*Timestamp: 2026-06-25 08:04 CET*

@@ -1,8 +1,8 @@
 {
-  "version": "v5.6.79",
-  "lastUpdated": "2026-06-25T00:04:00+02:00",
+  "version": "v5.6.82",
+  "lastUpdated": "2026-06-25T14:04:00+02:00",
   "week": "KW 26",
-  "mode": "NIGHT",
+  "mode": "AFTERNOON",
   "summary": {
     "tasksCompleted": 0,
     "tasksTotal": 4,
@@ -13,40 +13,40 @@
   "today": {
     "date": "2026-06-25",
     "day": "Donnerstag",
-    "time": "00:04",
+    "time": "16:04",
     "completed": 0,
     "total": 4,
     "tasks": [],
-    "note": "🌙 KW 26 Tag 4 — NIGHT Update, neuer Tag beginnt, Wittmann jetzt 12 Tage überfällig, NOMU 81 Tage REKORD"
+    "note": "🌤️ KW 26 Tag 4 AFTERNOON — LETZTE CHANCE HEUTE, Wittmann 12 Tage, NOMU 81 TAGE REKORD, Zeit läuft"
   },
   "critical": [
-    {"task": "NOMU Post-Production", "overdue": 81, "days": 81, "type": "post-production", "priority": "critical", "note": "81 TAGE — NEUER REKORD — Entscheidung SOFORT: extern/beenden/fertig"}
+    {"task": "NOMU Post-Production", "overdue": 81, "days": 81, "type": "post-production", "priority": "critical", "note": "81 TAGE — HISTORISCHER REKORD — Entscheidung SOFORT ERZWINGEN: extern/beenden/fertig"}
   ],
   "overdue": [
-    {"task": "Wittmann Preproduction", "days": 12, "type": "production", "priority": "critical", "note": "12 Tage — ERSTE AUFGABE — ERNSTE LETZTE CHANCE"},
-    {"task": "Niku Fernseher AD", "days": 11, "type": "content", "priority": "high", "note": "KW 26 Donnerstag — FIRST THING"},
-    {"task": "Golf Club Call", "days": 11, "type": "call", "priority": "medium", "note": "KW 26 Donnerstag — morgen erledigen"}
+    {"task": "Wittmann Preproduction", "days": 12, "type": "production", "priority": "critical", "note": "12 Tage — HEUTE ODER NIE — SOFORT STARTEN"},
+    {"task": "Niku Fernseher AD", "days": 11, "type": "content", "priority": "high", "note": "KW 26 Donnerstag — Minimalversion SOFORT nach Wittmann"},
+    {"task": "Golf Club Call", "days": 11, "type": "call", "priority": "medium", "note": "KW 26 Donnerstag — Quick-Call möglich"}
   ],
   "completedToday": [],
   "completedWeek": [],
   "upcoming": [
-    {"event": "KW 26 Tag 4", "date": "Donnerstag 25.06", "type": "reset", "note": "🌙 NEUER TAG — ERNSTE LETZTE CHANCE vor Wochenende", "priority": "critical"},
-    {"event": "Wittmann Preproduction", "date": "Donnerstag FIRST THING", "type": "production", "note": "12 Tage überfällig — ERNSTE LETZTE CHANCE — morgen früh sofort", "priority": "critical"},
-    {"event": "Niku AD", "date": "Donnerstag", "type": "content", "note": "11 Tage überfällig — morgen erledigen", "priority": "high"},
-    {"event": "Golf Call", "date": "Donnerstag", "type": "call", "note": "11 Tage überfällig — morgen erledigen", "priority": "medium"},
-    {"event": "NOMU Entscheidung", "date": "SOFORT", "type": "decision", "note": "⚠️ 81 Tage überfällig — NEUER REKORD — SOFORT extern vergeben oder beenden", "priority": "critical"}
+    {"event": "KW 26 Tag 4 AFTERNOON", "date": "Donnerstag 25.06 16:04", "type": "reset", "note": "🌤️ AFTERNOON — LETZTE CHANCE HEUTE", "priority": "critical"},
+    {"event": "Wittmann Preproduction", "date": "Donnerstag SOFORT", "type": "production", "note": "12 Tage überfällig — HEUTE ODER NIE", "priority": "critical"},
+    {"event": "Niku AD", "date": "Donnerstag Nachmittag", "type": "content", "note": "11 Tage überfällig — Minimalversion", "priority": "high"},
+    {"event": "Golf Call", "date": "Donnerstag spät", "type": "call", "note": "11 Tage überfällig — Quick-Call", "priority": "medium"},
+    {"event": "NOMU Entscheidung", "date": "HEUTE ABEND", "type": "decision", "note": "🔥 81 TAGE REKORD — Entscheidung ERZWINGEN", "priority": "critical"}
   ],
   "patterns": [
     {"name": "KW 25 Totalausfall", "description": "Erste vollständig verfehlte Woche: 0/15 Tasks — historischer Rekord", "status": "critical"},
-    {"name": "KW 26 Tag 1+2+3 verpasst", "description": "Montag+Dienstag+Mittwoch: 0/12 Tasks — ERNSTE LETZTE CHANCE", "status": "critical"},
-    {"name": "NOMU = System-Blocker", "description": "81 Tage überfällig — NEUER REKORD — blockiert ALLE operative Arbeit", "status": "critical"}
+    {"name": "KW 26 Tag 1+2+3+4 verpasst", "description": "Montag bis Donnerstag AFTERNOON: 0/16 Tasks — LETZTE CHANCE", "status": "critical"},
+    {"name": "NOMU = System-Blocker", "description": "81 Tage überfällig — HISTORISCHER REKORD — blockiert ALLE operative Arbeit", "status": "critical"}
   ],
   "weekly": {
     "week": "KW 26",
     "completed": 0,
     "planned": 4,
     "successRate": "0%",
-    "notes": "KW 26 Tag 4 beginnt: 0/12 bisher — ERNSTE LETZTE CHANCE vor Wochenende"
+    "notes": "KW 26 Tag 4 AFTERNOON: 0/16 bisher — LETZTE CHANCE HEUTE"
   },
   "kw25Summary": {
     "totalTasks": 15,
@@ -58,17 +58,18 @@
     ]
   },
   "kw26Plan": {
-    "focus": "KW 26 Tag 4 ERNSTE LETZTE CHANCE — 0/12 bisher — nur noch Donnerstag+Freitag",
-    "blockerToResolve": "NOMU Entscheidung (81 Tage — NEUER REKORD)",
+    "focus": "KW 26 Tag 4 AFTERNOON LETZTE CHANCE — 0/16 bisher — heute ist DIE letzte echte Chance",
+    "blockerToResolve": "NOMU Entscheidung (81 TAGE HISTORISCHER REKORD)",
     "startDate": "2026-06-25",
     "priorities": [
-      "Wittmann Preproduction (FIRST THING — 12 Tage überfällig — ERNSTE LETZTE CHANCE)",
-      "Niku AD (sofort nach Wittmann — 11 Tage)",
-      "Golf Call (Donnerstag — 11 Tage)",
-      "NOMU Entscheidung (SOFORT — 81 Tage — NEUER REKORD)"
+      "Wittmann Preproduction (SOFORT — 12 Tage — HEUTE ODER NIE)",
+      "Niku AD Minimalversion (nach Wittmann — 11 Tage)",
+      "Golf Quick-Call (Donnerstag spät — 11 Tage)",
+      "NOMU Entscheidung (HEUTE ABEND — 81 TAGE REKORD)"
     ]
   },
   "history": [
+    {"date": "2026-06-25", "completed": 0, "total": 4, "note": "Donnerstag AFTERNOON — KW 26 Tag 4 AFTERNOON, 0/4 Tasks, LETZTE CHANCE"},
     {"date": "2026-06-24", "completed": 0, "total": 4, "note": "Mittwoch — KW 26 Tag 3 verpasst, 0/4 Tasks"},
     {"date": "2026-06-23", "completed": 0, "total": 4, "note": "Dienstag — KW 26 Tag 2 verpasst, 0/4 Tasks"},
     {"date": "2026-06-22", "completed": 0, "total": 4, "note": "Montag — KW 26 Tag 1 verpasst, 0/4 Tasks"},
@@ -77,43 +78,41 @@
     {"date": "2026-06-19", "completed": 0, "total": 3, "note": "Freitag — KW 25 Tag 5, 0/3"},
     {"date": "2026-06-18", "completed": 0, "total": 3, "note": "Donnerstag — 0/3"},
     {"date": "2026-06-17", "completed": 0, "total": 3, "note": "Mittwoch — 0/3"},
-    {"date": "2026-06-16", "completed": 0, "total": 3, "note": "Dienstag — 0/3"},
-    {"date": "2026-06-15", "completed": 0, "total": 3, "note": "Montag — KW 25 Tag 1, 0/3"}
+    {"date": "2026-06-16", "completed": 0, "total": 3, "note": "Dienstag — 0/3"}
   ],
   "insights": {
-    "pattern": "KW 25 Totalausfall + KW 26 Tag 1+2+3 verpasst — 0/12 Tasks",
-    "blocker": "NOMU 81 Tage — NEUER REKORD — systematischer Blocker",
-    "momentum": "Vollständiger Stillstand seit 9+ Tagen, Tag 4 beginnt",
-    "focus": "Donnerstag: Wittmann FIRST THING — ERNSTE LETZTE CHANCE vor Wochenende",
+    "pattern": "KW 25 Totalausfall + KW 26 Tag 1+2+3+4 verpasst — 0/16 Tasks",
+    "blocker": "NOMU 81 TAGE — HISTORISCHER SYSTEM-BLOCKER",
+    "momentum": "Vollständiger Stillstand seit 9+ Tagen",
+    "focus": "Donnerstag AFTERNOON: Wittmann SOFORT — LETZTE CHANCE",
     "recommendation": "EXTERN HOLEN SOFORT: Preproduction, AD-Erstellung, Calls an VA"
   },
   "analysis": {
     "strength": "Strategische Arbeit, Pitches, wichtige Meetings",
     "weakness": "Operative Routine, Post-Production, Calls — kompletter Stillstand KW 25 + KW 26 bisher",
-    "solution": "KW 26 Tag 4 als ERNSTE LETZTE CHANCE + SOFORT Externe Ressourcen"
+    "solution": "KW 26 Tag 4 AFTERNOON als LETZTE CHANCE + SOFORT Externe Ressourcen"
   },
   "cronUpdate": {
     "trigger": "dashboard-update-4h-v2",
-    "previousVersion": "v5.6.78",
-    "currentVersion": "v5.6.79",
-    "interval": "4 Stunden (NIGHT Mode)",
-    "note": "NIGHT Update — KW 26 Donnerstag Tag 4 beginnt, Wittmann 12 Tage, NOMU 81 Tage NEUER REKORD"
+    "previousVersion": "v5.6.81",
+    "currentVersion": "v5.6.82",
+    "interval": "4 Stunden (AFTERNOON Mode)",
+    "note": "AFTERNOON Update — KW 26 Donnerstag Tag 4 AFTERNOON, Wittmann 12 Tage, NOMU 81 TAGE REKORD, LETZTE CHANCE"
   },
   "updateHistory": [
-    "v5.6.79 — 2026-06-25 00:04 — Aktuell (NIGHT Mode, KW 26 Tag 4 beginnt, 🌙 Wittmann 12 Tage, NOMU 81 Tage NEUER REKORD)",
-    "v5.6.78 — 2026-06-24 18:04 — EVENING Mode, KW 26 Tag 3 verpasst, 🌙 Wittmann 11 Tage, NOMU 80 Tage",
-    "v5.6.77 — 2026-06-24 16:04 — AFTERNOON Mode, KW 26 Tag 3",
-    "v5.6.76 — 2026-06-24 12:04 — MIDDAY Mode, KW 26 Tag 3",
-    "v5.6.75 — 2026-06-24 08:04 — MORNING Mode, KW 26 Tag 3",
-    "v5.6.74 — 2026-06-24 04:04 — NIGHT Mode, KW 26 Tag 3"
+    "v5.6.82 — 2026-06-25 14:04 UTC — Aktuell (AFTERNOON Mode, KW 26 Tag 4 AFTERNOON, 🌤️ Wittmann 12 Tage, NOMU 81 TAGE, LETZTE CHANCE!)",
+    "v5.6.81 — 2026-06-25 10:04 — MIDDAY Mode, KW 26 Tag 4 MIDDAY, ☀️ Wittmann 12 Tage, NOMU 81 Tage",
+    "v5.6.80 — 2026-06-25 04:04 — MORNING Mode, KW 26 Tag 4 MORNING, 🌅 Wittmann 12 Tage, NOMU 81 Tage",
+    "v5.6.79 — 2026-06-25 00:04 — NIGHT Mode, KW 26 Tag 4 beginnt, 🌙 Wittmann 12 Tage, NOMU 81 Tage",
+    "v5.6.78 — 2026-06-24 18:04 — EVENING Mode, KW 26 Tag 3 verpasst, 🌙 Wittmann 11 Tage, NOMU 80 Tage"
   ],
   "timeSessions": [],
   "income": [],
   "todos": [
-    {"id": 1, "text": "Wittmann Preproduction", "priority": "critical", "completed": false, "project": "freelance", "overdue": 12, "note": "12 Tage — ERSTE AUFGABE — ERNSTE LETZTE CHANCE"},
-    {"id": 2, "text": "Niku Fernseher AD", "priority": "high", "completed": false, "project": "tough-cookie", "overdue": 11, "note": "Donnerstag erledigen"},
-    {"id": 3, "text": "Golf Club Call", "priority": "medium", "completed": false, "project": "tough-cookie", "overdue": 11, "note": "Donnerstag erledigen"},
-    {"id": 4, "text": "NOMU Post-Production", "priority": "critical", "completed": false, "project": "nomu", "overdue": 81, "note": "81 TAGE — NEUER REKORD — Entscheidung SOFORT"}
+    {"id": 1, "text": "Wittmann Preproduction", "priority": "critical", "completed": false, "project": "freelance", "overdue": 12, "note": "12 Tage — HEUTE ODER NIE — SOFORT STARTEN"},
+    {"id": 2, "text": "Niku Fernseher AD", "priority": "high", "completed": false, "project": "tough-cookie", "overdue": 11, "note": "Donnerstag — Minimalversion"},
+    {"id": 3, "text": "Golf Club Call", "priority": "medium", "completed": false, "project": "tough-cookie", "overdue": 11, "note": "Donnerstag — Quick-Call"},
+    {"id": 4, "text": "NOMU Post-Production", "priority": "critical", "completed": false, "project": "nomu", "overdue": 81, "note": "81 TAGE REKORD — Entscheidung HEUTE ABEND"}
   ],
   "pipeline": [],
   "activeSession": null,
