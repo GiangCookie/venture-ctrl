@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VENTURE CTRL v5.6.83</title>
+    <title>VENTURE CTRL v5.6.84</title>
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
@@ -222,25 +222,9 @@
             font-size: 0.7rem;
             font-weight: bold;
         }
-        .midday-badge {
-            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
-            color: #1f2937;
-            padding: 2px 10px;
-            border-radius: 12px;
-            font-size: 0.7rem;
-            font-weight: bold;
-        }
-        .evening-badge {
-            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
-            color: white;
-            padding: 2px 10px;
-            border-radius: 12px;
-            font-size: 0.7rem;
-            font-weight: bold;
-        }
         .night-badge {
-            background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);
-            color: #c7d2fe;
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
             padding: 2px 10px;
             border-radius: 12px;
             font-size: 0.7rem;
@@ -250,40 +234,40 @@
 </head>
 <body>
     <div class="header">
-        <span class="version-badge">v5.6.83</span>
+        <span class="version-badge">v5.6.84</span>
         <h1>🚀 VENTURE CTRL</h1>
-        <p>Donnerstag, 25. Juni 2026 — 18:04 Uhr <span class="kw-badge">KW 26</span></p>
+        <p>Freitag, 26. Juni 2026 — 00:04 Uhr <span class="kw-badge">KW 26 Tag 5</span></p>
     </div>
 
     <!-- Critical Alert Banner -->
     <div class="alert-banner">
-        <h3>🌙 EVENING MODE — LETZTE CHANCE HEUTE</h3>
-        <p>🔴 0/16 Tasks (0%) — Wittmann 12 Tage überfällig — NOMU 81 TAGE HISTORISCHER REKORD!</p>
+        <h3>🌙 NIGHT MODE — KW 26 Tag 5 beginnt</h3>
+        <p>🔴 0/16 Tasks bisher (0%) — Wittmann 13 Tage, NOMU 82 TAGE REKORD!</p>
     </div>
 
     <div class="grid">
-        <!-- KW 26 Tag 4 -->
+        <!-- KW 26 Status -->
         <div class="card">
-            <h2>🌙 KW 26 TAG 4 — EVENING</h2>
+            <h2>🌅 KW 26 STATUS — Tag 5</h2>
             <div class="masterplan-box">
                 <div class="stat-row">
-                    <span class="stat-label">KW 26 bisher:</span>
+                    <span class="stat-label">KW 26 Ergebnis:</span>
                     <span class="gap-value">0/16 Tasks (0%)</span>
                 </div>
                 <div class="stat-row">
                     <span class="stat-label">Heute:</span>
-                    <span class="target-value">Tag 4 — EVENING</span>
+                    <span class="target-value">Freitag 26.06.2026</span>
                 </div>
                 <div class="stat-row">
-                    <span class="stat-label">Status:</span>
-                    <span class="critical">🔥 LETZTE CHANCE</span>
+                    <span class="stat-label">Priorität #1:</span>
+                    <span class="critical">Wittmann Preproduction (13 Tage)</span>
                 </div>
                 <div class="stat-row">
-                    <span class="stat-label">Wochenende:</span>
-                    <span>Nur noch heute Abend + morgen</span>
+                    <span class="stat-label">Entscheidung nötig:</span>
+                    <span class="critical">NOMU (82 Tage — REKORD)</span>
                 </div>
             </div>
-            <p style="font-size: 0.9rem; color: #888; margin-top: 10px;">🌙 Abendphase — max 2-3 Stunden verbleibend</p>
+            <p style="font-size: 0.9rem; color: #888; margin-top: 10px;">🌙 NIGHT: Freitag beginnt — LETZTE CHANCE diese Woche</p>
         </div>
 
         <!-- Stats -->
@@ -295,7 +279,7 @@
             </div>
             <div class="stat-row">
                 <span class="stat-label">📋 Geplant:</span>
-                <span class="stat-value">4 Tasks</span>
+                <span class="stat-value">16 Tasks (4 Tage × 4)</span>
             </div>
             <div class="stat-row">
                 <span class="stat-label">📈 Erfolgsrate:</span>
@@ -303,44 +287,44 @@
             </div>
             <div class="stat-row">
                 <span class="stat-label">🔴 Kritisch überfällig:</span>
-                <span class="stat-value critical">1 Task</span>
+                <span class="stat-value critical">4 Tasks</span>
             </div>
             <div class="stat-row">
                 <span class="stat-label">📅 Heute:</span>
-                <span class="stat-value">Donnerstag 25.06.</span>
+                <span class="stat-value">Freitag 26.06.</span>
             </div>
             <div class="stat-row">
                 <span class="stat-label">⚡ Status:</span>
-                <span class="stat-value" style="color: #818cf8;">🌙 EVENING</span>
+                <span class="stat-value">🌙 NIGHT</span>
             </div>
         </div>
 
         <!-- Critical Overdue -->
         <div class="card" style="grid-column: 1 / -1; border: 2px solid #ef4444;">
-            <h2 style="color: #ef4444;">🔥🔥🔥 KRITISCH ÜBERFÄLLIG — REKORD</h2>
+            <h2 style="color: #ef4444;">🔴 KRITISCH ÜBERFÄLLIG</h2>
 
             <div class="todo extreme">
                 <strong>🎬 NOMU Post-Production</strong>
-                <span class="extreme-days">81 TAGE</span>
-                <br><small style="color: #fca5a5;">🔥🔥🔥🔥🔥 HISTORISCHER REKORD! SOFORT: extern/beenden/fertig</small>
+                <span class="extreme-days">82 TAGE</span>
+                <br><small style="color: #fca5a5;">🔥🔥🔥🔥🔥 HISTORISCHER REKORD! Entscheidung SOFORT: extern/beenden/fertig</small>
             </div>
 
             <div class="todo extreme">
                 <strong>🎬 Wittmann Preproduction</strong>
-                <span class="extreme-days">12 TAGE</span>
-                <br><small style="color: #fca5a5;">🔥🔥🔥 LETZTE CHANCE — HEUTE ODER NIE</small>
+                <span class="overdue-badge">13 TAGE</span>
+                <br><small style="color: #fca5a5;">🔥🔥🔥 EXTREM — Freitag FIRST THING! LETZTE CHANCE</small>
             </div>
 
             <div class="todo overdue">
                 <strong>🎬 Niku Fernseher AD</strong>
-                <span class="overdue-days">11 TAGE</span>
-                <br><small style="color: #fca5a5;">🔴🔴 11 Tage überfällig — Morgen FIRST THING</small>
+                <span class="overdue-days">12 TAGE</span>
+                <br><small style="color: #fca5a5;">🔴🔴 12 Tage überfällig — Freitag erledigen</small>
             </div>
 
             <div class="todo overdue">
                 <strong>📞 Golf Club Call</strong>
-                <span class="overdue-days">11 TAGE</span>
-                <br><small style="color: #fca5a5;">🔴 11 Tage überfällig — Morgen früh</small>
+                <span class="overdue-days">12 TAGE</span>
+                <br><small style="color: #fca5a5;">🔴 12 Tage überfällig — Freitag morgen</small>
             </div>
         </div>
 
@@ -349,44 +333,46 @@
             <h2>📈 PATTERNS & INSIGHTS</h2>
 
             <div class="masterplan-box" style="border-color: #ef4444;">
-                <h3 style="color: #ef4444;">Pattern: "KW 25 + KW 26 Totalausfall"</h3>
-                <p style="font-size: 0.9rem;">KW 25: 0/15 Tasks — Erste vollständig verfehlte Woche</p>
-                <p style="font-size: 0.9rem;">KW 26: 0/16 bisher — 4 verpasste Tage + EVENING</p>
+                <h3 style="color: #ef4444;">Pattern: "KW 25 Totalausfall"</h3>
+                <p style="font-size: 0.9rem;">Erste vollständig verfehlte Woche: 0/15 Tasks</p>
+                <p style="font-size: 0.9rem;">5 Tage Stillstand — historischer Rekord</p>
             </div>
 
             <div class="masterplan-box" style="margin-top: 10px; border-color: #ef4444;">
+                <h3 style="color: #ef4444;">Pattern: "KW 26 Totalausfall"</h3>
+                <p style="font-size: 0.9rem;">Tag 1-4: 0/16 Tasks — historische Serie</p>
+                <p style="font-size: 0.9rem;">4 Tage Stillstand — Freitag LETZTE CHANCE</p>
+            </div>
+
+            <div class="masterplan-box" style="margin-top: 10px; border-color: #7f1d1d;">
                 <h3 style="color: #ef4444;">NOMU = System-Blocker</h3>
-                <p style="font-size: 0.9rem;">81 Tage überfällig — HISTORISCHER REKORD</p>
-                <p style="font-size: 0.9rem;">Blockiert ALLE operative Arbeit</p>
+                <p style="font-size: 0.9rem;">82 Tage überfällig — HISTORISCHER REKORD</p>
+                <p style="font-size: 0.9rem;">Blockiert ALLE operative Arbeit systematisch</p>
             </div>
         </div>
 
         <!-- Focus -->
         <div class="card">
-            <h2>🎯 FOKUS JETZT — LETZTE CHANCE</h2>
+            <h2>🎯 FOKUS FREITAG</h2>
 
             <div class="todo extreme">
                 <strong>1. Wittmann Preproduction</strong>
-                <span class="evening-badge">SOFORT</span>
-                <br><small>12 Tage überfällig — LETZTE CHANCE</small>
+                <br><small>Freitag FIRST THING — 13 Tage überfällig</small>
             </div>
 
             <div class="todo high">
                 <strong>2. Niku AD</strong>
-                <span class="night-badge">Heute Abend</span>
-                <br><small>Minimalversion — 11 Tage überfällig</small>
+                <br><small>Freitag — 12 Tage überfällig</small>
             </div>
 
             <div class="todo high">
                 <strong>3. Golf Call</strong>
-                <span class="tomorrow-badge">Morgen früh</span>
-                <br><small>08:00-09:00 — 11 Tage überfällig</small>
+                <br><small>Freitag morgen — 12 Tage überfällig</small>
             </div>
 
             <div class="todo extreme">
                 <strong>4. NOMU Entscheidung</strong>
-                <span class="extreme-days">81 TAGE</span>
-                <br><small>Morgen: extern/beenden/fertig</small>
+                <br><small>SOFORT — 82 Tage — extern/beenden/fertig</small>
             </div>
         </div>
 
@@ -422,78 +408,83 @@
             </div>
         </div>
 
-        <!-- Action Plan -->
-        <div class="card" style="grid-column: 1 / -1; border: 2px solid #ef4444;">
-            <h2 style="color: #ef4444;">⚡ AKTIONSPLAN — SOFORT</h2>
-            <div class="masterplan-box" style="border-color: #ef4444;">
-                <div class="stat-row" style="border-left: 3px solid #ef4444; padding-left: 10px; background: rgba(239,68,68,0.1);">
-                    <span class="stat-label critical">1. Wittmann</span>
-                    <span class="critical">SOFORT starten — 12 Tage überfällig</span>
+        <!-- Night Mode -->
+        <div class="card" style="grid-column: 1 / -1; border: 2px solid #3b82f6;">
+            <h2 style="color: #3b82f6;">🌙 NIGHT MODE — KW 26 Tag 5 beginnt</h2>
+            <div class="masterplan-box" style="border-color: #3b82f6;">
+                <div class="stat-row">
+                    <span class="stat-label">Nachtphase:</span>
+                    <span>Freitag beginnt (00:04)</span>
                 </div>
-                <div class="stat-row" style="border-left: 3px solid #fbbf24; padding-left: 10px; background: rgba(251,191,36,0.1);">
-                    <span class="stat-label">2. Extern</span>
-                    <span>VA für Calls/AD — MORGEN engagieren</span>
+                <div class="stat-row">
+                    <span class="stat-label">Erster Arbeitstag:</span>
+                    <span class="target-value">Freitag Morgen</span>
                 </div>
-                <div class="stat-row" style="border-left: 3px solid #ef4444; padding-left: 10px; background: rgba(239,68,68,0.1);">
-                    <span class="stat-label critical">3. NOMU</span>
-                    <span class="critical">Entscheidung morgen: extern/beenden/fertig — 81 TAGE</span>
+                <div class="stat-row">
+                    <span class="stat-label">KW 26 Ziel:</span>
+                    <span>LETZTE CHANCE — Alle Tasks erledigen</span>
                 </div>
-                <div class="stat-row" style="border-left: 3px solid #22c55e; padding-left: 10px; background: rgba(34,197,94,0.1);">
-                    <span class="stat-label">4. Ziel</span>
-                    <span class="positive">Heute mindestens 1/4 Tasks erledigen</span>
+                <div class="stat-row">
+                    <span class="stat-label">Empfehlung:</span>
+                    <span class="critical">Externe Ressourcen SOFORT</span>
                 </div>
             </div>
-            <p style="color: #fca5a5; font-size: 0.9rem; margin-top: 10px;">
-                🔥 Heute Abend ist die letzte echte Chance. Morgen = Freitag = letzter Arbeitstag vor Wochenende!
+            <p style="color: #60a5fa; font-size: 0.9rem; margin-top: 10px;">
+                🌙 NIGHT Update: Freitag ist der letzte Arbeitstag dieser Woche. Wittmann 13 Tage überfällig.
             </p>
         </div>
 
-        <!-- KW 26 History -->
-        <div class="card" style="grid-column: 1 / -1;">
-            <h2>🗓️ KW 26 HISTORY — KATASTROPHE</h2>
-            <div class="masterplan-box">
-                <h3 style="color: #ef4444;">⚠️ 0/16 Tasks bisher (0%)</h3>
-                <ul style="color: #fca5a5; margin-left: 20px; margin-bottom: 15px;">
-                    <li>🔴 <strong>Mo 22.06:</strong> 0/4 Tasks — verpasst</li>
-                    <li>🔴 <strong>Di 23.06:</strong> 0/4 Tasks — verpasst</li>
-                    <li>🔴 <strong>Mi 24.06:</strong> 0/4 Tasks — verpasst</li>
-                    <li>🔴 <strong>Do 25.06 MORNING:</strong> 0/4 Tasks — verpasst</li>
-                    <li>🔴 <strong>Do 25.06 MIDDAY:</strong> 0/4 Tasks — verpasst</li>
-                    <li>🔴 <strong>Do 25.06 AFTERNOON:</strong> 0/4 Tasks — verpasst</li>
-                    <li>⚠️ <strong>Do 25.06 EVENING:</strong> LETZTE CHANCE</li>
-                </ul>
-                <p style="color: #fca5a5; font-size: 0.9rem;">
-                    <strong>NOMU erreichte 81 Tage überfällig (historischer Rekord).</strong><br>
-                    Wittmann jetzt 12 Tage überfällig — LETZTE CHANCE vor Wochenende.
-                </p>
+        <!-- KW 26 Plan -->
+        <div class="card" style="grid-column: 1 / -1; border: 2px solid #ef4444;">
+            <h2 style="color: #ef4444;">🎯 FREITAG 26.06. — LETZTE CHANCE</h2>
+            <div class="masterplan-box" style="border-color: #ef4444;">
+                <div class="stat-row" style="border-left: 3px solid #ef4444; padding-left: 10px; background: rgba(239,68,68,0.1);">
+                    <span class="stat-label critical">FIRST THING</span>
+                    <span class="critical">🎬 Wittmann Preproduction (13 Tage überfällig)</span>
+                </div>
+                <div class="stat-row" style="border-left: 3px solid #fbbf24; padding-left: 10px; background: rgba(251,191,36,0.1);">
+                    <span class="stat-label">Nach Wittmann</span>
+                    <span>🎬 Niku Fernseher AD (12 Tage überfällig)</span>
+                </div>
+                <div class="stat-row" style="border-left: 3px solid #fbbf24; padding-left: 10px;">
+                    <span class="stat-label">Freitag morgen</span>
+                    <span>📞 Golf Club Call (12 Tage überfällig)</span>
+                </div>
+                <div class="stat-row" style="border-left: 3px solid #ef4444; padding-left: 10px; background: rgba(239,68,68,0.1);">
+                    <span class="stat-label critical">SOFORT</span>
+                    <span class="critical">🎬 NOMU Entscheidung (82 TAGE — REKORD)</span>
+                </div>
             </div>
+            <p style="color: #fca5a5; font-size: 0.9rem; margin-top: 10px;">
+                🔥 Freitag ist LETZTE CHANCE diese Woche. Nach dem Wochenende: KW 27. NOMU blockiert alles.
+            </p>
         </div>
 
         <!-- Recent Updates -->
         <div class="card" style="grid-column: 1 / -1;">
             <h2>📝 LETZTE UPDATES</h2>
             <div class="stat-row">
+                <span class="stat-label timestamp">00:04</span>
+                <span style="font-size: 0.9rem;">Dashboard Update v5.6.84 — NIGHT: 🌙 KW 26 Tag 5 beginnt, Wittmann 13 Tage, NOMU 82 TAGE REKORD!</span>
+            </div>
+            <div class="stat-row">
                 <span class="stat-label timestamp">18:04</span>
-                <span style="font-size: 0.9rem;">Dashboard Update v5.6.83 — EVENING: 🌙 LETZTE CHANCE! NOMU 81 Tage, Wittmann 12 Tage</span>
+                <span style="font-size: 0.9rem;">Dashboard Update v5.6.83 — EVENING: KW 26 Tag 4 Abend, Wittmann 12 Tage, LETZTE CHANCE verpasst</span>
             </div>
             <div class="stat-row">
                 <span class="stat-label timestamp">14:04</span>
-                <span style="font-size: 0.9rem;">Dashboard Update v5.6.82 — AFTERNOON: KW 26 Tag 4</span>
+                <span style="font-size: 0.9rem;">Dashboard Update v5.6.82 — AFTERNOON: KW 26 Tag 4, Status unverändert</span>
             </div>
             <div class="stat-row">
                 <span class="stat-label timestamp">10:04</span>
-                <span style="font-size: 0.9rem;">Dashboard Update v5.6.81 — MIDDAY: ERNSTE LETZTE CHANCE</span>
-            </div>
-            <div class="stat-row">
-                <span class="stat-label timestamp">04:04</span>
-                <span style="font-size: 0.9rem;">Dashboard Update v5.6.80 — MORNING: KW 26 Tag 4 MORNING</span>
+                <span style="font-size: 0.9rem;">Dashboard Update v5.6.81 — MIDDAY: KW 26 Tag 4, Wittmann 11 Tage</span>
             </div>
         </div>
     </div>
 
     <div class="meta">
-        <p>🚀 VENTURE CTRL v5.6.83 | Letztes Update: 25. Juni 2026, 18:04 Uhr</p>
-        <p style="margin-top: 5px; color: #818cf8;">🌙 STATUS: EVENING MODE — LETZTE CHANCE vor Wochenende</p>
+        <p>🚀 VENTURE CTRL v5.6.84 | Letztes Update: 26. Juni 2026, 00:04 Uhr</p>
+        <p style="margin-top: 5px; color: #3b82f6;">🌙 STATUS: NIGHT MODE — KW 26 Tag 5 beginnt, LETZTE CHANCE</p>
     </div>
 </body>
 </html>
