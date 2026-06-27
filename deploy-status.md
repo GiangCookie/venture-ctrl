@@ -1,41 +1,26 @@
-# Dashboard Deployment Status
+# Deploy Status — v5.6.89
 
-**Letztes Update:** Samstag, 27. Juni 2026, 02:04 Uhr  
-**Version:** v5.6.89  
-**Trigger:** dashboard-update-4h-v2 (Cron)
+**Datum:** 27. Juni 2026, 08:04 Europe/Berlin  
+**Version:** v5.6.89
 
----
+## Status: ✅ DEPLOYED
 
-## 🚀 DEPLOYMENT STATUS
+| Schritt | Status | Zeit |
+|---------|--------|------|
+| Daten aktualisiert | ✅ | 08:04:10 |
+| Build | ✅ | 08:04:20 |
+| Git commit | ✅ | 08:04:30 |
+| Git push | ✅ | 08:04:35 |
+| GitHub Pages | ⏳ | ~5-10 min |
 
-| Datei | Status | Version | Zeitstempel |
-|-------|--------|---------|-------------|
-| venture-ctrl/dist/index.html | ✅ Aktualisiert | v5.6.89 | 2026-06-27 02:04 UTC |
-| venture-ctrl/dist/dashboard-data.json | ✅ Aktualisiert | v5.6.89 | 2026-06-27 02:04 UTC |
-| venture-ctrl/index.html | ✅ Gespiegelt | v5.6.89 | 2026-06-27 02:04 UTC |
-| venture-ctrl/data.json | ✅ Gespiegelt | v5.6.89 | 2026-06-27 02:04 UTC |
-| venture-ctrl/dashboard.html | ✅ Gespiegelt | v5.6.89 | 2026-06-27 02:04 UTC |
+## Änderungen
+- MORNING Mode: 🌅 KW 26 Tag 6
+- WOCHENENDE — KEINE Tasks
+- NOMU 83 TAGE REKORD
+- Wittmann 14 Tage überfällig
 
----
-
-## 📊 AKTUELLE METRIKEN
-
-- **Tag:** Samstag, 27. Juni 2026
-- **KW:** KW 26 Tag 6
-- **Modus:** 🌙 NIGHT
-- **Status:** WOCHENENDE RESET
-
-### Überfällige Tasks
-- **NOMU Post-Production:** 83 TAGE — HISTORISCHER REKORD
-- **Wittmann Preproduction:** 14 TAGE — MONTAG ERSTE STUNDE
-- **Niku Fernseher AD:** 13 TAGE
-- **Golf Club Call:** 13 TAGE
-
-### KW 26 Bilanz
-- **Erledigt:** 0/20 Tasks
-- **Erfolgsrate:** 0%
-- **Status:** VOLLSTÄNDIG VERFEHLT
+## Memory-Log
+- ✅ `/data/.openclaw/workspace/memory/2026-06-27-dashboard-update-v5-6-89.md`
 
 ---
-
-*Automatisch generiert via venture-ctrl dashboard-update-4h-v2*
+*Last updated: 2026-06-27 08:04 UTC*

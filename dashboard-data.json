@@ -1,8 +1,8 @@
 {
-  "version": "v5.6.89",
-  "lastUpdated": "2026-06-27T06:04:00Z",
+  "version": "v5.6.90",
+  "lastUpdated": "2026-06-27T10:04:00Z",
   "week": "KW 26",
-  "mode": "MORNING",
+  "mode": "MIDDAY",
   "summary": {
     "tasksCompleted": 0,
     "tasksTotal": 0,
@@ -13,11 +13,11 @@
   "today": {
     "date": "2026-06-27",
     "day": "Samstag",
-    "time": "08:04",
+    "time": "12:04",
     "completed": 0,
     "total": 0,
     "tasks": [],
-    "note": "🌅 KW 26 Tag 6 MORNING — WOCHENENDE, Wittmann 14 Tage, NOMU 83 TAGE REKORD"
+    "note": "☀️ KW 26 Tag 6 MIDDAY — WOCHENENDE, Wittmann 14 Tage, NOMU 83 TAGE REKORD"
   },
   "critical": [
     {"task": "NOMU Post-Production", "overdue": 83, "days": 83, "type": "post-production", "priority": "critical", "note": "83 TAGE — HISTORISCHER REKORD — Entscheidung MONTAG"}
@@ -30,7 +30,7 @@
   "completedToday": [],
   "completedWeek": [],
   "upcoming": [
-    {"event": "KW 26 Tag 6 MORNING", "date": "Samstag 27.06 08:04", "type": "reset", "note": "🌅 MORNING — WOCHENENDE", "priority": "high"},
+    {"event": "KW 26 Tag 6 MIDDAY", "date": "Samstag 27.06 12:04", "type": "reset", "note": "☀️ MIDDAY — WOCHENENDE", "priority": "high"},
     {"event": "KW 26 Tag 6-7", "date": "Sa-So 27-28.06", "type": "weekend", "note": "WOCHENENDE — Erholung, KEINE Tasks", "priority": "low"},
     {"event": "KW 27 Tag 1", "date": "Montag 29.06 08:00", "type": "reset", "note": "NEUE WOCHE — Wittmann 15 Tage, NOMU 84 Tage", "priority": "critical"}
   ],
@@ -44,7 +44,7 @@
     "completed": 0,
     "planned": 4,
     "successRate": "0%",
-    "notes": "KW 26 MORNING: 0/20 Tasks — WOCHENENDE"
+    "notes": "KW 26 MIDDAY: 0/20 Tasks — WOCHENENDE"
   },
   "kw25Summary": {
     "totalTasks": 15,
@@ -76,6 +76,7 @@
     ]
   },
   "history": [
+    {"date": "2026-06-27", "completed": 0, "total": 0, "note": "Samstag MIDDAY — KW 26 Tag 6 — WOCHENENDE"},
     {"date": "2026-06-27", "completed": 0, "total": 0, "note": "Samstag MORNING — KW 26 Tag 6 — WOCHENENDE"},
     {"date": "2026-06-26", "completed": 0, "total": 4, "note": "Freitag — KW 26 Tag 5 — 0/4 Tasks — ARBEITSTAG ENDE"},
     {"date": "2026-06-25", "completed": 0, "total": 4, "note": "Donnerstag — KW 26 Tag 4 — 0/4 Tasks"},
@@ -101,17 +102,17 @@
   },
   "cronUpdate": {
     "trigger": "dashboard-update-4h-v2",
-    "previousVersion": "v5.6.88",
-    "currentVersion": "v5.6.89",
-    "interval": "4 Stunden (MORNING Mode)",
-    "note": "MORNING Update — KW 26 Samstag MORNING, Wittmann 14 Tage, NOMU 83 TAGE REKORD, WOCHENENDE"
+    "previousVersion": "v5.6.89",
+    "currentVersion": "v5.6.90",
+    "interval": "4 Stunden (MIDDAY Mode)",
+    "note": "MIDDAY Update — KW 26 Samstag MIDDAY, Wittmann 14 Tage, NOMU 83 TAGE REKORD, WOCHENENDE"
   },
   "updateHistory": [
-    "v5.6.89 — 2026-06-27 08:04 Europe/Berlin — Aktuell (MORNING Mode, KW 26 Tag 6, 🌅 WOCHENENDE)",
+    "v5.6.90 — 2026-06-27 12:04 Europe/Berlin — Aktuell (MIDDAY Mode, KW 26 Tag 6, ☀️ WOCHENENDE)",
+    "v5.6.89 — 2026-06-27 08:04 Europe/Berlin — MORNING Mode, KW 26 Tag 6 MORNING",
     "v5.6.88 — 2026-06-27 00:04 UTC — NIGHT Mode, KW 26 Tag 6 NIGHT",
     "v5.6.87 — 2026-06-26 14:04 UTC — EVENING Mode, KW 26 Tag 5 EVENING",
-    "v5.6.86 — 2026-06-26 10:04 — AFTERNOON Mode, KW 26 Tag 5 AFTERNOON",
-    "v5.6.85 — 2026-06-26 06:04 — MIDDAY Mode, KW 26 Tag 5 MIDDAY"
+    "v5.6.86 — 2026-06-26 10:04 — AFTERNOON Mode, KW 26 Tag 5 AFTERNOON"
   ],
   "timeSessions": [],
   "income": [],
