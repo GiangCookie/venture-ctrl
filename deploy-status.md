@@ -1,22 +1,41 @@
 # Dashboard Deployment Status
-Last updated: 2026-06-26T06:04:00+02:00
 
-## Current Version
-- Version: v5.6.84
-- Mode: MORNING
-- Time: 06:04 Europe/Berlin (04:04 UTC)
-- Week: KW 26 Tag 5
+**Letztes Update:** Samstag, 27. Juni 2026, 02:04 Uhr  
+**Version:** v5.6.89  
+**Trigger:** dashboard-update-4h-v2 (Cron)
 
-## Status
-- Git commit: ⏳ pending
-- Git push: ⏳ pending
-- Files updated: dashboard-data.json, data.json
+---
 
-## Tasks Status
-- Wittmann: 13 days overdue (CRITICAL)
-- Niku AD: 12 days overdue (HIGH)
-- Golf Call: 12 days overdue (MEDIUM)
-- NOMU: 82 days (HISTORICAL RECORD)
+## 🚀 DEPLOYMENT STATUS
 
-## Build
-- Status: ⏳ Build pending
+| Datei | Status | Version | Zeitstempel |
+|-------|--------|---------|-------------|
+| venture-ctrl/dist/index.html | ✅ Aktualisiert | v5.6.89 | 2026-06-27 02:04 UTC |
+| venture-ctrl/dist/dashboard-data.json | ✅ Aktualisiert | v5.6.89 | 2026-06-27 02:04 UTC |
+| venture-ctrl/index.html | ✅ Gespiegelt | v5.6.89 | 2026-06-27 02:04 UTC |
+| venture-ctrl/data.json | ✅ Gespiegelt | v5.6.89 | 2026-06-27 02:04 UTC |
+| venture-ctrl/dashboard.html | ✅ Gespiegelt | v5.6.89 | 2026-06-27 02:04 UTC |
+
+---
+
+## 📊 AKTUELLE METRIKEN
+
+- **Tag:** Samstag, 27. Juni 2026
+- **KW:** KW 26 Tag 6
+- **Modus:** 🌙 NIGHT
+- **Status:** WOCHENENDE RESET
+
+### Überfällige Tasks
+- **NOMU Post-Production:** 83 TAGE — HISTORISCHER REKORD
+- **Wittmann Preproduction:** 14 TAGE — MONTAG ERSTE STUNDE
+- **Niku Fernseher AD:** 13 TAGE
+- **Golf Club Call:** 13 TAGE
+
+### KW 26 Bilanz
+- **Erledigt:** 0/20 Tasks
+- **Erfolgsrate:** 0%
+- **Status:** VOLLSTÄNDIG VERFEHLT
+
+---
+
+*Automatisch generiert via venture-ctrl dashboard-update-4h-v2*
