@@ -1,8 +1,8 @@
 {
-  "version": "v5.6.107",
-  "lastUpdated": "2026-07-01T06:04:00Z",
+  "version": "v5.6.108",
+  "lastUpdated": "2026-07-01T10:04:00Z",
   "week": "KW 27",
-  "mode": "MORNING",
+  "mode": "MIDDAY",
   "summary": {
     "tasksCompleted": 0,
     "tasksTotal": 0,
@@ -13,11 +13,11 @@
   "today": {
     "date": "2026-07-01",
     "day": "Mittwoch",
-    "time": "08:04",
+    "time": "12:04",
     "completed": 0,
     "total": 0,
     "tasks": [],
-    "note": "🌅 KW 27 Tag 3 MORNING — LETZTE CHANCE — NOMU 88 TAGE REKORD"
+    "note": "☀️ KW 27 Tag 3 MIDDAY — LETZTE CHANCE NACHM. — NOMU 88 TAGE REKORD"
   },
   "critical": [
     {
@@ -35,14 +35,14 @@
       "days": 18,
       "type": "production",
       "priority": "critical",
-      "note": "18 Tage — ERSTE STUNDE HEUTE — LETZTE CHANCE"
+      "note": "18 Tage — ERSTE STUNHE VERFEHLT — LETZTE CHANCE NACHM."
     },
     {
       "task": "Niku Fernseher AD",
       "days": 17,
       "type": "content",
       "priority": "high",
-      "note": "17 Tage — Heute"
+      "note": "17 Tage — Jetzt"
     },
     {
       "task": "Golf Club Call",
@@ -56,10 +56,10 @@
   "completedWeek": [],
   "upcoming": [
     {
-      "event": "Wittmann ERSTE STUNDE",
-      "date": "Mittwoch 01.07 08:00",
+      "event": "Wittmann LETZTE CHANCE",
+      "date": "Mittwoch 01.07 Nachm.",
       "type": "critical",
-      "note": "18 Tage überfällig — LETZTE CHANCE",
+      "note": "18 Tage überfällig — LETZTE CHANCE NACHM.",
       "priority": "critical"
     }
   ],
@@ -75,8 +75,13 @@
       "status": "critical"
     },
     {
-      "name": "KW 27 Tag 1-2-3 — LETZTE CHANCE",
-      "description": "Mittwoch (01.07): LETZTE CHANCE nach verfehlten Tag 1+2",
+      "name": "KW 27 Tag 1-2 Verfehlt",
+      "description": "Montag+Dienstag: 0/0 Tasks — ERSTE STUNDE VERFEHLT",
+      "status": "critical"
+    },
+    {
+      "name": "KW 27 Tag 3 — LETZTE CHANCE",
+      "description": "Mittwoch (01.07): LETZTE CHANCE NACHM. nach verfehlten Tag 1+2",
       "status": "critical"
     },
     {
@@ -90,7 +95,7 @@
     "completed": 0,
     "planned": 4,
     "successRate": "0%",
-    "notes": "KW 27 MORNING: Tag 3 LETZTE CHANCE — 13 Tage Stillstand — NOMU 88 TAGE REKORD"
+    "notes": "KW 27 MIDDAY: Tag 3 LETZTE CHANCE NACHM. — ERSTE STUNDE VERFEHLT — 13 Tage Stillstand"
   },
   "kw25Summary": {
     "totalTasks": 15,
@@ -111,17 +116,23 @@
     ]
   },
   "kw27Plan": {
-    "focus": "KW 27 Tag 3 — LETZTE CHANCE nach verfehlten Tag 1+2",
+    "focus": "KW 27 Tag 3 — LETZTE CHANCE NACHM. nach verfehlten Tag 1+2",
     "blockerToResolve": "NOMU Entscheidung (88 TAGE — ABSOLUTER REKORD)",
     "startDate": "2026-07-01",
     "priorities": [
-      "Wittmann Preproduction (ERSTE STUNDE — 18 Tage — LETZTE CHANCE)",
-      "Niku AD (Heute — 17 Tage)",
+      "Wittmann Preproduction (LETZTE CHANCE NACHM. — 18 Tage)",
+      "Niku AD (Jetzt — 17 Tage)",
       "Golf Quick-Call (Heute — 17 Tage)",
       "NOMU Entscheidung (Heute — 88 TAGE REKORD)"
     ]
   },
   "history": [
+    {
+      "date": "2026-07-01",
+      "completed": 0,
+      "total": 0,
+      "note": "Mittwoch 12:04 MIDDAY — KW 27 Tag 3 MIDDAY — LETZTE CHANCE NACHM., NOMU 88 TAGE REKORD"
+    },
     {
       "date": "2026-07-01",
       "completed": 0,
@@ -156,9 +167,9 @@
   "insights": {
     "pattern": "13 Tage in Folge ohne operative Erledigung",
     "blocker": "NOMU 88 TAGE — ABSOLUTER HISTORISCHER SYSTEM-BLOCKER",
-    "momentum": "Vollständiger Stillstand seit 17+ Tagen",
-    "focus": "KW 27 Tag 3 = LETZTE CHANCE — Wittmann ERSTE STUNDE",
-    "recommendation": "Heute: Externe Ressourcen unbedingt nötig"
+    "momentum": "Vollständiger Stillstand seit 18+ Tagen",
+    "focus": "KW 27 Tag 3 = LETZTE CHANCE NACHM. — ERSTE STUNDE VERFEHLT",
+    "recommendation": "Heute Nachm.: Externe Ressourcen unbedingt nötig"
   },
   "analysis": {
     "strength": "Strategische Arbeit, Pitches, wichtige Meetings",
@@ -167,17 +178,17 @@
   },
   "cronUpdate": {
     "trigger": "dashboard-update-4h-v2",
-    "previousVersion": "v5.6.106",
-    "currentVersion": "v5.6.107",
+    "previousVersion": "v5.6.107",
+    "currentVersion": "v5.6.108",
     "interval": "4 Stunden",
-    "note": "MORNING Update — KW 27 Mittwoch 08:04, Tag 3 LETZTE CHANCE"
+    "note": "MIDDAY Update — KW 27 Mittwoch 12:04, ERSTE STUNDE VERFEHLT, LETZTE CHANCE NACHM."
   },
   "updateHistory": [
-    "v5.6.107 — 2026-07-01 08:04 Europe/Berlin — Aktuell (MORNING Mode, KW 27 Tag 3 LETZTE CHANCE)",
+    "v5.6.108 — 2026-07-01 12:04 Europe/Berlin — Aktuell (MIDDAY Mode, KW 27 Tag 3 LETZTE CHANCE NACHM.)",
+    "v5.6.107 — 2026-07-01 08:04 Europe/Berlin — MORNING Mode, KW 27 Tag 3 LETZTE CHANCE",
     "v5.6.106 — 2026-06-30 20:04 Europe/Berlin — EVENING Mode, KW 27 Tag 2 VERFEHLT",
     "v5.6.105 — 2026-06-30 10:04 Europe/Berlin — MORNING Mode, KW 27 Tag 2 ZWEITE CHANCE",
-    "v5.6.104 — 2026-06-30 04:04 Europe/Berlin — NIGHT Mode, KW 27 Tag 2 NEUER TAG",
-    "v5.6.103 — 2026-06-29 20:04 Europe/Berlin — EVENING Mode, KW 27 Tag 1 ENTSCHEIDUNGSZEIT"
+    "v5.6.104 — 2026-06-30 04:04 Europe/Berlin — NIGHT Mode, KW 27 Tag 2 NEUER TAG"
   ],
   "timeSessions": [],
   "income": [],
@@ -189,7 +200,7 @@
       "completed": false,
       "project": "freelance",
       "overdue": 18,
-      "note": "18 Tage — ERSTE STUNDE — LETZTE CHANCE"
+      "note": "18 Tage — ERSTE STUNDE VERFEHLT — LETZTE CHANCE NACHM."
     },
     {
       "id": 2,
@@ -198,7 +209,7 @@
       "completed": false,
       "project": "tough-cookie",
       "overdue": 17,
-      "note": "17 Tage — Heute"
+      "note": "17 Tage — Jetzt"
     },
     {
       "id": 3,
