@@ -1,7 +1,7 @@
-# Deploy Status — v5.6.95
+# Deploy Status — v5.6.107
 
-**Datum:** 28. Juni 2026, 04:04 Europe/Berlin  
-**Version:** v5.6.95
+**Datum:** 1. Juli 2026, 00:04 Europe/Berlin  
+**Version:** v5.6.107
 
 ## Status: ✅ DEPLOYED
 
