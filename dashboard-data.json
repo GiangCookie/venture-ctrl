@@ -1,8 +1,8 @@
 {
-  "version": "v5.6.105",
-  "lastUpdated": "2026-06-30T10:04:00Z",
+  "version": "v5.6.109",
+  "lastUpdated": "2026-07-01T14:04:00Z",
   "week": "KW 27",
-  "mode": "MORNING",
+  "mode": "AFTERNOON",
   "summary": {
     "tasksCompleted": 0,
     "tasksTotal": 0,
@@ -11,56 +11,56 @@
     "highOverdue": 3
   },
   "today": {
-    "date": "2026-06-30",
-    "day": "Dienstag",
-    "time": "10:04",
+    "date": "2026-07-01",
+    "day": "Mittwoch",
+    "time": "14:04",
     "completed": 0,
     "total": 0,
     "tasks": [],
-    "note": "🌅 KW 27 Tag 2 MORNING — ZWEITE CHANCE, NOMU 87 TAGE ABSOLUTER REKORD"
+    "note": "🌤️ KW 27 Tag 3 AFTERNOON — KRISENMODUS — 08:00 ERSTE STUNDE VERPASST"
   },
   "critical": [
     {
       "task": "NOMU Post-Production",
-      "overdue": 87,
-      "days": 87,
+      "overdue": 88,
+      "days": 88,
       "type": "post-production",
       "priority": "critical",
-      "note": "87 TAGE — ABSOLUTER HISTORISCHER REKORD — SYSTEM BLOCKIERT"
+      "note": "88 TAGE — ABSOLUTER HISTORISCHER REKORD — SYSTEM BLOCKIERT"
     }
   ],
   "overdue": [
     {
       "task": "Wittmann Preproduction",
-      "days": 17,
+      "days": 18,
       "type": "production",
       "priority": "critical",
-      "note": "17 Tage — Gestern nicht gemacht — ZWEITE CHANCE HEUTE"
+      "note": "18 Tage — 08:00 ERSTE STUNDE VERPASST — KRISENMODUS"
     },
     {
       "task": "Niku Fernseher AD",
-      "days": 16,
+      "days": 17,
       "type": "content",
       "priority": "high",
-      "note": "16 Tage — Vormittag heute"
+      "note": "17 Tage — Vormittag verpasst"
     },
     {
       "task": "Golf Club Call",
-      "days": 16,
+      "days": 17,
       "type": "call",
       "priority": "medium",
-      "note": "16 Tage — Heute"
+      "note": "17 Tage — Nachmittag noch möglich"
     }
   ],
   "completedToday": [],
   "completedWeek": [],
   "upcoming": [
     {
-      "event": "Wittmann ERSTE STUNDE",
-      "date": "Dienstag 30.06 08:00",
-      "type": "critical",
-      "note": "17 Tage überfällig — ZWEITE CHANCE ERSTE STUNDE",
-      "priority": "critical"
+      "event": "Golf Club Call",
+      "date": "Mittwoch 01.07 Nachmittag",
+      "type": "medium",
+      "note": "17 Tage überfällig — Letzte Chance heute Nachmittag",
+      "priority": "medium"
     }
   ],
   "patterns": [
@@ -75,13 +75,13 @@
       "status": "critical"
     },
     {
-      "name": "KW 27 Tag 1 — Verfehlt",
-      "description": "Montag (29.06): 0/0 Tasks — 3. Tag ohne operative Erledigung",
+      "name": "KW 27 Tag 1-3",
+      "description": "3 Tage verfehlt: 0/0 Tasks — 08:00 ERSTE STUNDE VERPASST",
       "status": "critical"
     },
     {
-      "name": "NOMU 87 Tage",
-      "description": "ABSOLUTER HISTORISCHER REKORD — 87 Tage überfällig — System-Blocker",
+      "name": "NOMU 88 Tage",
+      "description": "NEUER ABSOLUTER HISTORISCHER REKORD — 88 Tage überfällig",
       "status": "critical"
     }
   ],
@@ -90,7 +90,7 @@
     "completed": 0,
     "planned": 4,
     "successRate": "0%",
-    "notes": "KW 27 MORNING: Tag 1 verfehlt (0/0), Tag 2 ZWEITE CHANCE — NOMU 87 TAGE REKORD"
+    "notes": "KW 27 Tag 3 AFTERNOON: 3 Tage verfehlt, NOMU 88 TAGE NEUER REKORD, KRISENMODUS"
   },
   "kw25Summary": {
     "totalTasks": 15,
@@ -111,67 +111,60 @@
     ]
   },
   "kw27Plan": {
-    "focus": "KW 27 Tag 2 — ZWEITE CHANCE nach verfehltem Tag 1",
-    "blockerToResolve": "NOMU Entscheidung (87 TAGE — ABSOLUTER REKORD)",
-    "startDate": "2026-06-30",
+    "focus": "KW 27 Tag 3 KRISENMODUS — Nach 3 verfehlten Tagen",
+    "blockerToResolve": "NOMU 88 TAGE — NEUER ABSOLUTER REKORD",
+    "startDate": "2026-07-01",
     "priorities": [
-      "Wittmann Preproduction (HEUTE ERSTE STUNDE — 17 Tage — ZWEITE CHANCE)",
-      "Niku AD (Vormittag — 16 Tage)",
-      "Golf Quick-Call (Heute — 16 Tage)",
-      "NOMU Entscheidung (Heute — 87 TAGE REKORD)"
+      "Wittmann Preproduction (18 Tage — 08:00 VERPASST — KRISENMODUS)",
+      "Niku AD (17 Tage — Vormittag verpasst)",
+      "Golf Quick-Call (17 Tage — Nachmittag noch möglich)",
+      "NOMU Entscheidung (88 TAGE — NEUER REKORD)"
     ]
   },
   "history": [
     {
-      "date": "2026-06-30",
+      "date": "2026-07-01",
       "completed": 0,
       "total": 0,
-      "note": "Dienstag 10:04 MORNING — KW 27 Tag 2 MORNING — ZWEITE CHANCE, NOMU 87 TAGE REKORD"
+      "note": "Mittwoch 14:04 AFTERNOON — KW 27 Tag 3 KRISENMODUS — 08:00 VERPASST, NOMU 88 REKORD"
+    },
+    {
+      "date": "2026-07-01",
+      "completed": 0,
+      "total": 0,
+      "note": "Mittwoch 04:04 NIGHT — KW 27 Tag 3 LETZTE CHANCE — NOMU 88 REKORD"
     },
     {
       "date": "2026-06-30",
       "completed": 0,
       "total": 0,
-      "note": "Dienstag 08:04 MORNING — KW 27 Tag 2 MORNING — ZWEITE CHANCE, NOMU 87 TAGE REKORD"
-    },
-    {
-      "date": "2026-06-30",
-      "completed": 0,
-      "total": 0,
-      "note": "Dienstag 02:04 NIGHT — KW 27 Tag 2 NIGHT — NEUER TAG"
-    },
-    {
-      "date": "2026-06-29",
-      "completed": 0,
-      "total": 0,
-      "note": "Montag 20:04 EVENING — KW 27 Tag 1 EVENING — ENTSCHEIDUNGSZEIT"
+      "note": "Dienstag 20:04 EVENING — KW 27 Tag 2 VERFEHLT — NOMU 87 TAGE"
     }
   ],
   "insights": {
-    "pattern": "3 Tage in Folge ohne operative Erledigung (Sa-So-Mo)",
-    "blocker": "NOMU 87 TAGE — ABSOLUTER HISTORISCHER SYSTEM-BLOCKER",
-    "momentum": "Vollständiger Stillstand seit 16+ Tagen",
-    "focus": "KW 27 Tag 2 = ZWEITE CHANCE — Wittmann HEUTE ERSTE STUNDE",
+    "pattern": "13 Tage in Folge ohne operative Erledigung — Historischer Stillstand",
+    "blocker": "NOMU 88 TAGE — NEUER ABSOLUTER HISTORISCHER SYSTEM-BLOCKER",
+    "momentum": "Vollständiger Stillstand KW 25-27",
+    "focus": "KW 27 Tag 3 = KRISENMODUS — Minimum 1 Task heute noch",
     "recommendation": "SOFORT: Externe Ressourcen für Preproduction, AD-Erstellung, Calls"
   },
   "analysis": {
     "strength": "Strategische Arbeit, Pitches, wichtige Meetings",
     "weakness": "Operative Routine, Post-Production, Calls — kompletter Stillstand KW 25-27",
-    "solution": "KW 27 Tag 2 als ZWEITE CHANCE + SOFORT Externe Ressourcen"
+    "solution": "KRISENMODUS: Minimum 1 Task heute + SOFORT Externe Ressourcen"
   },
   "cronUpdate": {
     "trigger": "dashboard-update-4h-v2",
-    "previousVersion": "v5.6.105",
-    "currentVersion": "v5.6.106",
+    "previousVersion": "v5.6.108",
+    "currentVersion": "v5.6.109",
     "interval": "4 Stunden",
-    "note": "MIDDAY Update — KW 27 Dienstag 10:04, Tag 2 ZWEITE CHANCE"
+    "note": "AFTERNOON Update — KW 27 Mittwoch 14:04, Tag 3 KRISENMODUS, NOMU 88 TAGE REKORD"
   },
   "updateHistory": [
-    "v5.6.106 — 2026-06-30 10:04 Europe/Berlin — Aktuell (MORNING Mode, KW 27 Tag 2 ZWEITE CHANCE)",
-    "v5.6.105 — 2026-06-30 08:04 Europe/Berlin — MORNING Mode, KW 27 Tag 2 ZWEITE CHANCE",
-    "v5.6.104 — 2026-06-30 04:04 Europe/Berlin — NIGHT Mode, KW 27 Tag 2 NEUER TAG",
-    "v5.6.103 — 2026-06-29 20:04 Europe/Berlin — EVENING Mode, KW 27 Tag 1 ENTSCHEIDUNGSZEIT",
-    "v5.6.102 — 2026-06-29 16:04 Europe/Berlin — AFTERNOON Mode, KW 27 Tag 1 AFTERNOON"
+    "v5.6.109 — 2026-07-01 14:04 Europe/Berlin — Aktuell (AFTERNOON Mode, KW 27 Tag 3 KRISENMODUS)",
+    "v5.6.108 — 2026-07-01 04:04 Europe/Berlin — NIGHT Mode, KW 27 Tag 3 LETZTE CHANCE",
+    "v5.6.107 — 2026-07-01 00:04 Europe/Berlin — NIGHT Mode, KW 27 Tag 3 LETZTE CHANCE",
+    "v5.6.106 — 2026-06-30 20:04 Europe/Berlin — EVENING Mode, KW 27 Tag 2 VERFEHLT"
   ],
   "timeSessions": [],
   "income": [],
@@ -182,8 +175,8 @@
       "priority": "critical",
       "completed": false,
       "project": "freelance",
-      "overdue": 17,
-      "note": "17 Tage — HEUTE ERSTE STUNDE — ZWEITE CHANCE"
+      "overdue": 18,
+      "note": "18 Tage — 08:00 VERPASST — KRISENMODUS"
     },
     {
       "id": 2,
@@ -191,8 +184,8 @@
       "priority": "high",
       "completed": false,
       "project": "tough-cookie",
-      "overdue": 16,
-      "note": "16 Tage — Vormittag heute"
+      "overdue": 17,
+      "note": "17 Tage — Vormittag verpasst"
     },
     {
       "id": 3,
@@ -200,8 +193,8 @@
       "priority": "medium",
       "completed": false,
       "project": "tough-cookie",
-      "overdue": 16,
-      "note": "16 Tage — Heute"
+      "overdue": 17,
+      "note": "17 Tage — Nachmittag noch möglich"
     },
     {
       "id": 4,
@@ -209,8 +202,8 @@
       "priority": "critical",
       "completed": false,
       "project": "nomu",
-      "overdue": 87,
-      "note": "87 TAGE ABSOLUTER REKORD — Entscheidung HEUTE"
+      "overdue": 88,
+      "note": "88 TAGE NEUER ABSOLUTER REKORD — Entscheidung HEUTE"
     }
   ],
   "pipeline": [],
