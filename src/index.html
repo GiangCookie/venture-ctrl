@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VENTURE CTRL v5.6.105</title>
+    <title>VENTURE CTRL v5.6.114</title>
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
@@ -86,50 +86,6 @@
             0%, 100% { opacity: 1; }
             50% { opacity: 0.8; }
         }
-        .deal { 
-            display: flex; 
-            justify-content: space-between; 
-            padding: 10px;
-            margin-bottom: 6px;
-            border-radius: 6px;
-            background: rgba(255,255,255,0.03);
-        }
-        .stage { padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; }
-        .won { background: rgba(74,222,128,0.2); color: #4ade80; }
-        .pitch { background: rgba(251,191,36,0.2); color: #fbbf24; }
-        .lead { background: rgba(96,165,250,0.2); color: #60a5fa; }
-        .gamechanger { background: rgba(139, 92, 246, 0.2); color: #a78bfa; }
-        .meta { color: #666; font-size: 0.8rem; margin-top: 20px; text-align: center; }
-        .highlight { background: rgba(102, 126, 234, 0.1); padding: 8px 12px; border-radius: 6px; margin-bottom: 10px; }
-        .today-badge { 
-            background: linear-gradient(135deg, #f87171 0%, #fbbf24 100%);
-            color: white;
-            padding: 2px 10px;
-            border-radius: 12px;
-            font-size: 0.7rem;
-            font-weight: bold;
-        }
-        .quickwin-badge {
-            background: linear-gradient(135deg, #22c55e 0%, #4ade80 100%);
-            color: white;
-            padding: 2px 10px;
-            border-radius: 12px;
-            font-size: 0.7rem;
-            font-weight: bold;
-        }
-        .content-reminder {
-            background: rgba(251, 191, 36, 0.1);
-            border: 1px solid rgba(251, 191, 36, 0.3);
-            padding: 10px 15px;
-            border-radius: 8px;
-            margin-bottom: 8px;
-        }
-        .timestamp {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.7rem;
-            color: #888;
-            margin-top: 5px;
-        }
         .kw-badge {
             display: inline-block;
             background: #667eea;
@@ -138,14 +94,6 @@
             border-radius: 12px;
             font-size: 0.75rem;
             margin-left: 10px;
-        }
-        .overdue-days {
-            background: #ef4444;
-            color: white;
-            padding: 2px 8px;
-            border-radius: 10px;
-            font-size: 0.7rem;
-            margin-left: 8px;
         }
         .extreme-days {
             background: #7f1d1d;
@@ -156,23 +104,37 @@
             margin-left: 8px;
             font-weight: bold;
         }
-        .masterplan-box {
-            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
-            border: 1px solid rgba(102, 126, 234, 0.3);
-            padding: 15px;
-            border-radius: 8px;
-            margin-bottom: 10px;
+        .overdue-days {
+            background: #ef4444;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 0.7rem;
+            margin-left: 8px;
         }
-        .masterplan-box h3 {
-            color: #667eea;
-            margin-bottom: 8px;
-        }
-        .gap-value {
-            color: #f87171;
+        .night-badge {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 2px 10px;
+            border-radius: 12px;
+            font-size: 0.7rem;
             font-weight: bold;
         }
-        .target-value {
-            color: #4ade80;
+        .last-chance-badge {
+            background: linear-gradient(135deg, #dc2626 0%, #f97316 100%);
+            color: white;
+            padding: 2px 10px;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: bold;
+            animation: pulse 1.5s infinite;
+        }
+        .weekend-badge {
+            background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
+            color: white;
+            padding: 2px 10px;
+            border-radius: 12px;
+            font-size: 0.7rem;
             font-weight: bold;
         }
         .alert-banner {
@@ -190,336 +152,209 @@
         .alert-banner p {
             color: #fca5a5;
         }
-        .tomorrow-badge {
-            background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%);
-            color: white;
-            padding: 2px 10px;
-            border-radius: 12px;
-            font-size: 0.7rem;
-            font-weight: bold;
+        .masterplan-box {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+            border: 1px solid rgba(102, 126, 234, 0.3);
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 10px;
         }
-        .overdue-badge {
-            background: linear-gradient(135deg, #7f1d1d 0%, #dc2626 100%);
-            color: white;
-            padding: 2px 10px;
-            border-radius: 12px;
-            font-size: 0.7rem;
-            font-weight: bold;
+        .masterplan-box h3 {
+            color: #667eea;
+            margin-bottom: 8px;
         }
-        .weekend-badge {
-            background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
-            color: white;
-            padding: 2px 10px;
-            border-radius: 12px;
+        .gap-value { color: #f87171; font-weight: bold; }
+        .target-value { color: #4ade80; font-weight: bold; }
+        .timestamp {
+            font-family: 'JetBrains Mono', monospace;
             font-size: 0.7rem;
-            font-weight: bold;
+            color: #888;
+            margin-top: 5px;
         }
-        .lost-badge {
-            background: #374151;
-            color: #9ca3af;
-            padding: 2px 10px;
-            border-radius: 12px;
-            font-size: 0.7rem;
-            font-weight: bold;
-        }
-        .night-badge {
-            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
-            color: white;
-            padding: 2px 10px;
-            border-radius: 12px;
-            font-size: 0.7rem;
-            font-weight: bold;
-        }
-        .morning-badge {
-            background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%);
-            color: #1a1a1a;
-            padding: 2px 10px;
-            border-radius: 12px;
-            font-size: 0.7rem;
-            font-weight: bold;
-        }
-        .second-chance-badge {
-            background: linear-gradient(135deg, #dc2626 0%, #f97316 100%);
-            color: white;
-            padding: 2px 10px;
-            border-radius: 12px;
-            font-size: 0.7rem;
-            font-weight: bold;
-            animation: pulse 2s infinite;
-        }
+        .meta { color: #666; font-size: 0.8rem; margin-top: 20px; text-align: center; }
     </style>
 </head>
 <body>
     <div class="header">
-        <span class="version-badge">v5.6.105</span>
+        <span class="version-badge">v5.6.114</span>
         <h1>🚀 VENTURE CTRL</h1>
-        <p>Dienstag, 30. Juni 2026 — 08:04 Uhr <span class="kw-badge">KW 27 Tag 2</span></p>
+        <p>Freitag, 3. Juli 2026 — 00:04 Uhr <span class="kw-badge">KW 27 Tag 5</span></p>
     </div>
 
     <!-- Critical Alert Banner -->
     <div class="alert-banner">
-        <h3>🌅 MORNING MODE — KW 27 Tag 2 ZWEITE CHANCE</h3>
-        <p>🔴 0/11 Tasks über 11 Tage (0%) — Wittmann 17 Tage, NOMU 87 TAGE ABSOLUTER REKORD!</p>
+        <h3>🌙 NIGHT MODE — KW 27 Tag 5 LETZTE CHANCE VOR WOCHENENDE</h3>
+        <p>🔴 Tag 1-4 VERFEHLT — 0% Erfolgsrate seit 15 Tagen — NOMU 89 TAGE ABSOLUTER HISTORISCHER REKORD!</p>
     </div>
 
     <div class="grid">
         <!-- KW 27 Status -->
         <div class="card">
-            <h2>🌅 KW 27 STATUS — Tag 2 ZWEITE CHANCE</h2>
+            <h2>🌙 KW 27 STATUS — Tag 5 LETZTE CHANCE</h2>
             <div class="masterplan-box">
                 <div class="stat-row">
-                    <span class="stat-label">KW 27 Tag 1 (Mo):</span>
-                    <span class="gap-value">0/0 Tasks — VERFEHLT</span>
+                    <span class="stat-label">KW 27 Tag 1-4 (Mo-Do):</span>
+                    <span class="gap-value">0/0 Tasks — 4 TAGE VERFEHLT</span>
                 </div>
                 <div class="stat-row">
-                    <span class="stat-label">KW 27 Tag 2 (Di):</span>
-                    <span class="target-value">0/0 Tasks — ZWEITE CHANCE</span>
+                    <span class="stat-label">KW 27 Tag 5 (Fr):</span>
+                    <span class="critical">LETZTE CHANCE VOR WOCHENENDE</span>
                 </div>
                 <div class="stat-row">
-                    <span class="stat-label">Letzte 11 Tage:</span>
-                    <span class="gap-value">0/35 Tasks (0%)</span>
+                    <span class="stat-label">Letzte 15 Tage:</span>
+                    <span class="gap-value">0/35+ Tasks (0%)</span>
                 </div>
                 <div class="stat-row">
                     <span class="stat-label">Priorität #1:</span>
-                    <span class="critical">Wittmann Preproduction (17 Tage — ERSTE STUNDE)</span>
+                    <span class="critical">Wittmann Preproduction (20 Tage)</span>
                 </div>
                 <div class="stat-row">
                     <span class="stat-label">Entscheidung nötig:</span>
-                    <span class="critical">NOMU (87 TAGE — ABSOLUTER REKORD)</span>
+                    <span class="critical">NOMU (89 TAGE — REKORD)</span>
                 </div>
             </div>
-            <p style="font-size: 0.9rem; color: #888; margin-top: 10px;">🌅 MORNING: Nach verfehltem Tag 1 ist heute die ZWEITE CHANCE für KW 27</p>
+            <p style="font-size: 0.9rem; color: #888; margin-top: 10px;">🌙 NIGHT: Tag 5 = LETZTE CHANCE vor dem Wochenende — Minimum 1 Task oder KW 27 wird dritte Totalausfall-Woche</p>
         </div>
 
         <!-- Stats -->
         <div class="card">
-            <h2>📊 KW 27 STATUS</h2>
+            <h2>📊 KRITISCHE METRIKEN</h2>
             <div class="stat-row">
-                <span class="stat-label">✅ Erledigt:</span>
-                <span class="stat-value">0 Tasks</span>
+                <span class="stat-label">✅ KW 27 Erledigt:</span>
+                <span class="stat-value gap-value">0/5 Tage (0%)</span>
             </div>
             <div class="stat-row">
-                <span class="stat-label">📋 Geplant:</span>
-                <span class="stat-value">4 Tasks (Tag 2)</span>
+                <span class="stat-label">📅 KW 25:</span>
+                <span class="stat-value gap-value">0/15 Tasks (0%)</span>
             </div>
             <div class="stat-row">
-                <span class="stat-label">📈 Erfolgsrate:</span>
-                <span class="stat-value critical">0%</span>
+                <span class="stat-label">📅 KW 26:</span>
+                <span class="stat-value gap-value">0/20 Tasks (0%)</span>
             </div>
             <div class="stat-row">
-                <span class="stat-label">🔴 Kritisch überfällig:</span>
-                <span class="stat-value critical">4 Tasks</span>
+                <span class="stat-label">📅 KW 27 bisher:</span>
+                <span class="stat-value gap-value">0/0 Tasks (Tag 1-4 verfehlt)</span>
             </div>
             <div class="stat-row">
-                <span class="stat-label">📅 Heute:</span>
-                <span class="stat-value">Dienstag 30.06.</span>
+                <span class="stat-label">🔥 NOMU Blocker:</span>
+                <span class="stat-value extreme">89 TAGE — ABSOLUTER REKORD</span>
             </div>
             <div class="stat-row">
-                <span class="stat-label">⚡ Status:</span>
-                <span class="stat-value">🌅 MORNING — ZWEITE CHANCE</span>
+                <span class="stat-label">⚠️ Überfällig:</span>
+                <span class="stat-value critical">4 Tasks (19-20 Tage)</span>
             </div>
         </div>
 
-        <!-- Critical Overdue -->
-        <div class="card" style="grid-column: 1 / -1; border: 2px solid #ef4444;">
-            <h2 style="color: #ef4444;">🔴 KRITISCH ÜBERFÄLLIG</h2>
-
+        <!-- Todos -->
+        <div class="card">
+            <h2>🎯 ÜBERFÄLLIGE TASKS</h2>
             <div class="todo extreme">
-                <strong>🎬 NOMU Post-Production</strong>
-                <span class="extreme-days">87 TAGE</span>
-                <br><small style="color: #fca5a5;">🔥🔥🔥🔥🔥 ABSOLUTER HISTORISCHER REKORD! Entscheidung HEUTE</small>
+                <strong>NOMU Post-Production</strong>
+                <span class="extreme-days">89 TAGE</span>
+                <div class="timestamp">ABSOLUTER HISTORISCHER REKORD — System blockiert seit 89 Tagen</div>
             </div>
-
-            <div class="todo extreme">
-                <strong>🎬 Wittmann Preproduction</strong>
-                <span class="overdue-badge">17 TAGE</span>
-                <br><small style="color: #fca5a5;">🔥🔥🔥 EXTREM — Gestern verfehlt — HEUTE ZWEITE CHANCE ERSTE STUNDE!</small>
-            </div>
-
             <div class="todo overdue">
-                <strong>🎬 Niku Fernseher AD</strong>
-                <span class="overdue-days">16 TAGE</span>
-                <br><small style="color: #fca5a5;">🔴🔴 16 Tage überfällig — Vormittag heute</small>
+                <strong>Wittmann Preproduction</strong>
+                <span class="overdue-days">20 TAGE</span>
+                <div class="timestamp">KRISENMODUS — Tag 5 LETZTE CHANCE VOR WOCHENENDE</div>
             </div>
+            <div class="todo urgent">
+                <strong>Niku Fernseher AD</strong>
+                <span class="overdue-days">19 TAGE</span>
+                <div class="timestamp">Content Production — Tag 5 LETZTE CHANCE</div>
+            </div>
+            <div class="todo high">
+                <strong>Golf Club Call</strong>
+                <span class="overdue-days">19 TAGE</span>
+                <div class="timestamp">Quick Call — Tag 5 LETZTE CHANCE</div>
+            </div>
+        </div>
 
-            <div class="todo overdue">
-                <strong>📞 Golf Club Call</strong>
-                <span class="overdue-days">16 TAGE</span>
-                <br><small style="color: #fca5a5;">🔴 16 Tage überfällig — Heute</small>
+        <!-- Weekly Plan -->
+        <div class="card">
+            <h2>📅 KW 27 TAG 5 PLAN</h2>
+            <div class="masterplan-box">
+                <h3>🌙 FREITAG 03.07 — LETZTE CHANCE</h3>
+                <p style="color: #fca5a5; margin-bottom: 10px;">
+                    <span class="last-chance-badge">LETZTE CHANCE VOR WOCHENENDE</span>
+                </p>
+                <p style="color: #e0e0e0; margin-bottom: 10px;">
+                    Nach 4 verfehlten Tagen (Montag-Donnerstag) ist heute die LETZTE CHANCE für KW 27.
+                    Ohne heute wird KW 27 die dritte aufeinanderfolgende Totalausfall-Woche.
+                </p>
+                <div class="stat-row">
+                    <span class="stat-label">Erste Stunde:</span>
+                    <span class="critical">Wittmann Preproduction</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">Heute auch:</span>
+                    <span class="target-value">Niku AD, Golf Call</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">Entscheidung:</span>
+                    <span class="critical">NOMU (89 TAGE REKORD)</span>
+                </div>
             </div>
+            <p style="font-size: 0.9rem; color: #888; margin-top: 10px;">
+                🌙 NIGHT: Tag 5 vorbei = 3 aufeinanderfolgende Totalausfall-Wochen
+            </p>
         </div>
 
         <!-- Patterns -->
         <div class="card">
-            <h2>📈 PATTERNS & INSIGHTS</h2>
-
-            <div class="masterplan-box" style="border-color: #ef4444;">
-                <h3 style="color: #ef4444;">Pattern: "KW 25 Totalausfall"</h3>
-                <p style="font-size: 0.9rem;">Erste vollständig verfehlte Woche: 0/15 Tasks</p>
-                <p style="font-size: 0.9rem;">5 Tage Stillstand — historischer Rekord</p>
-            </div>
-
-            <div class="masterplan-box" style="margin-top: 10px; border-color: #ef4444;">
-                <h3 style="color: #ef4444;">Pattern: "KW 26 Totalausfall"</h3>
-                <p style="font-size: 0.9rem;">Zweite vollständig verfehlte Woche: 0/20 Tasks</p>
-                <p style="font-size: 0.9rem;">5 Tage Stillstand — historische Serie</p>
-            </div>
-
-            <div class="masterplan-box" style="margin-top: 10px; border-color: #ef4444;">
-                <h3 style="color: #ef4444;">Pattern: "KW 27 Tag 1 — Auch verfehlt"</h3>
-                <p style="font-size: 0.9rem;">Montag (29.06): 0/0 Tasks</p>
-                <p style="font-size: 0.9rem;">KW 27 beginnt mit Totalausfall Tag 1</p>
-            </div>
-
-            <div class="masterplan-box" style="margin-top: 10px; border-color: #7f1d1d;">
-                <h3 style="color: #ef4444;">NOMU = System-Blocker</h3>
-                <p style="font-size: 0.9rem;">87 Tage überfällig — ABSOLUTER HISTORISCHER REKORD</p>
-                <p style="font-size: 0.9rem;">Blockiert ALLE operative Arbeit systematisch</p>
-            </div>
-        </div>
-
-        <!-- Focus -->
-        <div class="card">
-            <h2>🎯 FOKUS DIENSTAG</h2>
-
+            <h2>📉 KRITISCHE PATTERNS</h2>
             <div class="todo extreme">
-                <strong>1. Wittmann Preproduction</strong>
-                <span class="second-chance-badge">ERSTE STUNDE — ZWEITE CHANCE</span>
-                <br><small>Heute ERSTE STUNDE — 17 Tage überfällig — Nach verfehltem Gestern</small>
+                <strong>NOMU 89 Tage</strong>
+                <span class="extreme-days">REKORD</span>
+                <div class="timestamp">ABSOLUTER HISTORISCHER SYSTEM-BLOCKER — Entscheidung SOFORT nötig</div>
             </div>
-
-            <div class="todo high">
-                <strong>2. Niku AD</strong>
-                <span class="morning-badge">Vormittag</span>
-                <br><small>Vormittag — 16 Tage überfällig</small>
+            <div class="todo overdue">
+                <strong>KW 25 Totalausfall</strong>
+                <span class="overdue-days">0/15</span>
+                <div class="timestamp">Erste vollständig verfehlte Woche — 0% Erfolgsrate</div>
             </div>
-
-            <div class="todo high">
-                <strong>3. Golf Call</strong>
-                <span class="morning-badge">Heute</span>
-                <br><small>Heute — 16 Tage überfällig</small>
+            <div class="todo overdue">
+                <strong>KW 26 Totalausfall</strong>
+                <span class="overdue-days">0/20</span>
+                <div class="timestamp">Zweite vollständig verfehlte Woche — 0% Erfolgsrate</div>
             </div>
-
-            <div class="todo extreme">
-                <strong>4. NOMU Entscheidung</strong>
-                <span class="extreme-days">87 TAGE</span>
-                <br><small>HEUTE — 87 TAGE — extern/beenden/fertig</small>
+            <div class="todo urgent">
+                <strong>KW 27 Tag 1-4 Totalausfall</strong>
+                <span class="last-chance-badge">4 TAGE</span>
+                <div class="timestamp">4 aufeinanderfolgende Tage verfehlt — Tag 5 = LETZTE CHANCE</div>
             </div>
         </div>
 
-        <!-- Pricing -->
+        <!-- Insights -->
         <div class="card">
-            <h2>💰 PRICING</h2>
-            <h3 style="color: #888; font-size: 0.9rem; margin-bottom: 10px;">Tough Cookie</h3>
-            <div class="stat-row">
-                <span class="stat-label">Flex:</span>
-                <span>1.490€/Mo</span>
-            </div>
-            <div class="stat-row">
-                <span class="stat-label">Growth ⭐:</span>
-                <span>1.290€/Mo</span>
-            </div>
-            <div class="stat-row">
-                <span class="stat-label">Partner:</span>
-                <span>1.190€/Mo</span>
-            </div>
-            
-            <h3 style="color: #888; font-size: 0.9rem; margin: 15px 0 10px 0;">Freelance</h3>
-            <div class="stat-row">
-                <span class="stat-label">Video:</span>
-                <span>800€</span>
-            </div>
-            <div class="stat-row">
-                <span class="stat-label">Fotos:</span>
-                <span>600€</span>
-            </div>
-            <div class="stat-row">
-                <span class="stat-label">Social Paket:</span>
-                <span>400€/Mo</span>
-            </div>
-        </div>
-
-        <!-- Morning Mode -->
-        <div class="card" style="grid-column: 1 / -1; border: 2px solid #f59e0b;">
-            <h2 style="color: #f59e0b;">🌅 MORNING MODE — KW 27 Tag 2 ZWEITE CHANCE</h2>
-            <div class="masterplan-box" style="border-color: #f59e0b;">
+            <h2>💡 INSIGHTS & EMPFEHLUNGEN</h2>
+            <div class="masterplan-box">
                 <div class="stat-row">
-                    <span class="stat-label">Morgenphase:</span>
-                    <span>08:04 Europe/Berlin (UTC 06:04)</span>
+                    <span class="stat-label">Pattern:</span>
+                    <span class="gap-value">15 Tage ohne operative Erledigung</span>
                 </div>
                 <div class="stat-row">
-                    <span class="stat-label">Erste Stunde:</span>
-                    <span class="target-value">Wittmann Preproduction — ZWEITE CHANCE</span>
+                    <span class="stat-label">Blocker:</span>
+                    <span class="extreme">NOMU 89 TAGE — System blockiert</span>
                 </div>
                 <div class="stat-row">
-                    <span class="stat-label">Gestern:</span>
-                    <span class="gap-value">0/0 Tasks verfehlt</span>
+                    <span class="stat-label">Momentum:</span>
+                    <span class="gap-value">Vollständiger Stillstand KW 25-27</span>
                 </div>
                 <div class="stat-row">
-                    <span class="stat-label">Heute:</span>
-                    <span class="target-value">ZWEITE CHANCE — Externe Ressourcen</span>
-                </div>
-                <div class="stat-row">
-                    <span class="stat-label">Empfehlung:</span>
-                    <span class="critical">Wittmann ERSTE STUNDE SOFORT</span>
+                    <span class="stat-label">Heute kritisch:</span>
+                    <span class="critical">Tag 5 = LETZTE CHANCE</span>
                 </div>
             </div>
-            <p style="color: #fbbf24; font-size: 0.9rem; margin-top: 10px;">
-                🌅 MORNING Update: Nach verfehltem Tag 1 ist heute die ZWEITE CHANCE. Wittmann 17 Tage — ERSTE STUNDE entscheidend.
+            <p style="font-size: 0.9rem; color: #fca5a5; margin-top: 10px;">
+                🚨 EMPFEHLUNG: Externe Ressourcen SOFORT aktivieren (Prepro, AD, Calls an VA/freelancer delegieren) oder NOMU extern/beenden/fertig entscheiden. Ohne heute: dritte Totalausfall-Woche.
             </p>
-        </div>
-
-        <!-- KW 27 Plan -->
-        <div class="card" style="grid-column: 1 / -1; border: 2px solid #ef4444;">
-            <h2 style="color: #ef4444;">🎯 DIENSTAG 30.06. — KW 27 ZWEITE CHANCE</h2>
-            <div class="masterplan-box" style="border-color: #ef4444;">
-                <div class="stat-row" style="border-left: 3px solid #ef4444; padding-left: 10px; background: rgba(239,68,68,0.1);">
-                    <span class="stat-label critical">ERSTE STUNDE</span>
-                    <span class="critical">🎬 Wittmann Preproduction (17 Tage — ZWEITE CHANCE)</span>
-                </div>
-                <div class="stat-row" style="border-left: 3px solid #fbbf24; padding-left: 10px; background: rgba(251,191,36,0.1);">
-                    <span class="stat-label">Nach Wittmann</span>
-                    <span>🎬 Niku Fernseher AD (16 Tage überfällig)</span>
-                </div>
-                <div class="stat-row" style="border-left: 3px solid #fbbf24; padding-left: 10px;">
-                    <span class="stat-label">Vormittag</span>
-                    <span>📞 Golf Club Call (16 Tage überfällig)</span>
-                </div>
-                <div class="stat-row" style="border-left: 3px solid #ef4444; padding-left: 10px; background: rgba(239,68,68,0.1);">
-                    <span class="stat-label critical">HEUTE</span>
-                    <span class="critical">🎬 NOMU Entscheidung (87 TAGE — ABSOLUTER REKORD)</span>
-                </div>
-            </div>
-            <p style="color: #fca5a5; font-size: 0.9rem; margin-top: 10px;">
-                🔥 KW 27 Tag 1 wurde verfehlt (0/0 Tasks). Tag 2 ist die ZWEITE CHANCE. NOMU blockiert alles — Entscheidung HEUTE nötig.
-            </p>
-        </div>
-
-        <!-- Recent Updates -->
-        <div class="card" style="grid-column: 1 / -1;">
-            <h2>📝 LETZTE UPDATES</h2>
-            <div class="stat-row">
-                <span class="stat-label timestamp">08:04</span>
-                <span style="font-size: 0.9rem;">Dashboard Update v5.6.105 — MORNING: 🌅 KW 27 Tag 2 ZWEITE CHANCE, Wittmann 17 Tage, NOMU 87 TAGE REKORD!</span>
-            </div>
-            <div class="stat-row">
-                <span class="stat-label timestamp">04:04</span>
-                <span style="font-size: 0.9rem;">Dashboard Update v5.6.104 — NIGHT: KW 27 Tag 2 NEUER TAG, NOMU 87 Tage REKORD</span>
-            </div>
-            <div class="stat-row">
-                <span class="stat-label timestamp">20:04</span>
-                <span style="font-size: 0.9rem;">Dashboard Update v5.6.103 — EVENING: KW 27 Tag 1 ENTSCHEIDUNGSZEIT, 0/0 Tasks</span>
-            </div>
-            <div class="stat-row">
-                <span class="stat-label timestamp">16:04</span>
-                <span style="font-size: 0.9rem;">Dashboard Update v5.6.102 — AFTERNOON: KW 27 Tag 1, Wittmann 16 Tage</span>
-            </div>
         </div>
     </div>
 
     <div class="meta">
-        <p>🚀 VENTURE CTRL v5.6.105 | Letztes Update: 30. Juni 2026, 08:04 Uhr</p>
-        <p style="margin-top: 5px; color: #f59e0b;">🌅 STATUS: MORNING MODE — KW 27 Tag 2 ZWEITE CHANCE — WITTMANN ERSTE STUNDE</p>
+        <p>v5.6.114 — KW 27 Tag 5 NIGHT — Automatisch aktualisiert: 2026-07-03 00:04 Europe/Berlin</p>
+        <p>Letzte Chance vor Wochenende — NOMU 89 Tage historischer Rekord</p>
     </div>
 </body>
 </html>
