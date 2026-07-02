@@ -1,8 +1,8 @@
 {
-  "version": "v5.6.111",
-  "lastUpdated": "2026-07-02T02:04:00Z",
+  "version": "v5.6.112",
+  "lastUpdated": "2026-07-02T06:04:00Z",
   "week": "KW 27",
-  "mode": "NIGHT",
+  "mode": "MORNING",
   "summary": {
     "tasksCompleted": 0,
     "tasksTotal": 0,
@@ -13,11 +13,11 @@
   "today": {
     "date": "2026-07-02",
     "day": "Donnerstag",
-    "time": "04:04",
+    "time": "08:04",
     "completed": 0,
     "total": 0,
     "tasks": [],
-    "note": "🌙 KW 27 Tag 4 NIGHT — LETZTE CHANCE VORBEI — NOMU 89 TAGE REKORD"
+    "note": "🌅 KW 27 Tag 4 MORNING — ERSTE STUNDE AKTIV — NOMU 89 TAGE REKORD"
   },
   "critical": [
     {
@@ -57,9 +57,9 @@
   "upcoming": [
     {
       "event": "KW 27 Tag 4",
-      "date": "Donnerstag 02.07 Morgen",
+      "date": "Donnerstag 02.07 — ERSTE STUNDE",
       "type": "critical",
-      "note": "Tag 4 — Minimum 1 Task erledigen",
+      "note": "Tag 4 — Minimum 1 Task erledigen bis 12:00",
       "priority": "critical"
     }
   ],
@@ -80,7 +80,7 @@
       "status": "critical"
     },
     {
-      "name": "NOMU 89 TAGE",
+      "name": "NOMU 89 Tage",
       "description": "NEUER ABSOLUTER HISTORISCHER REKORD — 89 Tage überfällig",
       "status": "critical"
     }
@@ -90,7 +90,7 @@
     "completed": 0,
     "planned": 4,
     "successRate": "0%",
-    "notes": "KW 27 Tag 4 NIGHT: 3 Tage verfehlt (0/0), NOMU 89 TAGE REKORD, Tag 4 = LETZTE CHANCE"
+    "notes": "KW 27 Tag 4 MORNING: Erste Stunde aktiv, 3 Tage verfehlt (0/0), NOMU 89 TAGE REKORD, Tag 4 = LETZTE CHANCE"
   },
   "kw25Summary": {
     "totalTasks": 15,
@@ -111,7 +111,7 @@
     ]
   },
   "kw27Plan": {
-    "focus": "KW 27 Tag 4 NIGHT — Nach 3 verfehlten Tagen, Tag 4 = LETZTE CHANCE",
+    "focus": "KW 27 Tag 4 MORNING — Erste Stunde aktiv, nach 3 verfehlten Tagen, Tag 4 = LETZTE CHANCE",
     "blockerToResolve": "NOMU 89 TAGE — ABSOLUTER REKORD",
     "startDate": "2026-07-02",
     "priorities": [
@@ -126,6 +126,12 @@
       "date": "2026-07-02",
       "completed": 0,
       "total": 0,
+      "note": "Donnerstag 08:04 MORNING — KW 27 Tag 4 ERSTE STUNDE — NOMU 89 REKORD"
+    },
+    {
+      "date": "2026-07-02",
+      "completed": 0,
+      "total": 0,
       "note": "Donnerstag 04:04 NIGHT — KW 27 Tag 4 — Tag 3 komplett verfehlt, NOMU 89 REKORD"
     },
     {
@@ -133,38 +139,32 @@
       "completed": 0,
       "total": 0,
       "note": "Donnerstag 00:04 NIGHT — KW 27 Tag 4 — Tag 3 komplett verfehlt, NOMU 89 REKORD"
-    },
-    {
-      "date": "2026-07-01",
-      "completed": 0,
-      "total": 0,
-      "note": "Mittwoch 20:06 EVENING — KW 27 Tag 3 VERFEHLT — NOMU 88 TAGE"
     }
   ],
   "insights": {
     "pattern": "13+ Tage in Folge ohne operative Erledigung — Historischer Stillstand",
     "blocker": "NOMU 89 TAGE — ABSOLUTER HISTORISCHER SYSTEM-BLOCKER",
-    "momentum": "Vollständiger Stillstand KW 25-27",
-    "focus": "KW 27 Tag 4 = LETZTE CHANCE — Minimum 1 Task HEUTE",
+    "momentum": "Vollständiger Stillstand KW 25-27, ERSTE STUNDE TAG 4",
+    "focus": "KW 27 Tag 4 ERSTE STUNDE — Minimum 1 Task HEUTE BIS 12:00",
     "recommendation": "SOFORT: Tag 4 = letzte Chance für diese Woche — Externe Ressourcen aktivieren"
   },
   "analysis": {
     "strength": "Strategische Arbeit, Pitches, wichtige Meetings",
     "weakness": "Operative Routine, Post-Production, Calls — kompletter Stillstand KW 25-27, Tag 3 verfehlt",
-    "solution": "LETZTE CHANCE: Tag 4 = Minimum 1 Task oder KW 27 wird dritte Totalausfall-Woche"
+    "solution": "ERSTE STUNDE: Tag 4 = Minimum 1 Task bis 12:00 oder KW 27 wird dritte Totalausfall-Woche"
   },
   "cronUpdate": {
     "trigger": "dashboard-update-4h-v2",
-    "previousVersion": "v5.6.110",
-    "currentVersion": "v5.6.111",
+    "previousVersion": "v5.6.111",
+    "currentVersion": "v5.6.112",
     "interval": "4 Stunden",
-    "note": "NIGHT Update — KW 27 Donnerstag 04:04, Tag 4, Tag 3 verfehlt, NOMU 89 TAGE REKORD"
+    "note": "MORNING Update — KW 27 Donnerstag 08:04, Tag 4 ERSTE STUNDE, NOMU 89 TAGE REKORD"
   },
   "updateHistory": [
-    "v5.6.111 — 2026-07-02 04:04 Europe/Berlin — Aktuell (NIGHT Mode, KW 27 Tag 4 LETZTE CHANCE)",
-    "v5.6.110 — 2026-07-02 00:04 Europe/Berlin — NIGHT Mode, KW 27 Tag 4 LETZTE CHANCE",
-    "v5.6.109 — 2026-07-01 20:06 Europe/Berlin — EVENING Mode, KW 27 Tag 3 VERFEHLT",
-    "v5.6.108 — 2026-07-01 04:04 Europe/Berlin — NIGHT Mode, KW 27 Tag 3 LETZTE CHANCE"
+    "v5.6.112 — 2026-07-02 08:04 Europe/Berlin — Aktuell (MORNING Mode, KW 27 Tag 4 ERSTE STUNDE)",
+    "v5.6.111 — 2026-07-02 04:04 Europe/Berlin — NIGHT Mode, KW 27 Tag 4 LETZTE CHANCE",
+    "v5.6.110 — 2026-07-02 00:04 Europe/Berlin — NIGHT Mode, KW 27 Tag 4",
+    "v5.6.109 — 2026-07-01 20:06 Europe/Berlin — EVENING Mode, KW 27 Tag 3 VERFEHLT"
   ],
   "timeSessions": [],
   "income": [],
