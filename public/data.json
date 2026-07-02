@@ -1,6 +1,6 @@
 {
-  "version": "v5.6.110",
-  "lastUpdated": "2026-07-01T22:04:00Z",
+  "version": "v5.6.111",
+  "lastUpdated": "2026-07-02T02:04:00Z",
   "week": "KW 27",
   "mode": "NIGHT",
   "summary": {
@@ -13,7 +13,7 @@
   "today": {
     "date": "2026-07-02",
     "day": "Donnerstag",
-    "time": "00:04",
+    "time": "04:04",
     "completed": 0,
     "total": 0,
     "tasks": [],
@@ -80,7 +80,7 @@
       "status": "critical"
     },
     {
-      "name": "NOMU 89 Tage",
+      "name": "NOMU 89 TAGE",
       "description": "NEUER ABSOLUTER HISTORISCHER REKORD — 89 Tage überfällig",
       "status": "critical"
     }
@@ -126,6 +126,12 @@
       "date": "2026-07-02",
       "completed": 0,
       "total": 0,
+      "note": "Donnerstag 04:04 NIGHT — KW 27 Tag 4 — Tag 3 komplett verfehlt, NOMU 89 REKORD"
+    },
+    {
+      "date": "2026-07-02",
+      "completed": 0,
+      "total": 0,
       "note": "Donnerstag 00:04 NIGHT — KW 27 Tag 4 — Tag 3 komplett verfehlt, NOMU 89 REKORD"
     },
     {
@@ -133,12 +139,6 @@
       "completed": 0,
       "total": 0,
       "note": "Mittwoch 20:06 EVENING — KW 27 Tag 3 VERFEHLT — NOMU 88 TAGE"
-    },
-    {
-      "date": "2026-07-01",
-      "completed": 0,
-      "total": 0,
-      "note": "Mittwoch 14:04 AFTERNOON — KW 27 Tag 3 KRISENMODUS — 08:00 VERPASST, NOMU 88 REKORD"
     }
   ],
   "insights": {
@@ -155,14 +155,16 @@
   },
   "cronUpdate": {
     "trigger": "dashboard-update-4h-v2",
-    "previousVersion": "v5.6.109",
-    "currentVersion": "v5.6.110",
+    "previousVersion": "v5.6.110",
+    "currentVersion": "v5.6.111",
     "interval": "4 Stunden",
-    "note": "NIGHT Update — KW 27 Donnerstag 00:04, Tag 4, Tag 3 verfehlt, NOMU 89 TAGE REKORD"
+    "note": "NIGHT Update — KW 27 Donnerstag 04:04, Tag 4, Tag 3 verfehlt, NOMU 89 TAGE REKORD"
   },
   "updateHistory": [
-    "v5.6.110 — 2026-07-02 00:04 Europe/Berlin — Aktuell (NIGHT Mode, KW 27 Tag 4 LETZTE CHANCE)",
-    "v5.6.109 — 2026-07-01 20:06 Europe/Berlin — EVENING Mode, KW 27 Tag 3 VERFEHLT"
+    "v5.6.111 — 2026-07-02 04:04 Europe/Berlin — Aktuell (NIGHT Mode, KW 27 Tag 4 LETZTE CHANCE)",
+    "v5.6.110 — 2026-07-02 00:04 Europe/Berlin — NIGHT Mode, KW 27 Tag 4 LETZTE CHANCE",
+    "v5.6.109 — 2026-07-01 20:06 Europe/Berlin — EVENING Mode, KW 27 Tag 3 VERFEHLT",
+    "v5.6.108 — 2026-07-01 04:04 Europe/Berlin — NIGHT Mode, KW 27 Tag 3 LETZTE CHANCE"
   ],
   "timeSessions": [],
   "income": [],
