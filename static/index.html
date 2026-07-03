@@ -25,6 +25,14 @@
         }
         .header h1 { font-size: 2.2rem; margin-bottom: 5px; color: white; }
         .header p { color: rgba(255,255,255,0.8); }
+        .version-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-top: 8px;
+        }
         .grid { display: grid; gap: 20px; grid-template-columns: 1fr; }
         @media (min-width: 768px) {
             .grid { grid-template-columns: repeat(2, 1fr); }
@@ -35,6 +43,8 @@
             padding: 20px; 
             border-radius: 10px;
         }
+        .card.alert { border: 2px solid #f87171; }
+        .card.warning { border: 2px solid #fbbf24; }
         .card h2 { color: #667eea; margin-bottom: 15px; font-size: 1.1rem; }
         .stat-row { 
             display: flex; 
@@ -110,6 +120,31 @@
         .nav-link a:hover {
             background: rgba(102, 126, 234, 0.1);
         }
+        .fire-icon { color: #f87171; }
+        .critical-note {
+            background: rgba(248, 113, 113, 0.1);
+            border: 1px solid rgba(248, 113, 113, 0.3);
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+        }
+        .overdue-days {
+            background: #f87171;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+        .overdue-extreme {
+            background: linear-gradient(135deg, #f87171 0%, #7c2d2d 100%);
+            color: white;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
@@ -119,136 +154,125 @@
 
     <div class="header">
         <h1>🚀 VENTURE CTRL</h1>
-        <p>Static Dashboard — Stand: 23. April 2026, 12:04 Uhr</p>
+        <p>Static Dashboard — Stand: 3. Juli 2026, 16:04 Uhr</p>
+        <span class="version-badge">v5.6.116 | KW 27 | AFTERNOON</span>
     </div>
 
     <div class="grid">
-        <div class="card">
-            <h2>💰 Finanzen</h2>
-            <div class="stat-row">
-                <span class="stat-label">LuBu Rechnung</span>
-                <span class="stat-value positive">+1.400 € ✅</span>
+        <div class="card alert">
+            <h2>🔴 KRITISCH — NOMU Blocker</h2>
+            <div class="critical-note">
+                <strong>⚠️ NOMU Post-Production</strong><br>
+                <span class="overdue-extreme">90 TAGE ÜBERFÄLLIG</span>
+                <div class="timestamp">ABSOLUTER HISTORISCHER REKORD — System blockiert</div>
             </div>
-            <div class="stat-row">
-                <span class="stat-label">Investitionen</span>
-                <span class="stat-value negative">-700 €</span>
-            </div>
-            <div class="stat-row">
-                <span class="stat-label">Netto (LuBu)</span>
-                <span class="stat-value positive">+700 €</span>
-            </div>
-            <div class="stat-row">
-                <span class="stat-label">Tough Cookie offen</span>
-                <span class="stat-value warning">~9.000 €</span>
+            <div class="todo urgent">
+                <strong>Entscheidung erforderlich:</strong><br>
+                A) Extern vergeben | B) Beenden | C) Fertigstellen
             </div>
         </div>
 
-        <div class="card">
-            <h2>🏆 Recent Wins</h2>
-            <div class="todo done">
-                <strong>🎉 Sentai Deal</strong> — GEWONNEN! 🚀
-            </div>
-            <div class="todo done">
-                <strong>✅ Kono Postproduction</strong> — Fertig gestellt
-            </div>
-            <div class="todo done">
-                <strong>✅ LuBu Rechnung</strong> — 1.400€ versendet
-            </div>
-            <div class="todo done">
-                <strong>✅ Export María</strong> — Kommunikation abgeschlossen
-            </div>
-            <div class="todo done">
-                <strong>✅ Erstes Training</strong> — HYROX gestartet (Joggen)
-            </div>
-        </div>
-
-        <div class="card" style="border: 2px solid #f87171;">
-            <h2>🔴 URGENT (Heute/Morgen)</h2>
+        <div class="card warning">
+            <h2>🔴 URGENT (Heute — Letzte Chance)</h2>
             <div class="highlight">
-                <span class="today-badge">DREH</span>
+                <span class="today-badge">FREITAG NACHMITTAG</span>
+                <div class="timestamp">KW 27 Tag 5 — Letzte Chance vor Wochenende</div>
             </div>
             <div class="todo urgent">
-                <strong>📱 NOMU Dreh</strong> — Heute früh! (24.04.)
+                <strong>🎬 Wittmann Preproduction</strong> 
+                <span class="overdue-days">20 TAGE</span>
+                <div class="timestamp">KRISENMODUS — Nachmittag = letzte Chance</div>
+            </div>
+            <div class="todo high">
+                <strong>📺 Niku Fernseher AD</strong>
+                <span class="overdue-days">19 TAGE</span>
+                <div class="timestamp">Letzte Chance heute</div>
+            </div>
+            <div class="todo high">
+                <strong>📞 Golf Club Call</strong>
+                <span class="overdue-days">19 TAGE</span>
+                <div class="timestamp">Letzte Chance heute</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>📊 KW 27 Performance</h2>
+            <div class="stat-row">
+                <span class="stat-label">Erledigt</span>
+                <span class="stat-value negative">0/0 Tasks</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">Erfolgsrate</span>
+                <span class="stat-value negative">0%</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">Verfehlte Tage</span>
+                <span class="stat-value negative">5 Tage (Mo-Fr)</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">Stillstand</span>
+                <span class="stat-value negative">15 Tage</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">KW 25</span>
+                <span class="stat-value negative">0/15 (0%)</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">KW 26</span>
+                <span class="stat-value negative">0/20 (0%)</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>🔥 Historische Rekorde</h2>
+            <div class="todo urgent">
+                <strong>NOMU Blocker</strong> — 90 Tage (neuer Rekord)
+            </div>
+            <div class="todo high">
+                <strong>Wittmann</strong> — 20 Tage (neuer Rekord)
+            </div>
+            <div class="todo high">
+                <strong>Niku/Golf</strong> — 19 Tage
+            </div>
+            <div class="todo high">
+                <strong>Stillstand</strong> — 15 Tage ohne Erledigung
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>📈 Statistiken</h2>
+            <div class="stat-row">
+                <span class="stat-label">Kritische Blocker</span>
+                <span class="stat-value negative">4 Tasks</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">Ø Überfälligkeit</span>
+                <span class="stat-value warning">22 Tage</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">KW 27 Status</span>
+                <span class="stat-value negative">Totalausfall</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">Empfohlene Aktion</span>
+                <span class="stat-value warning">SOFORT handeln</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>💡 Empfehlung</h2>
+            <div class="content-reminder">
+                <strong>🚨 Notfall-Modus</strong><br>
+                Nachmittag = letzte Chance für KW 27. Ohne Erledigung heute wird KW 27 zur dritten Totalausfall-Woche in Folge.
             </div>
             <div class="todo urgent">
-                <strong>🎬 Sentai Pre-Production</strong> — Planen für Dreh Anfang Mai
+                <strong>1. Wittmann SOFORT</strong> — First Thing
             </div>
             <div class="todo high">
-                <strong>🎬 Tough Cookie Reel</strong> — Produzieren (1h Aufwand)
-            </div>
-        </div>
-
-        <div class="card">
-            <h2>🟡 HIGH (Diese Woche)</h2>
-            <div class="todo high">
-                <strong>⛳ Golf Ad</strong> — Pre-Production + Shots planen (Test Freitag)
-            </div>
-            <div class="todo high">
-                <strong>🍷 Weinbar Dario</strong> — Pitch fertig machen & schicken
-            </div>
-            <div class="todo high">
-                <strong>💊 Kyberg</strong> — Call terminieren (Videoproduktionen)
-            </div>
-        </div>
-
-        <div class="card">
-            <h2>🟢 NORMAL</h2>
-            <div class="todo high">
-                <strong>🎬 Persönlicher Retainer</strong> — Paket überlegen & antworten
+                <strong>2. NOMU Entscheidung</strong> — Heute erzwingen
             </div>
             <div class="todo normal">
-                <strong>🏨 Hotel Wittmann</strong> — Preproduction
-            </div>
-            <div class="todo normal">
-                <strong>🎨 Anju CI</strong> — Briefing für Grafikerin
-            </div>
-            <div class="todo normal">
-                <strong>💰 Finanzamt</strong> — Ratenzahlung (Deadline: 20.05.)
-            </div>
-            <div class="todo low">
-                <strong>🏥 Krankenkasse</strong> — E-Mail schreiben
-            </div>
-            <div class="todo low">
-                <strong>⚖️ Gerichtsvollzieher</strong> — Löschung klären
-            </div>
-            <div class="todo low">
-                <strong>🫒 Export Alexis</strong> — Rechnung warten, dann Samples
-            </div>
-        </div>
-
-        <div class="card">
-            <h2>🎯 Pipeline</h2>
-            <div class="deal">
-                <span>🍪 Sentai</span>
-                <span class="stage won">✅ Gewonnen</span>
-            </div>
-            <div class="deal">
-                <span>🍜 LuBu</span>
-                <span class="stage won">✅ 1.400 €</span>
-            </div>
-            <div class="deal">
-                <span>🍷 Weinbar Dario</span>
-                <span class="stage lead">Lead</span>
-            </div>
-            <div class="deal">
-                <span>💊 Kyberg Video</span>
-                <span class="stage lead">Lead</span>
-            </div>
-            <div class="deal">
-                <span>🎬 Persönlicher Retainer</span>
-                <span class="stage pitch">Pitch</span>
-            </div>
-        </div>
-
-        <div class="card">
-            <h2>📝 Content-Reminders</h2>
-            <div class="content-reminder">
-                <strong>🍣 Ginza</strong><br>
-                Neuer Content-Plan fällig — Ab 23. April 2026
-            </div>
-            <div class="content-reminder">
-                <strong>🐒 Monkey (Woche 3/4)</strong><br>
-                Post #3 am Donnerstag, 24. April 2026
+                <strong>3. Externe Hilfe</strong> — VA/Editor aktivieren
             </div>
         </div>
 
@@ -256,28 +280,32 @@
             <h2>📊 System-Status</h2>
             <div class="stat-row">
                 <span class="stat-label">Dashboard</span>
-                <span class="stat-value positive">✅ Aktiv</span>
+                <span class="stat-value positive">✅ Aktiv v5.6.116</span>
             </div>
             <div class="stat-row">
                 <span class="stat-label">Auto-Update</span>
                 <span class="stat-value positive">✅ 4h-Cron</span>
             </div>
             <div class="stat-row">
-                <span class="stat-label">Sam Agent</span>
-                <span class="stat-value negative">❌ Deaktiviert</span>
+                <span class="stat-label">Letztes Update</span>
+                <span class="stat-value">3. Juli 16:04</span>
             </div>
-            <div class="timestamp">Letzter Cron-Run: 23. April 2026, 12:04 Uhr</div>
+            <div class="stat-row">
+                <span class="stat-label">Modus</span>
+                <span class="stat-value warning">🌤️ AFTERNOON</span>
+            </div>
+            <div class="timestamp">Trigger: dashboard-update-4h-v2</div>
         </div>
     </div>
 
     <div class="meta">
-        <p>Venture CTRL v3 | Letztes Update: 23. April 2026, 12:04 Uhr</p>
-        <p>🎉 SENTAI DEAL GEWONNEN! Pre-Production diese Woche.</p>
-        <p>📱 NOMU Dreh: Heute früh | ⛳ Golf Ad Test: Freitag</p>
+        <p>Venture CTRL v5.6.116 | Letztes Update: 3. Juli 2026, 16:04 Uhr</p>
+        <p>🔥 90 Tage NOMU Blocker | 20 Tage Wittmann | 15 Tage Stillstand</p>
+        <p>⚠️ KW 27 Tag 5 — LETZTE CHANCE VOR WOCHENENDE</p>
     </div>
 
     <script>
-        console.log('Venture CTRL Static v3 loaded at', new Date().toLocaleString('de-DE'));
+        console.log('Venture CTRL Static v5.6.116 loaded at', new Date().toLocaleString('de-DE'));
     </script>
 </body>
 </html>
