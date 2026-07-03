@@ -1,29 +1,29 @@
-# Deploy Status — v5.6.114
+# Deploy Status — v5.6.115
 
-**Datum:** 3. Juli 2026, 00:04 Europe/Berlin  
-**Version:** v5.6.114
+**Datum:** 3. Juli 2026, 04:04 Europe/Berlin  
+**Version:** v5.6.115
 
 ## Status: ✅ DEPLOYED
 
 | Schritt | Status | Zeit |
 |---------|--------|------|
-| Daten aktualisiert | ✅ | 00:04:10 |
-| Build | ✅ | 00:04:20 |
-| Git commit | ⏳ | pending |
-| Git push | ⏳ | pending |
-| GitHub Pages | ⏳ | ~5-10 min |
+| Daten aktualisiert | ✅ | 04:04:10 |
+| Build | ✅ | 04:04:30 |
+| Git commit | ✅ | 04:05:00 |
+| Git push | ✅ | 04:05:05 |
+| GitHub Pages | ✅ | ~5 min |
 
 ## Änderungen
-- NIGHT Mode: 🌙 KW 27 Tag 5 LETZTE CHANCE
-- Tag 1-4 VERFEHLT — 0/0 Tasks
+- KW 27 Tag 5 LETZTE CHANCE VOR WOCHENENDE
+- Alle 4 Tasks weiterhin überfällig (19-20 Tage)
 - NOMU 89 TAGE — **ABSOLUTER HISTORISCHER REKORD**
 - Wittmann 20 Tage überfällig
-- Niku 19 Tage überfällig
+- Niku 19 Tage überfällig  
 - Golf 19 Tage überfällig
-- **Kritisch:** Tag 5 = LETZTE CHANCE vor Wochenende
+- Keine neuen Erledigungen seit 15+ Tagen
 
-## Memory-Log
-- ✅ `/data/.openclaw/workspace/venture-ctrl/memory/2026-07-03-dashboard-update-v5-6-114.md`
+## Memory-Logs
+- ✅ `/data/.openclaw/workspace/memory/2026-07-02-abend-report.md`
 
 ---
-*Last updated: 2026-07-03 00:04 UTC*
+*Last updated: 2026-07-03 04:05 UTC*
