@@ -1,6 +1,6 @@
 {
-  "version": "v5.6.121",
-  "lastUpdated": "2026-07-04T10:04:00Z",
+  "version": "v5.6.122",
+  "lastUpdated": "2026-07-04T14:04:00Z",
   "week": "KW 27",
   "mode": "AFTERNOON",
   "summary": {
@@ -13,20 +13,20 @@
   "today": {
     "date": "2026-07-04",
     "day": "Samstag",
-    "time": "12:04",
+    "time": "16:04",
     "completed": 0,
     "total": 0,
     "tasks": [],
-    "note": "🌤️ KW 27 Tag 6 AFTERNOON — WOCHENENDE / KW 28 NEUSTART VORBEREITUNG — NOMU 92 TAGE REKORD"
+    "note": "🌤️ KW 27 Tag 6 AFTERNOON — WOCHENENDE / KW 28 NEUSTART VORBEREITUNG — NOMU 93 TAGE REKORD"
   },
   "critical": [
     {
       "task": "NOMU Post-Production",
-      "overdue": 92,
-      "days": 92,
+      "overdue": 93,
+      "days": 93,
       "type": "post-production",
       "priority": "critical",
-      "note": "92 TAGE — NEUER ABSOLUTER HISTORISCHER REKORD — SYSTEM BLOCKIERT"
+      "note": "93 TAGE — NEUER ABSOLUTER HISTORISCHER REKORD — SYSTEM BLOCKIERT"
     }
   ],
   "overdue": [
@@ -80,8 +80,8 @@
       "status": "critical"
     },
     {
-      "name": "NOMU 92 TAGE",
-      "description": "NEUER ABSOLUTER HISTORISCHER REKORD — 92 Tage überfällig",
+      "name": "NOMU 93 TAGE",
+      "description": "NEUER ABSOLUTER HISTORISCHER REKORD — 93 Tage überfällig",
       "status": "critical"
     },
     {
@@ -95,7 +95,7 @@
     "completed": 0,
     "planned": 4,
     "successRate": "0%",
-    "notes": "KW 27 TOTALAUSFALL BESTÄTIGT: 6 Tage (0/0), NOMU 92 TAGE REKORD, 17-Tage-Stillstand, KW 28 NEUSTART Montag"
+    "notes": "KW 27 TOTALAUSFALL BESTÄTIGT: 6 Tage (0/0), NOMU 93 TAGE REKORD, 17-Tage-Stillstand, KW 28 NEUSTART Montag"
   },
   "kw25Summary": {
     "totalTasks": 15,
@@ -116,14 +116,14 @@
     ]
   },
   "kw27Plan": {
-    "focus": "KW 27 TOTALAUSFALL — 6 Tage verfehlt (0/0), NOMU 92 TAGE REKORD",
-    "blockerToResolve": "NOMU 92 TAGE — ABSOLUTER HISTORISCHER REKORD",
+    "focus": "KW 27 TOTALAUSFALL — 6 Tage verfehlt (0/0), NOMU 93 TAGE REKORD",
+    "blockerToResolve": "NOMU 93 TAGE — ABSOLUTER HISTORISCHER SYSTEM-BLOCKER",
     "startDate": "2026-07-06",
     "priorities": [
-      "Wittmann Preproduction (22 Tage — ERSTE PRIORITÄT KW 28)",
-      "Niku AD (21 Tage — KW 28)",
-      "Golf Club Call (21 Tage — KW 28)",
-      "NOMU Entscheidung (92 TAGE — REKORD)"
+      "Wittmann Preproduction (22 Tage — ERSTE PRIORITÄT KW 28 Montag)",
+      "Niku AD (21 Tage — KW 28 Dienstag)",
+      "Golf Club Call (21 Tage — KW 28 Mittwoch)",
+      "NOMU Entscheidung (93 TAGE — REKORD)"
     ]
   },
   "kw28Plan": {
@@ -132,7 +132,7 @@
       "Montag 06.07: Wittmann Preproduction (22 Tage) — ERSTE PRIORITÄT",
       "Dienstag 07.07: Niku AD (22 Tage)",
       "Mittwoch 08.07: Golf Club Call (22 Tage)",
-      "NOMU: Entscheidung treffen (93+ Tage)"
+      "NOMU: Entscheidung treffen (94+ Tage)"
     ],
     "goal": "Minimum 1 Task pro Tag in KW 28 — Break the streak"
   },
@@ -141,24 +141,24 @@
       "date": "2026-07-04",
       "completed": 0,
       "total": 0,
-      "note": "Samstag 12:04 AFTERNOON — KW 27 Tag 6 WOCHENENDE, NOMU 92 REKORD, KW 28 Vorbereitung"
+      "note": "Samstag 16:04 AFTERNOON — KW 27 Tag 6 WOCHENENDE, NOMU 93 REKORD, KW 28 Vorbereitung"
+    },
+    {
+      "date": "2026-07-04",
+      "completed": 0,
+      "total": 0,
+      "note": "Samstag 12:04 AFTERNOON — KW 27 Tag 6 WOCHENENDE, NOMU 92 REKORD"
     },
     {
       "date": "2026-07-04",
       "completed": 0,
       "total": 0,
       "note": "Samstag 08:04 MORNING — KW 27 Totalausfall bestätigt, NOMU 92 TAGE REKORD"
-    },
-    {
-      "date": "2026-07-04",
-      "completed": 0,
-      "total": 0,
-      "note": "Samstag 00:04 NIGHT — KW 27 Tag 6 begonnen, NOMU 91 TAGE REKORD"
     }
   ],
   "insights": {
     "pattern": "17 aufeinanderfolgende Arbeitstage ohne operative Erledigung — Historischer Stillstand",
-    "blocker": "NOMU 92 TAGE — ABSOLUTER HISTORISCHER SYSTEM-BLOCKER",
+    "blocker": "NOMU 93 TAGE — ABSOLUTER HISTORISCHER SYSTEM-BLOCKER",
     "momentum": "Vollständiger Stillstand KW 25-27 (3 Wochen Totalausfall)",
     "focus": "KW 28 Montag = NEUSTART — Wittmann (22 Tage) erste Priorität",
     "recommendation": "WOCHENENDE: Erholung + Planung für KW 28 Neustart"
@@ -170,16 +170,16 @@
   },
   "cronUpdate": {
     "trigger": "dashboard-update-4h-v2",
-    "previousVersion": "v5.6.120",
-    "currentVersion": "v5.6.121",
+    "previousVersion": "v5.6.121",
+    "currentVersion": "v5.6.122",
     "interval": "4 Stunden",
-    "note": "AFTERNOON Update — KW 27 Samstag 12:04, WOCHENENDE, NOMU 92 TAGE REKORD, KW 28 Vorbereitung"
+    "note": "AFTERNOON Update — KW 27 Samstag 16:04, WOCHENENDE, NOMU 93 TAGE REKORD, KW 28 Vorbereitung"
   },
   "updateHistory": [
-    "v5.6.121 — 2026-07-04 12:04 Europe/Berlin — Aktuell (AFTERNOON Mode, KW 27 Tag 6 WOCHENENDE, KW 28 Vorbereitung)",
+    "v5.6.122 — 2026-07-04 16:04 Europe/Berlin — Aktuell (AFTERNOON Mode, KW 27 Tag 6 WOCHENENDE, KW 28 Vorbereitung)",
+    "v5.6.121 — 2026-07-04 12:04 Europe/Berlin — AFTERNOON Mode, KW 27 Tag 6",
     "v5.6.120 — 2026-07-04 08:04 Europe/Berlin — MORNING Mode, KW 27 Totalausfall bestätigt",
-    "v5.6.119 — 2026-07-04 04:04 Europe/Berlin — NIGHT Mode, KW 27 Tag 6",
-    "v5.6.118 — 2026-07-04 00:04 Europe/Berlin — NIGHT Mode, KW 27 Tag 6 begonnen"
+    "v5.6.119 — 2026-07-04 04:04 Europe/Berlin — NIGHT Mode, KW 27 Tag 6"
   ],
   "timeSessions": [],
   "income": [],
@@ -217,8 +217,8 @@
       "priority": "critical",
       "completed": false,
       "project": "nomu",
-      "overdue": 92,
-      "note": "92 TAGE ABSOLUTER REKORD — Entscheidung SOFORT"
+      "overdue": 93,
+      "note": "93 TAGE ABSOLUTER REKORD — Entscheidung SOFORT"
     }
   ],
   "pipeline": [],
