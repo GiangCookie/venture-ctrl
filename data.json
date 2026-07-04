@@ -1,6 +1,6 @@
 {
-  "version": "v5.6.118",
-  "lastUpdated": "2026-07-03T22:04:00Z",
+  "version": "v5.6.119",
+  "lastUpdated": "2026-07-04T02:04:00Z",
   "week": "KW 27",
   "mode": "NIGHT",
   "summary": {
@@ -13,43 +13,53 @@
   "today": {
     "date": "2026-07-04",
     "day": "Samstag",
-    "time": "00:04",
+    "time": "04:04",
     "completed": 0,
     "total": 0,
     "tasks": [],
-    "note": "🌙 KW 27 Tag 6 NIGHT — WOCHENENDE — KW 27 Totalausfall bestätigt, NOMU 91 TAGE REKORD"
+    "note": "🌙 KW 27 Tag 6 NIGHT — WOCHENENDE — NOMU 92 TAGE NEUER REKORD, DRITTER TOTALAUSFALL"
   },
   "critical": [
     {
       "task": "NOMU Post-Production",
-      "overdue": 91,
-      "days": 91,
+      "overdue": 92,
+      "days": 92,
       "type": "post-production",
       "priority": "critical",
-      "note": "91 TAGE — ABSOLUTER HISTORISCHER REKORD — SYSTEM KOMPLETT BLOCKIERT"
+      "note": "92 TAGE — NEUER ABSOLUTER HISTORISCHER REKORD — SYSTEM ZERSTÖRT"
     }
   ],
   "overdue": [
     {
       "task": "Wittmann Preproduction",
-      "days": 20,
+      "days": 21,
       "type": "production",
       "priority": "critical",
-      "note": "20 Tage — WOCHENENDE = Pause, Montag CRITICAL"
+      "note": "21 Tage — WOCHENENDE Pause, Montag ERSTE PRIORITÄT"
     },
     {
       "task": "Niku Fernseher AD",
-      "days": 19,
+      "days": 20,
       "type": "content",
       "priority": "high",
-      "note": "19 Tage — WOCHENENDE = Pause"
+      "note": "20 Tage — Montag"
     },
     {
       "task": "Golf Club Call",
-      "days": 19,
+      "days": 20,
       "type": "call",
       "priority": "medium",
-      "note": "19 Tage — WOCHENENDE = Pause, Montag Call"
+      "note": "20 Tage — Montag Call"
+    }
+  ],
+  "criticalOverdue": [
+    {
+      "task": "NOMU Post-Production",
+      "overdue": 92,
+      "days": 92,
+      "type": "post-production",
+      "priority": "critical",
+      "note": "92 TAGE — NEUER ABSOLUTER HISTORISCHER REKORD"
     }
   ],
   "completedToday": [],
@@ -57,9 +67,9 @@
   "upcoming": [
     {
       "event": "KW 27 Samstag WOCHENENDE",
-      "date": "Samstag 04.07 00:04 — WOCHENENDE",
+      "date": "Samstag 04.07 04:04 — WOCHENENDE",
       "type": "pause",
-      "note": "KW 27 Totalausfall bestätigt: 0/0 Tasks — Dritte Totalausfall-Woche in Folge",
+      "note": "KW 27 Totalausfall bestätigt: 0/0 Tasks — Dritte Totalausfall-Woche in Folge, NOMU 92 Tage",
       "priority": "high"
     },
     {
@@ -83,17 +93,17 @@
     },
     {
       "name": "KW 27 Totalausfall BESTÄTIGT",
-      "description": "Dritte vollständig verfehlte Woche: 0/0 Tasks — Montag-Freitag 5 Tage verfehlt",
+      "description": "Dritte vollständig verfehlte Woche: 0/0 Tasks — Montag-Freitag verfehlt",
       "status": "critical"
     },
     {
-      "name": "NOMU 91 Tage",
-      "description": "ABSOLUTER HISTORISCHER REKORD — 91 Tage überfällig",
+      "name": "NOMU 92 Tage",
+      "description": "NEUER ABSOLUTER HISTORISCHER REKORD — 92 Tage überfällig",
       "status": "critical"
     },
     {
-      "name": "16-Tage-Stillstand",
-      "description": "16 aufeinanderfolgende Arbeitstage ohne operative Erledigung",
+      "name": "17-Tage-Stillstand",
+      "description": "17 aufeinanderfolgende Tage ohne operative Erledigung",
       "status": "critical"
     }
   ],
@@ -102,7 +112,7 @@
     "completed": 0,
     "planned": 5,
     "successRate": "0%",
-    "notes": "KW 27 TOTALAUSFALL BESTÄTIGT: Tag 1-5 verfehlt (0/0), NOMU 91 TAGE REKORD, 16-Tage-Stillstand"
+    "notes": "KW 27 TOTALAUSFALL BESTÄTIGT: 5 Tage verfehlt (0/0), NOMU 92 TAGE REKORD, 17-Tage-Stillstand"
   },
   "kw25Summary": {
     "totalTasks": 15,
@@ -129,26 +139,32 @@
     "highlights": [
       "Dritte aufeinanderfolgende Totalausfall-Woche",
       "5 Tage ohne operative Erledigungen",
-      "NOMU 91 TAGE ABSOLUTER REKORD"
+      "NOMU 92 TAGE NEUER ABSOLUTER REKORD"
     ]
   },
   "kw28Plan": {
-    "focus": "KW 28 Montag — NEUSTART NACH DRITTE TOTALAUSFALL-WOCHE",
-    "blockerToResolve": "NOMU 91 TAGE — ABSOLUTER REKORD",
+    "focus": "KW 28 Montag — NEUSTART NACH DRITTER TOTALAUSFALL-WOCHE",
+    "blockerToResolve": "NOMU 92 TAGE — NEUER ABSOLUTER REKORD",
     "startDate": "2026-07-06",
     "priorities": [
-      "Wittmann Preproduction (21+ Tage — MONTAG = ERSTE PRIORITÄT)",
-      "Niku AD (20+ Tage — Montag)",
-      "Golf Club Call (20 Tage — Montag)",
-      "NOMU Entscheidung (91 TAGE — REKORD)"
+      "Wittmann Preproduction (22+ Tage — MONTAG = ERSTE PRIORITÄT)",
+      "Niku AD (21+ Tage — Montag)",
+      "Golf Club Call (21 Tage — Montag)",
+      "NOMU Entscheidung (92 TAGE — NEUER REKORD)"
     ]
   },
   "history": [
     {
+      "date": "2026-07-04",
+      "completed": 0,
+      "total": 0,
+      "note": "Samstag 04:04 NIGHT — KW 27 Tag 6 WOCHENENDE, NOMU 92 TAGE REKORD"
+    },
+    {
       "date": "2026-07-03",
       "completed": 0,
       "total": 0,
-      "note": "Freitag 20:04 EVENING — ABSOLUT LETZTE CHANCE — NOMU 90 TAGE"
+      "note": "Freitag 20:04 EVENING — ABSOLUT LETZTE CHANCE verfehlt — NOMU 91 TAGE"
     },
     {
       "date": "2026-07-03",
@@ -161,17 +177,11 @@
       "completed": 0,
       "total": 0,
       "note": "Freitag 08:04 MORNING — LETZTE CHANCE — NOMU 90 TAGE REKORD"
-    },
-    {
-      "date": "2026-07-02",
-      "completed": 0,
-      "total": 0,
-      "note": "Donnerstag 20:04 EVENING — KW 27 Tag 4 VERFEHLT"
     }
   ],
   "insights": {
-    "pattern": "16 Tage in Folge ohne operative Erledigung — DREIFACHER TOTALAUSFALL",
-    "blocker": "NOMU 91 TAGE — ABSOLUTER HISTORISCHER SYSTEM-BLOCKER",
+    "pattern": "17 Tage in Folge ohne operative Erledigung — DREIFACHER TOTALAUSFALL",
+    "blocker": "NOMU 92 TAGE — NEUER ABSOLUTER HISTORISCHER SYSTEM-BLOCKER",
     "momentum": "Vollständiger Stillstand KW 25-27, 3 Wochen Totalausfall",
     "focus": "KW 28 Montag — NEUSTART nach historischer Talfahrt",
     "recommendation": "WOCHENENDE: Erholung + Planung KW 28. MONTAG: Sofortiger Neustart, NOMU Entscheidung"
@@ -183,17 +193,17 @@
   },
   "cronUpdate": {
     "trigger": "dashboard-update-4h-v2",
-    "previousVersion": "v5.6.117",
-    "currentVersion": "v5.6.118",
+    "previousVersion": "v5.6.118",
+    "currentVersion": "v5.6.119",
     "interval": "4 Stunden",
-    "note": "NIGHT Update — KW 27 Samstag 00:04, Tag 6 WOCHENENDE, KW 27 Totalausfall bestätigt, NOMU 91 TAGE REKORD, 16-Tage-Stillstand"
+    "note": "NIGHT Update — KW 27 Samstag 04:04, Tag 6 WOCHENENDE, KW 27 Totalausfall bestätigt, NOMU 92 TAGE NEUER REKORD, 17-Tage-Stillstand"
   },
   "updateHistory": [
-    "v5.6.118 — 2026-07-04 00:04 Europe/Berlin — Aktuell (NIGHT Mode, KW 27 Tag 6 WOCHENENDE, Totalausfall bestätigt)",
+    "v5.6.119 — 2026-07-04 04:04 Europe/Berlin — Aktuell (NIGHT Mode, KW 27 Tag 6 WOCHENENDE, NOMU 92 TAGE NEUER REKORD)",
+    "v5.6.118 — 2026-07-04 00:04 Europe/Berlin — NIGHT Mode, KW 27 Tag 6 WOCHENENDE",
     "v5.6.117 — 2026-07-03 20:04 Europe/Berlin — EVENING Mode, ABSOLUT LETZTE CHANCE",
     "v5.6.116 — 2026-07-03 16:04 Europe/Berlin — AFTERNOON Mode, KW 27 Tag 5 LETZTE CHANCE",
-    "v5.6.115 — 2026-07-03 08:04 Europe/Berlin — MORNING Mode, KW 27 Tag 5 LETZTE CHANCE",
-    "v5.6.114 — 2026-07-03 00:04 Europe/Berlin — NIGHT Mode, KW 27 Tag 5 LETZTE CHANCE"
+    "v5.6.115 — 2026-07-03 08:04 Europe/Berlin — MORNING Mode, KW 27 Tag 5 LETZTE CHANCE"
   ],
   "timeSessions": [],
   "income": [],
@@ -204,8 +214,8 @@
       "priority": "critical",
       "completed": false,
       "project": "freelance",
-      "overdue": 20,
-      "note": "20 Tage — WOCHENENDE Pause, Montag ERSTE PRIORITÄT"
+      "overdue": 21,
+      "note": "21 Tage — WOCHENENDE Pause, Montag ERSTE PRIORITÄT"
     },
     {
       "id": 2,
@@ -213,8 +223,8 @@
       "priority": "high",
       "completed": false,
       "project": "tough-cookie",
-      "overdue": 19,
-      "note": "19 Tage — Montag"
+      "overdue": 20,
+      "note": "20 Tage — Montag"
     },
     {
       "id": 3,
@@ -222,8 +232,8 @@
       "priority": "medium",
       "completed": false,
       "project": "tough-cookie",
-      "overdue": 19,
-      "note": "19 Tage — Montag Call"
+      "overdue": 20,
+      "note": "20 Tage — Montag Call"
     },
     {
       "id": 4,
@@ -231,8 +241,8 @@
       "priority": "critical",
       "completed": false,
       "project": "nomu",
-      "overdue": 91,
-      "note": "91 TAGE ABSOLUTER REKORD — Entscheidung KW 28"
+      "overdue": 92,
+      "note": "92 TAGE NEUER ABSOLUTER REKORD — Entscheidung KW 28"
     }
   ],
   "pipeline": [],
