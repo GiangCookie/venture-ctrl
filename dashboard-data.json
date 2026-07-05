@@ -1,8 +1,8 @@
 {
-  "version": "v5.6.126",
-  "lastUpdated": "2026-07-05T06:04:00Z",
+  "version": "v5.6.127",
+  "lastUpdated": "2026-07-05T10:04:00Z",
   "week": "KW 27",
-  "mode": "MORNING",
+  "mode": "AFTERNOON",
   "summary": {
     "tasksCompleted": 0,
     "tasksTotal": 0,
@@ -13,11 +13,11 @@
   "today": {
     "date": "2026-07-05",
     "day": "Sonntag",
-    "time": "08:04",
+    "time": "12:04",
     "completed": 0,
     "total": 0,
     "tasks": [],
-    "note": "☀️ KW 27 Tag 7 MORNING — WOCHENENDE-ENDE, NOMU 96 TAGE NEUER REKORD, KW 28 HEUTE!"
+    "note": "🌤️ KW 27 Tag 7 AFTERNOON — WOCHENENDE-ENDE, NOMU 96 TAGE NEUER REKORD, KW 28 HEUTE!"
   },
   "critical": [
     {
@@ -141,6 +141,12 @@
       "date": "2026-07-05",
       "completed": 0,
       "total": 0,
+      "note": "Sonntag 12:04 AFTERNOON — KW 27 Tag 7 WOCHENENDE-ENDE, NOMU 96 REKORD, KW 28 STARTET HEUTE!"
+    },
+    {
+      "date": "2026-07-05",
+      "completed": 0,
+      "total": 0,
       "note": "Sonntag 08:04 MORNING — KW 27 Tag 7 WOCHENENDE-ENDE, NOMU 96 REKORD, KW 28 STARTET HEUTE!"
     },
     {
@@ -160,12 +166,6 @@
       "completed": 0,
       "total": 0,
       "note": "Samstag 16:04 AFTERNOON — KW 27 Tag 6 WOCHENENDE, NOMU 93 REKORD, KW 28 Vorbereitung"
-    },
-    {
-      "date": "2026-07-04",
-      "completed": 0,
-      "total": 0,
-      "note": "Samstag 12:04 AFTERNOON — KW 27 Tag 6 WOCHENENDE, NOMU 92 REKORD"
     }
   ],
   "insights": {
@@ -173,7 +173,7 @@
     "blocker": "NOMU 96 TAGE — ABSOLUTER HISTORISCHER SYSTEM-BLOCKER",
     "momentum": "Vollständiger Stillstand KW 25-27 (3 Wochen Totalausfall)",
     "focus": "KW 28 MONTAG 06.07 = STARTET HEUTE! — Wittmann (24 Tage) ERSTE PRIORITÄT!",
-    "recommendation": "SONNTAG: Letzte Ruhe — KW 28 startet HEUTE MONTAG 06.07!"
+    "recommendation": "SONNTAG NACHMITTAG: Letzte Ruhe — KW 28 startet HEUTE MONTAG 06.07!"
   },
   "analysis": {
     "strength": "Strategische Arbeit, Pitches, wichtige Meetings",
@@ -182,13 +182,14 @@
   },
   "cronUpdate": {
     "trigger": "dashboard-update-4h-v2",
-    "previousVersion": "v5.6.125",
-    "currentVersion": "v5.6.126",
+    "previousVersion": "v5.6.126",
+    "currentVersion": "v5.6.127",
     "interval": "4 Stunden",
-    "note": "MORNING Update — KW 27 Sonntag 08:04, WOCHENENDE-ENDE, NOMU 96 TAGE NEUER REKORD, KW 28 STARTET HEUTE!"
+    "note": "AFTERNOON Update — KW 27 Sonntag 12:04, WOCHENENDE-ENDE, NOMU 96 TAGE NEUER REKORD, KW 28 STARTET HEUTE!"
   },
   "updateHistory": [
-    "v5.6.126 — 2026-07-05 08:04 Europe/Berlin — Aktuell (MORNING Mode, KW 27 Tag 7 WOCHENENDE-ENDE, NOMU 96 REKORD, KW 28 STARTET HEUTE!)",
+    "v5.6.127 — 2026-07-05 12:04 Europe/Berlin — Aktuell (AFTERNOON Mode, KW 27 Tag 7 WOCHENENDE-ENDE, NOMU 96 REKORD, KW 28 STARTET HEUTE!)",
+    "v5.6.126 — 2026-07-05 08:04 Europe/Berlin — MORNING Mode, KW 27 Tag 7 WOCHENENDE-ENDE, NOMU 96 REKORD, KW 28 STARTET HEUTE!",
     "v5.6.125 — 2026-07-05 04:04 Europe/Berlin — MORNING Mode, KW 27 Tag 7 Letzte Ruhe, KW 28 Neustart",
     "v5.6.124 — 2026-07-05 00:04 Europe/Berlin — NIGHT Mode, KW 27 Tag 7 WOCHENENDE-ENDE, KW 28 NEUSTART",
     "v5.6.123 — 2026-07-04 20:04 Europe/Berlin — EVENING Mode, KW 27 Tag 6",
