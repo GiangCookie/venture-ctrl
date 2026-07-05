@@ -1,8 +1,8 @@
 {
-  "version": "v5.6.124",
-  "lastUpdated": "2026-07-05T00:04:00Z",
+  "version": "v5.6.125",
+  "lastUpdated": "2026-07-05T04:04:00Z",
   "week": "KW 27",
-  "mode": "NIGHT",
+  "mode": "MORNING",
   "summary": {
     "tasksCompleted": 0,
     "tasksTotal": 0,
@@ -13,11 +13,11 @@
   "today": {
     "date": "2026-07-05",
     "day": "Sonntag",
-    "time": "00:04",
+    "time": "04:04",
     "completed": 0,
     "total": 0,
     "tasks": [],
-    "note": "🌙 KW 27 Tag 7 NIGHT — WOCHENENDE ENDE / KW 28 NEUSTART MONTAG — NOMU 95 TAGE ABSOLUTER REKORD"
+    "note": "☀️ KW 27 Tag 7 MORNING — Letzte Ruhe vor KW 28 Neustart — NOMU 95 TAGE REKORD"
   },
   "critical": [
     {
@@ -176,13 +176,14 @@
   },
   "cronUpdate": {
     "trigger": "dashboard-update-4h-v2",
-    "previousVersion": "v5.6.123",
-    "currentVersion": "v5.6.124",
+    "previousVersion": "v5.6.124",
+    "currentVersion": "v5.6.125",
     "interval": "4 Stunden",
-    "note": "NIGHT Update — KW 27 Sonntag 00:04, WOCHENENDE-ENDE, NOMU 95 TAGE REKORD, KW 28 NEUSTART MONTAG"
+    "note": "MORNING Update — KW 27 Sonntag 04:04, Letzte Ruhe vor KW 28, NOMU 95 TAGE REKORD"
   },
   "updateHistory": [
-    "v5.6.124 — 2026-07-05 00:04 Europe/Berlin — Aktuell (NIGHT Mode, KW 27 Tag 7 WOCHENENDE-ENDE, KW 28 NEUSTART)",
+    "v5.6.125 — 2026-07-05 04:04 Europe/Berlin — Aktuell (MORNING Mode, KW 27 Tag 7 Letzte Ruhe, KW 28 Neustart)",
+    "v5.6.124 — 2026-07-05 00:04 Europe/Berlin — NIGHT Mode, KW 27 Tag 7 WOCHENENDE-ENDE, KW 28 NEUSTART",
     "v5.6.123 — 2026-07-04 20:04 Europe/Berlin — EVENING Mode, KW 27 Tag 6",
     "v5.6.122 — 2026-07-04 16:04 Europe/Berlin — AFTERNOON Mode, KW 27 Tag 6",
     "v5.6.121 — 2026-07-04 12:04 Europe/Berlin — AFTERNOON Mode, KW 27 Tag 6",
