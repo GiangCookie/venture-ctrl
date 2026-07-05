@@ -1,8 +1,8 @@
 {
-  "version": "v5.6.126",
-  "lastUpdated": "2026-07-05T06:04:00Z",
+  "version": "v5.6.129",
+  "lastUpdated": "2026-07-05T18:04:00Z",
   "week": "KW 27",
-  "mode": "MORNING",
+  "mode": "NIGHT",
   "summary": {
     "tasksCompleted": 0,
     "tasksTotal": 0,
@@ -13,11 +13,11 @@
   "today": {
     "date": "2026-07-05",
     "day": "Sonntag",
-    "time": "08:04",
+    "time": "20:04",
     "completed": 0,
     "total": 0,
     "tasks": [],
-    "note": "☀️ KW 27 Tag 7 MORNING — WOCHENENDE-ENDE, NOMU 96 TAGE NEUER REKORD, KW 28 HEUTE!"
+    "note": "🌙 KW 27 Tag 7 NIGHT — DRITTE TOTALAUSFALL-WOCHE ENDE, NOMU 96 TAGE REKORD, KW 28 STARTET MORGEN MONTAG 06.07!"
   },
   "critical": [
     {
@@ -56,10 +56,10 @@
   "completedWeek": [],
   "upcoming": [
     {
-      "event": "🚀 KW 28 STARTET HEUTE MONTAG!",
-      "date": "Montag 06.07 Morgen",
+      "event": "🚀 KW 28 STARTET MORGEN MONTAG!",
+      "date": "Montag 06.07",
       "type": "critical",
-      "note": "KW 28 STARTET MONTAG 06.07 — Wittmann (24 Tage) ERSTE PRIORITÄT!",
+      "note": "KW 28 STARTET MORGEN MONTAG 06.07 — Wittmann (24 Tage) ERSTE PRIORITÄT!",
       "priority": "critical"
     }
   ],
@@ -95,7 +95,7 @@
     "completed": 0,
     "planned": 4,
     "successRate": "0%",
-    "notes": "KW 27 TOTALAUSFALL ENDE: 7 Tage (0/0), NOMU 96 TAGE REKORD, 19-Tage-Stillstand, KW 28 STARTET MONTAG 06.07!"
+    "notes": "KW 27 TOTALAUSFALL ENDE: 7 Tage (0/0), NOMU 96 TAGE REKORD, 19-Tage-Stillstand, KW 28 STARTET MORGEN MONTAG 06.07!"
   },
   "kw25Summary": {
     "totalTasks": 15,
@@ -127,7 +127,7 @@
     ]
   },
   "kw28Plan": {
-    "focus": "KW 28 STARTET HEUTE — Nach 3 Wochen Totalausfall (KW 25, 26, 27)",
+    "focus": "KW 28 STARTET MORGEN — Nach 3 Wochen Totalausfall (KW 25, 26, 27)",
     "priorities": [
       "Montag 06.07: Wittmann Preproduction (24 Tage) — ERSTE PRIORITÄT!",
       "Dienstag 07.07: Niku AD (24 Tage)",
@@ -141,6 +141,24 @@
       "date": "2026-07-05",
       "completed": 0,
       "total": 0,
+      "note": "Sonntag 20:04 NIGHT — KW 27 Tag 7 ENDE, NOMU 96 REKORD, KW 28 STARTET MORGEN!"
+    },
+    {
+      "date": "2026-07-05",
+      "completed": 0,
+      "total": 0,
+      "note": "Sonntag 16:04 EVENING — KW 27 Tag 7 WOCHENENDE-ENDE, NOMU 96 REKORD"
+    },
+    {
+      "date": "2026-07-05",
+      "completed": 0,
+      "total": 0,
+      "note": "Sonntag 12:04 AFTERNOON — KW 27 Tag 7 WOCHENENDE-ENDE, NOMU 96 REKORD, KW 28 STARTET HEUTE!"
+    },
+    {
+      "date": "2026-07-05",
+      "completed": 0,
+      "total": 0,
       "note": "Sonntag 08:04 MORNING — KW 27 Tag 7 WOCHENENDE-ENDE, NOMU 96 REKORD, KW 28 STARTET HEUTE!"
     },
     {
@@ -148,53 +166,34 @@
       "completed": 0,
       "total": 0,
       "note": "Sonntag 00:04 NIGHT — KW 27 Tag 7 WOCHENENDE-ENDE, NOMU 95 REKORD, KW 28 NEUSTART"
-    },
-    {
-      "date": "2026-07-04",
-      "completed": 0,
-      "total": 0,
-      "note": "Samstag 20:04 EVENING — KW 27 Tag 6 WOCHENENDE, NOMU 94 REKORD, KW 28 NEUSTART"
-    },
-    {
-      "date": "2026-07-04",
-      "completed": 0,
-      "total": 0,
-      "note": "Samstag 16:04 AFTERNOON — KW 27 Tag 6 WOCHENENDE, NOMU 93 REKORD, KW 28 Vorbereitung"
-    },
-    {
-      "date": "2026-07-04",
-      "completed": 0,
-      "total": 0,
-      "note": "Samstag 12:04 AFTERNOON — KW 27 Tag 6 WOCHENENDE, NOMU 92 REKORD"
     }
   ],
   "insights": {
     "pattern": "19 aufeinanderfolgende Tage ohne operative Erledigung — Historischer Stillstand",
     "blocker": "NOMU 96 TAGE — ABSOLUTER HISTORISCHER SYSTEM-BLOCKER",
     "momentum": "Vollständiger Stillstand KW 25-27 (3 Wochen Totalausfall)",
-    "focus": "KW 28 MONTAG 06.07 = STARTET HEUTE! — Wittmann (24 Tage) ERSTE PRIORITÄT!",
-    "recommendation": "SONNTAG: Letzte Ruhe — KW 28 startet HEUTE MONTAG 06.07!"
+    "focus": "KW 28 MONTAG 06.07 = STARTET MORGEN! — Wittmann (24 Tage) ERSTE PRIORITÄT!",
+    "recommendation": "SONNTAG ABEND: Vorbereitung auf KW 28 Neustart — Montag Wittmann!"
   },
   "analysis": {
     "strength": "Strategische Arbeit, Pitches, wichtige Meetings",
     "weakness": "Operative Routine, Post-Production, Calls — kompletter Stillstand 19 Tage",
-    "solution": "KW 28 STARTET HEUTE: Minimum 1 Task pro Tag oder weiterer Totalausfall"
+    "solution": "KW 28 STARTET MORGEN: Minimum 1 Task pro Tag oder weiterer Totalausfall"
   },
   "cronUpdate": {
     "trigger": "dashboard-update-4h-v2",
-    "previousVersion": "v5.6.125",
-    "currentVersion": "v5.6.126",
+    "previousVersion": "v5.6.128",
+    "currentVersion": "v5.6.129",
     "interval": "4 Stunden",
-    "note": "MORNING Update — KW 27 Sonntag 08:04, WOCHENENDE-ENDE, NOMU 96 TAGE NEUER REKORD, KW 28 STARTET HEUTE!"
+    "note": "NIGHT Update — KW 27 Sonntag 20:04, DRITTE TOTALAUSFALL-WOCHE ENDE, NOMU 96 TAGE REKORD, KW 28 STARTET MORGEN MONTAG 06.07!"
   },
   "updateHistory": [
-    "v5.6.126 — 2026-07-05 08:04 Europe/Berlin — Aktuell (MORNING Mode, KW 27 Tag 7 WOCHENENDE-ENDE, NOMU 96 REKORD, KW 28 STARTET HEUTE!)",
+    "v5.6.129 — 2026-07-05 20:04 Europe/Berlin — Aktuell (NIGHT Mode, KW 27 Tag 7 ENDE, DRITTE TOTALAUSFALL-WOCHE ENDE, NOMU 96 REKORD, KW 28 STARTET MORGEN!)",
+    "v5.6.128 — 2026-07-05 16:04 Europe/Berlin — EVENING Mode, KW 27 Tag 7 WOCHENENDE-ENDE, NOMU 96 REKORD, KW 28 STARTET MORGEN!",
+    "v5.6.127 — 2026-07-05 12:04 Europe/Berlin — AFTERNOON Mode, KW 27 Tag 7 WOCHENENDE-ENDE, NOMU 96 REKORD, KW 28 STARTET HEUTE!",
+    "v5.6.126 — 2026-07-05 08:04 Europe/Berlin — MORNING Mode, KW 27 Tag 7 WOCHENENDE-ENDE, NOMU 96 REKORD, KW 28 STARTET HEUTE!",
     "v5.6.125 — 2026-07-05 04:04 Europe/Berlin — MORNING Mode, KW 27 Tag 7 Letzte Ruhe, KW 28 Neustart",
-    "v5.6.124 — 2026-07-05 00:04 Europe/Berlin — NIGHT Mode, KW 27 Tag 7 WOCHENENDE-ENDE, KW 28 NEUSTART",
-    "v5.6.123 — 2026-07-04 20:04 Europe/Berlin — EVENING Mode, KW 27 Tag 6",
-    "v5.6.122 — 2026-07-04 16:04 Europe/Berlin — AFTERNOON Mode, KW 27 Tag 6",
-    "v5.6.121 — 2026-07-04 12:04 Europe/Berlin — AFTERNOON Mode, KW 27 Tag 6",
-    "v5.6.120 — 2026-07-04 08:04 Europe/Berlin — MORNING Mode, KW 27 Totalausfall bestätigt"
+    "v5.6.124 — 2026-07-05 00:04 Europe/Berlin — NIGHT Mode, KW 27 Tag 7 WOCHENENDE-ENDE, KW 28 NEUSTART"
   ],
   "timeSessions": [],
   "income": [],
@@ -233,7 +232,7 @@
       "completed": false,
       "project": "nomu",
       "overdue": 96,
-      "note": "96 TAGE ABSOLUTER REKORD — Entscheidung HEUTE KW 28!"
+      "note": "96 TAGE ABSOLUTER REKORD — Entscheidung KW 28!"
     }
   ],
   "pipeline": [],
