@@ -1,6 +1,6 @@
 {
   "name": "venture-ctrl",
-  "version": "5.6.123",
+  "version": "5.6.135",
   "type": "module",
   "scripts": {
     "dev": "vite",
