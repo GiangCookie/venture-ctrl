@@ -1,8 +1,8 @@
 {
-  "version": "v5.6.132",
-  "lastUpdated": "2026-07-06T06:04:00Z",
+  "version": "v5.6.133",
+  "lastUpdated": "2026-07-06T10:04:00Z",
   "week": "KW 28",
-  "mode": "MORNING",
+  "mode": "AFTERNOON",
   "summary": {
     "tasksCompleted": 0,
     "tasksTotal": 0,
@@ -13,11 +13,11 @@
   "today": {
     "date": "2026-07-06",
     "day": "Montag",
-    "time": "08:04",
+    "time": "12:04",
     "completed": 0,
     "total": 0,
     "tasks": [],
-    "note": "☀️ KW 28 Tag 1 MORNING — ERSTE SACHE: Wittmann! NOMU 96 TAGE, 19-Tage-Stillstand"
+    "note": "☀️ KW 28 Tag 1 AFTERNOON — Wittmann immer noch offen! NOMU 96 TAGE"
   },
   "critical": [
     {
@@ -35,7 +35,7 @@
       "days": 24,
       "type": "production",
       "priority": "critical",
-      "note": "24 Tage — ERSTE PRIORITÄT JETZT! BREAK THE STREAK!"
+      "note": "24 Tage — ERSTE PRIORITÄT! NACHMITTAG = Chance nutzen!"
     },
     {
       "task": "Niku Fernseher AD",
@@ -56,10 +56,10 @@
   "completedWeek": [],
   "upcoming": [
     {
-      "event": "🚀 BREAK THE STREAK — HEUTE!",
-      "date": "Montag 06.07 Morgen",
+      "event": "🚀 BREAK THE STREAK — NOCH HEUTE MÖGLICH!",
+      "date": "Montag 06.07 Nachmittag",
       "type": "critical",
-      "note": "MORNING = Produktivste Zeit! Wittmann als ERSTE SACHE!",
+      "note": "AFTERNOON = Noch Zeit! Wittmann als ERSTE SACHE!",
       "priority": "critical"
     }
   ],
@@ -85,13 +85,8 @@
       "status": "critical"
     },
     {
-      "name": "19-Tage-Stillstand",
-      "description": "19 aufeinanderfolgende Tage ohne operative Erledigung",
-      "status": "critical"
-    },
-    {
       "name": "KW 28 NEUSTART",
-      "description": "Montag 06.07 MORNING — Chance auf Wendepunkt",
+      "description": "Montag 06.07 — Chance auf Wendepunkt",
       "status": "warning"
     }
   ],
@@ -100,7 +95,7 @@
     "completed": 0,
     "planned": 4,
     "successRate": "0%",
-    "notes": "KW 28 TAG 1 MORNING: Wittmann ERSTE PRIORITÄT! NOMU 96 TAGE, 19-Tage-Stillstand — BREAK THE STREAK!"
+    "notes": "KW 28 TAG 1 AFTERNOON: Wittmann IMMER NOCH OFFEN! — BREAK THE STREAK NOCH MÖGLICH!"
   },
   "kw25Summary": {
     "totalTasks": 15,
@@ -132,7 +127,7 @@
   "kw28Plan": {
     "focus": "KW 28 NEUSTART — Nach 3 Wochen Totalausfall (KW 25, 26, 27)",
     "priorities": [
-      "Montag 06.07 MORNING: Wittmann Preproduction (24 Tage) — ERSTE PRIORITÄT JETZT!",
+      "Montag 06.07: Wittmann Preproduction (24 Tage) — ERSTE PRIORITÄT!",
       "Dienstag 07.07: Niku AD (25 Tage)",
       "Mittwoch 08.07: Golf Club Call (25 Tage)",
       "NOMU: Entscheidung treffen (96+ Tage)"
@@ -144,46 +139,45 @@
       "date": "2026-07-06",
       "completed": 0,
       "total": 0,
-      "note": "Montag 08:04 MORNING — KW 28 TAG 1, Wittmann (24 Tage) ERSTE PRIORITÄT! BREAK THE STREAK!"
+      "note": "Montag 12:04 AFTERNOON — KW 28 TAG 1, Wittmann (24 Tage) IMMER NOCH OFFEN!"
+    },
+    {
+      "date": "2026-07-06",
+      "completed": 0,
+      "total": 0,
+      "note": "Montag 08:04 MORNING — KW 28 TAG 1, Wittmann (24 Tage) ERSTE PRIORITÄT!"
     },
     {
       "date": "2026-07-06",
       "completed": 0,
       "total": 0,
       "note": "Montag 04:04 MORNING — KW 28 TAG 1 STARTET! Wittmann (24 Tage) ERSTE PRIORITÄT!"
-    },
-    {
-      "date": "2026-07-06",
-      "completed": 0,
-      "total": 0,
-      "note": "Montag 00:04 NIGHT — KW 28 TAG 1 STARTET! Wittmann (24 Tage) ERSTE PRIORITÄT!"
     }
   ],
   "insights": {
-    "pattern": "19 aufeinanderfolgende Tage ohne operative Erledigung — Historischer Stillstand",
+    "pattern": "Morgen verpasst — AFTERNOON = Zweite Chance!",
     "blocker": "NOMU 96 TAGE — ABSOLUTER HISTORISCHER SYSTEM-BLOCKER",
     "momentum": "Vollständiger Stillstand KW 25-27 (3 Wochen Totalausfall)",
-    "focus": "MORNING = PRODUKTIVSTE ZEIT! Wittmann als ERSTE SACHE JETZT!",
-    "recommendation": "MONTAG MORNING: Wittmann Preproduction starten (auch nur 10 Min!) — BREAK THE STREAK!"
+    "focus": "AFTERNOON = Noch Zeit! Wittmann als ERSTE SACHE!",
+    "recommendation": "NACHMITTAG: Wittmann Preproduction starten (auch nur 10 Min!) — BREAK THE STREAK!"
   },
   "analysis": {
     "strength": "Strategische Arbeit, Pitches, wichtige Meetings",
-    "weakness": "Operative Routine, Post-Production, Calls — kompletter Stillstand 19 Tage",
-    "solution": "MORNING POWER: Wittmann als ERSTE SACHE — Break the streak heute!"
+    "weakness": "Operative Routine, Post-Production, Calls — kompletter Stillstand",
+    "solution": "AFTERNOON POWER: Wittmann als ERSTE SACHE — Break the streak heute!"
   },
   "cronUpdate": {
     "trigger": "dashboard-update-4h-v2",
-    "previousVersion": "v5.6.131",
-    "currentVersion": "v5.6.132",
+    "previousVersion": "v5.6.132",
+    "currentVersion": "v5.6.133",
     "interval": "4 Stunden",
-    "note": "MORNING Update — Montag 06.07 08:04, KW 28 TAG 1 — Wittmann ERSTE PRIORITÄT! BREAK THE STREAK!"
+    "note": "AFTERNOON Update — Montag 06.07 12:04, KW 28 TAG 1 — Wittmann IMMER NOCH OFFEN!"
   },
   "updateHistory": [
-    "v5.6.132 — 2026-07-06 08:04 Europe/Berlin — Aktuell (MORNING Mode, KW 28 TAG 1, Wittmann ERSTE PRIORITÄT!)",
+    "v5.6.133 — 2026-07-06 12:04 Europe/Berlin — Aktuell (AFTERNOON Mode, KW 28 TAG 1, Wittmann IMMER NOCH OFFEN!)",
+    "v5.6.132 — 2026-07-06 08:04 Europe/Berlin — MORNING Mode, KW 28 TAG 1",
     "v5.6.131 — 2026-07-06 04:04 Europe/Berlin — MORNING Mode, KW 28 TAG 1",
-    "v5.6.130 — 2026-07-06 00:04 Europe/Berlin — NIGHT Mode, KW 28 TAG 1",
-    "v5.6.129 — 2026-07-05 20:04 Europe/Berlin — NIGHT Mode, KW 27 ENDE",
-    "v5.6.128 — 2026-07-05 16:04 Europe/Berlin — AFTERNOON Mode, KW 27 Tag 7"
+    "v5.6.130 — 2026-07-06 00:04 Europe/Berlin — NIGHT Mode, KW 28 TAG 1"
   ],
   "timeSessions": [],
   "income": [],
@@ -195,7 +189,7 @@
       "completed": false,
       "project": "freelance",
       "overdue": 24,
-      "note": "24 Tage — ERSTE PRIORITÄT JETZT! BREAK THE STREAK!"
+      "note": "24 Tage — ERSTE PRIORITÄT! NACHMITTAG = Chance nutzen!"
     },
     {
       "id": 2,
