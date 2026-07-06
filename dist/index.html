@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VENTURE CTRL v5.6.127</title>
+    <title>VENTURE CTRL v5.6.134</title>
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
@@ -17,15 +17,16 @@
             line-height: 1.6;
         }
         .header { 
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
+            background: linear-gradient(135deg, #7f1d1d 0%, #dc2626 100%); 
             padding: 25px; 
             border-radius: 12px; 
             margin-bottom: 25px;
             text-align: center;
             position: relative;
+            border: 2px solid #ef4444;
         }
         .header h1 { font-size: 2.2rem; margin-bottom: 5px; color: white; }
-        .header p { color: rgba(255,255,255,0.8); }
+        .header p { color: rgba(255,255,255,0.9); }
         .version-badge {
             position: absolute;
             top: 10px;
@@ -47,7 +48,7 @@
             padding: 20px; 
             border-radius: 10px;
         }
-        .card h2 { color: #667eea; margin-bottom: 15px; font-size: 1.1rem; }
+        .card h2 { color: #818cf8; margin-bottom: 15px; font-size: 1.1rem; }
         .stat-row { 
             display: flex; 
             justify-content: space-between; 
@@ -86,48 +87,27 @@
             0%, 100% { opacity: 1; }
             50% { opacity: 0.8; }
         }
-        .kw-badge {
-            display: inline-block;
-            background: #667eea;
-            color: white;
-            padding: 2px 10px;
-            border-radius: 12px;
-            font-size: 0.75rem;
-            margin-left: 10px;
+        .deal { 
+            display: flex; 
+            justify-content: space-between; 
+            padding: 10px;
+            margin-bottom: 6px;
+            border-radius: 6px;
+            background: rgba(255,255,255,0.03);
         }
-        .weekend-badge {
-            background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
+        .stage { padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; }
+        .won { background: rgba(74,222,128,0.2); color: #4ade80; }
+        .pitch { background: rgba(251,191,36,0.2); color: #fbbf24; }
+        .lead { background: rgba(96,165,250,0.2); color: #60a5fa; }
+        .meta { color: #666; font-size: 0.8rem; margin-top: 20px; text-align: center; }
+        .highlight { background: rgba(99, 102, 241, 0.1); padding: 8px 12px; border-radius: 6px; margin-bottom: 10px; }
+        .overdue-days {
+            background: #ef4444;
             color: white;
-            padding: 2px 10px;
-            border-radius: 12px;
-            font-size: 0.7rem;
-            font-weight: bold;
-        }
-        .alert-banner {
-            background: linear-gradient(135deg, rgba(239, 68, 68, 0.2), rgba(127, 29, 29, 0.3));
-            border: 2px solid #ef4444;
-            padding: 15px;
+            padding: 2px 8px;
             border-radius: 10px;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-        .alert-banner h3 {
-            color: #ef4444;
-            margin-bottom: 5px;
-        }
-        .alert-banner p {
-            color: #fca5a5;
-        }
-        .masterplan-box {
-            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
-            border: 1px solid rgba(102, 126, 234, 0.3);
-            padding: 15px;
-            border-radius: 8px;
-            margin-bottom: 10px;
-        }
-        .masterplan-box h3 {
-            color: #667eea;
-            margin-bottom: 8px;
+            font-size: 0.7rem;
+            margin-left: 8px;
         }
         .extreme-days {
             background: #7f1d1d;
@@ -138,218 +118,297 @@
             margin-left: 8px;
             font-weight: bold;
         }
-        .overdue-days {
-            background: #ef4444;
-            color: white;
-            padding: 2px 8px;
-            border-radius: 10px;
-            font-size: 0.7rem;
-            margin-left: 8px;
+        .masterplan-box {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(79, 70, 229, 0.1));
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 10px;
         }
-        .pause-days {
-            background: #6366f1;
-            color: white;
-            padding: 2px 8px;
-            border-radius: 10px;
-            font-size: 0.7rem;
-            margin-left: 8px;
+        .masterplan-box h3 {
+            color: #818cf8;
+            margin-bottom: 8px;
         }
-        .gap-value { color: #f87171; font-weight: bold; }
-        .target-value { color: #4ade80; font-weight: bold; }
+        .gap-value {
+            color: #f87171;
+            font-weight: bold;
+        }
+        .target-value {
+            color: #4ade80;
+            font-weight: bold;
+        }
+        .alert-banner {
+            background: linear-gradient(135deg, rgba(88, 28, 135, 0.4), rgba(147, 51, 234, 0.3));
+            border: 2px solid #a855f7;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+            animation: pulse 1.5s infinite;
+        }
+        .alert-banner h3 {
+            color: #d8b4fe;
+            margin-bottom: 5px;
+        }
+        .alert-banner p {
+            color: #e9d5ff;
+        }
+        .kw-badge {
+            display: inline-block;
+            background: #dc2626;
+            color: white;
+            padding: 2px 10px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            margin-left: 10px;
+        }
         .timestamp {
             font-family: 'JetBrains Mono', monospace;
             font-size: 0.7rem;
             color: #888;
             margin-top: 5px;
         }
-        .meta { color: #666; font-size: 0.8rem; margin-top: 20px; text-align: center; }
-        .rocket { font-size: 1.5rem; margin-right: 5px; }
+        .countdown-box {
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.2), rgba(251, 191, 36, 0.1));
+            border: 2px solid #f59e0b;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .countdown-box h3 {
+            color: #fbbf24;
+            margin-bottom: 5px;
+        }
+        .countdown-box p {
+            color: #fef3c7;
+            font-size: 0.9rem;
+        }
+        .final-warning {
+            background: linear-gradient(135deg, rgba(220, 38, 38, 0.3), rgba(127, 29, 29, 0.3));
+            border: 3px solid #ef4444;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: bold;
+            animation: pulse 1s infinite;
+        }
     </style>
 </head>
 <body>
     <div class="header">
-        <span class="version-badge">v5.6.127</span>
+        <span class="version-badge">v5.6.134</span>
         <h1>🚀 VENTURE CTRL</h1>
-        <p>Sonntag, 5. Juli 2026 — 12:04 Uhr <span class="weekend-badge">KW 27 Tag 7 — WOCHENENDE-ENDE</span></p>
+        <p>Montag, 6. Juli 2026 — 14:04 Uhr <span class="kw-badge">KW 28 Tag 1 AFTERNOON</span></p>
     </div>
 
-    <!-- Critical Alert Banner -->
+    <!-- Alert Banner -->
     <div class="alert-banner">
-        <h3>🌤️ AFTERNOON MODE — WOCHENENDE-ENDE / KW 28 STARTET HEUTE!</h3>
-        <p>🔴 3 Wochen Totalausfall: KW 25 + KW 26 + KW 27 — NOMU 96 TAGE NEUER ABSOLUTER HISTORISCHER REKORD!</p>
+        <h3>🌤️ KW 28 Tag 1 — AFTERNOON MODE</h3>
+        <p>🔴 KW 25: 0/15 | 🔴 KW 26: 0/20 | 🔴 KW 27: 0/0</p>
+        <p style="margin-top: 5px; font-weight: bold;">⚠️ NOMU 96 TAGE — ABSOLUTER HISTORISCHER REKORD!</p>
+        <p style="margin-top: 3px; font-size: 0.9rem;">Wittmann 24 TAGE — LETZTE CHANCE HEUTE!</p>
     </div>
 
-    <div class="grid">
-        <!-- KW 27 Status -->
+    <!-- Final Warning -->
+    <div class="final-warning">
+        <h3 style="color: #fca5a5; margin-bottom: 10px;">⏰ LETZTE CHANCE HEUTE!</h3>
+        <p style="color: #fecaca; font-size: 1.1rem;">14:04-18:00 = 4 Stunden verbleibend</p>
+        <p style="color: #fca5a5; margin-top: 8px;">Wittmann JETZT ODER Dienstag (25 Tage)</p>
+    </div>
+
+    <div class="grid" style="margin-top: 20px;">
+        <!-- KW Status -->
         <div class="card">
-            <h2>🌤️ KW 27 TOTALAUSFALL — ENDE</h2>
-            <div class="masterplan-box">
+            <h2>🌤️ KW 28 TAG 1 — AFTERNOON</h2>
+            <div class="masterplan-box" style="border-color: #f59e0b;">
                 <div class="stat-row">
-                    <span class="stat-label">KW 27 (So Tag 7):</span>
-                    <span class="gap-value">0/7 Tage — TOTALAUSFALL ENDE</span>
+                    <span class="stat-label">KW 28 Bilanz:</span>
+                    <span class="gap-value">0/1 Tag (0%)</span>
                 </div>
                 <div class="stat-row">
-                    <span class="stat-label">3 Wochen:</span>
-                    <span class="critical">KW 25 + KW 26 + KW 27 = 0%</span>
+                    <span class="stat-label">Heute:</span>
+                    <span class="target-value">Montag 06.07 — AFTERNOON</span>
                 </div>
                 <div class="stat-row">
-                    <span class="stat-label">19-Tage-Stillstand:</span>
-                    <span class="gap-value">Längster Stillstand seit Beginn</span>
+                    <span class="stat-label">Verbleibend:</span>
+                    <span class="critical">4 Stunden (bis 18:00)</span>
                 </div>
                 <div class="stat-row">
-                    <span class="stat-label">KW 28 STARTET:</span>
-                    <span class="target-value">🚀 HEUTE MONTAG 06.07!</span>
+                    <span class="stat-label">Priorität #1:</span>
+                    <span class="critical">Wittmann (24 Tage)</span>
                 </div>
                 <div class="stat-row">
-                    <span class="stat-label">Entscheidung nötig:</span>
-                    <span class="critical">NOMU (96 TAGE — NEUER REKORD)</span>
+                    <span class="stat-label">System-Blocker:</span>
+                    <span class="critical">NOMU (96 TAGE)</span>
                 </div>
             </div>
-            <p style="font-size: 0.9rem; color: #888; margin-top: 10px;">
-                🌤️ AFTERNOON: WOCHENENDE-ENDE — Letzte Stunden Ruhe vor KW 28 Neustart HEUTE!
+            <p style="font-size: 0.9rem; color: #fca5a5; margin-top: 10px; font-weight: bold;">
+                💡 AFTERNOON = Letzte Chance heute!
             </p>
         </div>
 
         <!-- Stats -->
         <div class="card">
-            <h2>📊 HISTORISCHE METRIKEN</h2>
+            <h2>📊 3-WOCHEN-ÜBERSICHT</h2>
+            <div class="stat-row">
+                <span class="stat-label">✅ KW 25:</span>
+                <span class="stat-value critical">0/15 (0%)</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">✅ KW 26:</span>
+                <span class="stat-value critical">0/20 (0%)</span>
+            </div>
             <div class="stat-row">
                 <span class="stat-label">✅ KW 27:</span>
-                <span class="stat-value gap-value">0/7 Tage (0%) — TOTALAUSFALL ENDE</span>
+                <span class="stat-value critical">0/0 (7 Tage)</span>
             </div>
             <div class="stat-row">
-                <span class="stat-label">📅 KW 25:</span>
-                <span class="stat-value gap-value">0/15 Tasks (0%)</span>
+                <span class="stat-label">📈 KW 28 Tag 1:</span>
+                <span class="stat-value">🌤️ AFTERNOON</span>
             </div>
             <div class="stat-row">
-                <span class="stat-label">📅 KW 26:</span>
-                <span class="stat-value gap-value">0/20 Tasks (0%)</span>
+                <span class="stat-label">⏰ Verbleibend:</span>
+                <span class="stat-value critical">4 Stunden</span>
             </div>
             <div class="stat-row">
-                <span class="stat-label">📅 KW 27:</span>
-                <span class="stat-value gap-value">0/0 Tasks (0%) — TOTALAUSFALL ENDE</span>
-            </div>
-            <div class="stat-row">
-                <span class="stat-label">🔥 NOMU Blocker:</span>
-                <span class="stat-value extreme">96 TAGE — NEUER ABSOLUTER REKORD</span>
-            </div>
-            <div class="stat-row">
-                <span class="stat-label">⚠️ Überfällig:</span>
-                <span class="stat-value critical">4 Tasks (24+ Tage)</span>
+                <span class="stat-label">⚡ Status:</span>
+                <span class="stat-value">🌤️ AFTERNOON — LETZTE CHANCE!</span>
             </div>
         </div>
 
-        <!-- Todos -->
-        <div class="card">
-            <h2>🎯 ÜBERFÄLLIGE TASKS (KW 28 STARTET HEUTE!)</h2>
-            <div class="todo extreme">
-                <strong>NOMU Post-Production</strong>
+        <!-- Critical Overdue -->
+        <div class="card" style="grid-column: 1 / -1; border: 2px solid #ef4444;">
+            <h2 style="color: #ef4444;">🔴 KRITISCH ÜBERFÄLLIG</h2>
+
+            <div class="todo extreme" style="border: 3px solid #7f1d1d;">
+                <strong>🎬 NOMU Post-Production</strong>
                 <span class="extreme-days">96 TAGE</span>
-                <div class="timestamp">NEUER ABSOLUTER HISTORISCHER REKORD — Entscheidung HEUTE KW 28!</div>
+                <br><small style="color: #fca5a5; font-weight: bold;">🔥🔥🔥🔥🔥 ABSOLUTER HISTORISCHER REKORD — SYSTEM KOMPLETT BLOCKIERT</small>
             </div>
-            <div class="todo overdue">
-                <strong>Wittmann Preproduction</strong>
-                <span class="overdue-days">24 TAGE</span>
-                <div class="timestamp">🚀 MONTAG 06.07 ERSTE PRIORITÄT!</div>
-            </div>
-            <div class="todo urgent">
-                <strong>Niku Fernseher AD</strong>
-                <span class="overdue-days">23 TAGE</span>
-                <div class="timestamp">Dienstag KW 28</div>
-            </div>
-            <div class="todo high">
-                <strong>Golf Club Call</strong>
-                <span class="overdue-days">23 TAGE</span>
-                <div class="timestamp">Mittwoch KW 28</div>
-            </div>
-        </div>
 
-        <!-- Weekly Plan -->
-        <div class="card">
-            <h2>📅 KW 28 PLAN — STARTET HEUTE MONTAG!</h2>
-            <div class="masterplan-box">
-                <h3>🚀 MONTAG 06.07 — KW 28 STARTET HEUTE!</h3>
-                <p style="color: #fca5a5; margin-bottom: 10px;">
-                    Nach 3 Wochen Totalausfall ist KW 28 die LETZTE Chance im Juli!
-                </p>
-                <div class="stat-row">
-                    <span class="stat-label">Erste Stunde:</span>
-                    <span class="critical">Wittmann Preproduction (24+ Tage)</span>
-                </div>
-                <div class="stat-row">
-                    <span class="stat-label">Heute auch:</span>
-                    <span class="target-value">Niku AD, Golf Call</span>
-                </div>
-                <div class="stat-row">
-                    <span class="stat-label">Entscheidung:</span>
-                    <span class="critical">NOMU (96 TAGE NEUER REKORD)</span>
-                </div>
+            <div class="todo extreme" style="border: 3px solid #ef4444;">
+                <strong>🎬 Wittmann Preproduction</strong>
+                <span class="overdue-days">24 TAGE</span>
+                <br><small style="color: #fca5a5; font-weight: bold;">🔥🔥🔥🔥🔥 LETZTE CHANCE HEUTE! 4h verbleibend!</small>
             </div>
-            <p style="font-size: 0.9rem; color: #888; margin-top: 10px;">
-                💡 SONNTAG NACHMITTAG: Letzte Ruhe — Montag KW 28 = NEUSTART!
-            </p>
+
+            <div class="todo overdue">
+                <strong>🎬 Niku Fernseher AD</strong>
+                <span class="overdue-days">24 TAGE</span>
+                <br><small style="color: #fca5a5;">🔴🔴🔴 24 Tage — Dienstag KW 28</small>
+            </div>
+
+            <div class="todo overdue">
+                <strong>📞 Golf Club Call</strong>
+                <span class="overdue-days">24 TAGE</span>
+                <br><small style="color: #fca5a5;">🔴🔴🔴 24 Tage — Mittwoch KW 28</small>
+            </div>
         </div>
 
         <!-- Patterns -->
         <div class="card">
-            <h2>📉 KRITISCHE PATTERNS</h2>
-            <div class="todo extreme">
-                <strong>NOMU 96 Tage</strong>
-                <span class="extreme-days">NEUER REKORD</span>
-                <div class="timestamp">ABSOLUTER HISTORISCHER SYSTEM-BLOCKER</div>
+            <h2>📈 PATTERNS & INSIGHTS</h2>
+
+            <div class="masterplan-box" style="border-color: #7f1d1d;">
+                <h3 style="color: #ef4444;">Pattern: "NOMU 96 TAGE"</h3>
+                <p style="font-size: 0.9rem; font-weight: bold;">ABSOLUTER HISTORISCHER REKORD</p>
             </div>
-            <div class="todo overdue">
-                <strong>KW 25 Totalausfall</strong>
-                <span class="overdue-days">0/15</span>
-                <div class="timestamp">Erste vollständig verfehlte Woche</div>
+
+            <div class="masterplan-box" style="margin-top: 10px; border-color: #ef4444;">
+                <h3 style="color: #ef4444;">🚨 3 Totalausfall-Wochen</h3>
+                <p style="font-size: 0.9rem; font-weight: bold;">KW 25-27: 0% Erfolgsrate — KW 28 STARTET!</p>
             </div>
-            <div class="todo overdue">
-                <strong>KW 26 Totalausfall</strong>
-                <span class="overdue-days">0/20</span>
-                <div class="timestamp">Zweite vollständig verfehlte Woche</div>
-            </div>
-            <div class="todo urgent">
-                <strong>KW 27 Totalausfall ENDE</strong>
-                <span class="overdue-days">0/0</span>
-                <div class="timestamp">7 Tage — DRITTE TOTALAUSFALL-WOCHE ENDE</div>
-            </div>
-            <div class="todo extreme">
-                <strong>19-Tage-Stillstand</strong>
-                <span class="extreme-days">REKORD</span>
-                <div class="timestamp">19 Arbeitstage ohne operative Erledigung</div>
+
+            <div class="masterplan-box" style="margin-top: 10px; border-color: #f59e0b;">
+                <h3 style="color: #fbbf24;">⏰ AFTERNOON = Letzte Chance</h3>
+                <p style="font-size: 0.9rem;">14:04-18:00 = 4 Stunden für Wittmann!</p>
             </div>
         </div>
 
-        <!-- Insights -->
+        <!-- Focus -->
         <div class="card">
-            <h2>💡 INSIGHTS & EMPFEHLUNGEN</h2>
-            <div class="masterplan-box">
-                <div class="stat-row">
-                    <span class="stat-label">Pattern:</span>
-                    <span class="gap-value">19 Tage ohne operative Erledigung — NEUER REKORD</span>
-                </div>
-                <div class="stat-row">
-                    <span class="stat-label">Blocker:</span>
-                    <span class="extreme">NOMU 96 TAGE — System blockiert</span>
-                </div>
-                <div class="stat-row">
-                    <span class="stat-label">Momentum:</span>
-                    <span class="gap-value">3 Wochen Totalausfall ENDE</span>
-                </div>
-                <div class="stat-row">
-                    <span class="stat-label">Nächste Chance:</span>
-                    <span class="critical">🚀 KW 28 MONTAG STARTET HEUTE!</span>
-                </div>
+            <h2>🎯 KW 28 PLAN — AFTERNOON</h2>
+
+            <div class="todo extreme" style="border-width: 3px;">
+                <strong>1. 🔥 MONTAG (14:04-18:00): Wittmann Preproduction</strong>
+                <br><small>24 Tage — LETZTE CHANCE HEUTE!</small>
             </div>
-            <p style="font-size: 0.9rem; color: #fca5a5; margin-top: 10px;">
-                🚨 EMPFEHLUNG: SONNTAG letzte Ruhe. HEUTE MONTAG 06.07 = KW 28 NEUSTART! Wittmann 24 Tage ERSTE PRIORITÄT!
+
+            <div class="todo overdue">
+                <strong>2. 🎬 DIENSTAG: Niku Fernseher AD</strong>
+                <br><small>25 Tage — Zweite Priorität</small>
+            </div>
+
+            <div class="todo high">
+                <strong>3. 📞 MITTWOCH: Golf Club Call</strong>
+                <br><small>25 Tage — Dritte Priorität</small>
+            </div>
+
+            <div class="todo extreme" style="border-width: 3px;">
+                <strong>4. ⚠️ KW 28: NOMU Entscheidung</strong>
+                <br><small>96 TAGE — REKORD, Entscheidung nötig!</small>
+            </div>
+
+            <p style="color: #d8b4fe; font-size: 0.85rem; margin-top: 10px; font-weight: bold;">
+                💡 1 Task heute = KW 28 erfolgreich gestartet!
             </p>
+        </div>
+
+        <!-- Pricing -->
+        <div class="card">
+            <h2>💰 PRICING</h2>
+            <h3 style="color: #888; font-size: 0.9rem; margin-bottom: 10px;">Tough Cookie</h3>
+            <div class="stat-row">
+                <span class="stat-label">Flex:</span>
+                <span>1.490€/Mo</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">Growth ⭐:</span>
+                <span>1.290€/Mo</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">Partner:</span>
+                <span>1.190€/Mo</span>
+            </div>
+            
+            <h3 style="color: #888; font-size: 0.9rem; margin: 15px 0 10px 0;">Freelance</h3>
+            <div class="stat-row">
+                <span class="stat-label">Video:</span>
+                <span>800€</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">Fotos:</span>
+                <span>600€</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">Social Paket:</span>
+                <span>400€/Mo</span>
+            </div>
+        </div>
+
+        <!-- Recent Updates -->
+        <div class="card" style="grid-column: 1 / -1;">
+            <h2>📝 LETZTE UPDATES</h2>
+            <div class="stat-row">
+                <span class="stat-label timestamp">14:04</span>
+                <span style="font-size: 0.9rem;">Dashboard Update v5.6.134 — AFTERNOON: 🌤️ KW 28 Tag 1, Wittmann (24 Tage) LETZTE CHANCE, 4h verbleibend!</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label timestamp">12:04</span>
+                <span style="font-size: 0.9rem;">Dashboard Update v5.6.133 — AFTERNOON: 🌤️ KW 28 Tag 1, Wittmann IMMER NOCH OFFEN!</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label timestamp">08:04</span>
+                <span style="font-size: 0.9rem;">Dashboard Update v5.6.132 — MORNING: ☀️ KW 28 Tag 1 STARTET!</span>
+            </div>
         </div>
     </div>
 
     <div class="meta">
-        <p>v5.6.127 — KW 27 Tag 7 AFTERNOON WOCHENENDE-ENDE — Automatisch aktualisiert: 2026-07-05 12:04 Europe/Berlin</p>
-        <p>KW 27 Totalausfall ENDE — NOMU 96 Tage NEUER historischer Rekord — KW 28 STARTET HEUTE MONTAG!</p>
+        <p>🚀 VENTURE CTRL v5.6.134 | Letztes Update: 6. Juli 2026, 14:04 Uhr</p>
+        <p style="margin-top: 5px; color: #d8b4fe; font-weight: bold;">🚀 STATUS: AFTERNOON MODE — KW 28 TAG 1</p>
+        <p style="margin-top: 3px; color: #ef4444; font-weight: bold;">Wittmann 24 TAGE — LETZTE CHANCE! | NOMU 96 TAGE REKORD | 4h verbleibend!</p>
     </div>
 </body>
 </html>
