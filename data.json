@@ -1,6 +1,6 @@
 {
-  "version": "v5.6.137",
-  "lastUpdated": "2026-07-07T04:04:00+02:00",
+  "version": "v5.6.138",
+  "lastUpdated": "2026-07-07T08:04:00+02:00",
   "week": "KW 28",
   "mode": "MORNING",
   "summary": {
@@ -13,11 +13,11 @@
   "today": {
     "date": "2026-07-07",
     "day": "Dienstag",
-    "time": "04:04",
+    "time": "08:04",
     "completed": 0,
     "total": 4,
     "tasks": [],
-    "note": "🌅 KW 28 Tag 2 MORNING — ERSTE STUNDE BEGINNT! Wittmann (25 Tage) JETZT!"
+    "note": "🌅 KW 28 Tag 2 MORNING — 08:04 UPDATE! Wittmann (25 Tage) JETZT!"
   },
   "critical": [
     {
@@ -174,8 +174,8 @@
   },
   "cronUpdate": {
     "trigger": "dashboard-update-4h-v2",
-    "previousVersion": "v5.6.136",
-    "currentVersion": "v5.6.137",
+    "previousVersion": "v5.6.137",
+    "currentVersion": "v5.6.138",
     "interval": "4 Stunden",
     "note": "MORNING Update — Dienstag 07.07 04:04, ERSTE STUNDE! KW 28 TAG 2!"
   },
