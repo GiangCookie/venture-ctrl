@@ -1,8 +1,8 @@
 {
-  "version": "v5.6.136",
-  "lastUpdated": "2026-07-07T00:04:00+02:00",
+  "version": "v5.6.137",
+  "lastUpdated": "2026-07-07T04:04:00+02:00",
   "week": "KW 28",
-  "mode": "NIGHT",
+  "mode": "MORNING",
   "summary": {
     "tasksCompleted": 0,
     "tasksTotal": 4,
@@ -13,11 +13,11 @@
   "today": {
     "date": "2026-07-07",
     "day": "Dienstag",
-    "time": "00:04",
+    "time": "04:04",
     "completed": 0,
     "total": 4,
     "tasks": [],
-    "note": "🌙 KW 28 Tag 2 NIGHT — NEUE CHANCE BEGINNT! Wittmann (25 Tage) ist ERSTE PRIORITÄT!"
+    "note": "🌅 KW 28 Tag 2 MORNING — ERSTE STUNDE BEGINNT! Wittmann (25 Tage) JETZT!"
   },
   "critical": [
     {
@@ -35,32 +35,39 @@
       "days": 25,
       "type": "production",
       "priority": "critical",
-      "note": "25 Tage — ERSTE PRIORITÄT für Dienstag MORNING!"
+      "note": "25 Tage — ERSTE STUNDE! JETZT starten, BREAK THE STREAK!"
     },
     {
       "task": "Niku Fernseher AD",
       "days": 25,
       "type": "content",
       "priority": "high",
-      "note": "25 Tage — Zweite Priorität Dienstag"
+      "note": "25 Tage — Zweite Priorität nach Wittmann"
     },
     {
       "task": "Golf Club Call",
       "days": 25,
       "type": "call",
       "priority": "medium",
-      "note": "25 Tage — Mittwoch KW 28"
+      "note": "25 Tage — Heute anrufen!"
     }
   ],
   "completedToday": [],
   "completedWeek": [],
   "upcoming": [
     {
-      "event": "🌅 DIENSTAG MORNING",
+      "event": "🌅 DIENSTAG MORNING — ERSTE STUNDE",
+      "date": "Dienstag 07.07 04:04",
+      "type": "critical",
+      "note": "KW 28 Tag 2 — Wittmann (25 Tage) JETZT starten! BREAK THE STREAK!",
+      "priority": "critical"
+    },
+    {
+      "event": "⏰ Morgenroutine",
       "date": "Dienstag 07.07 08:04",
       "type": "warning",
-      "note": "KW 28 Tag 2 — Neue Chance: Wittmann (25 Tage) BREAK THE STREAK!",
-      "priority": "critical"
+      "note": "Wenn bis hier nichts passiert: 25+ Tage...",
+      "priority": "high"
     }
   ],
   "patterns": [
@@ -90,9 +97,9 @@
       "status": "critical"
     },
     {
-      "name": "KW 28 TAG 2 NIGHT",
-      "description": "Dienstag 07.07 00:04 — NEUE CHANCE für Tag 2!",
-      "status": "warning"
+      "name": "KW 28 TAG 2 MORNING",
+      "description": "Dienstag 07.07 04:04 — ERSTE STUNDE! ENTSCHEIDUNGSZEIT!",
+      "status": "critical"
     }
   ],
   "weekly": {
@@ -100,7 +107,7 @@
     "completed": 0,
     "planned": 4,
     "successRate": "0%",
-    "notes": "KW 28 TAG 2 NIGHT: Tag 1 verfehlt (0/4), Tag 2 = NEUE CHANCE!"
+    "notes": "KW 28 TAG 2 MORNING: Tag 1 verfehlt (0/4), ERSTE STUNDE für Tag 2!"
   },
   "kw25Summary": {
     "totalTasks": 15,
@@ -130,12 +137,12 @@
     ]
   },
   "kw28Plan": {
-    "focus": "KW 28 TAG 2 — Nach 3 Wochen + Montag Totalausfall",
+    "focus": "KW 28 TAG 2 ERSTE STUNDE — Nach 3 Wochen + Montag Totalausfall",
     "priorities": [
-      "Dienstag 07.07 MORNING: Wittmann Preproduction (25 Tage) — BREAK THE STREAK!",
-      "Dienstag 07.07: Niku AD (25 Tage)",
-      "Mittwoch 08.07: Golf Club Call (25 Tage)",
-      "NOMU: Entscheidung treffen (97+ TAGE)"
+      "⏰ ERSTE STUNDE: Wittmann Preproduction (25 Tage) — JETZT!",
+      "🌅 MORNING: Niku AD (25 Tage) — nach Wittmann",
+      "📞 HEUTE: Golf Club Call (25 Tage)",
+      "🔥 NOMU: Entscheidung treffen (97+ TAGE)"
     ],
     "goal": "KW 28 Tag 2: Minimum 1 Task erledigen — END THE STREAK!"
   },
@@ -144,39 +151,39 @@
       "date": "2026-07-07",
       "completed": 0,
       "total": 4,
-      "note": "Dienstag 00:04 NIGHT — KW 28 TAG 2 BEGINNT, NEUE CHANCE!"
+      "note": "Dienstag 04:04 MORNING — ERSTE STUNDE! Wittmann JETZT!"
     },
     {
       "date": "2026-07-06",
       "completed": 0,
       "total": 4,
-      "note": "Montag 20:04 EVENING — KW 28 TAG 1 ENDET: 0/4 Tasks VERFEHLT"
+      "note": "Montag 0/4 Tasks VERFEHLT — KW 28 startet katastrophal"
     }
   ],
   "insights": {
-    "pattern": "NIGHT = Neuer Tag beginnt — MORNING = Fresh start!",
+    "pattern": "ERSTE STUNDE = Entscheidende Stunde! MORNING = Fresh start!",
     "blocker": "NOMU 97 TAGE — ABSOLUTER HISTORISCHER SYSTEM-BLOCKER",
-    "momentum": "4 Wochen Stillstand — KW 28 Tag 2 = ENTSCHEIDUNGSTAG",
-    "focus": "Dienstag 07.07 MORNING: Wittmann (25 Tage) — BREAK THE STREAK!",
-    "recommendation": "NIGHT = Planen, Schlafen — MORNING = SOFORT Wittmann starten!"
+    "momentum": "4 Wochen Stillstand — ERSTE STUNDE = ENTSCHEIDUNGSSTUNDE",
+    "focus": "⏰ ERSTE STUNDE: Wittmann (25 Tage) — JETZT starten!",
+    "recommendation": "ERSTE STUNDE = Die goldene Stunde! Wittmann SOFORT anfangen!"
   },
   "analysis": {
     "strength": "Strategische Arbeit, Pitches, wichtige Meetings",
     "weakness": "Operative Routine, Post-Production, Calls — 4 Wochen Stillstand",
-    "solution": "Morgen früh: Wittmann SOFORT — auch nur 10 Min = BREAK THE STREAK!"
+    "solution": "ERSTE STUNDE: Wittmann SOFORT — auch nur 5 Min = BREAK THE STREAK!"
   },
   "cronUpdate": {
     "trigger": "dashboard-update-4h-v2",
-    "previousVersion": "v5.6.135",
-    "currentVersion": "v5.6.136",
+    "previousVersion": "v5.6.136",
+    "currentVersion": "v5.6.137",
     "interval": "4 Stunden",
-    "note": "NIGHT Update — Dienstag 07.07 00:04, KW 28 TAG 2 NEUE CHANCE!"
+    "note": "MORNING Update — Dienstag 07.07 04:04, ERSTE STUNDE! KW 28 TAG 2!"
   },
   "updateHistory": [
-    "v5.6.136 — 2026-07-07 00:04 Europe/Berlin — Aktuell (NIGHT Mode, KW 28 TAG 2 NEUE CHANCE)",
+    "v5.6.137 — 2026-07-07 04:04 Europe/Berlin — Aktuell (MORNING Mode, ERSTE STUNDE!)",
+    "v5.6.136 — 2026-07-07 00:04 Europe/Berlin — NIGHT Mode, KW 28 TAG 2 BEGINNT",
     "v5.6.135 — 2026-07-06 20:04 Europe/Berlin — EVENING Mode, KW 28 TAG 1 ENDET (0/4)",
-    "v5.6.134 — 2026-07-06 14:04 Europe/Berlin — AFTERNOON Mode, KW 28 TAG 1 LETZTE CHANCE",
-    "v5.6.133 — 2026-07-06 12:04 Europe/Berlin — AFTERNOON Mode, KW 28 TAG 1"
+    "v5.6.134 — 2026-07-06 14:04 Europe/Berlin — AFTERNOON Mode, KW 28 TAG 1 LETZTE CHANCE"
   ],
   "timeSessions": [],
   "income": [],
@@ -188,7 +195,7 @@
       "completed": false,
       "project": "freelance",
       "overdue": 25,
-      "note": "25 Tage — ERSTE PRIORITÄT für Dienstag MORNING!"
+      "note": "⏰ ERSTE STUNDE! 25 Tage — JETZT starten!"
     },
     {
       "id": 2,
@@ -197,7 +204,7 @@
       "completed": false,
       "project": "tough-cookie",
       "overdue": 25,
-      "note": "25 Tage — Zweite Priorität Dienstag"
+      "note": "25 Tage — Zweite Priorität nach Wittmann"
     },
     {
       "id": 3,
@@ -206,7 +213,7 @@
       "completed": false,
       "project": "tough-cookie",
       "overdue": 25,
-      "note": "25 Tage — Mittwoch KW 28"
+      "note": "25 Tage — Heute anrufen!"
     },
     {
       "id": 4,
